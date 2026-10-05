@@ -1,0 +1,11 @@
+apply_stencil_fp32_s 0.0012972999829798937
+apply_spoke_fp32_s 0.00126700010150671
+apply_node_hoist_fp32_s 0.002892900025472045
+apply_elem_atomic_fp32_s 0.006686199922114611
+csr_status skipped: exceeds VRAM budget
+bsr_status skipped: exceeds VRAM budget
+mg_update_s 0.02857580012641847
+mg_levels 7
+mg_storage {'vectors': 680761395, 'matrices': 719001600, 'coarse_inverse': 3645000, 'KE_tables': 44964864}
+mg_vcycle_s 0.04240449983626604
+mg_coarse_dofs 675

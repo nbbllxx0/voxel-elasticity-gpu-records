@@ -1,0 +1,79 @@
+{'max_abs_diff': 0.0, 'passed': True} ke_unit equals R2 element matrix
+(6, 4, 3) float32 elem_atomic  err=1.10e-07 masked=8.88e-08 bitwise=True pass=True
+(6, 4, 3) float32 elem_colored err=1.04e-07 masked=9.77e-08 bitwise=True pass=True
+(6, 4, 3) float32 node         err=1.21e-07 masked=1.18e-07 bitwise=True pass=True
+(6, 4, 3) float32 node_hoist   err=9.93e-08 masked=9.25e-08 bitwise=True pass=True
+(6, 4, 3) float32 dof          err=1.21e-07 masked=1.18e-07 bitwise=True pass=True
+(6, 4, 3) float32 tile         err=1.21e-07 masked=1.18e-07 bitwise=True pass=True
+(6, 4, 3) float32 spoke        err=1.17e-07 masked=1.12e-07 bitwise=True pass=True
+(6, 4, 3) float32 stencil      err=1.23e-07 masked=1.17e-07 bitwise=True pass=True
+{'shape': (6, 4, 3), 'dtype': 'float32', 'rel_err': 1.1581890497643718e-07, 'rel_err_after_refresh': 1.4185099381853494e-07, 'passed': True} cusparse_csr
+{'shape': (6, 4, 3), 'dtype': 'float32', 'rel_err': 1.0917336644411041e-07, 'rel_err_after_refresh': 9.962028765009703e-08, 'passed': True} cusparse_bsr
+{'shape': (6, 4, 3), 'dtype': 'float32', 'diag_rel_err': 5.6116451596808634e-08, 'energy_rel_err': 9.398521807245466e-08, 'passed': True} diag+energy
+(6, 4, 3) float64 elem_atomic  err=3.84e-16 masked=3.88e-16 bitwise=True pass=True
+(6, 4, 3) float64 elem_colored err=3.83e-16 masked=3.84e-16 bitwise=True pass=True
+(6, 4, 3) float64 node         err=3.15e-16 masked=3.07e-16 bitwise=True pass=True
+(6, 4, 3) float64 node_hoist   err=3.96e-16 masked=4.00e-16 bitwise=True pass=True
+(6, 4, 3) float64 dof          err=3.15e-16 masked=3.07e-16 bitwise=True pass=True
+(6, 4, 3) float64 tile         err=3.15e-16 masked=3.07e-16 bitwise=True pass=True
+(6, 4, 3) float64 spoke        err=3.34e-16 masked=3.14e-16 bitwise=True pass=True
+(6, 4, 3) float64 stencil      err=3.38e-16 masked=3.34e-16 bitwise=True pass=True
+{'shape': (6, 4, 3), 'dtype': 'float64', 'rel_err': 3.1585077755410713e-16, 'rel_err_after_refresh': 3.4907769550447947e-16, 'passed': True} cusparse_csr
+{'shape': (6, 4, 3), 'dtype': 'float64', 'rel_err': 2.982025390222231e-16, 'rel_err_after_refresh': 3.497854284082963e-16, 'passed': True} cusparse_bsr
+{'shape': (6, 4, 3), 'dtype': 'float64', 'diag_rel_err': 1.2400239865857832e-16, 'energy_rel_err': 8.056757215513868e-16, 'passed': True} diag+energy
+(9, 7, 5) float32 elem_atomic  err=1.10e-07 masked=1.15e-07 bitwise=False pass=True
+(9, 7, 5) float32 elem_colored err=1.09e-07 masked=1.09e-07 bitwise=True pass=True
+(9, 7, 5) float32 node         err=1.47e-07 masked=1.36e-07 bitwise=True pass=True
+(9, 7, 5) float32 node_hoist   err=1.08e-07 masked=1.10e-07 bitwise=True pass=True
+(9, 7, 5) float32 dof          err=1.47e-07 masked=1.36e-07 bitwise=True pass=True
+(9, 7, 5) float32 tile         err=1.47e-07 masked=1.36e-07 bitwise=True pass=True
+(9, 7, 5) float32 spoke        err=1.25e-07 masked=1.32e-07 bitwise=True pass=True
+(9, 7, 5) float32 stencil      err=9.62e-08 masked=1.00e-07 bitwise=True pass=True
+{'shape': (9, 7, 5), 'dtype': 'float32', 'rel_err': 9.861763737343162e-08, 'rel_err_after_refresh': 1.060865676582087e-07, 'passed': True} cusparse_csr
+{'shape': (9, 7, 5), 'dtype': 'float32', 'rel_err': 9.731051527665837e-08, 'rel_err_after_refresh': 8.019836539939412e-08, 'passed': True} cusparse_bsr
+{'shape': (9, 7, 5), 'dtype': 'float32', 'diag_rel_err': 6.028707393079285e-08, 'energy_rel_err': 9.337636855652722e-08, 'passed': True} diag+energy
+(9, 7, 5) float64 elem_atomic  err=3.59e-16 masked=3.70e-16 bitwise=False pass=True
+(9, 7, 5) float64 elem_colored err=3.63e-16 masked=3.83e-16 bitwise=True pass=True
+(9, 7, 5) float64 node         err=4.02e-16 masked=4.20e-16 bitwise=True pass=True
+(9, 7, 5) float64 node_hoist   err=3.63e-16 masked=3.82e-16 bitwise=True pass=True
+(9, 7, 5) float64 dof          err=4.02e-16 masked=4.20e-16 bitwise=True pass=True
+(9, 7, 5) float64 tile         err=4.02e-16 masked=4.20e-16 bitwise=True pass=True
+(9, 7, 5) float64 spoke        err=4.04e-16 masked=4.26e-16 bitwise=True pass=True
+(9, 7, 5) float64 stencil      err=3.71e-16 masked=3.88e-16 bitwise=True pass=True
+{'shape': (9, 7, 5), 'dtype': 'float64', 'rel_err': 3.25423132990609e-16, 'rel_err_after_refresh': 3.834281933974915e-16, 'passed': True} cusparse_csr
+{'shape': (9, 7, 5), 'dtype': 'float64', 'rel_err': 3.409923684173517e-16, 'rel_err_after_refresh': 3.2049570711866317e-16, 'passed': True} cusparse_bsr
+{'shape': (9, 7, 5), 'dtype': 'float64', 'diag_rel_err': 2.98504215716601e-16, 'energy_rel_err': 7.973610310105684e-16, 'passed': True} diag+energy
+(16, 8, 8) float32 elem_atomic  err=1.00e-07 masked=1.01e-07 bitwise=False pass=True
+(16, 8, 8) float32 elem_colored err=9.85e-08 masked=9.66e-08 bitwise=True pass=True
+(16, 8, 8) float32 node         err=1.32e-07 masked=1.33e-07 bitwise=True pass=True
+(16, 8, 8) float32 node_hoist   err=9.76e-08 masked=9.59e-08 bitwise=True pass=True
+(16, 8, 8) float32 dof          err=1.32e-07 masked=1.33e-07 bitwise=True pass=True
+(16, 8, 8) float32 tile         err=1.32e-07 masked=1.33e-07 bitwise=True pass=True
+(16, 8, 8) float32 spoke        err=1.47e-07 masked=1.49e-07 bitwise=True pass=True
+(16, 8, 8) float32 stencil      err=1.13e-07 masked=1.12e-07 bitwise=True pass=True
+{'shape': (16, 8, 8), 'dtype': 'float32', 'rel_err': 1.0377397772440618e-07, 'rel_err_after_refresh': 1.0075291019493176e-07, 'passed': True} cusparse_csr
+{'shape': (16, 8, 8), 'dtype': 'float32', 'rel_err': 1.0058870983981435e-07, 'rel_err_after_refresh': 9.485819905782737e-08, 'passed': True} cusparse_bsr
+{'shape': (16, 8, 8), 'dtype': 'float32', 'diag_rel_err': 7.038092701773083e-08, 'energy_rel_err': 8.603992861330492e-08, 'passed': True} diag+energy
+(16, 8, 8) float64 elem_atomic  err=3.51e-16 masked=3.58e-16 bitwise=False pass=True
+(16, 8, 8) float64 elem_colored err=3.43e-16 masked=3.48e-16 bitwise=True pass=True
+(16, 8, 8) float64 node         err=3.64e-16 masked=3.69e-16 bitwise=True pass=True
+(16, 8, 8) float64 node_hoist   err=3.43e-16 masked=3.49e-16 bitwise=True pass=True
+(16, 8, 8) float64 dof          err=3.64e-16 masked=3.69e-16 bitwise=True pass=True
+(16, 8, 8) float64 tile         err=3.64e-16 masked=3.69e-16 bitwise=True pass=True
+(16, 8, 8) float64 spoke        err=4.03e-16 masked=4.06e-16 bitwise=True pass=True
+(16, 8, 8) float64 stencil      err=3.64e-16 masked=3.68e-16 bitwise=True pass=True
+{'shape': (16, 8, 8), 'dtype': 'float64', 'rel_err': 3.362521965023642e-16, 'rel_err_after_refresh': 3.4662991920117153e-16, 'passed': True} cusparse_csr
+{'shape': (16, 8, 8), 'dtype': 'float64', 'rel_err': 3.3551802674017976e-16, 'rel_err_after_refresh': 3.1573972100135083e-16, 'passed': True} cusparse_bsr
+{'shape': (16, 8, 8), 'dtype': 'float64', 'diag_rel_err': 2.0369429826847393e-16, 'energy_rel_err': 7.519746381298442e-16, 'passed': True} diag+energy
+{'variant': 'node_hoist', 'rel_err': 3.3328519679927667e-16, 'passed': True} fp64_on_fp32_moduli
+{'variant': 'elem_atomic', 'rel_err': 3.2261089289552196e-16, 'passed': True} fp64_on_fp32_moduli
+{'variant': 'stencil', 'rel_err': 3.6800775703600473e-16, 'passed': True} fp64_on_fp32_moduli
+{'rel_err': 2.365156968313664e-08, 'norm_rel_err': 3.167484639574889e-09, 'passed': True} residual32
+{'rmin': 1.2, 'max_abs_err_forward': 2.220446049250313e-16, 'max_abs_err_transpose': 2.220446049250313e-16, 'passed': True} cone_filter
+{'rmin': 1.5, 'max_abs_err_forward': 4.440892098500626e-16, 'max_abs_err_transpose': 4.440892098500626e-16, 'passed': True} cone_filter
+{'rmin': 2.5, 'max_abs_err_forward': 6.661338147750939e-16, 'max_abs_err_transpose': 7.771561172376096e-16, 'passed': True} cone_filter
+{'variant': 'elem_atomic', 'r2_path': 'fused_ai_fp32', 'rel_diff': 1.1862337264215755e-08, 'passed': True} cross_R2
+{'variant': 'node', 'r2_path': 'node_fp32', 'rel_diff': 0.0, 'passed': True} cross_R2
+{'variant': 'elem_atomic', 'r2_path': 'fused_ai_fp64', 'rel_diff': 4.5578205859310574e-17, 'passed': True} cross_R2
+{'variant': 'node', 'r2_path': 'node_fp64', 'rel_diff': 0.0, 'passed': True} cross_R2
+ALL PASSED

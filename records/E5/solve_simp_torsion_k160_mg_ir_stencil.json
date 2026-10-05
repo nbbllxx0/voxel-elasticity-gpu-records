@@ -1,0 +1,259 @@
+{
+ "experiment": "E5_solver_states",
+ "state": "simp_torsion_k160_mg_ir_stencil",
+ "meta": {
+  "source": "results\\E6b\\simp_torsion_k160_mg_ir_stencil.json",
+  "volfrac": 0.25
+ },
+ "grid": [
+  320,
+  160,
+  160
+ ],
+ "solver_grid": [
+  320,
+  160,
+  160
+ ],
+ "n_elem": 8192000,
+ "levels": 6,
+ "tol": 1e-06,
+ "environment": {
+  "time": "2026-10-04T17:40:31",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "159e4edfdd89d626",
+ "skipped": [
+  "jacobi"
+ ],
+ "rows": [
+  {
+   "iters": 28,
+   "matvecs": 30,
+   "precond": 28,
+   "true_checks": 2,
+   "rel_initial": 0.9999999999999999,
+   "warm_start_reset": false,
+   "rel_true": 8.709711448556261e-07,
+   "rel_recursive_at_stop": 8.709711443609831e-07,
+   "converged": true,
+   "time_s": 0.6538271999452263,
+   "compliance": 0.1161447224257004,
+   "vcycles": 28,
+   "wall_s": 0.6539976000785828,
+   "wall_all_s": [
+    0.6536449999548495,
+    0.6539976000785828,
+    0.6747737999539822
+   ],
+   "config": "mg64",
+   "op32": "stencil",
+   "ok": true
+  },
+  {
+   "outer": 6,
+   "inner_iters": 37,
+   "matvecs64": 7,
+   "matvecs32": 37,
+   "precond": 43,
+   "rel_initial": 1.0000000009313224,
+   "warm_start_reset": false,
+   "rejected_steps": 0,
+   "rel_true": 9.870261424645478e-08,
+   "converged": true,
+   "inner_tol_final": 0.1,
+   "time_s": 0.5304370000958443,
+   "compliance": 0.1161447230545232,
+   "vcycles": 37,
+   "wall_s": 0.5317178999539465,
+   "wall_all_s": [
+    0.5313851998653263,
+    0.5317178999539465,
+    0.630677199922502
+   ],
+   "config": "mg_ir",
+   "op32": "stencil",
+   "ok": true
+  },
+  {
+   "outer": 6,
+   "inner_iters": 37,
+   "matvecs64": 7,
+   "matvecs32": 37,
+   "precond": 43,
+   "rel_initial": 1.0000000009313224,
+   "warm_start_reset": false,
+   "rejected_steps": 0,
+   "rel_true": 9.843535372026902e-08,
+   "converged": true,
+   "inner_tol_final": 0.1,
+   "time_s": 0.5308677998837084,
+   "compliance": 0.11614472305955388,
+   "vcycles": 37,
+   "wall_s": 0.5324502000585198,
+   "wall_all_s": [
+    0.5316005998756737,
+    0.5324502000585198,
+    0.5329664999153465
+   ],
+   "config": "mg_ir",
+   "op32": "spoke",
+   "ok": true
+  },
+  {
+   "outer": 6,
+   "inner_iters": 37,
+   "matvecs64": 7,
+   "matvecs32": 37,
+   "precond": 43,
+   "rel_initial": 1.0000000009313224,
+   "warm_start_reset": false,
+   "rejected_steps": 0,
+   "rel_true": 9.843397995493131e-08,
+   "converged": true,
+   "inner_tol_final": 0.1,
+   "time_s": 0.5841029998846352,
+   "compliance": 0.11614472305929688,
+   "vcycles": 37,
+   "wall_s": 0.5845176000148058,
+   "wall_all_s": [
+    0.5838109001051635,
+    0.5845176000148058,
+    0.5846396000124514
+   ],
+   "config": "mg_ir",
+   "op32": "node_hoist",
+   "ok": true
+  },
+  {
+   "outer": 6,
+   "inner_iters": 37,
+   "matvecs64": 7,
+   "matvecs32": 37,
+   "precond": 43,
+   "rel_initial": 1.0000000009313224,
+   "warm_start_reset": false,
+   "rejected_steps": 0,
+   "rel_true": 9.84187624505903e-08,
+   "converged": true,
+   "inner_tol_final": 0.1,
+   "time_s": 0.5873272002208978,
+   "compliance": 0.11614472305976686,
+   "vcycles": 37,
+   "wall_s": 0.587650999892503,
+   "wall_all_s": [
+    0.5873777999076992,
+    0.587650999892503,
+    0.5881467999424785
+   ],
+   "config": "mg_ir",
+   "op32": "node",
+   "ok": true
+  },
+  {
+   "outer": 6,
+   "inner_iters": 37,
+   "matvecs64": 7,
+   "matvecs32": 37,
+   "precond": 43,
+   "rel_initial": 1.0000000009313224,
+   "warm_start_reset": false,
+   "rejected_steps": 0,
+   "rel_true": 9.843487593873722e-08,
+   "converged": true,
+   "inner_tol_final": 0.1,
+   "time_s": 0.7453774998430163,
+   "compliance": 0.116144723059632,
+   "vcycles": 37,
+   "wall_s": 0.7457729999441653,
+   "wall_all_s": [
+    0.7447784000542015,
+    0.7457729999441653,
+    0.7458508999552578
+   ],
+   "config": "mg_ir",
+   "op32": "elem_atomic",
+   "ok": true
+  }
+ ],
+ "mg_update_s": 0.01590250013396144,
+ "mg_storage": {
+  "vectors": 167629833,
+  "matrices": 175500000,
+  "coarse_inverse": 11290752,
+  "KE_tables": 44964864
+ },
+ "vcycle_s_by_fine_op": {
+  "stencil": 0.010142720222473145,
+  "spoke": 0.010128128051757813,
+  "node_hoist": 0.011322367668151855,
+  "node": 0.011393631935119629,
+  "elem_atomic": 0.014768896102905273
+ },
+ "spill": {
+  "pid": 33744,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 77594624,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1791160833.3550751,
+    "dedicated": 388128768,
+    "shared": 79691776,
+    "others_dedicated": 6935085056
+   },
+   {
+    "tag": "end",
+    "t": 1791160848.2154808,
+    "dedicated": 2516905984,
+    "shared": 157286400,
+    "others_dedicated": 6936100864
+   }
+  ]
+ },
+ "valid": true,
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "83bac7f2c560f824",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "39270dd666a97c62",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "37b82e35bedcfa90",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "65f198e49cfe0a49",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "390e8d0fc607e840",
+  "experiments/run_queue.py": "bceca042308bfdd9",
+  "experiments/run_simp.py": "ab7cba3cb779baad",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86"
+ }
+}

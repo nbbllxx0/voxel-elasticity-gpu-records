@@ -1,0 +1,7 @@
+k=320 design mg32      first pass: {'it': 20, 'monitored': 9.33973161250603e-06, 'true': 0.003410844317475718}  floor=3.161e-03 at 10 run=20 4.3s
+k=320 design mg32_x64  first pass: {'it': 20, 'monitored': 9.33973161250603e-06, 'true': 0.0013776124878968337}  floor=1.378e-03 at 23 run=31 6.1s
+k=320 design mg_ir  res=4.18e-06 outer=5 inner=23 3.0s
+k=320 design reference res=1.17e-10 c=0.1480663535
+k=320 design mg32      consequence {'compliance': 0.15238591642747568, 'compliance_rel_err': 0.02917315666514639, 'energy_norm_rel_err': 0.03403365823972037, 'sens_rel_err_2': 0.037338858610597485, 'sens_rel_err_max': 0.01310745241910954}
+k=320 design mg32_x64  consequence {'compliance': 0.15238591716036234, 'compliance_rel_err': 0.029173161614864208, 'energy_norm_rel_err': 0.03403347152647382, 'sens_rel_err_2': 0.0373388361088685, 'sens_rel_err_max': 0.013107453826062768}
+k=320 design mg_ir     consequence {'compliance': 0.14806636201718362, 'compliance_rel_err': 5.7522858611960757e-08, 'energy_norm_rel_err': 7.023879432713405e-07, 'sens_rel_err_2': 3.446007636020513e-07, 'sens_rel_err_max': 1.490781415300002e-07}

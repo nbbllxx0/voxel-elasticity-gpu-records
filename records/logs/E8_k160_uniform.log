@@ -1,0 +1,9 @@
+k=160 uniform mg32      first pass: {'it': 8, 'monitored': 6.265723694789957e-06, 'true': 0.0012272332259993732}  floor=1.200e-03 at 6 run=14 0.4s
+k=160 uniform mg32_x64  first pass: {'it': 8, 'monitored': 6.265723694789957e-06, 'true': 0.0009311234065051668}  floor=9.311e-04 at 9 run=17 0.4s
+k=160 uniform jac32     first pass: {'it': 3216, 'monitored': 9.901254059527048e-06, 'true': 0.012605115751003938}  floor=8.266e-03 at 1325 run=3216 10.2s
+k=160 uniform mg_ir  res=1.67e-06 outer=5 inner=10 0.3s
+k=160 uniform reference res=8.87e-11 c=5.27186894
+k=160 uniform mg32      consequence {'compliance': 5.507845015674314, 'compliance_rel_err': 0.04476136985396338, 'energy_norm_rel_err': 0.05087738695303681, 'sens_rel_err_2': 0.020577378176635186, 'sens_rel_err_max': 0.004322642661825418}
+k=160 uniform mg32_x64  consequence {'compliance': 5.507845011712451, 'compliance_rel_err': 0.04476136910245326, 'energy_norm_rel_err': 0.05087735371626692, 'sens_rel_err_2': 0.020577376900887845, 'sens_rel_err_max': 0.004322644241946274}
+k=160 uniform jac32     consequence {'compliance': 5.5076979204857635, 'compliance_rel_err': 0.04473346794854455, 'energy_norm_rel_err': 0.050858410258667365, 'sens_rel_err_2': 0.02056582208331409, 'sens_rel_err_max': 0.004321173026201343}
+k=160 uniform mg_ir     consequence {'compliance': 5.2718710241503866, 'compliance_rel_err': 3.9529261527443047e-07, 'energy_norm_rel_err': 7.741353079048505e-07, 'sens_rel_err_2': 6.145989826319875e-07, 'sens_rel_err_max': 5.642530106669122e-07}

@@ -1,0 +1,10 @@
+k=160 fp64 n_elem=8,192,000 valid=True busy clock=2715.0 [2715.0,2730.0] n=34/57
+  empty_launch           4.3 us  IQR [4.2,4.4]      0.0 GB/s  err=None
+  node_hoist          7278.3 us  IQR [7271.0,7290.3]     63.9 GB/s  err=1.2e-16
+  elem_atomic         7439.0 us  IQR [7434.1,7453.8]     89.3 GB/s  err=4.9e-17
+  elem_colored        7614.2 us  IQR [7607.6,7622.3]     87.3 GB/s  err=1.2e-16
+  spoke               9561.5 us  IQR [9552.9,9580.1]     48.6 GB/s  err=3.2e-16
+  node                9640.6 us  IQR [9634.8,9654.9]     48.2 GB/s  err=3.2e-16
+  dof                 9721.9 us  IQR [9712.8,9738.0]     47.8 GB/s  err=3.2e-16
+  stencil            10058.7 us  IQR [10053.5,10085.2]     46.2 GB/s  err=2.7e-16
+  tile               10544.5 us  IQR [10542.9,10574.4]     44.1 GB/s  err=3.2e-16

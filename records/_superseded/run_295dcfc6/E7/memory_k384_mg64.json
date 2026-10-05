@@ -1,0 +1,43 @@
+{
+ "experiment": "E7_memory_probe",
+ "solver": "mg64",
+ "k": 384,
+ "shape": [
+  768,
+  384,
+  384
+ ],
+ "n_elem": 113246208,
+ "environment": {
+  "time": "2026-10-04T14:10:50",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "295dcfc60619e1ae",
+ "prediction": {
+  "bytes_per_element": 195.0,
+  "need_bytes": 22083010560.0,
+  "budget": {
+   "cuda_free": 24154996736,
+   "total": 25756696576,
+   "others_dedicated": 6205661184,
+   "wddm_free": 19198562304,
+   "need": 22083010560,
+   "margin": 1073741824,
+   "effective_free": 19198562304,
+   "ok": false
+  }
+ },
+ "status": "exceeds capacity (predicted)"
+}

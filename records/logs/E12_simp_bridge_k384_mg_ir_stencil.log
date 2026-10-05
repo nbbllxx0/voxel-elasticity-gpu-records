@@ -1,0 +1,30 @@
+it   1 c=1.703141e-01 vol=0.18481 mnd=0.603 drho=nan p=1.5 b=1.0 solve 18.63s (setup 1.07) it=104 outer=8 res=4.95e-06 iter 19.05s
+it   2 c=7.950072e-02 vol=0.20000 mnd=0.605 drho=2.073e-01 p=1.5 b=1.0 solve 7.26s (setup 0.08) it=40 outer=5 res=5.25e-06 iter 7.76s
+it   3 c=6.084935e-02 vol=0.20000 mnd=0.573 drho=2.158e-01 p=1.5 b=1.0 solve 5.41s (setup 0.08) it=29 outer=5 res=1.63e-06 iter 5.91s
+it   4 c=5.273453e-02 vol=0.20000 mnd=0.536 drho=2.123e-01 p=1.5 b=1.0 solve 5.41s (setup 0.09) it=29 outer=5 res=1.36e-06 iter 5.91s
+it   5 c=4.794753e-02 vol=0.20000 mnd=0.498 drho=2.122e-01 p=1.5 b=1.0 solve 4.50s (setup 0.08) it=24 outer=4 res=9.34e-06 iter 5.00s
+it   6 c=4.590697e-02 vol=0.20000 mnd=0.470 drho=2.085e-01 p=1.5 b=1.0 solve 4.14s (setup 0.52) it=19 outer=4 res=3.30e-06 iter 4.64s
+it   7 c=4.436651e-02 vol=0.20000 mnd=0.446 drho=1.780e-01 p=1.5 b=1.0 solve 3.87s (setup 0.08) it=20 outer=4 res=3.03e-06 iter 4.37s
+it   8 c=4.307236e-02 vol=0.20000 mnd=0.421 drho=1.734e-01 p=1.5 b=1.0 solve 3.87s (setup 0.09) it=20 outer=4 res=3.87e-06 iter 4.37s
+it   9 c=4.193686e-02 vol=0.20000 mnd=0.396 drho=1.682e-01 p=1.5 b=1.0 solve 3.87s (setup 0.08) it=20 outer=4 res=3.65e-06 iter 4.37s
+it  10 c=4.092789e-02 vol=0.20000 mnd=0.371 drho=1.613e-01 p=1.5 b=1.0 solve 3.87s (setup 0.09) it=20 outer=4 res=1.42e-06 iter 4.37s
+it  11 c=4.003134e-02 vol=0.20000 mnd=0.347 drho=1.605e-01 p=1.5 b=1.0 solve 4.16s (setup 0.54) it=19 outer=4 res=2.58e-06 iter 4.75s
+it  12 c=3.923103e-02 vol=0.20000 mnd=0.323 drho=1.323e-01 p=1.5 b=1.0 solve 3.71s (setup 0.09) it=19 outer=4 res=2.51e-06 iter 4.20s
+it  13 c=3.851857e-02 vol=0.20000 mnd=0.301 drho=1.275e-01 p=1.5 b=1.0 solve 3.39s (setup 0.08) it=17 outer=4 res=2.29e-06 iter 3.89s
+it  14 c=3.789445e-02 vol=0.20000 mnd=0.279 drho=1.635e-01 p=1.5 b=1.0 solve 3.71s (setup 0.09) it=19 outer=4 res=3.22e-06 iter 4.21s
+it  15 c=3.737385e-02 vol=0.20000 mnd=0.262 drho=1.873e-01 p=1.5 b=1.0 solve 4.02s (setup 0.08) it=21 outer=4 res=2.15e-06 iter 4.52s
+Traceback (most recent call last):
+  File "<project>\experiments\run_simp.py", line 59, in main
+    <source line redacted>
+        ^^^^^^^
+  File "<project>\code\src\voxfem\simp.py", line 363, in run
+    <source line redacted>
+         ^^^^^^^^^^^^
+  File "<project>\code\src\voxfem\simp.py", line 266, in solve
+    <source line redacted>
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\code\src\voxfem\krylov.py", line 260, in ir_lean
+    <source line redacted>
+voxfem.krylov.SolveFailed: ir_lean: correction rejected with inner tolerance 1e-07
+
+simp_bridge_k384_mg_ir_stencil: status=failed: SolveFailed('ir_lean: correction rejected with inner tolerance 1e-07') valid=False c=None it=None wall=100.9s

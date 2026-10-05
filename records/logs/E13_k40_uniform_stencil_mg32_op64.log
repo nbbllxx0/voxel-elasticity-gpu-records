@@ -1,0 +1,5 @@
+k=40 uniform mg32_op64 first pass: {'it': 8, 'monitored': 4.00763706699538e-06, 'true': 4.610025071635969e-05}  floor=4.594e-05 at 11 run=19 0.1s
+k=40 uniform mg_ir  res=7.39e-06 outer=4 inner=8 0.2s
+k=40 uniform reference res=2.26e-10 c=20.48891423
+k=40 uniform mg32_op64 consequence {'compliance': 20.488913698914402, 'compliance_rel_err': 2.568993690934593e-08, 'energy_norm_rel_err': 5.799248209369632e-06, 'sens_rel_err_2': 1.1090248277219987e-06, 'sens_rel_err_max': 1.0380404247949169e-06}
+k=40 uniform mg_ir     consequence {'compliance': 20.488898008321588, 'compliance_rel_err': 7.914988344355638e-07, 'energy_norm_rel_err': 2.3461295981965297e-06, 'sens_rel_err_2': 2.0910794365124716e-06, 'sens_rel_err_max': 2.5649198197636644e-06}

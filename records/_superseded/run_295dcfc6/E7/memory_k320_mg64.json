@@ -1,0 +1,169 @@
+{
+ "experiment": "E7_memory_probe",
+ "solver": "mg64",
+ "k": 320,
+ "shape": [
+  640,
+  320,
+  320
+ ],
+ "n_elem": 65536000,
+ "environment": {
+  "time": "2026-10-04T14:10:27",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "295dcfc60619e1ae",
+ "prediction": {
+  "bytes_per_element": 195.0,
+  "need_bytes": 12779520000.0,
+  "budget": {
+   "cuda_free": 24154996736,
+   "total": 25756696576,
+   "others_dedicated": 6204968960,
+   "wddm_free": 19199254528,
+   "need": 12779520000,
+   "margin": 1073741824,
+   "effective_free": 19199254528,
+   "ok": true
+  }
+ },
+ "construct_s": 2.527357199927792,
+ "run": {
+  "iterations": 2,
+  "wall_s": 14.387695699930191,
+  "totals": {
+   "solve_s": 3.7970715002156794,
+   "setup_s": 0.9474292998202145,
+   "sens_s": 0.23384319990873337,
+   "oc_s": 0.43763449997641146,
+   "filter_s": 0.05793159990571439
+  },
+  "memory": {
+   "peak_pool_used_bytes": 12679563264,
+   "peak_pool_reserved_bytes": 16301635072,
+   "peak_device_used_bytes": 17967874048,
+   "baseline_device_used_bytes": 1670905856
+  },
+  "spill": {
+   "pid": 7172,
+   "limit_bytes": 268435456,
+   "max_shared_growth_bytes": 10485760,
+   "spilled": false,
+   "samples": [
+    {
+     "tag": "start",
+     "t": 1791148232.039711,
+     "dedicated": 11656343552,
+     "shared": 146800640,
+     "others_dedicated": 6204968960
+    },
+    {
+     "tag": "it1",
+     "t": 1791148237.4042015,
+     "dedicated": 14936334336,
+     "shared": 157286400,
+     "others_dedicated": 6204968960
+    },
+    {
+     "tag": "it2",
+     "t": 1791148242.2116811,
+     "dedicated": 15133474816,
+     "shared": 157286400,
+     "others_dedicated": 6204968960
+    },
+    {
+     "tag": "end",
+     "t": 1791148246.4114792,
+     "dedicated": 16718934016,
+     "shared": 157286400,
+     "others_dedicated": 6204968960
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "breakdown": {
+  "design_fields": 1703936000,
+  "moduli": 262144000,
+  "state_u_fp64": 1585182744,
+  "fixed_mask_and_load": 66066705,
+  "pcg_workspace": 4755548232,
+  "cast_buffers": 1585182744,
+  "mg_level_vectors": 1325813562,
+  "mg_stored_matrices": 1404300000,
+  "mg_coarse_inverse": 11290752,
+  "mg_tables": 44964864,
+  "total_accounted": 12744429603,
+  "per_element": {
+   "design_fields": 26.0,
+   "moduli": 4.0,
+   "state_u_fp64": 24.187969116210937,
+   "fixed_mask_and_load": 1.008097915649414,
+   "pcg_workspace": 72.56390734863281,
+   "cast_buffers": 24.187969116210937,
+   "mg_level_vectors": 20.230309478759764,
+   "mg_stored_matrices": 21.42791748046875,
+   "mg_coarse_inverse": 0.172283203125,
+   "mg_tables": 0.686109375,
+   "total_accounted": 194.46456303405762
+  },
+  "n_elem": 65536000,
+  "pool_used_bytes": 12679563264,
+  "pool_reserved_bytes": 16301635072
+ },
+ "peak": {
+  "peak_pool_used_bytes": 12679563264,
+  "peak_pool_reserved_bytes": 16301635072,
+  "peak_device_used_bytes": 17967874048,
+  "baseline_device_used_bytes": 1670905856
+ },
+ "spill": {
+  "pid": 7172,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 10485760,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1791148232.039711,
+    "dedicated": 11656343552,
+    "shared": 146800640,
+    "others_dedicated": 6204968960
+   },
+   {
+    "tag": "it1",
+    "t": 1791148237.4042015,
+    "dedicated": 14936334336,
+    "shared": 157286400,
+    "others_dedicated": 6204968960
+   },
+   {
+    "tag": "it2",
+    "t": 1791148242.2116811,
+    "dedicated": 15133474816,
+    "shared": 157286400,
+    "others_dedicated": 6204968960
+   },
+   {
+    "tag": "end",
+    "t": 1791148246.4114792,
+    "dedicated": 16718934016,
+    "shared": 157286400,
+    "others_dedicated": 6204968960
+   }
+  ]
+ },
+ "valid": true
+}

@@ -1,0 +1,23 @@
+apply_stencil_fp32_s 2.1900050342082977e-05
+apply_spoke_fp32_s 2.1799933165311813e-05
+apply_node_hoist_fp32_s 2.9199989512562752e-05
+apply_elem_atomic_fp32_s 4.229997284710407e-05
+csr_build_s 0.04440110013820231
+csr_refresh_s 0.00024019996635615826
+csr_refresh_bytes_written 127025316
+csr_refresh_check_max_rel 0.0
+csr_refresh_cupy_s 0.002379500074312091
+csr_apply_fp32_s 0.00031630019657313824
+csr_storage_bytes 255684568
+bsr_build_s 0.0045294000301510096
+bsr_refresh_s 0.0003589000552892685
+bsr_refresh_bytes_written 127025316
+bsr_refresh_check_max_rel 0.0
+bsr_refresh_cupy_s 0.002190900035202503
+bsr_apply_fp32_s 0.00017290003597736359
+bsr_storage_bytes 141683888
+mg_update_s 0.013776900013908744
+mg_levels 4
+mg_storage {'vectors': 2799975, 'matrices': 2700000, 'coarse_inverse': 11290752, 'KE_tables': 728064}
+mg_vcycle_s 0.001810499932616949
+mg_coarse_dofs 1188

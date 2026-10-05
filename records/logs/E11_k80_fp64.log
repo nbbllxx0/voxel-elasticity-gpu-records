@@ -1,0 +1,9 @@
+k=80 fp64 elem_atomic   DRAM 69.6 B/el (x0.85 compulsory) 76 GB/s at E2 time  fp64/thr 600 (static 600)  dram 7%  fp64pipe 98%
+k=80 fp64 elem_colored  DRAM 517.3 B/el (x6.29 compulsory) 540 GB/s at E2 time  fp64/thr 600 (static 600)  dram 69%  fp64pipe 32%
+k=80 fp64 node          DRAM 96.7 B/el (x1.68 compulsory) 80 GB/s at E2 time  fp64/thr 745 (static 768)  dram 7%  fp64pipe 95%
+k=80 fp64 node_hoist    DRAM 95.1 B/el (x1.65 compulsory) 104 GB/s at E2 time  fp64/thr 582 (static 600)  dram 9%  fp64pipe 98%
+k=80 fp64 dof           DRAM 52.9 B/el (x0.92 compulsory) 43 GB/s at E2 time  fp64/thr 248 (static 256)  dram 4%  fp64pipe 94%
+k=80 fp64 tile          DRAM 58.0 B/el (x1.01 compulsory) 40 GB/s at E2 time  fp64/thr 745 (static 768)  dram 4%  fp64pipe 94%
+k=80 fp64 spoke         DRAM 33.8 B/el (x0.59 compulsory) 28 GB/s at E2 time  fp64/thr 682 (static 693)  dram 2%  fp64pipe 87%
+k=80 fp64 stencil       DRAM 32.8 B/el (x0.57 compulsory) 26 GB/s at E2 time  fp64/thr 711 (static 724)  dram 3%  fp64pipe 86%
+valid True rc 0

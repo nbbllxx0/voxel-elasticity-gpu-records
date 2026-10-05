@@ -1,0 +1,9 @@
+simp_bridge_k80_mg_ir_stencil jacobi64   node_hoist   ok=True wall=6.270s it=4247 outer=- res=9.76e-07 c=1.630924e-01
+simp_bridge_k80_mg_ir_stencil jacobi_ir  stencil      ok=True wall=2.345s it=8044 outer=6 res=9.88e-07 c=1.630924e-01
+simp_bridge_k80_mg_ir_stencil mg64       stencil      ok=True wall=0.203s it=43 outer=- res=7.95e-07 c=1.630924e-01
+simp_bridge_k80_mg_ir_stencil mg_ir      stencil      ok=True wall=0.214s it=58 outer=6 res=1.33e-07 c=1.630924e-01
+simp_bridge_k80_mg_ir_stencil mg_ir      spoke        ok=True wall=0.214s it=58 outer=6 res=1.32e-07 c=1.630924e-01
+simp_bridge_k80_mg_ir_stencil mg_ir      node_hoist   ok=True wall=0.224s it=58 outer=6 res=1.32e-07 c=1.630924e-01
+simp_bridge_k80_mg_ir_stencil mg_ir      node         ok=True wall=0.225s it=58 outer=6 res=1.32e-07 c=1.630924e-01
+simp_bridge_k80_mg_ir_stencil mg_ir      elem_atomic  ok=True wall=0.256s it=58 outer=6 res=1.32e-07 c=1.630924e-01
+vcycle {'stencil': 0.0030791680812835695, 'spoke': 0.003074656009674072, 'node_hoist': 0.0032447359561920165, 'node': 0.003237823963165283, 'elem_atomic': 0.0036679680347442628} valid True

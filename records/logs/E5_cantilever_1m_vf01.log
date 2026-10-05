@@ -1,0 +1,9 @@
+cantilever_1m_vf01 jacobi64   node_hoist   ok=True wall=16.584s it=9548 outer=- res=9.54e-07 c=1.506022e+01
+cantilever_1m_vf01 jacobi_ir  stencil      ok=True wall=6.217s it=18389 outer=7 res=2.54e-07 c=1.506020e+01
+cantilever_1m_vf01 mg64       stencil      ok=True wall=2.534s it=474 outer=- res=9.14e-07 c=1.506022e+01
+cantilever_1m_vf01 mg_ir      stencil      ok=True wall=3.288s it=833 outer=6 res=5.87e-07 c=1.506024e+01
+cantilever_1m_vf01 mg_ir      spoke        ok=True wall=3.314s it=839 outer=6 res=8.81e-07 c=1.506024e+01
+cantilever_1m_vf01 mg_ir      node_hoist   ok=True wall=3.529s it=844 outer=6 res=6.98e-07 c=1.506024e+01
+cantilever_1m_vf01 mg_ir      node         ok=True wall=4.583s it=1101 outer=7 res=1.01e-07 c=1.506022e+01
+cantilever_1m_vf01 mg_ir      elem_atomic  ok=True wall=4.013s it=840 outer=6 res=6.48e-07 c=1.506024e+01
+vcycle {'stencil': 0.0035368959903717043, 'spoke': 0.0035327999591827394, 'node_hoist': 0.0037222399711608887, 'node': 0.003733504056930542, 'elem_atomic': 0.004221951961517334} valid True

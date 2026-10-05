@@ -1,0 +1,350 @@
+{
+ "experiment": "T2_verify_mg",
+ "environment": {
+  "time": "2026-10-04T15:25:40",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "d7a42786fe82ca19",
+ "all_passed": true,
+ "rows": [
+  {
+   "check": "galerkin_level",
+   "level": 1,
+   "grid": [
+    8,
+    4,
+    4
+   ],
+   "rel_err": 1.0428149487619473e-07,
+   "passed": true
+  },
+  {
+   "check": "galerkin_level",
+   "level": 2,
+   "grid": [
+    4,
+    2,
+    2
+   ],
+   "rel_err": 5.9540861299551556e-08,
+   "passed": true
+  },
+  {
+   "check": "galerkin_level",
+   "level": 3,
+   "grid": [
+    2,
+    1,
+    1
+   ],
+   "rel_err": 1.0948594002710872e-07,
+   "passed": true
+  },
+  {
+   "check": "vcycle_admissibility",
+   "grid": [
+    32,
+    16,
+    16
+   ],
+   "levels": 3,
+   "additivity_max": 1.0022185392699612e-07,
+   "symmetry_max": 1.2124830028881206e-09,
+   "rayleigh_min": 50022.74609375,
+   "bitwise_repeatable": true,
+   "passed": true
+  },
+  {
+   "check": "solver",
+   "solver": "jacobi64",
+   "rel_true": 9.658770079861312e-09,
+   "iters": 801,
+   "outer": null,
+   "compliance": 30.244997367418218,
+   "passed": true
+  },
+  {
+   "check": "solver",
+   "solver": "jacobi_ir",
+   "rel_true": 8.093690919418272e-09,
+   "iters": 1538,
+   "outer": 8,
+   "compliance": 30.244997157516714,
+   "passed": true
+  },
+  {
+   "check": "solver",
+   "solver": "mg64",
+   "rel_true": 9.313672495542954e-09,
+   "iters": 40,
+   "outer": null,
+   "compliance": 30.244997367418154,
+   "passed": true
+  },
+  {
+   "check": "solver",
+   "solver": "mg_ir",
+   "rel_true": 7.571165674925307e-09,
+   "iters": 45,
+   "outer": 7,
+   "compliance": 30.244997380883454,
+   "passed": true
+  },
+  {
+   "check": "solver_agreement",
+   "solver": "jacobi64",
+   "rel_diff_vs_jacobi64": 0.0,
+   "passed": true
+  },
+  {
+   "check": "solver_agreement",
+   "solver": "jacobi_ir",
+   "rel_diff_vs_jacobi64": 1.4836990610637726e-08,
+   "passed": true
+  },
+  {
+   "check": "solver_agreement",
+   "solver": "mg64",
+   "rel_diff_vs_jacobi64": 6.898996692140363e-10,
+   "passed": true
+  },
+  {
+   "check": "solver_agreement",
+   "solver": "mg_ir",
+   "rel_diff_vs_jacobi64": 1.1373657979038196e-09,
+   "passed": true
+  },
+  {
+   "check": "real_state",
+   "state": "cantilever_216k",
+   "grid": [
+    120,
+    60,
+    30
+   ],
+   "solver_grid": [
+    120,
+    64,
+    32
+   ],
+   "levels": 4,
+   "outer": 6,
+   "inner_iters": 117,
+   "rel_true": 4.219969035264019e-07,
+   "compliance": 2.172308225853706,
+   "jacobi64_compliance": 2.1723084918397753,
+   "jacobi64_iters": 2335,
+   "jacobi64_rel_true": 9.606337228283755e-09,
+   "mg_vs_jacobi_rel_diff": 1.224439669454061e-07,
+   "archived_compliance": 2.1738176345825195,
+   "archived_rel_diff": 0.0006943584893234731,
+   "archived_note": "informational: archived value recorded by the generating run; not a converged reference",
+   "passed": true
+  },
+  {
+   "check": "real_state",
+   "state": "bridge_216k",
+   "grid": [
+    120,
+    60,
+    30
+   ],
+   "solver_grid": [
+    120,
+    64,
+    32
+   ],
+   "levels": 4,
+   "outer": 6,
+   "inner_iters": 74,
+   "rel_true": 2.9130411359767996e-07,
+   "compliance": 0.9034287753931164,
+   "jacobi64_compliance": 0.9034287827527565,
+   "jacobi64_iters": 1162,
+   "jacobi64_rel_true": 9.932182077446225e-09,
+   "mg_vs_jacobi_rel_diff": 8.14634231281423e-09,
+   "archived_compliance": 0.9034605622291565,
+   "archived_rel_diff": 3.5183424013190754e-05,
+   "archived_note": "informational: archived value recorded by the generating run; not a converged reference",
+   "passed": true
+  },
+  {
+   "check": "real_state",
+   "state": "doubleclamp_216k",
+   "grid": [
+    120,
+    60,
+    30
+   ],
+   "solver_grid": [
+    120,
+    64,
+    32
+   ],
+   "levels": 4,
+   "outer": 5,
+   "inner_iters": 32,
+   "rel_true": 7.251173253021718e-07,
+   "compliance": 1.072696994299076,
+   "jacobi64_compliance": 1.0726971046966047,
+   "jacobi64_iters": 579,
+   "jacobi64_rel_true": 9.327352106798162e-09,
+   "mg_vs_jacobi_rel_diff": 1.0291584473464158e-07,
+   "archived_compliance": 1.072701844942324,
+   "archived_rel_diff": 4.521893264960678e-06,
+   "archived_note": "informational: archived value recorded by the generating run; not a converged reference",
+   "passed": true
+  },
+  {
+   "check": "real_state",
+   "state": "torsion_500k",
+   "grid": [
+    165,
+    55,
+    55
+   ],
+   "solver_grid": [
+    168,
+    56,
+    56
+   ],
+   "levels": 4,
+   "outer": 6,
+   "inner_iters": 474,
+   "rel_true": 5.321866996374867e-07,
+   "compliance": 2.035701807412092,
+   "jacobi64_compliance": 2.0357015245647796,
+   "jacobi64_iters": 4055,
+   "jacobi64_rel_true": 9.955336152642246e-09,
+   "mg_vs_jacobi_rel_diff": 1.3894341033072558e-07,
+   "archived_compliance": 2.0360176265239716,
+   "archived_rel_diff": 0.00015511609907764435,
+   "archived_note": "informational: archived value recorded by the generating run; not a converged reference",
+   "passed": true
+  },
+  {
+   "check": "real_state",
+   "state": "cantilever_1m",
+   "grid": [
+    200,
+    100,
+    50
+   ],
+   "solver_grid": [
+    200,
+    104,
+    56
+   ],
+   "levels": 4,
+   "outer": 6,
+   "inner_iters": 130,
+   "rel_true": 4.0903354957066893e-07,
+   "compliance": 1.605956389393446,
+   "jacobi64_compliance": 1.6059558734433106,
+   "jacobi64_iters": 2488,
+   "jacobi64_rel_true": 9.880402928724966e-09,
+   "mg_vs_jacobi_rel_diff": 3.212729216515126e-07,
+   "archived_compliance": 1.6084344387054443,
+   "archived_rel_diff": 0.0015406591977679314,
+   "archived_note": "informational: archived value recorded by the generating run; not a converged reference",
+   "passed": true
+  },
+  {
+   "check": "real_state",
+   "state": "cantilever_1m_vf01",
+   "grid": [
+    200,
+    100,
+    50
+   ],
+   "solver_grid": [
+    200,
+    104,
+    56
+   ],
+   "levels": 4,
+   "outer": 6,
+   "inner_iters": 847,
+   "rel_true": 7.470686185113414e-07,
+   "compliance": 15.06024196940095,
+   "jacobi64_compliance": 15.060220982398912,
+   "jacobi64_iters": 12322,
+   "jacobi64_rel_true": 9.626158061029434e-09,
+   "mg_vs_jacobi_rel_diff": 1.393538784256926e-06,
+   "archived_compliance": 8.925601959228516,
+   "archived_rel_diff": 0.6873082665118849,
+   "archived_note": "informational: archived value recorded by the generating run; not a converged reference",
+   "passed": true
+  },
+  {
+   "check": "real_state",
+   "state": "cantilever_corner_1m_vf01",
+   "grid": [
+    160,
+    80,
+    80
+   ],
+   "solver_grid": [
+    160,
+    80,
+    80
+   ],
+   "levels": 5,
+   "outer": 6,
+   "inner_iters": 76,
+   "rel_true": 6.558387140164546e-07,
+   "compliance": 1.9168548250943744,
+   "jacobi64_compliance": 1.9168548214339536,
+   "jacobi64_iters": 6006,
+   "jacobi64_rel_true": 9.866061392935464e-09,
+   "mg_vs_jacobi_rel_diff": 1.909597333288502e-09,
+   "archived_compliance": 1.8303177132702513,
+   "archived_rel_diff": 0.04727983081664343,
+   "archived_note": "informational: archived value recorded by the generating run; not a converged reference",
+   "passed": true
+  }
+ ],
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "83bac7f2c560f824",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "39270dd666a97c62",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "37b82e35bedcfa90",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "06861ed8b005e976",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "8320cf811418fc3e",
+  "experiments/run_queue.py": "a4171f94cce8630d",
+  "experiments/run_simp.py": "ab7cba3cb779baad",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86"
+ }
+}

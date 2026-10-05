@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "<project>\experiments\run_simp.py", line 59, in main
+    <source line redacted>
+        ^^^^^^^
+  File "<project>\code\src\voxfem\simp.py", line 363, in run
+    <source line redacted>
+         ^^^^^^^^^^^^
+  File "<project>\code\src\voxfem\simp.py", line 248, in solve
+    <source line redacted>
+  File "<project>\code\src\voxfem\mg.py", line 548, in update
+    <source line redacted>
+  File "<project>\code\src\voxfem\mg.py", line 578, in _smoother_weights
+    <source line redacted>
+                                     ^^^^^^^^^^^^^^^^^
+  File "<user-home>\anaconda3\Lib\site-packages\cupy\linalg\_norms.py", line 62, in norm
+    <source line redacted>
+                     ~~^~~
+  File "cupy\\_core\\core.pyx", line 1334, in cupy._core.core._ndarray_base.__mul__
+  File "cupy\\_core\\_kernel.pyx", line 1349, in cupy._core._kernel.ufunc.__call__
+  File "cupy\\_core\\_kernel.pyx", line 645, in cupy._core._kernel._get_out_args_from_optionals
+  File "cupy\\_core\\core.pyx", line 2884, in cupy._core.core._ndarray_init
+  File "cupy\\_core\\core.pyx", line 257, in cupy._core.core._ndarray_base._init_fast
+  File "cupy\\cuda\\memory.pyx", line 738, in cupy.cuda.memory.alloc
+  File "cupy\\cuda\\memory.pyx", line 1424, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy\\cuda\\memory.pyx", line 1445, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy\\cuda\\memory.pyx", line 1116, in cupy.cuda.memory.SingleDeviceMemoryPool.malloc
+  File "cupy\\cuda\\memory.pyx", line 1137, in cupy.cuda.memory.SingleDeviceMemoryPool._malloc
+  File "cupy\\cuda\\memory.pyx", line 1344, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+  File "cupy\\cuda\\memory.pyx", line 1356, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+cupy.cuda.memory.OutOfMemoryError: Out of memory allocating 1,367,820,800 bytes (allocated so far: 22,318,077,440 bytes, limit set to: 23,085,449,216 bytes).
+
+simp_cantilever_k384_mg64_stencil_poollimit: status=failed: OutOfMemoryError('Out of memory allocating 1,367,820,800 bytes (allocated so far: 22,318,077,440 bytes, limit set to: 23,085,449,216 bytes).') valid=False c=None it=None wall=3.2s

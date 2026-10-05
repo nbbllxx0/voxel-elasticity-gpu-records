@@ -1,0 +1,25 @@
+{
+ "model": "t = a * FP64_instr / peak_issue_rate(clock)",
+ "a": 1.0840790362649448,
+ "implied_issue_efficiency": 0.9224419682953852,
+ "n": 72,
+ "max_rel_err": 0.18466401684511335,
+ "median_rel_err": 0.03409459763979224,
+ "r2": 0.9970675097552968
+}
+elem_atomic_fp32     instr/thr= 600 issue=0.08 dram=0.23 atom=0.85 bound=atomics
+elem_colored_fp32    instr/thr= 600 issue=0.04 dram=0.12 atom=0.00 bound=dram_compulsory
+node_fp32            instr/thr= 768 issue=0.25 dram=0.40 atom=0.00 bound=dram_compulsory
+node_hoist_fp32      instr/thr= 600 issue=0.20 dram=0.40 atom=0.00 bound=dram_compulsory
+dof_fp32             instr/thr= 256 issue=0.11 dram=0.18 atom=0.00 bound=dram_compulsory
+tile_fp32            instr/thr= 768 issue=0.14 dram=0.21 atom=0.00 bound=dram_compulsory
+spoke_fp32           instr/thr= 593 issue=0.40 dram=0.80 atom=0.00 bound=dram_compulsory
+stencil_fp32         instr/thr= 644 issue=0.42 dram=0.79 atom=0.00 bound=dram_compulsory
+elem_atomic_fp64     instr/thr= 600 issue=0.95 dram=0.09 atom=0.33 bound=fp_issue
+elem_colored_fp64    instr/thr= 600 issue=0.94 dram=0.09 atom=0.00 bound=fp_issue
+node_fp64            instr/thr= 768 issue=0.95 dram=0.05 atom=0.00 bound=fp_issue
+node_hoist_fp64      instr/thr= 600 issue=0.98 dram=0.07 atom=0.00 bound=fp_issue
+dof_fp64             instr/thr= 256 issue=0.94 dram=0.05 atom=0.00 bound=fp_issue
+tile_fp64            instr/thr= 768 issue=0.87 dram=0.05 atom=0.00 bound=fp_issue
+spoke_fp64           instr/thr= 693 issue=0.87 dram=0.05 atom=0.00 bound=fp_issue
+stencil_fp64         instr/thr= 724 issue=0.86 dram=0.05 atom=0.00 bound=fp_issue

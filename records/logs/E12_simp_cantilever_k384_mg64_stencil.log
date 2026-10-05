@@ -1,0 +1,19 @@
+it   1 c=3.905224e-01 vol=0.28644 mnd=0.818 drho=nan p=1.5 b=1.0 solve 25.53s (setup 2.35) it=8 outer=- res=6.42e-06 iter 32.32s
+it   2 c=2.385834e-01 vol=0.30000 mnd=0.772 drho=2.136e-01 p=1.5 b=1.0 solve 49.73s (setup 0.32) it=9 outer=- res=4.37e-06 iter 56.38s
+it   3 c=1.953724e-01 vol=0.30000 mnd=0.715 drho=2.137e-01 p=1.5 b=1.0 solve 38.37s (setup 0.52) it=9 outer=- res=3.76e-06 iter 44.88s
+it   4 c=1.737813e-01 vol=0.30000 mnd=0.645 drho=2.159e-01 p=1.5 b=1.0 solve 50.73s (setup 1.12) it=9 outer=- res=4.31e-06 iter 57.49s
+it   5 c=1.638447e-01 vol=0.30000 mnd=0.594 drho=2.159e-01 p=1.5 b=1.0 solve 25.01s (setup 0.17) it=8 outer=- res=7.19e-06 iter 31.46s
+it   6 c=1.599835e-01 vol=0.30000 mnd=0.569 drho=2.159e-01 p=1.5 b=1.0 solve 65.82s (setup 10.32) it=8 outer=- res=5.07e-06 iter 72.32s
+it   7 c=1.571010e-01 vol=0.30000 mnd=0.544 drho=2.159e-01 p=1.5 b=1.0 solve 24.14s (setup 1.45) it=8 outer=- res=4.71e-06 iter 31.30s
+it   8 c=1.546417e-01 vol=0.30000 mnd=0.521 drho=2.159e-01 p=1.5 b=1.0 solve 63.49s (setup 0.49) it=8 outer=- res=3.94e-06 iter 70.55s
+it   9 c=1.523998e-01 vol=0.30000 mnd=0.499 drho=2.157e-01 p=1.5 b=1.0 solve 14.79s (setup 0.73) it=8 outer=- res=3.80e-06 iter 18.63s
+it  10 c=1.502804e-01 vol=0.30000 mnd=0.477 drho=2.145e-01 p=1.5 b=1.0 solve 46.01s (setup 0.42) it=8 outer=- res=4.68e-06 iter 49.60s
+Traceback (most recent call last):
+  File "<project>\experiments\run_simp.py", line 59, in main
+    <source line redacted>
+        ^^^^^^^
+  File "<project>\code\src\voxfem\simp.py", line 394, in run
+    <source line redacted>
+RuntimeError: VRAM oversubscription: shared-memory spill detected
+
+simp_cantilever_k384_mg64_stencil: status=failed: RuntimeError('VRAM oversubscription: shared-memory spill detected') valid=False c=None it=None wall=469.9s

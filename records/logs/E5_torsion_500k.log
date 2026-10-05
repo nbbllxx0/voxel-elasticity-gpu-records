@@ -1,0 +1,9 @@
+torsion_500k jacobi64   node_hoist   ok=True wall=2.313s it=2777 outer=- res=9.99e-07 c=2.035702e+00
+torsion_500k jacobi_ir  stencil      ok=True wall=0.905s it=4277 outer=6 res=9.29e-07 c=2.035701e+00
+torsion_500k mg64       stencil      ok=True wall=1.229s it=391 outer=- res=9.60e-07 c=2.035702e+00
+torsion_500k mg_ir      stencil      ok=True wall=1.221s it=487 outer=6 res=6.58e-07 c=2.035701e+00
+torsion_500k mg_ir      spoke        ok=True wall=1.261s it=503 outer=6 res=6.74e-07 c=2.035701e+00
+torsion_500k mg_ir      node_hoist   ok=True wall=1.279s it=492 outer=6 res=4.89e-07 c=2.035702e+00
+torsion_500k mg_ir      node         ok=True wall=1.240s it=474 outer=6 res=5.14e-07 c=2.035702e+00
+torsion_500k mg_ir      elem_atomic  ok=True wall=1.438s it=497 outer=6 res=6.95e-07 c=2.035701e+00
+vcycle {'stencil': 0.002519711971282959, 'spoke': 0.0025333759784698486, 'node_hoist': 0.002565824031829834, 'node': 0.002585599899291992, 'elem_atomic': 0.0025477120876312258} valid True

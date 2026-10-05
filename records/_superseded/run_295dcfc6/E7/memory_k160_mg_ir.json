@@ -1,0 +1,155 @@
+{
+ "experiment": "E7_memory_probe",
+ "solver": "mg_ir",
+ "k": 160,
+ "shape": [
+  320,
+  160,
+  160
+ ],
+ "n_elem": 8192000,
+ "environment": {
+  "time": "2026-10-04T14:09:08",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "295dcfc60619e1ae",
+ "construct_s": 2.552982500055805,
+ "run": {
+  "iterations": 2,
+  "wall_s": 8.723521699896082,
+  "totals": {
+   "solve_s": 0.5584914998617023,
+   "setup_s": 0.628818100085482,
+   "sens_s": 0.0315309998113662,
+   "oc_s": 0.06382940011098981,
+   "filter_s": 0.005529399961233139
+  },
+  "memory": {
+   "peak_pool_used_bytes": 1245431808,
+   "peak_pool_reserved_bytes": 1446251520,
+   "peak_device_used_bytes": 3120037888,
+   "baseline_device_used_bytes": 1612185600
+  },
+  "spill": {
+   "pid": 6244,
+   "limit_bytes": 268435456,
+   "max_shared_growth_bytes": 69206016,
+   "spilled": false,
+   "samples": [
+    {
+     "tag": "start",
+     "t": 1791148151.481453,
+     "dedicated": 1396883456,
+     "shared": 88080384,
+     "others_dedicated": 6205673472
+    },
+    {
+     "tag": "it1",
+     "t": 1791148154.847099,
+     "dedicated": 1791287296,
+     "shared": 157286400,
+     "others_dedicated": 6205673472
+    },
+    {
+     "tag": "it2",
+     "t": 1791148157.4818716,
+     "dedicated": 1870979072,
+     "shared": 157286400,
+     "others_dedicated": 6204985344
+    },
+    {
+     "tag": "end",
+     "t": 1791148160.2041051,
+     "dedicated": 1870979072,
+     "shared": 157286400,
+     "others_dedicated": 6204981248
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "breakdown": {
+  "design_fields": 212992000,
+  "moduli": 32768000,
+  "residual_kernel_tables": 12700,
+  "state_u_fp64": 199695384,
+  "fixed_mask_and_load": 8325265,
+  "ir_workspace": 399390768,
+  "mg_level_vectors": 167629833,
+  "mg_stored_matrices": 175500000,
+  "mg_coarse_inverse": 11290752,
+  "mg_tables": 44964864,
+  "total_accounted": 1252569566,
+  "per_element": {
+   "design_fields": 26.0,
+   "moduli": 4.0,
+   "residual_kernel_tables": 0.00155029296875,
+   "state_u_fp64": 24.3768779296875,
+   "fixed_mask_and_load": 1.0162677001953124,
+   "ir_workspace": 48.753755859375,
+   "mg_level_vectors": 20.462626098632814,
+   "mg_stored_matrices": 21.42333984375,
+   "mg_coarse_inverse": 1.378265625,
+   "mg_tables": 5.488875,
+   "total_accounted": 152.9015583496094
+  },
+  "n_elem": 8192000,
+  "pool_used_bytes": 1245431808,
+  "pool_reserved_bytes": 1446251520
+ },
+ "peak": {
+  "peak_pool_used_bytes": 1245431808,
+  "peak_pool_reserved_bytes": 1446251520,
+  "peak_device_used_bytes": 3120037888,
+  "baseline_device_used_bytes": 1612185600
+ },
+ "spill": {
+  "pid": 6244,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 69206016,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1791148151.481453,
+    "dedicated": 1396883456,
+    "shared": 88080384,
+    "others_dedicated": 6205673472
+   },
+   {
+    "tag": "it1",
+    "t": 1791148154.847099,
+    "dedicated": 1791287296,
+    "shared": 157286400,
+    "others_dedicated": 6205673472
+   },
+   {
+    "tag": "it2",
+    "t": 1791148157.4818716,
+    "dedicated": 1870979072,
+    "shared": 157286400,
+    "others_dedicated": 6204985344
+   },
+   {
+    "tag": "end",
+    "t": 1791148160.2041051,
+    "dedicated": 1870979072,
+    "shared": 157286400,
+    "others_dedicated": 6204981248
+   }
+  ]
+ },
+ "valid": true
+}

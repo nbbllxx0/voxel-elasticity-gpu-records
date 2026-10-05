@@ -1,0 +1,13 @@
+dram_read_GBs                    950.66
+dram_copy_GBs                    883.76
+dram_triad_GBs                   898.78
+l2_read_GBs                     3343.67
+l2_copy_GBs                     3641.31
+l2_triad_GBs                    4050.99
+fp64_fma_TFLOPs                    1.17
+fp32_fma_TFLOPs                   74.08
+atomic_fp32_share1_Gops          113.58
+atomic_fp64_share1_Gops           54.89
+atomic_fp32_share8_Gops          149.42
+atomic_fp64_share8_Gops           80.71
+spec {'dram_GBs': 1008.096, 'fp32_TFLOPs_boost_clock': 82.57536, 'fp64_TFLOPs_boost_clock': 1.29024} valid True

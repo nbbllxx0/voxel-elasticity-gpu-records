@@ -1,0 +1,169 @@
+{
+ "experiment": "E7_memory_probe",
+ "solver": "mg_ir",
+ "k": 384,
+ "shape": [
+  768,
+  384,
+  384
+ ],
+ "n_elem": 113246208,
+ "environment": {
+  "time": "2026-10-04T14:09:46",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "295dcfc60619e1ae",
+ "prediction": {
+  "bytes_per_element": 146.0,
+  "need_bytes": 16533946368.0,
+  "budget": {
+   "cuda_free": 24154996736,
+   "total": 25756696576,
+   "others_dedicated": 6205669376,
+   "wddm_free": 19198554112,
+   "need": 16533946368,
+   "margin": 1073741824,
+   "effective_free": 19198554112,
+   "ok": true
+  }
+ },
+ "construct_s": 2.7262446999084204,
+ "run": {
+  "iterations": 2,
+  "wall_s": 17.044457499869168,
+  "totals": {
+   "solve_s": 5.145006600068882,
+   "setup_s": 1.281444099964574,
+   "sens_s": 0.4067480999510735,
+   "oc_s": 0.550226700026542,
+   "filter_s": 0.10037809982895851
+  },
+  "memory": {
+   "peak_pool_used_bytes": 16393853440,
+   "peak_pool_reserved_bytes": 19317016576,
+   "peak_device_used_bytes": 21885853696,
+   "baseline_device_used_bytes": 1719140352
+  },
+  "spill": {
+   "pid": 38652,
+   "limit_bytes": 268435456,
+   "max_shared_growth_bytes": 77594624,
+   "spilled": false,
+   "samples": [
+    {
+     "tag": "start",
+     "t": 1791148191.3178122,
+     "dedicated": 14391181312,
+     "shared": 213909504,
+     "others_dedicated": 6205669376
+    },
+    {
+     "tag": "it1",
+     "t": 1791148198.0110435,
+     "dedicated": 18650681344,
+     "shared": 291504128,
+     "others_dedicated": 6205669376
+    },
+    {
+     "tag": "it2",
+     "t": 1791148203.4892936,
+     "dedicated": 18384347136,
+     "shared": 291504128,
+     "others_dedicated": 6205673472
+    },
+    {
+     "tag": "end",
+     "t": 1791148208.3571923,
+     "dedicated": 19753795584,
+     "shared": 291504128,
+     "others_dedicated": 6205616128
+    }
+   ]
+  }
+ },
+ "status": "ok",
+ "breakdown": {
+  "design_fields": 2944401408,
+  "moduli": 452984832,
+  "residual_kernel_tables": 47196,
+  "state_u_fp64": 2735640600,
+  "fixed_mask_and_load": 114009361,
+  "ir_workspace": 5471281200,
+  "mg_level_vectors": 2286639439,
+  "mg_stored_matrices": 2426630400,
+  "mg_coarse_inverse": 29215368,
+  "mg_tables": 44964864,
+  "total_accounted": 16505814668,
+  "per_element": {
+   "design_fields": 26.0,
+   "moduli": 4.0,
+   "residual_kernel_tables": 0.00041675567626953125,
+   "state_u_fp64": 24.15657573276096,
+   "fixed_mask_and_load": 1.0067388834776703,
+   "ir_workspace": 48.31315146552192,
+   "mg_level_vectors": 20.19175281348052,
+   "mg_stored_matrices": 21.42791748046875,
+   "mg_coarse_inverse": 0.2579809824625651,
+   "mg_tables": 0.3970540364583333,
+   "total_accounted": 145.751588150307
+  },
+  "n_elem": 113246208,
+  "pool_used_bytes": 16393853440,
+  "pool_reserved_bytes": 19317016576
+ },
+ "peak": {
+  "peak_pool_used_bytes": 16393853440,
+  "peak_pool_reserved_bytes": 19317016576,
+  "peak_device_used_bytes": 21885853696,
+  "baseline_device_used_bytes": 1719140352
+ },
+ "spill": {
+  "pid": 38652,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 77594624,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1791148191.3178122,
+    "dedicated": 14391181312,
+    "shared": 213909504,
+    "others_dedicated": 6205669376
+   },
+   {
+    "tag": "it1",
+    "t": 1791148198.0110435,
+    "dedicated": 18650681344,
+    "shared": 291504128,
+    "others_dedicated": 6205669376
+   },
+   {
+    "tag": "it2",
+    "t": 1791148203.4892936,
+    "dedicated": 18384347136,
+    "shared": 291504128,
+    "others_dedicated": 6205673472
+   },
+   {
+    "tag": "end",
+    "t": 1791148208.3571923,
+    "dedicated": 19753795584,
+    "shared": 291504128,
+    "others_dedicated": 6205616128
+   }
+  ]
+ },
+ "valid": true
+}

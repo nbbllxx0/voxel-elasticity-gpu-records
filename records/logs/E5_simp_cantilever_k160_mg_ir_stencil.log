@@ -1,0 +1,7 @@
+simp_cantilever_k160_mg_ir_stencil mg64       stencil      ok=True wall=0.538s it=23 outer=- res=9.60e-07 c=2.945005e-01
+simp_cantilever_k160_mg_ir_stencil mg_ir      stencil      ok=True wall=0.416s it=28 outer=6 res=1.18e-07 c=2.945005e-01
+simp_cantilever_k160_mg_ir_stencil mg_ir      spoke        ok=True wall=0.416s it=28 outer=6 res=1.18e-07 c=2.945005e-01
+simp_cantilever_k160_mg_ir_stencil mg_ir      node_hoist   ok=True wall=0.456s it=28 outer=6 res=1.18e-07 c=2.945005e-01
+simp_cantilever_k160_mg_ir_stencil mg_ir      node         ok=True wall=0.458s it=28 outer=6 res=1.18e-07 c=2.945005e-01
+simp_cantilever_k160_mg_ir_stencil mg_ir      elem_atomic  ok=True wall=0.578s it=28 outer=6 res=1.18e-07 c=2.945005e-01
+vcycle {'stencil': 0.010112000465393067, 'spoke': 0.010112000465393067, 'node_hoist': 0.011288576126098633, 'node': 0.011378527641296387, 'elem_atomic': 0.014767104148864747} valid True

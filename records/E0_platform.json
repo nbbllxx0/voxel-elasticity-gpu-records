@@ -1,0 +1,113 @@
+{
+ "experiment": "E0_platform",
+ "environment": {
+  "time": "2026-10-04T15:24:47",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "d7a42786fe82ca19",
+ "measured": {
+  "dram_read_GBs": 950.6581903445357,
+  "dram_copy_GBs": 883.7556177622209,
+  "dram_triad_GBs": 898.7794008290825,
+  "l2_read_GBs": 3343.6734959312266,
+  "l2_copy_GBs": 3641.310186708523,
+  "l2_triad_GBs": 4050.98893518106,
+  "fp64_fma_TFLOPs": 1.1686553073437067,
+  "fp32_fma_TFLOPs": 74.08101510410067,
+  "atomic_fp32_share1_Gops": 113.58058374539789,
+  "atomic_fp64_share1_Gops": 54.88777167438889,
+  "atomic_fp32_share8_Gops": 149.42301884989308,
+  "atomic_fp64_share8_Gops": 80.70935831808421
+ },
+ "spec_derived": {
+  "dram_GBs": 1008.096,
+  "fp32_TFLOPs_boost_clock": 82.57536,
+  "fp64_TFLOPs_boost_clock": 1.29024
+ },
+ "device_state_start": {
+  "name": "NVIDIA GeForce RTX 4090",
+  "clocks.sm": "2520",
+  "clocks.mem": "10251",
+  "temperature.gpu": "43",
+  "power.draw": "68.11",
+  "memory.used": "1354",
+  "utilization.gpu": "0",
+  "pstate": "P2"
+ },
+ "device_state_end": {
+  "name": "NVIDIA GeForce RTX 4090",
+  "clocks.sm": "705",
+  "clocks.mem": "5001",
+  "temperature.gpu": "43",
+  "power.draw": "67.18",
+  "memory.used": "4427",
+  "utilization.gpu": "0",
+  "pstate": "P3"
+ },
+ "spill": {
+  "pid": 26236,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 0,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1791152683.66064,
+    "dedicated": 356667392,
+    "shared": 77594624,
+    "others_dedicated": 6204346368
+   },
+   {
+    "tag": "end",
+    "t": 1791152687.911853,
+    "dedicated": 3577917440,
+    "shared": 77594624,
+    "others_dedicated": 6205861888
+   }
+  ]
+ },
+ "valid": true,
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "83bac7f2c560f824",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "39270dd666a97c62",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "37b82e35bedcfa90",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "06861ed8b005e976",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "8320cf811418fc3e",
+  "experiments/run_queue.py": "a4171f94cce8630d",
+  "experiments/run_simp.py": "ab7cba3cb779baad",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86"
+ }
+}

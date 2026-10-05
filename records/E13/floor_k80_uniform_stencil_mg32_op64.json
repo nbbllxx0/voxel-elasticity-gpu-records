@@ -1,0 +1,233 @@
+{
+ "experiment": "E8_precision_floor",
+ "k": 80,
+ "shape": [
+  160,
+  80,
+  80
+ ],
+ "n_elem": 1024000,
+ "field": "uniform",
+ "field_source": "uniform rho=0.3",
+ "tol": 1e-05,
+ "op32": "stencil",
+ "environment": {
+  "time": "2026-10-05T09:25:53",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "00059114bc82224e",
+ "solvers": {
+  "mg32_op64": {
+   "history": [
+    [
+     1,
+     0.21880079345786563,
+     0.21880085153004897
+    ],
+    [
+     2,
+     0.05959057455557484,
+     0.059590644914385295
+    ],
+    [
+     3,
+     0.013768580024175265,
+     0.013769120375127099
+    ],
+    [
+     4,
+     0.002318277658057288,
+     0.002321195234519183
+    ],
+    [
+     5,
+     0.00046467767149843805,
+     0.0004794107726750184
+    ],
+    [
+     6,
+     8.23016057190684e-05,
+     0.0001435695774754183
+    ],
+    [
+     7,
+     2.039382568218709e-05,
+     0.00011946308591796525
+    ],
+    [
+     8,
+     4.579974752260914e-06,
+     0.00011778389629430162
+    ],
+    [
+     9,
+     1.0172016725398796e-06,
+     0.00011770305638679132
+    ],
+    [
+     10,
+     2.0126620905655582e-07,
+     0.00011769745178059364
+    ],
+    [
+     11,
+     3.750497762963696e-08,
+     0.00011769809393529594
+    ],
+    [
+     12,
+     7.1767204259505655e-09,
+     0.00011769800436043826
+    ],
+    [
+     13,
+     1.4087849844507572e-09,
+     0.0001176979929465644
+    ],
+    [
+     14,
+     3.1243118131952493e-10,
+     0.0001176979942128808
+    ],
+    [
+     15,
+     6.735319395902721e-11,
+     0.00011769799452551826
+    ],
+    [
+     16,
+     1.3949249668301506e-11,
+     0.00011769799441207502
+    ],
+    [
+     17,
+     2.763654971531049e-12,
+     0.00011769799441162478
+    ],
+    [
+     18,
+     5.290488845340093e-13,
+     0.00011769799441436747
+    ]
+   ],
+   "first_monitored_pass": {
+    "it": 8,
+    "monitored": 4.579974752260914e-06,
+    "true": 0.00011778389629430162
+   },
+   "floor_true": 0.00011769745178059364,
+   "floor_it": 10,
+   "iters_run": 18,
+   "wall_s": 0.17808859999786364
+  },
+  "mg_ir": {
+   "outer": 4,
+   "inner_iters": 8,
+   "matvecs64": 5,
+   "matvecs32": 8,
+   "precond": 12,
+   "rel_initial": 1.0000000074505808,
+   "warm_start_reset": false,
+   "rejected_steps": 0,
+   "rel_true": 9.08713022324008e-06,
+   "converged": true,
+   "inner_tol_final": 0.1,
+   "time_s": 0.1614592999976594,
+   "wall_s": 0.16262590000405908
+  }
+ },
+ "compliance_mg_ir": 10.430523566726313,
+ "reference": {
+  "tol": 1e-09,
+  "rel_true_independent": 3.058237117399417e-10,
+  "outer": 4,
+  "inner_iters": 8,
+  "compliance": 10.4305306432097
+ },
+ "consequence": {
+  "mg32_op64": {
+   "compliance": 10.430530628319888,
+   "compliance_rel_err": 1.4275220081630297e-09,
+   "energy_norm_rel_err": 1.133368401793124e-05,
+   "sens_rel_err_2": 1.4984454261242317e-06,
+   "sens_rel_err_max": 1.3367955470746758e-06
+  },
+  "mg_ir": {
+   "compliance": 10.430523566726313,
+   "compliance_rel_err": 6.784394417586151e-07,
+   "energy_norm_rel_err": 2.592188852250395e-06,
+   "sens_rel_err_2": 2.7030424636524557e-06,
+   "sens_rel_err_max": 2.8138319256597672e-06
+  }
+ },
+ "spill": {
+  "pid": 41520,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 12582912,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1791217553.6444733,
+    "dedicated": 388124672,
+    "shared": 77594624,
+    "others_dedicated": 2905493504
+   },
+   {
+    "tag": "end",
+    "t": 1791217556.6928897,
+    "dedicated": 675463168,
+    "shared": 90177536,
+    "others_dedicated": 2905493504
+   }
+  ]
+ },
+ "valid": true,
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "664b80c6f45aa04a",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "d35d1e2a5e2edde0",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E10_external_hou.py": "f264358c343f6fc8",
+  "experiments/E11_counters.py": "59fde57387f07b22",
+  "experiments/E15_storage_diff.py": "4bfcd491a3749e97",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "65f198e49cfe0a49",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "e8150834c3473b7f",
+  "experiments/run_queue.py": "c8abb9421e6a37e5",
+  "experiments/run_simp.py": "ab7cba3cb779baad",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86",
+  "experiments/T3_verify_controls.py": "b6acb8b5e980ab63"
+ }
+}

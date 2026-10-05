@@ -1,0 +1,9 @@
+doubleclamp_216k jacobi64   node_hoist   ok=True wall=0.211s it=459 outer=- res=9.89e-07 c=1.072697e+00
+doubleclamp_216k jacobi_ir  stencil      ok=True wall=0.219s it=973 outer=6 res=8.70e-07 c=1.072693e+00
+doubleclamp_216k mg64       stencil      ok=True wall=0.064s it=26 outer=- res=9.11e-07 c=1.072697e+00
+doubleclamp_216k mg_ir      stencil      ok=True wall=0.069s it=32 outer=5 res=7.24e-07 c=1.072697e+00
+doubleclamp_216k mg_ir      spoke        ok=True wall=0.069s it=32 outer=5 res=7.65e-07 c=1.072697e+00
+doubleclamp_216k mg_ir      node_hoist   ok=True wall=0.071s it=32 outer=5 res=7.57e-07 c=1.072697e+00
+doubleclamp_216k mg_ir      node         ok=True wall=0.067s it=32 outer=5 res=7.61e-07 c=1.072697e+00
+doubleclamp_216k mg_ir      elem_atomic  ok=True wall=0.072s it=32 outer=5 res=7.56e-07 c=1.072697e+00
+vcycle {'stencil': 0.0017653759717941285, 'spoke': 0.0017797119617462159, 'node_hoist': 0.0017745920419692993, 'node': 0.0017751679420471192, 'elem_atomic': 0.0019056639671325684} valid True

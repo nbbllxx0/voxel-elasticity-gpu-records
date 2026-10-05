@@ -1,0 +1,3 @@
+k=128 agree 1.26e-07  theirs 35.833 ms  ours 0.186 ms
+CG_iteration 1971
+k=128 their CG 1971 it 73.38 s true res 1.05e-01; ours 16 it 0.26 s res 4.6e-06; c diff 3.6e-04

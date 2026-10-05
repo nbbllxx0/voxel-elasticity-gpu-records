@@ -1,0 +1,238 @@
+{
+ "experiment": "E8_precision_floor",
+ "k": 40,
+ "shape": [
+  80,
+  40,
+  40
+ ],
+ "n_elem": 128000,
+ "field": "uniform",
+ "field_source": "uniform rho=0.3",
+ "tol": 1e-05,
+ "op32": "stencil",
+ "environment": {
+  "time": "2026-10-05T09:25:35",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "00059114bc82224e",
+ "solvers": {
+  "mg32_op64": {
+   "history": [
+    [
+     1,
+     0.23116013418477652,
+     0.23116005198245002
+    ],
+    [
+     2,
+     0.06108446352378124,
+     0.06108447509134297
+    ],
+    [
+     3,
+     0.01115337682464474,
+     0.011153581981779626
+    ],
+    [
+     4,
+     0.002010618976062819,
+     0.0020111243225932845
+    ],
+    [
+     5,
+     0.00036866009670025597,
+     0.00037137812281863293
+    ],
+    [
+     6,
+     8.353007385366156e-05,
+     9.53831195304192e-05
+    ],
+    [
+     7,
+     1.7768943815141733e-05,
+     4.9290231080963484e-05
+    ],
+    [
+     8,
+     4.00763706699538e-06,
+     4.610025071635969e-05
+    ],
+    [
+     9,
+     8.772718332172971e-07,
+     4.5947504904100265e-05
+    ],
+    [
+     10,
+     1.7019563286243456e-07,
+     4.593849859849154e-05
+    ],
+    [
+     11,
+     2.8426615093156283e-08,
+     4.59378826384347e-05
+    ],
+    [
+     12,
+     6.0899904285962224e-09,
+     4.5937934459515386e-05
+    ],
+    [
+     13,
+     1.2664182043775783e-09,
+     4.593793157968675e-05
+    ],
+    [
+     14,
+     2.684518156655523e-10,
+     4.5937930304599785e-05
+    ],
+    [
+     15,
+     5.868935813824964e-11,
+     4.593793012515206e-05
+    ],
+    [
+     16,
+     1.137019053382753e-11,
+     4.593793026662049e-05
+    ],
+    [
+     17,
+     2.3207860546331876e-12,
+     4.59379302317252e-05
+    ],
+    [
+     18,
+     4.4379107250909294e-13,
+     4.593793023937393e-05
+    ],
+    [
+     19,
+     9.016462727245069e-14,
+     4.593793023678958e-05
+    ]
+   ],
+   "first_monitored_pass": {
+    "it": 8,
+    "monitored": 4.00763706699538e-06,
+    "true": 4.610025071635969e-05
+   },
+   "floor_true": 4.59378826384347e-05,
+   "floor_it": 11,
+   "iters_run": 19,
+   "wall_s": 0.12396299999818439
+  },
+  "mg_ir": {
+   "outer": 4,
+   "inner_iters": 8,
+   "matvecs64": 5,
+   "matvecs32": 8,
+   "precond": 12,
+   "rel_initial": 0.9999999776482582,
+   "warm_start_reset": false,
+   "rejected_steps": 0,
+   "rel_true": 7.393937723841057e-06,
+   "converged": true,
+   "inner_tol_final": 0.1,
+   "time_s": 0.17559559999790508,
+   "wall_s": 0.18769860000611516
+  }
+ },
+ "compliance_mg_ir": 20.488898008321588,
+ "reference": {
+  "tol": 1e-09,
+  "rel_true_independent": 2.2626294694947452e-10,
+  "outer": 4,
+  "inner_iters": 8,
+  "compliance": 20.488914225273316
+ },
+ "consequence": {
+  "mg32_op64": {
+   "compliance": 20.488913698914402,
+   "compliance_rel_err": 2.568993690934593e-08,
+   "energy_norm_rel_err": 5.799248209369632e-06,
+   "sens_rel_err_2": 1.1090248277219987e-06,
+   "sens_rel_err_max": 1.0380404247949169e-06
+  },
+  "mg_ir": {
+   "compliance": 20.488898008321588,
+   "compliance_rel_err": 7.914988344355638e-07,
+   "energy_norm_rel_err": 2.3461295981965297e-06,
+   "sens_rel_err_2": 2.0910794365124716e-06,
+   "sens_rel_err_max": 2.5649198197636644e-06
+  }
+ },
+ "spill": {
+  "pid": 40796,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 4194304,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1791217535.3952823,
+    "dedicated": 358764544,
+    "shared": 77594624,
+    "others_dedicated": 2904158208
+   },
+   {
+    "tag": "end",
+    "t": 1791217538.5817966,
+    "dedicated": 453144576,
+    "shared": 81788928,
+    "others_dedicated": 2904158208
+   }
+  ]
+ },
+ "valid": true,
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "664b80c6f45aa04a",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "d35d1e2a5e2edde0",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E10_external_hou.py": "f264358c343f6fc8",
+  "experiments/E11_counters.py": "59fde57387f07b22",
+  "experiments/E15_storage_diff.py": "4bfcd491a3749e97",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "65f198e49cfe0a49",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "e8150834c3473b7f",
+  "experiments/run_queue.py": "c8abb9421e6a37e5",
+  "experiments/run_simp.py": "ab7cba3cb779baad",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86",
+  "experiments/T3_verify_controls.py": "b6acb8b5e980ab63"
+ }
+}

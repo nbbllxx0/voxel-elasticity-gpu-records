@@ -1,0 +1,1 @@
+exceeds capacity (predicted) {'cuda_free': 24154996736, 'total': 25756696576, 'others_dedicated': 6927122432, 'wddm_free': 18477101056, 'need': 22083010560, 'margin': 1073741824, 'effective_free': 18477101056, 'ok': False}

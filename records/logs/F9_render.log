@@ -1,0 +1,8 @@
+simp_cantilever_k160_mg64_stencil.npz 16.0 s
+simp_bridge_k160_mg64_stencil.npz 21.1 s
+simp_torsion_k160_mg64_stencil.npz 21.1 s
+simp_cantilever_k320_mg64_stencil.npz 16.8 s
+simp_bridge_k320_mg64_stencil.npz 21.1 s
+simp_torsion_k320_mg64_stencil.npz 21.9 s
+simp_cantilever_k384_mg_ir_stencil.npz 20.2 s
+wrote F9
