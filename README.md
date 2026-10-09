@@ -12,7 +12,7 @@ The study compares eight matrix-free finite-element operator implementations on 
 - the measured values;
 - a validity flag;
 - the recorded GPU, driver and library versions;
-- a `code_hash` identifying the exact source version that produced it. The released code will reproduce these hashes.
+- a `code_hash` identifying the exact source version that produced it. The released code will reproduce these hashes, except for three versions that existed only between edits on 8 October 2026; `records/code_versions_note.json` lists them and the records they produced, and shows that their solver library is identical to a saved version.
 
 | Folder | Study |
 |---|---|
