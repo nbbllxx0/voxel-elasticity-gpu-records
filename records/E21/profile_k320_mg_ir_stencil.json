@@ -1,0 +1,133 @@
+{
+ "experiment": "E21_vcycle_profile",
+ "solver": "mg_ir",
+ "op32": "stencil",
+ "k": 320,
+ "n_elem": 65536000,
+ "density_file": "results/E7/simp_cantilever_k320_mg64_stencil.npz",
+ "levels": 7,
+ "solve": {
+  "outer": 5,
+  "inner_iters": 23,
+  "matvecs64": 6,
+  "matvecs32": 23,
+  "precond": 28,
+  "rel_initial": 0.999999993306119,
+  "warm_start_reset": false,
+  "rejected_steps": 0,
+  "rel_true": 4.1471642765618805e-06,
+  "converged": true,
+  "inner_tol_final": 0.1,
+  "time_s": 2.6351316000218503,
+  "setup_s": 0.05059840000467375,
+  "wall_s": 2.6857428000075743
+ },
+ "total_gpu_s": 2.68333447265625,
+ "items": {
+  "remainder (vector ops, casts, gaps)": {
+   "calls": null,
+   "s": 0.9666078805753495,
+   "share": 0.36022638639546795
+  },
+  "operator L2+": {
+   "calls": 368,
+   "s": 0.6307336317300797,
+   "share": 0.23505591202192264
+  },
+  "operator L1": {
+   "calls": 92,
+   "s": 0.38003584146499636,
+   "share": 0.14162820376574092
+  },
+  "smoother L0 (fused Jacobi)": {
+   "calls": 92,
+   "s": 0.30809305524826053,
+   "share": 0.11481723891963316
+  },
+  "operator L0": {
+   "calls": 92,
+   "s": 0.22135139083862304,
+   "share": 0.0824911665296447
+  },
+  "smoother coarse levels": {
+   "calls": 460,
+   "s": 0.0507102073088754,
+   "share": 0.018898205879894294
+  },
+  "prolongation": {
+   "calls": 138,
+   "s": 0.04905068782763556,
+   "share": 0.018279751677426917
+  },
+  "hierarchy update": {
+   "calls": 1,
+   "s": 0.048097633361816404,
+   "share": 0.017924576250907792
+  },
+  "restriction": {
+   "calls": 138,
+   "s": 0.027732160291168838,
+   "share": 0.010334962179991148
+  },
+  "coarsest dense solve": {
+   "calls": 23,
+   "s": 0.0009219840094447136,
+   "share": 0.0003435963793704911
+  }
+ },
+ "environment": {
+  "time": "2026-10-08T13:13:53",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "0f99ceb2810abcba",
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "664b80c6f45aa04a",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "d35d1e2a5e2edde0",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E10_external_hou.py": "f264358c343f6fc8",
+  "experiments/E11_counters.py": "59fde57387f07b22",
+  "experiments/E11b_stalls.py": "c408bdea07cb3359",
+  "experiments/E15_storage_diff.py": "3b560a096083b247",
+  "experiments/E19_reference_resolve.py": "4337e759dd9c61dc",
+  "experiments/E21_vcycle_profile.py": "87aaad1b42325b18",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "65f198e49cfe0a49",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "6436dc6c424ba14d",
+  "experiments/run_queue.py": "c8abb9421e6a37e5",
+  "experiments/run_simp.py": "9c7a38cf1ffbe915",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86",
+  "experiments/T3_verify_controls.py": "b6acb8b5e980ab63"
+ }
+}

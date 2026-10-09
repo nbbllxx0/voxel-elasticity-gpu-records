@@ -1,0 +1,21 @@
+<project>\experiments\run_simp.py:45: FutureWarning: cupy.cuda.MemoryAsyncPool is experimental. The interface can change in the future.
+  cp.cuda.set_allocator(cp.cuda.MemoryAsyncPool().malloc)
+it   1 c=3.905224e-01 vol=0.28644 mnd=0.818 drho=nan p=1.5 b=1.0 solve 6.97s (setup 1.68) it=8 outer=- res=6.42e-06 iter 12.12s
+it   2 c=2.385834e-01 vol=0.30000 mnd=0.772 drho=2.136e-01 p=1.5 b=1.0 solve 5.24s (setup 0.08) it=9 outer=- res=4.37e-06 iter 10.08s
+it   3 c=1.953724e-01 vol=0.30000 mnd=0.715 drho=2.137e-01 p=1.5 b=1.0 solve 8.71s (setup 0.11) it=9 outer=- res=3.76e-06 iter 13.57s
+it   4 c=1.737813e-01 vol=0.30000 mnd=0.645 drho=2.159e-01 p=1.5 b=1.0 solve 8.00s (setup 0.15) it=9 outer=- res=4.31e-06 iter 12.79s
+it   5 c=1.638447e-01 vol=0.30000 mnd=0.594 drho=2.159e-01 p=1.5 b=1.0 solve 6.33s (setup 0.47) it=8 outer=- res=7.19e-06 iter 11.30s
+it   6 c=1.599835e-01 vol=0.30000 mnd=0.569 drho=2.159e-01 p=1.5 b=1.0 solve 6.37s (setup 1.15) it=8 outer=- res=5.07e-06 iter 11.17s
+it   7 c=1.571010e-01 vol=0.30000 mnd=0.544 drho=2.159e-01 p=1.5 b=1.0 solve 7.45s (setup 0.20) it=8 outer=- res=4.71e-06 iter 12.15s
+it   8 c=1.546417e-01 vol=0.30000 mnd=0.521 drho=2.159e-01 p=1.5 b=1.0 solve 7.93s (setup 0.26) it=8 outer=- res=3.94e-06 iter 12.65s
+it   9 c=1.523998e-01 vol=0.30000 mnd=0.499 drho=2.157e-01 p=1.5 b=1.0 solve 7.59s (setup 0.19) it=8 outer=- res=3.80e-06 iter 12.40s
+it  10 c=1.502804e-01 vol=0.30000 mnd=0.477 drho=2.145e-01 p=1.5 b=1.0 solve 5.13s (setup 0.27) it=8 outer=- res=4.68e-06 iter 10.03s
+Traceback (most recent call last):
+  File "<project>\experiments\run_simp.py", line 63, in main
+    <source line redacted>
+        ^^^^^^^
+  File "<project>\code\src\voxfem\simp.py", line 403, in run
+    <source line redacted>
+RuntimeError: VRAM oversubscription: shared-memory spill detected
+
+simp_cantilever_k384_mg64_stencil_asyncpool: status=failed: RuntimeError('VRAM oversubscription: shared-memory spill detected') valid=False c=None it=None wall=123.2s

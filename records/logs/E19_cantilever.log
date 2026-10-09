@@ -1,0 +1,3 @@
+cantilever k=384 production: c=0.123662140034 res=4.1505441033883e-06 outer=5 inner=23
+cantilever k=384 reference: c=0.123662079159 res=3.889041606271855e-09 outer=7 inner=37
+relative compliance difference production vs reference: 4.923e-07

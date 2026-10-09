@@ -6,8 +6,8 @@
  },
  {
   "path": "README.md",
-  "bytes": 4159,
-  "sha256": "b064c267306da060b83943cd75a66ff38e96089c446c70bcefceb1f09711b68d"
+  "bytes": 5975,
+  "sha256": "338f53cf398b1ec11e297df4fc0c45358a95527e54fc51c926a03938fddacb18"
  },
  {
   "path": "records/_superseded/E10_capacity/hou_k320.json",
@@ -610,6 +610,11 @@
   "sha256": "59c9da051c67b4b8306b39977c5add1633184453bbf1d9507c042a4643358005"
  },
  {
+  "path": "records/code_versions_note.json",
+  "bytes": 788,
+  "sha256": "f104f847215a42ba0a852a5a8ac0b33b1c5defc7c9956864ee41bca295627b8e"
+ },
+ {
   "path": "records/E0_platform.json",
   "bytes": 3721,
   "sha256": "43f6fc285f9aa91ef5d71d924cba7d470cec82aa298c7d0e030a7819b6bcc106"
@@ -678,6 +683,16 @@
   "path": "records/E11/counters_k80_fp64.json",
   "bytes": 17420,
   "sha256": "f440034e858f0f9e88e52835a1630edfc59854750a35317464b8dca6a9033a09"
+ },
+ {
+  "path": "records/E11b/stalls_k320_fp32.json",
+  "bytes": 37423,
+  "sha256": "b35c0cbb5d061ac8af70a17d52a2883aa01cbaf92f04f81605ceb998be1150cf"
+ },
+ {
+  "path": "records/E11b/stalls_k40_fp32.json",
+  "bytes": 37326,
+  "sha256": "70784af27c0ae7b90a954a169d958c31a6a8beddd8ac29e4e4511d7022b028a3"
  },
  {
   "path": "records/E12/simp_bridge_k160_mg32_rec_stencil.json",
@@ -1000,6 +1015,56 @@
   "sha256": "3da4cfce7eb3fac4c0a27c0392b6c79d9b0fa9e0e199f701291b25cad7f270cc"
  },
  {
+  "path": "records/E18/simp_bridge_k320_mg64_elem_atomic.json",
+  "bytes": 72321,
+  "sha256": "04dc06d4e7b3bcbfb1c88e178a202df7623360b8b88fa659540dd99b68a23f6c"
+ },
+ {
+  "path": "records/E18/simp_bridge_k320_mg64_stencil.json",
+  "bytes": 72241,
+  "sha256": "594afb151fc28d450a752566aa1bcde2e24ed12a3c4decd393a53cf05d20c046"
+ },
+ {
+  "path": "records/E18/simp_cantilever_k320_mg_ir_elem_atomic.json",
+  "bytes": 74052,
+  "sha256": "1e07a807f505d5905c56bb9c72f8078d59fda28be03370b56759717d08e5ae8f"
+ },
+ {
+  "path": "records/E18/simp_cantilever_k320_mg_ir_stencil.json",
+  "bytes": 74183,
+  "sha256": "e196e8ae2f1d8e12a7b7542d2f1403df5c5d904498b45306abc8774e2a269ef2"
+ },
+ {
+  "path": "records/E18/simp_torsion_k320_mg64_elem_atomic.json",
+  "bytes": 72260,
+  "sha256": "f64f107f20cfd6334a64eb30dd194b77a397e568d4c0615f656b40f9719bd959"
+ },
+ {
+  "path": "records/E18/simp_torsion_k320_mg64_stencil.json",
+  "bytes": 72262,
+  "sha256": "df2da2e321512f9e9feb07436a58c03e4005a58bbbe7ce695b1d3345fbcfbc05"
+ },
+ {
+  "path": "records/E19/reference_cantilever_k384.json",
+  "bytes": 4135,
+  "sha256": "accdb4f7c92abd73a110f09a19a1d65f439fa1485c685571cf52fceaf1a4fc47"
+ },
+ {
+  "path": "records/E19/reference_torsion_k384.json",
+  "bytes": 4135,
+  "sha256": "44108d5ca4befb32a5cc43cad8eb944681971b35ca0c1c6d022c8ffb759d1c63"
+ },
+ {
+  "path": "records/E19/simp_cantilever_k384_mg_ir_stencil.json",
+  "bytes": 74116,
+  "sha256": "937a7a5c0fe1d7bbda9095adc295f1bb0ddd4fb07499a1c459f023d40bbdc6cd"
+ },
+ {
+  "path": "records/E19/simp_cantilever_k384_mg_ir_stencil.npz",
+  "bytes": 1447475,
+  "sha256": "e11e298186bca5a2ac15852b683756fb7527be27d4b1616080894e28a09f9da0"
+ },
+ {
   "path": "records/E2/op_k100_fp32.json",
   "bytes": 24571,
   "sha256": "dfefa935b7ddfd2151a55e22c99cf0325aa948a65aa05f6aff80165ca6273bec"
@@ -1118,6 +1183,171 @@
   "path": "records/E2/op_k80_fp64.json",
   "bytes": 21634,
   "sha256": "d9f220936b9fa7d9b776e2f8b524343267249121ef96f199362a897425dfa3d6"
+ },
+ {
+  "path": "records/E20/floor_k160_design_stencil_mg32_op64q.json",
+  "bytes": 7421,
+  "sha256": "cbf112c20c8bd11fd195b420e00fb544a90247dfda5d2b182b68b2904169fa28"
+ },
+ {
+  "path": "records/E20/floor_k160_uniform_stencil_mg32_op64q.json",
+  "bytes": 6058,
+  "sha256": "110ef119f510adc737abfb2a2a341165fa72a6a6b2f6a56de2f4cc4b53914b3d"
+ },
+ {
+  "path": "records/E20/floor_k320_design_stencil_mg32_op64q.json",
+  "bytes": 7554,
+  "sha256": "39d1816e1c5ee5f3a959101541e0d496ee7b5768a70a2f7502ec6357215ca922"
+ },
+ {
+  "path": "records/E20/floor_k320_uniform_stencil_mg32_op64q.json",
+  "bytes": 6050,
+  "sha256": "85d879dcfe22a670678886af9db4073d060091ef6953784a1e0e1bf4435bc9c4"
+ },
+ {
+  "path": "records/E20/floor_k40_uniform_stencil_mg32_op64q.json",
+  "bytes": 6153,
+  "sha256": "b28517266321abbeea5c6197d393d10321af76e3a4c40e25920f6f616b1be565"
+ },
+ {
+  "path": "records/E20/floor_k80_design_stencil_mg32_op64q.json",
+  "bytes": 7009,
+  "sha256": "04c0fb9fc0a13d7e9616a5c6f893140f33471c10a1f2af6d5aa62d46bfa9c076"
+ },
+ {
+  "path": "records/E20/floor_k80_uniform_stencil_mg32_op64q.json",
+  "bytes": 6063,
+  "sha256": "5ad9b00a8d26e5db506bfda1c4bfa46e1024918b727faa833b2006eeb5b5c52c"
+ },
+ {
+  "path": "records/E20b/floor_k160_design_stencil_mg32-mg32_st64-mg32_st64q.json",
+  "bytes": 13111,
+  "sha256": "e3ffe0848dc40558e39d9f62ed632d72df2b85d2c0479e5d20b7de249af62b2d"
+ },
+ {
+  "path": "records/E20b/floor_k160_uniform_stencil_mg32-mg32_st64-mg32_st64q.json",
+  "bytes": 9772,
+  "sha256": "d7f2dcca7820e9a327156122ca667718aa6af745fdd3fc82b4ccb43242787e37"
+ },
+ {
+  "path": "records/E20b/floor_k320_design_stencil_mg32-mg32_st64-mg32_st64q.json",
+  "bytes": 13123,
+  "sha256": "199ebdbf14f8d7ec9e47fe060c76e40401103b05be56d9d032a3e4230d0f721b"
+ },
+ {
+  "path": "records/E20b/floor_k320_uniform_stencil_mg32-mg32_st64-mg32_st64q.json",
+  "bytes": 9825,
+  "sha256": "b84a9b7410caed00dbb86a4d862c1fba41c8c1e481c4daad1083b7a65a3a49e2"
+ },
+ {
+  "path": "records/E20b/floor_k40_uniform_stencil_mg32-mg32_op64q-mg32_st64-mg32_st64q.json",
+  "bytes": 12225,
+  "sha256": "33e67bd427115c9f225baf866f11835a96c9567c1700f33d885987074922dda8"
+ },
+ {
+  "path": "records/E20b/floor_k80_design_stencil_mg32-mg32_st64-mg32_st64q.json",
+  "bytes": 12634,
+  "sha256": "13ff3a86bd75b38ccbcd1c451b27a4c09ca9ecac682dc9037db17338071f7ef4"
+ },
+ {
+  "path": "records/E20b/floor_k80_uniform_stencil_mg32-mg32_st64-mg32_st64q.json",
+  "bytes": 9805,
+  "sha256": "3d03f615a488c4ff6894e89bd8334c7a8b75f33cf7b6669ea6820bd58ee53816"
+ },
+ {
+  "path": "records/E21/profile_k320_mg64_stencil.json",
+  "bytes": 4361,
+  "sha256": "514caf2ff7622094d89895411c994aeeb55b052e4cafc18735ca27611dc4c1d4"
+ },
+ {
+  "path": "records/E21/profile_k320_mg_ir_stencil.json",
+  "bytes": 4273,
+  "sha256": "7a993f1b586d55d2d2f888570de1762f46a88ecd574ac1e50320eaaef5619e8a"
+ },
+ {
+  "path": "records/E22/storage_diff_k160.json",
+  "bytes": 18383,
+  "sha256": "8196ce4119f019a1341d2de115ae91564116cf627692c0b031a28da6998f3bbd"
+ },
+ {
+  "path": "records/E22/storage_diff_k320.json",
+  "bytes": 18308,
+  "sha256": "53a8b61836a732d31b84a17b01c550edf83aca2fe038823d31e800fe704eb6a9"
+ },
+ {
+  "path": "records/E22/storage_diff_k80.json",
+  "bytes": 18330,
+  "sha256": "ecc81a184d5bb2c333e7682e9b57573f5d176fe598676d73e6fc7d98dae1ebd3"
+ },
+ {
+  "path": "records/E23/simp_cantilever_k384_mg64_stencil_asyncpool.json",
+  "bytes": 12903,
+  "sha256": "027d19e3fe70b28aaf28d22b798f92176f6928bafe7666a10411098434c2cec2"
+ },
+ {
+  "path": "records/E24/simp_bridge_k320_mg_ir_node_hoist.json",
+  "bytes": 18104,
+  "sha256": "6a1059e3792b4618da96b5ae96dfb3495b45a64fc86ee10ae98cf8b5a257011d"
+ },
+ {
+  "path": "records/E24/simp_bridge_k320_mg_ir_spoke.json",
+  "bytes": 18108,
+  "sha256": "c1af90b6b5832a8934bc1b6a7211a766d1657a7e8b00ad4fbfdb61e5b5ce85a6"
+ },
+ {
+  "path": "records/E25/simp_bridge_k320_mg_ir_stencil_diff.json",
+  "bytes": 74327,
+  "sha256": "a42aebe23db6e890132cd74c5e08484f4f4a7b7dd0e13bfc859b71f4d8098373"
+ },
+ {
+  "path": "records/E25/simp_cantilever_k320_mg_ir_stencil.json",
+  "bytes": 74247,
+  "sha256": "243b8c340eda1217dc9ccf3a0f9038f26f1736d85dd4c8328d338faf9450bd3d"
+ },
+ {
+  "path": "records/E25/simp_cantilever_k320_mg_ir_stencil_diff.json",
+  "bytes": 74203,
+  "sha256": "7a917346d1fba40691778476ce5b649365ef510a53f0394b77509f524222560d"
+ },
+ {
+  "path": "records/E25/simp_torsion_k320_mg_ir_stencil.json",
+  "bytes": 74324,
+  "sha256": "526de275b9cbc3ce588831c4f0cc90e088aae7246f1a90935f548d09496824ee"
+ },
+ {
+  "path": "records/E25/simp_torsion_k320_mg_ir_stencil_diff.json",
+  "bytes": 74323,
+  "sha256": "f159723b28a296fd7464ff63c461cbd9d1e3f1cc335c49b3c8b4584dea30daa0"
+ },
+ {
+  "path": "records/E26/simp_bridge_k320_mg_ir_stencil_emin1e-6.json",
+  "bytes": 4976,
+  "sha256": "6054e4d347b72ff60bcf0b0f8f96f817d1be3f22ff6c9c5397cd93153319df3e"
+ },
+ {
+  "path": "records/E26/simp_bridge_k320_mg_ir_vc-diff_inner-stencil.json",
+  "bytes": 18248,
+  "sha256": "5366164167e6df629cd1b485fc4d40dfea1faac07eba683613e8f2832d43732a"
+ },
+ {
+  "path": "records/E26/simp_bridge_k320_mg_ir_vc-stencil_inner-diff.json",
+  "bytes": 74379,
+  "sha256": "4d8ea3dadc0d388270af1a5b65b5974d46b31a63d244e0f2b45a729ba66eba52"
+ },
+ {
+  "path": "records/E26/simp_bridge_k320_mg_ir_vc-stencil_inner-diff_emin1e-6.json",
+  "bytes": 74420,
+  "sha256": "61364c468f97bd6207b80c9172d677d91eab4d4d2cfead813e9dd957c31e8c95"
+ },
+ {
+  "path": "records/E27/simp_cantilever_k320_mg64_elem_atomic_200it.json",
+  "bytes": 179639,
+  "sha256": "707d96c69f7bc8510e60cb12832ba59193d875ec340448e00df9d942b03d68a4"
+ },
+ {
+  "path": "records/E27/simp_cantilever_k320_mg64_stencil_200it.json",
+  "bytes": 179627,
+  "sha256": "9e2460875071bff9001bc618d9c0b59b57353330aa9903801f8c6fe40e2181ea"
  },
  {
   "path": "records/E3_mechanism.json",
@@ -1865,6 +2095,11 @@
   "sha256": "d5cc867834cca1363152983b59932e4a478b3d0a1d57e12f4411a8cdffd2ddaf"
  },
  {
+  "path": "records/logs/E11b_k320.log",
+  "bytes": 1402,
+  "sha256": "9adb24f6536eddf04583e631e4e60a8028612ca073af3e0cd7de0e0ef3c2889e"
+ },
+ {
   "path": "records/logs/E12_simp_bridge_k160_mg32_rec_stencil.log",
   "bytes": 10393,
   "sha256": "791ab85eccd157203fab829897761cb74cde69d5dc8eececaa9818f70ea2abfe"
@@ -2083,6 +2318,166 @@
   "path": "records/logs/E17_simp_cantilever_k320_mg64_stencil_op64-stencil.log",
   "bytes": 10339,
   "sha256": "38b3575d126a9d321e04cbd788021e954fc13222f96b20e04f0ed90cbc36e2b3"
+ },
+ {
+  "path": "records/logs/E18_simp_bridge_k320_mg64_elem_atomic.log",
+  "bytes": 10419,
+  "sha256": "3b21305d972c770fbe286300db12e528ccb62394149d3ae51ca324506938d6e4"
+ },
+ {
+  "path": "records/logs/E18_simp_bridge_k320_mg64_stencil.log",
+  "bytes": 10390,
+  "sha256": "403da1641e079a7691c88e584821dca5fdff5eb8618d04e3f80befb90618aa41"
+ },
+ {
+  "path": "records/logs/E18_simp_cantilever_k320_mg_ir_elem_atomic.log",
+  "bytes": 10353,
+  "sha256": "79489966ff6b45e0c14a3bc6d46f23e882f25fb8c32328846b13b282c1f234ca"
+ },
+ {
+  "path": "records/logs/E18_simp_cantilever_k320_mg_ir_stencil.log",
+  "bytes": 10350,
+  "sha256": "b8caa656da00542ebecf8e18831ba685d8faa73997c81b00ae37956682502f0a"
+ },
+ {
+  "path": "records/logs/E18_simp_torsion_k320_mg64_elem_atomic.log",
+  "bytes": 10348,
+  "sha256": "8dc66f7419344c1a33c262a36ca8c497a3340a962ea0016e276369785a733556"
+ },
+ {
+  "path": "records/logs/E18_simp_torsion_k320_mg64_stencil.log",
+  "bytes": 10344,
+  "sha256": "9a6aa074011ceaa0003b195099943767a05621144bf31e02ae81736b38d02544"
+ },
+ {
+  "path": "records/logs/E19_cantilever.log",
+  "bytes": 244,
+  "sha256": "3886629ed84d426fc2a3b4d451bf59329f4a4759a684a63bf1ee53ae32269397"
+ },
+ {
+  "path": "records/logs/E19_simp_cantilever_k384_mg_ir_stencil.log",
+  "bytes": 10338,
+  "sha256": "2a097ba5e379c3d5562807e2fb20fa4f12b2956995c81dc8725b7bf497d7a5b9"
+ },
+ {
+  "path": "records/logs/E19_torsion.log",
+  "bytes": 243,
+  "sha256": "f0b68071725c82d7dd5ca177eaa4e00141b53a175efbd1dce26d38d376746619"
+ },
+ {
+  "path": "records/logs/E20_k160_design.log",
+  "bytes": 752,
+  "sha256": "777d7eaa050a5794295f93af65b22a69fc481c921346dab1b88268868c1eb07a"
+ },
+ {
+  "path": "records/logs/E20_k160_uniform.log",
+  "bytes": 748,
+  "sha256": "98ed5179b052ac54b8e5d0011b36d2621e70de8910b65ccfb0159777d5ec5c70"
+ },
+ {
+  "path": "records/logs/E20_k320_design.log",
+  "bytes": 746,
+  "sha256": "5ecc8338f312b7bf0292c89c3c2b916a510719753ac2956d7565977461aca96b"
+ },
+ {
+  "path": "records/logs/E20_k320_uniform.log",
+  "bytes": 749,
+  "sha256": "b17bdc0da2e3214a273f0bfb650828cd966e00fd010812efeee4cbd955c50cdd"
+ },
+ {
+  "path": "records/logs/E20_k40_uniform.log",
+  "bytes": 752,
+  "sha256": "8b87374ae81379520f91c00564c4466040412d6540c9369ce12506ebd6719cc0"
+ },
+ {
+  "path": "records/logs/E20_k80_design.log",
+  "bytes": 747,
+  "sha256": "b91eb8a454aabf4ceb61335c359c58779b2d0cacc72100cbd868ed79b97a44a3"
+ },
+ {
+  "path": "records/logs/E20_k80_uniform.log",
+  "bytes": 749,
+  "sha256": "94cd48642c76143b45ef6697785141bcc07a882c24fda26d7a128018ed78de20"
+ },
+ {
+  "path": "records/logs/E21_simp_cantilever_k320_mg64_stencil.log",
+  "bytes": 892,
+  "sha256": "5f7880857148494c48b7d738fc2cf1ccf3a0b91932a488ccbf8a20c7605e1463"
+ },
+ {
+  "path": "records/logs/E21_simp_cantilever_k320_mg_ir_stencil.log",
+  "bytes": 892,
+  "sha256": "5f7880857148494c48b7d738fc2cf1ccf3a0b91932a488ccbf8a20c7605e1463"
+ },
+ {
+  "path": "records/logs/E22_k160.log",
+  "bytes": 1562,
+  "sha256": "7b87a943e36abeff45613dba39924dacd06d743a65941da7ed7494dcea3c862d"
+ },
+ {
+  "path": "records/logs/E22_k320.log",
+  "bytes": 1562,
+  "sha256": "bcc9aef8e8f6272158b84812dac20d4d736c30cf8e422f2bf0835fd161f1e427"
+ },
+ {
+  "path": "records/logs/E22_k80.log",
+  "bytes": 1565,
+  "sha256": "dc22f255980693bc5e868b66ddde8e31b58a9ccb1abb1a7576206eb8512e79a9"
+ },
+ {
+  "path": "records/logs/E23_simp_cantilever_k384_mg64_stencil_asyncpool.log",
+  "bytes": 2010,
+  "sha256": "aa09570b41374fc7902ca9e8fd6138cbdcbb055ca8c8e69b16b4f38bd1fa82d1"
+ },
+ {
+  "path": "records/logs/E25_simp_bridge_k320_mg_ir_stencil_diff.log",
+  "bytes": 10387,
+  "sha256": "09595b7907bb303dcabb531f99ea32d7bcee646275f84d30cb1a6779e92e5f70"
+ },
+ {
+  "path": "records/logs/E25_simp_cantilever_k320_mg_ir_stencil.log",
+  "bytes": 10350,
+  "sha256": "e0184b87af786d0fce020b5381dd61e8ac60d94b23e88bb38c79a949ec676b1d"
+ },
+ {
+  "path": "records/logs/E25_simp_cantilever_k320_mg_ir_stencil_diff.log",
+  "bytes": 10351,
+  "sha256": "d097d415234cc73314d4046b93cfd868383aaabc6235abd1210481219144496e"
+ },
+ {
+  "path": "records/logs/E25_simp_torsion_k320_mg_ir_stencil.log",
+  "bytes": 10353,
+  "sha256": "9b9aa55e2b1ca0ab27df74c238a0a3a7c269a3845817b02ab2d7c30189206112"
+ },
+ {
+  "path": "records/logs/E25_simp_torsion_k320_mg_ir_stencil_diff.log",
+  "bytes": 10359,
+  "sha256": "13c02052484d683333e5bbd4582ec982617134dc2095147a9182054ed727c2ba"
+ },
+ {
+  "path": "records/logs/E26_emin1e-6.log",
+  "bytes": 782,
+  "sha256": "f71232e49ac1bbddcad7ef97b6bfd1683812b3093b6e5e3a9e48603eeda00c38"
+ },
+ {
+  "path": "records/logs/E26_inner_diff.log",
+  "bytes": 10396,
+  "sha256": "f459ad1cb4559c557195d715f6a8974e779124f2c83b705062e4ec4cbe80a9ce"
+ },
+ {
+  "path": "records/logs/E26_vcycle_diff.log",
+  "bytes": 2806,
+  "sha256": "a13aa5ac71a7d44e9c731283590fbdc3c34beca156c8e0cf907d1acc545c4ac1"
+ },
+ {
+  "path": "records/logs/E27_simp_cantilever_k320_mg64_elem_atomic_200it.log",
+  "bytes": 27077,
+  "sha256": "dbd80f0a2704007c32d8d77d6cf516172f382b24c48515f2f844e4610c419885"
+ },
+ {
+  "path": "records/logs/E27_simp_cantilever_k320_mg64_stencil_200it.log",
+  "bytes": 27073,
+  "sha256": "470ebbb98f3683b0650b64efba69111c5d936b036c6a29b6d511cfc79a38b37f"
  },
  {
   "path": "records/logs/E2_k100_fp32.log",
@@ -2771,13 +3166,13 @@
  },
  {
   "path": "records/logs/gpu_engine_activity.csv",
-  "bytes": 241738,
-  "sha256": "210b646c5098d6e078dec1f84692142bc20bd106b20df952e4e10c9cc9167147"
+  "bytes": 339420,
+  "sha256": "10256f4980e41704c96d6d0bd27401509760b47834391d54d42eaa669b1cbdaf"
  },
  {
   "path": "records/logs/queue.log",
-  "bytes": 21680,
-  "sha256": "abc537678349104452272c8a15cf4e110f19c033f7f1dc96979ac95c5b904a55"
+  "bytes": 23585,
+  "sha256": "fc69e5e013b57118dfce9d87ce0dcdb01699b03b6f4b0d2ab479e8b6a07a6f03"
  },
  {
   "path": "records/logs/T1.log",
@@ -2813,5 +3208,10 @@
   "path": "records/T3_verify_controls.json",
   "bytes": 3849,
   "sha256": "47d173a7e7967c69a931bb0bf74f7270d5a266422afa5e924d87d57359b4a9fd"
+ },
+ {
+  "path": "records/V4/analysis.json",
+  "bytes": 3737,
+  "sha256": "d22ca6129e40bc12a1d7165ebae0d449278997fc19d557bef62e61bd35ef9994"
  }
 ]

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<project>\experiments\run_simp.py", line 68, in main
+    <source line redacted>
+        ^^^^^^^
+  File "<project>\code\src\voxfem\simp.py", line 374, in run
+    <source line redacted>
+         ^^^^^^^^^^^^
+  File "<project>\code\src\voxfem\simp.py", line 276, in solve
+    <source line redacted>
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\code\src\voxfem\krylov.py", line 260, in ir_lean
+    <source line redacted>
+voxfem.krylov.SolveFailed: ir_lean: correction rejected with inner tolerance 1e-07
+
+simp_bridge_k320_mg_ir_stencil_emin1e-6: status=failed: SolveFailed('ir_lean: correction rejected with inner tolerance 1e-07') valid=False c=None it=None wall=28.6s

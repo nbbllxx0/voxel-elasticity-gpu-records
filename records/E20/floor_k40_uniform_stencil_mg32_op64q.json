@@ -1,0 +1,245 @@
+{
+ "experiment": "E8_precision_floor",
+ "k": 40,
+ "shape": [
+  80,
+  40,
+  40
+ ],
+ "n_elem": 128000,
+ "field": "uniform",
+ "field_source": "uniform rho=0.3",
+ "tol": 1e-05,
+ "op32": "stencil",
+ "environment": {
+  "time": "2026-10-08T12:32:24",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "e9fd7c4dff2f494f",
+ "solvers": {
+  "mg32_op64q": {
+   "history": [
+    [
+     1,
+     0.2311610155064398,
+     0.23116097478078054
+    ],
+    [
+     2,
+     0.061061211204876197,
+     0.06106115576902802
+    ],
+    [
+     3,
+     0.011140653747412082,
+     0.011140820807899892
+    ],
+    [
+     4,
+     0.0020074851887994655,
+     0.0020081618143015143
+    ],
+    [
+     5,
+     0.00036857392736699805,
+     0.00037240151582072794
+    ],
+    [
+     6,
+     8.366949120928729e-05,
+     9.924275492622752e-05
+    ],
+    [
+     7,
+     1.777884345683207e-05,
+     5.6230639824615566e-05
+    ],
+    [
+     8,
+     4.003010462525026e-06,
+     5.3455619662217143e-05
+    ],
+    [
+     9,
+     8.769125339007361e-07,
+     5.3316080699372385e-05
+    ],
+    [
+     10,
+     1.7021996310612994e-07,
+     5.3309961792406386e-05
+    ],
+    [
+     11,
+     2.8417798241575823e-08,
+     5.330963899501882e-05
+    ],
+    [
+     12,
+     6.088297458461113e-09,
+     5.330961774051868e-05
+    ],
+    [
+     13,
+     1.2661583786043037e-09,
+     5.3309618880572685e-05
+    ],
+    [
+     14,
+     2.6852718259730215e-10,
+     5.3309619087841146e-05
+    ],
+    [
+     15,
+     5.873281925700418e-11,
+     5.3309618309494744e-05
+    ],
+    [
+     16,
+     1.1371905818685283e-11,
+     5.3309618498747465e-05
+    ],
+    [
+     17,
+     2.320418496650136e-12,
+     5.330961849899763e-05
+    ],
+    [
+     18,
+     4.440635668113297e-13,
+     5.3309618497843375e-05
+    ],
+    [
+     19,
+     9.032104148152872e-14,
+     5.330961849678513e-05
+    ],
+    [
+     20,
+     1.935710687971892e-14,
+     5.330961849774733e-05
+    ]
+   ],
+   "first_monitored_pass": {
+    "it": 8,
+    "monitored": 4.003010462525026e-06,
+    "true": 5.3455619662217143e-05
+   },
+   "floor_true": 5.330961774051868e-05,
+   "floor_it": 12,
+   "iters_run": 20,
+   "wall_s": 0.06815259996801615
+  },
+  "mg_ir": {
+   "outer": 4,
+   "inner_iters": 8,
+   "matvecs64": 5,
+   "matvecs32": 8,
+   "precond": 12,
+   "rel_initial": 0.9999999776482582,
+   "warm_start_reset": false,
+   "rejected_steps": 0,
+   "rel_true": 7.393937723841057e-06,
+   "converged": true,
+   "inner_tol_final": 0.1,
+   "time_s": 0.12419010000303388,
+   "wall_s": 0.1253465000190772
+  }
+ },
+ "compliance_mg_ir": 20.488898008321588,
+ "reference": {
+  "tol": 1e-09,
+  "rel_true_independent": 2.2626294694947452e-10,
+  "outer": 4,
+  "inner_iters": 8,
+  "compliance": 20.488914225273316
+ },
+ "consequence": {
+  "mg32_op64q": {
+   "compliance": 20.506973591233056,
+   "compliance_rel_err": 0.0008814213267320653,
+   "energy_norm_rel_err": 0.0009874837879601838,
+   "sens_rel_err_2": 0.0005982529158213033,
+   "sens_rel_err_max": 0.0001183853265153074
+  },
+  "mg_ir": {
+   "compliance": 20.488898008321588,
+   "compliance_rel_err": 7.914988344355638e-07,
+   "energy_norm_rel_err": 2.3461295981965297e-06,
+   "sens_rel_err_2": 2.0910794365124716e-06,
+   "sens_rel_err_max": 2.5649198197636644e-06
+  }
+ },
+ "spill": {
+  "pid": 45600,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 4194304,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1791487944.1087458,
+    "dedicated": 358764544,
+    "shared": 77594624,
+    "others_dedicated": 4900241408
+   },
+   {
+    "tag": "end",
+    "t": 1791487946.8401623,
+    "dedicated": 453144576,
+    "shared": 81788928,
+    "others_dedicated": 4900241408
+   }
+  ]
+ },
+ "valid": true,
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "664b80c6f45aa04a",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "d35d1e2a5e2edde0",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E10_external_hou.py": "f264358c343f6fc8",
+  "experiments/E11_counters.py": "59fde57387f07b22",
+  "experiments/E11b_stalls.py": "c408bdea07cb3359",
+  "experiments/E15_storage_diff.py": "3b560a096083b247",
+  "experiments/E19_reference_resolve.py": "4337e759dd9c61dc",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "65f198e49cfe0a49",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "6436dc6c424ba14d",
+  "experiments/run_queue.py": "c8abb9421e6a37e5",
+  "experiments/run_simp.py": "9c7a38cf1ffbe915",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86",
+  "experiments/T3_verify_controls.py": "b6acb8b5e980ab63"
+ }
+}

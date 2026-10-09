@@ -1,0 +1,19 @@
+elem_atomic|fp64|E64         0.941 ms  fp64= 600 fp32=   0 f2f= 0  model err -2.6%
+elem_atomic|fp64|E32         0.947 ms  fp64= 600 fp32=   0 f2f= 1  model err -1.9%
+elem_colored|fp64|E64        0.984 ms  fp64= 600 fp32=   0 f2f= 0  model err +1.8%
+elem_colored|fp64|E32        0.984 ms  fp64= 600 fp32=   0 f2f= 1  model err +1.8%
+node|fp64|E64                1.235 ms  fp64= 768 fp32=   0 f2f= 0  model err -3.2%
+node|fp64|E32                1.263 ms  fp64= 768 fp32=   0 f2f= 8  model err -1.0%
+node_hoist|fp64|E64          0.948 ms  fp64= 600 fp32=   0 f2f= 0  model err -4.9%
+node_hoist|fp64|E32          0.961 ms  fp64= 600 fp32=   0 f2f= 8  model err -3.6%
+dof|fp64|E64                 1.253 ms  fp64= 256 fp32=   0 f2f= 0  model err -1.8%
+dof|fp64|E32                 1.298 ms  fp64= 256 fp32=   0 f2f= 9  model err +1.8%
+tile|fp64|E64                1.480 ms  fp64= 768 fp32=   0 f2f= 0  model err +16.0%
+tile|fp64|E32                1.500 ms  fp64= 768 fp32=   0 f2f= 8  model err +17.6%
+spoke|fp64|E64               1.243 ms  fp64= 693 fp32=   0 f2f= 0  model err +7.9%
+spoke|fp64|E32               1.259 ms  fp64= 693 fp32=   0 f2f= 8  model err +9.4%
+stencil|fp64|E64             1.308 ms  fp64= 724 fp32=   0 f2f= 0  model err +8.7%
+stencil|fp64|E32             1.323 ms  fp64= 724 fp32=   0 f2f= 8  model err +10.0%
+stencil|fp32|E32             0.037 ms  fp64=   0 fp32= 644 f2f= 0
+stencil_diff|fp32|E32        0.040 ms  fp64=   0 fp32= 673 f2f= 0
+stencil_diff|fp64|E32        1.368 ms  fp64= 750 fp32=   0 f2f= 8  model err +9.8%

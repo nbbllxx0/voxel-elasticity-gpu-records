@@ -31,7 +31,20 @@ The study compares eight matrix-free finite-element operator implementations on 
 | `E14/` | recursive-stop controls with an FP64-arithmetic operator and with the difference-form stencil |
 | `E15/` | FP64 operators with FP32- versus FP64-stored moduli; difference-form stencil cost |
 | `E16/` | iterative refinement with the difference-form stencil on the bridge problem |
+| `E11b/` | stall counters (Nsight Compute) for the FP32 mappings; `stalls_k40_fp32.json` is a smoke test that the manuscript does not use |
 | `E17/` | FP64 outer-operator swap inside a complete optimization |
+| `E18/` | fine-level mapping swaps in a second quiet session: the cantilever with iterative refinement, the torsion and the bridge with FP64 conjugate gradients |
+| `E19/` | 113-million-element designs re-solved with the difference-form stencil to a true residual of 1e-8 (accuracy only) |
+| `E20/`, `E20b/` | rounded-coefficient controls: FP64 arithmetic with an FP32-rounded element matrix, for the factored node kernel and for the stencil |
+| `E21/` | CUDA-event profile of one state solve (time attribution only) |
+| `E22/` | quiet re-timing of the difference-form stencil |
+| `E23/` | FP64 conjugate gradients at 113 million elements with CUDA's stream-ordered allocator (stopped by the spill check) |
+| `E24/` | iterative refinement on the bridge with the factored node and 27-neighbour FP32 kernels (untimed) |
+| `E25/` | timed complete optimizations with iterative refinement and the difference-form stencil |
+| `E26/` | bridge-failure isolation: the difference form in one place at a time and a larger modulus floor (untimed) |
+| `E27/` | stencil against atomic element kernel over 200 design iterations |
+| `V4/analysis.json` | derived quantities computed from the records above (model hold-out, swap accounting, swap gaps) |
+| `code_versions_note.json` | three code versions used on 8 October 2026 whose exact source could not be reconstructed, and why |
 | `T1_*`, `T2_*`, `T3_*` | verification of operators, multigrid and the precision-control operators |
 | `logs/` | run logs, the job queue log and the GPU-activity log used to screen timings for interference |
 | `_superseded/` | earlier records that the manuscript still cites (an independent timing repetition and a capacity test) |
@@ -40,7 +53,9 @@ The study compares eight matrix-free finite-element operator implementations on 
 Some records are not timing evidence, and their elapsed times should not be read as performance results:
 - records with `"valid": false`;
 - failed or unsuccessful runs, which are kept on purpose (for example, runs that stop because a solve fails);
-- accuracy-only runs made on a busier desktop (`E13`, `E14`, `E16`).
+- accuracy-only runs made on a busier desktop (`E13`, `E14`, `E16`, `E19`, `E20`, `E20b`, `E23`, `E24`, `E26`);
+- the `E19` reference re-solves, which spilled into system memory; a spill slows a run but does not change its values;
+- `E21`, a time attribution of one state solve, not a performance result.
 
 ## Redactions
 

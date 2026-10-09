@@ -1,0 +1,8 @@
+{
+ "missing_snapshots": {
+  "0f99ceb2810abcba": "E18 bridge pair, E21, E22. Differs from the saved c6b02f539f4e1a5e only in experiments/E8_precision_floor.py (stencil coefficient control added later); code/src/voxfem identical.",
+  "e9fd7c4dff2f494f": "E11b (k320), E18 cantilever and torsion pairs, E19, E20, E23. As 0f99ceb2810abcba without experiments/E21_vcycle_profile.py; code/src/voxfem identical to c6b02f539f4e1a5e.",
+  "67c8229c2345622f": "E11b k40 smoke test only (not reported). Earlier draft of experiments/E11b_stalls.py; code/src/voxfem identical to c6b02f539f4e1a5e."
+ },
+ "why": "These versions existed only between edits on 2026-10-08 and could not be rebuilt byte-exactly; the solver library (code/src/voxfem) did not change between them and c6b02f539f4e1a5e."
+}

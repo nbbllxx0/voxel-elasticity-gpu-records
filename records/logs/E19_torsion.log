@@ -1,0 +1,3 @@
+torsion k=384 production: c=0.0494283439244 res=2.293366431999018e-06 outer=5 inner=42
+torsion k=384 reference: c=0.0494283421949 res=1.6169744948370073e-09 outer=8 inner=88
+relative compliance difference production vs reference: 3.499e-08

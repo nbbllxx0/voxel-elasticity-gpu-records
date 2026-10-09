@@ -1,0 +1,10 @@
+Unexpected exception thrown while launching the application.
+C:\dvs\p4\build\sw\devtools\Agora\Rel\DTC_F\QuadD\Target\quadd_d\quadd_d\jni\EventSource\ETWSession.cpp(152): Throw in function void __cdecl QuadDDaemon::EventSource::ETWSession::Start(void)
+Dynamic exception type: class QuadDCommon::AccessDeniedException
+std::exception::what: AccessDeniedException
+[struct QuadDCommon::tag_message * __ptr64] = Microsoft-Windows-DxgKrnl provider requires administrator privileges
+C:\dvs\p4\build\sw\devtools\Agora\Rel\DTC_F\QuadD\Target\quadd_d\quadd_d\jni\EventSource\ETWSession.cpp(152): Throw in function void __cdecl QuadDDaemon::EventSource::ETWSession::Start(void)
+Dynamic exception type: class QuadDCommon::AccessDeniedException
+std::exception::what: AccessDeniedException
+[struct QuadDCommon::tag_message * __ptr64] = Microsoft-Windows-DxgKrnl provider requires administrator privileges
+

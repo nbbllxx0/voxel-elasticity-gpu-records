@@ -1,0 +1,136 @@
+{
+ "experiment": "E21_vcycle_profile",
+ "solver": "mg64",
+ "op32": "stencil",
+ "k": 320,
+ "n_elem": 65536000,
+ "density_file": "results/E7/simp_cantilever_k320_mg64_stencil.npz",
+ "levels": 7,
+ "solve": {
+  "iters": 20,
+  "matvecs": 22,
+  "precond": 20,
+  "true_checks": 2,
+  "rel_initial": 0.9999999999999999,
+  "warm_start_reset": false,
+  "rel_true": 8.440614791188263e-06,
+  "rel_recursive_at_stop": 8.440614791489256e-06,
+  "converged": true,
+  "time_s": 3.656780799967237,
+  "setup_s": 0.025887499970849603,
+  "wall_s": 3.6826828999910504
+ },
+ "total_gpu_s": 3.680685791015625,
+ "items": {
+  "FP64 outer operator": {
+   "calls": 22,
+   "s": 1.321153148651123,
+   "share": 0.35894211667727616
+  },
+  "remainder (vector ops, casts, gaps)": {
+   "calls": null,
+   "s": 0.8793632025711706,
+   "share": 0.23891286909565967
+  },
+  "operator L2+": {
+   "calls": 320,
+   "s": 0.5505732142925263,
+   "share": 0.14958441050209956
+  },
+  "operator L1": {
+   "calls": 80,
+   "s": 0.329540961265564,
+   "share": 0.08953248931760419
+  },
+  "smoother L0 (fused Jacobi)": {
+   "calls": 80,
+   "s": 0.2694761588573456,
+   "share": 0.07321357327352522
+  },
+  "operator L0": {
+   "calls": 80,
+   "s": 0.19484886503219606,
+   "share": 0.05293819578618003
+  },
+  "smoother coarse levels": {
+   "calls": 400,
+   "s": 0.04419753528921865,
+   "share": 0.012007962048024498
+  },
+  "prolongation": {
+   "calls": 120,
+   "s": 0.04276025596540421,
+   "share": 0.011617469785054709
+  },
+  "restriction": {
+   "calls": 120,
+   "s": 0.02420473625510931,
+   "share": 0.006576148475969314
+  },
+  "hierarchy update": {
+   "calls": 1,
+   "s": 0.023790496826171875,
+   "share": 0.006463604387052902
+  },
+  "coarsest dense solve": {
+   "calls": 20,
+   "s": 0.0007772160097956658,
+   "share": 0.000211160651553798
+  }
+ },
+ "environment": {
+  "time": "2026-10-08T13:13:40",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "0f99ceb2810abcba",
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "664b80c6f45aa04a",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "d35d1e2a5e2edde0",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E10_external_hou.py": "f264358c343f6fc8",
+  "experiments/E11_counters.py": "59fde57387f07b22",
+  "experiments/E11b_stalls.py": "c408bdea07cb3359",
+  "experiments/E15_storage_diff.py": "3b560a096083b247",
+  "experiments/E19_reference_resolve.py": "4337e759dd9c61dc",
+  "experiments/E21_vcycle_profile.py": "87aaad1b42325b18",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "65f198e49cfe0a49",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "6436dc6c424ba14d",
+  "experiments/run_queue.py": "c8abb9421e6a37e5",
+  "experiments/run_simp.py": "9c7a38cf1ffbe915",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86",
+  "experiments/T3_verify_controls.py": "b6acb8b5e980ab63"
+ }
+}

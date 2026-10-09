@@ -1,0 +1,7 @@
+elem_atomic  issue 13.38%  occ 56.21%  regs 65.0  sect/req 11.016949152542374  top [('mio_throttle', 24.9), ('barrier', 5.84), ('short_scoreboard', 5.69), ('long_scoreboard', 5.39), ('lg_throttle', 4.41)]
+node         issue 50.0%  occ 72.26%  regs 50.0  sect/req 12.105425315797232  top [('mio_throttle', 4.89), ('long_scoreboard', 3.55), ('short_scoreboard', 2.66), ('not_selected', 1.98), ('wait', 1.27)]
+node_hoist   issue 44.57%  occ 80.72%  regs 48.0  sect/req 12.105425315797232  top [('mio_throttle', 8.16), ('long_scoreboard', 3.13), ('barrier', 2.4), ('not_selected', 2.35), ('short_scoreboard', 2.06)]
+dof          issue 39.29%  occ 80.7%  regs 48.0  sect/req 4.745236411530619  top [('long_scoreboard', 5.86), ('mio_throttle', 5.7), ('lg_throttle', 3.78), ('barrier', 1.98), ('not_selected', 1.97)]
+tile         issue 60.75%  occ 36.27%  regs 48.0  sect/req 4.751932024051458  top [('long_scoreboard', 1.93), ('wait', 1.39), ('selected', 1.0), ('not_selected', 0.95), ('short_scoreboard', 0.68)]
+spoke        issue 84.22%  occ 93.48%  regs 40.0  sect/req 11.917090680023321  top [('long_scoreboard', 5.37), ('not_selected', 4.31), ('selected', 1.0), ('wait', 0.93), ('dispatch_stall', 0.63)]
+stencil      issue 68.27%  occ 92.1%  regs 40.0  sect/req 11.917090680023321  top [('long_scoreboard', 8.41), ('not_selected', 3.36), ('selected', 1.0), ('lg_throttle', 0.98), ('wait', 0.86)]

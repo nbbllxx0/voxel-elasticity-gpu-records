@@ -1,0 +1,152 @@
+{
+ "fp64_holdout": {
+  "n": 72,
+  "efficiency_in_sample": 0.9224419682953852,
+  "median_err_in_sample": 0.03409459763979224,
+  "leave_one_mapping_out_median": 0.039310133329469525,
+  "leave_one_class_out_median": 0.048147567992665764,
+  "leave_one_class_out_max": 0.17472253246361918,
+  "per_class": {
+   "600": {
+    "mappings": [
+     "elem_atomic",
+     "elem_colored",
+     "node_hoist"
+    ],
+    "efficiency_from_others": 0.9079345121911345,
+    "median_err": 0.04896329620974847,
+    "max_err": 0.08713006170197404
+   },
+   "693": {
+    "mappings": [
+     "spoke"
+    ],
+    "efficiency_from_others": 0.931104132340266,
+    "median_err": 0.0697754224286278,
+    "max_err": 0.07730908723114374
+   },
+   "724": {
+    "mappings": [
+     "stencil"
+    ],
+    "efficiency_from_others": 0.9332095741327835,
+    "median_err": 0.07891320622768444,
+    "max_err": 0.08565745701317119
+   },
+   "768": {
+    "mappings": [
+     "dof",
+     "node",
+     "tile"
+    ],
+    "efficiency_from_others": 0.9113300177316325,
+    "median_err": 0.037874347528153274,
+    "max_err": 0.17472253246361918
+   }
+  },
+  "equal_count_null_median": 0.12186368006996762
+ },
+ "swap_accounting": {
+  "loop_s": 137.03877949970774,
+  "totals": {
+   "iters": 563,
+   "matvecs": 714,
+   "precond": 563,
+   "true_checks": 151
+  },
+  "fp64_outer_s": 41.4013067779541,
+  "true_check_s": 8.755738548278808,
+  "fp64_apply_s": 0.057985023498535154,
+  "stage_loop_s": [
+   31.245789299719036,
+   60.00011150026694,
+   32.569024400319904,
+   13.223854299401864
+  ],
+  "stage_vcycles": [
+   132,
+   277,
+   117,
+   37
+  ],
+  "fp64_outer_share": 0.3021138025973326,
+  "true_check_share": 0.06389241483501013,
+  "swaps": {
+   "elem_atomic": {
+    "loop_s": 159.86648899852298,
+    "gap_s": 22.82770949881524,
+    "gap_rel": 0.16657846473934718,
+    "vcycles": 562,
+    "kernel_gap_s": 0.010068803151448567,
+    "fine_applications_per_vcycle_implied": 4.034114041645967,
+    "stage_gap_rel": [
+     0.1692583550802255,
+     0.18541753707839978,
+     0.14864883394244383,
+     0.11892736902532247
+    ]
+   },
+   "node": {
+    "loop_s": 143.89352379902266,
+    "gap_s": 6.854744299314916,
+    "gap_rel": 0.050020471025353334,
+    "vcycles": 563,
+    "kernel_gap_s": 0.00244635009765625,
+    "fine_applications_per_vcycle_implied": 4.9769612006368975,
+    "stage_gap_rel": [
+     0.05036594802218758,
+     0.054523175335475876,
+     0.045962933413234486,
+     0.03876751729132107
+    ]
+   },
+   "spoke": {
+    "loop_s": 137.30166199966334,
+    "gap_s": 0.26288249995559454,
+    "gap_rel": 0.0019183073646402051,
+    "vcycles": 563,
+    "kernel_gap_s": -6.469011306762694e-05,
+    "fine_applications_per_vcycle_implied": null,
+    "stage_gap_rel": [
+     0.0015331185920072728,
+     0.003257928943146674,
+     0.0003784792281281137,
+     0.000542670860636444
+    ]
+   }
+  },
+  "stencil_share_implied": 0.04133741544499207
+ },
+ "e18_swaps": {
+  "cantilever_mg_ir": {
+   "stencil_loop_s": 120.82300880027469,
+   "atomic_loop_s": 157.5149686000659,
+   "gap_rel": 0.30368354640501055,
+   "iterations": [
+    76,
+    76
+   ],
+   "compliance_rel_diff": 4.1975226670668154e-07
+  },
+  "torsion_mg64": {
+   "stencil_loop_s": 164.05965080024907,
+   "atomic_loop_s": 190.7717002000427,
+   "gap_rel": 0.1628191287101841,
+   "iterations": [
+    76,
+    76
+   ],
+   "compliance_rel_diff": 1.7455060203505495e-08
+  },
+  "bridge_mg64": {
+   "stencil_loop_s": 439.2897414002218,
+   "atomic_loop_s": 526.1083914000774,
+   "gap_rel": 0.1976341394249816,
+   "iterations": [
+    76,
+    76
+   ],
+   "compliance_rel_diff": 3.2770023204598433e-06
+  }
+ }
+}
