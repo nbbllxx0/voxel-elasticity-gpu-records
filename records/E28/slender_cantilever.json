@@ -1,0 +1,131 @@
+{
+ "experiment": "E28_verification",
+ "part": "B",
+ "environment": {
+  "time": "2026-10-09T08:59:13",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "9095311a59eea863",
+ "L": 8.0,
+ "rows": [
+  {
+   "k": 8,
+   "n_elem": 4096,
+   "iters": 13,
+   "rel_true": 2.204365072140846e-09,
+   "c_normalized": 127.15563171635726,
+   "C_physical": 2034.4901074617162,
+   "time_s": 0.022691499965731055
+  },
+  {
+   "k": 16,
+   "n_elem": 32768,
+   "iters": 14,
+   "rel_true": 1.9174314763902947e-09,
+   "c_normalized": 64.05336740414388,
+   "C_physical": 2049.7077569326043,
+   "time_s": 0.020085199968889356
+  },
+  {
+   "k": 32,
+   "n_elem": 262144,
+   "iters": 14,
+   "rel_true": 2.8379017014342712e-09,
+   "c_normalized": 32.09235789756113,
+   "C_physical": 2053.9109054439123,
+   "time_s": 0.041922700009308755
+  },
+  {
+   "k": 64,
+   "n_elem": 2097152,
+   "iters": 14,
+   "rel_true": 3.870616126778124e-09,
+   "c_normalized": 16.05551971460871,
+   "C_physical": 2055.106523469915,
+   "time_s": 0.11715860001277179
+  },
+  {
+   "k": 128,
+   "n_elem": 16777216,
+   "iters": 14,
+   "rel_true": 5.296048464023856e-09,
+   "c_normalized": 8.029144048298738,
+   "C_physical": 2055.460876364477,
+   "time_s": 0.7449924999964423
+  }
+ ],
+ "richardson": [
+  {
+   "k": 32,
+   "order": 1.856203198584544,
+   "richardson_limit": 2055.51483261891
+  },
+  {
+   "k": 64,
+   "order": 1.8137138792288876,
+   "richardson_limit": 2055.58183119201
+  },
+  {
+   "k": 128,
+   "order": 1.7544978144315215,
+   "richardson_limit": 2055.6101348671673
+  }
+ ],
+ "timoshenko": {
+  "bending": 2048.0,
+  "shear": 24.480000000000004,
+  "total": 2072.48,
+  "kappa": 0.8496732026143791
+ },
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "664b80c6f45aa04a",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "b68537c154bd76bc",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E10_external_hou.py": "f264358c343f6fc8",
+  "experiments/E11_counters.py": "59fde57387f07b22",
+  "experiments/E11b_stalls.py": "c408bdea07cb3359",
+  "experiments/E15_storage_diff.py": "3b560a096083b247",
+  "experiments/E19_reference_resolve.py": "4337e759dd9c61dc",
+  "experiments/E21_vcycle_profile.py": "87aaad1b42325b18",
+  "experiments/E28_verification.py": "55f6b82c9ba47097",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "65f198e49cfe0a49",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "e7aea5f5fa87b383",
+  "experiments/run_queue.py": "c8abb9421e6a37e5",
+  "experiments/run_simp.py": "d913d5a57d599399",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86",
+  "experiments/T3_verify_controls.py": "b6acb8b5e980ab63"
+ }
+}

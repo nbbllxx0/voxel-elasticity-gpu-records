@@ -43,6 +43,7 @@ The study compares eight matrix-free finite-element operator implementations on 
 | `E25/` | timed complete optimizations with iterative refinement and the difference-form stencil |
 | `E26/` | bridge-failure isolation: the difference form in one place at a time and a larger modulus floor (untimed) |
 | `E27/` | stencil against atomic element kernel over 200 design iterations |
+| `E28/` | verification: patch test, slender-cantilever benchmark (FP64 and FP32 operators), rigid translation with heterogeneous moduli, acceptance-tolerance study |
 | `V4/analysis.json` | derived quantities computed from the records above (model hold-out, swap accounting, swap gaps) |
 | `code_versions_note.json` | three code versions used on 8 October 2026 whose exact source could not be reconstructed, and why |
 | `T1_*`, `T2_*`, `T3_*` | verification of operators, multigrid and the precision-control operators |
