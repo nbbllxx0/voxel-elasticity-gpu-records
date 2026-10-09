@@ -3220,6 +3220,11 @@
   "sha256": "964220259beafaa3b8cb76142c2f048424718b4b028323e5f5aba77f1d71656e"
  },
  {
+  "path": "records/E28/rigid_modes_k16.json",
+  "bytes": 8561,
+  "sha256": "9c5a5e0124890aeb11c9ca059d61a7a094994647d9c17df39ae055d74c749b6f"
+ },
+ {
   "path": "records/E28/slender_cantilever.json",
   "bytes": 4148,
   "sha256": "319fd4572639e76cd4dcac951349c6742d44b09a276acda4c347413ccf71c287"
