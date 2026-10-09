@@ -1,0 +1,19 @@
+it   1 c=2.007139e-01 vol=0.18481 mnd=0.603 drho=nan p=1.5 b=1.0 solve 6.74s (setup 0.87) it=51 outer=5 res=5.81e-06 iter 7.01s
+it   2 c=9.421343e-02 vol=0.20000 mnd=0.605 drho=2.073e-01 p=1.5 b=1.0 solve 4.04s (setup 0.05) it=33 outer=5 res=1.29e-06 iter 4.36s
+it   3 c=7.240105e-02 vol=0.20000 mnd=0.573 drho=2.157e-01 p=1.5 b=1.0 solve 3.57s (setup 0.05) it=29 outer=5 res=2.73e-06 iter 3.89s
+it   4 c=6.288067e-02 vol=0.20000 mnd=0.536 drho=2.120e-01 p=1.5 b=1.0 solve 2.97s (setup 0.05) it=24 outer=4 res=9.13e-06 iter 3.28s
+it   5 c=5.723985e-02 vol=0.20000 mnd=0.498 drho=2.097e-01 p=1.5 b=1.0 solve 3.59s (setup 0.05) it=29 outer=5 res=6.24e-07 iter 3.91s
+it   6 c=5.479192e-02 vol=0.20000 mnd=0.470 drho=2.038e-01 p=1.5 b=1.0 solve 2.74s (setup 0.34) it=19 outer=4 res=1.77e-06 iter 3.05s
+it   7 c=5.294455e-02 vol=0.20000 mnd=0.446 drho=1.755e-01 p=1.5 b=1.0 solve 2.55s (setup 0.05) it=20 outer=4 res=3.10e-06 iter 2.87s
+it   8 c=5.139348e-02 vol=0.20000 mnd=0.421 drho=1.717e-01 p=1.5 b=1.0 solve 2.66s (setup 0.05) it=21 outer=4 res=2.27e-06 iter 2.97s
+it   9 c=5.003293e-02 vol=0.20000 mnd=0.396 drho=1.659e-01 p=1.5 b=1.0 solve 2.64s (setup 0.05) it=21 outer=4 res=2.09e-06 iter 2.96s
+it  10 c=4.882409e-02 vol=0.20000 mnd=0.372 drho=1.543e-01 p=1.5 b=1.0 solve 2.56s (setup 0.05) it=20 outer=4 res=2.84e-06 iter 2.88s
+it  11 c=4.775129e-02 vol=0.20000 mnd=0.347 drho=1.543e-01 p=1.5 b=1.0 solve 2.86s (setup 0.47) it=19 outer=4 res=2.59e-06 iter 3.20s
+it  12 c=4.679270e-02 vol=0.20000 mnd=0.324 drho=1.247e-01 p=1.5 b=1.0 solve 2.44s (setup 0.06) it=19 outer=4 res=2.82e-06 iter 2.76s
+it  13 c=4.594062e-02 vol=0.20000 mnd=0.301 drho=1.246e-01 p=1.5 b=1.0 solve 2.44s (setup 0.05) it=19 outer=4 res=1.95e-06 iter 2.76s
+it  14 c=4.519269e-02 vol=0.20000 mnd=0.280 drho=1.529e-01 p=1.5 b=1.0 solve 2.55s (setup 0.06) it=20 outer=4 res=1.87e-06 iter 2.87s
+it  15 c=4.456885e-02 vol=0.20000 mnd=0.263 drho=1.814e-01 p=1.5 b=1.0 solve 2.64s (setup 0.05) it=21 outer=4 res=2.35e-06 iter 2.96s
+FAILED at design iteration 16 ir_lean: correction rejected with inner tolerance 1e-07
+stencil {'inner_iters': 16, 'correction_residual_rounded_problem': 47.829274572456605, 'correction_residual_fp64_problem': 47.8284350891633, 'outer_rel_true_after_update': 17.144513041218357, 'energy_d_rounded': 21438.45625834811, 'energy_d_fp64': 192007.3116903546}
+stencil_diff {'inner_iters': 120, 'correction_residual_rounded_problem': 0.10304058136975211, 'correction_residual_fp64_problem': 0.10304056465150536, 'outer_rel_true_after_update': 0.036935774736107735, 'energy_d_rounded': 12942.190187039938, 'energy_d_fp64': 12942.196688905622}
+{'experiment': 'E31_bridge_breakdown', 'mode': 'ir', 'k': 320, 'n_elem': 65536000, 'code_hash': '803fe8a8a7f4fc28', 'status': 'failed: ir_lean: correction rejected with inner tolerance 1e-07', 'design_iteration': 16, 'rel_true_at_failure': 0.3584585835318681, 'corrections': {'stencil': {'inner_iters': 16, 'correction_residual_rounded_problem': 47.829274572456605, 'correction_residual_fp64_problem': 47.8284350891633, 'outer_rel_true_after_update': 17.144513041218357, 'energy_d_rounded': 21438.45625834811, 'energy_d_fp64': 192007.3116903546}, 'stencil_diff': {'inner_iters': 120, 'correction_residual_rounded_problem': 0.10304058136975211, 'correction_residual_fp64_problem': 0.10304056465150536, 'outer_rel_true_after_update': 0.036935774736107735, 'energy_d_rounded': 12942.190187039938, 'energy_d_fp64': 12942.196688905622}}, 'preconditioner': {'r_M_r': 1391.697424506172, 'p_M_p': 1391.697424506172, 'x_M_x': 2.076885549836531e+16, 'symmetry_rel': 1.0402042829517813e-11}, 'wall_s': 81.32371689996216}

@@ -1,0 +1,80 @@
+R2 k=8 C64=2034.490107 res=2.2e-09
+R2 k=8 stencil_c32      {'status': 'ok', 'iters': 13, 'min_energy_ratio': 0.9917343453730192, 'rel': 2.113946222612789e-09, 'C': 2051.5147472538924, 'rel_err_vs_fp64': 0.008368013061226738}
+R2 k=8 stencil_diff_c32 {'status': 'ok', 'iters': 13, 'min_energy_ratio': 0.9999988844542862, 'rel': 2.2043908930990087e-09, 'C': 2034.4923841978527, 'rel_err_vs_fp64': 1.1190696519912303e-06}
+R2 k=8 stencil|own_vcycle           iters=9 true_res_fp64_op=0.00732 floor_true=0.00732 C=2.05e+03 rel_err_vs_fp64=0.00928 true_res_stencil_c32=0.00692 true_res_stencil_diff_c32=0.00732
+R2 k=8 stencil|common_vcycle        iters=9 true_res_fp64_op=0.00732 floor_true=0.00732 C=2.05e+03 rel_err_vs_fp64=0.00928 true_res_stencil_c32=0.00692 true_res_stencil_diff_c32=0.00732
+R2 k=8 stencil_diff|own_vcycle      iters=9 true_res_fp64_op=0.00317 floor_true=0.00317 C=2.03e+03 rel_err_vs_fp64=3.17e-06 true_res_stencil_c32=0.0038 true_res_stencil_diff_c32=0.00317
+R2 k=8 stencil_diff|common_vcycle   iters=9 true_res_fp64_op=0.00311 floor_true=0.00311 C=2.03e+03 rel_err_vs_fp64=3.35e-06 true_res_stencil_c32=0.00376 true_res_stencil_diff_c32=0.00311
+R2 k=8 elem_atomic|own_vcycle       iters=9 true_res_fp64_op=0.00544 floor_true=0.00544 C=2.05e+03 rel_err_vs_fp64=0.00808 true_res_stencil_c32=0.00501 true_res_stencil_diff_c32=0.00544
+R2 k=8 elem_atomic|common_vcycle    iters=9 true_res_fp64_op=0.00542 floor_true=0.00542 C=2.05e+03 rel_err_vs_fp64=0.00833 true_res_stencil_c32=0.00498 true_res_stencil_diff_c32=0.00542
+R2 k=8 elem_ref|own_vcycle          iters=9 true_res_fp64_op=0.00305 floor_true=0.00305 C=2.03e+03 rel_err_vs_fp64=0.000152 true_res_stencil_c32=0.00367 true_res_stencil_diff_c32=0.00305
+R2 k=8 elem_ref|common_vcycle       iters=9 true_res_fp64_op=0.00311 floor_true=0.00311 C=2.03e+03 rel_err_vs_fp64=0.000143 true_res_stencil_c32=0.00377 true_res_stencil_diff_c32=0.00311
+R2 k=8 elem_mean|own_vcycle         iters=9 true_res_fp64_op=0.00299 floor_true=0.00299 C=2.03e+03 rel_err_vs_fp64=5.23e-06 true_res_stencil_c32=0.00365 true_res_stencil_diff_c32=0.00299
+R2 k=8 elem_mean|common_vcycle      iters=9 true_res_fp64_op=0.00302 floor_true=0.00302 C=2.03e+03 rel_err_vs_fp64=8.06e-06 true_res_stencil_c32=0.00368 true_res_stencil_diff_c32=0.00302
+R2 k=8 stencil_selfcorr|own_vcycle  iters=9 true_res_fp64_op=0.0198 floor_true=0.0198 C=2.15e+03 rel_err_vs_fp64=0.0558 true_res_stencil_c32=0.0181 true_res_stencil_diff_c32=0.0198
+R2 k=8 stencil_selfcorr|common_vcycle iters=9 true_res_fp64_op=0.0202 floor_true=0.0202 C=2.15e+03 rel_err_vs_fp64=0.0575 true_res_stencil_c32=0.0185 true_res_stencil_diff_c32=0.0202
+R2 k=8 fp64_arith_node|common_vcycle iters=9 true_res_fp64_op=0.00315 floor_true=0.00315 C=2.03e+03 rel_err_vs_fp64=1.03e-08 true_res_stencil_c32=0.00382 true_res_stencil_diff_c32=0.00315
+R2 k=16 C64=2049.707757 res=1.9e-09
+R2 k=16 stencil_c32      {'status': 'ok', 'iters': 14, 'min_energy_ratio': 0.9666332211689608, 'rel': 2.0143478981351994e-09, 'C': 2120.6775195113196, 'rel_err_vs_fp64': 0.03462433234136842}
+R2 k=16 stencil_diff_c32 {'status': 'ok', 'iters': 14, 'min_energy_ratio': 0.9999988758369229, 'rel': 1.916389298114291e-09, 'C': 2049.71006776959, 'rel_err_vs_fp64': 1.1273982731088215e-06}
+R2 k=16 stencil|own_vcycle           iters=9 true_res_fp64_op=0.0208 floor_true=0.0208 C=2.12e+03 rel_err_vs_fp64=0.0339 true_res_stencil_c32=0.0199 true_res_stencil_diff_c32=0.0208
+R2 k=16 stencil|common_vcycle        iters=9 true_res_fp64_op=0.0208 floor_true=0.0208 C=2.12e+03 rel_err_vs_fp64=0.0339 true_res_stencil_c32=0.0199 true_res_stencil_diff_c32=0.0208
+R2 k=16 stencil_diff|own_vcycle      iters=9 true_res_fp64_op=0.00885 floor_true=0.00885 C=2.05e+03 rel_err_vs_fp64=2.11e-07 true_res_stencil_c32=0.0107 true_res_stencil_diff_c32=0.00885
+R2 k=16 stencil_diff|common_vcycle   iters=9 true_res_fp64_op=0.00874 floor_true=0.00874 C=2.05e+03 rel_err_vs_fp64=4.58e-07 true_res_stencil_c32=0.0106 true_res_stencil_diff_c32=0.00874
+R2 k=16 elem_atomic|own_vcycle       iters=9 true_res_fp64_op=0.0158 floor_true=0.0158 C=2.12e+03 rel_err_vs_fp64=0.0346 true_res_stencil_c32=0.0145 true_res_stencil_diff_c32=0.0158
+R2 k=16 elem_atomic|common_vcycle    iters=9 true_res_fp64_op=0.0156 floor_true=0.0156 C=2.12e+03 rel_err_vs_fp64=0.0346 true_res_stencil_c32=0.0143 true_res_stencil_diff_c32=0.0156
+R2 k=16 elem_ref|own_vcycle          iters=9 true_res_fp64_op=0.00884 floor_true=0.00884 C=2.05e+03 rel_err_vs_fp64=0.00028 true_res_stencil_c32=0.0107 true_res_stencil_diff_c32=0.00884
+R2 k=16 elem_ref|common_vcycle       iters=9 true_res_fp64_op=0.00891 floor_true=0.00891 C=2.05e+03 rel_err_vs_fp64=0.000282 true_res_stencil_c32=0.0107 true_res_stencil_diff_c32=0.00891
+R2 k=16 elem_mean|own_vcycle         iters=9 true_res_fp64_op=0.00887 floor_true=0.00887 C=2.05e+03 rel_err_vs_fp64=4.35e-06 true_res_stencil_c32=0.0107 true_res_stencil_diff_c32=0.00887
+R2 k=16 elem_mean|common_vcycle      iters=9 true_res_fp64_op=0.00884 floor_true=0.00884 C=2.05e+03 rel_err_vs_fp64=4.72e-06 true_res_stencil_c32=0.0107 true_res_stencil_diff_c32=0.00884
+R2 k=16 stencil_selfcorr|own_vcycle  iters=10 true_res_fp64_op=0.0757 floor_true=0.0757 C=2.72e+03 rel_err_vs_fp64=0.327 true_res_stencil_c32=0.0692 true_res_stencil_diff_c32=0.0757
+R2 k=16 stencil_selfcorr|common_vcycle iters=10 true_res_fp64_op=0.0743 floor_true=0.0743 C=2.7e+03 rel_err_vs_fp64=0.32 true_res_stencil_c32=0.0679 true_res_stencil_diff_c32=0.0743
+R2 k=16 fp64_arith_node|common_vcycle iters=9 true_res_fp64_op=0.00868 floor_true=0.00868 C=2.05e+03 rel_err_vs_fp64=6.58e-09 true_res_stencil_c32=0.0106 true_res_stencil_diff_c32=0.00868
+R2 k=32 C64=2053.910905 res=2.8e-09
+R2 k=32 stencil_c32      {'status': 'ok', 'iters': 14, 'min_energy_ratio': 0.8664969475760641, 'rel': 3.595397795673478e-09, 'C': 2373.257109306212, 'rel_err_vs_fp64': 0.1554820138574995}
+R2 k=32 stencil_diff_c32 {'status': 'ok', 'iters': 14, 'min_energy_ratio': 0.9999988712655052, 'rel': 2.8316714439123693e-09, 'C': 2053.9132254089727, 'rel_err_vs_fp64': 1.1295353923590242e-06}
+R2 k=32 stencil|own_vcycle           iters=10 true_res_fp64_op=0.0668 floor_true=0.0668 C=2.37e+03 rel_err_vs_fp64=0.154 true_res_stencil_c32=0.0638 true_res_stencil_diff_c32=0.0668
+R2 k=32 stencil|common_vcycle        iters=10 true_res_fp64_op=0.0668 floor_true=0.0668 C=2.37e+03 rel_err_vs_fp64=0.154 true_res_stencil_c32=0.0638 true_res_stencil_diff_c32=0.0668
+R2 k=32 stencil_diff|own_vcycle      iters=10 true_res_fp64_op=0.0251 floor_true=0.0251 C=2.05e+03 rel_err_vs_fp64=2.67e-06 true_res_stencil_c32=0.0304 true_res_stencil_diff_c32=0.0251
+R2 k=32 stencil_diff|common_vcycle   iters=10 true_res_fp64_op=0.025 floor_true=0.025 C=2.05e+03 rel_err_vs_fp64=1.45e-06 true_res_stencil_c32=0.0303 true_res_stencil_diff_c32=0.025
+R2 k=32 elem_atomic|own_vcycle       iters=10 true_res_fp64_op=0.051 floor_true=0.051 C=2.37e+03 rel_err_vs_fp64=0.156 true_res_stencil_c32=0.0469 true_res_stencil_diff_c32=0.051
+R2 k=32 elem_atomic|common_vcycle    iters=10 true_res_fp64_op=0.051 floor_true=0.051 C=2.37e+03 rel_err_vs_fp64=0.156 true_res_stencil_c32=0.047 true_res_stencil_diff_c32=0.051
+R2 k=32 elem_ref|own_vcycle          iters=10 true_res_fp64_op=0.025 floor_true=0.025 C=2.06e+03 rel_err_vs_fp64=0.000553 true_res_stencil_c32=0.0303 true_res_stencil_diff_c32=0.025
+R2 k=32 elem_ref|common_vcycle       iters=10 true_res_fp64_op=0.025 floor_true=0.025 C=2.06e+03 rel_err_vs_fp64=0.000553 true_res_stencil_c32=0.0302 true_res_stencil_diff_c32=0.025
+R2 k=32 elem_mean|own_vcycle         iters=10 true_res_fp64_op=0.0251 floor_true=0.0251 C=2.05e+03 rel_err_vs_fp64=1.73e-06 true_res_stencil_c32=0.0304 true_res_stencil_diff_c32=0.0251
+R2 k=32 elem_mean|common_vcycle      iters=10 true_res_fp64_op=0.0251 floor_true=0.0251 C=2.05e+03 rel_err_vs_fp64=1.27e-06 true_res_stencil_c32=0.0304 true_res_stencil_diff_c32=0.0251
+R2 k=32 stencil_selfcorr|own_vcycle  iters=None true_res_fp64_op=None floor_true=inf
+R2 k=32 stencil_selfcorr|common_vcycle iters=None true_res_fp64_op=None floor_true=inf
+R2 k=32 fp64_arith_node|common_vcycle iters=10 true_res_fp64_op=0.0251 floor_true=0.0251 C=2.05e+03 rel_err_vs_fp64=4.32e-09 true_res_stencil_c32=0.0304 true_res_stencil_diff_c32=0.0251
+R2 k=64 C64=2055.106523 res=3.9e-09
+R2 k=64 stencil_c32      {'status': 'ok', 'iters': 15, 'min_energy_ratio': 0.46545642166888557, 'rel': 5.182425734912494e-09, 'C': 4521.343184361085, 'rel_err_vs_fp64': 1.2000529572195064}
+R2 k=64 stencil_diff_c32 {'status': 'ok', 'iters': 14, 'min_energy_ratio': 0.9999988708390608, 'rel': 3.833078795483421e-09, 'C': 2055.1088451483797, 'rel_err_vs_fp64': 1.1297119824600094e-06}
+R2 k=64 stencil|own_vcycle           iters=11 true_res_fp64_op=0.348 floor_true=0.348 C=4.51e+03 rel_err_vs_fp64=1.2 true_res_stencil_c32=0.331 true_res_stencil_diff_c32=0.348
+R2 k=64 stencil|common_vcycle        iters=11 true_res_fp64_op=0.348 floor_true=0.348 C=4.51e+03 rel_err_vs_fp64=1.2 true_res_stencil_c32=0.331 true_res_stencil_diff_c32=0.348
+R2 k=64 stencil_diff|own_vcycle      iters=10 true_res_fp64_op=0.0705 floor_true=0.0705 C=2.06e+03 rel_err_vs_fp64=2.42e-06 true_res_stencil_c32=0.0856 true_res_stencil_diff_c32=0.0705
+R2 k=64 stencil_diff|common_vcycle   iters=10 true_res_fp64_op=0.0705 floor_true=0.0705 C=2.06e+03 rel_err_vs_fp64=1.44e-06 true_res_stencil_c32=0.0856 true_res_stencil_diff_c32=0.0705
+R2 k=64 elem_atomic|own_vcycle       iters=11 true_res_fp64_op=0.264 floor_true=0.264 C=4.52e+03 rel_err_vs_fp64=1.2 true_res_stencil_c32=0.241 true_res_stencil_diff_c32=0.264
+R2 k=64 elem_atomic|common_vcycle    iters=11 true_res_fp64_op=0.265 floor_true=0.265 C=4.53e+03 rel_err_vs_fp64=1.21 true_res_stencil_c32=0.242 true_res_stencil_diff_c32=0.265
+R2 k=64 elem_ref|own_vcycle          iters=10 true_res_fp64_op=0.0705 floor_true=0.0705 C=2.06e+03 rel_err_vs_fp64=0.0011 true_res_stencil_c32=0.0856 true_res_stencil_diff_c32=0.0705
+R2 k=64 elem_ref|common_vcycle       iters=10 true_res_fp64_op=0.0706 floor_true=0.0706 C=2.06e+03 rel_err_vs_fp64=0.0011 true_res_stencil_c32=0.0856 true_res_stencil_diff_c32=0.0706
+R2 k=64 elem_mean|own_vcycle         iters=10 true_res_fp64_op=0.0706 floor_true=0.0706 C=2.06e+03 rel_err_vs_fp64=2.58e-06 true_res_stencil_c32=0.0857 true_res_stencil_diff_c32=0.0706
+R2 k=64 elem_mean|common_vcycle      iters=10 true_res_fp64_op=0.0706 floor_true=0.0706 C=2.06e+03 rel_err_vs_fp64=3.29e-06 true_res_stencil_c32=0.0857 true_res_stencil_diff_c32=0.0706
+R2 k=64 stencil_selfcorr|own_vcycle  iters=None true_res_fp64_op=None floor_true=inf
+R2 k=64 stencil_selfcorr|common_vcycle iters=None true_res_fp64_op=None floor_true=inf
+R2 k=64 fp64_arith_node|common_vcycle iters=10 true_res_fp64_op=0.0706 floor_true=0.0706 C=2.06e+03 rel_err_vs_fp64=1.4e-09 true_res_stencil_c32=0.0857 true_res_stencil_diff_c32=0.0706
+R2 k=128 C64=2055.460876 res=5.3e-09
+R2 k=128 stencil_c32      {'status': 'negative energy direction', 'iters': 1, 'pAp_rel_to_fp64': -1.1385383514247778, 'min_energy_ratio': -1.1385383514247778, 'rel': 1.0}
+R2 k=128 stencil_diff_c32 {'status': 'ok', 'iters': 14, 'min_energy_ratio': 0.9999988722276447, 'rel': 5.074440019220414e-09, 'C': 2055.463195209686, 'rel_err_vs_fp64': 1.1281388207572426e-06}
+R2 k=128 stencil|own_vcycle           iters=None true_res_fp64_op=None floor_true=inf
+R2 k=128 stencil|common_vcycle        iters=None true_res_fp64_op=None floor_true=inf
+R2 k=128 stencil_diff|own_vcycle      iters=10 true_res_fp64_op=0.199 floor_true=0.199 C=2.06e+03 rel_err_vs_fp64=2.49e-06 true_res_stencil_c32=0.242 true_res_stencil_diff_c32=0.199
+R2 k=128 stencil_diff|common_vcycle   iters=10 true_res_fp64_op=0.199 floor_true=0.199 C=2.06e+03 rel_err_vs_fp64=2.6e-06 true_res_stencil_c32=0.242 true_res_stencil_diff_c32=0.199
+R2 k=128 elem_atomic|own_vcycle       iters=None true_res_fp64_op=None floor_true=inf
+R2 k=128 elem_atomic|common_vcycle    iters=None true_res_fp64_op=None floor_true=inf
+R2 k=128 elem_ref|own_vcycle          iters=10 true_res_fp64_op=0.2 floor_true=0.2 C=2.06e+03 rel_err_vs_fp64=0.00218 true_res_stencil_c32=0.243 true_res_stencil_diff_c32=0.2
+R2 k=128 elem_ref|common_vcycle       iters=10 true_res_fp64_op=0.2 floor_true=0.2 C=2.06e+03 rel_err_vs_fp64=0.00218 true_res_stencil_c32=0.243 true_res_stencil_diff_c32=0.2
+R2 k=128 elem_mean|own_vcycle         iters=10 true_res_fp64_op=0.199 floor_true=0.199 C=2.06e+03 rel_err_vs_fp64=1.22e-05 true_res_stencil_c32=0.242 true_res_stencil_diff_c32=0.199
+R2 k=128 elem_mean|common_vcycle      iters=10 true_res_fp64_op=0.199 floor_true=0.199 C=2.06e+03 rel_err_vs_fp64=1.17e-05 true_res_stencil_c32=0.242 true_res_stencil_diff_c32=0.199
+R2 k=128 stencil_selfcorr|own_vcycle  iters=None true_res_fp64_op=None floor_true=inf
+R2 k=128 stencil_selfcorr|common_vcycle iters=None true_res_fp64_op=None floor_true=inf
+R2 k=128 fp64_arith_node|common_vcycle iters=10 true_res_fp64_op=0.199 floor_true=0.199 C=2.06e+03 rel_err_vs_fp64=8.07e-12 true_res_stencil_c32=0.242 true_res_stencil_diff_c32=0.199

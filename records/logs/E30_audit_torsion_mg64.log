@@ -1,0 +1,95 @@
+AUDIT it=1 res=2.32e-06 dc/c=5.72e-14 sens2=3.91e-07 sensmax=7.04e-07 upd=2.74e-06 n>0.001=0
+it   1 c=6.274041e-01 vol=0.23500 mnd=0.719 drho=nan p=1.5 b=1.0 solve 0.85s (setup 0.58) it=9 outer=- res=2.32e-06 iter 1.29s
+AUDIT it=2 res=3.22e-06 dc/c=2.07e-13 sens2=4.80e-07 sensmax=8.22e-07 upd=3.87e-06 n>0.001=0
+it   2 c=3.082495e-01 vol=0.25000 mnd=0.707 drho=2.110e-01 p=1.5 b=1.0 solve 0.27s (setup 0.02) it=9 outer=- res=3.22e-06 iter 0.59s
+it   3 c=2.169086e-01 vol=0.25000 mnd=0.637 drho=2.155e-01 p=1.5 b=1.0 solve 0.27s (setup 0.02) it=9 outer=- res=6.15e-06 iter 0.31s
+it   4 c=1.736616e-01 vol=0.25000 mnd=0.554 drho=2.126e-01 p=1.5 b=1.0 solve 0.28s (setup 0.01) it=10 outer=- res=3.58e-06 iter 0.32s
+AUDIT it=5 res=7.51e-06 dc/c=3.43e-08 sens2=1.10e-06 sensmax=1.63e-06 upd=9.24e-06 n>0.001=0
+it   5 c=1.510835e-01 vol=0.25000 mnd=0.472 drho=2.158e-01 p=1.5 b=1.0 solve 0.29s (setup 0.01) it=10 outer=- res=7.51e-06 iter 0.70s
+it   6 c=1.430011e-01 vol=0.25000 mnd=0.416 drho=2.153e-01 p=1.5 b=1.0 solve 0.35s (setup 0.06) it=11 outer=- res=6.42e-06 iter 0.39s
+it   7 c=1.375707e-01 vol=0.25000 mnd=0.368 drho=1.864e-01 p=1.5 b=1.0 solve 0.34s (setup 0.01) it=12 outer=- res=5.00e-06 iter 0.38s
+it   8 c=1.335572e-01 vol=0.25000 mnd=0.325 drho=1.628e-01 p=1.5 b=1.0 solve 0.33s (setup 0.01) it=12 outer=- res=6.38e-06 iter 0.37s
+it   9 c=1.304086e-01 vol=0.25000 mnd=0.286 drho=1.428e-01 p=1.5 b=1.0 solve 0.36s (setup 0.01) it=13 outer=- res=5.67e-06 iter 0.40s
+AUDIT it=10 res=8.43e-06 dc/c=7.32e-08 sens2=9.63e-07 sensmax=9.01e-07 upd=1.76e-05 n>0.001=0
+it  10 c=1.278462e-01 vol=0.25000 mnd=0.250 drho=1.371e-01 p=1.5 b=1.0 solve 0.37s (setup 0.01) it=13 outer=- res=8.43e-06 iter 0.99s
+it  11 c=1.257118e-01 vol=0.25000 mnd=0.216 drho=1.435e-01 p=1.5 b=1.0 solve 0.57s (setup 0.13) it=13 outer=- res=7.91e-06 iter 0.61s
+it  12 c=1.239160e-01 vol=0.25000 mnd=0.184 drho=1.606e-01 p=1.5 b=1.0 solve 0.36s (setup 0.01) it=13 outer=- res=9.67e-06 iter 0.40s
+it  13 c=1.224317e-01 vol=0.25000 mnd=0.156 drho=1.791e-01 p=1.5 b=1.0 solve 0.38s (setup 0.01) it=14 outer=- res=5.34e-06 iter 0.42s
+it  14 c=1.212483e-01 vol=0.25000 mnd=0.132 drho=1.812e-01 p=1.5 b=1.0 solve 0.36s (setup 0.01) it=13 outer=- res=8.85e-06 iter 0.40s
+AUDIT it=15 res=8.27e-06 dc/c=9.15e-08 sens2=6.91e-07 sensmax=6.03e-07 upd=1.26e-05 n>0.001=0
+it  15 c=1.203054e-01 vol=0.25000 mnd=0.112 drho=1.831e-01 p=1.5 b=1.0 solve 0.37s (setup 0.01) it=13 outer=- res=8.27e-06 iter 1.01s
+AUDIT it=16 res=8.40e-06 dc/c=8.95e-09 sens2=3.03e-06 sensmax=4.17e-06 upd=7.44e-05 n>0.001=0
+it  16 c=1.236715e-01 vol=0.24648 mnd=0.057 drho=3.203e-01 p=3.5 b=4.0 solve 0.56s (setup 0.06) it=19 outer=- res=8.40e-06 iter 1.26s
+AUDIT it=17 res=8.43e-06 dc/c=4.95e-08 sens2=1.53e-06 sensmax=1.59e-06 upd=3.69e-05 n>0.001=0
+it  17 c=1.196566e-01 vol=0.25000 mnd=0.034 drho=3.023e-01 p=3.5 b=4.0 solve 0.49s (setup 0.02) it=18 outer=- res=8.43e-06 iter 1.16s
+it  18 c=1.181700e-01 vol=0.25000 mnd=0.021 drho=3.018e-01 p=3.5 b=4.0 solve 0.47s (setup 0.02) it=17 outer=- res=7.07e-06 iter 0.50s
+it  19 c=1.175640e-01 vol=0.25000 mnd=0.015 drho=3.020e-01 p=3.5 b=4.0 solve 0.46s (setup 0.01) it=17 outer=- res=6.45e-06 iter 0.50s
+AUDIT it=20 res=6.31e-06 dc/c=6.39e-09 sens2=4.05e-07 sensmax=7.14e-07 upd=4.39e-05 n>0.001=0
+it  20 c=1.173381e-01 vol=0.25000 mnd=0.013 drho=3.023e-01 p=3.5 b=4.0 solve 0.43s (setup 0.01) it=16 outer=- res=6.31e-06 iter 1.17s
+it  21 c=1.172254e-01 vol=0.25000 mnd=0.011 drho=2.974e-01 p=3.5 b=4.0 solve 0.48s (setup 0.12) it=12 outer=- res=6.82e-06 iter 0.52s
+it  22 c=1.171610e-01 vol=0.25000 mnd=0.010 drho=2.872e-01 p=3.5 b=4.0 solve 0.31s (setup 0.01) it=11 outer=- res=7.36e-06 iter 0.35s
+it  23 c=1.171219e-01 vol=0.25000 mnd=0.010 drho=2.685e-01 p=3.5 b=4.0 solve 0.29s (setup 0.01) it=10 outer=- res=6.48e-06 iter 0.32s
+it  24 c=1.170968e-01 vol=0.25000 mnd=0.010 drho=2.463e-01 p=3.5 b=4.0 solve 0.26s (setup 0.01) it=9 outer=- res=7.58e-06 iter 0.29s
+it  25 c=1.170798e-01 vol=0.25000 mnd=0.009 drho=2.307e-01 p=3.5 b=4.0 solve 0.28s (setup 0.01) it=10 outer=- res=9.91e-06 iter 0.32s
+it  26 c=1.170675e-01 vol=0.25000 mnd=0.009 drho=2.332e-01 p=3.5 b=4.0 solve 0.33s (setup 0.05) it=10 outer=- res=9.81e-06 iter 0.36s
+it  27 c=1.170582e-01 vol=0.25000 mnd=0.009 drho=1.911e-01 p=3.5 b=4.0 solve 0.23s (setup 0.01) it=8 outer=- res=8.83e-06 iter 0.27s
+it  28 c=1.170509e-01 vol=0.25000 mnd=0.009 drho=1.638e-01 p=3.5 b=4.0 solve 0.23s (setup 0.01) it=8 outer=- res=8.87e-06 iter 0.26s
+it  29 c=1.170449e-01 vol=0.25000 mnd=0.009 drho=1.643e-01 p=3.5 b=4.0 solve 0.23s (setup 0.01) it=8 outer=- res=9.05e-06 iter 0.27s
+AUDIT it=30 res=8.95e-06 dc/c=3.21e-08 sens2=6.70e-07 sensmax=2.18e-06 upd=3.51e-04 n>0.001=0
+it  30 c=1.170400e-01 vol=0.25000 mnd=0.009 drho=1.549e-01 p=3.5 b=4.0 solve 0.23s (setup 0.01) it=8 outer=- res=8.95e-06 iter 1.01s
+it  31 c=1.170361e-01 vol=0.25000 mnd=0.009 drho=1.480e-01 p=3.5 b=4.0 solve 0.45s (setup 0.13) it=8 outer=- res=8.66e-06 iter 0.49s
+it  32 c=1.170328e-01 vol=0.25000 mnd=0.009 drho=1.217e-01 p=3.5 b=4.0 solve 0.23s (setup 0.01) it=8 outer=- res=7.63e-06 iter 0.27s
+it  33 c=1.170298e-01 vol=0.25000 mnd=0.009 drho=1.336e-01 p=3.5 b=4.0 solve 0.24s (setup 0.01) it=8 outer=- res=5.75e-06 iter 0.28s
+it  34 c=1.170271e-01 vol=0.25000 mnd=0.009 drho=1.381e-01 p=3.5 b=4.0 solve 0.21s (setup 0.01) it=7 outer=- res=8.75e-06 iter 0.25s
+it  35 c=1.170248e-01 vol=0.25000 mnd=0.009 drho=1.482e-01 p=3.5 b=4.0 solve 0.21s (setup 0.01) it=7 outer=- res=8.37e-06 iter 0.24s
+it  36 c=1.170227e-01 vol=0.25000 mnd=0.009 drho=1.856e-01 p=3.5 b=4.0 solve 0.25s (setup 0.05) it=7 outer=- res=8.12e-06 iter 0.28s
+it  37 c=1.170208e-01 vol=0.25000 mnd=0.009 drho=1.522e-01 p=3.5 b=4.0 solve 0.21s (setup 0.01) it=7 outer=- res=8.59e-06 iter 0.24s
+it  38 c=1.170190e-01 vol=0.25000 mnd=0.009 drho=1.239e-01 p=3.5 b=4.0 solve 0.20s (setup 0.01) it=7 outer=- res=8.52e-06 iter 0.24s
+it  39 c=1.170174e-01 vol=0.25000 mnd=0.009 drho=1.207e-01 p=3.5 b=4.0 solve 0.20s (setup 0.01) it=7 outer=- res=7.47e-06 iter 0.24s
+AUDIT it=40 res=8.16e-06 dc/c=1.05e-08 sens2=4.01e-07 sensmax=1.30e-06 upd=1.79e-04 n>0.001=0
+it  40 c=1.170159e-01 vol=0.25000 mnd=0.009 drho=1.185e-01 p=3.5 b=4.0 solve 0.21s (setup 0.01) it=7 outer=- res=8.16e-06 iter 1.02s
+AUDIT it=41 res=8.31e-06 dc/c=2.27e-08 sens2=1.70e-05 sensmax=2.55e-05 upd=1.11e-05 n>0.001=0
+it  41 c=1.161764e-01 vol=0.24990 mnd=0.000 drho=4.082e-01 p=4.5 b=16.0 solve 0.60s (setup 0.12) it=16 outer=- res=8.31e-06 iter 1.53s
+AUDIT it=42 res=7.48e-06 dc/c=2.21e-09 sens2=2.58e-05 sensmax=4.04e-05 upd=8.88e-06 n>0.001=0
+it  42 c=1.161726e-01 vol=0.24993 mnd=0.000 drho=4.773e-01 p=4.5 b=16.0 solve 0.24s (setup 0.02) it=8 outer=- res=7.48e-06 iter 1.17s
+it  43 c=1.161669e-01 vol=0.25000 mnd=0.000 drho=4.681e-01 p=4.5 b=16.0 solve 0.27s (setup 0.02) it=9 outer=- res=9.23e-06 iter 0.30s
+it  44 c=1.161586e-01 vol=0.25000 mnd=0.000 drho=4.971e-01 p=4.5 b=16.0 solve 0.29s (setup 0.01) it=10 outer=- res=8.76e-06 iter 0.33s
+it  45 c=1.161517e-01 vol=0.25000 mnd=0.000 drho=4.644e-01 p=4.5 b=16.0 solve 0.23s (setup 0.01) it=8 outer=- res=8.73e-06 iter 0.27s
+it  46 c=1.161486e-01 vol=0.25000 mnd=0.000 drho=4.771e-01 p=4.5 b=16.0 solve 0.25s (setup 0.05) it=7 outer=- res=8.62e-06 iter 0.28s
+it  47 c=1.161477e-01 vol=0.25000 mnd=0.000 drho=4.289e-01 p=4.5 b=16.0 solve 0.18s (setup 0.01) it=6 outer=- res=7.75e-06 iter 0.22s
+it  48 c=1.161473e-01 vol=0.25000 mnd=0.000 drho=4.699e-01 p=4.5 b=16.0 solve 0.15s (setup 0.01) it=5 outer=- res=5.24e-06 iter 0.19s
+it  49 c=1.161471e-01 vol=0.25000 mnd=0.000 drho=4.586e-01 p=4.5 b=16.0 solve 0.13s (setup 0.01) it=4 outer=- res=8.48e-06 iter 0.16s
+AUDIT it=50 res=7.60e-06 dc/c=3.43e-08 sens2=2.35e-04 sensmax=2.61e-04 upd=3.25e-05 n>0.001=0
+it  50 c=1.161469e-01 vol=0.25000 mnd=0.000 drho=4.313e-01 p=4.5 b=16.0 solve 0.13s (setup 0.01) it=4 outer=- res=7.60e-06 iter 0.91s
+it  51 c=1.161469e-01 vol=0.25000 mnd=0.000 drho=1.770e-01 p=4.5 b=16.0 solve 0.35s (setup 0.13) it=4 outer=- res=3.37e-06 iter 0.39s
+it  52 c=1.161469e-01 vol=0.25000 mnd=0.000 drho=1.323e-01 p=4.5 b=16.0 solve 0.11s (setup 0.01) it=3 outer=- res=3.73e-06 iter 0.14s
+it  53 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.08s (setup 0.01) it=2 outer=- res=5.28e-06 iter 0.11s
+it  54 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.08s (setup 0.01) it=2 outer=- res=3.75e-06 iter 0.12s
+it  55 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.08s (setup 0.01) it=2 outer=- res=3.55e-06 iter 0.12s
+it  56 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.13s (setup 0.05) it=2 outer=- res=3.54e-06 iter 0.16s
+it  57 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.08s (setup 0.01) it=2 outer=- res=3.52e-06 iter 0.11s
+it  58 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.08s (setup 0.01) it=2 outer=- res=3.52e-06 iter 0.12s
+it  59 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.08s (setup 0.01) it=2 outer=- res=3.51e-06 iter 0.12s
+AUDIT it=60 res=3.51e-06 dc/c=4.77e-10 sens2=8.25e-06 sensmax=3.53e-05 upd=2.12e-05 n>0.001=0
+it  60 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.08s (setup 0.01) it=2 outer=- res=3.51e-06 iter 0.79s
+it  61 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.26s (setup 0.13) it=2 outer=- res=3.50e-06 iter 0.30s
+it  62 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.09s (setup 0.01) it=2 outer=- res=3.50e-06 iter 0.12s
+it  63 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.08s (setup 0.01) it=2 outer=- res=3.50e-06 iter 0.11s
+it  64 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.08s (setup 0.01) it=2 outer=- res=3.48e-06 iter 0.12s
+AUDIT it=65 res=3.48e-06 dc/c=1.88e-10 sens2=1.61e-05 sensmax=5.20e-05 upd=1.11e-05 n>0.001=0
+it  65 c=1.161468e-01 vol=0.25000 mnd=0.000 drho=1.313e-01 p=4.5 b=16.0 solve 0.08s (setup 0.01) it=2 outer=- res=3.48e-06 iter 0.79s
+AUDIT it=66 res=4.77e-06 dc/c=1.07e-07 sens2=1.69e-05 sensmax=2.12e-05 upd=0.00e+00 n>0.001=0
+it  66 c=1.161465e-01 vol=0.24999 mnd=0.000 drho=1.409e-01 p=4.5 b=32.0 solve 0.13s (setup 0.06) it=2 outer=- res=4.77e-06 iter 0.99s
+AUDIT it=67 res=9.24e-06 dc/c=1.08e-07 sens2=1.10e-02 sensmax=1.05e-02 upd=0.00e+00 n>0.001=0
+it  67 c=1.161465e-01 vol=0.24999 mnd=0.000 drho=2.304e-01 p=4.5 b=32.0 solve 0.03s (setup 0.02) it=0 outer=- res=9.24e-06 iter 0.88s
+it  68 c=1.161465e-01 vol=0.24999 mnd=0.000 drho=5.033e-01 p=4.5 b=32.0 solve 0.14s (setup 0.02) it=4 outer=- res=2.82e-06 iter 0.20s
+it  69 c=1.161463e-01 vol=0.25000 mnd=0.000 drho=5.750e-01 p=4.5 b=32.0 solve 0.16s (setup 0.01) it=5 outer=- res=8.88e-06 iter 0.23s
+AUDIT it=70 res=7.19e-06 dc/c=2.02e-08 sens2=6.21e-05 sensmax=4.85e-05 upd=4.71e-05 n>0.001=0
+it  70 c=1.161458e-01 vol=0.25000 mnd=0.000 drho=5.785e-01 p=4.5 b=32.0 solve 0.18s (setup 0.01) it=6 outer=- res=7.19e-06 iter 1.00s
+it  71 c=1.161451e-01 vol=0.25000 mnd=0.000 drho=5.119e-01 p=4.5 b=32.0 solve 0.37s (setup 0.13) it=7 outer=- res=6.21e-06 iter 0.41s
+it  72 c=1.161448e-01 vol=0.25000 mnd=0.000 drho=3.950e-01 p=4.5 b=32.0 solve 0.16s (setup 0.01) it=5 outer=- res=4.85e-06 iter 0.19s
+it  73 c=1.161447e-01 vol=0.25000 mnd=0.000 drho=5.157e-01 p=4.5 b=32.0 solve 0.13s (setup 0.01) it=4 outer=- res=6.45e-06 iter 0.17s
+it  74 c=1.161447e-01 vol=0.25000 mnd=0.000 drho=1.605e-01 p=4.5 b=32.0 solve 0.11s (setup 0.01) it=3 outer=- res=8.53e-06 iter 0.14s
+it  75 c=1.161447e-01 vol=0.25000 mnd=0.000 drho=1.773e-02 p=4.5 b=32.0 solve 0.08s (setup 0.01) it=2 outer=- res=5.94e-06 iter 0.11s
+AUDIT it=76 res=6.99e-06 dc/c=2.01e-09 sens2=1.46e-04 sensmax=1.54e-04 upd=2.62e-04 n>0.001=0
+it  76 c=1.161447e-01 vol=0.25000 mnd=0.000 drho=5.613e-03 p=4.5 b=32.0 solve 0.10s (setup 0.05) it=1 outer=- res=6.99e-06 iter 0.86s
