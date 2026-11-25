@@ -1,0 +1,98 @@
+{
+ "task": "X1_1",
+ "note": "labels for the damped bracket panels; render the fields of the figdata files below with T37's view, level and style; every printed number is listed with its source (paths relative to the work folder)",
+ "fields": {
+  "n192_completed": "tasks/X0_2/out/figdata_adaptive_n192.npz",
+  "n384_capped": "tasks/X0_2/out/figdata_adaptive_n384.npz"
+ },
+ "labels": [
+  {
+   "id": "n192_title",
+   "panel": "completed design",
+   "text": "n = 192, damped update: stopped by the design rule",
+   "value": {
+    "n": 192,
+    "termination": "bounded_oscillation"
+   },
+   "source": "tasks/X1_1/out/checks.json#/panels/R_adaptive_n192_rep/termination"
+  },
+  {
+   "id": "n192_status",
+   "text": "stopping test met at iteration 144 (1 voxel changing by > 0.01, allowance 1); retained field one update later (1 voxel, allowance 1)",
+   "value": {
+    "iteration": 144,
+    "test_n_moving": 1,
+    "retained_n_moving": 1,
+    "allowance": 1
+   },
+   "source": "tasks/X1_1/out/checks.json#/panels/R_adaptive_n192_rep/stopping_test; tasks/X1_1/out/checks.json#/panels/R_adaptive_n192_rep/retained_update"
+  },
+  {
+   "id": "n192_active",
+   "text": "903,548 active voxels",
+   "value": 903548,
+   "source": "tasks/X1_1/out/checks.json#/panels/R_adaptive_n192_rep/counts/active"
+  },
+  {
+   "id": "n192_volume",
+   "text": "designable volume fraction 0.500000",
+   "value": 0.49999999996642697,
+   "source": "tasks/X1_1/out/checks.json#/panels/R_adaptive_n192_rep/volume_designable"
+  },
+  {
+   "id": "n192_checks",
+   "text": "four FP64 endpoint checks 8.20–9.85 × 10⁻⁹",
+   "value": [
+    8.202653167791762e-09,
+    8.526602495617857e-09,
+    9.589405519035293e-09,
+    9.852996939953308e-09
+   ],
+   "source": "tasks/X1_1/out/checks.json#/panels/R_adaptive_n192_rep/tight_rel_residuals"
+  },
+  {
+   "id": "n384_title",
+   "panel": "capped iterate",
+   "text": "n = 384, damped update: iterate after 300 updates (iteration cap; stopping rule not met)",
+   "value": {
+    "n": 384,
+    "termination": "guard",
+    "iterations": 300
+   },
+   "source": "tasks/X1_1/out/checks.json#/panels/R_adaptive_n384/termination; tasks/X1_1/out/checks.json#/panels/R_adaptive_n384/iterations"
+  },
+  {
+   "id": "n384_status",
+   "text": "last stopping test 128 voxels changing by > 0.01, allowance 7; retained update 135",
+   "value": {
+    "test_n_moving": 128,
+    "retained_n_moving": 135,
+    "allowance": 7
+   },
+   "source": "tasks/X1_1/out/checks.json#/panels/R_adaptive_n384/stopping_test; tasks/X1_1/out/checks.json#/panels/R_adaptive_n384/retained_update"
+  },
+  {
+   "id": "n384_active",
+   "text": "7,232,600 active voxels",
+   "value": 7232600,
+   "source": "tasks/X1_1/out/checks.json#/panels/R_adaptive_n384/counts/active"
+  },
+  {
+   "id": "n384_checks",
+   "text": "four FP64 endpoint checks 8.99–9.89 × 10⁻⁹",
+   "value": [
+    8.99073974812408e-09,
+    9.768676734272747e-09,
+    9.854546968468999e-09,
+    9.891849436070023e-09
+   ],
+   "source": "tasks/X1_1/out/checks.json#/panels/R_adaptive_n384/tight_rel_residuals"
+  },
+  {
+   "id": "surface",
+   "text": "surface: physical density 0.5",
+   "value": 0.5,
+   "source": "tasks/T37/out/render_meta.json#/field_n384/level"
+  }
+ ]
+}

@@ -1,0 +1,121 @@
+{
+ "argv": [
+  "<project>\\revision_round1\\work\\tasks\\T26\\t26_job.py",
+  "<project>\\revision_round1\\work\\tasks\\T26\\out\\runs\\k160_r1",
+  "k160"
+ ],
+ "job": "k160",
+ "admission_in_process": {
+  "cuda_free_bytes": 24152899584,
+  "cuda_total_bytes": 25756696576,
+  "pool_cap_bytes": 22542286848,
+  "predicted_peak_bytes": 2599643136,
+  "require_budget_ok": true,
+  "require_budget_info": {
+   "cuda_free": 24152899584,
+   "total": 25756696576,
+   "others_dedicated": 6471901184,
+   "wddm_free": 18930225152,
+   "need": 2599643136,
+   "margin": 1610612736,
+   "effective_free": 18930225152,
+   "ok": true
+  }
+ },
+ "environment": {
+  "os": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_files": {
+  "src/voxfem/__init__.py": "c0a1b1cd2147b2ba49cb4a5088cf56d29acdf504a118ebab884a49afa298a2e4",
+  "src/voxfem/core.py": "318596a50144b51639725c4e56ce78a5b64734326bade8b37a8780d1fa7fb0de",
+  "src/voxfem/filters.py": "a578eb1d7798ce0e761e13fe24371114bad3b73855cb1463b01070368690375f",
+  "src/voxfem/guard.py": "d9ed2a1c40b14c2d24cb216edf33146a3d1f16af049c80a24664c0f4ffed3529",
+  "src/voxfem/krylov.py": "9693ab48d4e030c5544df52de07cf7bd0bf544674ff6335120a80e1a1ef3b923",
+  "src/voxfem/memory.py": "824be1910087b604c5ef4b198ec5d513cb9ed5a4fbe885ac2404a4d81d0b894d",
+  "src/voxfem/mg.py": "78006d3b2b2e8ed59226801242828803cd283b541b69ca80688244cbb3c8c5d6",
+  "src/voxfem/operators.py": "e89a0ec274e670ad505b49e7fa8cb6291bd41c71bd81e42f289e30f104c1da23",
+  "src/voxfem/sass.py": "184cd5714214ef1cd597a91b74b6e548d2236baf97c59d6b1a1aea5ebcf9f360",
+  "src/voxfem/simp.py": "b68537c154bd76bc1209f88b04b79c8df422e3f2a1dd2b6b0c3d3e2e0fc3baa8",
+  "src/voxfem/sparse.py": "7830a4672baee93881886348e0b6867ac963f4fb27b0519481bbc64adea2ea26",
+  "t26_job.py": "fd9105d67c998d2c97f66a17ade171c89f9259de4f46d50ae8a85ebbc473842c",
+  "t26_common.py": "13033d58152a7f80304ee9966bdc96aa4d2d83d4767013b687a47c92ec00cc62"
+ },
+ "device_state_start": {
+  "name": "NVIDIA GeForce RTX 4090",
+  "clocks.sm": "2520",
+  "clocks.mem": "10251",
+  "temperature.gpu": "50",
+  "power.draw": "70.91",
+  "memory.used": "2861",
+  "utilization.gpu": "0",
+  "pstate": "P2"
+ },
+ "solves": {
+  "A": "ok",
+  "A_xprec": "ok",
+  "D": "ok"
+ },
+ "memory": {
+  "peak_pool_used_bytes": 2630832128,
+  "peak_pool_reserved_bytes": 2645843456,
+  "peak_device_used_bytes": 4342677504,
+  "baseline_device_used_bytes": 1603796992
+ },
+ "spill_in_process": {
+  "pid": 53604,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 113246208,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1795550894.809001,
+    "dedicated": 354570240,
+    "shared": 77594624,
+    "others_dedicated": 6471901184
+   },
+   {
+    "tag": "A",
+    "t": 1795550933.7107525,
+    "dedicated": 2076569600,
+    "shared": 190840832,
+    "others_dedicated": 6471901184
+   },
+   {
+    "tag": "A_xprec",
+    "t": 1795550961.4115908,
+    "dedicated": 2087059456,
+    "shared": 190840832,
+    "others_dedicated": 6471901184
+   },
+   {
+    "tag": "D",
+    "t": 1795550991.6083472,
+    "dedicated": 2105933824,
+    "shared": 190840832,
+    "others_dedicated": 6471901184
+   }
+  ]
+ },
+ "device_state_end": {
+  "name": "NVIDIA GeForce RTX 4090",
+  "clocks.sm": "510",
+  "clocks.mem": "5001",
+  "temperature.gpu": "51",
+  "power.draw": "77.28",
+  "memory.used": "4531",
+  "utilization.gpu": "0",
+  "pstate": "P3"
+ },
+ "pool_limit_bytes": 22542286848,
+ "completed": true
+}

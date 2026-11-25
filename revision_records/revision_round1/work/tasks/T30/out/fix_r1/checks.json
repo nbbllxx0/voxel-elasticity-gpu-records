@@ -1,0 +1,236 @@
+{
+ "unchanged_measured_sizes": {
+  "96": {
+   "sha256_before": "7670277780555c55343fcc3aca9f894fe667d16d3e0a8a63bb1e7ab34984e1b8",
+   "sha256_after": "7670277780555c55343fcc3aca9f894fe667d16d3e0a8a63bb1e7ab34984e1b8",
+   "identical": true,
+   "active_before": 113318,
+   "active_after": 113318,
+   "designable_before": 104070,
+   "designable_after": 104070
+  },
+  "192": {
+   "sha256_before": "0589dd9882be88bbc5a3c5fb5aa3d4a74ad6b23f5b0d3805726e24f92fe6e970",
+   "sha256_after": "0589dd9882be88bbc5a3c5fb5aa3d4a74ad6b23f5b0d3805726e24f92fe6e970",
+   "identical": true,
+   "active_before": 903548,
+   "active_after": 903548,
+   "designable_before": 827324,
+   "designable_after": 827324
+  },
+  "384": {
+   "sha256_before": "3d05b126fa4832780cd4f414b54175bd8e1adfaefd60af445a99328f19de646b",
+   "sha256_after": "3d05b126fa4832780cd4f414b54175bd8e1adfaefd60af445a99328f19de646b",
+   "identical": true,
+   "active_before": 7232600,
+   "active_after": 7232600,
+   "designable_before": 6629528,
+   "designable_after": 6629528
+  },
+  "576": {
+   "sha256_before": "ba1ff78aaa971206aedf95749a7747fa25a36a8510cc38537e5369505745b429",
+   "sha256_after": "ba1ff78aaa971206aedf95749a7747fa25a36a8510cc38537e5369505745b429",
+   "identical": true,
+   "active_before": 24411796,
+   "active_after": 24411796,
+   "designable_before": 22367092,
+   "designable_after": 22367092
+  }
+ },
+ "padding_after_fix": {
+  "96": {
+   "nominal_grid": [
+    96,
+    64,
+    40
+   ],
+   "allocated_grid": [
+    96,
+    64,
+    40
+   ],
+   "padded_elements": 0,
+   "padded_non_exterior_elements": 0,
+   "passed": true,
+   "active_elements": 113318,
+   "designable_elements": 104070,
+   "protected_elements": 9248
+  },
+  "192": {
+   "nominal_grid": [
+    192,
+    128,
+    80
+   ],
+   "allocated_grid": [
+    192,
+    128,
+    80
+   ],
+   "padded_elements": 0,
+   "padded_non_exterior_elements": 0,
+   "passed": true,
+   "active_elements": 903548,
+   "designable_elements": 827324,
+   "protected_elements": 76224
+  },
+  "384": {
+   "nominal_grid": [
+    384,
+    256,
+    160
+   ],
+   "allocated_grid": [
+    384,
+    256,
+    160
+   ],
+   "padded_elements": 0,
+   "padded_non_exterior_elements": 0,
+   "passed": true,
+   "active_elements": 7232600,
+   "designable_elements": 6629528,
+   "protected_elements": 603072
+  },
+  "480": {
+   "nominal_grid": [
+    480,
+    320,
+    200
+   ],
+   "allocated_grid": [
+    512,
+    320,
+    256
+   ],
+   "padded_elements": 11223040,
+   "padded_non_exterior_elements": 0,
+   "passed": true,
+   "active_elements": 14131220,
+   "designable_elements": 12952020,
+   "protected_elements": 1179200
+  },
+  "576": {
+   "nominal_grid": [
+    576,
+    384,
+    240
+   ],
+   "allocated_grid": [
+    576,
+    384,
+    256
+   ],
+   "padded_elements": 3538944,
+   "padded_non_exterior_elements": 0,
+   "passed": true,
+   "active_elements": 24411796,
+   "designable_elements": 22367092,
+   "protected_elements": 2044704
+  },
+  "672": {
+   "nominal_grid": [
+    672,
+    448,
+    280
+   ],
+   "allocated_grid": [
+    704,
+    448,
+    320
+   ],
+   "padded_elements": 16629760,
+   "padded_non_exterior_elements": 0,
+   "passed": true,
+   "active_elements": 38776542,
+   "designable_elements": 35533022,
+   "protected_elements": 3243520
+  },
+  "768": {
+   "nominal_grid": [
+    768,
+    512,
+    320
+   ],
+   "allocated_grid": [
+    768,
+    512,
+    320
+   ],
+   "padded_elements": 0,
+   "padded_non_exterior_elements": 0,
+   "passed": true,
+   "active_elements": 57874194,
+   "designable_elements": 53037202,
+   "protected_elements": 4836992
+  }
+ },
+ "fault_injection_unbounded_base": {
+  "480": {
+   "nominal_grid": [
+    480,
+    320,
+    200
+   ],
+   "allocated_grid": [
+    512,
+    320,
+    256
+   ],
+   "padded_elements": 11223040,
+   "padded_non_exterior_elements": 480000,
+   "passed": false
+  },
+  "576": {
+   "nominal_grid": [
+    576,
+    384,
+    240
+   ],
+   "allocated_grid": [
+    576,
+    384,
+    256
+   ],
+   "padded_elements": 3538944,
+   "padded_non_exterior_elements": 0,
+   "passed": true
+  },
+  "672": {
+   "nominal_grid": [
+    672,
+    448,
+    280
+   ],
+   "allocated_grid": [
+    704,
+    448,
+    320
+   ],
+   "padded_elements": 16629760,
+   "padded_non_exterior_elements": 940800,
+   "passed": false
+  }
+ },
+ "changed_unmeasured_sizes": {
+  "480": {
+   "sha256_before": "29d96e75cfe5ce4adbc2cf3e42a4f249d2812ae98de17c1346623eb6219a114b",
+   "sha256_after": "c5356840e649deb3668e6a4553d5f23ba8033e5465d2eb18e20f8e0d731bea04",
+   "identical": false,
+   "active_before": 14611220,
+   "active_after": 14131220,
+   "designable_before": 13432020,
+   "designable_after": 12952020
+  },
+  "672": {
+   "sha256_before": "78365b3aaf034a1c9821a99b44025dbf3b5fea42158828ccd681e719f993989e",
+   "sha256_after": "bfed04bb6f36c8075b1f2ecc9e764015fbfd38c9c59fd836f214d2e54dcbd742",
+   "identical": false,
+   "active_before": 39717342,
+   "active_after": 38776542,
+   "designable_before": 36473822,
+   "designable_after": 35533022
+  }
+ },
+ "passed": true
+}

@@ -1,0 +1,232 @@
+{
+ "file": "stencil_methods.c",
+ "line_range": [
+  50,
+  388
+ ],
+ "n_calls_in_file": 27,
+ "n_calls_in_range": 27,
+ "n_distinct_offsets_in_range": 27,
+ "equals_full_3x3x3_neighbourhood": true,
+ "first_call_line": 50,
+ "last_call_line": 388,
+ "calls_outside_range": [],
+ "calls": [
+  {
+   "line": 50,
+   "offset": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "line": 85,
+   "offset": [
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "line": 104,
+   "offset": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "line": 124,
+   "offset": [
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "line": 143,
+   "offset": [
+    0,
+    1,
+    1
+   ]
+  },
+  {
+   "line": 154,
+   "offset": [
+    0,
+    -1,
+    1
+   ]
+  },
+  {
+   "line": 166,
+   "offset": [
+    0,
+    0,
+    -1
+   ]
+  },
+  {
+   "line": 185,
+   "offset": [
+    0,
+    1,
+    -1
+   ]
+  },
+  {
+   "line": 196,
+   "offset": [
+    0,
+    -1,
+    -1
+   ]
+  },
+  {
+   "line": 208,
+   "offset": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "line": 227,
+   "offset": [
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "line": 238,
+   "offset": [
+    1,
+    -1,
+    0
+   ]
+  },
+  {
+   "line": 250,
+   "offset": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "line": 269,
+   "offset": [
+    -1,
+    -1,
+    0
+   ]
+  },
+  {
+   "line": 280,
+   "offset": [
+    -1,
+    1,
+    0
+   ]
+  },
+  {
+   "line": 292,
+   "offset": [
+    -1,
+    1,
+    -1
+   ]
+  },
+  {
+   "line": 299,
+   "offset": [
+    -1,
+    0,
+    -1
+   ]
+  },
+  {
+   "line": 310,
+   "offset": [
+    -1,
+    -1,
+    -1
+   ]
+  },
+  {
+   "line": 318,
+   "offset": [
+    1,
+    0,
+    -1
+   ]
+  },
+  {
+   "line": 329,
+   "offset": [
+    1,
+    -1,
+    -1
+   ]
+  },
+  {
+   "line": 336,
+   "offset": [
+    1,
+    1,
+    -1
+   ]
+  },
+  {
+   "line": 344,
+   "offset": [
+    1,
+    0,
+    1
+   ]
+  },
+  {
+   "line": 355,
+   "offset": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "line": 362,
+   "offset": [
+    1,
+    -1,
+    1
+   ]
+  },
+  {
+   "line": 370,
+   "offset": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "line": 381,
+   "offset": [
+    -1,
+    -1,
+    1
+   ]
+  },
+  {
+   "line": 388,
+   "offset": [
+    -1,
+    1,
+    1
+   ]
+  }
+ ]
+}

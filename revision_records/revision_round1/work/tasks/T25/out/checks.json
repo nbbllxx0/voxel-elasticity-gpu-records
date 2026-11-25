@@ -1,0 +1,21 @@
+{
+ "submitted_pdf_identical_to_project_figure": true,
+ "seven_submitted_panels_original_stencil": true,
+ "seven_submitted_labels_match_records": true,
+ "seven_revised_panels_difference_form": true,
+ "solver_matches_per_panel": true,
+ "all_fourteen_records_accepted": true,
+ "all_fields_shape_match_record": true,
+ "every_record_names_its_field": true,
+ "native_field_sha256_matches_its_record": true,
+ "fp16_fields_volume_within_1e-4_of_record": true,
+ "native_field_volume_within_1e-12_of_record": true,
+ "native_field_mnd_within_1e-12_of_record": true,
+ "new_run_dtype_float32": true,
+ "new_run_shape_640x320x320": true,
+ "new_run_accepted": true,
+ "new_run_iterations_and_termination_equal_E32": true,
+ "new_run_compliance_within_1e-12_rel_of_E32": true,
+ "new_run_compliance_bitwise_equal_E32": false,
+ "archive_cast_reproduces_run_simp_convention": true
+}

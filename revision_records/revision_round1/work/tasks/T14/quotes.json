@@ -1,0 +1,983 @@
+{
+ "note": "Each entry is one cited fact. 'quote' must occur verbatim (after whitespace collapsing) in 'file'. 'location' is the location in the original source. Checked by verify_quotes.py.",
+ "sources": {
+  "KANG_CR": {
+   "file": "fetched/crossref_10.1016_j.cma.2020.112847.json",
+   "kind": "json",
+   "origin": "https://api.crossref.org/works/10.1016/j.cma.2020.112847"
+  },
+  "KANG_ELS": {
+   "file": "fetched/elsapi_S0045782520300281.xml",
+   "kind": "text",
+   "origin": "https://api.elsevier.com/content/article/PII:S0045782520300281 (publisher metadata, no abstract returned)"
+  },
+  "KANG_ABS": {
+   "file": "fetched/s2_10.1016_j.cma.2020.112847.json",
+   "kind": "json",
+   "origin": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.cma.2020.112847 (reproduces the publisher abstract; ScienceDirect returned HTTP 403 to automated access)"
+  },
+  "CUDSS_INDEX": {
+   "file": "fetched/cudss/latest_index.txt",
+   "kind": "text",
+   "origin": "https://docs.nvidia.com/cuda/cudss/latest/index.html"
+  },
+  "CUDSS_START": {
+   "file": "fetched/cudss/getting_started.txt",
+   "kind": "text",
+   "origin": "https://docs.nvidia.com/cuda/cudss/latest/getting_started.html"
+  },
+  "CUDSS_TYPES": {
+   "file": "fetched/cudss/types.txt",
+   "kind": "text",
+   "origin": "https://docs.nvidia.com/cuda/cudss/latest/types.html"
+  },
+  "CUDSS_FUNCS": {
+   "file": "fetched/cudss/functions.txt",
+   "kind": "text",
+   "origin": "https://docs.nvidia.com/cuda/cudss/latest/functions.html"
+  },
+  "CUDSS_ADV": {
+   "file": "fetched/cudss/advanced_features.txt",
+   "kind": "text",
+   "origin": "https://docs.nvidia.com/cuda/cudss/latest/advanced_features.html"
+  },
+  "CUDSS_TIPS": {
+   "file": "fetched/cudss/tips_and_tricks.txt",
+   "kind": "text",
+   "origin": "https://docs.nvidia.com/cuda/cudss/latest/tips_and_tricks.html"
+  },
+  "CUDSS_REL": {
+   "file": "fetched/cudss/release_notes.txt",
+   "kind": "text",
+   "origin": "https://docs.nvidia.com/cuda/cudss/latest/release_notes.html"
+  },
+  "TRAFF_P02": {
+   "file": "src/traff_pages/p02.txt",
+   "kind": "text",
+   "origin": "<project>/references/traff2023.pdf, PDF p.2 = article p.1"
+  },
+  "TRAFF_P06": {
+   "file": "src/traff_pages/p06.txt",
+   "kind": "text",
+   "origin": "traff2023.pdf PDF p.6 = article p.5"
+  },
+  "TRAFF_P07": {
+   "file": "src/traff_pages/p07.txt",
+   "kind": "text",
+   "origin": "traff2023.pdf PDF p.7 = article p.6"
+  },
+  "TRAFF_P08": {
+   "file": "src/traff_pages/p08.txt",
+   "kind": "text",
+   "origin": "traff2023.pdf PDF p.8 = article p.7"
+  },
+  "TRAFF_P14": {
+   "file": "src/traff_pages/p14.txt",
+   "kind": "text",
+   "origin": "traff2023.pdf PDF p.14 = article p.13"
+  },
+  "TRAFF_P15": {
+   "file": "src/traff_pages/p15.txt",
+   "kind": "text",
+   "origin": "traff2023.pdf PDF p.15 = article p.14"
+  },
+  "TRAFF_P16": {
+   "file": "src/traff_pages/p16.txt",
+   "kind": "text",
+   "origin": "traff2023.pdf PDF p.16 = article p.15"
+  },
+  "TRAFF_P17": {
+   "file": "src/traff_pages/p17.txt",
+   "kind": "text",
+   "origin": "traff2023.pdf PDF p.17 = article p.16"
+  },
+  "TRAFF_P19": {
+   "file": "src/traff_pages/p19.txt",
+   "kind": "text",
+   "origin": "traff2023.pdf PDF p.19 = article p.18"
+  },
+  "TRAFF_P20": {
+   "file": "src/traff_pages/p20.txt",
+   "kind": "text",
+   "origin": "traff2023.pdf PDF p.20 = article p.19"
+  },
+  "TRAFF_P22": {
+   "file": "src/traff_pages/p22.txt",
+   "kind": "text",
+   "origin": "traff2023.pdf PDF p.22 = article p.21"
+  },
+  "TRAFF_DEFS": {
+   "file": "../T12/src_TopOpt-in-OpenMP-GPU/definitions.h",
+   "kind": "text",
+   "origin": "released OpenMP-GPU code, upstream revision b46ed453 (copied unmodified by T12)"
+  },
+  "TRAFF_TOP3D": {
+   "file": "../T12/src_TopOpt-in-OpenMP-GPU/top3d.c",
+   "kind": "text",
+   "origin": "released OpenMP-GPU code"
+  },
+  "TRAFF_SOLV": {
+   "file": "../T12/src_TopOpt-in-OpenMP-GPU/stencil_solvers.c",
+   "kind": "text",
+   "origin": "released OpenMP-GPU code"
+  },
+  "TRAFF_METH": {
+   "file": "../T12/src_TopOpt-in-OpenMP-GPU/stencil_methods.c",
+   "kind": "text",
+   "origin": "released OpenMP-GPU code"
+  },
+  "HOU_CR": {
+   "file": "fetched/crossref_10.1016_j.finel.2025.104388.json",
+   "kind": "json",
+   "origin": "https://api.crossref.org/works/10.1016/j.finel.2025.104388"
+  },
+  "HOU_CG": {
+   "file": "../../../../external/CuPy-for-TO/cupy_for_TO/CG.py",
+   "kind": "text",
+   "origin": "released CuPy-for-TO code, revision d8dca7a (authors' read-only copy)"
+  },
+  "HOU_MAIN": {
+   "file": "../../../../external/CuPy-for-TO/cupy_for_TO/main.py",
+   "kind": "text",
+   "origin": "released CuPy-for-TO code"
+  },
+  "HOU_FE": {
+   "file": "../../../../external/CuPy-for-TO/cupy_for_TO/FE.py",
+   "kind": "text",
+   "origin": "released CuPy-for-TO code"
+  },
+  "HOU_SPMV": {
+   "file": "../../../../external/CuPy-for-TO/cupy_for_TO/SpMV.py",
+   "kind": "text",
+   "origin": "released CuPy-for-TO code"
+  },
+  "HOU_KER": {
+   "file": "../../../../external/CuPy-for-TO/cupy_for_TO/ker.py",
+   "kind": "text",
+   "origin": "released CuPy-for-TO code"
+  },
+  "HOU_MAT": {
+   "file": "../../../../external/CuPy-for-TO/cupy_for_TO/materialInfo.py",
+   "kind": "text",
+   "origin": "released CuPy-for-TO code"
+  },
+  "WANG_ABS": {
+   "file": "fetched/springer_wang2025.html",
+   "kind": "html",
+   "origin": "https://link.springer.com/article/10.1007/s00158-025-04127-3 (publisher abstract)"
+  },
+  "LIU_ABS": {
+   "file": "fetched/crossref_10.1145_3272127.3275012.json",
+   "kind": "json",
+   "origin": "https://api.crossref.org/works/10.1145/3272127.3275012 (publisher-deposited abstract)"
+  },
+  "A100": {
+   "file": "fetched/nvidia_a100.txt",
+   "kind": "text",
+   "origin": "https://www.nvidia.com/en-us/data-center/a100/ (Specifications table)"
+  },
+  "TRAFF_OPT": {
+   "file": "../T12/src_TopOpt-in-OpenMP-GPU/stencil_optimization.c",
+   "kind": "text",
+   "origin": "released OpenMP-GPU code"
+  },
+  "HOU_PREV": {
+   "file": "fetched/archived/recent_hou2025_preview.txt",
+   "kind": "text",
+   "origin": "ScienceDirect article-preview page of 10.1016/j.finel.2025.104388 (title, authors, highlights, abstract, introduction), saved in the authors' earlier pre-submission audit (manuscript/fead1.1/tmp/presubmission_audit_20261009_134801/exemplars/recent_hou2025_preview.txt, lines 55-56 for the abstract); copied unmodified"
+  },
+  "HOU_WRITER": {
+   "file": "../../../../external/CuPy-for-TO/cupy_for_TO/kernel_writer.py",
+   "kind": "text",
+   "origin": "released CuPy-for-TO code (generates ker.py at run time)"
+  }
+ },
+ "items": [
+  {
+   "id": "K1",
+   "src": "KANG_CR",
+   "location": "Crossref record: title",
+   "quote": "A method using successive iteration of analysis and design for large-scale topology optimization considering eigenfrequencies"
+  },
+  {
+   "id": "K2",
+   "src": "KANG_CR",
+   "location": "Crossref record: author list",
+   "quote": "\"given\":\"Zhan\",\"family\":\"Kang\""
+  },
+  {
+   "id": "K3",
+   "src": "KANG_CR",
+   "location": "Crossref record: author list",
+   "quote": "\"given\":\"Jingjie\",\"family\":\"He\""
+  },
+  {
+   "id": "K4",
+   "src": "KANG_CR",
+   "location": "Crossref record: author list",
+   "quote": "\"given\":\"Lin\",\"family\":\"Shi\""
+  },
+  {
+   "id": "K5",
+   "src": "KANG_CR",
+   "location": "Crossref record: author list",
+   "quote": "\"given\":\"Zhaohui\",\"family\":\"Miao\""
+  },
+  {
+   "id": "K6",
+   "src": "KANG_ELS",
+   "location": "Elsevier metadata: cover date",
+   "quote": "<prism:coverDisplayDate>15 April 2020</prism:coverDisplayDate>"
+  },
+  {
+   "id": "K7",
+   "src": "KANG_CR",
+   "location": "Crossref record: volume",
+   "quote": "\"volume\":\"362\""
+  },
+  {
+   "id": "K8",
+   "src": "KANG_ABS",
+   "location": "Abstract, sentence 1",
+   "quote": "Repeatedly solving the generalized eigenvalue problems by far dominates the computational cost in large-scale topology optimization involving natural frequency constraints."
+  },
+  {
+   "id": "K9",
+   "src": "KANG_ABS",
+   "location": "Abstract, sentence 2",
+   "quote": "This study proposes a method for dynamic topology optimization problems considering natural frequencies using successively executed iterations for the structural analysis and design."
+  },
+  {
+   "id": "K10",
+   "src": "KANG_ABS",
+   "location": "Abstract, sentence 3",
+   "quote": "By using the Rayleigh quotients as approximations of the natural frequencies and achieving sequential approximation of the eigenpairs through inverse iteration-like procedures to improve the eigenvectors along with the topological evolution of the structure, the method avoids solving the time-consuming eigenvalue problem in each design iteration."
+  },
+  {
+   "id": "K11",
+   "src": "KANG_ABS",
+   "location": "Abstract, sentence 5",
+   "quote": "The convergence property of the method is analyzed under the assumption of sufficiently small design changes between two successive design iterations."
+  },
+  {
+   "id": "K12",
+   "src": "KANG_ABS",
+   "location": "Abstract, last sentence",
+   "quote": "Numerical examples regarding frequency and frequency gap constraints show that this method is able to realize concurrent convergence of the eigenvalue analysis and design optimization, and is more efficient than the conventional double-loop approach."
+  },
+  {
+   "id": "C1",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, first paragraph",
+   "quote": "NVIDIA cuDSS is a library of GPU-accelerated linear solvers with sparse matrices."
+  },
+  {
+   "id": "C2",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, first paragraph",
+   "quote": "with a sparse matrix \\(A\\), right-hand side \\(B\\) and unknown solution \\(X\\) (could be a matrix or a vector)."
+  },
+  {
+   "id": "C3",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "quote": "Real/complex general/symmetric/positive-definite (incl. complex symmetric) sparse matrices with"
+  },
+  {
+   "id": "C4",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "quote": "Single, double, and double-double (experimental) precision datatypes for values and int and int64_t datatypes for indices"
+  },
+  {
+   "id": "C5",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "quote": "Single and multiple right-hand sides"
+  },
+  {
+   "id": "C6",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "quote": "analysis (consisting of reordering and symbolic factorization), numerical factorization and solving."
+  },
+  {
+   "id": "C7",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "quote": "Optionally, it includes refactorization and solve sub-phases (forward and backward substitution with corresponding permutations and iterative refinement)"
+  },
+  {
+   "id": "C8",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "quote": "Memory and flops estimates for factorization after the analysis phase"
+  },
+  {
+   "id": "C9",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Support",
+   "quote": "and Windows (x86_64)"
+  },
+  {
+   "id": "C10",
+   "src": "CUDSS_START",
+   "location": "cuDSS docs, Getting Started, cuDSS Workflow",
+   "quote": "cuDSS is following a commonly used multi-stage approach in sparse direct solvers. The process of solving a linear system is split into several phases: reordering and symbolic factorization, numerical factorization (and, optionally, refactorization) and solving (with optional iterative refinement)."
+  },
+  {
+   "id": "C11",
+   "src": "CUDSS_START",
+   "location": "cuDSS docs, Getting Started, cuDSS Workflow, step 2",
+   "quote": "cudssMatrixCreateCsr()"
+  },
+  {
+   "id": "C12",
+   "src": "CUDSS_FUNCS",
+   "location": "cuDSS docs, Functions, cudssExecute()",
+   "quote": "During the factorization phase, numerical factorization is performed and during the solve phase, the factorization is used to find the solution to the linear system."
+  },
+  {
+   "id": "C13",
+   "src": "CUDSS_FUNCS",
+   "location": "cuDSS docs, Functions, cudssExecute()",
+   "quote": "Re-using the analysis results is supported. Users can change matrix values and only need to run the (re-)factorization and solve phases."
+  },
+  {
+   "id": "C14",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssPhase_t, CUDSS_PHASE_REFACTORIZATION",
+   "quote": "Numerical re-factorization. Note: For now it is only used if the reordering algorithm is set to CUDSS_REORDERING_ALG_BTF_COLAMD or CUDSS_REORDERING_ALG_COLAMD. Otherwise, it is the same as FACTORIZATION phase."
+  },
+  {
+   "id": "C15",
+   "src": "CUDSS_TIPS",
+   "location": "cuDSS docs, Tips and tricks",
+   "quote": "Re-using analysis (reordering and symbolic factorization) and numerical factorization by only calling the corresponding phases when the matrix structure or values change (in the latter case, one should call cudssExecute() with CUDSS_PHASE_REFACTORIZATION), respectively."
+  },
+  {
+   "id": "C16",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_N_STEPS",
+   "quote": "Maximum number of steps during the iterative refinement."
+  },
+  {
+   "id": "C17",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_N_STEPS (end of entry)",
+   "quote": "Associated parameter type: int Default value: 0 enumerator CUDSS_CONFIG_IR_TOL#"
+  },
+  {
+   "id": "C18",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_TOL",
+   "quote": "In each iteration, the relative residual norm is computed as \\(||r||_2 / ||b||_2\\) where \\(r = b - Ax\\)."
+  },
+  {
+   "id": "C19",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_TOL",
+   "quote": "The refinement terminates early if the residual norm is less than the specified tolerance."
+  },
+  {
+   "id": "C20",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_TOL",
+   "quote": "If the tolerance is not met after all iterations, CUDSS_STATUS_IR_FAILED is returned."
+  },
+  {
+   "id": "C21",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_TOL",
+   "quote": "Default value: 0.0 (tolerance checking disabled)"
+  },
+  {
+   "id": "C22",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_DOWNCAST_FACTORS",
+   "quote": "Controls whether cuDSS stores the double-precision factors in single (reduced) precision after factorization, releasing the full-precision factors. When disabled (the default) the factors are kept in full precision."
+  },
+  {
+   "id": "C23",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_DOWNCAST_FACTORS",
+   "quote": "Numerical factorization is performed in the matrix value precision. Iterative refinement is also computed in the matrix value precision. The supported downcast conversions are CUDSS_R_64F to CUDSS_R_32F and CUDSS_C_64F to CUDSS_C_32F."
+  },
+  {
+   "id": "C24",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_DOWNCAST_FACTORS",
+   "quote": "CUDSS_R_64F right-hand side and solution matrices run a mixed-precision solve with double-precision arithmetic, single-precision off-diagonal factor sources, and retained double-precision diagonal factor sources."
+  },
+  {
+   "id": "C25",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_DOWNCAST_FACTORS",
+   "quote": "CUDSS_R_32F right-hand side and solution matrices run the entire solve in single precision over the downcast factors."
+  },
+  {
+   "id": "C26",
+   "src": "CUDSS_REL",
+   "location": "cuDSS docs, Release Notes, cuDSS v1.0.0, New Features",
+   "quote": "Added CUDSS_CONFIG_DOWNCAST_FACTORS to store double-precision factors in single precision"
+  },
+  {
+   "id": "C27",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssMatrixType_t, CUDSS_MTYPE_SPD",
+   "quote": "Symmetric positive-definite matrix Cholesky factorization will be computed with optional local pivoting"
+  },
+  {
+   "id": "C28",
+   "src": "CUDSS_ADV",
+   "location": "cuDSS docs, Advanced Features, Hybrid host/device memory mode",
+   "quote": "The main idea of the hybrid host/device memory mode is to overcome the limitation of the default (non-hybrid) mode that L and U factors (which comprise the largest part of the total device memory consumed by cuDSS) must fit into the device memory."
+  },
+  {
+   "id": "C29",
+   "src": "CUDSS_REL",
+   "location": "cuDSS docs, Release Notes, newest entry",
+   "quote": "Release Notes# cuDSS v1.0.0#"
+  },
+  {
+   "id": "T1",
+   "src": "TRAFF_P02",
+   "location": "Träff et al. 2023, Abstract (article p.1)",
+   "quote": "It is shown that both GPU accelerated codes are able to solve large-scale topology optimisation problems with 65.5 million elements in approximately 2 h using a single GPU, while the reference implementation takes approximately 3 h and 10 min using 48 CPU cores."
+  },
+  {
+   "id": "T2",
+   "src": "TRAFF_P14",
+   "location": "Träff et al. 2023, Fig. 4 caption (article p.13)",
+   "quote": "Computed using the Futhark implementation on a Nvidia A100 GPU to run 100 design iterations, in 7380 s, approximately 2 h."
+  },
+  {
+   "id": "T3",
+   "src": "TRAFF_P14",
+   "location": "Träff et al. 2023, Sec. 4.1 Cantilever (article p.13)",
+   "quote": "for a 640 × 320 × 320 mesh with approximately 65.5 million elements."
+  },
+  {
+   "id": "T4",
+   "src": "TRAFF_P14",
+   "location": "Träff et al. 2023, Sec. 4.1 Cantilever (article p.13)",
+   "quote": "filter radius r = 2.5 elements, and 100 design iterations."
+  },
+  {
+   "id": "T5",
+   "src": "TRAFF_P15",
+   "location": "Träff et al. 2023, Sec. 4.1 Cantilever (article p.14)",
+   "quote": "the OpenMP implementations are estimated to take approximately 2 h (GPU) and 3.15 h (CPU) , by extrapolating the computation time of the first 20 design iterations presented in Fig. 6."
+  },
+  {
+   "id": "T6",
+   "src": "TRAFF_P15",
+   "location": "Träff et al. 2023, Sec. 4.1 MBB beam (article p.14)",
+   "quote": "This example contains 41 million elements and was computed in 4 h using the Futhark implementation and a Nvidia A100 GPU as accelerator."
+  },
+  {
+   "id": "T7",
+   "src": "TRAFF_P15",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.14)",
+   "quote": "the NVIDIA HPC SDK (version 22.5) was used for OpenMP-GPU"
+  },
+  {
+   "id": "T8",
+   "src": "TRAFF_P15",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.14)",
+   "quote": "For the tests of CPU based implementations a machine with two Intel Xeon 8160 CPUs is used."
+  },
+  {
+   "id": "T9",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "quote": "The other machine used for testing has a Nvidia A100 GPU (80gb), and an Intel Xeon 6226R CPU, which has 16 cores and 700 Gb of RAM."
+  },
+  {
+   "id": "T10",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Fig. 6 caption (article p.15)",
+   "quote": "The optimisations were performed using a filter radius of 1.5 elements, resulting in possibly different topologies obtained for every mesh size."
+  },
+  {
+   "id": "T11",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "quote": "It still performs 20 design iterations in 3800 seconds (63 min), which can be extrapolated to about 3.15 h for the entire topology optimisation problem."
+  },
+  {
+   "id": "T12",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "quote": "completes the same 20 design iterations in 2300 s (40 min) using the A100 GPU, which extrapolates to about 2 h to complete the full problem."
+  },
+  {
+   "id": "T13",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "quote": "the Futhark implementation completes the 20 design iterations in 2096 s"
+  },
+  {
+   "id": "T14",
+   "src": "TRAFF_P17",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.16)",
+   "quote": "the computation times are reduces to 1105 s and 1264 s for Futhark and OpenMP-GPU respectively, reducing the estimated times for the entire optimisation problem to 55 and 63 min respectively."
+  },
+  {
+   "id": "T15",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "quote": "results for a single sample are presented."
+  },
+  {
+   "id": "T16",
+   "src": "TRAFF_P19",
+   "location": "Träff et al. 2023, Sec. 4.2 Memory usage (article p.18)",
+   "quote": "This memory usage is the reason that 65 million elements is the limit for the Futhark implementation when using the A100 GPU."
+  },
+  {
+   "id": "T17",
+   "src": "TRAFF_P19",
+   "location": "Träff et al. 2023, Sec. 4.2 Memory usage (article p.18)",
+   "quote": "The OpenMP-GPU implementation has much lower memory usage, enabling it to run on cards with less memory, and solve larger problems."
+  },
+  {
+   "id": "T18",
+   "src": "TRAFF_P19",
+   "location": "Träff et al. 2023, Sec. 4.2 Memory usage (article p.18)",
+   "quote": "The implementation runs out of memory when run with more than 8 million elements"
+  },
+  {
+   "id": "T19",
+   "src": "TRAFF_P20",
+   "location": "Träff et al. 2023, Fig. 10 caption (article p.19)",
+   "quote": "GPU memory usage of the Futhark and OpenMP-GPU implementations as a function of mesh refinement."
+  },
+  {
+   "id": "T20",
+   "src": "TRAFF_P20",
+   "location": "Träff et al. 2023, Sec. 5 (article p.19)",
+   "quote": "the Futhark linear implementation takes 1.316ms for a single matrix"
+  },
+  {
+   "id": "T21",
+   "src": "TRAFF_P20",
+   "location": "Träff et al. 2023, Sec. 5 (article p.19)",
+   "quote": "vector product, while the nonlinear case takes 1075.4ms, using 2 million elements on the A100 GPU."
+  },
+  {
+   "id": "T22",
+   "src": "TRAFF_P06",
+   "location": "Träff et al. 2023, Sec. 2.3 Conjugate gradient (article p.5)",
+   "quote": "32-bit floating point numbers are used to store the auxiliary vectors, while the matrix operations and multigrid hierarchy are computed using 64-bit floating point numbers."
+  },
+  {
+   "id": "T23",
+   "src": "TRAFF_P06",
+   "location": "Träff et al. 2023, Sec. 2.3 (article p.5)",
+   "quote": "For the OpenMP implementations, the used coarse space matrices are not the Galerkin projections shown in algorithm 1 lines"
+  },
+  {
+   "id": "T24",
+   "src": "TRAFF_P07",
+   "location": "Träff et al. 2023, Sec. 2.3 Coarse space correction (article p.6)",
+   "quote": "The OpenMP implementations, on the other hand, use a direct solution strategy for the coarsest level, using the Cholmod package to implement the factorisation and back substitution"
+  },
+  {
+   "id": "T25",
+   "src": "TRAFF_P08",
+   "location": "Träff et al. 2023, Sec. 3 (article p.7)",
+   "quote": "The direct solver comes at the cost of transferring data between the CPU and GPU every time the preconditioner is applied."
+  },
+  {
+   "id": "T26",
+   "src": "TRAFF_P08",
+   "location": "Träff et al. 2023, Sec. 3 Matrix-free operator (article p.7)",
+   "quote": "In order to update all nodes in the finite element mesh independently, a nodal traversal approach is used."
+  },
+  {
+   "id": "T27",
+   "src": "TRAFF_P17",
+   "location": "Träff et al. 2023, Fig. 7 caption (article p.16)",
+   "quote": "The optimisations were performed using a constant filter radius of 1/20 of the domain width."
+  },
+  {
+   "id": "T28",
+   "src": "TRAFF_P22",
+   "location": "Träff et al. 2023, Sec. 6 Discussion (article p.21)",
+   "quote": "The GPU accelerated implementations both cut this time to 2 h when using a single Nvidia A100 GPU."
+  },
+  {
+   "id": "T29",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "quote": "which are 19.5 TFLOPS for the A100 [25]"
+  },
+  {
+   "id": "TC1",
+   "src": "TRAFF_DEFS",
+   "location": "definitions.h:25-27",
+   "quote": "typedef double MTYPE; typedef double STYPE; typedef float CTYPE;"
+  },
+  {
+   "id": "TC2",
+   "src": "TRAFF_TOP3D",
+   "location": "top3d.c:82-83 (cgtol is passed to the solver; cgmax is declared and passed to top3dmgcg but never reaches the solver, see TC9-TC13)",
+   "quote": "const float cgtol = 1e-5; const int cgmax = 200;"
+  },
+  {
+   "id": "TC3",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:373",
+   "quote": "u[i] += (STYPE)(alpha * p[i]);"
+  },
+  {
+   "id": "TC4",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:377",
+   "quote": "r[i] -= alpha * q[i];"
+  },
+  {
+   "id": "TC5",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:384",
+   "quote": "const CTYPE relres = rnorm / bnorm;"
+  },
+  {
+   "id": "TC6",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:393-394",
+   "quote": "if (relres < tol) break;"
+  },
+  {
+   "id": "TC7",
+   "src": "TRAFF_METH",
+   "location": "stencil_methods.c:7-8 and 31",
+   "quote": "const CTYPE *in, CTYPE *out) {"
+  },
+  {
+   "id": "TC8",
+   "src": "TRAFF_METH",
+   "location": "stencil_methods.c:31",
+   "quote": "alignas(__alignBound) MTYPE out_x[STENCIL_SIZE_Y];"
+  },
+  {
+   "id": "H1",
+   "src": "HOU_CR",
+   "location": "Crossref record: title",
+   "quote": "Parallel computing on GPU with CuPy and vectorized SpMV for large-scale topology optimization"
+  },
+  {
+   "id": "H2",
+   "src": "HOU_CR",
+   "location": "Crossref record: volume",
+   "quote": "\"volume\":\"250\""
+  },
+  {
+   "id": "H3",
+   "src": "HOU_CG",
+   "location": "CG.py:20",
+   "quote": "tol = cp.linalg.norm(r0) * tol"
+  },
+  {
+   "id": "H4",
+   "src": "HOU_CG",
+   "location": "CG.py:30-31",
+   "quote": "r1 = r0 - alpha * Ap if (cp.linalg.norm(r1) < tol):"
+  },
+  {
+   "id": "H5",
+   "src": "HOU_MAIN",
+   "location": "main.py:10",
+   "quote": "tol=0.001;"
+  },
+  {
+   "id": "H6",
+   "src": "HOU_FE",
+   "location": "FE.py:26",
+   "quote": "st, i = CG(struct, F, U, tol, 10000, fixeddofs, caplus, tunion)"
+  },
+  {
+   "id": "H7",
+   "src": "HOU_SPMV",
+   "location": "SpMV.py:10",
+   "quote": "for mulj in range(24):"
+  },
+  {
+   "id": "H8",
+   "src": "HOU_KER",
+   "location": "ker.py:6, 25, ... (all 24 kernels; declared storage types of the kernel arguments)",
+   "quote": "'float32 x,raw int32 t,raw float32 y',"
+  },
+  {
+   "id": "H9",
+   "src": "HOU_MAT",
+   "location": "materialInfo.py:6",
+   "quote": "lambdaa =E*nu/((1+nu)*(1-nu))"
+  },
+  {
+   "id": "W1",
+   "src": "WANG_ABS",
+   "location": "Wang et al. 2025, Abstract",
+   "quote": "this framework supports significantly larger models with up to 128 million hexahedral simulation elements on a standard PC equipped with 64 GB RAM."
+  },
+  {
+   "id": "W2",
+   "src": "WANG_ABS",
+   "location": "Wang et al. 2025, Abstract",
+   "quote": "A tailored element-based matrix-free computing stencil is demonstrated to circumvent the vast memory consumption in large-scale FEM."
+  },
+  {
+   "id": "L1",
+   "src": "LIU_ABS",
+   "location": "Liu et al. 2018, Abstract",
+   "quote": "Our technique accommodates computational domains with over one billion grid voxels on a single shared-memory multiprocessor platform"
+  },
+  {
+   "id": "L2",
+   "src": "LIU_ABS",
+   "location": "Liu et al. 2018, Abstract",
+   "quote": "We have also designed a mixed-precision multigrid-preconditioned iterative solver that keeps the memory footprint of the simulation to a compact size while maintaining double-precision accuracy."
+  },
+  {
+   "id": "A1",
+   "src": "A100",
+   "location": "NVIDIA A100 product page, Specifications table",
+   "quote": "FP64 9.7 TFLOPS FP64 Tensor Core 19.5 TFLOPS"
+  },
+  {
+   "id": "A2",
+   "src": "A100",
+   "location": "NVIDIA A100 product page, Specifications table",
+   "quote": "GPU Memory 80GB HBM2e 80GB HBM2e GPU Memory Bandwidth 1,935 GB/s 2,039 GB/s"
+  },
+  {
+   "id": "A3",
+   "src": "A100",
+   "location": "NVIDIA A100 product page, Specifications table header",
+   "quote": "A100 80GB PCIe A100 80GB SXM"
+  },
+  {
+   "id": "T30",
+   "src": "TRAFF_P08",
+   "location": "Träff et al. 2023, Sec. 3 Assembly of coarse operators (article p.7)",
+   "quote": "For the coarse levels in the multigrid preconditioner, the Galerkin projection of the matrices is constructed and stored in memory."
+  },
+  {
+   "id": "T31",
+   "src": "TRAFF_P08",
+   "location": "Träff et al. 2023, Sec. 3 (article p.7)",
+   "quote": "As the multigrid method generally performs better with a direct solution on the coarse space, it was chosen for the OpenMP implementations."
+  },
+  {
+   "id": "C30",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, title",
+   "quote": "NVIDIA cuDSS: A high-performance CUDA Library for Direct Sparse Solvers"
+  },
+  {
+   "id": "TC9",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:334",
+   "quote": "const int maxIter = 1000;"
+  },
+  {
+   "id": "TC10",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:338",
+   "quote": "for (int iter = 0; iter < maxIter; iter++) {"
+  },
+  {
+   "id": "TC11",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:259-262 (solver signature: a tolerance, no iteration-cap argument)",
+   "quote": "void solveStateMG_halo(const struct gpuGrid * gpu_gc, DTYPE *x, const int nswp, const int nl, const CTYPE tol, struct SolverDataBuffer *data, int *finalIter, float *finalRes, CTYPE *b, STYPE *u) {"
+  },
+  {
+   "id": "TC12",
+   "src": "TRAFF_OPT",
+   "location": "stencil_optimization.c:155-156 (the only call of the solver)",
+   "quote": "solveStateMG_halo(&gpu_gc, xPhys, nswp, nl, cgtol, &solverData, &cgiter, &cgres, F, U);"
+  },
+  {
+   "id": "TC13",
+   "src": "TRAFF_OPT",
+   "location": "stencil_optimization.c:15-16 (cgmax accepted as a parameter; no other use in the file)",
+   "quote": "const uint_fast32_t nl, const float cgtol, const uint_fast32_t cgmax,"
+  },
+  {
+   "id": "H10",
+   "src": "HOU_PREV",
+   "location": "Hou et al. 2025, Abstract (ScienceDirect preview, line 56 of the saved page)",
+   "quote": "Numerical examples of topology optimization on GPU, such as heat transfer and structural design, in both 2D and 3D with up to 63 million elements illustrate the effectiveness and efficiency of the proposed approach."
+  },
+  {
+   "id": "H11",
+   "src": "HOU_PREV",
+   "location": "ScienceDirect preview header (lines 10-13)",
+   "quote": "Finite Elements in Analysis and Design Date: September 2025 Article: 104388 Volume: Volume 250"
+  },
+  {
+   "id": "H12",
+   "src": "HOU_PREV",
+   "location": "ScienceDirect preview, title and DOI (lines 19, 32)",
+   "quote": "Parallel computing on GPU with CuPy and vectorized SpMV for large-scale topology optimization"
+  },
+  {
+   "id": "H13",
+   "src": "HOU_PREV",
+   "location": "ScienceDirect preview, DOI",
+   "quote": "10.1016/j.finel.2025.104388"
+  },
+  {
+   "id": "H14",
+   "src": "HOU_KER",
+   "location": "ker.py:5-11 (first generated kernel; unsuffixed decimal coefficient literals)",
+   "quote": "'float32 z', ''' int u = t[i]; z = x +0.207570207570 *y[u]"
+  },
+  {
+   "id": "H15",
+   "src": "HOU_WRITER",
+   "location": "kernel_writer.py:18-22 (coefficients written as decimal strings, at most 15 characters)",
+   "quote": "U=np.empty((24,24), dtype='<U15')"
+  },
+  {
+   "id": "H16",
+   "src": "HOU_WRITER",
+   "location": "kernel_writer.py:22",
+   "quote": "U[i,j]='+'+str(K[i,j])"
+  },
+  {
+   "id": "H17",
+   "src": "HOU_MAIN",
+   "location": "main.py:11 (ker.py regenerated at run time)",
+   "quote": "useless=autowrite(nelz, nely, nelx,E,nu);"
+  },
+  {
+   "id": "H18",
+   "src": "HOU_MAIN",
+   "location": "main.py:12 (FP32 displacement)",
+   "quote": "U = cp.zeros((nelx+1)*(nely+1)*(nelz+1)*3,'f')"
+  },
+  {
+   "id": "H19",
+   "src": "HOU_FE",
+   "location": "FE.py:21 (FP32 load vector)",
+   "quote": "F = cp.zeros((3 * np),'f')"
+  },
+  {
+   "id": "H20",
+   "src": "HOU_SPMV",
+   "location": "SpMV.py:8-14 (FP32 accumulation across the 24 kernel calls)",
+   "quote": "sum1 = cp.zeros((np3), dtype='f')"
+  },
+  {
+   "id": "H21",
+   "src": "HOU_SPMV",
+   "location": "SpMV.py:14",
+   "quote": "sumsub = add_r[mulj](sumsub,tunion, Ab0j)"
+  },
+  {
+   "id": "T32",
+   "src": "TRAFF_P16",
+   "location": "Traff et al. 2023, Fig. 6 caption (article p.15)",
+   "quote": "All shown times are computed using 4 multigrid levels, with the exception of the additional points shown with dashed line and square marks, which are computed using 5 levels."
+  },
+  {
+   "id": "T33",
+   "src": "TRAFF_P17",
+   "location": "Traff et al. 2023, Sec. 4.2 Performance analysis of linear elasticity (article p.16)",
+   "quote": "The two GPU accelerated implementations perform better for the largest problems if a fifth multigrid level is added."
+  },
+  {
+   "id": "T34",
+   "src": "TRAFF_P17",
+   "location": "Traff et al. 2023, Sec. 4.2 Performance analysis of linear elasticity (article p.16)",
+   "quote": "These data points are shown as squares in Fig. 6"
+  },
+  {
+   "id": "T35",
+   "src": "TRAFF_P19",
+   "location": "Traff et al. 2023, Sec. 4.2 Memory usage (article p.18)",
+   "quote": "One example of this is the Futhark implementation tested on a 1080Ti card with 8GiB, shown in Fig. 6."
+  },
+  {
+   "id": "T36",
+   "src": "TRAFF_P14",
+   "location": "Traff et al. 2023, Fig. 4 caption (article p.13)",
+   "quote": "Linear cantilever example with 65.5 million elements, volume fraction of V ∗ = 0.1, and filter radius of 2.5 elements."
+  },
+  {
+   "id": "T37",
+   "src": "TRAFF_P16",
+   "location": "Traff et al. 2023, Sec. 4.2 Performance analysis of linear elasticity (article p.15)",
+   "quote": "The slowest implementation is the OpenMP-CPU implementation, solving the problem with 65.5 million elements."
+  },
+  {
+   "id": "T38",
+   "src": "TRAFF_P16",
+   "location": "Traff et al. 2023, Fig. 6 caption (article p.15)",
+   "quote": "Runtimes for 20 design iterations of a linear elastic minimum compliance cantilever example with a volume fraction of V ∗ = 0.1."
+  },
+  {
+   "id": "T39",
+   "src": "TRAFF_P15",
+   "location": "Traff et al. 2023, Sec. 4 implementation details (article p.14)",
+   "quote": "The OpenCL backend was used for the Futhark compiler."
+  },
+  {
+   "id": "W3",
+   "src": "WANG_ABS",
+   "location": "Wang et al. 2025, Abstract",
+   "quote": "This paper presents an efficient MATLAB framework for large-scale density-based topology optimization and porous infill optimization in 3D."
+  },
+  {
+   "id": "W4",
+   "src": "WANG_ABS",
+   "location": "Wang et al. 2025, Abstract (code availability)",
+   "quote": "All code is made publicly available at https://github.com/PSLer/TOP3D_XL"
+  },
+  {
+   "id": "L3",
+   "src": "LIU_ABS",
+   "location": "Liu et al. 2018, Abstract",
+   "quote": "simulate its elastic deformation in a dynamic narrow-band region around high-density sites"
+  },
+  {
+   "id": "L4",
+   "src": "LIU_ABS",
+   "location": "Liu et al. 2018, title (Crossref record)",
+   "quote": "Narrow-band topology optimization on a sparsely populated grid"
+  },
+  {
+   "id": "H22",
+   "src": "HOU_PREV",
+   "location": "Hou et al. 2025, Sec. 4 Numerical experiments, snippet (line 80 of the saved preview)",
+   "quote": "The sensitivities are processed in double precision, and all other data are processed in single precision."
+  },
+  {
+   "id": "H23",
+   "src": "HOU_PREV",
+   "location": "Hou et al. 2025, Sec. 4 Numerical experiments, snippet (line 80 of the saved preview)",
+   "quote": "The experimental equipment includes a laptop Lagion R7000 2020 with GPU Nvidia GeForce GTX 1650 (Video RAM (VRAM) 4.0 GB) and CPU AMD Ryzen 7 4800H (RAM 16.0 GB), and a workstation Precision T7920 with GPU Nvidia GeForce GTX 3090 GPU (VRAM 24.0 GB) and CPU Xeon(R) Gold 6230R (RAM 128.0 GB)."
+  },
+  {
+   "id": "TC14",
+   "src": "TRAFF_METH",
+   "location": "stencil_methods.c:50 (first loadStencilInput call of applyStateOperator_stencil, offset {0, 0, 0})",
+   "quote": "loadStencilInput(gc, i, j, k, (const int[]){0, 0, 0}, in, in_x, in_y,"
+  },
+  {
+   "id": "TC15",
+   "src": "TRAFF_METH",
+   "location": "stencil_methods.c:388 (last loadStencilInput call of applyStateOperator_stencil, offset {-1, 1, 1})",
+   "quote": "loadStencilInput(gc, i, j, k, (const int[]){-1, 1, 1}, in, in_x, in_y,"
+  },
+  {
+   "id": "H24",
+   "src": "HOU_PREV",
+   "location": "Hou et al. 2025, Sec. 4 Numerical experiments, snippet (line 80 of the saved preview)",
+   "quote": "CuPy is chosen for its convenience since it shares the same syntax as NumPy when using a GPU."
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "checks": {
+  "comparison.csv": {
+   "rows_before_after": [
+    48,
+    48
+   ],
+   "new_columns": [
+    "g4_step_strict_bound_pct",
+    "g4_step_strict_activity",
+    "g4_step_basis"
+   ],
+   "earlier_cells_changed": 0,
+   "pass": true
+  },
+  "design_workload.csv": {
+   "changed_cells": {
+    "released record run R: g4_design_mean_foreign_pct": 28,
+    "released record run R: g4_basis": 28
+   },
+   "R_rows": 28,
+   "R_rows_with_design_plan_mean_after": 0,
+   "pass": true
+  },
+  "g4_activity.json": {
+   "unexpected": 0,
+   "R_conditional_max_mean_before_after": [
+    0.9138164960847178,
+    0.6509467116738369
+   ],
+   "R_conditional_sections_before_after": [
+    59,
+    31
+   ],
+   "conditional_dropped_sections": 28,
+   "pass": true
+  },
+  "predictions.json": {
+   "outcomes_before": {
+    "P1": "supports",
+    "P2": "supports",
+    "P3": "supports",
+    "P4a": "inconclusive",
+    "P4b": "inconclusive",
+    "P5": "supports",
+    "P6": "supports",
+    "P7": "contradicts",
+    "P8": "contradicts",
+    "P9": "supports",
+    "P10": "contradicts",
+    "P11": "supports"
+   },
+   "outcomes_after": {
+    "P1": "supports",
+    "P2": "supports",
+    "P3": "supports",
+    "P4a": "inconclusive",
+    "P4b": "inconclusive",
+    "P5": "supports",
+    "P6": "supports",
+    "P7": "contradicts",
+    "P8": "contradicts",
+    "P9": "supports",
+    "P10": "contradicts",
+    "P11": "supports"
+   },
+   "unexpected": 0,
+   "pass": true
+  },
+  "gates.json": {
+   "unexpected": 0,
+   "gate_passes_unchanged": true,
+   "pass": true
+  },
+  "capacity.json": {
+   "identical": true,
+   "pass": true
+  },
+  "update_checks.json": {
+   "identical": true,
+   "pass": true
+  },
+  "out/collect_common_accuracy.json": {
+   "identical": true,
+   "pass": true
+  }
+ },
+ "unexpected": [],
+ "plan_sha256": "0128134b79167e99745848d58e95eb972f55ec34068bfe4bd20c49cc85d338e8",
+ "plan_unchanged": true,
+ "pass": true
+}

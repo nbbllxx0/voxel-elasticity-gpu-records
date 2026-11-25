@@ -1,0 +1,103 @@
+quantity,value,definition,source
+A.c,0.08798176976997722,k=160 difference-form field on k=160: re-solved code compliance b.u,tasks/T26/out/runs/k160_r1/solve_A.json
+A.C_phys_2kc,28.154166326392712,"k=160 difference-form field on k=160: physical compliance 2kc, k=160",tasks/T26/out/runs/k160_r1/solve_A.json
+A.rel_true,9.397073867754364e-11,terminal FP64 true residual ||b-Ku||/||b|| of the reported state,tasks/T26/out/runs/k160_r1/solve_A.json
+A.pcg_iterations,706,"PCG iterations from a zero start (stages 1e-8, 1e-9, 1e-10)",tasks/T26/out/runs/k160_r1/solve_A.json
+A.archive,results/E32/simp_bridge_k160_mg64_stencil_diff.npz,"archived field, float16 [320, 160, 160], decoded to float32 exactly (True), subdivision factor 1",tasks/T26/out/runs/k160_r1/solve_A.json
+A.ext_c_change_rel,-1.872312204101282e-13,relative change of c when continued to true residual 9.38e-12 (reached 1e-11: True),tasks/T26/out/runs/k160_r1/solve_A.json
+B.c,0.04555741910546282,k=160 difference-form field subdivided 2x2x2 on k=320: re-solved code compliance b.u,tasks/T26/out/runs/k320_r2/solve_B.json
+B.C_phys_2kc,29.156748227496205,"k=160 difference-form field subdivided 2x2x2 on k=320: physical compliance 2kc, k=320",tasks/T26/out/runs/k320_r2/solve_B.json
+B.rel_true,9.974790206635072e-11,terminal FP64 true residual ||b-Ku||/||b|| of the reported state,tasks/T26/out/runs/k320_r2/solve_B.json
+B.pcg_iterations,758,"PCG iterations from a zero start (stages 1e-8, 1e-9, 1e-10)",tasks/T26/out/runs/k320_r2/solve_B.json
+B.archive,results/E32/simp_bridge_k160_mg64_stencil_diff.npz,"archived field, float16 [320, 160, 160], decoded to float32 exactly (True), subdivision factor 2",tasks/T26/out/runs/k320_r2/solve_B.json
+B.ext_c_change_rel,-4.68203868424432e-13,relative change of c when continued to true residual 8.98e-11 (reached 1e-11: False),tasks/T26/out/runs/k320_r2/solve_B.json
+C.c,0.04744073945161739,k=320 difference-form field on k=320: re-solved code compliance b.u,tasks/T26/out/runs/k320_r2/solve_C.json
+C.C_phys_2kc,30.36207324903513,"k=320 difference-form field on k=320: physical compliance 2kc, k=320",tasks/T26/out/runs/k320_r2/solve_C.json
+C.rel_true,8.241926913031191e-11,terminal FP64 true residual ||b-Ku||/||b|| of the reported state,tasks/T26/out/runs/k320_r2/solve_C.json
+C.pcg_iterations,119,"PCG iterations from a zero start (stages 1e-8, 1e-9, 1e-10)",tasks/T26/out/runs/k320_r2/solve_C.json
+C.archive,results/E32/simp_bridge_k320_mg64_stencil_diff.npz,"archived field, float16 [640, 320, 320], decoded to float32 exactly (True), subdivision factor 1",tasks/T26/out/runs/k320_r2/solve_C.json
+C.ext_c_change_rel,-6.728164933121641e-14,relative change of c when continued to true residual 9.99e-12 (reached 1e-11: True),tasks/T26/out/runs/k320_r2/solve_C.json
+A_xprec.c,0.08798176976996591,"as A, original-stencil V-cycle preconditioner: re-solved code compliance b.u",tasks/T26/out/runs/k160_r1/solve_A_xprec.json
+A_xprec.C_phys_2kc,28.154166326389092,"as A, original-stencil V-cycle preconditioner: physical compliance 2kc, k=160",tasks/T26/out/runs/k160_r1/solve_A_xprec.json
+A_xprec.rel_true,9.567416194710273e-11,terminal FP64 true residual ||b-Ku||/||b|| of the reported state,tasks/T26/out/runs/k160_r1/solve_A_xprec.json
+A_xprec.pcg_iterations,596,"PCG iterations from a zero start (stages 1e-8, 1e-9, 1e-10)",tasks/T26/out/runs/k160_r1/solve_A_xprec.json
+A_xprec.archive,results/E32/simp_bridge_k160_mg64_stencil_diff.npz,"archived field, float16 [320, 160, 160], decoded to float32 exactly (True), subdivision factor 1",tasks/T26/out/runs/k160_r1/solve_A_xprec.json
+A_xprec.ext_c_change_rel,-5.804641037147097e-14,relative change of c when continued to true residual 8.50e-12 (reached 1e-11: True),tasks/T26/out/runs/k160_r1/solve_A_xprec.json
+D.c,0.08798177014834953,k=160 original-stencil field on k=160 (submitted figure): re-solved code compliance b.u,tasks/T26/out/runs/k160_r1/solve_D.json
+D.C_phys_2kc,28.154166447471848,"k=160 original-stencil field on k=160 (submitted figure): physical compliance 2kc, k=160",tasks/T26/out/runs/k160_r1/solve_D.json
+D.rel_true,9.350123163266314e-11,terminal FP64 true residual ||b-Ku||/||b|| of the reported state,tasks/T26/out/runs/k160_r1/solve_D.json
+D.pcg_iterations,663,"PCG iterations from a zero start (stages 1e-8, 1e-9, 1e-10)",tasks/T26/out/runs/k160_r1/solve_D.json
+D.archive,results/E6b/simp_bridge_k160_mg64_stencil.npz,"archived field, float16 [320, 160, 160], decoded to float32 exactly (True), subdivision factor 1",tasks/T26/out/runs/k160_r1/solve_D.json
+D.ext_c_change_rel,1.547378487215101e-13,relative change of c when continued to true residual 9.70e-12 (reached 1e-11: True),tasks/T26/out/runs/k160_r1/solve_D.json
+E.c,0.04744067081337123,k=320 original-stencil field on k=320 (submitted figure): re-solved code compliance b.u,tasks/T26/out/runs/k320_r2/solve_E.json
+E.C_phys_2kc,30.362029320557586,"k=320 original-stencil field on k=320 (submitted figure): physical compliance 2kc, k=320",tasks/T26/out/runs/k320_r2/solve_E.json
+E.rel_true,8.224642749435028e-11,terminal FP64 true residual ||b-Ku||/||b|| of the reported state,tasks/T26/out/runs/k320_r2/solve_E.json
+E.pcg_iterations,119,"PCG iterations from a zero start (stages 1e-8, 1e-9, 1e-10)",tasks/T26/out/runs/k320_r2/solve_E.json
+E.archive,results/E7/simp_bridge_k320_mg64_stencil.npz,"archived field, float16 [640, 320, 320], decoded to float32 exactly (True), subdivision factor 1",tasks/T26/out/runs/k320_r2/solve_E.json
+E.ext_c_change_rel,-1.0384791334749756e-14,relative change of c when continued to true residual 9.81e-12 (reached 1e-11: True),tasks/T26/out/runs/k320_r2/solve_E.json
+mesh_contribution,1.0025819011034933,"C_B - C_A: fixed k=160 physical field, k=320 vs k=160 discretization (displacements, line supports and strip-load nodal shares)",computed from A and B
+design_contribution,1.2053250215389255,"C_C - C_B: k=320 optimized field vs subdivided k=160 field, both on k=320 (all differences between the two retained designs; not split further)",computed from B and C
+total_change_resolved,2.207906922642419,C_C - C_A: re-solved saved-field endpoint change,computed from A and C
+sum_of_contributions_minus_total,0.0,floating-point closure of the sum,computed
+mesh_rel_to_C_A_pct,3.5610427582209656,mesh as percent of C_A,computed
+design_rel_to_C_A_pct,4.281160406476007,design as percent of C_A,computed
+total_rel_to_C_A_pct,7.842203164696974,total as percent of C_A,computed
+mesh_share_of_total,0.45408703184987764,mesh / total,computed
+design_share_of_total,0.5459129681501224,design / total,computed
+native_A_2kc,28.154166494212753,"native endpoint of the k=160 difference-form record (FP32 field before archiving, its state solve at true residual 9.537e-06)",results/E32/simp_bridge_k160_mg64_stencil_diff.json
+native_C_2kc,30.362073034759515,native endpoint of the k=320 difference-form record (true residual 3.855e-06),results/E32/simp_bridge_k320_mg64_stencil_diff.json
+offset_A,-1.6782004053084165e-07,C_A - native_A_2kc (archived field re-solved vs native endpoint),computed
+offset_C,2.1427561591735866e-07,C_C - native_C_2kc,computed
+offset_A_rel,-5.96075328905006e-09,offset_A / native_A_2kc,computed
+offset_C_rel,7.057344723202819e-09,offset_C / native_C_2kc,computed
+native_total_change,2.2079065405467624,native_C_2kc - native_A_2kc,computed
+native_total_change_pct,7.842201760796612,native change as percent of native_A_2kc,computed
+resolved_total_change_pct,7.842203164696974,re-solved change as percent of C_A,computed
+reconciliation_native_minus_resolved_minus_offsets,0.0,native change - re-solved change - (offset_A - offset_C); zero up to rounding,computed
+submitted_native_change_pct,7.84204613562236,"submitted figure's records (original stencil): native k=320 / k=160 - 1 of 2kc, the submitted ~7.84 %","results/E6b, results/E7 mg64 stencil records"
+revised_native_change_pct,7.842201760796619,difference-form records: native k=320 / k=160 - 1,results/E32 mg64 stencil_diff records
+resolved_change_pct,7.84220316469697,re-solved archived fields: C_C / C_A - 1,computed
+supp_orig_resolved_change_pct,7.84204667257693,"supplementary: original-stencil archived fields re-solved, C_E / C_D - 1",computed from D and E
+supp_offset_D,-6.926804374529638e-08,C_D - native 2kc of results/E6b record,computed
+supp_offset_E,7.647501121255118e-08,C_E - native 2kc of results/E7 record,computed
+A.stability.ext_change_abs_2kc,5.271338920920243e-12,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k160_r1/solve_A.json
+A.stability.u_dot_r_abs_2kc,4.486311860025892e-12,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k160_r1/solve_A.json
+A.stability.element_energy_sum_abs_2kc,4.480860127387132e-12,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k160_r1/solve_A.json
+A.stability.max_abs_2kc,5.710987238671805e-12,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k160_r1/solve_A.json
+B.stability.ext_change_abs_2kc,1.3651302310790925e-11,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_B.json
+B.stability.u_dot_r_abs_2kc,1.2312939140268497e-11,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_B.json
+B.stability.element_energy_sum_abs_2kc,1.2314593789142236e-11,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_B.json
+B.stability.max_abs_2kc,4.412470389070222e-11,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_B.json
+C.stability.ext_change_abs_2kc,2.042810365310288e-12,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_C.json
+C.stability.u_dot_r_abs_2kc,2.1427254491109552e-13,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_C.json
+C.stability.element_energy_sum_abs_2kc,2.1316282072803006e-13,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_C.json
+C.stability.max_abs_2kc,2.042810365310288e-12,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_C.json
+D.stability.ext_change_abs_2kc,4.356515148629114e-12,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k160_r1/solve_D.json
+D.stability.u_dot_r_abs_2kc,4.239771477865242e-12,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k160_r1/solve_D.json
+D.stability.element_energy_sum_abs_2kc,4.245492846166599e-12,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k160_r1/solve_D.json
+D.stability.max_abs_2kc,4.356515148629114e-12,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k160_r1/solve_D.json
+E.stability.ext_change_abs_2kc,3.1530333899354446e-13,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_E.json
+E.stability.u_dot_r_abs_2kc,5.543690521391836e-13,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_E.json
+E.stability.element_energy_sum_abs_2kc,5.551115123125783e-13,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_E.json
+E.stability.max_abs_2kc,6.52811138479592e-13,absolute 2kc deviation (see summary.json),tasks/T26/out/runs/k320_r2/solve_E.json
+A_xprec_minus_A_2kc,-3.6202152386977104e-12,"same FP64 system, original-stencil vs difference-form V-cycle preconditioner",tasks/T26/out/runs/k160_r1/solve_A_xprec.json
+A.repeat_minus_r1_2kc,-3.2294167340296553e-12,repeat run (transfer-chunked job version) minus k160_r1; bitwise equal: False,tasks/T26/out/runs/k160_r2_v2check/solve_A.json
+A_xprec.repeat_minus_r1_2kc,0.0,repeat run (transfer-chunked job version) minus k160_r1; bitwise equal: True,tasks/T26/out/runs/k160_r2_v2check/solve_A_xprec.json
+D.repeat_minus_r1_2kc,0.0,repeat run (transfer-chunked job version) minus k160_r1; bitwise equal: True,tasks/T26/out/runs/k160_r2_v2check/solve_D.json
+job.k320_rerun_reason,k320_r2,"k320_r1 is refused for memory (an unchunked 262,144,000 B host-to-device field copy before any solve raised shared usage above the 256 MiB limit); k320_r2 is its single approved rerun with the transfer-chunked job version 2 (copies of at most 32 MiB) and every guard unchanged, granted as an exception to the last clause of GPU rule (c) because the cause was found and fixed",tasks/T26/out/runs/k320_r1/monitor.json
+job.k160_r1.status,ok,"guarded job k160 (solves A, A_xprec, D); stop: None",tasks/T26/out/runs/k160_r1/monitor.json
+job.k160_r1.shared_max_growth_bytes,113246208.0,largest growth of the job's WDDM shared usage above its first watched value (limit 268435456),tasks/T26/out/runs/k160_r1/monitor.json
+job.k320_r2.status,ok,"guarded job k320 (solves B, C, E); stop: None",tasks/T26/out/runs/k320_r2/monitor.json
+job.k320_r2.shared_max_growth_bytes,79691776.0,largest growth of the job's WDDM shared usage above its first watched value (limit 268435456),tasks/T26/out/runs/k320_r2/monitor.json
+job.k320_r1.status,refused_for_memory,"guarded job k320 (refused, superseded by the approved rerun run, no reported value)",tasks/T26/out/runs/k320_r1/monitor.json
+job.k320_r1.shared_max_growth_bytes,337641472.0,largest growth of the job's WDDM shared usage above its first watched value,tasks/T26/out/runs/k320_r1/monitor.json
+job.k160_r2_v2check.status,ok,"guarded job k160 (check run, no reported value)",tasks/T26/out/runs/k160_r2_v2check/monitor.json
+job.k160_r2_v2check.shared_max_growth_bytes,79691776.0,largest growth of the job's WDDM shared usage above its first watched value,tasks/T26/out/runs/k160_r2_v2check/monitor.json
+job.diag_r1.status,ok,"guarded job diag (check run, no reported value)",tasks/T26/out/runs/diag_r1/monitor.json
+job.diag_r1.shared_max_growth_bytes,201326592.0,largest growth of the job's WDDM shared usage above its first watched value,tasks/T26/out/runs/diag_r1/monitor.json
+diag.shared_growth.baseline,0,transfer diagnostic: the process's WDDM shared usage above its baseline after the step (cumulative),tasks/T26/out/runs/diag_r1/diag.json
+diag.shared_growth.unchunked_h2d_64MiB,67108864,transfer diagnostic: the process's WDDM shared usage above its baseline after the step (cumulative),tasks/T26/out/runs/diag_r1/diag.json
+diag.shared_growth.unchunked_h2d_128MiB,201326592,transfer diagnostic: the process's WDDM shared usage above its baseline after the step (cumulative),tasks/T26/out/runs/diag_r1/diag.json
+diag.shared_growth.freed,201326592,transfer diagnostic: the process's WDDM shared usage above its baseline after the step (cumulative),tasks/T26/out/runs/diag_r1/diag.json
+diag.shared_growth.chunked_h2d_262144000B,201326592,transfer diagnostic: the process's WDDM shared usage above its baseline after the step (cumulative),tasks/T26/out/runs/diag_r1/diag.json
+diag.shared_growth.chunked_d2h_262144000B,201326592,transfer diagnostic: the process's WDDM shared usage above its baseline after the step (cumulative),tasks/T26/out/runs/diag_r1/diag.json

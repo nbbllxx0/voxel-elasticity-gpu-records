@@ -1,0 +1,80 @@
+{
+ "task": "X1_1",
+ "note": "panel c of fig_bracket_study.pdf; chosen by ANALYSIS_PLAN.md section 6",
+ "field_n384": "tasks/X1_1/study/out/figdata_C_n384.npz",
+ "field_check": {
+  "rho_phys_bitwise_equal_run_fields": true,
+  "rho_phys_sha256_equals_opt_record": true,
+  "cls_equal_X0_2_figdata": true,
+  "audit_source_hash_equals_opt": true,
+  "audit_moduli_hash_match": true,
+  "active_count": true,
+  "designable_count": true,
+  "protected_are_1": true,
+  "exterior_are_0": true,
+  "volume_recomputed": true,
+  "four_checks_le_1e-8": true,
+  "history_last_iteration_is_stop": true,
+  "passed": true
+ },
+ "reading": "stopped, settled",
+ "panel_c_title": {
+  "text": "Completed design",
+  "source": "tasks/X1_1/study/out/summary.json#/E1/pass"
+ },
+ "panel_c_status": {
+  "text": "(stopping rule met)",
+  "ok": true,
+  "source": "tasks/X1_1/study/out/summary.json#/E1/a_stopped_by_rule"
+ },
+ "panel_c_lines": [
+  {
+   "id": "c_title_line",
+   "text": "n = 384, damped update with a decaying move cap: stopped by the design rule",
+   "value": {
+    "n": 384,
+    "termination": "bounded_oscillation"
+   },
+   "source": "tasks/X1_1/study/out/summary.json#/termination"
+  },
+  {
+   "id": "c_test",
+   "text": "stopping test met at iteration 379 (6 voxels changing by > 0.01, allowance 7)",
+   "value": {
+    "iteration": 379,
+    "n": 6,
+    "allowance": 7
+   },
+   "source": "tasks/X1_1/study/out/summary.json#/D1/stopping_test"
+  },
+  {
+   "id": "c_retained",
+   "text": "retained field one update later (5 voxels, allowance 7)",
+   "value": {
+    "n": 5,
+    "allowance": 7
+   },
+   "source": "tasks/X1_1/study/out/summary.json#/D1/retained_update"
+  },
+  {
+   "id": "c_counts",
+   "text": "7,232,600 active voxels; designable volume fraction 0.500000",
+   "value": {
+    "active": 7232600,
+    "volume": 0.49999999988872107
+   },
+   "source": "tasks/X1_1/study/out/summary.json#/D2"
+  },
+  {
+   "id": "c_checks",
+   "text": "four FP64 endpoint checks 9.04–9.80 × 10⁻⁹; surface: physical density 0.5",
+   "value": [
+    9.635024569866263e-09,
+    9.039922024815448e-09,
+    9.541542256589504e-09,
+    9.80319951392147e-09
+   ],
+   "source": "tasks/X1_1/study/out/summary.json#/D3/residuals; tasks/T37/out/render_meta.json#/field_n384/level"
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+\begin{tabular}{p{4.2cm}p{3.6cm}p{6.4cm}p{3.2cm}r}
+\toprule
+Work and code & Device & Workload & Quantity & Value \\
+\midrule
+Tr\"aff et al.~\cite{traff2023simple}, Futhark (OpenCL backend) & A100 (80 GB), form factor not stated & linear cantilever, 640x320x320 = 65.5e6 elements, volume fraction 0.1, filter radius 2.5 elements, 100 design iterations & wall time, complete run (measured) & 7{,}380 s \\
+Tr\"aff et al.~\cite{traff2023simple}, OpenMP-GPU & A100 (80 GB) & cantilever, 65.5e6 elements; basis: first 20 design iterations of the Fig. 6 series (filter radius 1.5 elements, 4 multigrid levels) & estimated wall time, complete optimisation (published estimate) & 2 h \\
+Tr\"aff et al.~\cite{traff2023simple}, OpenMP-CPU & two Intel Xeon 8160 (48 cores) & cantilever, 65.5e6 elements; basis: first 20 design iterations of the Fig. 6 series (filter radius 1.5 elements, 4 multigrid levels) & estimated wall time, complete optimisation (published estimate) & 3.15 h \\
+Tr\"aff et al.~\cite{traff2023simple}, OpenMP-CPU & two Intel Xeon 8160 & cantilever, 65.5e6 elements, filter radius 1.5 elements, 4 multigrid levels, first 20 design iterations & wall time (measured) & 3{,}800 s \\
+Tr\"aff et al.~\cite{traff2023simple}, OpenMP-GPU & A100 (80 GB) & cantilever, 65.5e6 elements, filter radius 1.5 elements, 4 multigrid levels, first 20 design iterations & wall time (measured) & 2{,}300 s \\
+Tr\"aff et al.~\cite{traff2023simple}, Futhark & A100 (80 GB) & cantilever, 65.5e6 elements, filter radius 1.5 elements, 4 multigrid levels, first 20 design iterations & wall time (measured) & 2{,}096 s \\
+Tr\"aff et al.~\cite{traff2023simple}, Futhark & A100 (80 GB) & cantilever, largest problems of the Fig. 6 series (filter radius 1.5 elements), 5 multigrid levels, first 20 design iterations & wall time (measured) & 1{,}105 s \\
+Tr\"aff et al.~\cite{traff2023simple}, OpenMP-GPU & A100 (80 GB) & cantilever, largest problems of the Fig. 6 series (filter radius 1.5 elements), 5 multigrid levels, first 20 design iterations & wall time (measured) & 1{,}264 s \\
+Tr\"aff et al.~\cite{traff2023simple}, Futhark & A100 (80 GB) & MBB beam, 41e6 elements & wall time, complete run (measured) & 4 h \\
+Tr\"aff et al.~\cite{traff2023simple}, Futhark (linear) & A100 & 2e6 elements & one matrix-vector product (measured) & 1.316 ms \\
+Tr\"aff et al.~\cite{traff2023simple}, Futhark & A100 (80 GB) & linear cantilever (Fig. 4) & largest demonstrated mesh (demonstrated run) & 65{,}536{,}000 elements \\
+Tr\"aff et al.~\cite{traff2023simple}, Futhark & GTX 1080Ti (8 GiB) & cantilever (Fig. 6 series) & out of memory above (stated) & 8{,}000{,}000 elements \\
+Wang et al.~\cite{wang2025matrixfree}, matrix-free MATLAB (TOP3D\_XL) & standard PC with 64 GB RAM & density-based TO and porous infill, 3D & largest model (stated in abstract) & 128{,}000{,}000 hexahedral elements \\
+Liu et al.~\cite{liu2018narrowband}, narrow-band TO, mixed-precision MG-preconditioned solver & single shared-memory multiprocessor platform & narrow band on sparsely populated grid & computational domain (stated in abstract) & over 1{,}000{,}000{,}000 grid voxels \\
+Hou et al.~\cite{hou2025cupy}, CuPy & not stated for the largest example & topology optimization examples (heat transfer and structural design, 2D and 3D); physics, dimension and device of the largest example not stated in the abstract & largest example (maximum over all published examples) (stated in abstract) & up to 63{,}000{,}000 elements \\
+\bottomrule
+\end{tabular}

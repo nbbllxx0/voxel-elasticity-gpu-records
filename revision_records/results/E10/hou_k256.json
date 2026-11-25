@@ -1,0 +1,100 @@
+{
+ "experiment": "E10_external_hou",
+ "k": 256,
+ "shape": [
+  512,
+  256,
+  256
+ ],
+ "n_elem": 33554432,
+ "ndof": 101649411,
+ "external": {
+  "repo": "HouJiangnan81/CuPy-for-TO",
+  "commit": "d8dca7a19acb454ffd8bb992969d6ad862f5f4cf"
+ },
+ "environment": {
+  "time": "2026-10-04T19:55:35",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "2445e06060bf5868",
+ "their_lambda_formula": "E*nu/((1+nu)*(1-nu))",
+ "their_setup_s": 0.6350608000000193,
+ "operator_rel_diff": 1.2590692222147482e-07,
+ "their_apply_s": 0.3098572692871094,
+ "their_apply_iqr": [
+  0.30710528564453127,
+  0.3118109588623047
+ ],
+ "our_stencil_apply_s": 0.0012377279996871949,
+ "our_stencil_apply_iqr": [
+  0.0012313119769096375,
+  0.001251680016517639
+ ],
+ "spill": {
+  "pid": 25676,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 0,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1791168935.434222,
+    "dedicated": 365060096,
+    "shared": 79691776,
+    "others_dedicated": 1438797824
+   },
+   {
+    "tag": "end",
+    "t": 1791168946.4746492,
+    "dedicated": 16660058112,
+    "shared": 79691776,
+    "others_dedicated": 1438797824
+   }
+  ]
+ },
+ "valid": true,
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "83bac7f2c560f824",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "39270dd666a97c62",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "37b82e35bedcfa90",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E10_external_hou.py": "e3eb6e9e60149ef5",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "65f198e49cfe0a49",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "390e8d0fc607e840",
+  "experiments/run_queue.py": "bceca042308bfdd9",
+  "experiments/run_simp.py": "ab7cba3cb779baad",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86"
+ }
+}

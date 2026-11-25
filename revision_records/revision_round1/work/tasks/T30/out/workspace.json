@@ -1,0 +1,553 @@
+{
+ "rows": [
+  {
+   "n": 96,
+   "valid": true,
+   "grid": [
+    96,
+    64,
+    40
+   ],
+   "allocated_elements": 245760,
+   "nodes_allocated": 258505,
+   "active_elements": 113318,
+   "designable_elements": 104070,
+   "free_dofs": 372687,
+   "mg_levels": 4,
+   "coarse_dofs": 2106,
+   "pool_peak_reserved_bytes": 283173376,
+   "pool_peak_used_bytes": 274776064,
+   "persistent_inventory_bytes": 93131508,
+   "inventory": {
+    "cls": 245760,
+    "rho": 983040,
+    "rho_phys": 983040,
+    "rho_prev": 491520,
+    "E32": 983040,
+    "dc": 983040,
+    "dv": 983040,
+    "w1": 983040,
+    "w2": 983040,
+    "filter_D": 983040,
+    "states_u64": 24816480,
+    "fixed": 258505,
+    "ir_workspace": 12408240,
+    "loads": 230400,
+    "residual_loads": 134400,
+    "mg_vectors": 5287931,
+    "mg_matrices": 5184000,
+    "mg_coarse_inverse": 35481888,
+    "mg_KE_tables": 728064
+   },
+   "process_dedicated_peak_bytes": 513970176.0,
+   "device_used_before_driver_bytes": 1603796992,
+   "context_and_other_bytes": 230796800,
+   "shared_growth_bytes": 6291456.0,
+   "bytes_per_allocated_element_pool_peak": 1152.2354166666667,
+   "bytes_per_active_element_pool_peak": 2498.926701847897,
+   "active_fraction_of_allocated": 0.46109212239583336,
+   "timings_s": {
+    "init": 2.5090229511260986,
+    "solid_4_solves": 1.0365726947784424,
+    "one_update_and_resolve": 3.6653764247894287
+   },
+   "filter_R": 1,
+   "solid_solves": [
+    {
+     "rel_true": 3.6860913442319038e-06,
+     "outer": 5,
+     "inner_iters": 55,
+     "wall_s": 0.25252900004852563
+    },
+    {
+     "rel_true": 3.1647381798283208e-06,
+     "outer": 5,
+     "inner_iters": 55,
+     "wall_s": 0.12661939999088645
+    },
+    {
+     "rel_true": 2.2939589760396316e-06,
+     "outer": 5,
+     "inner_iters": 53,
+     "wall_s": 0.11263609997695312
+    },
+    {
+     "rel_true": 2.890155494482299e-06,
+     "outer": 5,
+     "inner_iters": 53,
+     "wall_s": 0.11389669997151941
+    }
+   ],
+   "iteration1_solves": [
+    {
+     "rel_true": 3.0367044582633874e-06,
+     "outer": 5,
+     "inner_iters": 67,
+     "wall_s": 0.15115940000396222
+    },
+    {
+     "rel_true": 2.928381587906961e-06,
+     "outer": 5,
+     "inner_iters": 68,
+     "wall_s": 0.14642360003199428
+    },
+    {
+     "rel_true": 3.7737983901005132e-06,
+     "outer": 5,
+     "inner_iters": 64,
+     "wall_s": 0.13578139996388927
+    },
+    {
+     "rel_true": 2.636435196071351e-06,
+     "outer": 5,
+     "inner_iters": 68,
+     "wall_s": 0.14582049997989088
+    }
+   ],
+   "iteration1_t_iter_s": 0.6682055999990553,
+   "iteration1_oc_probes": 28,
+   "equilibrium_target_met": true
+  },
+  {
+   "n": 192,
+   "valid": true,
+   "grid": [
+    192,
+    128,
+    80
+   ],
+   "allocated_elements": 1966080,
+   "nodes_allocated": 2016657,
+   "active_elements": 903548,
+   "designable_elements": 827324,
+   "free_dofs": 2839977,
+   "mg_levels": 5,
+   "coarse_dofs": 2106,
+   "pool_peak_reserved_bytes": 710394880,
+   "pool_peak_used_bytes": 666508288,
+   "persistent_inventory_bytes": 486622429,
+   "inventory": {
+    "cls": 1966080,
+    "rho": 7864320,
+    "rho_phys": 7864320,
+    "rho_prev": 3932160,
+    "E32": 7864320,
+    "dc": 7864320,
+    "dv": 7864320,
+    "w1": 7864320,
+    "w2": 7864320,
+    "filter_D": 7864320,
+    "states_u64": 193599072,
+    "fixed": 2016657,
+    "ir_workspace": 96799536,
+    "loads": 890880,
+    "residual_loads": 519680,
+    "mg_vectors": 40810652,
+    "mg_matrices": 42048000,
+    "mg_coarse_inverse": 35481888,
+    "mg_KE_tables": 5643264
+   },
+   "process_dedicated_peak_bytes": 956493824.0,
+   "device_used_before_driver_bytes": 1603796992,
+   "context_and_other_bytes": 246098944,
+   "shared_growth_bytes": 16777216.0,
+   "bytes_per_allocated_element_pool_peak": 361.3255208333333,
+   "bytes_per_active_element_pool_peak": 786.2281583269511,
+   "active_fraction_of_allocated": 0.45956827799479166,
+   "timings_s": {
+    "init": 2.5046019554138184,
+    "solid_4_solves": 1.6518869400024414,
+    "one_update_and_resolve": 5.243395090103149
+   },
+   "filter_R": 2,
+   "solid_solves": [
+    {
+     "rel_true": 4.097266021048508e-06,
+     "outer": 5,
+     "inner_iters": 64,
+     "wall_s": 0.4101208000211045
+    },
+    {
+     "rel_true": 2.936047425931624e-06,
+     "outer": 5,
+     "inner_iters": 65,
+     "wall_s": 0.28706920001422986
+    },
+    {
+     "rel_true": 1.6744071452096764e-06,
+     "outer": 5,
+     "inner_iters": 65,
+     "wall_s": 0.2860819999477826
+    },
+    {
+     "rel_true": 6.11762806767428e-06,
+     "outer": 5,
+     "inner_iters": 64,
+     "wall_s": 0.28516609995858744
+    }
+   ],
+   "iteration1_solves": [
+    {
+     "rel_true": 5.3291895209324095e-06,
+     "outer": 5,
+     "inner_iters": 84,
+     "wall_s": 0.3659973000176251
+    },
+    {
+     "rel_true": 3.657069798993885e-06,
+     "outer": 5,
+     "inner_iters": 82,
+     "wall_s": 0.35802710003918037
+    },
+    {
+     "rel_true": 5.802032371981328e-06,
+     "outer": 5,
+     "inner_iters": 78,
+     "wall_s": 0.3428519999724813
+    },
+    {
+     "rel_true": 6.239458218593165e-06,
+     "outer": 5,
+     "inner_iters": 76,
+     "wall_s": 0.334532400011085
+    }
+   ],
+   "iteration1_t_iter_s": 1.4709046999923885,
+   "iteration1_oc_probes": 28,
+   "equilibrium_target_met": true
+  },
+  {
+   "n": 384,
+   "valid": true,
+   "grid": [
+    384,
+    256,
+    160
+   ],
+   "allocated_elements": 15728640,
+   "nodes_allocated": 15930145,
+   "active_elements": 7232600,
+   "designable_elements": 6629528,
+   "free_dofs": 22214871,
+   "mg_levels": 6,
+   "coarse_dofs": 2106,
+   "pool_peak_reserved_bytes": 4219501056,
+   "pool_peak_used_bytes": 3947981824,
+   "persistent_inventory_bytes": 3603827326,
+   "inventory": {
+    "cls": 15728640,
+    "rho": 62914560,
+    "rho_phys": 62914560,
+    "rho_prev": 31457280,
+    "E32": 62914560,
+    "dc": 62914560,
+    "dv": 62914560,
+    "w1": 62914560,
+    "w2": 62914560,
+    "filter_D": 62914560,
+    "states_u64": 1529293920,
+    "fixed": 15930145,
+    "ir_workspace": 764646960,
+    "loads": 3502080,
+    "residual_loads": 2042880,
+    "mg_vectors": 320502189,
+    "mg_matrices": 336960000,
+    "mg_coarse_inverse": 35481888,
+    "mg_KE_tables": 44964864
+   },
+   "process_dedicated_peak_bytes": 4549111808.0,
+   "device_used_before_driver_bytes": 1603796992,
+   "context_and_other_bytes": 329610752,
+   "shared_growth_bytes": 102760448.0,
+   "bytes_per_allocated_element_pool_peak": 268.26865234375,
+   "bytes_per_active_element_pool_peak": 583.4003063905096,
+   "active_fraction_of_allocated": 0.45983632405598956,
+   "timings_s": {
+    "init": 2.847187042236328,
+    "solid_4_solves": 8.620254278182983,
+    "one_update_and_resolve": 22.153003931045532
+   },
+   "filter_R": 5,
+   "solid_solves": [
+    {
+     "rel_true": 6.567595772370805e-06,
+     "outer": 5,
+     "inner_iters": 91,
+     "wall_s": 2.073744799999986
+    },
+    {
+     "rel_true": 5.056367981002565e-06,
+     "outer": 5,
+     "inner_iters": 91,
+     "wall_s": 1.9888853000011295
+    },
+    {
+     "rel_true": 3.974454983856755e-06,
+     "outer": 5,
+     "inner_iters": 86,
+     "wall_s": 1.8684565000003204
+    },
+    {
+     "rel_true": 5.315815235885565e-06,
+     "outer": 5,
+     "inner_iters": 87,
+     "wall_s": 1.889374200021848
+    }
+   ],
+   "iteration1_solves": [
+    {
+     "rel_true": 6.6544058806956355e-06,
+     "outer": 5,
+     "inner_iters": 113,
+     "wall_s": 2.4313611999969
+    },
+    {
+     "rel_true": 4.687602832900721e-06,
+     "outer": 5,
+     "inner_iters": 112,
+     "wall_s": 2.4240875000250526
+    },
+    {
+     "rel_true": 7.355034921774786e-06,
+     "outer": 5,
+     "inner_iters": 107,
+     "wall_s": 2.3055982000078075
+    },
+    {
+     "rel_true": 7.629826091332666e-06,
+     "outer": 5,
+     "inner_iters": 108,
+     "wall_s": 2.338986999995541
+    }
+   ],
+   "iteration1_t_iter_s": 9.908607699966524,
+   "iteration1_oc_probes": 28,
+   "equilibrium_target_met": true
+  },
+  {
+   "n": 576,
+   "valid": true,
+   "grid": [
+    576,
+    384,
+    256
+   ],
+   "allocated_elements": 56623104,
+   "nodes_allocated": 57091265,
+   "active_elements": 24411796,
+   "designable_elements": 22367092,
+   "free_dofs": 74398335,
+   "mg_levels": 7,
+   "coarse_dofs": 1050,
+   "pool_peak_reserved_bytes": 14581840384,
+   "pool_peak_used_bytes": 13917911040,
+   "persistent_inventory_bytes": 12685775827,
+   "inventory": {
+    "cls": 56623104,
+    "rho": 226492416,
+    "rho_phys": 226492416,
+    "rho_prev": 113246208,
+    "E32": 226492416,
+    "dc": 226492416,
+    "dv": 226492416,
+    "w1": 226492416,
+    "w2": 226492416,
+    "filter_D": 226492416,
+    "states_u64": 5480761440,
+    "fixed": 57091265,
+    "ir_workspace": 2740380720,
+    "loads": 7833600,
+    "residual_loads": 4569600,
+    "mg_vectors": 1146230498,
+    "mg_matrices": 1213315200,
+    "mg_coarse_inverse": 8820000,
+    "mg_KE_tables": 44964864
+   },
+   "process_dedicated_peak_bytes": 14504333312.0,
+   "device_used_before_driver_bytes": 1603796992,
+   "context_and_other_bytes": -77507072,
+   "shared_growth_bytes": 85983232.0,
+   "bytes_per_allocated_element_pool_peak": 257.5245677806713,
+   "bytes_per_active_element_pool_peak": 597.3276355414407,
+   "active_fraction_of_allocated": 0.43112783078794126,
+   "timings_s": {
+    "init": 3.226548671722412,
+    "solid_4_solves": 35.510411739349365,
+    "one_update_and_resolve": 91.51593112945557
+   },
+   "filter_R": 8,
+   "solid_solves": [
+    {
+     "rel_true": 7.5647536792229545e-06,
+     "outer": 5,
+     "inner_iters": 111,
+     "wall_s": 8.712706599966623
+    },
+    {
+     "rel_true": 5.602269270188303e-06,
+     "outer": 5,
+     "inner_iters": 111,
+     "wall_s": 8.578706500004046
+    },
+    {
+     "rel_true": 4.249881003481905e-06,
+     "outer": 5,
+     "inner_iters": 103,
+     "wall_s": 8.038586300041061
+    },
+    {
+     "rel_true": 4.736775488604956e-06,
+     "outer": 5,
+     "inner_iters": 109,
+     "wall_s": 8.430193900014274
+    }
+   ],
+   "iteration1_solves": [
+    {
+     "rel_true": 4.504677178734722e-06,
+     "outer": 5,
+     "inner_iters": 151,
+     "wall_s": 11.628348700003698
+    },
+    {
+     "rel_true": 5.035529164665333e-06,
+     "outer": 5,
+     "inner_iters": 149,
+     "wall_s": 11.40638369997032
+    },
+    {
+     "rel_true": 6.478246678234346e-06,
+     "outer": 5,
+     "inner_iters": 133,
+     "wall_s": 10.277096200035885
+    },
+    {
+     "rel_true": 4.682502746851429e-06,
+     "outer": 5,
+     "inner_iters": 137,
+     "wall_s": 10.570299100014381
+    }
+   ],
+   "iteration1_t_iter_s": 47.23701739998069,
+   "iteration1_oc_probes": 28,
+   "equilibrium_target_met": true
+  }
+ ],
+ "fit_sizes": [
+  96,
+  192,
+  384
+ ],
+ "model": {
+  "form": "pool_peak = a N_alloc + b; process peak = pool_peak + context (largest measured)",
+  "a_bytes_per_allocated_element": 254.5202645955642,
+  "b_bytes": 215617865.14285827,
+  "context_and_other_bytes": 329610752,
+  "fit_residuals_rel": [
+   -0.01767330919604493,
+   0.007925432906984442,
+   -0.00014825836525800273
+  ],
+  "states_bytes_per_node_each": 24,
+  "no_stored_states_saving_bytes_per_allocated_element": 72.92241668701172
+ },
+ "predictions": [
+  {
+   "n": 384,
+   "grid": [
+    384,
+    256,
+    160
+   ],
+   "allocated_elements": 15728640,
+   "h_in": 0.01875,
+   "predicted_process_peak_bytes": 4548486231,
+   "admissible_with_margin": true,
+   "predicted_process_peak_no_stored_states_bytes": 3401515791,
+   "admissible_no_stored_states": true,
+   "multigrid_coarsens_to_dense_limit": true,
+   "measured": true
+  },
+  {
+   "n": 480,
+   "grid": [
+    512,
+    320,
+    256
+   ],
+   "allocated_elements": 41943040,
+   "h_in": 0.015000000000000001,
+   "predicted_process_peak_bytes": 11220582255,
+   "admissible_with_margin": true,
+   "predicted_process_peak_no_stored_states_bytes": 8161994415,
+   "admissible_no_stored_states": true,
+   "multigrid_coarsens_to_dense_limit": true,
+   "measured": false
+  },
+  {
+   "n": 576,
+   "grid": [
+    576,
+    384,
+    256
+   ],
+   "allocated_elements": 56623104,
+   "h_in": 0.0125,
+   "predicted_process_peak_bytes": 14956956029,
+   "admissible_with_margin": true,
+   "predicted_process_peak_no_stored_states_bytes": 10827862445,
+   "admissible_no_stored_states": true,
+   "multigrid_coarsens_to_dense_limit": true,
+   "measured": true
+  },
+  {
+   "n": 672,
+   "grid": [
+    704,
+    448,
+    320
+   ],
+   "allocated_elements": 100925440,
+   "h_in": 0.010714285714285714,
+   "predicted_process_peak_bytes": 26232798310,
+   "admissible_with_margin": false,
+   "predicted_process_peak_no_stored_states_bytes": 18873071320,
+   "admissible_no_stored_states": true,
+   "multigrid_coarsens_to_dense_limit": true,
+   "measured": false
+  },
+  {
+   "n": 768,
+   "grid": [
+    768,
+    512,
+    320
+   ],
+   "allocated_elements": 125829120,
+   "h_in": 0.009375,
+   "predicted_process_peak_bytes": 32571289533,
+   "admissible_with_margin": false,
+   "predicted_process_peak_no_stored_states_bytes": 23395526013,
+   "admissible_no_stored_states": false,
+   "multigrid_coarsens_to_dense_limit": true,
+   "measured": false
+  }
+ ],
+ "out_of_sample": [
+  {
+   "n": 576,
+   "predicted_pool_peak_bytes": 14627345277,
+   "measured_pool_peak_bytes": 14581840384,
+   "rel_error": 0.003120655023417962,
+   "predicted_process_peak_bytes": 14956956029,
+   "measured_process_dedicated_peak_bytes": 14504333312.0
+  }
+ ],
+ "free_memory_at_estimate_bytes": 22601007104,
+ "total_memory_bytes": 25757220864,
+ "margin_bytes": 1610612736,
+ "largest_allocated_elements_admissible": 80328243,
+ "largest_allocated_elements_admissible_no_stored_states": 112584846,
+ "active_fraction_of_allocated": 0.45983632405598956,
+ "note": "Predictions above the largest measured size are extrapolations of a linear fit; the 1.5 GiB margin is applied to nvidia-smi free memory read when this file was written.  The bracket box is n x 2n/3 x 5n/12; only n = 96 * 2^k coarsens to the 12 x 8 x 5 coarsest grid without enlarging the box, so other n need a box enlarged to a multiple of 2^(L-1) (more exterior elements, counted in N_alloc)."
+}

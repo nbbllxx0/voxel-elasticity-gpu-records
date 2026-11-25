@@ -1,0 +1,66 @@
+{
+ "view": {
+  "elev_deg": 24.0,
+  "azim_deg": -52.0,
+  "projection": "orthographic"
+ },
+ "surface": "level 0.5 of the trilinear interpolation of the unsmoothed element field (element centres); normals from a Gaussian-smoothed copy (sigma 1.5 x n/192 elements), occlusion from sigma 4 x n/192; shading only",
+ "tint": "protected elements (class 2) in a separate colour, by the class of the element under the hit",
+ "raster": "the shaded surfaces are raster images inside the vector PDF (text, arrows and marks vector)",
+ "panel_a_top": {
+  "surface_pixels": 1169300,
+  "protected_tinted_pixels": 132087,
+  "image_px": [
+   1300,
+   958
+  ],
+  "field": "active-element indicator (classes 1 and 2) of figdata_n384",
+  "level": 0.5,
+  "render_s": 22.5,
+  "clamped_nodes_visible": 886
+ },
+ "arrows": {
+  "inches_per_lbf": 0.00019999999999999998,
+  "tails_at": "C",
+  "couple_arc_x_in": 8.35,
+  "couple_arc_radius_in": 0.5,
+  "couple_sense": "right-hand about +x"
+ },
+ "panel_a_below": {
+  "surface_pixels": 464300,
+  "protected_tinted_pixels": 40860,
+  "image_px": [
+   700,
+   722
+  ],
+  "field": "same as the top view",
+  "view": {
+   "elev_deg": -58.0,
+   "azim_deg": -52.0
+  },
+  "render_s": 2.9,
+  "clamped_nodes_visible": 11076
+ },
+ "field_n384": {
+  "surface_pixels": 858933,
+  "protected_tinted_pixels": 160706,
+  "image_px": [
+   1300,
+   958
+  ],
+  "field": "rho_phys of figdata_n384 (unsmoothed)",
+  "level": 0.5,
+  "render_s": 26.3
+ },
+ "field_n192": {
+  "surface_pixels": 597998,
+  "protected_tinted_pixels": 118153,
+  "image_px": [
+   1100,
+   816
+  ],
+  "field": "rho_phys of figdata_n192 (unsmoothed)",
+  "level": 0.5,
+  "render_s": 10.9
+ }
+}

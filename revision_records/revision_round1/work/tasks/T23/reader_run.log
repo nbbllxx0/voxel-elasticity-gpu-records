@@ -1,0 +1,25 @@
+PASS k80 bridge 1e-3 vs 1e-5 tight compliance difference +0.003624% -> +0.003624
+PASS k80 bridge 1e-3 tight compliance 0.16309835568 -> 0.16309835568
+PASS k80 bridge 1e-5 tight compliance 0.16309244473 -> 0.16309244473
+PASS k80 bridge tight residuals 7.62e-11 / 8.82e-11 -> 7.62e-11 / 8.82e-11
+PASS k80 bridge 1e-3 mean |drho| 8.98547e-5 (8.985e-5) -> 8.98547e-05
+PASS k80 bridge 1e-3 strict >0.5 crossings 92 -> 92
+PASS k80 bridge Krylov 593 vs 1510, design its 77 vs 82 -> 593 vs 1510, 77 vs 82
+PASS k80 bridge solve+setup 5.4 vs 10.4 s -> 5.4 vs 10.4
+PASS k80 cantilever 1e-6 vs 1e-5: 3914 changed entries, mean 6.11e-09, 0 crossings -> 3914, 6.11e-09, 0
+PASS k80 bridge 1e-6 vs 1e-5: 2724 changed entries, mean 3.40e-09, 0 crossings -> 2724, 3.40e-09, 0
+PASS k80 torsion 1e-6 vs 1e-5: 4449 changed entries, mean 1.25e-09, 0 crossings -> 4449, 1.25e-09, 0
+PASS k80 bridge 1e-3 vs 1e-5: pre-storage mean |drho| lies in [8.98285e-5, 1.38696e-4] (rounded outward), departure at most 4.885e-5 and below the stored mean -> [8.982858e-05, 1.386958e-04], 4.88411e-05
+PASS k80 all 12 pre-storage ranges are attained by FP32 fields that round to the stored ones (gap <= 1.2e-7) -> 4.660108629821365e-13
+PASS k80 the three 1e-5 baseline rows (run against itself): stored mean, pre-storage range and departure all exactly 0 -> [('cantilever', 0.0, 0.0, 0.0, 0.0), ('bridge', 0.0, 0.0, 0.0, 0.0), ('torsion', 0.0, 0.0, 0.0, 0.0)]
+PASS k80 all 12 crossing counts equal those of the FP32 fields before the FP16 cast (no stored entry equals 0.5) -> 12
+PASS k160 it67 2-norm error 0.169616 -> 0.169616
+PASS k160 it67 top-ten share 95.24% -> 95.24
+PASS k160 it67 intermediate (75 elements) share 88.07% -> 75, 88.07
+PASS k160 it67 median rel. error top 100 by |error| 17.96% -> 17.96
+PASS k160 it67 median rel. error 75 intermediate 0.32% -> 0.32
+PASS k160 other six snapshots 8.60e-6 to 3.95e-3 -> 8.60e-06 to 3.95e-03
+PASS k160 it66 solid share exceeds intermediate share -> 43.3 vs 40.4
+PASS k160 it67 OC update identical (audit record) -> 0.0
+PASS k160 recomputed 2-norm errors equal the dump-run audit records (rel. 1e-6) -> {50: 1.0139100559136693e-07, 60: -1.9681546059580057e-08, 65: -4.458408886520715e-08, 66: 1.5100507733123436e-08, 67: 8.923031424856731e-08, 70: 7.891395670256429e-08, 76: 5.8809553449279406e-08}
+PASS submitted Table S24: all 12 rows reproduced cell by cell -> []

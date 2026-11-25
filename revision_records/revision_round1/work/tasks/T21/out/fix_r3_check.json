@@ -1,0 +1,56 @@
+{
+ "csv": {
+  "beam_interface.csv": {
+   "rows_old": 144,
+   "rows_new": 144,
+   "added_columns": [
+    "order_prev_e"
+   ],
+   "removed_columns": [],
+   "changed_cells_in_old_columns": 0,
+   "order_prev_e_filled": 12,
+   "order_prev_e_mismatch_vs_log2_ratio": 0
+  },
+  "uniform_controls.csv": {
+   "rows_old": 224,
+   "rows_new": 224,
+   "added_columns": [
+    "order_prev_e"
+   ],
+   "removed_columns": [],
+   "changed_cells_in_old_columns": 0,
+   "order_prev_e_filled": 8,
+   "order_prev_e_mismatch_vs_log2_ratio": 0
+  },
+  "beam_interface_sensitivity_D3.csv": {
+   "rows_old": 130,
+   "rows_new": 130,
+   "added_columns": [
+    "order_prev_e"
+   ],
+   "removed_columns": [],
+   "changed_cells_in_old_columns": 0,
+   "order_prev_e_filled": 24,
+   "order_prev_e_mismatch_vs_log2_ratio": 0
+  },
+  "uniform_controls_sensitivity_D3.csv": {
+   "rows_old": 131,
+   "rows_new": 131,
+   "added_columns": [
+    "order_prev_e"
+   ],
+   "removed_columns": [],
+   "changed_cells_in_old_columns": 0,
+   "order_prev_e_filled": 16,
+   "order_prev_e_mismatch_vs_log2_ratio": 0
+  }
+ },
+ "identical_files": {
+  "verdicts.json": true,
+  "reference_checks.json": true,
+  "summary.json": true,
+  "terminal_residuals.csv": true,
+  "column_fill.json": true
+ },
+ "passed": true
+}

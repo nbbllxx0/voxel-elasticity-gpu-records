@@ -1,0 +1,422 @@
+{
+ "gates": {
+  "G1": {
+   "pass": true,
+   "sources": [
+    "tasks/T27/out/V_G1_static.json",
+    "tasks/T27/out/V_G1_cg16.json"
+   ]
+  },
+  "G3": {
+   "pass": true,
+   "relative_difference": 4.5027525705486044e-10,
+   "source": "tasks/T27/out/V_G3_k16.json"
+  },
+  "G2": {
+   "80": {
+    "pass": true,
+    "d_R": {
+     "d_R_hou_cg32": 7.564119870437036e-08,
+     "d_R_stencil32_orig": 1.0049919089601277e-07,
+     "d_R_stencil32_rep": 9.294697925430216e-08
+    },
+    "d_R_status": "confirmatory",
+    "evaluated": "after H3-H4 (in the H5 checker), not immediately after H2 as planned (D13)",
+    "source": "tasks/T27/out/H5_check_k80.json"
+   },
+   "160": {
+    "pass": true,
+    "d_R": {
+     "d_R_hou_cg32": 7.561401235123653e-08,
+     "d_R_stencil32_orig": 1.0063426082787263e-07,
+     "d_R_stencil32_rep": 9.306921736597916e-08
+    },
+    "d_R_status": "exploratory (replacement checker, D9)",
+    "evaluated": "after H3-H4 (in the H5 checker), not immediately after H2 as planned (D13)",
+    "source": "tasks/T27/out/H5_check_k160.json"
+   },
+   "256": {
+    "pass": true,
+    "d_R": {
+     "d_R_hou_cg32": 7.560336822727228e-08,
+     "d_R_stencil32_orig": 1.0067231041411925e-07,
+     "d_R_stencil32_rep": 9.304220654506963e-08
+    },
+    "d_R_status": "confirmatory",
+    "evaluated": "after H3-H4 (in the H5 checker), not immediately after H2 as planned (D13)",
+    "source": "tasks/T27/out/H5_check_k256.json"
+   }
+  },
+  "G4_hook_overhead": {
+   "hou_cg32": -0.004810159018059257,
+   "stencil32_rep": 0.001251574029183189
+  }
+ },
+ "predictions": {
+  "P1": {
+   "values": {
+    "80": 0.05764869506384326,
+    "160": null,
+    "256": 0.3871379731480468
+   },
+   "outcome": "inconclusive (unresolved: > 1e-5 at k = 80, 256; no confirmatory independent residual at k = 160, which has a completed Hou solve)",
+   "k_with_completed_hou_solve": [
+    80,
+    160,
+    256
+   ],
+   "k_without_confirmatory_data": [
+    160
+   ],
+   "exploratory_values": {
+    "160": 0.1596609761680008
+   },
+   "in_process_continuation_value_at_native_stop": {
+    "80": 0.05764869506384326,
+    "160": 0.1596609761680008,
+    "256": null
+   },
+   "note": "the criterion covers every k with a completed Hou solve, k = 160 included. The k = 160 checker value is exploratory (D9) and agrees (> 1e-5); the H4 in-process FP64 residual of the continuation iterate at the native-stop iteration is a separate measurement, listed beside it"
+  },
+  "P2": {
+   "attained": {
+    "80": "False",
+    "160": "False",
+    "256": "False"
+   },
+   "smallest_true_residual": {
+    "80": 0.03968126095031562,
+    "160": 0.025324593641265887,
+    "256": 0.02074458801677989
+   },
+   "smallest_at_iteration": {
+    "80": "1100",
+    "160": "100",
+    "256": "250"
+   },
+   "outcome": "support",
+   "k_without_data": [],
+   "n_checkpoints": {
+    "80": "201",
+    "160": "201",
+    "256": "41"
+   },
+   "recursive_residual_at_native_stop": {
+    "80": 0.0009949105210881593,
+    "160": 0.000988941144395597,
+    "256": 0.000995440484780954
+   },
+   "recursive_residual_at_10000": {
+    "80": 1.9712201403395624e-18,
+    "160": 9.522850722261707e-13,
+    "256": 1.279726342164127e-07
+   },
+   "recursive_note": "their recursive FP32 residual ||r_m|| / ||r_0|| from the H4 continuation (the quantity of their stopping test), beside the FP64 true residual of the same iterates",
+   "note": "true residuals tested at the plan's checkpoints only (every 50 iterations at k = 80, 160; every 250 at k = 256; plus the native-stop iterate); iterates between checkpoints were not tested. k = 80, 160 in-process (H4); k = 256 snapshots read by the H5 checker"
+  },
+  "P3a": {
+   "values": {
+    "80": {
+     "ratio": 63.80884005403408,
+     "hou_solve_s": 12.559589700016659,
+     "mg64_rep_setup_b_s": 0.1103307000012137,
+     "mg64_rep_solve_s": 0.08650079998187721,
+     "hou_independent_rel_true": 0.05764869506384326,
+     "mg64_rep_independent_rel_true": 5.0102737282638005e-06
+    },
+    "256": {
+     "ratio": 405.26229093063415,
+     "hou_solve_s": 1088.5440370999859,
+     "mg64_rep_setup_b_s": 0.7315937000093982,
+     "mg64_rep_solve_s": 1.954429799981881,
+     "hou_independent_rel_true": 0.3871379731480468,
+     "mg64_rep_independent_rel_true": 5.961057971315227e-06
+    }
+   },
+   "outcome": "support",
+   "note": "elapsed-time ratio at unequal accuracy unless both attained 1e-5; the denominator uses our setup (b), whose timing boundary is the planned one (Hou's setup timings are not used)",
+   "k_without_confirmatory_data": [
+    160
+   ],
+   "exploratory_values": {
+    "160": {
+     "ratio": 215.93284951037214,
+     "hou_independent_rel_true": 0.1596609761680008,
+     "mg64_rep_independent_rel_true": 6.071894054225669e-06
+    }
+   },
+   "exploratory_note": "k = 160: G2 d_R and the accuracies come from the replacement checker (D9)"
+  },
+  "P3b": {
+   "values": {},
+   "outcome": "inconclusive (no common-accuracy time for Hou)"
+  },
+  "P4": {
+   "values": {
+    "80": {
+     "ratio": 157.93618210912078,
+     "ratio_iqr_bounds": [
+      156.85750567797555,
+      161.66676755750873
+     ]
+    },
+    "256": {
+     "ratio": 202.4908387847623,
+     "ratio_iqr_bounds": [
+      198.68685454868952,
+      203.88953963089867
+     ]
+    }
+   },
+   "exploratory_values": {
+    "160": {
+     "ratio": 15.238520057075602,
+     "ratio_iqr_bounds": [
+      14.907378115945393,
+      16.203881991332345
+     ]
+    }
+   },
+   "k_without_confirmatory_data": [
+    160
+   ],
+   "outcome": "inconclusive (unresolved: >= 100 at k = 80, 256; the G2 action gate at k = 160 is exploratory, so its ratio is exploratory)",
+   "note": "the support criterion needs all three k. At k = 160 the G2 action gate (d_R) comes from the exploratory replacement checker (D9), so the k = 160 ratio is exploratory; it also lies between the support and contradiction thresholds (D12). All application timings (every k, every operator) are used as recorded under G4: none exceeded 5 %, the k = 160 stencil timings carry the 1-5 % flag. G4 cannot establish foreign activity during any application timing, which lasts far less than its 10 s sampling interval (D6); this caveat applies equally to P4 and P5a and to every k. The k = 160 stencil timings are also slower per element than at k = 256, cause not established (D11)."
+  },
+  "P5a": {
+   "values": {
+    "80": {
+     "ratio": 1.062499932271673,
+     "ratio_iqr_bounds": [
+      1.059507965702685,
+      1.078530472171441
+     ]
+    },
+    "256": {
+     "ratio": 1.0687657104528265,
+     "ratio_iqr_bounds": [
+      1.039933315847878,
+      1.0910909232631367
+     ]
+    }
+   },
+   "exploratory_values": {
+    "160": {
+     "ratio": 1.042078719693992,
+     "ratio_iqr_bounds": [
+      0.9428827997697423,
+      1.080083145170465
+     ]
+    }
+   },
+   "k_without_confirmatory_data": [
+    160
+   ],
+   "outcome": "inconclusive (unresolved: <= 1.15 at k = 80, 256; no confirmatory G2 action gate at k = 160, where the first checker run spilled and its replacement is exploratory)",
+   "note": "plan 5.2 requires <= 1.15 at every k. The system-identity gate is applied as in P3a; at k = 160 it rests on the exploratory replacement checker (D9), so the k = 160 ratio is exploratory (listed). Same timing records and standard as P4. All application timings (every k, every operator) are used as recorded under G4: none exceeded 5 %, the k = 160 stencil timings carry the 1-5 % flag. G4 cannot establish foreign activity during any application timing, which lasts far less than its 10 s sampling interval (D6); this caveat applies equally to P4 and P5a and to every k. The k = 160 stencil timings are also slower per element than at k = 256, cause not established (D11)."
+  },
+  "P5b": {
+   "values": {
+    "80_mg64": {
+     "ratio": 0.9914722709086142,
+     "iqrs_overlap": true,
+     "iterations_rep": "17",
+     "iterations_orig": "17"
+    },
+    "80_mgir": {
+     "ratio": 0.10277578450120343,
+     "iqrs_overlap": false,
+     "iterations_rep": "4",
+     "iterations_orig": "18"
+    },
+    "256_mg64": {
+     "ratio": 1.0048156278418245,
+     "iqrs_overlap": true,
+     "iterations_rep": "21",
+     "iterations_orig": "21"
+    }
+   },
+   "exploratory_values": {
+    "160_mg64": {
+     "ratio": 0.9527237603823335,
+     "iqrs_overlap": false,
+     "iterations_rep": "19",
+     "iterations_orig": "19"
+    }
+   },
+   "outcome": "contradiction",
+   "band": [
+    0.85,
+    1.15
+   ],
+   "note": "ratio = repaired / original solve time (medians). The contradiction is decided by the k = 80 mgir ratio, which lies far below the band with disjoint IQRs (the original-stencil IR needed more outer steps). The confirmatory mg64 ratios (k = 80, 256) lie inside the +/-15 % band. The k = 160 mg64 ratio is exploratory: its action check comes from the exploratory replacement checker (D9), outside the system-identity gate, which is applied as in P3a and P5a. No mgir ratio exists at k = 160 and 256, where the original-stencil IR breaks down (P8). The band tests equal cost within +/-15 %; it is not a statement that the repair costs nothing."
+  },
+  "P6": {
+   "recorded_process_peaks_bytes": {
+    "80": {
+     "hou_cg32": 849506304.0,
+     "mg64_rep": 771932160.0,
+     "mgir_rep": 706920448.0
+    },
+    "160": {
+     "hou_cg32": 4379041792.0,
+     "mg64_rep": 2927951872.0,
+     "mgir_rep": 2424631296.0
+    },
+    "256": {
+     "hou_cg32": 6262337536.0,
+     "mg64_rep": 10215641088.0,
+     "mgir_rep": 8181387264.0
+    }
+   },
+   "recorded_ranking": "ours higher at some k",
+   "outcome": "inconclusive (the recorded process peaks retain workspaces of two builds, D14)",
+   "note": "The recorded values are process-life peaks as defined, but they do not measure one solve: in our H3 processes the timing wrapper kept the first build's preconditioner and multigrid hierarchy alive while the history pass built a second one (plus the history buffer, 8 bytes per DOF); in Hou's H3 process the driver kept a survivor index while their CG built its own. Subtracting the history buffer does not recover a single-solve value. Single-build, single-solve peaks were re-measured as EXPLORATORY runs (out/X_MEM_*.json, hou_exploratory.csv).",
+   "exploratory_single_build": {
+    "80": {
+     "hou_cg32": {
+      "pool_used_peak_bytes": 147631616,
+      "pool_reserved_peak_bytes": 448273920,
+      "process_dedicated_peak_bytes": 849506304,
+      "source": "tasks/T27/out/X_MEM_k80_hou_cg32.json"
+     },
+     "mg64_orig": {
+      "pool_used_peak_bytes": 217680896,
+      "pool_reserved_peak_bytes": 229587968,
+      "process_dedicated_peak_bytes": 641908736,
+      "source": "tasks/T27/out/X_MEM_k80_mg64_orig.json"
+     },
+     "mg64_rep": {
+      "pool_used_peak_bytes": 217680896,
+      "pool_reserved_peak_bytes": 229587968,
+      "process_dedicated_peak_bytes": 641908736,
+      "source": "tasks/T27/out/X_MEM_k80_mg64_rep.json"
+     },
+     "mgir_orig": {
+      "pool_used_peak_bytes": 163632640,
+      "pool_reserved_peak_bytes": 178890752,
+      "process_dedicated_peak_bytes": 576897024,
+      "source": "tasks/T27/out/X_MEM_k80_mgir_orig.json"
+     },
+     "mgir_rep": {
+      "pool_used_peak_bytes": 163632640,
+      "pool_reserved_peak_bytes": 178890752,
+      "process_dedicated_peak_bytes": 576897024,
+      "source": "tasks/T27/out/X_MEM_k80_mgir_rep.json"
+     }
+    },
+    "160": {
+     "hou_cg32": {
+      "pool_used_peak_bytes": 1163868672,
+      "pool_reserved_peak_bytes": 3976973824,
+      "process_dedicated_peak_bytes": 4379041792,
+      "source": "tasks/T27/out/X_MEM_k160_hou_cg32.json"
+     },
+     "mg64_orig": {
+      "pool_used_peak_bytes": 1631534592,
+      "pool_reserved_peak_bytes": 1665492480,
+      "process_dedicated_peak_bytes": 2089082880,
+      "source": "tasks/T27/out/X_MEM_k160_mg64_orig.json"
+     },
+     "mg64_rep": {
+      "pool_used_peak_bytes": 1631534592,
+      "pool_reserved_peak_bytes": 1665492480,
+      "process_dedicated_peak_bytes": 2089082880,
+      "source": "tasks/T27/out/X_MEM_k160_mg64_rep.json"
+     },
+     "mgir_orig": "missing: no single-build peak (mgir_orig breaks down at this k, class 5)",
+     "mgir_rep": {
+      "pool_used_peak_bytes": 1132288512,
+      "pool_reserved_peak_bytes": 1166261760,
+      "process_dedicated_peak_bytes": 1583665152,
+      "source": "tasks/T27/out/X_MEM_k160_mgir_rep.json"
+     }
+    },
+    "256": {
+     "hou_cg32": {
+      "pool_used_peak_bytes": 4741017600,
+      "pool_reserved_peak_bytes": 16255574528,
+      "process_dedicated_peak_bytes": 16660058112,
+      "source": "tasks/T27/out/X_MEM_k256_hou_cg32.json"
+     },
+     "mg64_orig": {
+      "pool_used_peak_bytes": 6462414336,
+      "pool_reserved_peak_bytes": 6626993664,
+      "process_dedicated_peak_bytes": 7048884224,
+      "source": "tasks/T27/out/X_MEM_k256_mg64_orig.json"
+     },
+     "mg64_rep": {
+      "pool_used_peak_bytes": 6462414336,
+      "pool_reserved_peak_bytes": 6626993664,
+      "process_dedicated_peak_bytes": 7048884224,
+      "source": "tasks/T27/out/X_MEM_k256_mg64_rep.json"
+     },
+     "mgir_orig": "missing: no single-build peak (mgir_orig breaks down at this k, class 5)",
+     "mgir_rep": {
+      "pool_used_peak_bytes": 4429418496,
+      "pool_reserved_peak_bytes": 4594013184,
+      "process_dedicated_peak_bytes": 5014630400,
+      "source": "tasks/T27/out/X_MEM_k256_mgir_rep.json"
+     }
+    }
+   },
+   "exploratory_note": "EXPLORATORY, never a P6 decision. mgir_orig at k = 80 was added after the operator note of 2026-11-23 (item 7) in one guarded run (D20); that run was repeated with the revised live stop-on-spill watcher, which checks complete samples only and a final sample after the job (D21); it was repeated again after the watcher was made to take its baseline from its own measured sample and to require at most 3 s between checked samples (D22). The three runs agree in pool used, pool reserved and process-dedicated peaks; their device-wide peaks above baseline are given in hou_exploratory.csv (D23). The watcher's coverage runs from its first sampler baseline onward, not over the whole process."
+  },
+  "P7": {
+   "values": {
+    "80": {
+     "d_S_rep": 7.57300536956289e-06,
+     "d_S_orig": 0.003875719903790497,
+     "d_S_hou": 0.0006454733098677672
+    },
+    "256": {
+     "d_S_rep": 1.532842394576848e-05,
+     "d_S_orig": 0.022364479788519184,
+     "d_S_hou": 0.002102903852022761
+    }
+   },
+   "outcome": "inconclusive (unresolved: d_S(rep) < d_S(orig) at k = 80, 256; no confirmatory d_S at k = 160)",
+   "k_without_confirmatory_data": [
+    160
+   ],
+   "exploratory_values": {
+    "160": {
+     "d_S_rep": 1.0382863629016364e-05,
+     "d_S_orig": 0.011021781705356875,
+     "d_S_hou": 0.0012998150093638096
+    }
+   },
+   "note": "the support criterion requires every k; the k = 160 d_S comes from the replacement checker (exploratory, D9). The exploratory k = 160 values agree with the two confirmatory k."
+  },
+  "P8": {
+   "classes": {
+    "80_mg64_orig": "9",
+    "80_mg64_rep": "9",
+    "80_mgir_orig": "9",
+    "80_mgir_rep": "9",
+    "160_mg64_orig": "",
+    "160_mg64_rep": "",
+    "160_mgir_orig": "5",
+    "160_mgir_rep": "",
+    "256_mg64_orig": "9",
+    "256_mg64_rep": "9",
+    "256_mgir_orig": "5",
+    "256_mgir_rep": "9"
+   },
+   "outcome": "contradiction",
+   "note": "the class-5 outcomes (mgir_orig, k = 160 and 256) come from the solve processes, not from the checker, and decide the contradiction. At k = 160, mg64_orig, mg64_rep and mgir_rep have no confirmatory class (blank): their in-process acceptance stands, but the independent confirmation that class 9 requires comes only from the exploratory replacement checker (D9)"
+  },
+  "C-A": {
+   "class": 2,
+   "outcome": "contradiction"
+  },
+  "C-B": {
+   "class": 1,
+   "outcome": "inconclusive"
+  },
+  "C-C": {
+   "class": 1,
+   "outcome": "inconclusive (not run)"
+  }
+ }
+}

@@ -1,0 +1,1134 @@
+{
+ "P1": {
+  "data": {
+   "64/S1": 0.0002329181345488942,
+   "128/S1": 0.0006507224784923905,
+   "160/S1": 0.0008326178635784503,
+   "256/S1": null,
+   "320/S1": null
+  },
+  "outcome": "supports",
+  "missing_independent_check": [
+   "256/S1",
+   "320/S1"
+  ],
+  "checked_iterate": "the released iterate of the first timed solve (repeat 0)"
+ },
+ "P2": {
+  "data": {
+   "64/S1": {
+    "attained": false,
+    "smallest": 0.00023187756049342982,
+    "at_iteration": 12,
+    "iterations_to_1e-5": null,
+    "non_finite_from_iteration": 32,
+    "H_class": 5,
+    "H_class_queue": 7,
+    "recursive_non_finite_from_step": 27
+   },
+   "64/S5": {
+    "attained": false,
+    "smallest": 0.8861829807788874,
+    "at_iteration": 768,
+    "iterations_to_1e-5": null,
+    "non_finite_from_iteration": null,
+    "H_class": 7,
+    "H_class_queue": null,
+    "recursive_non_finite_from_step": null
+   },
+   "128/S1": {
+    "attained": false,
+    "smallest": 0.0006513340933160655,
+    "at_iteration": 24,
+    "iterations_to_1e-5": null,
+    "non_finite_from_iteration": 512,
+    "H_class": 5,
+    "H_class_queue": 7,
+    "recursive_non_finite_from_step": 444
+   },
+   "128/S5": {
+    "attained": false,
+    "smallest": 7.075248056883932,
+    "at_iteration": 1000,
+    "iterations_to_1e-5": null,
+    "non_finite_from_iteration": null,
+    "H_class": 7,
+    "H_class_queue": null,
+    "recursive_non_finite_from_step": null
+   },
+   "160/S1": {
+    "attained": false,
+    "smallest": 0.0008325686158078368,
+    "at_iteration": 128,
+    "iterations_to_1e-5": null,
+    "non_finite_from_iteration": 512,
+    "H_class": 5,
+    "H_class_queue": 7,
+    "recursive_non_finite_from_step": 473
+   },
+   "160/S5": {
+    "attained": false,
+    "smallest": 6.497744376681563,
+    "at_iteration": 0,
+    "iterations_to_1e-5": null,
+    "non_finite_from_iteration": null,
+    "H_class": 7,
+    "H_class_queue": null,
+    "recursive_non_finite_from_step": null
+   }
+  },
+  "outcome": "supports",
+  "scope": "decided on the prespecified snapshot set C (plan 4.3) of the six completed continuations (k <= 160, S1 and S5): no checked snapshot reached 1e-5. Accuracy between snapshots is not measured, and no continuation completed at k >= 256 (H_S1_k256 class 6; no H above it)."
+ },
+ "P3": {
+  "class": 7,
+  "steps": 1000,
+  "insolver_residual": 0.5609507561,
+  "outcome": "supports"
+ },
+ "P4a": {
+  "data": {
+   "64": {
+    "ratio": 22.412345831792745,
+    "interval": [
+     21.690872966990224,
+     23.068030325257823
+    ],
+    "iqr_a": [
+     87.21709251403809,
+     90.06977081298828
+    ],
+    "iqr_b": [
+     3.904528021812439,
+     4.020912051200867
+    ],
+    "iqrs_overlap": false
+   },
+   "128": {
+    "ratio": 57.022713648416556,
+    "interval": [
+     54.514226138555465,
+     57.449273483239935
+    ],
+    "iqr_a": [
+     737.215518951416,
+     742.8641319274902
+    ],
+    "iqr_b": [
+     12.930783748626709,
+     13.523360252380371
+    ],
+    "iqrs_overlap": false
+   },
+   "160": {
+    "ratio": 52.015210127816935,
+    "interval": [
+     51.22803800596917,
+     52.81919517017657
+    ],
+    "iqr_a": [
+     1159.5191955566406,
+     1189.3889904022217
+    ],
+    "iqr_b": [
+     22.518120288848877,
+     22.634464263916016
+    ],
+    "iqrs_overlap": false
+   }
+  },
+  "descriptive_G2_not_evaluated": {
+   "256": {
+    "ratio": 48.15682843921204,
+    "interval": [
+     47.86842518702943,
+     48.55677574082196
+    ],
+    "iqr_a": [
+     4225.203573703766,
+     4280.333757400513
+    ],
+    "iqr_b": [
+     88.1511116027832,
+     88.26702690124512
+    ],
+    "iqrs_overlap": false
+   },
+   "320": {
+    "ratio": 40.41956505785839,
+    "interval": [
+     40.258427159404555,
+     43.51992318974701
+    ],
+    "iqr_a": [
+     6964.07026052475,
+     7517.210423946381
+    ],
+    "iqr_b": [
+     172.7303237915039,
+     172.98416137695312
+    ],
+    "iqrs_overlap": false
+   }
+  },
+  "g4_step_level": {
+   "rows": {
+    "64/S1/traeff": {
+     "step_median_ms": 88.17195892333984,
+     "strict_bound_pct": 14.299816494614888,
+     "strict_activity": "unresolved"
+    },
+    "64/S1/mg64_rep": {
+     "step_median_ms": 3.934079885482788,
+     "strict_bound_pct": 42.13020821621637,
+     "strict_activity": "unresolved"
+    },
+    "128/S1/traeff": {
+     "step_median_ms": 739.3300533294678,
+     "strict_bound_pct": 2.9409581144526533,
+     "strict_activity": "flagged"
+    },
+    "128/S1/mg64_rep": {
+     "step_median_ms": 12.965536117553711,
+     "strict_bound_pct": 19.953372966737547,
+     "strict_activity": "unresolved"
+    },
+    "160/S1/traeff": {
+     "step_median_ms": 1174.203872680664,
+     "strict_bound_pct": 0.2406141107579102,
+     "strict_activity": "ok"
+    },
+    "160/S1/mg64_rep": {
+     "step_median_ms": 22.574240684509277,
+     "strict_bound_pct": 0.7973693772194352,
+     "strict_activity": "ok"
+    },
+    "256/S1/traeff": {
+     "step_median_ms": 4248.515605926514,
+     "strict_bound_pct": 0.3549176450214259,
+     "strict_activity": "ok"
+    },
+    "256/S1/mg64_rep": {
+     "step_median_ms": 88.22249603271484,
+     "strict_bound_pct": 0.19428149082317292,
+     "strict_activity": "ok"
+    },
+    "320/S1/traeff": {
+     "step_median_ms": 6986.106991767883,
+     "strict_bound_pct": 0.22217247188637118,
+     "strict_activity": "ok"
+    },
+    "320/S1/mg64_rep": {
+     "step_median_ms": 172.83973693847656,
+     "strict_bound_pct": 0.29612596644821126,
+     "strict_activity": "ok"
+    }
+   },
+   "unresolved": [
+    "64/S1/traeff",
+    "64/S1/mg64_rep",
+    "128/S1/mg64_rep"
+   ],
+   "interference_rule": "unresolved at step duration for 64/S1/traeff, 64/S1/mg64_rep, 128/S1/mg64_rep; the ratios are reported as measured, not as cleared"
+  },
+  "outcome": "inconclusive",
+  "outcome_without_the_G5_rule": "supports",
+  "G5_pass": false,
+  "rule": "G5 failed at k = 64, so every released step time is flagged at every k; the plan makes P4 inconclusive when G5 fails at every k. The ratios are reported descriptively."
+ },
+ "P4b": {
+  "data": {
+   "64": {
+    "ratio": 15.330755600801915,
+    "interval": [
+     11.130137416114936,
+     16.045767772658593
+    ],
+    "iqr_a": [
+     87.21709251403809,
+     90.06977081298828
+    ],
+    "iqr_b": [
+     5.613303899765015,
+     7.836120009422302
+    ],
+    "iqrs_overlap": false
+   },
+   "128": {
+    "ratio": 90.89021247260595,
+    "interval": [
+     46.26301050200169,
+     94.21193696062929
+    ],
+    "iqr_a": [
+     737.215518951416,
+     742.8641319274902
+    ],
+    "iqr_b": [
+     7.8850319385528564,
+     15.935312271118164
+    ],
+    "iqrs_overlap": false
+   },
+   "160": {
+    "ratio": 92.53452527845464,
+    "interval": [
+     89.08550948731288,
+     94.15545325775695
+    ],
+    "iqr_a": [
+     1159.5191955566406,
+     1189.3889904022217
+    ],
+    "iqr_b": [
+     12.63218379020691,
+     13.01580023765564
+    ],
+    "iqrs_overlap": false
+   }
+  },
+  "descriptive_G2_not_evaluated": {
+   "256": {
+    "ratio": 88.33042936256672,
+    "interval": [
+     87.51306761213381,
+     89.41802713929827
+    ],
+    "iqr_a": [
+     4225.203573703766,
+     4280.333757400513
+    ],
+    "iqr_b": [
+     47.86880111694336,
+     48.28083038330078
+    ],
+    "iqrs_overlap": false
+   },
+   "320": {
+    "ratio": 74.0890798846723,
+    "interval": [
+     73.30235435513052,
+     79.83263552570243
+    ],
+    "iqr_a": [
+     6964.07026052475,
+     7517.210423946381
+    ],
+    "iqr_b": [
+     94.16212272644043,
+     95.00472831726074
+    ],
+    "iqrs_overlap": false
+   }
+  },
+  "g4_step_level": {
+   "rows": {
+    "64/S1/traeff": {
+     "step_median_ms": 88.17195892333984,
+     "strict_bound_pct": 14.299816494614888,
+     "strict_activity": "unresolved"
+    },
+    "64/S1/mgir_rep": {
+     "step_median_ms": 5.751312017440796,
+     "strict_bound_pct": 28.941027690127264,
+     "strict_activity": "unresolved"
+    },
+    "128/S1/traeff": {
+     "step_median_ms": 739.3300533294678,
+     "strict_bound_pct": 2.9409581144526533,
+     "strict_activity": "flagged"
+    },
+    "128/S1/mgir_rep": {
+     "step_median_ms": 8.13431978225708,
+     "strict_bound_pct": 17.228711182592534,
+     "strict_activity": "unresolved"
+    },
+    "160/S1/traeff": {
+     "step_median_ms": 1174.203872680664,
+     "strict_bound_pct": 0.2406141107579102,
+     "strict_activity": "ok"
+    },
+    "160/S1/mgir_rep": {
+     "step_median_ms": 12.689359664916992,
+     "strict_bound_pct": 1.8597069064810565,
+     "strict_activity": "flagged"
+    },
+    "256/S1/traeff": {
+     "step_median_ms": 4248.515605926514,
+     "strict_bound_pct": 0.3549176450214259,
+     "strict_activity": "ok"
+    },
+    "256/S1/mgir_rep": {
+     "step_median_ms": 48.097984313964844,
+     "strict_bound_pct": 0.5187234338993068,
+     "strict_activity": "ok"
+    },
+    "320/S1/traeff": {
+     "step_median_ms": 6986.106991767883,
+     "strict_bound_pct": 0.22217247188637118,
+     "strict_activity": "ok"
+    },
+    "320/S1/mgir_rep": {
+     "step_median_ms": 94.29334259033203,
+     "strict_bound_pct": 0.24784177998556173,
+     "strict_activity": "ok"
+    }
+   },
+   "unresolved": [
+    "64/S1/traeff",
+    "64/S1/mgir_rep",
+    "128/S1/mgir_rep"
+   ],
+   "interference_rule": "unresolved at step duration for 64/S1/traeff, 64/S1/mgir_rep, 128/S1/mgir_rep; the ratios are reported as measured, not as cleared"
+  },
+  "outcome": "inconclusive",
+  "outcome_without_the_G5_rule": "supports",
+  "G5_pass": false,
+  "rule": "G5 failed at k = 64, so every released step time is flagged at every k; the plan makes P4 inconclusive when G5 fails at every k. The ratios are reported descriptively."
+ },
+ "P5": {
+  "data": {
+   "64/S1": {
+    "ratio": 9.385660218076662,
+    "interval": [
+     9.09238836043148,
+     9.667831122388263
+    ],
+    "iqr_a": [
+     0.7476480007171631,
+     0.7878305912017822
+    ],
+    "iqr_b": [
+     0.08148989998153411,
+     0.08222789998399094
+    ],
+    "iqrs_overlap": false,
+    "n_timed_solves_traeff": 3,
+    "n_timed_solves_mg64_rep": 3,
+    "interval_note": null,
+    "traeff_insolver_residual_each_repeat": "7.935e-06;7.935e-06;7.935e-06",
+    "independent_check_of": "iterate of the first timed solve (repeat 0) of each path",
+    "g4_strict_bound_max_pct": [
+     1.7346722127934162,
+     2.0378544600779267
+    ],
+    "traeff_independent_residual": 0.0002329181345488942,
+    "traeff_insolver_residual": 7.934840141e-06,
+    "traeff_class": 8,
+    "mg64_rep_independent_residual": 3.1271369839480138e-06,
+    "mg64_rep_class": 9,
+    "mg64_rep_insolver_residual": 3.1271369829442315e-06,
+    "label": "ratio at unequal accuracy"
+   },
+   "64/S5": {
+    "ratio": 706.3196603554104,
+    "interval": [
+     578.1106871630428,
+     726.2035696007184
+    ],
+    "iqr_a": [
+     90.33387053012848,
+     90.76379060745239
+    ],
+    "iqr_b": [
+     0.12498394996509887,
+     0.1562570499663707
+    ],
+    "iqrs_overlap": false,
+    "n_timed_solves_traeff": 3,
+    "n_timed_solves_mg64_rep": 3,
+    "interval_note": null,
+    "traeff_insolver_residual_each_repeat": "0.561;0.912;0.605",
+    "independent_check_of": "iterate of the first timed solve (repeat 0) of each path",
+    "g4_strict_bound_max_pct": [
+     0.09837932198367806,
+     1.1607115197804503
+    ],
+    "traeff_independent_residual": 0.5608920610492393,
+    "traeff_insolver_residual": 0.5609507561,
+    "traeff_class": 7,
+    "mg64_rep_independent_residual": 6.1060725330044055e-06,
+    "mg64_rep_class": 9,
+    "mg64_rep_insolver_residual": 6.106072535070257e-06,
+    "label": "ratio at unequal accuracy"
+   },
+   "128/S1": {
+    "ratio": 33.858437170114634,
+    "interval": [
+     33.49360332749863,
+     35.55365747644917
+    ],
+    "iqr_a": [
+     10.750803589820862,
+     11.293521523475647
+    ],
+    "iqr_b": [
+     0.31764724996173754,
+     0.32098079996649176
+    ],
+    "iqrs_overlap": false,
+    "n_timed_solves_traeff": 3,
+    "n_timed_solves_mg64_rep": 3,
+    "interval_note": null,
+    "traeff_insolver_residual_each_repeat": "9.667e-06;9.666e-06;9.667e-06",
+    "independent_check_of": "iterate of the first timed solve (repeat 0) of each path",
+    "g4_strict_bound_max_pct": [
+     0.20284149494185744,
+     0.8183637978498713
+    ],
+    "traeff_independent_residual": 0.0006507224784923905,
+    "traeff_insolver_residual": 9.666746337e-06,
+    "traeff_class": 8,
+    "mg64_rep_independent_residual": 6.0289678092770575e-06,
+    "mg64_rep_class": 9,
+    "mg64_rep_insolver_residual": 6.028967809159899e-06,
+    "label": "ratio at unequal accuracy"
+   },
+   "128/S5": {
+    "ratio": 1267.6004301307162,
+    "interval": [
+     1266.1567648331059,
+     1268.3869589746064
+    ],
+    "iqr_a": [
+     780.7751891613007,
+     780.7751891613007
+    ],
+    "iqr_b": [
+     0.6155654499889351,
+     0.6166496999794617
+    ],
+    "iqrs_overlap": false,
+    "n_timed_solves_traeff": 1,
+    "n_timed_solves_mg64_rep": 3,
+    "interval_note": "one released timed solve (plan 4.2: the first took > 120 s), so the interval holds no estimate of released run-to-run variation",
+    "traeff_insolver_residual_each_repeat": 7.088,
+    "independent_check_of": "iterate of the first timed solve (repeat 0) of each path",
+    "g4_strict_bound_max_pct": [
+     0.12492812525142281,
+     0.7371729871970731
+    ],
+    "traeff_independent_residual": 7.0883613306456335,
+    "traeff_insolver_residual": 7.087995052,
+    "traeff_class": 7,
+    "mg64_rep_independent_residual": 7.345888774474231e-06,
+    "mg64_rep_class": 9,
+    "mg64_rep_insolver_residual": 7.345888784702252e-06,
+    "label": "ratio at unequal accuracy"
+   },
+   "160/S1": {
+    "ratio": 50.11204894367472,
+    "interval": [
+     47.60386082437568,
+     50.21511260330027
+    ],
+    "iqr_a": [
+     20.18525803089142,
+     21.115841507911682
+    ],
+    "iqr_b": [
+     0.42050770003697835,
+     0.4240256500488613
+    ],
+    "iqrs_overlap": false,
+    "n_timed_solves_traeff": 3,
+    "n_timed_solves_mg64_rep": 3,
+    "interval_note": null,
+    "traeff_insolver_residual_each_repeat": "6.028e-06;5.973e-06;5.932e-06",
+    "independent_check_of": "iterate of the first timed solve (repeat 0) of each path",
+    "g4_strict_bound_max_pct": [
+     0.014646673970179614,
+     0.04281879395258742
+    ],
+    "traeff_independent_residual": 0.0008326178635784503,
+    "traeff_insolver_residual": 6.027876225e-06,
+    "traeff_class": 8,
+    "mg64_rep_independent_residual": 9.11219030536952e-06,
+    "mg64_rep_class": 9,
+    "mg64_rep_insolver_residual": 9.112190305335448e-06,
+    "label": "ratio at unequal accuracy"
+   },
+   "160/S5": {
+    "ratio": 1225.2836575001677,
+    "interval": [
+     1190.1742451541793,
+     1225.4157710494749
+    ],
+    "iqr_a": [
+     1246.7498919963837,
+     1246.7498919963837
+    ],
+    "iqr_b": [
+     1.0174096999980975,
+     1.0475355999951717
+    ],
+    "iqrs_overlap": false,
+    "n_timed_solves_traeff": 1,
+    "n_timed_solves_mg64_rep": 3,
+    "interval_note": "one released timed solve (plan 4.2: the first took > 120 s), so the interval holds no estimate of released run-to-run variation",
+    "traeff_insolver_residual_each_repeat": 6.522,
+    "independent_check_of": "iterate of the first timed solve (repeat 0) of each path",
+    "g4_strict_bound_max_pct": [
+     0.0028363901988374043,
+     0.018549867074847955
+    ],
+    "traeff_independent_residual": 6.523081281440706,
+    "traeff_insolver_residual": 6.522425652,
+    "traeff_class": 7,
+    "mg64_rep_independent_residual": 6.133520252285683e-06,
+    "mg64_rep_class": 9,
+    "mg64_rep_insolver_residual": 6.133520253044088e-06,
+    "label": "ratio at unequal accuracy"
+   }
+  },
+  "descriptive_G2_not_evaluated": {
+   "256/S1": {
+    "ratio": 89.53713720553256,
+    "interval": [
+     89.50798823908356,
+     89.53961924888456
+    ],
+    "iqr_a": [
+     126.29483604431152,
+     126.29483604431152
+    ],
+    "iqr_b": [
+     1.4104910999594722,
+     1.4109895499714185
+    ],
+    "iqrs_overlap": false,
+    "n_timed_solves_traeff": 1,
+    "n_timed_solves_mg64_rep": 3,
+    "interval_note": "one released timed solve (plan 4.2: the first took > 120 s), so the interval holds no estimate of released run-to-run variation",
+    "traeff_insolver_residual_each_repeat": 7.528e-06,
+    "independent_check_of": "iterate of the first timed solve (repeat 0) of each path",
+    "g4_strict_bound_max_pct": [
+     0.011939309641790623,
+     0.012162040805375798
+    ],
+    "traeff_independent_residual": null,
+    "traeff_insolver_residual": 7.527528396e-06,
+    "traeff_class": 8,
+    "mg64_rep_independent_residual": null,
+    "mg64_rep_class": 8,
+    "mg64_rep_insolver_residual": 2.2760864538323255e-06,
+    "label": "accuracy relationship unresolved: no independent residual for traeff or mg64_rep"
+   },
+   "320/S1": {
+    "ratio": 95.52155730892963,
+    "interval": [
+     95.46407564307812,
+     95.5267918953813
+    ],
+    "iqr_a": [
+     239.25253891944885,
+     239.25253891944885
+    ],
+    "iqr_b": [
+     2.5045595499686897,
+     2.506204949953826
+    ],
+    "iqrs_overlap": false,
+    "n_timed_solves_traeff": 1,
+    "n_timed_solves_mg64_rep": 3,
+    "interval_note": "one released timed solve (plan 4.2: the first took > 120 s), so the interval holds no estimate of released run-to-run variation",
+    "traeff_insolver_residual_each_repeat": 8.824e-06,
+    "independent_check_of": "iterate of the first timed solve (repeat 0) of each path",
+    "g4_strict_bound_max_pct": [
+     0.00648737382781253,
+     0.02043822945910128
+    ],
+    "traeff_independent_residual": null,
+    "traeff_insolver_residual": 8.823742064e-06,
+    "traeff_class": 8,
+    "mg64_rep_independent_residual": null,
+    "mg64_rep_class": 8,
+    "mg64_rep_insolver_residual": 3.3371677812735585e-06,
+    "label": "accuracy relationship unresolved: no independent residual for traeff or mg64_rep"
+   }
+  },
+  "outcome": "supports",
+  "g4_scope": "the bounds in g4_strict_bound_max_pct cover whole fixed-state solves only (D34); they are not bounds for individual Krylov steps"
+ },
+ "P6": {
+  "data": {
+   "64/S1/mg64_orig": {
+    "traeff_M1": 1663213568.0,
+    "ours_M1": 532885504.0,
+    "ratio": 3.1211462040446123
+   },
+   "64/S1/mg64_rep": {
+    "traeff_M1": 1663213568.0,
+    "ours_M1": 532885504.0,
+    "ratio": 3.1211462040446123
+   },
+   "64/S1/mgir_rep": {
+    "traeff_M1": 1663213568.0,
+    "ours_M1": 495132672.0,
+    "ratio": 3.359127082609487
+   },
+   "64/S5/mg64_orig": {
+    "traeff_M1": 1663213568.0,
+    "ours_M1": 532885504.0,
+    "ratio": 3.1211462040446123
+   },
+   "64/S5/mg64_rep": {
+    "traeff_M1": 1663213568.0,
+    "ours_M1": 532885504.0,
+    "ratio": 3.1211462040446123
+   },
+   "64/S5/mgir_rep": {
+    "traeff_M1": 1663213568.0,
+    "ours_M1": 495132672.0,
+    "ratio": 3.359127082609487
+   },
+   "128/S1/mg64_orig": {
+    "traeff_M1": 2825043968.0,
+    "ours_M1": 1323646976.0,
+    "ratio": 2.134288083773781
+   },
+   "128/S1/mg64_rep": {
+    "traeff_M1": 2825043968.0,
+    "ours_M1": 1323646976.0,
+    "ratio": 2.134288083773781
+   },
+   "128/S1/mgir_rep": {
+    "traeff_M1": 2825043968.0,
+    "ours_M1": 1036333056.0,
+    "ratio": 2.7260000553335626
+   },
+   "128/S5/mg64_orig": {
+    "traeff_M1": 2825043968.0,
+    "ours_M1": 1323646976.0,
+    "ratio": 2.134288083773781
+   },
+   "128/S5/mg64_rep": {
+    "traeff_M1": 2825043968.0,
+    "ours_M1": 1323646976.0,
+    "ratio": 2.134288083773781
+   },
+   "128/S5/mgir_rep": {
+    "traeff_M1": 2825043968.0,
+    "ours_M1": 1036333056.0,
+    "ratio": 2.7260000553335626
+   },
+   "160/S1/mg64_orig": {
+    "traeff_M1": 3548569600.0,
+    "ours_M1": 2154131456.0,
+    "ratio": 1.6473319630127532
+   },
+   "160/S1/mg64_rep": {
+    "traeff_M1": 3548569600.0,
+    "ours_M1": 2154131456.0,
+    "ratio": 1.6473319630127532
+   },
+   "160/S1/mgir_rep": {
+    "traeff_M1": 3548569600.0,
+    "ours_M1": 1583697920.0,
+    "ratio": 2.2406859005030455
+   },
+   "160/S5/mg64_orig": {
+    "traeff_M1": 3548569600.0,
+    "ours_M1": 2154131456.0,
+    "ratio": 1.6473319630127532
+   },
+   "160/S5/mg64_rep": {
+    "traeff_M1": 3548569600.0,
+    "ours_M1": 2154131456.0,
+    "ratio": 1.6473319630127532
+   },
+   "160/S5/mgir_rep": {
+    "traeff_M1": 3548569600.0,
+    "ours_M1": 1583697920.0,
+    "ratio": 2.2406859005030455
+   }
+  },
+  "descriptive_G2_not_evaluated": {
+   "256/S1/mg64_orig": {
+    "traeff_M1": 9573732352.0,
+    "ours_M1": 7317352448.0,
+    "ratio": 1.308360150755991
+   },
+   "256/S1/mg64_rep": {
+    "traeff_M1": 9573732352.0,
+    "ours_M1": 7317352448.0,
+    "ratio": 1.308360150755991
+   },
+   "256/S1/mgir_rep": {
+    "traeff_M1": 9573732352.0,
+    "ours_M1": 5012566016.0,
+    "ratio": 1.909946387028292
+   },
+   "320/S1/mg64_orig": {
+    "traeff_M1": 13975687168.0,
+    "ours_M1": 13596278784.0,
+    "ratio": 1.027905310712405
+   },
+   "320/S1/mg64_rep": {
+    "traeff_M1": 13975687168.0,
+    "ours_M1": 13596278784.0,
+    "ratio": 1.027905310712405
+   },
+   "320/S1/mgir_rep": {
+    "traeff_M1": 13975687168.0,
+    "ours_M1": 9106243584.0,
+    "ratio": 1.5347368032803108
+   }
+  },
+  "outcome": "supports",
+  "states_used": "S1 and S5: every (k, state) with data (the released M1 comes from that state's fixed-state timing run)"
+ },
+ "P7": {
+  "data": {
+   "64/S1/mg64_orig": 9,
+   "64/S1/mg64_rep": 9,
+   "64/S1/mgir_rep": 9,
+   "64/S5/mg64_orig": 9,
+   "64/S5/mg64_rep": 9,
+   "64/S5/mgir_rep": 9,
+   "128/S1/mg64_orig": 9,
+   "128/S1/mg64_rep": 9,
+   "128/S1/mgir_rep": 9,
+   "128/S5/mg64_orig": 9,
+   "128/S5/mg64_rep": 9,
+   "128/S5/mgir_rep": 9,
+   "160/S1/mg64_orig": 9,
+   "160/S1/mg64_rep": 9,
+   "160/S1/mgir_rep": 9,
+   "160/S5/mg64_orig": 9,
+   "160/S5/mg64_rep": 9,
+   "160/S5/mgir_rep": 9,
+   "256/S1/mg64_orig": 8,
+   "256/S1/mg64_rep": 8,
+   "256/S1/mgir_rep": 8,
+   "320/S1/mg64_orig": 8,
+   "320/S1/mg64_rep": 8,
+   "320/S1/mgir_rep": 8,
+   "384/S1/mgir_rep": 4
+  },
+  "class_8_entries": {
+   "256/S1/mg64_orig": {
+    "independent_residual": null,
+    "insolver_residual": 2.276083168586912e-06,
+    "reason": "independent residual missing (no valid K2 checker at this k)"
+   },
+   "256/S1/mg64_rep": {
+    "independent_residual": null,
+    "insolver_residual": 2.2760864538323255e-06,
+    "reason": "independent residual missing (no valid K2 checker at this k)"
+   },
+   "256/S1/mgir_rep": {
+    "independent_residual": null,
+    "insolver_residual": 9.31444519713614e-06,
+    "reason": "independent residual missing (no valid K2 checker at this k)"
+   },
+   "320/S1/mg64_orig": {
+    "independent_residual": null,
+    "insolver_residual": 3.3371822277336178e-06,
+    "reason": "independent residual missing (no valid K2 checker at this k)"
+   },
+   "320/S1/mg64_rep": {
+    "independent_residual": null,
+    "insolver_residual": 3.3371677812735585e-06,
+    "reason": "independent residual missing (no valid K2 checker at this k)"
+   },
+   "320/S1/mgir_rep": {
+    "independent_residual": null,
+    "insolver_residual": 4.151451156963255e-06,
+    "reason": "independent residual missing (no valid K2 checker at this k)"
+   }
+  },
+  "independent_residual_above_1e-5_anywhere": false,
+  "outcome": "contradicts"
+ },
+ "P8": {
+  "data": {
+   "64": false,
+   "128": false,
+   "160": false
+  },
+  "failed_measures_N1": {
+   "64": [
+    "dv_rel_l2",
+    "dv_max_rel",
+    "filtered_dc_rel_l2",
+    "filtered_dc_max_rel",
+    "x_next_max_abs",
+    "x_next_dv_weighted_mean_over_mean",
+    "xPhys_next_max_abs",
+    "xPhys_next_dv_weighted_mean_over_mean",
+    "next_action_rel"
+   ],
+   "128": [
+    "dv_rel_l2",
+    "dv_max_rel",
+    "filtered_dc_rel_l2",
+    "filtered_dc_max_rel",
+    "x_next_max_abs",
+    "x_next_dv_weighted_mean_over_mean",
+    "xPhys_next_max_abs",
+    "xPhys_next_dv_weighted_mean_over_mean",
+    "next_action_rel"
+   ],
+   "160": [
+    "dv_rel_l2",
+    "dv_max_rel",
+    "filtered_dc_rel_l2",
+    "filtered_dc_max_rel",
+    "x_next_max_abs",
+    "x_next_dv_weighted_mean_over_mean",
+    "xPhys_next_max_abs",
+    "xPhys_next_dv_weighted_mean_over_mean",
+    "next_action_rel"
+   ]
+  },
+  "outcome": "contradicts"
+ },
+ "P9": {
+  "unmatched_states_2_to_5": {
+   "mg64_orig": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "mg64_rep": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "mgir_rep": [
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  "outcome": "supports"
+ },
+ "P10": {
+  "data": {
+   "traeff": {
+    "bound": 320,
+    "next_k": 384,
+    "next_class": 2,
+    "predicted": {
+     "bound": 320,
+     "next_k": 384,
+     "next_class": 2
+    },
+    "classes_by_k": {
+     "64": 8,
+     "128": 8,
+     "160": 8,
+     "256": 8,
+     "320": 8,
+     "384": 2
+    }
+   },
+   "mg64_orig": {
+    "bound": 320,
+    "next_k": 384,
+    "next_class": 2,
+    "predicted": {
+     "bound": 320,
+     "next_k": 384,
+     "next_class": 2
+    },
+    "classes_by_k": {
+     "64": 9,
+     "128": 9,
+     "160": 9,
+     "256": 8,
+     "320": 8,
+     "384": 2
+    }
+   },
+   "mg64_rep": {
+    "bound": 320,
+    "next_k": 384,
+    "next_class": 2,
+    "predicted": {
+     "bound": 320,
+     "next_k": 384,
+     "next_class": 2
+    },
+    "classes_by_k": {
+     "64": 9,
+     "128": 9,
+     "160": 9,
+     "256": 8,
+     "320": 8,
+     "384": 2
+    }
+   },
+   "mgir_rep": {
+    "bound": 320,
+    "next_k": 384,
+    "next_class": 4,
+    "predicted": {
+     "bound": 384,
+     "next_k": null,
+     "next_class": null
+    },
+    "classes_by_k": {
+     "64": 9,
+     "128": 9,
+     "160": 9,
+     "256": 8,
+     "320": 8,
+     "384": 4
+    }
+   }
+  },
+  "outcome": "contradicts"
+ },
+ "P11": {
+  "data": {
+   "64": {
+    "ratio": 0.37076466100660554,
+    "interval": [
+     0.36397683825024707,
+     0.5446524395237808
+    ],
+    "iqr_a": [
+     3.904528021812439,
+     4.020912051200867
+    ],
+    "iqr_b": [
+     7.382528305053711,
+     10.727407932281494
+    ],
+    "iqrs_overlap": false
+   },
+   "128": {
+    "ratio": 1.0033554530798936,
+    "interval": [
+     0.9976003427724388,
+     1.0530204605465538
+    ],
+    "iqr_a": [
+     12.930783748626709,
+     13.523360252380371
+    ],
+    "iqr_b": [
+     12.842447757720947,
+     12.961887836456299
+    ],
+    "iqrs_overlap": true
+   },
+   "160": {
+    "ratio": 1.0024526855922604,
+    "interval": [
+     0.9733393528886023,
+     1.007993590008486
+    ],
+    "iqr_a": [
+     22.518120288848877,
+     22.634464263916016
+    ],
+    "iqr_b": [
+     22.454968452453613,
+     23.13491201400757
+    ],
+    "iqrs_overlap": true
+   },
+   "256": {
+    "ratio": 1.003915213238781,
+    "interval": [
+     1.0024199110725518,
+     1.0048052991106702
+    ],
+    "iqr_a": [
+     88.1511116027832,
+     88.26702690124512
+    ],
+    "iqr_b": [
+     87.84490585327148,
+     87.93830871582031
+    ],
+    "iqrs_overlap": false
+   },
+   "320": {
+    "ratio": 1.0032145270584443,
+    "interval": [
+     1.002106493840129,
+     1.0043332712898208
+    ],
+    "iqr_a": [
+     172.7303237915039,
+     172.98416137695312
+    ],
+    "iqr_b": [
+     172.23780822753906,
+     172.3672332763672
+    ],
+    "iqrs_overlap": false
+   }
+  },
+  "outcome": "supports",
+  "g4_step_level": {
+   "rows": {
+    "64/S1/mg64_rep": {
+     "step_median_ms": 3.934079885482788,
+     "strict_bound_pct": 42.13020821621637,
+     "strict_activity": "unresolved"
+    },
+    "64/S1/mg64_orig": {
+     "step_median_ms": 10.610719680786133,
+     "strict_bound_pct": 15.156787608785224,
+     "strict_activity": "unresolved"
+    },
+    "128/S1/mg64_rep": {
+     "step_median_ms": 12.965536117553711,
+     "strict_bound_pct": 19.953372966737547,
+     "strict_activity": "unresolved"
+    },
+    "128/S1/mg64_orig": {
+     "step_median_ms": 12.922176361083984,
+     "strict_bound_pct": 12.387700200515214,
+     "strict_activity": "unresolved"
+    },
+    "160/S1/mg64_rep": {
+     "step_median_ms": 22.574240684509277,
+     "strict_bound_pct": 0.7973693772194352,
+     "strict_activity": "ok"
+    },
+    "160/S1/mg64_orig": {
+     "step_median_ms": 22.51900863647461,
+     "strict_bound_pct": 0.0,
+     "strict_activity": "ok"
+    },
+    "256/S1/mg64_rep": {
+     "step_median_ms": 88.22249603271484,
+     "strict_bound_pct": 0.19428149082317292,
+     "strict_activity": "ok"
+    },
+    "256/S1/mg64_orig": {
+     "step_median_ms": 87.87843322753906,
+     "strict_bound_pct": 0.1101489515759313,
+     "strict_activity": "ok"
+    },
+    "320/S1/mg64_rep": {
+     "step_median_ms": 172.83973693847656,
+     "strict_bound_pct": 0.29612596644821126,
+     "strict_activity": "ok"
+    },
+    "320/S1/mg64_orig": {
+     "step_median_ms": 172.28591918945312,
+     "strict_bound_pct": 0.29542413322914773,
+     "strict_activity": "ok"
+    }
+   },
+   "unresolved": [
+    "64/S1/mg64_rep",
+    "64/S1/mg64_orig",
+    "128/S1/mg64_rep",
+    "128/S1/mg64_orig"
+   ],
+   "interference_rule": "unresolved at step duration for 64/S1/mg64_rep, 64/S1/mg64_orig, 128/S1/mg64_rep, 128/S1/mg64_orig; the ratios are reported as measured, not as cleared"
+  },
+  "rule": "contradiction: ratio > 1.15 with the whole IQR interval above 1.15; inconclusive when 1.15 lies inside the IQR interval at the deciding k"
+ }
+}

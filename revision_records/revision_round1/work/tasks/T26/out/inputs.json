@@ -1,0 +1,280 @@
+{
+ "code": {
+  "copy_equals_authors_code": true,
+  "sha256": {
+   "__init__.py": "c0a1b1cd2147b2ba49cb4a5088cf56d29acdf504a118ebab884a49afa298a2e4",
+   "core.py": "318596a50144b51639725c4e56ce78a5b64734326bade8b37a8780d1fa7fb0de",
+   "filters.py": "a578eb1d7798ce0e761e13fe24371114bad3b73855cb1463b01070368690375f",
+   "guard.py": "d9ed2a1c40b14c2d24cb216edf33146a3d1f16af049c80a24664c0f4ffed3529",
+   "krylov.py": "9693ab48d4e030c5544df52de07cf7bd0bf544674ff6335120a80e1a1ef3b923",
+   "memory.py": "824be1910087b604c5ef4b198ec5d513cb9ed5a4fbe885ac2404a4d81d0b894d",
+   "mg.py": "78006d3b2b2e8ed59226801242828803cd283b541b69ca80688244cbb3c8c5d6",
+   "operators.py": "e89a0ec274e670ad505b49e7fa8cb6291bd41c71bd81e42f289e30f104c1da23",
+   "sass.py": "184cd5714214ef1cd597a91b74b6e548d2236baf97c59d6b1a1aea5ebcf9f360",
+   "simp.py": "b68537c154bd76bc1209f88b04b79c8df422e3f2a1dd2b6b0c3d3e2e0fc3baa8",
+   "sparse.py": "7830a4672baee93881886348e0b6867ac963f4fb27b0519481bbc64adea2ea26"
+  },
+  "vs_record_diff_k160": {
+   "files_compared": 11,
+   "differing": [],
+   "identical": true
+  },
+  "vs_record_diff_k320": {
+   "files_compared": 11,
+   "differing": [],
+   "identical": true
+  },
+  "vs_record_orig_k160": {
+   "files_compared": 11,
+   "differing": [
+    "krylov.py",
+    "operators.py",
+    "simp.py"
+   ],
+   "identical": false
+  },
+  "vs_record_orig_k320": {
+   "files_compared": 11,
+   "differing": [
+    "krylov.py",
+    "operators.py",
+    "simp.py"
+   ],
+   "identical": false
+  }
+ },
+ "fields": {
+  "diff_k160": {
+   "archive": "results/E32/simp_bridge_k160_mg64_stencil_diff.npz",
+   "archive_sha256": "acc9082bb175d8ec7b1a1f1e005967e16d17bda3c48d17196f2a093041e7afa3",
+   "dtype": "float16",
+   "shape": [
+    320,
+    160,
+    160
+   ],
+   "grid_record": [
+    320,
+    160,
+    160
+   ],
+   "min": 0.0,
+   "max": 1.0,
+   "mean": 0.20000000056473072,
+   "record_volume_phys": 0.19999999999997817,
+   "mean_minus_record": 5.64752550280545e-10,
+   "record_status": "ok",
+   "record_valid": true,
+   "record_converged": true,
+   "record_termination": "bounded_oscillation",
+   "record_iterations": 79,
+   "record_final_rel_true": 9.537169714401314e-06,
+   "record_tol": 1e-05,
+   "op32": "stencil_diff",
+   "op64": "node_hoist",
+   "solver": "mg64",
+   "volfrac": 0.2,
+   "simp_law_final": {
+    "p": 4.5,
+    "Emin": 1e-09,
+    "E0": 1.0
+   },
+   "spill": false,
+   "native_c": 0.08798177029441485,
+   "native_2kc": 28.154166494212753,
+   "k": 160
+  },
+  "diff_k320": {
+   "archive": "results/E32/simp_bridge_k320_mg64_stencil_diff.npz",
+   "archive_sha256": "9f2fd296a4af0785745f68db4644b441c044e4c994c5e9c600054a384cffb8ff",
+   "dtype": "float16",
+   "shape": [
+    640,
+    320,
+    320
+   ],
+   "grid_record": [
+    640,
+    320,
+    320
+   ],
+   "min": 0.0,
+   "max": 1.0,
+   "mean": 0.19999999998511522,
+   "record_volume_phys": 0.19999999999999862,
+   "mean_minus_record": -1.4883400067944308e-11,
+   "record_status": "ok",
+   "record_valid": true,
+   "record_converged": true,
+   "record_termination": "bounded_oscillation",
+   "record_iterations": 76,
+   "record_final_rel_true": 3.855010033502031e-06,
+   "record_tol": 1e-05,
+   "op32": "stencil_diff",
+   "op64": "node_hoist",
+   "solver": "mg64",
+   "volfrac": 0.2,
+   "simp_law_final": {
+    "p": 4.5,
+    "Emin": 1e-09,
+    "E0": 1.0
+   },
+   "spill": false,
+   "native_c": 0.04744073911681174,
+   "native_2kc": 30.362073034759515,
+   "k": 320
+  },
+  "orig_k160": {
+   "archive": "results/E6b/simp_bridge_k160_mg64_stencil.npz",
+   "archive_sha256": "e96275153dfb636d2d181aa9a52a77946ea20c09957f147e81778967ce334a3b",
+   "dtype": "float16",
+   "shape": [
+    320,
+    160,
+    160
+   ],
+   "grid_record": [
+    320,
+    160,
+    160
+   ],
+   "min": 0.0,
+   "max": 1.0,
+   "mean": 0.2000000002026136,
+   "record_volume_phys": 0.1999999999999127,
+   "mean_minus_record": 2.0270091161123105e-10,
+   "record_status": "ok",
+   "record_valid": true,
+   "record_converged": true,
+   "record_termination": "bounded_oscillation",
+   "record_iterations": 79,
+   "record_final_rel_true": 7.83933977520757e-06,
+   "record_tol": 1e-05,
+   "op32": "stencil",
+   "op64": "node_hoist",
+   "solver": "mg64",
+   "volfrac": 0.2,
+   "simp_law_final": {
+    "p": 4.5,
+    "Emin": 1e-09,
+    "E0": 1.0
+   },
+   "spill": false,
+   "native_c": 0.08798177036481217,
+   "native_2kc": 28.154166516739892,
+   "k": 160
+  },
+  "orig_k320": {
+   "archive": "results/E7/simp_bridge_k320_mg64_stencil.npz",
+   "archive_sha256": "f02b7f884b4a1987812a9da745472f2232e8bf156c1d84bbc5c76df5f80208b7",
+   "dtype": "float16",
+   "shape": [
+    640,
+    320,
+    320
+   ],
+   "grid_record": [
+    640,
+    320,
+    320
+   ],
+   "min": 0.0,
+   "max": 1.0,
+   "mean": 0.20000000014215674,
+   "record_volume_phys": 0.19999999999999818,
+   "mean_minus_record": 1.421585626992794e-10,
+   "record_status": "ok",
+   "record_valid": true,
+   "record_converged": true,
+   "record_termination": "bounded_oscillation",
+   "record_iterations": 76,
+   "record_final_rel_true": 6.4255140320622525e-06,
+   "record_tol": 1e-05,
+   "op32": "stencil",
+   "op64": "node_hoist",
+   "solver": "mg64",
+   "volfrac": 0.2,
+   "simp_law_final": {
+    "p": 4.5,
+    "Emin": 1e-09,
+    "E0": 1.0
+   },
+   "spill": false,
+   "native_c": 0.04744067069387902,
+   "native_2kc": 30.362029244082574,
+   "k": 320
+  }
+ },
+ "discretization": {
+  "160": {
+   "k": 160,
+   "grid": [
+    320,
+    160,
+    160
+   ],
+   "h": 0.00625,
+   "loaded_nodes": 2737,
+   "load_component": [
+    1
+   ],
+   "per_node_share": [
+    -0.00036536353671903543
+   ],
+   "total_load": -1.0,
+   "x_lines": 17,
+   "z_lines": 161,
+   "x_extent": [
+    0.9500000000000001,
+    1.05
+   ],
+   "y": [
+    1.0
+   ],
+   "x_first_moment": 1.0,
+   "x_second_central_moment": 0.0009374999999999995,
+   "share_end_x_lines": 0.05882352941176472,
+   "consistent_trapezoid_end_share": 0.03125,
+   "pinned_nodes": 161,
+   "roller_nodes": 161,
+   "n_fixed_dofs": 805
+  },
+  "320": {
+   "k": 320,
+   "grid": [
+    640,
+    320,
+    320
+   ],
+   "h": 0.003125,
+   "loaded_nodes": 10593,
+   "load_component": [
+    1
+   ],
+   "per_node_share": [
+    -9.440196356084207e-05
+   ],
+   "total_load": -0.9999999999999999,
+   "x_lines": 33,
+   "z_lines": 321,
+   "x_extent": [
+    0.9500000000000001,
+    1.05
+   ],
+   "y": [
+    1.0
+   ],
+   "x_first_moment": 1.0000000000000002,
+   "x_second_central_moment": 0.0008854166666666666,
+   "share_end_x_lines": 0.0303030303030303,
+   "consistent_trapezoid_end_share": 0.015625,
+   "pinned_nodes": 321,
+   "roller_nodes": 321,
+   "n_fixed_dofs": 1605
+  }
+ },
+ "native_changes": {
+  "diff_2kc_k320_over_k160_minus_1": 0.07842201760796619,
+  "orig_2kc_k320_over_k160_minus_1": 0.0784204613562236
+ }
+}

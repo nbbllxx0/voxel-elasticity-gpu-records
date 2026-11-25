@@ -1,0 +1,701 @@
+{
+ "task": "T27",
+ "name": "H3_solve_k80_mgir_rep",
+ "kind": "H3",
+ "args": {
+  "step": "H3",
+  "k": 80,
+  "path": "mgir_rep",
+  "tag": ""
+ },
+ "status": "ok",
+ "device_baseline_mib": 3443.0,
+ "others_at_launch": {
+  "10452": {
+   "dedicated": 17666048,
+   "shared": 212992
+  },
+  "11260": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "11320": {
+   "dedicated": 14184448,
+   "shared": 368640
+  },
+  "12224": {
+   "dedicated": 426323968,
+   "shared": 1830912
+  },
+  "12436": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "12680": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "14776": {
+   "dedicated": 108019712,
+   "shared": 3768320
+  },
+  "15716": {
+   "dedicated": 20516864,
+   "shared": 319488
+  },
+  "15740": {
+   "dedicated": 25104384,
+   "shared": 319488
+  },
+  "15920": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "17624": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "17952": {
+   "dedicated": 70443008,
+   "shared": 212992
+  },
+  "18196": {
+   "dedicated": 42086400,
+   "shared": 319488
+  },
+  "18972": {
+   "dedicated": 20123648,
+   "shared": 0
+  },
+  "1952": {
+   "dedicated": 110555136,
+   "shared": 49152
+  },
+  "19812": {
+   "dedicated": 16449536,
+   "shared": 212992
+  },
+  "20852": {
+   "dedicated": 157810688,
+   "shared": 212992
+  },
+  "21048": {
+   "dedicated": 38948864,
+   "shared": 262144
+  },
+  "21208": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "21444": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "22832": {
+   "dedicated": 20312064,
+   "shared": 212992
+  },
+  "23188": {
+   "dedicated": 155365376,
+   "shared": 319488
+  },
+  "24000": {
+   "dedicated": 10952704,
+   "shared": 319488
+  },
+  "2412": {
+   "dedicated": 4504580096,
+   "shared": 4505600
+  },
+  "26300": {
+   "dedicated": 488538112,
+   "shared": 14221312
+  },
+  "27604": {
+   "dedicated": 10952704,
+   "shared": 319488
+  },
+  "29616": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "33408": {
+   "dedicated": 19472384,
+   "shared": 212992
+  },
+  "3440": {
+   "dedicated": 23465984,
+   "shared": 24760320
+  },
+  "35872": {
+   "dedicated": 334004224,
+   "shared": 16662528
+  },
+  "36592": {
+   "dedicated": 369803264,
+   "shared": 368640
+  },
+  "37792": {
+   "dedicated": 18808832,
+   "shared": 262144
+  },
+  "38068": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "3824": {
+   "dedicated": 64327680,
+   "shared": 319488
+  },
+  "40444": {
+   "dedicated": 124051456,
+   "shared": 368640
+  },
+  "4056": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "41960": {
+   "dedicated": 190926848,
+   "shared": 9224192
+  },
+  "42776": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "43316": {
+   "dedicated": 18092032,
+   "shared": 0
+  },
+  "4": {
+   "dedicated": 4235264,
+   "shared": 270336
+  },
+  "5060": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "55132": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "57712": {
+   "dedicated": 15065088,
+   "shared": 2396160
+  },
+  "7476": {
+   "dedicated": 17235968,
+   "shared": 0
+  }
+ },
+ "others_dedicated_at_launch_bytes": 7546245120,
+ "environment": {
+  "time": "2026-11-23T07:27:59",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "4516ab6f281f6cfa",
+ "started": "2026-11-23T07:27:59",
+ "protective_pool_cap": {
+  "E_free_bytes": 17855418368,
+  "pool_cap_bytes": 16244805632,
+  "E_free_info": {
+   "cuda_free": 24152899584,
+   "total": 25756696576,
+   "others_dedicated": 7546707968,
+   "wddm_free": 17855418368
+  }
+ },
+ "k": 80,
+ "n_elem": 1024000,
+ "ndof": 3168963,
+ "path": "mgir_rep",
+ "solver": "mgir",
+ "variant": "stencil_diff",
+ "setup_a_s": 0.19496179994894192,
+ "setup_b_s": 0.06179360003443435,
+ "mg_levels": 5,
+ "first_application_s": 0.014276300033088773,
+ "timed": [
+  {
+   "solve_s": 0.33698280004318804,
+   "step_ms_median": 9.30303955078125,
+   "step_ms_iqr": [
+    9.168448448181152,
+    9.36457633972168
+   ],
+   "n_steps": 21,
+   "start_overhead_ms": 109.69449615478516,
+   "cum_ms_at_precond": [
+    109.69449615478516,
+    119.0223388671875,
+    129.8383026123047,
+    140.05223083496094,
+    149.338623046875,
+    158.7032012939453,
+    168.00624084472656,
+    177.38864135742188,
+    186.6341094970703,
+    201.18722534179688,
+    210.3062744140625,
+    223.7709503173828,
+    232.87376403808594,
+    242.21481323242188,
+    252.28553771972656,
+    261.6011962890625,
+    270.7867431640625,
+    283.84283447265625,
+    294.03369140625,
+    303.2181701660156,
+    312.5772705078125,
+    321.7457275390625,
+    325.259765625,
+    328.7953796386719,
+    332.32440185546875
+   ],
+   "total_ms": 336.9846496582031,
+   "stats": {
+    "outer": 4,
+    "inner_iters": 25,
+    "matvecs64": 5,
+    "matvecs32": 25,
+    "precond": 29,
+    "rel_initial": 1.0,
+    "warm_start_reset": false,
+    "rejected_steps": 0,
+    "rel_true": 8.617615923219954e-06,
+    "converged": true,
+    "inner_tol_final": 0.1,
+    "time_s": 0.33694629999808967
+   },
+   "insolver_history": [
+    [
+     0,
+     0,
+     1.0
+    ],
+    [
+     1,
+     9,
+     0.05370359218395758
+    ],
+    [
+     2,
+     2,
+     0.0024852998347175783
+    ],
+    [
+     3,
+     6,
+     0.00010569493014059272
+    ],
+    [
+     4,
+     8,
+     8.617615923219954e-06
+    ]
+   ],
+   "outer_residual_ms": [
+    1.0659840106964111,
+    2.3848960399627686,
+    2.3941121101379395,
+    2.381824016571045,
+    0.9912319779396057
+   ],
+   "outer_residual_ms_mean_per_outer": 2.0380160361528397,
+   "cum_ms_at_outer_residual_end": [
+    1.1028480529785156,
+    200.8442840576172,
+    223.36819458007812,
+    283.52203369140625,
+    336.92364501953125
+   ],
+   "iterations": 4,
+   "inner_iterations": 25
+  },
+  {
+   "solve_s": 0.09467669995501637,
+   "step_ms_median": 3.5257279872894287,
+   "step_ms_iqr": [
+    3.5220799446105957,
+    3.5356481075286865
+   ],
+   "n_steps": 21,
+   "start_overhead_ms": 1.217695951461792,
+   "cum_ms_at_precond": [
+    1.217695951461792,
+    4.731488227844238,
+    8.257216453552246,
+    12.047679901123047,
+    15.583711624145508,
+    19.095903396606445,
+    22.631040573120117,
+    26.156095504760742,
+    29.684831619262695,
+    34.4549446105957,
+    37.97772979736328,
+    42.68783950805664,
+    46.20991897583008,
+    49.75980758666992,
+    53.524288177490234,
+    57.049312591552734,
+    60.56480026245117,
+    65.28534698486328,
+    68.79609680175781,
+    72.32233428955078,
+    75.84288024902344,
+    79.44735717773438,
+    82.9830093383789,
+    86.50627136230469,
+    90.04112243652344
+   ],
+   "total_ms": 94.67581176757812,
+   "stats": {
+    "outer": 4,
+    "inner_iters": 25,
+    "matvecs64": 5,
+    "matvecs32": 25,
+    "precond": 29,
+    "rel_initial": 1.0,
+    "warm_start_reset": false,
+    "rejected_steps": 0,
+    "rel_true": 8.617615923219954e-06,
+    "converged": true,
+    "inner_tol_final": 0.1,
+    "time_s": 0.09464739996474236
+   },
+   "insolver_history": [
+    [
+     0,
+     0,
+     1.0
+    ],
+    [
+     1,
+     9,
+     0.05370359218395758
+    ],
+    [
+     2,
+     2,
+     0.0024852998347175783
+    ],
+    [
+     3,
+     6,
+     0.00010569493014059272
+    ],
+    [
+     4,
+     8,
+     8.617615923219954e-06
+    ]
+   ],
+   "outer_residual_ms": [
+    1.006592035293579,
+    0.9871360063552856,
+    0.9891200065612793,
+    0.9871360063552856,
+    0.9891840219497681
+   ],
+   "outer_residual_ms_mean_per_outer": 0.9881440103054047,
+   "cum_ms_at_outer_residual_end": [
+    1.0324480533599854,
+    34.27967834472656,
+    42.52799987792969,
+    65.1061782836914,
+    94.60761260986328
+   ],
+   "iterations": 4,
+   "inner_iterations": 25
+  },
+  {
+   "solve_s": 0.0959772999631241,
+   "step_ms_median": 3.5484800338745117,
+   "step_ms_iqr": [
+    3.523871898651123,
+    3.636863946914673
+   ],
+   "n_steps": 21,
+   "start_overhead_ms": 1.2525440454483032,
+   "cum_ms_at_precond": [
+    1.2525440454483032,
+    4.775680065155029,
+    8.324159622192383,
+    11.874431610107422,
+    15.61075210571289,
+    19.149951934814453,
+    22.70342445373535,
+    26.56470489501953,
+    30.110912322998047,
+    34.91766357421875,
+    38.554527282714844,
+    43.38854217529297,
+    46.89827346801758,
+    50.42214584350586,
+    53.9634895324707,
+    57.53731155395508,
+    61.063297271728516,
+    65.80016326904297,
+    69.31951904296875,
+    73.13788604736328,
+    76.97078704833984,
+    80.48397064208984,
+    84.3267822265625,
+    87.88137817382812,
+    91.40332794189453
+   ],
+   "total_ms": 95.97676849365234,
+   "stats": {
+    "outer": 4,
+    "inner_iters": 25,
+    "matvecs64": 5,
+    "matvecs32": 25,
+    "precond": 29,
+    "rel_initial": 1.0,
+    "warm_start_reset": false,
+    "rejected_steps": 0,
+    "rel_true": 8.617615923219954e-06,
+    "converged": true,
+    "inner_tol_final": 0.1,
+    "time_s": 0.09592829999746755
+   },
+   "insolver_history": [
+    [
+     0,
+     0,
+     1.0
+    ],
+    [
+     1,
+     9,
+     0.05370359218395758
+    ],
+    [
+     2,
+     2,
+     0.0024852998347175783
+    ],
+    [
+     3,
+     6,
+     0.00010569493014059272
+    ],
+    [
+     4,
+     8,
+     8.617615923219954e-06
+    ]
+   ],
+   "outer_residual_ms": [
+    1.0117119550704956,
+    0.9922239780426025,
+    0.9932799935340881,
+    0.9881600141525269,
+    0.9728000164031982
+   ],
+   "outer_residual_ms_mean_per_outer": 0.9866160005331039,
+   "cum_ms_at_outer_residual_end": [
+    1.0605119466781616,
+    34.744991302490234,
+    43.13974380493164,
+    65.62882995605469,
+    95.91465759277344
+   ],
+   "iterations": 4,
+   "inner_iterations": 25
+  }
+ ],
+ "solve_s_median": 0.0959772999631241,
+ "solve_s_iqr": [
+  0.09532699995907024,
+  0.21648005000315607
+ ],
+ "median_run_index": 2,
+ "iterate_file": "scratch/h3_k80_mgir_rep_x.npy",
+ "iterate_order": "ours, FP64",
+ "history_solve": {
+  "stats": {
+   "outer": 4,
+   "inner_iters": 25,
+   "matvecs64": 5,
+   "matvecs32": 25,
+   "precond": 29,
+   "rel_initial": 1.0,
+   "warm_start_reset": false,
+   "rejected_steps": 0,
+   "rel_true": 8.617615923219954e-06,
+   "converged": true,
+   "inner_tol_final": 0.1,
+   "time_s": 0.10545020003337413
+  },
+  "insolver_history": [
+   [
+    0,
+    0,
+    1.0
+   ],
+   [
+    1,
+    9,
+    0.05370359218395758
+   ],
+   [
+    2,
+    2,
+    0.0024852998347175783
+   ],
+   [
+    3,
+    6,
+    0.00010569493014059272
+   ],
+   [
+    4,
+    8,
+    8.617615923219954e-06
+   ]
+  ],
+  "rows": [
+   {
+    "call": 0,
+    "rel_true": 1.0,
+    "rel_insolver": 1.0
+   },
+   {
+    "call": 1,
+    "rel_true": 0.053703592181530965,
+    "rel_insolver": 0.05370359218395758
+   },
+   {
+    "call": 2,
+    "rel_true": 0.002485299830719442,
+    "rel_insolver": 0.0024852998347175783
+   },
+   {
+    "call": 3,
+    "rel_true": 0.00010569493016575607,
+    "rel_insolver": 0.00010569493014059272
+   },
+   {
+    "call": 4,
+    "rel_true": 8.61761591763605e-06,
+    "rel_insolver": 8.617615923219954e-06
+   }
+  ]
+ },
+ "outcome_class": 9,
+ "outcome": "verified acceptance (in-process)",
+ "end": "2026-11-23T07:28:05",
+ "process_wall_s": 15.86841869354248,
+ "pool": {
+  "pool_used_peak_bytes": 245196288,
+  "pool_reserved_peak_bytes": 257389568,
+  "hook_calls": 748,
+  "largest_request_bytes": 25352192
+ },
+ "device_wide": {
+  "n_samples": 55,
+  "device_peak_bytes": 4310695936,
+  "baseline_bytes": 3610247168
+ },
+ "process_dedicated": {
+  "n_samples": 13,
+  "n_own": 13,
+  "dedicated_peak_bytes": 706920448,
+  "shared_start_bytes": 77594624,
+  "shared_max_bytes": 90177536,
+  "shared_growth_bytes": 12582912,
+  "spilled": false,
+  "others_dedicated_max_bytes": 7546712064,
+  "others_dedicated_first_bytes": 7546245120
+ },
+ "spillwatch": {
+  "max_shared_growth_bytes": 12582912,
+  "spilled": false
+ },
+ "spillwatch_samples": [
+  {
+   "tag": "start",
+   "t": 1795447679.1810682,
+   "dedicated": 354570240,
+   "shared": 77594624,
+   "others_dedicated": 7546249216
+  },
+  {
+   "tag": "end",
+   "t": 1795447685.1386395,
+   "dedicated": 706920448,
+   "shared": 90177536,
+   "others_dedicated": 7546712064
+  }
+ ],
+ "spilled": false,
+ "activity": {
+  "n_samples": 1,
+  "mean_foreign_pct": 0.5612937310841519,
+  "max_foreign_pct": 0.5612937310841519
+ },
+ "activity_timed": [
+  {
+   "label": "solve0",
+   "duration_s": 0.336597204208374,
+   "mean_foreign_pct": 0.5612937310841519,
+   "n_samples": 1
+  },
+  {
+   "label": "solve1",
+   "duration_s": 0.09410524368286133,
+   "mean_foreign_pct": 0.5612937310841519,
+   "n_samples": 1
+  },
+  {
+   "label": "solve2",
+   "duration_s": 0.09587669372558594,
+   "mean_foreign_pct": 0.5612937310841519,
+   "n_samples": 1
+  }
+ ],
+ "mean_foreign_timed_pct": 0.5612937310841519,
+ "timing_flag": "ok",
+ "valid": true,
+ "code_files": {
+  "src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "src/voxfem/core.py": "318596a50144b516",
+  "src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "src/voxfem/memory.py": "824be1910087b604",
+  "src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "src/voxfem/operators.py": "e89a0ec274e670ad",
+  "src/voxfem/sass.py": "184cd5714214ef1c",
+  "src/voxfem/simp.py": "b68537c154bd76bc",
+  "src/voxfem/sparse.py": "7830a4672baee938",
+  "src/experiments/_boot.py": "33c086109bcda1dd",
+  "src/experiments/E10_external_hou.py": "f264358c343f6fc8",
+  "src/experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "src/experiments/run_simp.py": "d913d5a57d599399",
+  "drivers/c_check.py": "df8bef0e838c9456",
+  "drivers/c_simp.py": "a823846781153560",
+  "drivers/collect.py": "365e489102f8b9d9",
+  "drivers/hou_instr.py": "f05a9afcf453102b",
+  "drivers/hrun.py": "345ed41a153ea9ab",
+  "drivers/hsys.py": "d7476b336bac9cec",
+  "drivers/predictions.py": "3e1564e093241d7f",
+  "drivers/queue_t27.py": "16d5d2c0052c60de",
+  "drivers/t27boot.py": "7ff37f9b05b0d74c",
+  "drivers/t27lib.py": "49d2266355db07d9",
+  "drivers/v_verify.py": "9c79013b413f25c8"
+ }
+}

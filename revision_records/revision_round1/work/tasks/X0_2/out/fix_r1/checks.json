@@ -1,0 +1,395 @@
+{
+ "note": "CPU only; recomputed from saved records, no new GPU job",
+ "retained_update": {
+  "dev_adaptive_n192": {
+   "run": "dev_adaptive_n192",
+   "termination": "bounded_oscillation",
+   "last_iteration": 141,
+   "stopping_test": {
+    "max_abs_drho_phys": 0.01129254698753357,
+    "n_elem_drho_gt_0.01": 1,
+    "what": "change from iteration t-1 to t, measured before the last OC update"
+   },
+   "retained_update": {
+    "max_abs_drho_phys": 0.011009901762008667,
+    "n_elem_drho_gt_0.01": 2,
+    "n_designable_drho_gt_0.01": 2,
+    "what": "retained (audited) field against the FP16 snapshot of iteration t: the update committed after the last stopping test"
+   },
+   "bounded_oscillation_limit": 1,
+   "retained_update_meets_count_allowance": false,
+   "retained_update_meets_max_change_0.01": false,
+   "sources": [
+    "tasks/X0_2/out/runs/dev_adaptive_n192/fields.npz",
+    "tasks/X0_2/out/runs/dev_adaptive_n192/snapshots.npz",
+    "tasks/X0_2/out/runs/dev_adaptive_n192/history.json"
+   ]
+  },
+  "R_adaptive_n192_rep": {
+   "run": "R_adaptive_n192_rep",
+   "termination": "bounded_oscillation",
+   "last_iteration": 144,
+   "stopping_test": {
+    "max_abs_drho_phys": 0.010556071996688843,
+    "n_elem_drho_gt_0.01": 1,
+    "what": "change from iteration t-1 to t, measured before the last OC update"
+   },
+   "retained_update": {
+    "max_abs_drho_phys": 0.019564032554626465,
+    "n_elem_drho_gt_0.01": 1,
+    "n_designable_drho_gt_0.01": 1,
+    "what": "retained (audited) field against the FP16 snapshot of iteration t: the update committed after the last stopping test"
+   },
+   "bounded_oscillation_limit": 1,
+   "retained_update_meets_count_allowance": true,
+   "retained_update_meets_max_change_0.01": false,
+   "sources": [
+    "tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz",
+    "tasks/X0_2/out/runs/R_adaptive_n192_rep/snapshots.npz",
+    "tasks/X0_2/out/runs/R_adaptive_n192_rep/history.json"
+   ]
+  },
+  "R_adaptive_n384": {
+   "run": "R_adaptive_n384",
+   "termination": "guard",
+   "last_iteration": 300,
+   "stopping_test": {
+    "max_abs_drho_phys": 0.04193598031997681,
+    "n_elem_drho_gt_0.01": 128,
+    "what": "change from iteration t-1 to t, measured before the last OC update"
+   },
+   "retained_update": {
+    "max_abs_drho_phys": 0.05154922604560852,
+    "n_elem_drho_gt_0.01": 135,
+    "n_designable_drho_gt_0.01": 135,
+    "what": "retained (audited) field against the FP16 snapshot of iteration t: the update committed after the last stopping test"
+   },
+   "bounded_oscillation_limit": 7,
+   "retained_update_meets_count_allowance": false,
+   "retained_update_meets_max_change_0.01": false,
+   "sources": [
+    "tasks/X0_2/out/runs/R_adaptive_n384/fields.npz",
+    "tasks/X0_2/out/runs/R_adaptive_n384/snapshots.npz",
+    "tasks/X0_2/out/runs/R_adaptive_n384/history.json"
+   ]
+  },
+  "dev_adaptive_n96": {
+   "run": "dev_adaptive_n96",
+   "termination": "max_change",
+   "last_iteration": 76,
+   "stopping_test": {
+    "max_abs_drho_phys": 0.0027234554290771484,
+    "n_elem_drho_gt_0.01": 0,
+    "what": "change from iteration t-1 to t, measured before the last OC update"
+   },
+   "retained_update": {
+    "max_abs_drho_phys": 0.00014704465866088867,
+    "n_elem_drho_gt_0.01": 0,
+    "n_designable_drho_gt_0.01": 0,
+    "what": "retained (audited) field against the FP16 snapshot of iteration t: the update committed after the last stopping test"
+   },
+   "bounded_oscillation_limit": 1,
+   "retained_update_meets_count_allowance": true,
+   "retained_update_meets_max_change_0.01": true,
+   "sources": [
+    "tasks/X0_2/out/runs/dev_adaptive_n96/fields.npz",
+    "tasks/X0_2/out/runs/dev_adaptive_n96/snapshots.npz",
+    "tasks/X0_2/out/runs/dev_adaptive_n96/history.json"
+   ]
+  },
+  "dev_base_n192": {
+   "run": "dev_base_n192",
+   "termination": "guard",
+   "last_iteration": 300,
+   "stopping_test": {
+    "max_abs_drho_phys": 0.42018067836761475,
+    "n_elem_drho_gt_0.01": 10105,
+    "what": "change from iteration t-1 to t, measured before the last OC update"
+   },
+   "retained_update": {
+    "max_abs_drho_phys": 0.354489803314209,
+    "n_elem_drho_gt_0.01": 10107,
+    "n_designable_drho_gt_0.01": 10107,
+    "what": "retained (audited) field against the FP16 snapshot of iteration t: the update committed after the last stopping test"
+   },
+   "bounded_oscillation_limit": 1,
+   "retained_update_meets_count_allowance": false,
+   "retained_update_meets_max_change_0.01": false,
+   "sources": [
+    "tasks/X0_2/out/runs/dev_base_n192/fields.npz",
+    "tasks/X0_2/out/runs/dev_base_n192/snapshots.npz",
+    "tasks/X0_2/out/runs/dev_base_n192/history.json"
+   ]
+  },
+  "dev_move01_n192": {
+   "run": "dev_move01_n192",
+   "termination": "guard",
+   "last_iteration": 300,
+   "stopping_test": {
+    "max_abs_drho_phys": 0.06220436096191406,
+    "n_elem_drho_gt_0.01": 970,
+    "what": "change from iteration t-1 to t, measured before the last OC update"
+   },
+   "retained_update": {
+    "max_abs_drho_phys": 0.06227979063987732,
+    "n_elem_drho_gt_0.01": 968,
+    "n_designable_drho_gt_0.01": 968,
+    "what": "retained (audited) field against the FP16 snapshot of iteration t: the update committed after the last stopping test"
+   },
+   "bounded_oscillation_limit": 1,
+   "retained_update_meets_count_allowance": false,
+   "retained_update_meets_max_change_0.01": false,
+   "sources": [
+    "tasks/X0_2/out/runs/dev_move01_n192/fields.npz",
+    "tasks/X0_2/out/runs/dev_move01_n192/snapshots.npz",
+    "tasks/X0_2/out/runs/dev_move01_n192/history.json"
+   ]
+  },
+  "dev_beta16_n192": {
+   "run": "dev_beta16_n192",
+   "termination": "guard",
+   "last_iteration": 300,
+   "stopping_test": {
+    "max_abs_drho_phys": 0.1386820673942566,
+    "n_elem_drho_gt_0.01": 2878,
+    "what": "change from iteration t-1 to t, measured before the last OC update"
+   },
+   "retained_update": {
+    "max_abs_drho_phys": 0.13873587548732758,
+    "n_elem_drho_gt_0.01": 2880,
+    "n_designable_drho_gt_0.01": 2880,
+    "what": "retained (audited) field against the FP16 snapshot of iteration t: the update committed after the last stopping test"
+   },
+   "bounded_oscillation_limit": 1,
+   "retained_update_meets_count_allowance": false,
+   "retained_update_meets_max_change_0.01": false,
+   "sources": [
+    "tasks/X0_2/out/runs/dev_beta16_n192/fields.npz",
+    "tasks/X0_2/out/runs/dev_beta16_n192/snapshots.npz",
+    "tasks/X0_2/out/runs/dev_beta16_n192/history.json"
+   ]
+  },
+  "dev_betaramp_n192": {
+   "run": "dev_betaramp_n192",
+   "termination": "guard",
+   "last_iteration": 300,
+   "stopping_test": {
+    "max_abs_drho_phys": 0.4156607389450073,
+    "n_elem_drho_gt_0.01": 9962,
+    "what": "change from iteration t-1 to t, measured before the last OC update"
+   },
+   "retained_update": {
+    "max_abs_drho_phys": 0.3960140347480774,
+    "n_elem_drho_gt_0.01": 9962,
+    "n_designable_drho_gt_0.01": 9962,
+    "what": "retained (audited) field against the FP16 snapshot of iteration t: the update committed after the last stopping test"
+   },
+   "bounded_oscillation_limit": 1,
+   "retained_update_meets_count_allowance": false,
+   "retained_update_meets_max_change_0.01": false,
+   "sources": [
+    "tasks/X0_2/out/runs/dev_betaramp_n192/fields.npz",
+    "tasks/X0_2/out/runs/dev_betaramp_n192/snapshots.npz",
+    "tasks/X0_2/out/runs/dev_betaramp_n192/history.json"
+   ]
+  }
+ },
+ "restarts": {
+  "192": {
+   "first_update_from_T31_retained": {
+    "iteration_entry": 302,
+    "n_elem_gt_0.01_fp32": 10120,
+    "max_abs_change_fp32": 0.3544842600822449,
+    "n_elem_gt_0.01_fp16_reference": 10107,
+    "what": "rho_phys of the first restart update against T31's retained field (bit-identical start)"
+   },
+   "end_check_undamped": {
+    "after_updates": 20,
+    "from_iteration": 320,
+    "n_drho_phys_gt_0.01": 10128,
+    "max_abs_drho_phys": 0.35093581676483154,
+    "what": "trial undamped step from the field after the restart's last update, not from T31's retained field"
+   },
+   "period2": {
+    "n_differing_gt_0.01_from_two_back_range": [
+     0,
+     13
+    ],
+    "max_abs_change_from_two_back_range": [
+     0.0091552734375,
+     0.40869140625
+    ],
+    "share_prev_movers_back_within_0.01_range": [
+     0.9987149070778965,
+     1.0
+    ],
+    "share_movers_also_moved_before_range": [
+     0.9990110759493671,
+     1.0
+    ],
+    "movers_per_step_range": [
+     10101,
+     10125
+    ],
+    "union_of_movers": 10131,
+    "n_alt_fp32_range": [
+     10120,
+     10131
+    ],
+    "n_alt_what": "elements whose physical-density change exceeds 0.01 in two consecutive updates with opposite sign (x02_driver._cnt_alt); a statement about rho_phys, not about design steps"
+   },
+   "design_steps_at_move_limit_range": [
+    68346,
+    68951
+   ],
+   "design_steps_at_move_limit_what": "design-variable steps with |s| >= 0.999 x move limit (x02_driver._cnt_atbound); their signs from step to step were not recorded, so a reversal of every limit-sized step is not established",
+   "sources": [
+    "tasks/X0_2/out/diag_restart_n192.json",
+    "tasks/X0_2/out/runs/diag_restart_n192/history.json"
+   ]
+  },
+  "384": {
+   "first_update_from_T31_retained": {
+    "iteration_entry": 302,
+    "n_elem_gt_0.01_fp32": 80565,
+    "max_abs_change_fp32": 0.5817497968673706,
+    "n_elem_gt_0.01_fp16_reference": 80562,
+    "what": "rho_phys of the first restart update against T31's retained field (bit-identical start)"
+   },
+   "end_check_undamped": {
+    "after_updates": 12,
+    "from_iteration": 312,
+    "n_drho_phys_gt_0.01": 80933,
+    "max_abs_drho_phys": 0.5819806456565857,
+    "what": "trial undamped step from the field after the restart's last update, not from T31's retained field"
+   },
+   "period2": {
+    "n_differing_gt_0.01_from_two_back_range": [
+     366,
+     495
+    ],
+    "max_abs_change_from_two_back_range": [
+     0.087646484375,
+     0.3470458984375
+    ],
+    "share_prev_movers_back_within_0.01_range": [
+     0.9946875853337637,
+     0.9960575742924089
+    ],
+    "share_movers_also_moved_before_range": [
+     0.9971336749761139,
+     0.9976848412816323
+    ],
+    "movers_per_step_range": [
+     80542,
+     80817
+    ],
+    "union_of_movers": 81287,
+    "n_alt_fp32_range": [
+     80299,
+     80621
+    ],
+    "n_alt_what": "elements whose physical-density change exceeds 0.01 in two consecutive updates with opposite sign (x02_driver._cnt_alt); a statement about rho_phys, not about design steps"
+   },
+   "design_steps_at_move_limit_range": [
+    219192,
+    221199
+   ],
+   "design_steps_at_move_limit_what": "design-variable steps with |s| >= 0.999 x move limit (x02_driver._cnt_atbound); their signs from step to step were not recorded, so a reversal of every limit-sized step is not established",
+   "sources": [
+    "tasks/X0_2/out/diag_restart_n384.json",
+    "tasks/X0_2/out/runs/diag_restart_n384/history.json"
+   ]
+  }
+ },
+ "variant_fields_n192": [
+  {
+   "pair": "base vs betaramp",
+   "n_designable": 827324,
+   "n_gt_0.01": 6955,
+   "n_gt_0.5": 362,
+   "max_abs_diff": 0.985858827829361,
+   "mean_abs_diff": 0.0007824126668791147,
+   "sources": [
+    "tasks/X0_2/out/runs/dev_base_n192/fields.npz",
+    "tasks/X0_2/out/runs/dev_betaramp_n192/fields.npz"
+   ]
+  },
+  {
+   "pair": "base vs move01",
+   "n_designable": 827324,
+   "n_gt_0.01": 6655,
+   "n_gt_0.5": 138,
+   "max_abs_diff": 0.9740357398986816,
+   "mean_abs_diff": 0.0004939948771036692,
+   "sources": [
+    "tasks/X0_2/out/runs/dev_base_n192/fields.npz",
+    "tasks/X0_2/out/runs/dev_move01_n192/fields.npz"
+   ]
+  },
+  {
+   "pair": "base vs beta16",
+   "n_designable": 827324,
+   "n_gt_0.01": 22865,
+   "n_gt_0.5": 378,
+   "max_abs_diff": 0.9753463827073574,
+   "mean_abs_diff": 0.0019001591874077837,
+   "sources": [
+    "tasks/X0_2/out/runs/dev_base_n192/fields.npz",
+    "tasks/X0_2/out/runs/dev_beta16_n192/fields.npz"
+   ]
+  },
+  {
+   "pair": "base vs adaptive",
+   "n_designable": 827324,
+   "n_gt_0.01": 6716,
+   "n_gt_0.5": 68,
+   "max_abs_diff": 0.9756700098514557,
+   "mean_abs_diff": 0.0004212874015460311,
+   "sources": [
+    "tasks/X0_2/out/runs/dev_base_n192/fields.npz",
+    "tasks/X0_2/out/runs/dev_adaptive_n192/fields.npz"
+   ]
+  },
+  {
+   "pair": "base vs T31 R_n192 (same settings)",
+   "n_designable": 827324,
+   "n_gt_0.01": 190,
+   "n_gt_0.5": 8,
+   "max_abs_diff": 0.8879550397396088,
+   "mean_abs_diff": 1.8722102752847407e-05,
+   "sources": [
+    "tasks/X0_2/out/runs/dev_base_n192/fields.npz",
+    "tasks/X0_2/inputs_T31/R_n192/fields.npz"
+   ]
+  }
+ ],
+ "betaramp_retained_vs_base_snapshots": {
+  "by_base_iteration": {
+   "base_it297": {
+    "n_gt_0.01": 6944,
+    "n_gt_0.5": 362,
+    "max_abs_diff": 0.9860571622848511
+   },
+   "base_it298": {
+    "n_gt_0.01": 7519,
+    "n_gt_0.5": 361,
+    "max_abs_diff": 0.9889423847198486
+   },
+   "base_it299": {
+    "n_gt_0.01": 6950,
+    "n_gt_0.5": 362,
+    "max_abs_diff": 0.9860571622848511
+   },
+   "base_it300": {
+    "n_gt_0.01": 7523,
+    "n_gt_0.5": 361,
+    "max_abs_diff": 0.9889423847198486
+   }
+  },
+  "sources": [
+   "tasks/X0_2/out/runs/dev_base_n192/snapshots.npz",
+   "tasks/X0_2/out/runs/dev_betaramp_n192/fields.npz"
+  ]
+ }
+}

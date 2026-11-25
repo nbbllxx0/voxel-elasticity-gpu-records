@@ -1,0 +1,210 @@
+{
+ "gate": "G1",
+ "manifest": "results\\E32\\simp_cantilever_k384_mg_ir_stencil_diff.json",
+ "voxfem_and_helpers": [
+  {
+   "file": "code/src/voxfem/__init__.py",
+   "copy": "c0a1b1cd2147b2ba",
+   "manifest": "c0a1b1cd2147b2ba",
+   "match": true
+  },
+  {
+   "file": "code/src/voxfem/core.py",
+   "copy": "318596a50144b516",
+   "manifest": "318596a50144b516",
+   "match": true
+  },
+  {
+   "file": "code/src/voxfem/filters.py",
+   "copy": "a578eb1d7798ce0e",
+   "manifest": "a578eb1d7798ce0e",
+   "match": true
+  },
+  {
+   "file": "code/src/voxfem/guard.py",
+   "copy": "d9ed2a1c40b14c2d",
+   "manifest": "d9ed2a1c40b14c2d",
+   "match": true
+  },
+  {
+   "file": "code/src/voxfem/krylov.py",
+   "copy": "9693ab48d4e030c5",
+   "manifest": "9693ab48d4e030c5",
+   "match": true
+  },
+  {
+   "file": "code/src/voxfem/memory.py",
+   "copy": "824be1910087b604",
+   "manifest": "824be1910087b604",
+   "match": true
+  },
+  {
+   "file": "code/src/voxfem/mg.py",
+   "copy": "78006d3b2b2e8ed5",
+   "manifest": "78006d3b2b2e8ed5",
+   "match": true
+  },
+  {
+   "file": "code/src/voxfem/operators.py",
+   "copy": "e89a0ec274e670ad",
+   "manifest": "e89a0ec274e670ad",
+   "match": true
+  },
+  {
+   "file": "code/src/voxfem/sass.py",
+   "copy": "184cd5714214ef1c",
+   "manifest": "184cd5714214ef1c",
+   "match": true
+  },
+  {
+   "file": "code/src/voxfem/simp.py",
+   "copy": "b68537c154bd76bc",
+   "manifest": "b68537c154bd76bc",
+   "match": true
+  },
+  {
+   "file": "code/src/voxfem/sparse.py",
+   "copy": "7830a4672baee938",
+   "manifest": "7830a4672baee938",
+   "match": true
+  },
+  {
+   "file": "experiments/_boot.py",
+   "copy": "33c086109bcda1dd",
+   "manifest": "33c086109bcda1dd",
+   "match": true
+  },
+  {
+   "file": "experiments/E10_external_hou.py",
+   "copy": "f264358c343f6fc8",
+   "manifest": "f264358c343f6fc8",
+   "match": true
+  },
+  {
+   "file": "experiments/E7_memory_probe.py",
+   "copy": "510ad062b7f223b5",
+   "manifest": "510ad062b7f223b5",
+   "match": true
+  },
+  {
+   "file": "experiments/run_simp.py",
+   "copy": "d913d5a57d599399",
+   "manifest": "d913d5a57d599399",
+   "match": true
+  }
+ ],
+ "voxfem_and_helpers_match": true,
+ "hou_head": "d8dca7a19acb454ffd8bb992969d6ad862f5f4cf",
+ "hou_commit_expected": "d8dca7a",
+ "hou_head_matches": true,
+ "hou_files": [
+  {
+   "file": "README.md",
+   "blob": "67fdfd92978de845fb31d6d409bb795e13fc1bf1",
+   "copy_raw": "b11f8253325b42393b0823e19bef7bb694fb9cae",
+   "copy_lf": "67fdfd92978de845fb31d6d409bb795e13fc1bf1",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/CG.py",
+   "blob": "8dc210709110921c74887f77e0e63aff6814b320",
+   "copy_raw": "8dc210709110921c74887f77e0e63aff6814b320",
+   "copy_lf": "2f64dd58d2908cf3d07c46f3c42412de82396af7",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/ESO.py",
+   "blob": "07e6aa7631a9cee74b91e4b87ad94066b7a3fe86",
+   "copy_raw": "07e6aa7631a9cee74b91e4b87ad94066b7a3fe86",
+   "copy_lf": "0594694072460d97a9f119cfc9a6410ea9bcfdc6",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/FE.py",
+   "blob": "e816f091e65e24a4be11054c76d959bde42029be",
+   "copy_raw": "2c422cb54ac3520bdd10a7d758ef3e7298f7ced4",
+   "copy_lf": "e816f091e65e24a4be11054c76d959bde42029be",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/Index.py",
+   "blob": "b17c6176e13aca6bcee8047f53b4941dbe79b004",
+   "copy_raw": "b17c6176e13aca6bcee8047f53b4941dbe79b004",
+   "copy_lf": "e8ccac305f5559ec8237801d974561fb77d09c62",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/SpMV.py",
+   "blob": "e5c5a687761522cde0250236af162dcc53be26bb",
+   "copy_raw": "e5c5a687761522cde0250236af162dcc53be26bb",
+   "copy_lf": "02ed76bee68a559b50ac3baa1a22237182afa699",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/Visualization.py",
+   "blob": "b4a3a3bf3d2f92a026ccba6f871e7ea06c892ceb",
+   "copy_raw": "b4a3a3bf3d2f92a026ccba6f871e7ea06c892ceb",
+   "copy_lf": "149af7bca1e2219ca2b1d2f11633431fc753cf81",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/conv.py",
+   "blob": "f52931e36fc5dde440d06401cfa39cde6799a6af",
+   "copy_raw": "f52931e36fc5dde440d06401cfa39cde6799a6af",
+   "copy_lf": "324714171a32f983223ba1489cf177daca913492",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/ker.py",
+   "blob": "39086c7e78fefadc23903464136edefc78108414",
+   "copy_raw": "d786fcc259a38e77d659733d18b487133661d973",
+   "copy_lf": "39086c7e78fefadc23903464136edefc78108414",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/kernel_writer.py",
+   "blob": "215c5b6d3fbab7101c6d900f199f271e44f54c48",
+   "copy_raw": "215c5b6d3fbab7101c6d900f199f271e44f54c48",
+   "copy_lf": "236a94bfe18bbcc407e2d4ab2c3126279534c586",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/main.py",
+   "blob": "2864bd7cfba03cb8c698fbf648744c90b863ca95",
+   "copy_raw": "2864bd7cfba03cb8c698fbf648744c90b863ca95",
+   "copy_lf": "da3c07bd5cf549e6a25b022caad8e8b10bf3d945",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/materialInfo.py",
+   "blob": "cedf19ecc4013f80653a7f25d11017fa4818faa2",
+   "copy_raw": "cedf19ecc4013f80653a7f25d11017fa4818faa2",
+   "copy_lf": "562056433029206d846d42c6cf67e4cdea44151a",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/mesh.py",
+   "blob": "3a61ed455250220e6892624a42a1f1b996669f85",
+   "copy_raw": "3a61ed455250220e6892624a42a1f1b996669f85",
+   "copy_lf": "bcca073ae4d9c4abb462529fc6d767b1816bbb84",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/new_original_value.py",
+   "blob": "eab017bff5232c8ed75cd8abea471c3f8df2b51e",
+   "copy_raw": "eab017bff5232c8ed75cd8abea471c3f8df2b51e",
+   "copy_lf": "b1db0839ba6966e11793efc86f86a80ea08937d6",
+   "match": true
+  },
+  {
+   "file": "cupy_for_TO/shapesens.py",
+   "blob": "682d080261ba9314a1baa13ab156e71a5950e96e",
+   "copy_raw": "682d080261ba9314a1baa13ab156e71a5950e96e",
+   "copy_lf": "531a6dde82812d0199b407dc0fe958f9c2fa9e37",
+   "match": true
+  }
+ ],
+ "hou_tree_match": true,
+ "pass_static": true,
+ "time": "2026-11-23T07:11:16"
+}

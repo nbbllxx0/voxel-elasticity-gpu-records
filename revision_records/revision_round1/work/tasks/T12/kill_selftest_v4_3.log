@@ -1,0 +1,52 @@
+A job 0.0 [0] ended True
+A job 0.05 [0] ended True
+A job 0.1 [0] ended True
+A job 0.2 [0] ended True
+A job 0.3 [0] ended True
+A job 0.5 [0] ended True
+A job 0.8 [0] ended True
+A job 1.2 [0] ended True
+A job 2.0 [0] ended True
+A probe 0.0 [0] ended True
+A probe 0.05 [0] ended True
+A probe 0.1 [0] ended True
+A probe 0.2 [0] ended True
+A probe 0.3 [0] ended True
+A probe 0.5 [0] ended True
+A probe 0.8 [0] ended True
+A probe 1.2 [0] ended True
+A probe 2.0 [0] ended True
+B 4.3 True []
+B 4.2 True ['2514 sleep 61.4033', '2515 sleep 61.4043']
+C False [2694, 2695, 2696]
+{
+ "A": {
+  "job": {
+   "launches": 9,
+   "survived": 0,
+   "confirmed_ended": 9
+  },
+  "probe": {
+   "launches": 9,
+   "survived": 0,
+   "confirmed_ended": 9
+  }
+ },
+ "B_revision_4_3": {
+  "linux_process_ended_confirmed": true,
+  "children_survived": false
+ },
+ "B_negative_control_4_2": {
+  "children_survived": true,
+  "linux_process_ended_confirmed": true,
+  "fault_reproduced": true
+ },
+ "C": {
+  "linux_process_ended_confirmed": false,
+  "survivors": [
+   2694,
+   2695,
+   2696
+  ]
+ }
+} passed True

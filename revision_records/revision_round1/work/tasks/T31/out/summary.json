@@ -1,0 +1,2001 @@
+{
+ "plan": "tasks/T31/ANALYSIS_PLAN.md (frozen, unchanged)",
+ "selftest": true,
+ "code_hashes_copies_identical": true,
+ "host_checks": {
+  "96": {
+   "passed": true,
+   "counts": {
+    "allocated_elements": 245760,
+    "active_elements": 113318,
+    "designable_elements": 104070,
+    "protected_elements": 9248,
+    "exterior_elements": 132442,
+    "nodes_allocated": 258505,
+    "nodes_exterior_only": 133076,
+    "nodes_active": 125429,
+    "nodes_supported": 1200,
+    "free_dofs": 372687
+   },
+   "source": "tasks/T31/out/host_checks_96.json"
+  },
+  "192": {
+   "passed": true,
+   "counts": {
+    "allocated_elements": 1966080,
+    "active_elements": 903548,
+    "designable_elements": 827324,
+    "protected_elements": 76224,
+    "exterior_elements": 1062532,
+    "nodes_allocated": 2016657,
+    "nodes_exterior_only": 1064670,
+    "nodes_active": 951987,
+    "nodes_supported": 5328,
+    "free_dofs": 2839977
+   },
+   "source": "tasks/T31/out/host_checks_192.json"
+  },
+  "384": {
+   "passed": true,
+   "counts": {
+    "allocated_elements": 15728640,
+    "active_elements": 7232600,
+    "designable_elements": 6629528,
+    "protected_elements": 603072,
+    "exterior_elements": 8496040,
+    "nodes_allocated": 15930145,
+    "nodes_exterior_only": 8504564,
+    "nodes_active": 7425581,
+    "nodes_supported": 20624,
+    "free_dofs": 22214871
+   },
+   "source": "tasks/T31/out/host_checks_384.json"
+  }
+ },
+ "c0": {
+  "192": {
+   "present": true,
+   "passed": true,
+   "c0": [
+    5800137.661490616,
+    3859304.44885916,
+    1895668.7173411776,
+    471440.26150532893
+   ],
+   "rel_residual_node_hoist": [
+    7.585415383537274e-09,
+    6.794061916601313e-09,
+    8.866368611010081e-09,
+    9.014931062194e-09
+   ],
+   "solver": [
+    "mg64",
+    "mg64",
+    "mg64",
+    "mg64"
+   ],
+   "monitor_ok": false,
+   "monitor": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "no_spill_no_allocation_failure_over_covered_interval": true,
+    "coverage_from_launcher_first_sample": false,
+    "coverage_start": {
+     "first_complete_sample_index": 2,
+     "first_complete_sample_number": 3,
+     "first_complete_sample_s_after_launch": 12.836158990859985,
+     "first_complete_sample_event": "go",
+     "dedicated_bytes_at_first_complete_sample": 354570240.0,
+     "shared_bytes_at_first_complete_sample": 77594624.0,
+     "earlier_samples": [
+      {
+       "number": 1,
+       "child": null
+      },
+      {
+       "number": 2,
+       "child": {
+        "ded": null,
+        "sh": 77594624.0
+       }
+      }
+     ]
+    },
+    "covered_from_go": true,
+    "final_sample_checked": true,
+    "shared_max_growth_bytes": 18874368.0,
+    "child_dedicated_peak_bytes": 1113784320.0,
+    "max_sample_interval_s": 2.349344253540039,
+    "allocation_failure": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22586327040,
+     "nvidia_smi_used_bytes": 2725249024,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 6391709696,
+     "predicted_peak_bytes": 1284716097,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    }
+   },
+   "iterations": [
+    76,
+    75,
+    71,
+    71
+   ],
+   "solve_wall_s": [
+    2.387493100017309,
+    0.4998494000174105,
+    0.4729093999485485,
+    0.4726937999948859
+   ],
+   "audit_time_four_solves_plus_setup_s": 7.284613999945577,
+   "broader_interval_s": 7.492573900031857,
+   "broader_interval_note": "from before the multigrid setup to after the fourth case; also holds the node_hoist equilibrium checks, the reaction sums and the host transfers",
+   "pool_peak_reserved_bytes": 734402560,
+   "fixed_set_match": true,
+   "cpu_check": {
+    "done": true,
+    "rel_residual_assembled": [
+     7.58541567732449e-09,
+     6.794056655836132e-09,
+     8.866367866645525e-09,
+     9.01493072647764e-09
+    ],
+    "assembly": {
+     "n_free": 2839977,
+     "nnz": 188039416,
+     "assembly_s": 15.354999700037297
+    },
+    "s": 16.027878284454346
+   },
+   "reactions_informational": [
+    {
+     "load": "LC1_vertical",
+     "net_F": [
+      -3.536567440676208e-06,
+      2.99227941980007e-06,
+      9.842189683695324e-06
+     ],
+     "net_M": [
+      -7.104034437155349e-06,
+      2.9825919176773574e-05,
+      5.2402529462369785e-06
+     ],
+     "rel_net_F": 1.3597434452316927e-09,
+     "rel_net_M": 3.888108897178026e-09
+    },
+    {
+     "load": "LC2_horizontal",
+     "net_F": [
+      6.561891495948657e-06,
+      -8.917720799139772e-06,
+      -2.979743666031709e-06
+     ],
+     "net_M": [
+      -3.0941098270176326e-05,
+      -3.7878992251912734e-05,
+      1.0663845807040237e-05
+     ],
+     "rel_net_F": 1.3489097818617523e-09,
+     "rel_net_M": 5.889275013783852e-09
+    },
+    {
+     "load": "LC3_42deg",
+     "net_F": [
+      -1.2320311725488864e-05,
+      1.696100945380863e-05,
+      -5.850070010637864e-07
+     ],
+     "net_M": [
+      1.1720832755912625e-05,
+      1.761328571880938e-06,
+      -0.0001045529367036555
+     ],
+     "rel_net_F": 2.207537216889399e-09,
+     "rel_net_M": 1.1076063768843905e-08
+    },
+    {
+     "load": "LC4_torsion",
+     "net_F": [
+      -2.8530712370411493e-06,
+      -8.151556133983995e-07,
+      -4.4990596146377015e-06
+     ],
+     "net_M": [
+      1.6245255210378673e-05,
+      3.2075012929011493e-06,
+      3.370148337414336e-07
+     ],
+     "rel_net_F": 1.0778874073621698e-09,
+     "rel_net_M": 3.3124610813861167e-09
+    }
+   ],
+   "sources": {
+    "c0": "tasks/T31/out/c0_n192.json",
+    "meta": "tasks/T31/out/runs/c0_n192/gpu_meta.json",
+    "monitor": "tasks/T31/out/runs/c0_n192/monitor.json"
+   }
+  },
+  "384": {
+   "present": true,
+   "passed": true,
+   "c0": [
+    2942051.0993674565,
+    1939041.8571512343,
+    959489.8649598116,
+    237416.32949063057
+   ],
+   "rel_residual_node_hoist": [
+    6.547888819312979e-09,
+    9.416747689939483e-09,
+    9.795461866167156e-09,
+    9.65138142559092e-09
+   ],
+   "solver": [
+    "mg64",
+    "mg64",
+    "mg64",
+    "mg64"
+   ],
+   "monitor_ok": false,
+   "monitor": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "no_spill_no_allocation_failure_over_covered_interval": true,
+    "coverage_from_launcher_first_sample": false,
+    "coverage_start": {
+     "first_complete_sample_index": 2,
+     "first_complete_sample_number": 3,
+     "first_complete_sample_s_after_launch": 13.194888591766357,
+     "first_complete_sample_event": "go",
+     "dedicated_bytes_at_first_complete_sample": 354570240.0,
+     "shared_bytes_at_first_complete_sample": 77594624.0,
+     "earlier_samples": [
+      {
+       "number": 1,
+       "child": null
+      },
+      {
+       "number": 2,
+       "child": {
+        "ded": null,
+        "sh": 77594624.0
+       }
+      }
+     ]
+    },
+    "covered_from_go": true,
+    "final_sample_checked": true,
+    "shared_max_growth_bytes": 102760448.0,
+    "child_dedicated_peak_bytes": 5576720384.0,
+    "max_sample_interval_s": 2.4126718044281006,
+    "allocation_failure": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22586327040,
+     "nvidia_smi_used_bytes": 2725249024,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 6391713792,
+     "predicted_peak_bytes": 6365188621,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    }
+   },
+   "iterations": [
+    108,
+    107,
+    98,
+    104
+   ],
+   "solve_wall_s": [
+    4.357723299995996,
+    4.296690599992871,
+    3.9256568999844603,
+    4.195594299992081
+   ],
+   "audit_time_four_solves_plus_setup_s": 17.58293719997164,
+   "broader_interval_s": 18.23196000000462,
+   "broader_interval_note": "from before the multigrid setup to after the fourth case; also holds the node_hoist equilibrium checks, the reaction sums and the host transfers",
+   "pool_peak_reserved_bytes": 5143906304,
+   "fixed_set_match": true,
+   "cpu_check": null,
+   "reactions_informational": [
+    {
+     "load": "LC1_vertical",
+     "net_F": [
+      1.8036237605656397e-06,
+      -8.595785532250488e-07,
+      -2.194646185671445e-06
+     ],
+     "net_M": [
+      -3.0567978448470257e-06,
+      -1.6487339387416533e-05,
+      1.6873652697313446e-08
+     ],
+     "rel_net_F": 3.7098698256998054e-10,
+     "rel_net_M": 2.0960403810683325e-09
+    },
+    {
+     "load": "LC2_horizontal",
+     "net_F": [
+      -2.7037331165047362e-06,
+      2.744305003243852e-06,
+      3.7457404644669593e-06
+     ],
+     "net_M": [
+      1.4159989554229924e-06,
+      1.997750104068289e-05,
+      -1.4897084951685379e-05
+     ],
+     "rel_net_F": 6.321485781208458e-10,
+     "rel_net_M": 2.936534550891804e-09
+    },
+    {
+     "load": "LC3_42deg",
+     "net_F": [
+      2.642316758283414e-06,
+      -4.1144085516364726e-06,
+      1.8102964531863108e-05
+     ],
+     "net_M": [
+      -1.6650896803582782e-05,
+      5.417143256883361e-05,
+      6.287203980585544e-06
+     ],
+     "rel_net_F": 1.9738667155557147e-09,
+     "rel_net_M": 6.002146804132436e-09
+    },
+    {
+     "load": "LC4_torsion",
+     "net_F": [
+      4.8432794916841715e-06,
+      -8.865989662622947e-06,
+      6.792736297889235e-07
+     ],
+     "net_M": [
+      -2.0840246179432143e-05,
+      -6.509419548578199e-06,
+      5.3267802211063274e-05
+     ],
+     "rel_net_F": 2.025088063234753e-09,
+     "rel_net_M": 1.1513725993047734e-08
+    }
+   ],
+   "sources": {
+    "c0": "tasks/T31/out/c0_n384.json",
+    "meta": "tasks/T31/out/runs/c0_n384/gpu_meta.json",
+    "monitor": "tasks/T31/out/runs/c0_n384/monitor.json"
+   }
+  }
+ },
+ "runs": {
+  "R_n192": {
+   "run": "R_n192",
+   "present": true,
+   "completed": true,
+   "outcome": "returned_design",
+   "error": null,
+   "monitor_ok": false,
+   "monitor": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "no_spill_no_allocation_failure_over_covered_interval": true,
+    "coverage_from_launcher_first_sample": false,
+    "coverage_start": {
+     "first_complete_sample_index": 2,
+     "first_complete_sample_number": 3,
+     "first_complete_sample_s_after_launch": 12.812544345855713,
+     "first_complete_sample_event": "go",
+     "dedicated_bytes_at_first_complete_sample": 354570240.0,
+     "shared_bytes_at_first_complete_sample": 77594624.0,
+     "earlier_samples": [
+      {
+       "number": 1,
+       "child": null
+      },
+      {
+       "number": 2,
+       "child": {
+        "ded": null,
+        "sh": 77594624.0
+       }
+      }
+     ]
+    },
+    "covered_from_go": true,
+    "final_sample_checked": true,
+    "shared_max_growth_bytes": 16777216.0,
+    "child_dedicated_peak_bytes": 1136848896.0,
+    "max_sample_interval_s": 2.5026378631591797,
+    "allocation_failure": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22586327040,
+     "nvidia_smi_used_bytes": 2725249024,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 6391709696,
+     "predicted_peak_bytes": 1081437072,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    }
+   },
+   "sources": {
+    "meta": "tasks/T31/out/runs/R_n192/gpu_meta.json",
+    "history": "tasks/T31/out/runs/R_n192/history.json",
+    "monitor": "tasks/T31/out/runs/R_n192/monitor.json"
+   },
+   "counts": {
+    "allocated": 1966080,
+    "active": 903548,
+    "designable": 827324,
+    "protected": 76224
+   },
+   "host_checks_passed": true,
+   "matching_state_hashes": {
+    "initial_design_variable": "06a308fbc2d13cbcef0457a0bd40f5948e96091e6853776bdc278a9bcbe07579",
+    "iteration1_rho_phys": "59f5dcce2488475c9731205f27eb4e99efe41f1524d4ede92b31dddfefe3224a",
+    "iteration1_E32": "ec710e40c4d97be2a113afe694cb94b910f49820bb1b16ef75a23881a5cb30c7"
+   },
+   "solve_failure": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 1081437072,
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6391709696,
+     "wddm_free": 19010416640,
+     "need": 1081437072,
+     "margin": 1610612736,
+     "effective_free": 19010416640,
+     "ok": true
+    }
+   },
+   "history_summary": {
+    "iterations_recorded": 300,
+    "max_production_rel_true": 9.997375248351712e-06,
+    "n_production_solves": 1204,
+    "all_production_solves_le_1e-5": true,
+    "median_iteration_s": 1.4878156000049785,
+    "median_solve_s_per_case": [
+     0.39442480000434443,
+     0.3837381000048481,
+     0.35441240001819097,
+     0.3085762999835424
+    ],
+    "median_solve_scope": "the 300 design-iteration solves of each case (final re-solve not included)",
+    "summed_outer_per_case": [
+     1210,
+     1222,
+     1191,
+     1208
+    ],
+    "summed_inner_per_case": [
+     28660,
+     28303,
+     25182,
+     24343
+    ],
+    "summed_outer_per_case_design_iterations_only": [
+     1206,
+     1218,
+     1187,
+     1204
+    ],
+    "summed_inner_per_case_design_iterations_only": [
+     28567,
+     28213,
+     25098,
+     24276
+    ],
+    "summed_scope": "design iterations plus the final production re-solve (the plan's optimization boundary)",
+    "rejected_steps_total": 0,
+    "warm_start_resets_total": 5
+   },
+   "end_state_descriptive": {
+    "note": "descriptive, outside the plan's endpoints: the stopping quantities over the last 10 iterations",
+    "J_spread_rel_last10": 1.1087805285933476e-05,
+    "max_drho_phys_last10": [
+     0.3861077129840851,
+     0.35284286737442017,
+     0.4009343385696411,
+     0.3527967929840088,
+     0.3563911020755768,
+     0.35506272315979004,
+     0.350930392742157,
+     0.35345062613487244,
+     0.35297903418540955,
+     0.35325488448143005
+    ],
+    "n_elem_drho_gt_0.01_last10": [
+     10099,
+     10100,
+     10098,
+     10104,
+     10098,
+     10100,
+     10101,
+     10102,
+     10102,
+     10105
+    ],
+    "bounded_oscillation_bound": 1,
+    "first_iteration_spread_le_1e-4": 78,
+    "min_drho_phys_after_75": 0.350930392742157,
+    "min_moving_after_75": 9731,
+    "J_last12": [
+     1.2037524750093618,
+     1.203739005355676,
+     1.203752257594723,
+     1.2037389271577719,
+     1.2037520877877848,
+     1.203739078422673,
+     1.2037515374267396,
+     1.2037389472064912,
+     1.2037515569400723,
+     1.2037389471731639,
+     1.2037514724666378,
+     1.2037389107004213
+    ],
+    "J_successive_differences_alternate_in_sign_last12": true,
+    "evidence_scope": "the history holds only scalars per iteration (J, c_k, volume, MND, max |drho_phys|, the count of elements moving by more than 0.01); only the final field was saved, so which elements moved, and whether the density field repeats, is not recorded"
+   },
+   "result": {
+    "termination": "guard",
+    "converged": false,
+    "iterations": 300,
+    "J_prod": 1.2037514237485263,
+    "c_prod": [
+     6787089.746227448,
+     4777736.772604523,
+     2160526.2037368077,
+     597385.3853897899
+    ],
+    "volume_phys": 0.4999999999985591,
+    "volume_abs_err": 1.4409029525097594e-12,
+    "mnd": 0.0015821933484410136,
+    "solid_fraction_active_rho_gt_0.5": 0.5420066227804168,
+    "E32_sha256": "9542765ce47f41b98ef843a9344be746080e6a8f357b9b463cd532b293d7e7f5",
+    "penalty": 4.5,
+    "mg_levels": 5
+   },
+   "cost": {
+    "optimization_s": 566.3864628000301,
+    "iterations_2_to_end_s": {
+     "measured_from_iteration1_callback_entry_s": 555.9573472000193,
+     "plan_quantity_bounds_s": [
+      552.6620680997148,
+      555.9573472000193
+     ],
+     "note": "measured from entry to iteration 1's on_iter callback (before the initial-state hashes and the first history write) to run() return; the plan's 'iterations 2 to the end' starts after that callback, whose duration is not recorded on its own but is at most on_iter_io_s (all 300 callbacks); the same boundary was used in every OPT run"
+    },
+    "on_iter_io_s": 3.2952791003044695,
+    "driver_wall_s": 566.3863521000021,
+    "totals": {
+     "solve_s": 464.7513484991505,
+     "setup_s": 15.802635399857536,
+     "sens_s": 1.1665529002784751,
+     "oc_s": 7.222997099917848,
+     "filter_s": 0.34604610002133995
+    },
+    "totals_scope": "design iterations plus the final production re-solve (four solves and its multigrid setup), the plan's optimization boundary; the final re-solve has no sensitivity or OC step, and its prepare() (filter and moduli) lies inside optimization_s but is not timed separately",
+    "totals_design_iterations_only": {
+     "solve_s": 463.286158199131,
+     "setup_s": 15.581359199888539,
+     "sens_s": 1.1665529002784751,
+     "oc_s": 7.222997099917848,
+     "filter_s": 0.34604610002133995
+    },
+    "final_resolve": {
+     "solve_wall_s_per_case": [
+      0.42734669998753816,
+      0.3861852000118233,
+      0.36158600001363084,
+      0.2900724000064656
+     ],
+     "setup_s": 0.2212761999689974,
+     "outer_per_case": [
+      4,
+      4,
+      4,
+      4
+     ],
+     "inner_per_case": [
+      93,
+      90,
+      84,
+      67
+     ]
+    },
+    "pool_peak_reserved_bytes": 710394880,
+    "pool_peak_used_bytes": 666508288,
+    "process_dedicated_peak_bytes_sampled": 1136848896.0,
+    "driver_peak_device_used_bytes": 2205679616,
+    "pool_bytes_per_allocated_element": 361.3255208333333,
+    "pool_bytes_per_active_element": 786.2281583269511
+   }
+  },
+  "O_n192": {
+   "run": "O_n192",
+   "present": true,
+   "completed": true,
+   "outcome": "returned_design",
+   "error": null,
+   "monitor_ok": false,
+   "monitor": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "no_spill_no_allocation_failure_over_covered_interval": true,
+    "coverage_from_launcher_first_sample": false,
+    "coverage_start": {
+     "first_complete_sample_index": 2,
+     "first_complete_sample_number": 3,
+     "first_complete_sample_s_after_launch": 12.75420594215393,
+     "first_complete_sample_event": "go",
+     "dedicated_bytes_at_first_complete_sample": 354570240.0,
+     "shared_bytes_at_first_complete_sample": 77594624.0,
+     "earlier_samples": [
+      {
+       "number": 1,
+       "child": null
+      },
+      {
+       "number": 2,
+       "child": {
+        "ded": null,
+        "sh": 77594624.0
+       }
+      }
+     ]
+    },
+    "covered_from_go": true,
+    "final_sample_checked": true,
+    "shared_max_growth_bytes": 18874368.0,
+    "child_dedicated_peak_bytes": 1136852992.0,
+    "max_sample_interval_s": 2.5546162128448486,
+    "allocation_failure": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22586327040,
+     "nvidia_smi_used_bytes": 2725249024,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 6391709696,
+     "predicted_peak_bytes": 1081437072,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    }
+   },
+   "sources": {
+    "meta": "tasks/T31/out/runs/O_n192/gpu_meta.json",
+    "history": "tasks/T31/out/runs/O_n192/history.json",
+    "monitor": "tasks/T31/out/runs/O_n192/monitor.json"
+   },
+   "counts": {
+    "allocated": 1966080,
+    "active": 903548,
+    "designable": 827324,
+    "protected": 76224
+   },
+   "host_checks_passed": true,
+   "matching_state_hashes": {
+    "initial_design_variable": "06a308fbc2d13cbcef0457a0bd40f5948e96091e6853776bdc278a9bcbe07579",
+    "iteration1_rho_phys": "59f5dcce2488475c9731205f27eb4e99efe41f1524d4ede92b31dddfefe3224a",
+    "iteration1_E32": "ec710e40c4d97be2a113afe694cb94b910f49820bb1b16ef75a23881a5cb30c7"
+   },
+   "solve_failure": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 1081437072,
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6391709696,
+     "wddm_free": 19010416640,
+     "need": 1081437072,
+     "margin": 1610612736,
+     "effective_free": 19010416640,
+     "ok": true
+    }
+   },
+   "history_summary": {
+    "iterations_recorded": 300,
+    "max_production_rel_true": 9.932941351268732e-06,
+    "n_production_solves": 1204,
+    "all_production_solves_le_1e-5": true,
+    "median_iteration_s": 1.5021775499917567,
+    "median_solve_s_per_case": [
+     0.3992387499893084,
+     0.3851283999683801,
+     0.35918020000099204,
+     0.3074264999886509
+    ],
+    "median_solve_scope": "the 300 design-iteration solves of each case (final re-solve not included)",
+    "summed_outer_per_case": [
+     1212,
+     1221,
+     1193,
+     1210
+    ],
+    "summed_inner_per_case": [
+     29263,
+     28690,
+     25568,
+     24684
+    ],
+    "summed_outer_per_case_design_iterations_only": [
+     1208,
+     1217,
+     1189,
+     1206
+    ],
+    "summed_inner_per_case_design_iterations_only": [
+     29169,
+     28601,
+     25485,
+     24615
+    ],
+    "summed_scope": "design iterations plus the final production re-solve (the plan's optimization boundary)",
+    "rejected_steps_total": 0,
+    "warm_start_resets_total": 5
+   },
+   "end_state_descriptive": {
+    "note": "descriptive, outside the plan's endpoints: the stopping quantities over the last 10 iterations",
+    "J_spread_rel_last10": 1.035062187550142e-05,
+    "max_drho_phys_last10": [
+     0.35170406103134155,
+     0.3530662953853607,
+     0.35312891006469727,
+     0.35249754786491394,
+     0.35221385955810547,
+     0.35308408737182617,
+     0.3524933457374573,
+     0.3536156117916107,
+     0.3533836901187897,
+     0.35417720675468445
+    ],
+    "n_elem_drho_gt_0.01_last10": [
+     10100,
+     10097,
+     10098,
+     10095,
+     10098,
+     10097,
+     10100,
+     10097,
+     10098,
+     10097
+    ],
+    "bounded_oscillation_bound": 1,
+    "first_iteration_spread_le_1e-4": 78,
+    "min_drho_phys_after_75": 0.3507876694202423,
+    "min_moving_after_75": 9730,
+    "J_last12": [
+     1.2037513900289711,
+     1.2037390809076203,
+     1.2037513872770962,
+     1.2037390393060106,
+     1.2037513582605985,
+     1.2037390121258578,
+     1.203751323440869,
+     1.2037389937029113,
+     1.203751315428409,
+     1.2037389660734235,
+     1.2037513057768858,
+     1.2037389277660804
+    ],
+    "J_successive_differences_alternate_in_sign_last12": true,
+    "evidence_scope": "the history holds only scalars per iteration (J, c_k, volume, MND, max |drho_phys|, the count of elements moving by more than 0.01); only the final field was saved, so which elements moved, and whether the density field repeats, is not recorded"
+   },
+   "result": {
+    "termination": "guard",
+    "converged": false,
+    "iterations": 300,
+    "J_prod": 1.2037512994929427,
+    "c_prod": [
+     6787080.534459913,
+     4777739.065095543,
+     2160522.0721341693,
+     597386.6472729098
+    ],
+    "volume_phys": 0.49999999999704614,
+    "volume_abs_err": 2.9538593793176915e-12,
+    "mnd": 0.0015848491932143624,
+    "solid_fraction_active_rho_gt_0.5": 0.5420044092842882,
+    "E32_sha256": "20e311d5d5edc9eea026a7ee80e4453a1be2f9a4a69da40313b65cf00f448703",
+    "penalty": 4.5,
+    "mg_levels": 5
+   },
+   "cost": {
+    "optimization_s": 561.3641440999927,
+    "iterations_2_to_end_s": {
+     "measured_from_iteration1_callback_entry_s": 559.26028029999,
+     "plan_quantity_bounds_s": [
+      556.0824735001079,
+      559.26028029999
+     ],
+     "note": "measured from entry to iteration 1's on_iter callback (before the initial-state hashes and the first history write) to run() return; the plan's 'iterations 2 to the end' starts after that callback, whose duration is not recorded on its own but is at most on_iter_io_s (all 300 callbacks); the same boundary was used in every OPT run"
+    },
+    "on_iter_io_s": 3.1778067998820916,
+    "driver_wall_s": 561.3640332000214,
+    "totals": {
+     "solve_s": 465.93655519979075,
+     "setup_s": 15.18412600067677,
+     "sens_s": 0.771219199814368,
+     "oc_s": 2.6290247000870295,
+     "filter_s": 0.1888581997482106
+    },
+    "totals_scope": "design iterations plus the final production re-solve (four solves and its multigrid setup), the plan's optimization boundary; the final re-solve has no sensitivity or OC step, and its prepare() (filter and moduli) lies inside optimization_s but is not timed separately",
+    "totals_design_iterations_only": {
+     "solve_s": 464.4968108998146,
+     "setup_s": 15.010880900663324,
+     "sens_s": 0.771219199814368,
+     "oc_s": 2.6290247000870295,
+     "filter_s": 0.1888581997482106
+    },
+    "final_resolve": {
+     "solve_wall_s_per_case": [
+      0.41044419998070225,
+      0.37933119997614995,
+      0.3538238999899477,
+      0.2961450000293553
+     ],
+     "setup_s": 0.17324510001344606,
+     "outer_per_case": [
+      4,
+      4,
+      4,
+      4
+     ],
+     "inner_per_case": [
+      94,
+      89,
+      83,
+      69
+     ]
+    },
+    "pool_peak_reserved_bytes": 710394880,
+    "pool_peak_used_bytes": 666508288,
+    "process_dedicated_peak_bytes_sampled": 1136852992.0,
+    "driver_peak_device_used_bytes": 2205679616,
+    "pool_bytes_per_allocated_element": 361.3255208333333,
+    "pool_bytes_per_active_element": 786.2281583269511
+   }
+  },
+  "R_n384": {
+   "run": "R_n384",
+   "present": true,
+   "completed": true,
+   "outcome": "returned_design",
+   "error": null,
+   "monitor_ok": false,
+   "monitor": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "no_spill_no_allocation_failure_over_covered_interval": true,
+    "coverage_from_launcher_first_sample": false,
+    "coverage_start": {
+     "first_complete_sample_index": 2,
+     "first_complete_sample_number": 3,
+     "first_complete_sample_s_after_launch": 12.897851943969727,
+     "first_complete_sample_event": "go",
+     "dedicated_bytes_at_first_complete_sample": 354570240.0,
+     "shared_bytes_at_first_complete_sample": 77594624.0,
+     "earlier_samples": [
+      {
+       "number": 1,
+       "child": null
+      },
+      {
+       "number": 2,
+       "child": {
+        "ded": null,
+        "sh": 77594624.0
+       }
+      }
+     ]
+    },
+    "covered_from_go": true,
+    "final_sample_checked": true,
+    "shared_max_growth_bytes": 102760448.0,
+    "child_dedicated_peak_bytes": 4651872256.0,
+    "max_sample_interval_s": 2.513579845428467,
+    "allocation_failure": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22601007104,
+     "nvidia_smi_used_bytes": 2710568960,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 6377545728,
+     "predicted_peak_bytes": 4759430005,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    }
+   },
+   "sources": {
+    "meta": "tasks/T31/out/runs/R_n384/gpu_meta.json",
+    "history": "tasks/T31/out/runs/R_n384/history.json",
+    "monitor": "tasks/T31/out/runs/R_n384/monitor.json"
+   },
+   "counts": {
+    "allocated": 15728640,
+    "active": 7232600,
+    "designable": 6629528,
+    "protected": 603072
+   },
+   "host_checks_passed": true,
+   "matching_state_hashes": {
+    "initial_design_variable": "1da33f798655ae52dcbec25aaf549674f3cc54e4b14003b8e3263eff96f604a9",
+    "iteration1_rho_phys": "b7cb0219b5f4e8bf006687a91f7bbc557210d56216e5b34981c1f8793959d097",
+    "iteration1_E32": "f897e49a9ed5ca3200399dee7cbfa093c878463e0c4b477b4786de797540833b"
+   },
+   "solve_failure": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 4759430005,
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6377545728,
+     "wddm_free": 19024580608,
+     "need": 4759430005,
+     "margin": 1610612736,
+     "effective_free": 19024580608,
+     "ok": true
+    }
+   },
+   "history_summary": {
+    "iterations_recorded": 300,
+    "max_production_rel_true": 9.975857971649395e-06,
+    "n_production_solves": 1204,
+    "all_production_solves_le_1e-5": true,
+    "median_iteration_s": 13.588901549985167,
+    "median_solve_s_per_case": [
+     3.35456805001013,
+     3.574711950030178,
+     2.8394090000074357,
+     3.4738222000014503
+    ],
+    "median_solve_scope": "the 300 design-iteration solves of each case (final re-solve not included)",
+    "summed_outer_per_case": [
+     1427,
+     1418,
+     1203,
+     1415
+    ],
+    "summed_inner_per_case": [
+     48004,
+     49195,
+     40355,
+     48844
+    ],
+    "summed_outer_per_case_design_iterations_only": [
+     1422,
+     1413,
+     1199,
+     1410
+    ],
+    "summed_inner_per_case_design_iterations_only": [
+     47847,
+     49022,
+     40231,
+     48690
+    ],
+    "summed_scope": "design iterations plus the final production re-solve (the plan's optimization boundary)",
+    "rejected_steps_total": 0,
+    "warm_start_resets_total": 4
+   },
+   "end_state_descriptive": {
+    "note": "descriptive, outside the plan's endpoints: the stopping quantities over the last 10 iterations",
+    "J_spread_rel_last10": 1.1825745486651215e-06,
+    "max_drho_phys_last10": [
+     0.5817536115646362,
+     0.5817234516143799,
+     0.5817285776138306,
+     0.5816305875778198,
+     0.5817872881889343,
+     0.5815353989601135,
+     0.5818034410476685,
+     0.5819346308708191,
+     0.581819474697113,
+     0.5818296074867249
+    ],
+    "n_elem_drho_gt_0.01_last10": [
+     80185,
+     80212,
+     80251,
+     80293,
+     80293,
+     80387,
+     80377,
+     80455,
+     80438,
+     80501
+    ],
+    "bounded_oscillation_bound": 7,
+    "first_iteration_spread_le_1e-4": 76,
+    "min_drho_phys_after_75": 0.44912996888160706,
+    "min_moving_after_75": 52705,
+    "J_last12": [
+     1.2040893955086187,
+     1.2040893629925398,
+     1.2040888304828536,
+     1.2040888951318094,
+     1.204088476664194,
+     1.2040885759008422,
+     1.204088150933564,
+     1.2040882745595587,
+     1.2040878505407193,
+     1.204087846631258,
+     1.2040874712077485,
+     1.2040876382281138
+    ],
+    "J_successive_differences_alternate_in_sign_last12": false,
+    "evidence_scope": "the history holds only scalars per iteration (J, c_k, volume, MND, max |drho_phys|, the count of elements moving by more than 0.01); only the final field was saved, so which elements moved, and whether the density field repeats, is not recorded"
+   },
+   "result": {
+    "termination": "guard",
+    "converged": false,
+    "iterations": 300,
+    "J_prod": 1.2040870092406877,
+    "c_prod": [
+     3442405.497292929,
+     2395895.647248683,
+     1094328.7239856538,
+     301551.59762687446
+    ],
+    "volume_phys": 0.49999999969363906,
+    "volume_abs_err": 3.0636093661939867e-10,
+    "mnd": 0.0050074035982559115,
+    "solid_fraction_active_rho_gt_0.5": 0.5415557337610265,
+    "E32_sha256": "4451eeb336497c2cddbe9b6084377c076bfa3f75830bf77f1cfe103d1403d633",
+    "penalty": 4.5,
+    "mg_levels": 6
+   },
+   "cost": {
+    "optimization_s": 4136.014406500035,
+    "iterations_2_to_end_s": {
+     "measured_from_iteration1_callback_entry_s": 4125.1893397000385,
+     "plan_quantity_bounds_s": [
+      4121.964266599563,
+      4125.1893397000385
+     ],
+     "note": "measured from entry to iteration 1's on_iter callback (before the initial-state hashes and the first history write) to run() return; the plan's 'iterations 2 to the end' starts after that callback, whose duration is not recorded on its own but is at most on_iter_io_s (all 300 callbacks); the same boundary was used in every OPT run"
+    },
+    "on_iter_io_s": 3.2250731004751287,
+    "driver_wall_s": 4136.014289999963,
+    "totals": {
+     "solve_s": 3969.8874785011285,
+     "setup_s": 21.10836490005022,
+     "sens_s": 12.36060329969041,
+     "oc_s": 52.78996040002676,
+     "filter_s": 3.003149800351821
+    },
+    "totals_scope": "design iterations plus the final production re-solve (four solves and its multigrid setup), the plan's optimization boundary; the final re-solve has no sensitivity or OC step, and its prepare() (filter and moduli) lies inside optimization_s but is not timed separately",
+    "totals_design_iterations_only": {
+     "solve_s": 3956.471445701085,
+     "setup_s": 20.7358733000583,
+     "sens_s": 12.36060329969041,
+     "oc_s": 52.78996040002676,
+     "filter_s": 3.003149800351821
+    },
+    "final_resolve": {
+     "solve_wall_s_per_case": [
+      3.344826600048691,
+      3.690719900012482,
+      2.6929397999774665,
+      3.687546500004828
+     ],
+     "setup_s": 0.3724915999919176,
+     "outer_per_case": [
+      5,
+      5,
+      4,
+      5
+     ],
+     "inner_per_case": [
+      157,
+      173,
+      124,
+      154
+     ]
+    },
+    "pool_peak_reserved_bytes": 4410662912,
+    "pool_peak_used_bytes": 3947981824,
+    "process_dedicated_peak_bytes_sampled": 4651872256.0,
+    "driver_peak_device_used_bytes": 5798100992,
+    "pool_bytes_per_allocated_element": 280.4223958333333,
+    "pool_bytes_per_active_element": 609.830892348533
+   }
+  },
+  "A_R_n192": {
+   "run": "A_R_n192",
+   "present": true,
+   "completed": true,
+   "error": null,
+   "monitor_ok": false,
+   "monitor": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "no_spill_no_allocation_failure_over_covered_interval": true,
+    "coverage_from_launcher_first_sample": false,
+    "coverage_start": {
+     "first_complete_sample_index": 2,
+     "first_complete_sample_number": 3,
+     "first_complete_sample_s_after_launch": 12.783752202987671,
+     "first_complete_sample_event": "go",
+     "dedicated_bytes_at_first_complete_sample": 354570240.0,
+     "shared_bytes_at_first_complete_sample": 77594624.0,
+     "earlier_samples": [
+      {
+       "number": 1,
+       "child": null
+      },
+      {
+       "number": 2,
+       "child": {
+        "ded": null,
+        "sh": 77594624.0
+       }
+      }
+     ]
+    },
+    "covered_from_go": true,
+    "final_sample_checked": true,
+    "shared_max_growth_bytes": 18874368.0,
+    "child_dedicated_peak_bytes": 1113784320.0,
+    "max_sample_interval_s": 2.36948299407959,
+    "allocation_failure": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22586327040,
+     "nvidia_smi_used_bytes": 2725249024,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 6391709696,
+     "predicted_peak_bytes": 1284716097,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    }
+   },
+   "sources": {
+    "meta": "tasks/T31/out/runs/A_R_n192/gpu_meta.json",
+    "monitor": "tasks/T31/out/runs/A_R_n192/monitor.json"
+   },
+   "audit_valid": true,
+   "moduli_hash_match": true,
+   "fixed_set_match": true,
+   "equilibrium_rel_residual_node_hoist": [
+    9.624459260865384e-09,
+    8.6531745601911e-09,
+    9.602368224618972e-09,
+    9.71726052223925e-09
+   ],
+   "all_equilibrium_passed": true,
+   "endpoints": {
+    "c_tight": [
+     6787089.76965001,
+     4777736.669994747,
+     2160526.2397876326,
+     597385.3963175807
+    ],
+    "J_tight": 1.2037514323607468,
+    "c_prod": [
+     6787089.746227448,
+     4777736.772604523,
+     2160526.2037368077,
+     597385.3853897899
+    ],
+    "J_prod": 1.2037514237485263,
+    "c_rel_diff_prod_vs_tight": [
+     3.4510465180473916e-09,
+     2.1476649520024345e-08,
+     1.6686131485110397e-08,
+     1.829269822003769e-08
+    ],
+    "c_tight_over_c0": [
+     1.1701601178730903,
+     1.2379786910584583,
+     1.1397171984870533,
+     1.2671497220243846
+    ],
+    "per_case_iterations": [
+     195,
+     194,
+     187,
+     189
+    ],
+    "per_case_solver": [
+     "mg64",
+     "mg64",
+     "mg64",
+     "mg64"
+    ],
+    "per_case_wall_s": [
+     1.3579562999657355,
+     1.2920525000081398,
+     1.2446675000246614,
+     1.2577283999999054
+    ],
+    "audit_pool_peak_reserved_bytes": 734402560,
+    "audit_time_s_solves_plus_setup": 5.642327999987174,
+    "broader_interval_s": 5.759700299997348,
+    "audit_time_note": "audit_time_s_solves_plus_setup is the four solve times plus the multigrid setup (plan section 4 AUDIT step 7); the job's gpu_meta.json field of the same name holds the wider interval, exported here as broader_interval_s"
+   },
+   "mg_setup_s": 0.48992329998873174,
+   "solver_per_case": [
+    "mg64",
+    "mg64",
+    "mg64",
+    "mg64"
+   ],
+   "iterations_per_case": [
+    195,
+    194,
+    187,
+    189
+   ],
+   "solve_wall_s_per_case": [
+    1.3579562999657355,
+    1.2920525000081398,
+    1.2446675000246614,
+    1.2577283999999054
+   ],
+   "pool_peak_reserved_bytes": 734402560,
+   "cpu_check": {
+    "done": true,
+    "rel_residual_assembled": [
+     9.624458512231721e-09,
+     8.653172228748025e-09,
+     9.60236846495703e-09,
+     9.717260196390914e-09
+    ],
+    "assembly": {
+     "n_free": 2839977,
+     "nnz": 190508319,
+     "assembly_s": 15.438807900005486
+    },
+    "s": 16.090397119522095
+   },
+   "audit_time_four_solves_plus_setup_s": 5.642327999987174,
+   "broader_interval_s": 5.759700299997348,
+   "broader_interval_note": "from before the multigrid setup to after the fourth case; also holds the node_hoist equilibrium checks, the reaction sums and the host transfers",
+   "reactions_informational": [
+    {
+     "load": "LC1_vertical",
+     "net_F": [
+      7.2356606679591096e-06,
+      -7.060570943906441e-06,
+      -2.0880661395494826e-06
+     ],
+     "net_M": [
+      -2.2929205583999135e-05,
+      -3.066062149892357e-05,
+      1.390696499470323e-05
+     ],
+     "rel_net_F": 1.2903879477149221e-09,
+     "rel_net_M": 5.091699517930606e-09
+    },
+    {
+     "load": "LC2_horizontal",
+     "net_F": [
+      9.019044227898121e-06,
+      -1.7073147715152004e-05,
+      4.932877800456481e-06
+     ],
+     "net_M": [
+      -2.3318211823664114e-05,
+      1.0227730925541833e-05,
+      9.763364489210843e-05
+     ],
+     "rel_net_F": 2.344599375056295e-09,
+     "rel_net_M": 1.187050900542366e-08
+    },
+    {
+     "load": "LC3_42deg",
+     "net_F": [
+      6.9633679231628776e-06,
+      -1.782976961806071e-05,
+      8.028856427699793e-06
+     ],
+     "net_M": [
+      -3.578542904136839e-05,
+      1.5539828718935667e-05,
+      0.00011249975894965259
+     ],
+     "rel_net_F": 2.184943980856141e-09,
+     "rel_net_M": 1.2533955641028462e-08
+    },
+    {
+     "load": "LC4_torsion",
+     "net_F": [
+      3.0929739303076076e-07,
+      -4.2727523489882735e-06,
+      -3.636885548274904e-08
+     ],
+     "net_M": [
+      -5.410520316218026e-06,
+      -1.5854410861937396e-07,
+      7.62195843321406e-06
+     ],
+     "rel_net_F": 8.568173715972006e-10,
+     "rel_net_M": 1.8696857135275246e-09
+    }
+   ]
+  },
+  "A_O_n192": {
+   "run": "A_O_n192",
+   "present": true,
+   "completed": true,
+   "error": null,
+   "monitor_ok": false,
+   "monitor": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "no_spill_no_allocation_failure_over_covered_interval": true,
+    "coverage_from_launcher_first_sample": false,
+    "coverage_start": {
+     "first_complete_sample_index": 2,
+     "first_complete_sample_number": 3,
+     "first_complete_sample_s_after_launch": 12.609331130981445,
+     "first_complete_sample_event": "go",
+     "dedicated_bytes_at_first_complete_sample": 354570240.0,
+     "shared_bytes_at_first_complete_sample": 77594624.0,
+     "earlier_samples": [
+      {
+       "number": 1,
+       "child": null
+      },
+      {
+       "number": 2,
+       "child": {
+        "ded": null,
+        "sh": 77594624.0
+       }
+      }
+     ]
+    },
+    "covered_from_go": true,
+    "final_sample_checked": true,
+    "shared_max_growth_bytes": 18874368.0,
+    "child_dedicated_peak_bytes": 1113784320.0,
+    "max_sample_interval_s": 2.4097158908843994,
+    "allocation_failure": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22586327040,
+     "nvidia_smi_used_bytes": 2725249024,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 6391709696,
+     "predicted_peak_bytes": 1284716097,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    }
+   },
+   "sources": {
+    "meta": "tasks/T31/out/runs/A_O_n192/gpu_meta.json",
+    "monitor": "tasks/T31/out/runs/A_O_n192/monitor.json"
+   },
+   "audit_valid": true,
+   "moduli_hash_match": true,
+   "fixed_set_match": true,
+   "equilibrium_rel_residual_node_hoist": [
+    9.157165991126096e-09,
+    9.578992409724448e-09,
+    7.984247229054054e-09,
+    9.758708486238058e-09
+   ],
+   "all_equilibrium_passed": true,
+   "endpoints": {
+    "c_tight": [
+     6787080.581119968,
+     4777739.0065407045,
+     2160522.0914978664,
+     597386.6589741693
+    ],
+    "J_tight": 1.203751310170075,
+    "c_prod": [
+     6787080.534459913,
+     4777739.065095543,
+     2160522.0721341693,
+     597386.6472729098
+    ],
+    "J_prod": 1.2037512994929427,
+    "c_rel_diff_prod_vs_tight": [
+     6.8748343146044474e-09,
+     1.2255763307989127e-08,
+     8.962508288522127e-09,
+     1.9587413534328753e-08
+    ],
+    "c_tight_over_c0": [
+     1.1701585336813731,
+     1.2379792964903407,
+     1.1397150101881548,
+     1.267152400320431
+    ],
+    "per_case_iterations": [
+     197,
+     196,
+     188,
+     190
+    ],
+    "per_case_solver": [
+     "mg64",
+     "mg64",
+     "mg64",
+     "mg64"
+    ],
+    "per_case_wall_s": [
+     1.330927899980452,
+     1.3058660000097007,
+     1.2495254999957979,
+     1.267892700037919
+    ],
+    "audit_pool_peak_reserved_bytes": 734402560,
+    "audit_time_s_solves_plus_setup": 5.579216600046493,
+    "broader_interval_s": 5.665782900003251,
+    "audit_time_note": "audit_time_s_solves_plus_setup is the four solve times plus the multigrid setup (plan section 4 AUDIT step 7); the job's gpu_meta.json field of the same name holds the wider interval, exported here as broader_interval_s"
+   },
+   "mg_setup_s": 0.4250045000226237,
+   "solver_per_case": [
+    "mg64",
+    "mg64",
+    "mg64",
+    "mg64"
+   ],
+   "iterations_per_case": [
+    197,
+    196,
+    188,
+    190
+   ],
+   "solve_wall_s_per_case": [
+    1.330927899980452,
+    1.3058660000097007,
+    1.2495254999957979,
+    1.267892700037919
+   ],
+   "pool_peak_reserved_bytes": 734402560,
+   "cpu_check": {
+    "done": true,
+    "rel_residual_assembled": [
+     9.157167286658325e-09,
+     9.57899172923759e-09,
+     7.984247671850584e-09,
+     9.758708316086118e-09
+    ],
+    "assembly": {
+     "n_free": 2839977,
+     "nnz": 190508959,
+     "assembly_s": 15.321160999999847
+    },
+    "s": 15.952928066253662
+   },
+   "audit_time_four_solves_plus_setup_s": 5.579216600046493,
+   "broader_interval_s": 5.665782900003251,
+   "broader_interval_note": "from before the multigrid setup to after the fourth case; also holds the node_hoist equilibrium checks, the reaction sums and the host transfers",
+   "reactions_informational": [
+    {
+     "load": "LC1_vertical",
+     "net_F": [
+      -9.890782109778229e-06,
+      -7.704583531165099e-07,
+      6.90662727720337e-06
+     ],
+     "net_M": [
+      -1.2918160250841026e-05,
+      3.720999409628778e-05,
+      -7.904328924723814e-07
+     ],
+     "rel_net_F": 1.5110151656005415e-09,
+     "rel_net_M": 4.924567412901468e-09
+    },
+    {
+     "load": "LC2_horizontal",
+     "net_F": [
+      -6.226066034287214e-06,
+      -1.555779414630365e-05,
+      1.2532671931353432e-06
+     ],
+     "net_M": [
+      -2.1974831660998007e-05,
+      1.053961451471872e-05,
+      7.450437145515806e-05
+     ],
+     "rel_net_F": 1.9769590979607275e-09,
+     "rel_net_M": 9.222267370573315e-09
+    },
+    {
+     "load": "LC3_42deg",
+     "net_F": [
+      7.975540938787162e-08,
+      -1.053000379158675e-05,
+      1.4099176041781902e-05
+     ],
+     "net_M": [
+      -1.8417300680084736e-05,
+      5.2242090109011485e-05,
+      4.152667222821506e-05
+     ],
+     "rel_net_F": 1.8523747005921051e-09,
+     "rel_net_M": 7.287447903690711e-09
+    },
+    {
+     "load": "LC4_torsion",
+     "net_F": [
+      2.0667514863959013e-06,
+      2.5920958919845027e-06,
+      -6.097994318388089e-06
+     ],
+     "net_M": [
+      -3.3110336516983807e-07,
+      -3.130142105434164e-05,
+      -2.535591051796432e-05
+     ],
+     "rel_net_F": 1.3881780509265073e-09,
+     "rel_net_M": 8.056825150528011e-09
+    }
+   ]
+  },
+  "A_R_n384": {
+   "run": "A_R_n384",
+   "present": true,
+   "completed": true,
+   "error": null,
+   "monitor_ok": false,
+   "monitor": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "no_spill_no_allocation_failure_over_covered_interval": true,
+    "coverage_from_launcher_first_sample": false,
+    "coverage_start": {
+     "first_complete_sample_index": 2,
+     "first_complete_sample_number": 3,
+     "first_complete_sample_s_after_launch": 13.601258516311646,
+     "first_complete_sample_event": "go",
+     "dedicated_bytes_at_first_complete_sample": 354570240.0,
+     "shared_bytes_at_first_complete_sample": 77594624.0,
+     "earlier_samples": [
+      {
+       "number": 1,
+       "child": null
+      },
+      {
+       "number": 2,
+       "child": {
+        "ded": null,
+        "sh": 77594624.0
+       }
+      }
+     ]
+    },
+    "covered_from_go": true,
+    "final_sample_checked": true,
+    "shared_max_growth_bytes": 102760448.0,
+    "child_dedicated_peak_bytes": 5576720384.0,
+    "max_sample_interval_s": 2.702021837234497,
+    "allocation_failure": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22454206464,
+     "nvidia_smi_used_bytes": 2857369600,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 6587478016,
+     "predicted_peak_bytes": 6365188621,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    }
+   },
+   "sources": {
+    "meta": "tasks/T31/out/runs/A_R_n384/gpu_meta.json",
+    "monitor": "tasks/T31/out/runs/A_R_n384/monitor.json"
+   },
+   "audit_valid": true,
+   "moduli_hash_match": true,
+   "fixed_set_match": true,
+   "equilibrium_rel_residual_node_hoist": [
+    9.921763248035396e-09,
+    9.393057707594488e-09,
+    9.339402377282912e-09,
+    8.492733243656817e-09
+   ],
+   "all_equilibrium_passed": true,
+   "endpoints": {
+    "c_tight": [
+     3442405.4940158958,
+     2395895.648756787,
+     1094328.66946529,
+     301551.5985935612
+    ],
+    "J_tight": 1.2040870253819667,
+    "c_prod": [
+     3442405.497292929,
+     2395895.647248683,
+     1094328.7239856538,
+     301551.59762687446
+    ],
+    "J_prod": 1.2040870092406877,
+    "c_rel_diff_prod_vs_tight": [
+     9.519602230079898e-10,
+     6.294531859243204e-10,
+     4.982083120062699e-08,
+     3.2057092714063244e-09
+    ],
+    "c_tight_over_c0": [
+     1.1700699198447015,
+     1.2356080091415587,
+     1.1405317652950155,
+     1.2701384072465904
+    ],
+    "per_case_iterations": [
+     300,
+     292,
+     284,
+     297
+    ],
+    "per_case_solver": [
+     "mg64",
+     "mg64",
+     "mg64",
+     "mg64"
+    ],
+    "per_case_wall_s": [
+     13.639886099961586,
+     13.136801499989815,
+     12.627821400004905,
+     13.025972700037528
+    ],
+    "audit_pool_peak_reserved_bytes": 5143906304,
+    "audit_time_s_solves_plus_setup": 53.42359650001163,
+    "broader_interval_s": 54.35618439997779,
+    "audit_time_note": "audit_time_s_solves_plus_setup is the four solve times plus the multigrid setup (plan section 4 AUDIT step 7); the job's gpu_meta.json field of the same name holds the wider interval, exported here as broader_interval_s"
+   },
+   "mg_setup_s": 0.9931148000177927,
+   "solver_per_case": [
+    "mg64",
+    "mg64",
+    "mg64",
+    "mg64"
+   ],
+   "iterations_per_case": [
+    300,
+    292,
+    284,
+    297
+   ],
+   "solve_wall_s_per_case": [
+    13.639886099961586,
+    13.136801499989815,
+    12.627821400004905,
+    13.025972700037528
+   ],
+   "pool_peak_reserved_bytes": 5143906304,
+   "cpu_check": null,
+   "audit_time_four_solves_plus_setup_s": 53.42359650001163,
+   "broader_interval_s": 54.35618439997779,
+   "broader_interval_note": "from before the multigrid setup to after the fourth case; also holds the node_hoist equilibrium checks, the reaction sums and the host transfers",
+   "reactions_informational": [
+    {
+     "load": "LC1_vertical",
+     "net_F": [
+      -1.4768691311672914e-05,
+      -8.899184832600326e-06,
+      -1.663404327700846e-05
+     ],
+     "net_M": [
+      -2.8597289092102685e-05,
+      -6.155941276053678e-05,
+      1.8757030723293155e-05
+     ],
+     "rel_net_F": 2.9947900841658512e-09,
+     "rel_net_M": 8.802691744216477e-09
+    },
+    {
+     "load": "LC2_horizontal",
+     "net_F": [
+      9.086397767532617e-07,
+      -2.90376485434507e-06,
+      -3.909421433689889e-06
+     ],
+     "net_M": [
+      5.470187124601011e-06,
+      -5.808818916849664e-06,
+      4.360681528466494e-06
+     ],
+     "rel_net_F": 5.828109015638176e-10,
+     "rel_net_M": 1.0697531829268806e-09
+    },
+    {
+     "load": "LC3_42deg",
+     "net_F": [
+      1.2896583029942121e-05,
+      -3.0090722550557558e-05,
+      4.159343916398939e-06
+     ],
+     "net_M": [
+      -4.096321023894234e-05,
+      1.769363377482347e-05,
+      0.00013136292900565557
+     ],
+     "rel_net_F": 3.4738015598642548e-09,
+     "rel_net_M": 1.4603634195050575e-08
+    },
+    {
+     "load": "LC4_torsion",
+     "net_F": [
+      4.352358105919052e-06,
+      3.527878424312153e-06,
+      1.5408191220700473e-06
+     ],
+     "net_M": [
+      4.1711164158186875e-06,
+      -5.202426992617637e-06,
+      -1.8383854640238208e-05
+     ],
+     "rel_net_F": 1.1621199735967312e-09,
+     "rel_net_M": 3.911161311943583e-09
+    }
+   ]
+  }
+ },
+ "E1": {
+  "R_n192": {
+   "evaluated": true,
+   "a_stopping_rule": false,
+   "a_termination": "guard",
+   "b_volume": true,
+   "b_volume_abs_err": 1.4409029525097594e-12,
+   "c_production_residuals": true,
+   "c_max_production_rel_true": 9.997375248351712e-06,
+   "d_audit": true,
+   "e_no_spill_covered": false,
+   "e_no_spill_no_allocation_failure_over_covered_interval": true,
+   "e_coverage_from_launcher_first_sample": false,
+   "e_note": "not established as worded: in the OPT and AUDIT jobs coverage is complete from the launcher's third sample (the first with the job process and both counters), after the job's CUDA context and one-element probe allocation; no spill or allocation failure from there on",
+   "passed": false
+  },
+  "R_n384": {
+   "evaluated": true,
+   "a_stopping_rule": false,
+   "a_termination": "guard",
+   "b_volume": true,
+   "b_volume_abs_err": 3.0636093661939867e-10,
+   "c_production_residuals": true,
+   "c_max_production_rel_true": 9.975857971649395e-06,
+   "d_audit": true,
+   "e_no_spill_covered": false,
+   "e_no_spill_no_allocation_failure_over_covered_interval": true,
+   "e_coverage_from_launcher_first_sample": false,
+   "e_note": "not established as worded: in the OPT and AUDIT jobs coverage is complete from the launcher's third sample (the first with the job process and both counters), after the job's CUDA context and one-element probe allocation; no spill or allocation failure from there on",
+   "passed": false
+  }
+ },
+ "S1": {
+  "R_n192": {
+   "max_rel_diff_prod_vs_tight": 2.1476649520024345e-08,
+   "prediction": "<= 1e-4",
+   "holds": true,
+   "scope_note": "the plan's S1 rule is stated for R designs that pass E1; this design does not pass E1, so the value is reported against the prediction only"
+  },
+  "R_n384": {
+   "max_rel_diff_prod_vs_tight": 4.982083120062699e-08,
+   "prediction": "<= 1e-4",
+   "holds": true,
+   "scope_note": "the plan's S1 rule is stated for R designs that pass E1; this design does not pass E1, so the value is reported against the prediction only"
+  },
+  "O_n192": {
+   "max_rel_diff_prod_vs_tight": 1.9587413534328753e-08,
+   "holds": true
+  }
+ },
+ "S2": {
+  "R_n192": {
+   "pool_peak_reserved_bytes": 710394880,
+   "model_bytes": 716025066.9589052,
+   "ratio": 0.9921368856780145,
+   "holds": true,
+   "model": "254.5 B x N_alloc + 216 MB (T30 out/workspace.json)",
+   "pool_peak_used_bytes": 666508288,
+   "ratio_used": 0.93084490858789
+  },
+  "R_n384": {
+   "pool_peak_reserved_bytes": 4410662912,
+   "model_bytes": 4218875479.671233,
+   "ratio": 1.0454593725870553,
+   "holds": true,
+   "model": "254.5 B x N_alloc + 216 MB (T30 out/workspace.json)",
+   "pool_peak_used_bytes": 3947981824,
+   "ratio_used": 0.9357900803243562
+  }
+ },
+ "O_n192_E1_items": {
+  "evaluated": true,
+  "a_stopping_rule": false,
+  "a_termination": "guard",
+  "b_volume": true,
+  "b_volume_abs_err": 2.9538593793176915e-12,
+  "c_production_residuals": true,
+  "c_max_production_rel_true": 9.932941351268732e-06,
+  "d_audit": true,
+  "e_no_spill_covered": false,
+  "e_no_spill_no_allocation_failure_over_covered_interval": true,
+  "e_coverage_from_launcher_first_sample": false,
+  "e_note": "not established as worded: in the OPT and AUDIT jobs coverage is complete from the launcher's third sample (the first with the job process and both counters), after the job's CUDA context and one-element probe allocation; no spill or allocation failure from there on",
+  "passed": false
+ },
+ "C1_O_n192_category": "not-converged",
+ "C1_R_n192_category_same_rule": "not-converged",
+ "comparison_O_vs_R_n192": {
+  "C2_matching_state": {
+   "per_hash": {
+    "initial_design_variable": true,
+    "iteration1_rho_phys": true,
+    "iteration1_E32": true
+   },
+   "all_identical": true,
+   "R": {
+    "initial_design_variable": "06a308fbc2d13cbcef0457a0bd40f5948e96091e6853776bdc278a9bcbe07579",
+    "iteration1_rho_phys": "59f5dcce2488475c9731205f27eb4e99efe41f1524d4ede92b31dddfefe3224a",
+    "iteration1_E32": "ec710e40c4d97be2a113afe694cb94b910f49820bb1b16ef75a23881a5cb30c7"
+   },
+   "O": {
+    "initial_design_variable": "06a308fbc2d13cbcef0457a0bd40f5948e96091e6853776bdc278a9bcbe07579",
+    "iteration1_rho_phys": "59f5dcce2488475c9731205f27eb4e99efe41f1524d4ede92b31dddfefe3224a",
+    "iteration1_E32": "ec710e40c4d97be2a113afe694cb94b910f49820bb1b16ef75a23881a5cb30c7"
+   }
+  },
+  "C5_path_divergence": {
+   "first_iteration_J_rel_diff_gt_1e-6": 101,
+   "iterations_compared": 300,
+   "J_rel_diff_at": {
+    "1": 2.628217527706994e-10,
+    "2": 1.157091466914971e-08,
+    "5": 5.595941585637428e-09,
+    "10": 8.419860561164792e-09,
+    "15": 3.0437747877058164e-09,
+    "16": 4.741020049422544e-08,
+    "20": 5.626685166282585e-09,
+    "40": 3.179576688575024e-11,
+    "41": 5.398283537452417e-09,
+    "65": 9.882094946258445e-09,
+    "66": 5.215321250130706e-09,
+    "76": 2.0770237378767742e-08,
+    "100": 7.411494238369074e-07,
+    "150": 6.794664850333659e-07,
+    "200": 1.0943953757254673e-06,
+    "250": 1.147570303156293e-06,
+    "300": 1.4177209822148392e-08
+   },
+   "max_J_rel_diff_over_common_iterations": 2.1915775806526362e-06,
+   "max_J_rel_diff_iterations_1_75": {
+    "value": 6.031474303270016e-08,
+    "at_iteration": 4
+   }
+  },
+  "C3_design_outcome": {
+   "J_tight_R": 1.2037514323607468,
+   "J_tight_O": 1.203751310170075,
+   "J_tight_rel_diff": 1.0150822546755637e-07,
+   "c_tight_rel_diff_per_case": [
+    1.3538247400021276e-06,
+    4.890487104336272e-07,
+    1.9200367437196166e-06,
+    2.1136381912854096e-06
+   ],
+   "iterations": {
+    "R": 300,
+    "O": 300
+   },
+   "terminations": {
+    "R": "guard",
+    "O": "guard"
+   },
+   "mean_abs_drho_phys_designable": 2.034793981926279e-05,
+   "fraction_designable_abs_drho_phys_gt_0.5": 9.669730359568924e-06,
+   "equal_design_rule": "applies only when both runs are completed-verified; it does not apply here"
+  },
+  "C4_cost_ratios": {
+   "optimization_s": {
+    "O": 561.3641440999927,
+    "R": 566.3864628000301,
+    "ratio_O_over_R": 0.9911326999674238,
+    "reading": "no difference measurable at single-run resolution"
+   },
+   "iterations_2_to_end_s": {
+    "O": 559.26028029999,
+    "R": 555.9573472000193,
+    "ratio_O_over_R": 1.0059409829128176,
+    "reading": "no difference measurable at single-run resolution",
+    "measured_boundary": "from entry to iteration 1's on_iter callback to run() return, in both runs",
+    "plan_quantity_ratio_bounds": [
+     1.0002250645678463,
+     1.0119389633939644
+    ],
+    "plan_quantity_reading": "no difference measurable at single-run resolution"
+   },
+   "median_iteration_s": {
+    "O": 1.5021775499917567,
+    "R": 1.4878156000049785,
+    "ratio_O_over_R": 1.0096530443602891,
+    "reading": "no difference measurable at single-run resolution"
+   },
+   "median_solve_s_per_case": [
+    {
+     "O": 0.3992387499893084,
+     "R": 0.39442480000434443,
+     "ratio_O_over_R": 1.0122049880862232,
+     "reading": "no difference measurable at single-run resolution"
+    },
+    {
+     "O": 0.3851283999683801,
+     "R": 0.3837381000048481,
+     "ratio_O_over_R": 1.0036230438507785,
+     "reading": "no difference measurable at single-run resolution"
+    },
+    {
+     "O": 0.35918020000099204,
+     "R": 0.35441240001819097,
+     "ratio_O_over_R": 1.013452689529363,
+     "reading": "no difference measurable at single-run resolution"
+    },
+    {
+     "O": 0.3074264999886509,
+     "R": 0.3085762999835424,
+     "ratio_O_over_R": 0.9962738551374398,
+     "reading": "no difference measurable at single-run resolution"
+    }
+   ],
+   "pool_peak_reserved_bytes": {
+    "O": 710394880,
+    "R": 710394880,
+    "ratio_O_over_R": 1.0,
+    "reading": "no difference measurable at single-run resolution"
+   },
+   "summed_outer_per_case": {
+    "R": [
+     1210,
+     1222,
+     1191,
+     1208
+    ],
+    "O": [
+     1212,
+     1221,
+     1193,
+     1210
+    ]
+   },
+   "summed_inner_per_case": {
+    "R": [
+     28660,
+     28303,
+     25182,
+     24343
+    ],
+    "O": [
+     29263,
+     28690,
+     25568,
+     24684
+    ]
+   },
+   "band": "[0.95, 1.05]: no difference measurable at single-run resolution",
+   "interference": "shared display card; no activity-exclusion rule applied (plan section 6)"
+  }
+ },
+ "hypotheses": {
+  "H1": "inconclusive (reached the 300-iteration guard; coverage from the launcher's first sample not established (no spill from the third))",
+  "H2": "inconclusive (reached the 300-iteration guard; coverage from the launcher's first sample not established (no spill from the third))"
+ },
+ "application_status_R1_4": "inconclusive",
+ "designs_passing_E1": []
+}

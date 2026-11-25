@@ -1,0 +1,692 @@
+{
+ "task": "T27",
+ "name": "H3_solve_k160_mgir_rep",
+ "kind": "H3",
+ "args": {
+  "step": "H3",
+  "k": 160,
+  "path": "mgir_rep",
+  "tag": ""
+ },
+ "status": "ok",
+ "device_baseline_mib": 3488.0,
+ "others_at_launch": {
+  "10452": {
+   "dedicated": 17666048,
+   "shared": 212992
+  },
+  "11260": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "12224": {
+   "dedicated": 426332160,
+   "shared": 2093056
+  },
+  "12436": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "12680": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "14776": {
+   "dedicated": 108478464,
+   "shared": 4816896
+  },
+  "15716": {
+   "dedicated": 20516864,
+   "shared": 319488
+  },
+  "15740": {
+   "dedicated": 25104384,
+   "shared": 319488
+  },
+  "15920": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "17624": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "17952": {
+   "dedicated": 70443008,
+   "shared": 212992
+  },
+  "18196": {
+   "dedicated": 42086400,
+   "shared": 319488
+  },
+  "18972": {
+   "dedicated": 20123648,
+   "shared": 0
+  },
+  "1952": {
+   "dedicated": 110682112,
+   "shared": 66404352
+  },
+  "19812": {
+   "dedicated": 16449536,
+   "shared": 212992
+  },
+  "20852": {
+   "dedicated": 157810688,
+   "shared": 212992
+  },
+  "21048": {
+   "dedicated": 38948864,
+   "shared": 262144
+  },
+  "21208": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "21444": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "22832": {
+   "dedicated": 20312064,
+   "shared": 212992
+  },
+  "23188": {
+   "dedicated": 155365376,
+   "shared": 319488
+  },
+  "24000": {
+   "dedicated": 10952704,
+   "shared": 319488
+  },
+  "2412": {
+   "dedicated": 4537454592,
+   "shared": 6905856
+  },
+  "26300": {
+   "dedicated": 488538112,
+   "shared": 14090240
+  },
+  "27604": {
+   "dedicated": 10952704,
+   "shared": 319488
+  },
+  "29616": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "33408": {
+   "dedicated": 19476480,
+   "shared": 880640
+  },
+  "3440": {
+   "dedicated": 23465984,
+   "shared": 24760320
+  },
+  "35872": {
+   "dedicated": 354971648,
+   "shared": 18681856
+  },
+  "36592": {
+   "dedicated": 369803264,
+   "shared": 368640
+  },
+  "37792": {
+   "dedicated": 18808832,
+   "shared": 262144
+  },
+  "38068": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "3824": {
+   "dedicated": 64327680,
+   "shared": 319488
+  },
+  "40444": {
+   "dedicated": 124051456,
+   "shared": 368640
+  },
+  "4056": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "41960": {
+   "dedicated": 190930944,
+   "shared": 9355264
+  },
+  "42776": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "43316": {
+   "dedicated": 18092032,
+   "shared": 0
+  },
+  "44000": {
+   "dedicated": 47681536,
+   "shared": 33857536
+  },
+  "4": {
+   "dedicated": 4235264,
+   "shared": 270336
+  },
+  "5060": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "55132": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "57712": {
+   "dedicated": 15065088,
+   "shared": 2396160
+  },
+  "7476": {
+   "dedicated": 17235968,
+   "shared": 0
+  }
+ },
+ "others_dedicated_at_launch_bytes": 7634186240,
+ "environment": {
+  "time": "2026-11-23T07:44:33",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "4516ab6f281f6cfa",
+ "started": "2026-11-23T07:44:33",
+ "protective_pool_cap": {
+  "E_free_bytes": 17767940096,
+  "pool_cap_bytes": 16157327360,
+  "E_free_info": {
+   "cuda_free": 24152899584,
+   "total": 25756696576,
+   "others_dedicated": 7634186240,
+   "wddm_free": 17767940096
+  }
+ },
+ "k": 160,
+ "n_elem": 8192000,
+ "ndof": 24961923,
+ "path": "mgir_rep",
+ "solver": "mgir",
+ "variant": "stencil_diff",
+ "setup_a_s": 0.8610985999694094,
+ "setup_b_s": 0.3370377999963239,
+ "mg_levels": 6,
+ "first_application_s": 0.04100790002848953,
+ "timed": [
+  {
+   "solve_s": 0.5284077000105754,
+   "step_ms_median": 21.85961627960205,
+   "step_ms_iqr": [
+    12.878007650375366,
+    21.9561767578125
+   ],
+   "n_steps": 18,
+   "start_overhead_ms": 111.98716735839844,
+   "cum_ms_at_precond": [
+    111.98716735839844,
+    135.7764129638672,
+    158.44461059570312,
+    180.32415771484375,
+    202.22425842285156,
+    224.1024627685547,
+    246.06675720214844,
+    267.90777587890625,
+    289.8396301269531,
+    311.9034729003906,
+    333.9327087402344,
+    357.5052185058594,
+    370.1762390136719,
+    393.9346618652344,
+    407.626220703125,
+    429.2958984375,
+    441.9671630859375,
+    454.7080078125,
+    468.35986328125,
+    481.5202941894531,
+    494.3041687011719,
+    507.01275634765625
+   ],
+   "total_ms": 528.4098510742188,
+   "stats": {
+    "outer": 4,
+    "inner_iters": 22,
+    "matvecs64": 5,
+    "matvecs32": 22,
+    "precond": 26,
+    "rel_initial": 1.0,
+    "warm_start_reset": false,
+    "rejected_steps": 0,
+    "rel_true": 9.865970663739374e-06,
+    "converged": true,
+    "inner_tol_final": 0.1,
+    "time_s": 0.52836950001074
+   },
+   "insolver_history": [
+    [
+     0,
+     0,
+     1.0
+    ],
+    [
+     1,
+     11,
+     0.0286028121205901
+    ],
+    [
+     2,
+     2,
+     0.0019855476988560328
+    ],
+    [
+     3,
+     2,
+     0.00019323013903182822
+    ],
+    [
+     4,
+     7,
+     9.865970663739374e-06
+    ]
+   ],
+   "outer_residual_ms": [
+    16.259071350097656,
+    7.559167861938477,
+    7.886847972869873,
+    7.564288139343262,
+    7.905280113220215
+   ],
+   "outer_residual_ms_mean_per_outer": 7.7288960218429565,
+   "cum_ms_at_outer_residual_end": [
+    16.650239944458008,
+    356.47589111328125,
+    392.8985595703125,
+    428.38629150390625,
+    528.1433715820312
+   ],
+   "iterations": 4,
+   "inner_iterations": 22
+  },
+  {
+   "solve_s": 0.32555770000908524,
+   "step_ms_median": 12.737936019897461,
+   "step_ms_iqr": [
+    12.708152055740356,
+    12.869519710540771
+   ],
+   "n_steps": 18,
+   "start_overhead_ms": 8.634688377380371,
+   "cum_ms_at_precond": [
+    8.634688377380371,
+    21.176288604736328,
+    33.875518798828125,
+    46.645118713378906,
+    59.77939224243164,
+    72.50511932373047,
+    85.20793914794922,
+    98.39266967773438,
+    111.12156677246094,
+    123.8650894165039,
+    136.6337890625,
+    158.442138671875,
+    171.34364318847656,
+    193.25270080566406,
+    205.8603515625,
+    227.52291870117188,
+    240.5799102783203,
+    253.3534698486328,
+    266.0858154296875,
+    278.80999755859375,
+    291.5000305175781,
+    304.5140686035156
+   ],
+   "total_ms": 325.5596008300781,
+   "stats": {
+    "outer": 4,
+    "inner_iters": 22,
+    "matvecs64": 5,
+    "matvecs32": 22,
+    "precond": 26,
+    "rel_initial": 1.0,
+    "warm_start_reset": false,
+    "rejected_steps": 0,
+    "rel_true": 9.865970663739374e-06,
+    "converged": true,
+    "inner_tol_final": 0.1,
+    "time_s": 0.32552299997769296
+   },
+   "insolver_history": [
+    [
+     0,
+     0,
+     1.0
+    ],
+    [
+     1,
+     11,
+     0.0286028121205901
+    ],
+    [
+     2,
+     2,
+     0.0019855476988560328
+    ],
+    [
+     3,
+     2,
+     0.00019323013903182822
+    ],
+    [
+     4,
+     7,
+     9.865970663739374e-06
+    ]
+   ],
+   "outer_residual_ms": [
+    7.555071830749512,
+    7.610367774963379,
+    7.58681583404541,
+    7.588863849639893,
+    7.584767818450928
+   ],
+   "outer_residual_ms_mean_per_outer": 7.592703819274902,
+   "cum_ms_at_outer_residual_end": [
+    7.751520156860352,
+    157.5115203857422,
+    192.38485717773438,
+    226.66018676757812,
+    325.30926513671875
+   ],
+   "iterations": 4,
+   "inner_iterations": 22
+  },
+  {
+   "solve_s": 0.32911829999648035,
+   "step_ms_median": 12.795760154724121,
+   "step_ms_iqr": [
+    12.726144313812256,
+    12.893944025039673
+   ],
+   "n_steps": 18,
+   "start_overhead_ms": 9.8373441696167,
+   "cum_ms_at_precond": [
+    9.8373441696167,
+    23.150400161743164,
+    37.2803840637207,
+    50.17660903930664,
+    63.31267166137695,
+    76.09398651123047,
+    88.96205139160156,
+    101.77225494384766,
+    114.94601440429688,
+    127.67916870117188,
+    140.40296936035156,
+    162.26194763183594,
+    175.088134765625,
+    196.83413696289062,
+    209.41439819335938,
+    231.54275512695312,
+    244.20912170410156,
+    256.9549255371094,
+    269.7301940917969,
+    282.6173095703125,
+    295.3275451660156,
+    308.0295715332031
+   ],
+   "total_ms": 329.1207580566406,
+   "stats": {
+    "outer": 4,
+    "inner_iters": 22,
+    "matvecs64": 5,
+    "matvecs32": 22,
+    "precond": 26,
+    "rel_initial": 1.0,
+    "warm_start_reset": false,
+    "rejected_steps": 0,
+    "rel_true": 9.865970663739374e-06,
+    "converged": true,
+    "inner_tol_final": 0.1,
+    "time_s": 0.3290912000229582
+   },
+   "insolver_history": [
+    [
+     0,
+     0,
+     1.0
+    ],
+    [
+     1,
+     11,
+     0.0286028121205901
+    ],
+    [
+     2,
+     2,
+     0.0019855476988560328
+    ],
+    [
+     3,
+     2,
+     0.00019323013903182822
+    ],
+    [
+     4,
+     7,
+     9.865970663739374e-06
+    ]
+   ],
+   "outer_residual_ms": [
+    7.941120147705078,
+    7.5878400802612305,
+    7.5878400802612305,
+    7.921664237976074,
+    7.588863849639893
+   ],
+   "outer_residual_ms_mean_per_outer": 7.671552062034607,
+   "cum_ms_at_outer_residual_end": [
+    8.131711959838867,
+    161.3640899658203,
+    195.9701690673828,
+    230.60800170898438,
+    328.877197265625
+   ],
+   "iterations": 4,
+   "inner_iterations": 22
+  }
+ ],
+ "solve_s_median": 0.32911829999648035,
+ "solve_s_iqr": [
+  0.3273380000027828,
+  0.42876300000352785
+ ],
+ "median_run_index": 2,
+ "iterate_file": "scratch/h3_k160_mgir_rep_x.npy",
+ "iterate_order": "ours, FP64",
+ "history_solve": {
+  "stats": {
+   "outer": 4,
+   "inner_iters": 22,
+   "matvecs64": 5,
+   "matvecs32": 22,
+   "precond": 26,
+   "rel_initial": 1.0,
+   "warm_start_reset": false,
+   "rejected_steps": 0,
+   "rel_true": 9.865970663739374e-06,
+   "converged": true,
+   "inner_tol_final": 0.1,
+   "time_s": 0.385116100020241
+  },
+  "insolver_history": [
+   [
+    0,
+    0,
+    1.0
+   ],
+   [
+    1,
+    11,
+    0.0286028121205901
+   ],
+   [
+    2,
+    2,
+    0.0019855476988560328
+   ],
+   [
+    3,
+    2,
+    0.00019323013903182822
+   ],
+   [
+    4,
+    7,
+    9.865970663739374e-06
+   ]
+  ],
+  "rows": [
+   {
+    "call": 0,
+    "rel_true": 1.0,
+    "rel_insolver": 1.0
+   },
+   {
+    "call": 1,
+    "rel_true": 0.028602812113129823,
+    "rel_insolver": 0.0286028121205901
+   },
+   {
+    "call": 2,
+    "rel_true": 0.001985547699705467,
+    "rel_insolver": 0.0019855476988560328
+   },
+   {
+    "call": 3,
+    "rel_true": 0.0001932301389159698,
+    "rel_insolver": 0.00019323013903182822
+   },
+   {
+    "call": 4,
+    "rel_true": 9.865970668947868e-06,
+    "rel_insolver": 9.865970663739374e-06
+   }
+  ]
+ },
+ "outcome_class": 9,
+ "outcome": "verified acceptance (in-process)",
+ "end": "2026-11-23T07:44:42",
+ "process_wall_s": 18.079480409622192,
+ "pool": {
+  "pool_used_peak_bytes": 1765326336,
+  "pool_reserved_peak_bytes": 1787466752,
+  "hook_calls": 760,
+  "largest_request_bytes": 199695872
+ },
+ "device_wide": {
+  "n_samples": 60,
+  "device_peak_bytes": 6080692224,
+  "baseline_bytes": 3657433088
+ },
+ "process_dedicated": {
+  "n_samples": 14,
+  "n_own": 14,
+  "dedicated_peak_bytes": 2424631296,
+  "shared_start_bytes": 77594624,
+  "shared_max_bytes": 157286400,
+  "shared_growth_bytes": 79691776,
+  "spilled": false,
+  "others_dedicated_max_bytes": 7634186240,
+  "others_dedicated_first_bytes": 7634186240
+ },
+ "spillwatch": {
+  "max_shared_growth_bytes": 79691776,
+  "spilled": false
+ },
+ "spillwatch_samples": [
+  {
+   "tag": "start",
+   "t": 1795448673.9872122,
+   "dedicated": 354570240,
+   "shared": 77594624,
+   "others_dedicated": 7634186240
+  },
+  {
+   "tag": "end",
+   "t": 1795448682.3355405,
+   "dedicated": 2424631296,
+   "shared": 157286400,
+   "others_dedicated": 7633002496
+  }
+ ],
+ "spilled": false,
+ "activity": {
+  "n_samples": 1,
+  "mean_foreign_pct": 0.13456764650107636,
+  "max_foreign_pct": 0.13456764650107636
+ },
+ "activity_timed": [
+  {
+   "label": "solve0",
+   "duration_s": 0.5279955863952637,
+   "mean_foreign_pct": 0.13456764650107636,
+   "n_samples": 1
+  },
+  {
+   "label": "solve1",
+   "duration_s": 0.32552480697631836,
+   "mean_foreign_pct": 0.13456764650107636,
+   "n_samples": 1
+  },
+  {
+   "label": "solve2",
+   "duration_s": 0.3296780586242676,
+   "mean_foreign_pct": 0.13456764650107636,
+   "n_samples": 1
+  }
+ ],
+ "mean_foreign_timed_pct": 0.13456764650107636,
+ "timing_flag": "ok",
+ "valid": true,
+ "code_files": {
+  "src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "src/voxfem/core.py": "318596a50144b516",
+  "src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "src/voxfem/memory.py": "824be1910087b604",
+  "src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "src/voxfem/operators.py": "e89a0ec274e670ad",
+  "src/voxfem/sass.py": "184cd5714214ef1c",
+  "src/voxfem/simp.py": "b68537c154bd76bc",
+  "src/voxfem/sparse.py": "7830a4672baee938",
+  "src/experiments/_boot.py": "33c086109bcda1dd",
+  "src/experiments/E10_external_hou.py": "f264358c343f6fc8",
+  "src/experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "src/experiments/run_simp.py": "d913d5a57d599399",
+  "drivers/c_check.py": "df8bef0e838c9456",
+  "drivers/c_simp.py": "a823846781153560",
+  "drivers/collect.py": "365e489102f8b9d9",
+  "drivers/hou_instr.py": "f05a9afcf453102b",
+  "drivers/hrun.py": "345ed41a153ea9ab",
+  "drivers/hsys.py": "d7476b336bac9cec",
+  "drivers/predictions.py": "3e1564e093241d7f",
+  "drivers/queue_t27.py": "16d5d2c0052c60de",
+  "drivers/t27boot.py": "7ff37f9b05b0d74c",
+  "drivers/t27lib.py": "49d2266355db07d9",
+  "drivers/v_verify.py": "9c79013b413f25c8"
+ }
+}

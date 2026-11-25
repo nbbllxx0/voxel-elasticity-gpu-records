@@ -1,0 +1,114 @@
+{
+ "plan_sha256": "28ba0a05d7d1b743758d8c33abf298afcc26893dcb6f2598d9dbe17f30c99905",
+ "plan_unchanged": true,
+ "frozen_gval_failed": {
+  "uniform": true,
+  "interface": true,
+  "voids": true
+ },
+ "governing": {
+  "other_files_identical": {
+   "voids.csv": true,
+   "beam_k128.csv": true,
+   "terminal_residuals.csv": true,
+   "reference_checks.json": true,
+   "cells.json": true,
+   "summary.json": true
+  },
+  "verdict_changes": [
+   {
+    "path": "/mean|voids/H5/class",
+    "before": "contradiction",
+    "after": "inconclusive",
+    "allowed": true
+   },
+   {
+    "path": "/mean|voids/H5/clause",
+    "before": "g_lo^ctrl(64->128) >= 1.5 (stands although the layout's G-val failed: DEVIATIONS.md D9 reading of 'at best inconclusive', met on grids whose G-ref passed)",
+    "after": "contradiction clause met (g_lo^ctrl(64->128) >= 1.5), but the layout's G-val failed: at best inconclusive",
+    "allowed": true
+   }
+  ]
+ },
+ "d11_sensitivity": {
+  "other_files_identical": {
+   "voids.csv": true,
+   "beam_k128.csv": true,
+   "terminal_residuals.csv": true,
+   "reference_checks.json": true,
+   "cells.json": true,
+   "summary.json": true
+  },
+  "verdict_changes": [
+   {
+    "path": "/diff|uniform/H5/class",
+    "before": "contradiction",
+    "after": "inconclusive",
+    "allowed": true
+   },
+   {
+    "path": "/diff|uniform/H5/clause",
+    "before": "g_lo^ctrl(64->128) >= 1.5 (stands although the layout's G-val failed: DEVIATIONS.md D9 reading of 'at best inconclusive', met on grids whose G-ref passed)",
+    "after": "contradiction clause met (g_lo^ctrl(64->128) >= 1.5), but the layout's G-val failed: at best inconclusive",
+    "allowed": true
+   },
+   {
+    "path": "/mean|uniform/H5/class",
+    "before": "contradiction",
+    "after": "inconclusive",
+    "allowed": true
+   },
+   {
+    "path": "/mean|uniform/H5/clause",
+    "before": "g_lo^ctrl(64->128) >= 1.5 (stands although the layout's G-val failed: DEVIATIONS.md D9 reading of 'at best inconclusive', met on grids whose G-ref passed)",
+    "after": "contradiction clause met (g_lo^ctrl(64->128) >= 1.5), but the layout's G-val failed: at best inconclusive",
+    "allowed": true
+   },
+   {
+    "path": "/mean|voids/H5/class",
+    "before": "contradiction",
+    "after": "inconclusive",
+    "allowed": true
+   },
+   {
+    "path": "/mean|voids/H5/clause",
+    "before": "g_lo^ctrl(64->128) >= 1.5 (stands although the layout's G-val failed: DEVIATIONS.md D9 reading of 'at best inconclusive', met on grids whose G-ref passed)",
+    "after": "contradiction clause met (g_lo^ctrl(64->128) >= 1.5), but the layout's G-val failed: at best inconclusive",
+    "allowed": true
+   }
+  ]
+ },
+ "voids_mean_descriptive": {
+  "H5_class": "inconclusive",
+  "H5_clause": "contradiction clause met (g_lo^ctrl(64->128) >= 1.5), but the layout's G-val failed: at best inconclusive",
+  "g_lo_ctrl_64_128": 4.395211280702134,
+  "D_coef_k128": 6.0704062022711714e-06,
+  "U_D_coef_k128": 3.776819937766106e-13,
+  "D_rest_median_k128": -1.4946418653472599e-05,
+  "U_D_rest_k128": 3.776819937766106e-13,
+  "attribution_label": "FP32-part-dominated",
+  "D_tot_median_k64": -2.015711109156113e-06,
+  "D_tot_median_k128": -8.876012451201428e-06
+ },
+ "H5_classes": {
+  "governing": {
+   "mean|uniform": "inconclusive",
+   "diff|uniform": "inconclusive",
+   "mean|interface": "inconclusive",
+   "diff|interface": "inconclusive",
+   "mean|voids": "inconclusive",
+   "diff|voids": "inconclusive"
+  },
+  "d11_sensitivity": {
+   "mean|uniform": "inconclusive",
+   "diff|uniform": "inconclusive",
+   "mean|interface": "inconclusive",
+   "diff|interface": "inconclusive",
+   "mean|voids": "inconclusive",
+   "diff|voids": "inconclusive"
+  }
+ },
+ "no_contradiction_on_failed_gval_layout": true,
+ "selftest_passed": true,
+ "passed": true
+}

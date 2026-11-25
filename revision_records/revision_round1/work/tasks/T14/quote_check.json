@@ -1,0 +1,1210 @@
+{
+ "n_items": 131,
+ "n_found": 131,
+ "n_missing": 0,
+ "n_section_checked": 31,
+ "n_lines_checked": 30,
+ "location_problems": [],
+ "literature_block_xref": {
+  "n_rows": 24,
+  "scope": {
+   "rows": {
+    "n_entries": 16,
+    "per_claim_support_map": 16,
+    "quote_list_only": 0
+   },
+   "device_specs": {
+    "n_entries": 4,
+    "per_claim_support_map": 0,
+    "quote_list_only": 4
+   },
+   "released_code": {
+    "n_entries": 4,
+    "per_claim_support_map": 0,
+    "quote_list_only": 4
+   }
+  },
+  "problems": []
+ },
+ "results": [
+  {
+   "id": "K1",
+   "src": "KANG_CR",
+   "location": "Crossref record: title",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "K2",
+   "src": "KANG_CR",
+   "location": "Crossref record: author list",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "K3",
+   "src": "KANG_CR",
+   "location": "Crossref record: author list",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "K4",
+   "src": "KANG_CR",
+   "location": "Crossref record: author list",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "K5",
+   "src": "KANG_CR",
+   "location": "Crossref record: author list",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "K6",
+   "src": "KANG_ELS",
+   "location": "Elsevier metadata: cover date",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "K7",
+   "src": "KANG_CR",
+   "location": "Crossref record: volume",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "K8",
+   "src": "KANG_ABS",
+   "location": "Abstract, sentence 1",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "K9",
+   "src": "KANG_ABS",
+   "location": "Abstract, sentence 2",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "K10",
+   "src": "KANG_ABS",
+   "location": "Abstract, sentence 3",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "K11",
+   "src": "KANG_ABS",
+   "location": "Abstract, sentence 5",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "K12",
+   "src": "KANG_ABS",
+   "location": "Abstract, last sentence",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C1",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, first paragraph",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C2",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, first paragraph",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C3",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C4",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C5",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C6",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C7",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C8",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Key Features and Properties",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C9",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, Support",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C10",
+   "src": "CUDSS_START",
+   "location": "cuDSS docs, Getting Started, cuDSS Workflow",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C11",
+   "src": "CUDSS_START",
+   "location": "cuDSS docs, Getting Started, cuDSS Workflow, step 2",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C12",
+   "src": "CUDSS_FUNCS",
+   "location": "cuDSS docs, Functions, cudssExecute()",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C13",
+   "src": "CUDSS_FUNCS",
+   "location": "cuDSS docs, Functions, cudssExecute()",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C14",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssPhase_t, CUDSS_PHASE_REFACTORIZATION",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C15",
+   "src": "CUDSS_TIPS",
+   "location": "cuDSS docs, Tips and tricks",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C16",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_N_STEPS",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C17",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_N_STEPS (end of entry)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C18",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_TOL",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C19",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_TOL",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C20",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_TOL",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C21",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_IR_TOL",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C22",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_DOWNCAST_FACTORS",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C23",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_DOWNCAST_FACTORS",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C24",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_DOWNCAST_FACTORS",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C25",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssConfigParam_t, CUDSS_CONFIG_DOWNCAST_FACTORS",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C26",
+   "src": "CUDSS_REL",
+   "location": "cuDSS docs, Release Notes, cuDSS v1.0.0, New Features",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C27",
+   "src": "CUDSS_TYPES",
+   "location": "cuDSS docs, Data Types, cudssMatrixType_t, CUDSS_MTYPE_SPD",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C28",
+   "src": "CUDSS_ADV",
+   "location": "cuDSS docs, Advanced Features, Hybrid host/device memory mode",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C29",
+   "src": "CUDSS_REL",
+   "location": "cuDSS docs, Release Notes, newest entry",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T1",
+   "src": "TRAFF_P02",
+   "location": "Träff et al. 2023, Abstract (article p.1)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T2",
+   "src": "TRAFF_P14",
+   "location": "Träff et al. 2023, Fig. 4 caption (article p.13)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T3",
+   "src": "TRAFF_P14",
+   "location": "Träff et al. 2023, Sec. 4.1 Cantilever (article p.13)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T4",
+   "src": "TRAFF_P14",
+   "location": "Träff et al. 2023, Sec. 4.1 Cantilever (article p.13)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T5",
+   "src": "TRAFF_P15",
+   "location": "Träff et al. 2023, Sec. 4.1 Cantilever (article p.14)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T6",
+   "src": "TRAFF_P15",
+   "location": "Träff et al. 2023, Sec. 4.1 MBB beam (article p.14)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T7",
+   "src": "TRAFF_P15",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.14)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T8",
+   "src": "TRAFF_P15",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.14)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T9",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T10",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Fig. 6 caption (article p.15)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T11",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T12",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T13",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T14",
+   "src": "TRAFF_P17",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.16)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T15",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T16",
+   "src": "TRAFF_P19",
+   "location": "Träff et al. 2023, Sec. 4.2 Memory usage (article p.18)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T17",
+   "src": "TRAFF_P19",
+   "location": "Träff et al. 2023, Sec. 4.2 Memory usage (article p.18)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T18",
+   "src": "TRAFF_P19",
+   "location": "Träff et al. 2023, Sec. 4.2 Memory usage (article p.18)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T19",
+   "src": "TRAFF_P20",
+   "location": "Träff et al. 2023, Fig. 10 caption (article p.19)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T20",
+   "src": "TRAFF_P20",
+   "location": "Träff et al. 2023, Sec. 5 (article p.19)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T21",
+   "src": "TRAFF_P20",
+   "location": "Träff et al. 2023, Sec. 5 (article p.19)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T22",
+   "src": "TRAFF_P06",
+   "location": "Träff et al. 2023, Sec. 2.3 Conjugate gradient (article p.5)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T23",
+   "src": "TRAFF_P06",
+   "location": "Träff et al. 2023, Sec. 2.3 (article p.5)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T24",
+   "src": "TRAFF_P07",
+   "location": "Träff et al. 2023, Sec. 2.3 Coarse space correction (article p.6)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T25",
+   "src": "TRAFF_P08",
+   "location": "Träff et al. 2023, Sec. 3 (article p.7)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T26",
+   "src": "TRAFF_P08",
+   "location": "Träff et al. 2023, Sec. 3 Matrix-free operator (article p.7)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T27",
+   "src": "TRAFF_P17",
+   "location": "Träff et al. 2023, Fig. 7 caption (article p.16)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T28",
+   "src": "TRAFF_P22",
+   "location": "Träff et al. 2023, Sec. 6 Discussion (article p.21)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T29",
+   "src": "TRAFF_P16",
+   "location": "Träff et al. 2023, Sec. 4.2 (article p.15)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "TC1",
+   "src": "TRAFF_DEFS",
+   "location": "definitions.h:25-27",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC2",
+   "src": "TRAFF_TOP3D",
+   "location": "top3d.c:82-83 (cgtol is passed to the solver; cgmax is declared and passed to top3dmgcg but never reaches the solver, see TC9-TC13)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC3",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:373",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC4",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:377",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC5",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:384",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC6",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:393-394",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC7",
+   "src": "TRAFF_METH",
+   "location": "stencil_methods.c:7-8 and 31",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC8",
+   "src": "TRAFF_METH",
+   "location": "stencil_methods.c:31",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H1",
+   "src": "HOU_CR",
+   "location": "Crossref record: title",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "H2",
+   "src": "HOU_CR",
+   "location": "Crossref record: volume",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "H3",
+   "src": "HOU_CG",
+   "location": "CG.py:20",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H4",
+   "src": "HOU_CG",
+   "location": "CG.py:30-31",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H5",
+   "src": "HOU_MAIN",
+   "location": "main.py:10",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H6",
+   "src": "HOU_FE",
+   "location": "FE.py:26",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H7",
+   "src": "HOU_SPMV",
+   "location": "SpMV.py:10",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H8",
+   "src": "HOU_KER",
+   "location": "ker.py:6, 25, ... (all 24 kernels; declared storage types of the kernel arguments)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H9",
+   "src": "HOU_MAT",
+   "location": "materialInfo.py:6",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "W1",
+   "src": "WANG_ABS",
+   "location": "Wang et al. 2025, Abstract",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "W2",
+   "src": "WANG_ABS",
+   "location": "Wang et al. 2025, Abstract",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "L1",
+   "src": "LIU_ABS",
+   "location": "Liu et al. 2018, Abstract",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "L2",
+   "src": "LIU_ABS",
+   "location": "Liu et al. 2018, Abstract",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "A1",
+   "src": "A100",
+   "location": "NVIDIA A100 product page, Specifications table",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "A2",
+   "src": "A100",
+   "location": "NVIDIA A100 product page, Specifications table",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "A3",
+   "src": "A100",
+   "location": "NVIDIA A100 product page, Specifications table header",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T30",
+   "src": "TRAFF_P08",
+   "location": "Träff et al. 2023, Sec. 3 Assembly of coarse operators (article p.7)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T31",
+   "src": "TRAFF_P08",
+   "location": "Träff et al. 2023, Sec. 3 (article p.7)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "C30",
+   "src": "CUDSS_INDEX",
+   "location": "cuDSS docs, landing page, title",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "TC9",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:334",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC10",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:338",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC11",
+   "src": "TRAFF_SOLV",
+   "location": "stencil_solvers.c:259-262 (solver signature: a tolerance, no iteration-cap argument)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC12",
+   "src": "TRAFF_OPT",
+   "location": "stencil_optimization.c:155-156 (the only call of the solver)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC13",
+   "src": "TRAFF_OPT",
+   "location": "stencil_optimization.c:15-16 (cgmax accepted as a parameter; no other use in the file)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H10",
+   "src": "HOU_PREV",
+   "location": "Hou et al. 2025, Abstract (ScienceDirect preview, line 56 of the saved page)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "H11",
+   "src": "HOU_PREV",
+   "location": "ScienceDirect preview header (lines 10-13)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "H12",
+   "src": "HOU_PREV",
+   "location": "ScienceDirect preview, title and DOI (lines 19, 32)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "H13",
+   "src": "HOU_PREV",
+   "location": "ScienceDirect preview, DOI",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "H14",
+   "src": "HOU_KER",
+   "location": "ker.py:5-11 (first generated kernel; unsuffixed decimal coefficient literals)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H15",
+   "src": "HOU_WRITER",
+   "location": "kernel_writer.py:18-22 (coefficients written as decimal strings, at most 15 characters)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H16",
+   "src": "HOU_WRITER",
+   "location": "kernel_writer.py:22",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H17",
+   "src": "HOU_MAIN",
+   "location": "main.py:11 (ker.py regenerated at run time)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H18",
+   "src": "HOU_MAIN",
+   "location": "main.py:12 (FP32 displacement)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H19",
+   "src": "HOU_FE",
+   "location": "FE.py:21 (FP32 load vector)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H20",
+   "src": "HOU_SPMV",
+   "location": "SpMV.py:8-14 (FP32 accumulation across the 24 kernel calls)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H21",
+   "src": "HOU_SPMV",
+   "location": "SpMV.py:14",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "T32",
+   "src": "TRAFF_P16",
+   "location": "Traff et al. 2023, Fig. 6 caption (article p.15)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T33",
+   "src": "TRAFF_P17",
+   "location": "Traff et al. 2023, Sec. 4.2 Performance analysis of linear elasticity (article p.16)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T34",
+   "src": "TRAFF_P17",
+   "location": "Traff et al. 2023, Sec. 4.2 Performance analysis of linear elasticity (article p.16)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T35",
+   "src": "TRAFF_P19",
+   "location": "Traff et al. 2023, Sec. 4.2 Memory usage (article p.18)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T36",
+   "src": "TRAFF_P14",
+   "location": "Traff et al. 2023, Fig. 4 caption (article p.13)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T37",
+   "src": "TRAFF_P16",
+   "location": "Traff et al. 2023, Sec. 4.2 Performance analysis of linear elasticity (article p.15)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T38",
+   "src": "TRAFF_P16",
+   "location": "Traff et al. 2023, Fig. 6 caption (article p.15)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "T39",
+   "src": "TRAFF_P15",
+   "location": "Traff et al. 2023, Sec. 4 implementation details (article p.14)",
+   "found": true,
+   "section_checked": true,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "W3",
+   "src": "WANG_ABS",
+   "location": "Wang et al. 2025, Abstract",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "W4",
+   "src": "WANG_ABS",
+   "location": "Wang et al. 2025, Abstract (code availability)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "L3",
+   "src": "LIU_ABS",
+   "location": "Liu et al. 2018, Abstract",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "L4",
+   "src": "LIU_ABS",
+   "location": "Liu et al. 2018, title (Crossref record)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "H22",
+   "src": "HOU_PREV",
+   "location": "Hou et al. 2025, Sec. 4 Numerical experiments, snippet (line 80 of the saved preview)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "H23",
+   "src": "HOU_PREV",
+   "location": "Hou et al. 2025, Sec. 4 Numerical experiments, snippet (line 80 of the saved preview)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  },
+  {
+   "id": "TC14",
+   "src": "TRAFF_METH",
+   "location": "stencil_methods.c:50 (first loadStencilInput call of applyStateOperator_stencil, offset {0, 0, 0})",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "TC15",
+   "src": "TRAFF_METH",
+   "location": "stencil_methods.c:388 (last loadStencilInput call of applyStateOperator_stencil, offset {-1, 1, 1})",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": true,
+   "location_problem": null
+  },
+  {
+   "id": "H24",
+   "src": "HOU_PREV",
+   "location": "Hou et al. 2025, Sec. 4 Numerical experiments, snippet (line 80 of the saved preview)",
+   "found": true,
+   "section_checked": false,
+   "lines_checked": false,
+   "location_problem": null
+  }
+ ]
+}

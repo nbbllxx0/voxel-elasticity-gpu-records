@@ -1,0 +1,265 @@
+{
+ "new_record": "revision_round1/work/tasks/T25/out/runs/k320_cantilever_repaired/simp_cantilever_k320_mg64_stencil_diff.json",
+ "new_field": "revision_round1/work/tasks/T25/out/runs/k320_cantilever_repaired/simp_cantilever_k320_mg64_stencil_diff_native_fp32.npz",
+ "native_field_device": {
+  "dtype": "float32",
+  "size": 65536000
+ },
+ "native_field_host": {
+  "dtype": "float32",
+  "size": 65536000,
+  "shape": [
+   640,
+   320,
+   320
+  ],
+  "sha256": "eeea8cb0cb05abca2385b04a1a42e776e98112f745c143215f1e4367f60b534b"
+ },
+ "dtype_ok": true,
+ "shape_ok": true,
+ "acceptance": {
+  "status": "ok",
+  "valid": true,
+  "converged": true,
+  "termination": "bounded_oscillation",
+  "iterations": 76,
+  "final_rel_true": 5.119522144422708e-06,
+  "final_solve_converged": true,
+  "internal_spill_watch_spilled": false,
+  "monitor_status": "ok",
+  "monitor_valid": true,
+  "monitor_spilled": false,
+  "monitor_watch": {
+   "covered_from_go": true,
+   "go_seen": true,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 79691776.0,
+   "child_dedicated_peak_bytes": 16718934016.0,
+   "n_samples": 88,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 223.56833457946777
+  },
+  "admission": {
+   "nvidia_smi_free_bytes": 22651338752,
+   "nvidia_smi_used_bytes": 2660237312,
+   "nvidia_smi_total_bytes": 25757220864,
+   "others_dedicated_bytes": 6486069248,
+   "predicted_peak_bytes": 16656205312,
+   "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+   "admitted": true
+  },
+  "require_budget_in_process": {
+   "cuda_free_bytes": 24152899584,
+   "cuda_total_bytes": 25756696576,
+   "pool_cap_bytes": 22542286848,
+   "predicted_peak_bytes": 16656205312,
+   "require_budget_ok": true,
+   "require_budget_info": {
+    "cuda_free": 24152899584,
+    "total": 25756696576,
+    "others_dedicated": 6486069248,
+    "wddm_free": 18916057088,
+    "need": 16656205312,
+    "margin": 1610612736,
+    "effective_free": 18916057088,
+    "ok": true
+   }
+  },
+  "accepted": true
+ },
+ "compliance": 0.14806624661500312,
+ "physical_compliance_2kc": 94.762397833602,
+ "optimization_time_s_sum_t_iter": 178.5440221998142,
+ "time_s_iterations_3_on": 136.35137299983762,
+ "t_iter_1_s": 39.104254100006074,
+ "totals": {
+  "solve_s": 114.64197309972951,
+  "setup_s": 22.208833699929528,
+  "sens_s": 7.249510999768972,
+  "oc_s": 32.616072700184304,
+  "filter_s": 1.8271740999189205
+ },
+ "memory": {
+  "peak_pool_used_bytes": 12679563264,
+  "peak_pool_reserved_bytes": 16301635072,
+  "peak_device_used_bytes": 17967874048,
+  "baseline_device_used_bytes": 1670905856
+ },
+ "environment": {
+  "os": "Windows-10-10.0.26300-SP0",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030
+ },
+ "e32_timing_records": [
+  {
+   "record": "results/E32/simp_cantilever_k320_mg64_stencil_diff_r1.json",
+   "compliance": 0.1480662466150064,
+   "iterations": 76,
+   "termination": "bounded_oscillation",
+   "final_rel_true": 5.119469300560687e-06,
+   "volume_phys": 0.29999999999999816,
+   "mnd": 1.2115839961227784e-08,
+   "compliance_rel_diff_new_vs_record": -2.2093438190040615e-14,
+   "first_iteration_with_different_c": 29,
+   "max_rel_c_diff_over_history": 5.419165116649083e-11,
+   "krylov_iterations_equal_every_design_iteration": true,
+   "n_design_iterations_equal": true,
+   "max_abs_drho_phys_diff": 0.0002810955047607422,
+   "optimization_time_s_sum_t_iter": 147.83021280012326,
+   "time_s_iterations_3_on": 142.68980410014046,
+   "t_iter_1_s": 2.903337299998384,
+   "totals": {
+    "solve_s": 116.81452969973907,
+    "setup_s": 7.9135725001688115,
+    "sens_s": 6.975624899729155,
+    "oc_s": 15.336855500238016,
+    "filter_s": 0.7891659999731928
+   },
+   "peak_pool_reserved_bytes": 16301635072,
+   "environment": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "cupy": "13.4.1",
+    "cuda_runtime": 12080,
+    "cuda_driver": 13030
+   },
+   "config_equal": true
+  },
+  {
+   "record": "results/E32/simp_cantilever_k320_mg64_stencil_diff_r2.json",
+   "compliance": 0.1480662466150064,
+   "iterations": 76,
+   "termination": "bounded_oscillation",
+   "final_rel_true": 5.119469300560687e-06,
+   "volume_phys": 0.29999999999999816,
+   "mnd": 1.2115839961227784e-08,
+   "compliance_rel_diff_new_vs_record": -2.2093438190040615e-14,
+   "first_iteration_with_different_c": 29,
+   "max_rel_c_diff_over_history": 5.419165116649083e-11,
+   "krylov_iterations_equal_every_design_iteration": true,
+   "n_design_iterations_equal": true,
+   "max_abs_drho_phys_diff": 0.0002810955047607422,
+   "optimization_time_s_sum_t_iter": 148.2763374997885,
+   "time_s_iterations_3_on": 143.14048139977967,
+   "t_iter_1_s": 2.8984463000088,
+   "totals": {
+    "solve_s": 116.99104899994563,
+    "setup_s": 8.097141400096007,
+    "sens_s": 6.975441800255794,
+    "oc_s": 15.436880799767096,
+    "filter_s": 0.7753872000612319
+   },
+   "peak_pool_reserved_bytes": 16301635072,
+   "environment": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "cupy": "13.4.1",
+    "cuda_runtime": 12080,
+    "cuda_driver": 13030
+   },
+   "config_equal": true
+  },
+  {
+   "record": "results/E32/simp_cantilever_k320_mg64_stencil_diff_r3.json",
+   "compliance": 0.1480662466150064,
+   "iterations": 76,
+   "termination": "bounded_oscillation",
+   "final_rel_true": 5.119469300560687e-06,
+   "volume_phys": 0.29999999999999816,
+   "mnd": 1.2115839961227784e-08,
+   "compliance_rel_diff_new_vs_record": -2.2093438190040615e-14,
+   "first_iteration_with_different_c": 29,
+   "max_rel_c_diff_over_history": 5.419165116649083e-11,
+   "krylov_iterations_equal_every_design_iteration": true,
+   "n_design_iterations_equal": true,
+   "max_abs_drho_phys_diff": 0.0002810955047607422,
+   "optimization_time_s_sum_t_iter": 151.10998659976758,
+   "time_s_iterations_3_on": 145.83565089973854,
+   "t_iter_1_s": 2.9933185999980196,
+   "totals": {
+    "solve_s": 119.40786890021991,
+    "setup_s": 8.108721600088757,
+    "sens_s": 7.094053000211716,
+    "oc_s": 15.692209499713499,
+    "filter_s": 0.8067100999178365
+   },
+   "peak_pool_reserved_bytes": 16301635072,
+   "environment": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "cupy": "13.4.1",
+    "cuda_runtime": 12080,
+    "cuda_driver": 13030
+   },
+   "config_equal": true
+  }
+ ],
+ "e32_r1_r3_bitwise_equal_in_c_residual_mnd": true,
+ "e32_mean_optimization_time_s": 149.0721789665598,
+ "e32_mean_time_s_iterations_3_on": 143.8886454665529,
+ "kernel_cache": {
+  "n_cubin_files": 72,
+  "all_written_between_first_and_final_monitor_sample": true,
+  "first_write_s_after_go": 3.627636194229126,
+  "last_write_s_after_go": 53.194265365600586,
+  "job_watch_wall_s": 220.5583209991455,
+  "compilation_time_measured": false,
+  "note": "the cache files were all written during this job, the last one within the first minute after go; no timer separates compilation from the rest of the first iteration"
+ },
+ "monitor_coverage": {
+  "label": "covered_from_go",
+  "covered_from_go": true,
+  "before_baseline_sample": "the child created its CUDA context and made a one-element probe allocation (t25_job.py, cp.empty(1)) before the first sample that contains it",
+  "n_samples_before_go_without_child": 2,
+  "baseline_sample_index": 2,
+  "baseline_dedicated_bytes": 354570240.0,
+  "baseline_shared_bytes": 77594624.0,
+  "max_shared_bytes_from_baseline": 157286400.0,
+  "final_shared_bytes": 157286400.0,
+  "shared_max_growth_bytes": 79691776.0,
+  "spill_limit_bytes": 268435456,
+  "final_sample_checked": true
+ },
+ "label_separation_vs_e32": {
+  "abs_diff_c": 3.2751579226442118e-15,
+  "abs_diff_2kc": 2.1032064978498966e-12,
+  "display_increment": 0.01,
+  "increment_over_diff": 4754644876.869189,
+  "orders_of_magnitude": 9.677118085148178,
+  "distance_to_nearest_rounding_boundary": 0.002602166398006034,
+  "label_new": "94.76",
+  "labels_e32": [
+   "94.76"
+  ]
+ },
+ "archive_cast": {
+  "native_dtype": "float32",
+  "archive_dtype": "float16",
+  "archive_equals_cast_of_native": true,
+  "max_abs_cast_error": 0.00022459030151367188,
+  "frac_native_values_not_representable_in_fp16": 0.0019127197265625
+ },
+ "field_identity": {
+  "field": "revision_round1/work/tasks/T25/out/runs/k320_cantilever_repaired/simp_cantilever_k320_mg64_stencil_diff_native_fp32.npz",
+  "field_sha256": "497ff52354e7fbb1d2cd4aa89ae87129d0f34ff01fce86fdc260db4e9ed8a1f0",
+  "stored_dtype": "float32",
+  "shape": [
+   640,
+   320,
+   320
+  ],
+  "n_values": 65536000,
+  "shape_matches_record_grid": true,
+  "volume_from_field": 0.29999999999999866,
+  "volume_record": 0.29999999999999866,
+  "volume_abs_diff": 0.0,
+  "mnd_from_field": 1.2115906256172958e-08,
+  "mnd_record": 1.2115906256172958e-08,
+  "mnd_abs_diff": 0.0,
+  "min": 0.0,
+  "max": 1.0,
+  "panel": 4,
+  "role": "revised (difference form)",
+  "record_names_this_field": true,
+  "record_sha256_of_native_array_matches_field": true
+ }
+}

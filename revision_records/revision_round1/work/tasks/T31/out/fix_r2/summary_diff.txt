@@ -1,0 +1,15 @@
+ADDED /comparison_O_vs_R_n192/C4_cost_ratios/iterations_2_to_end_s/measured_boundary "from entry to iteration 1's on_iter callback to run() return, in both runs"
+ADDED /comparison_O_vs_R_n192/C4_cost_ratios/iterations_2_to_end_s/plan_quantity_ratio_bounds [1.0002250645678463, 1.0119389633939644]
+ADDED /comparison_O_vs_R_n192/C4_cost_ratios/iterations_2_to_end_s/plan_quantity_reading "no difference measurable at single-run resolution"
+ADDED /runs/A_O_n192/endpoints/audit_time_note "audit_time_s_solves_plus_setup is the four solve times plus the multigrid setup (plan section 4 AUDIT step 7); the job's gpu_meta.json field of the same name holds the wider interval, exported here as broader_interval_s"
+CHANGED /runs/A_O_n192/endpoints/audit_time_s_solves_plus_setup 5.665782900003251 -> 5.579216600046493
+ADDED /runs/A_O_n192/endpoints/broader_interval_s 5.665782900003251
+ADDED /runs/A_R_n192/endpoints/audit_time_note "audit_time_s_solves_plus_setup is the four solve times plus the multigrid setup (plan section 4 AUDIT step 7); the job's gpu_meta.json field of the same name holds the wider interval, exported here as broader_interval_s"
+CHANGED /runs/A_R_n192/endpoints/audit_time_s_solves_plus_setup 5.759700299997348 -> 5.642327999987174
+ADDED /runs/A_R_n192/endpoints/broader_interval_s 5.759700299997348
+ADDED /runs/A_R_n384/endpoints/audit_time_note "audit_time_s_solves_plus_setup is the four solve times plus the multigrid setup (plan section 4 AUDIT step 7); the job's gpu_meta.json field of the same name holds the wider interval, exported here as broader_interval_s"
+CHANGED /runs/A_R_n384/endpoints/audit_time_s_solves_plus_setup 54.35618439997779 -> 53.42359650001163
+ADDED /runs/A_R_n384/endpoints/broader_interval_s 54.35618439997779
+CHANGED /runs/O_n192/cost/iterations_2_to_end_s 559.26028029999 -> {"measured_from_iteration1_callback_entry_s": 559.26028029999, "plan_quantity_bounds_s": [556.0824735001079, 559.26028029999], "note": "measured from entry to iteration 1's on_iter callback (before the initial-state hashes and the first history write) to run() return; the plan's 'iterations 2 to the
+CHANGED /runs/R_n192/cost/iterations_2_to_end_s 555.9573472000193 -> {"measured_from_iteration1_callback_entry_s": 555.9573472000193, "plan_quantity_bounds_s": [552.6620680997148, 555.9573472000193], "note": "measured from entry to iteration 1's on_iter callback (before the initial-state hashes and the first history write) to run() return; the plan's 'iterations 2 to
+CHANGED /runs/R_n384/cost/iterations_2_to_end_s 4125.1893397000385 -> {"measured_from_iteration1_callback_entry_s": 4125.1893397000385, "plan_quantity_bounds_s": [4121.964266599563, 4125.1893397000385], "note": "measured from entry to iteration 1's on_iter callback (before the initial-state hashes and the first history write) to run() return; the plan's 'iterations 2 

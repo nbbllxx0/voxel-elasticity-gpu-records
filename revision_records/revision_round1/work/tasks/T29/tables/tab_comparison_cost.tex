@@ -1,0 +1,33 @@
+\begin{tabular}{llrr}
+\toprule
+Quantity & Configuration & Value & Relative to the reference \\
+\midrule
+\multicolumn{4}{l}{\emph{One FP32 application, authors' cantilever grid, $65.5\times10^{6}$ elements}} \\
+application & original stencil & 2.536~ms & reference \\
+application & difference-form stencil & 2.729~ms & +7.6\% \\
+application & self-block correction & 2.939~ms & +15.9\% \\
+application & atomic element kernel & 13.480~ms & 4.94$\times$ the difference form \\
+application & element kernel, element mean & 13.305~ms & -1.3\% vs atomic \\
+application & node kernel, FP64 arithmetic & 89.734~ms & 35.4$\times$ the original \\
+\midrule
+\multicolumn{4}{l}{\emph{Complete cantilever optimization, $65.5\times10^{6}$ elements, FP64 PCG; fine-level FP32 operator of the V-cycle swapped (mean of three paired repetitions)}} \\
+optimization time & difference-form stencil & 149.1~s & reference \\
+optimization time & original stencil & 150.2~s & +0.8\% (-0.6\% to +1.5\%) \\
+optimization time & atomic element kernel & 174.6~s & +17.2\% (+15.9\% to +17.8\%) \\
+\midrule
+\multicolumn{4}{l}{\emph{Accuracy and robustness on their own problems}} \\
+slender beam, $2.10\times10^{6}$ elements & original stencil & 119.59\% & compliance error vs FP64 \\
+slender beam, $2.10\times10^{6}$ elements & difference-form stencil & $2.42\times10^{-6}$ & compliance error vs FP64 \\
+slender beam, $2.10\times10^{6}$ elements & element mean & $2.58\times10^{-6}$ & compliance error vs FP64 \\
+slender beam, $16.8\times10^{6}$ elements & original stencil & breakdown & before the recursive residual reached $10^{-5}$ \\
+bridge, $65.5\times10^{6}$ & IR, original stencil & no design & correction rejected after 15 design iterations \\
+bridge, $65.5\times10^{6}$ & recursive-stop control, original & breakdown & negative curvature after 15 design iterations \\
+bridge, $65.5\times10^{6}$ & FP64 PCG, original & 432.4~s & completed, 76 design iterations \\
+bridge, $65.5\times10^{6}$ & FP64 PCG, repaired & 475.6~s & completed, 76 design iterations \\
+bridge, $113.2\times10^{6}$ & IR, repaired & 851.9~s & completed, 76 design iterations \\
+\midrule
+\multicolumn{4}{l}{\emph{Hou et al.'s cantilever, $1.02\times10^{6}$ elements, solve from zero}} \\
+IR solve & original stencil & 0.934~s & 18 outer / 240 inner steps \\
+IR solve & difference-form stencil & 0.0960~s & 0.103$\times$ the original \\
+\bottomrule
+\end{tabular}

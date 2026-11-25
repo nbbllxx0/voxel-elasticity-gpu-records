@@ -1,0 +1,444 @@
+{
+ "revision": "4.3",
+ "gpu_work": "none (sleep in place of the job's and the probe's GPU command)",
+ "passed": false,
+ "cases_passed": {
+  "A_startup_schedule_every_launch_ended_and_confirmed": true,
+  "B_recorded_children_checked_again_after_the_parent_ended": false,
+  "C_survivors_leave_the_end_unconfirmed": true
+ },
+ "summary": {
+  "A": {
+   "job": {
+    "launches": 9,
+    "survived": 0,
+    "confirmed_ended": 9
+   },
+   "probe": {
+    "launches": 9,
+    "survived": 0,
+    "confirmed_ended": 9
+   }
+  },
+  "B_revision_4_3": {
+   "linux_process_ended_confirmed": false,
+   "children_survived": true
+  },
+  "B_negative_control_4_2": {
+   "children_survived": true,
+   "linux_process_ended_confirmed": true,
+   "fault_reproduced": true
+  },
+  "C": {
+   "linux_process_ended_confirmed": false,
+   "survivors": [
+    2630,
+    2631,
+    2632
+   ]
+  }
+ },
+ "delays_s": [
+  0.0,
+  0.05,
+  0.1,
+  0.2,
+  0.3,
+  0.5,
+  0.8,
+  1.2,
+  2.0
+ ],
+ "rows_A": [
+  {
+   "path": "job",
+   "delay_s": 0.0,
+   "tag": "kt43_job_1",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    401,
+    410
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 2.46,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "job",
+   "delay_s": 0.05,
+   "tag": "kt43_job_2",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    495,
+    498
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 1.37,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "job",
+   "delay_s": 0.1,
+   "tag": "kt43_job_3",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    589,
+    597
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 1.9,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "job",
+   "delay_s": 0.2,
+   "tag": "kt43_job_4",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    682,
+    683
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 0.25,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "job",
+   "delay_s": 0.3,
+   "tag": "kt43_job_5",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    775,
+    776
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 3.43,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "job",
+   "delay_s": 0.5,
+   "tag": "kt43_job_6",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    871,
+    872
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 0.26,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "job",
+   "delay_s": 0.8,
+   "tag": "kt43_job_7",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    964,
+    965
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 2.92,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "job",
+   "delay_s": 1.2,
+   "tag": "kt43_job_8",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    1057,
+    1058
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 0.45,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "job",
+   "delay_s": 2.0,
+   "tag": "kt43_job_9",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    1150,
+    1151
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 0.58,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "probe",
+   "delay_s": 0.0,
+   "tag": "kt43_probe_10",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    1243,
+    1253
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 0.61,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "probe",
+   "delay_s": 0.05,
+   "tag": "kt43_probe_11",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    1336,
+    1337
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 2.48,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "probe",
+   "delay_s": 0.1,
+   "tag": "kt43_probe_12",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    1429,
+    1430
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 0.32,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "probe",
+   "delay_s": 0.2,
+   "tag": "kt43_probe_13",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    1522,
+    1523
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 0.37,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "probe",
+   "delay_s": 0.3,
+   "tag": "kt43_probe_14",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    1615,
+    1616
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 1.58,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "probe",
+   "delay_s": 0.5,
+   "tag": "kt43_probe_15",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    1708,
+    1709
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 0.71,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "probe",
+   "delay_s": 0.8,
+   "tag": "kt43_probe_16",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    1801,
+    1802
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 0.53,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "probe",
+   "delay_s": 1.2,
+   "tag": "kt43_probe_17",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    1894,
+    1895
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 0.46,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  },
+  {
+   "path": "probe",
+   "delay_s": 2.0,
+   "tag": "kt43_probe_18",
+   "killtree_returncodes": [
+    0
+   ],
+   "recorded_pids": [
+    1987,
+    1988
+   ],
+   "linux_process_ended_confirmed": true,
+   "kill_s": 2.03,
+   "wsl_exe_exited": true,
+   "survivors_1s_after_kill": [],
+   "survived": false
+  }
+ ],
+ "B_revision_4_3": {
+  "tag": "kt43_b",
+  "killtree": "killtree.sh",
+  "attempts": [
+   {
+    "returncode": 5,
+    "stdout": "recorded: 2080 2089 2090 \nalive: 2080 2089 2090",
+    "recorded": [
+     2080,
+     2089,
+     2090
+    ],
+    "alive": [
+     2080,
+     2089,
+     2090
+    ],
+    "recorded_earlier_not_checked": []
+   }
+  ],
+  "linux_process_ended_confirmed": false,
+  "confirmation": null,
+  "wsl_exe_exited": true,
+  "survivors_1s_after_stop": [
+   "2089 sleep 61.4013",
+   "2090 sleep 61.4023"
+  ],
+  "children_survived": true
+ },
+ "B_negative_control_4_2": {
+  "tag": "kt42_b",
+  "killtree": "killtree_v4_2.sh",
+  "attempts": [
+   {
+    "returncode": 5,
+    "stdout": "killed: 2442 2450 2451 ; survivors: 2442 2450 2451",
+    "recorded": null,
+    "alive": null,
+    "recorded_earlier_not_checked": null
+   },
+   {
+    "returncode": 4,
+    "stdout": "pid 2442 not running",
+    "recorded": null,
+    "alive": null,
+    "recorded_earlier_not_checked": null
+   }
+  ],
+  "linux_process_ended_confirmed": true,
+  "confirmation": "its wsl.exe exited after killtree.sh returned 4",
+  "wsl_exe_exited": true,
+  "survivors_1s_after_stop": [
+   "2450 sleep 61.4033",
+   "2451 sleep 61.4043"
+  ],
+  "children_survived": true
+ },
+ "C": {
+  "tag": "kt43_c",
+  "killtree_returncodes": [
+   5,
+   5
+  ],
+  "linux_process_ended_confirmed": false,
+  "survivors": [
+   2630,
+   2631,
+   2632
+  ],
+  "recorded_pids": [
+   2630,
+   2631,
+   2632
+  ],
+  "windows_launcher_killed_last_resort": true,
+  "linux_survivors_before_cleanup": [
+   "2631 sleep 61.5013"
+  ],
+  "cleanup_killtree": {
+   "returncode": 4,
+   "stdout": "pid 2630 not running\nrecorded: 2630 2631 2632 \nalive:"
+  }
+ },
+ "cleanup_remaining": ""
+}

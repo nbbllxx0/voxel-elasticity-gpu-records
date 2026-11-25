@@ -1,0 +1,8 @@
+iteration,inner_iterations,fp64_true_residual,insolver_or_recursive_residual,source
+0,0,6.497744376681562,6.497744385772967,out/HO_S5_k160_mgir_rep.json (in-process FP64 node_hoist operator into a separate buffer (T27 wrappers))
+1,8,0.5912524757429554,0.5912524759079668,out/HO_S5_k160_mgir_rep.json (in-process FP64 node_hoist operator into a separate buffer (T27 wrappers))
+2,6,0.04415836928582097,0.0441583684128182,out/HO_S5_k160_mgir_rep.json (in-process FP64 node_hoist operator into a separate buffer (T27 wrappers))
+3,7,0.002932882483564319,0.002932882437751667,out/HO_S5_k160_mgir_rep.json (in-process FP64 node_hoist operator into a separate buffer (T27 wrappers))
+4,6,0.00020883569893365053,0.00020883537225538447,out/HO_S5_k160_mgir_rep.json (in-process FP64 node_hoist operator into a separate buffer (T27 wrappers))
+5,7,1.1736737324685256e-05,1.1719915038677902e-05,out/HO_S5_k160_mgir_rep.json (in-process FP64 node_hoist operator into a separate buffer (T27 wrappers))
+6,5,1.2013107809868245e-06,1.0221372856600538e-06,out/HO_S5_k160_mgir_rep.json (in-process FP64 node_hoist operator into a separate buffer (T27 wrappers))

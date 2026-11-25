@@ -1,0 +1,23 @@
+{
+ "saved_results_pass": true,
+ "saved_small_grid_gate": true,
+ "planted_faults_fail": {
+  "production_basis_columns_differ": true,
+  "deterministic_lambda_min_off_by_2pct": true,
+  "deterministic_lowest10_off_by_0.02_lambda_K": true,
+  "deterministic_matrix_error_differs": true,
+  "identity_fails": true,
+  "atomic_negative_count_differs": true,
+  "deterministic_max_rel_eig_err_off_by_0.02_lambda_K": true,
+  "deterministic_negative_count_differs": true,
+  "deterministic_sym_err_differs": true
+ },
+ "thread_order_differences_pass": {
+  "checker_example_stencil_lambda_min_5.57677303e-11": true,
+  "openblas_threads_1": true,
+  "openblas_threads_4": true,
+  "openblas_threads_32": true
+ },
+ "thread_probe_lambda_min_rel_diff_max": 4.5721854922131655e-06,
+ "passed": true
+}

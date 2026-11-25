@@ -1,0 +1,211 @@
+{
+ "sum_closes_exactly_unrounded": {
+  "value": 0.0,
+  "pass": true
+ },
+ "sum_closes_at_reported_precision_C": {
+  "mesh": 1.0026,
+  "design": 1.2053,
+  "total": 2.2079,
+  "sum": 2.2079,
+  "pass": true
+ },
+ "differences_of_rounded_C_match": {
+  "C_A": 28.1542,
+  "C_B": 29.1567,
+  "C_C": 30.3621,
+  "B-A": 1.0025,
+  "C-B": 1.2054,
+  "C-A": 2.2079,
+  "pass": false
+ },
+ "sum_closes_at_reported_precision_pct": {
+  "mesh_pct": 3.56,
+  "design_pct": 4.28,
+  "total_pct": 7.84,
+  "sum_pct": 7.84,
+  "pass": true
+ },
+ "numerical_stability_at_reported_precision": {
+  "pass": true,
+  "max_abs_2kc_over_ABC": 4.412470389070222e-11,
+  "half_unit": 5e-05,
+  "supplementary_DE_pass": true
+ },
+ "k320_rerun": {
+  "refused": "k320_r1",
+  "approved_rerun": "k320_r2",
+  "reason": "k320_r1 is refused for memory (an unchunked 262,144,000 B host-to-device field copy before any solve raised shared usage above the 256 MiB limit); k320_r2 is its single approved rerun with the transfer-chunked job version 2 (copies of at most 32 MiB) and every guard unchanged, granted as an exception to the last clause of GPU rule (c) because the cause was found and fixed",
+  "rerun_status": "ok",
+  "rerun_spilled": false,
+  "pass": true
+ },
+ "all_reported_states_at_1e-10": {
+  "pass": true,
+  "values": {
+   "A": 9.397073867754364e-11,
+   "B": 9.974790206635072e-11,
+   "C": 8.241926913031191e-11,
+   "A_xprec": 9.567416194710273e-11,
+   "D": 9.350123163266314e-11,
+   "E": 8.224642749435028e-11
+  }
+ },
+ "subdivision_preserves_field": {
+  "mean_A": 0.20000000056473072,
+  "mean_B": 0.20000000056473072,
+  "same_archive": true,
+  "pass": true
+ },
+ "same_simp_law": {
+  "laws": {
+   "A": {
+    "p": 4.5,
+    "Emin": 1e-09,
+    "E0": 1.0,
+    "record_iterations": 79,
+    "beta_at_final_not_applied": 32.0,
+    "filter_projection_applied": false
+   },
+   "B": {
+    "p": 4.5,
+    "Emin": 1e-09,
+    "E0": 1.0,
+    "record_iterations": 79,
+    "beta_at_final_not_applied": 32.0,
+    "filter_projection_applied": false
+   },
+   "C": {
+    "p": 4.5,
+    "Emin": 1e-09,
+    "E0": 1.0,
+    "record_iterations": 76,
+    "beta_at_final_not_applied": 32.0,
+    "filter_projection_applied": false
+   }
+  },
+  "pass": true
+ },
+ "same_physical_load_and_supports": {
+  "totals": {
+   "A": -1.0,
+   "B": -0.9999999999999999,
+   "C": -0.9999999999999999
+  },
+  "pass": true
+ },
+ "reconciliation_closes": {
+  "value": 0.0,
+  "pass": true
+ },
+ "gpu_rules": {
+  "runs": {
+   "k160_r1": {
+    "status": "ok",
+    "valid": true,
+    "covered_from_go": true,
+    "final_sample_checked": true,
+    "stop": null,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 113246208.0,
+    "child_dedicated_peak_bytes": 3093692416.0,
+    "spilled": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22664970240,
+     "nvidia_smi_used_bytes": 2646605824,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 6471901184,
+     "predicted_peak_bytes": 2599643136,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    },
+    "in_process": {
+     "spilled": false,
+     "max_shared_growth_bytes": 113246208,
+     "pool_peak_reserved_bytes": 2645843456,
+     "predicted_peak_bytes": 2599643136,
+     "require_budget": {
+      "cuda_free": 24152899584,
+      "total": 25756696576,
+      "others_dedicated": 6471901184,
+      "wddm_free": 18930225152,
+      "need": 2599643136,
+      "margin": 1610612736,
+      "effective_free": 18930225152,
+      "ok": true
+     }
+    }
+   },
+   "k320_r2": {
+    "status": "ok",
+    "valid": true,
+    "covered_from_go": true,
+    "final_sample_checked": true,
+    "stop": null,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 79691776.0,
+    "child_dedicated_peak_bytes": 15013937152.0,
+    "spilled": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22664970240,
+     "nvidia_smi_used_bytes": 2646605824,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 6471901184,
+     "predicted_peak_bytes": 16656356864,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    },
+    "in_process": {
+     "spilled": false,
+     "max_shared_growth_bytes": 79691776,
+     "pool_peak_reserved_bytes": 14597676032,
+     "predicted_peak_bytes": 16656356864,
+     "require_budget": {
+      "cuda_free": 24152899584,
+      "total": 25756696576,
+      "others_dedicated": 6471901184,
+      "wddm_free": 18930225152,
+      "need": 16656356864,
+      "margin": 1610612736,
+      "effective_free": 18930225152,
+      "ok": true
+     }
+    }
+   },
+   "k320_r1": {
+    "status": "refused_for_memory",
+    "valid": false,
+    "stop": "refused_for_memory: shared growth above 256 MiB",
+    "shared_max_growth_bytes": 337641472.0,
+    "child_dedicated_peak_bytes": 9951346688.0,
+    "role": "refused, superseded by the approved rerun"
+   },
+   "k160_r2_v2check": {
+    "status": "ok",
+    "valid": true,
+    "stop": null,
+    "shared_max_growth_bytes": 79691776.0,
+    "child_dedicated_peak_bytes": 2105868288.0,
+    "role": "check"
+   },
+   "diag_r1": {
+    "status": "ok",
+    "valid": true,
+    "stop": null,
+    "shared_max_growth_bytes": 201326592.0,
+    "child_dedicated_peak_bytes": 615014400.0,
+    "role": "check"
+   },
+   "diag_result": {
+    "baseline": 0,
+    "unchunked_h2d_64MiB": 67108864,
+    "unchunked_h2d_128MiB": 201326592,
+    "freed": 201326592,
+    "chunked_h2d_262144000B": 201326592,
+    "chunked_d2h_262144000B": 201326592
+   }
+  },
+  "refused_runs": [],
+  "pass_for_kept_results": true
+ }
+}

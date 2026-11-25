@@ -1,0 +1,347 @@
+{
+ "task": "T27",
+ "name": "X_MEM_k80_mgir_orig",
+ "kind": "X",
+ "args": {
+  "k": 80,
+  "path": "mgir_orig"
+ },
+ "status": "ok",
+ "device_baseline_mib": 2562.0,
+ "others_at_launch": {
+  "10452": {
+   "dedicated": 2076672,
+   "shared": 0
+  },
+  "11260": {
+   "dedicated": 5947392,
+   "shared": 0
+  },
+  "12224": {
+   "dedicated": 280002560,
+   "shared": 1486848
+  },
+  "12436": {
+   "dedicated": 614400,
+   "shared": 0
+  },
+  "12680": {
+   "dedicated": 122880,
+   "shared": 0
+  },
+  "14776": {
+   "dedicated": 173154304,
+   "shared": 319488
+  },
+  "15716": {
+   "dedicated": 24576,
+   "shared": 0
+  },
+  "15740": {
+   "dedicated": 11063296,
+   "shared": 0
+  },
+  "15920": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "17624": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "17952": {
+   "dedicated": 16596992,
+   "shared": 0
+  },
+  "18196": {
+   "dedicated": 20426752,
+   "shared": 0
+  },
+  "18972": {
+   "dedicated": 17510400,
+   "shared": 0
+  },
+  "1952": {
+   "dedicated": 93028352,
+   "shared": 49152
+  },
+  "19812": {
+   "dedicated": 11857920,
+   "shared": 0
+  },
+  "20852": {
+   "dedicated": 145944576,
+   "shared": 212992
+  },
+  "21048": {
+   "dedicated": 27410432,
+   "shared": 262144
+  },
+  "21208": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "21444": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "22832": {
+   "dedicated": 10571776,
+   "shared": 0
+  },
+  "23188": {
+   "dedicated": 17702912,
+   "shared": 0
+  },
+  "24000": {
+   "dedicated": 6991872,
+   "shared": 0
+  },
+  "2412": {
+   "dedicated": 3947307008,
+   "shared": 794624
+  },
+  "26300": {
+   "dedicated": 663732224,
+   "shared": 5959680
+  },
+  "27604": {
+   "dedicated": 1994752,
+   "shared": 0
+  },
+  "29616": {
+   "dedicated": 2711552,
+   "shared": 0
+  },
+  "33408": {
+   "dedicated": 15273984,
+   "shared": 212992
+  },
+  "3440": {
+   "dedicated": 16912384,
+   "shared": 0
+  },
+  "35872": {
+   "dedicated": 372629504,
+   "shared": 368640
+  },
+  "36592": {
+   "dedicated": 282877952,
+   "shared": 262144
+  },
+  "37792": {
+   "dedicated": 4272128,
+   "shared": 0
+  },
+  "38068": {
+   "dedicated": 6180864,
+   "shared": 0
+  },
+  "3824": {
+   "dedicated": 26439680,
+   "shared": 0
+  },
+  "40444": {
+   "dedicated": 53317632,
+   "shared": 0
+  },
+  "4056": {
+   "dedicated": 9674752,
+   "shared": 0
+  },
+  "41960": {
+   "dedicated": 163704832,
+   "shared": 9224192
+  },
+  "42776": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "43316": {
+   "dedicated": 9838592,
+   "shared": 0
+  },
+  "4": {
+   "dedicated": 4235264,
+   "shared": 270336
+  },
+  "5060": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "55132": {
+   "dedicated": 4825088,
+   "shared": 0
+  },
+  "7476": {
+   "dedicated": 15921152,
+   "shared": 212992
+  }
+ },
+ "others_dedicated_at_launch_bytes": 6442897408,
+ "environment": {
+  "time": "2026-11-23T14:51:14",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "3fb65e00c0c3e0f4",
+ "started": "2026-11-23T14:51:14",
+ "protective_pool_cap": {
+  "E_free_bytes": 19024064512,
+  "pool_cap_bytes": 17413451776,
+  "E_free_info": {
+   "cuda_free": 24152899584,
+   "total": 25756696576,
+   "others_dedicated": 6378061824,
+   "wddm_free": 19024064512
+  }
+ },
+ "EXPLORATORY": "EXPLORATORY re-measurement after the operator note of 2026-11-23 on T27, item 7 (DEVIATIONS.md D20); same procedure as xfix.py MEM",
+ "k": 80,
+ "n_elem": 1024000,
+ "ndof": 3168963,
+ "path": "mgir_orig",
+ "workload": "single build + single solve from zero (memory only)",
+ "admission_rule_2026_11_23": {
+  "predicted_peak_bytes": 576897024,
+  "prediction_basis": "process-dedicated peak of X_MEM_k80_mgir_rep (same LeanIRWorkspace class, same k; tasks/T27/out/X_MEM_k80_mgir_rep.json)",
+  "margin_bytes": 1610612736,
+  "cuda_free_bytes": 24152899584,
+  "cuda_total_bytes": 25756696576,
+  "admitted": true,
+  "guard_require_budget_for_information": {
+   "ok": true,
+   "cuda_free": 24152899584,
+   "total": 25756696576,
+   "others_dedicated": 6491693056,
+   "wddm_free": 18910433280,
+   "need": 576897024,
+   "margin": 1610612736,
+   "effective_free": 18910433280
+  },
+  "others_at_launch_bytes": 6442897408
+ },
+ "pool_cap_rule_2026_11_23_bytes": 22542286848,
+ "solve_s": 1.244472799997311,
+ "stats": {
+  "outer": 18,
+  "inner_iters": 240,
+  "matvecs64": 19,
+  "matvecs32": 240,
+  "precond": 258,
+  "rel_initial": 1.0,
+  "warm_start_reset": false,
+  "rejected_steps": 0,
+  "rel_true": 6.692123582162503e-06,
+  "converged": true,
+  "inner_tol_final": 0.1,
+  "time_s": 1.2444444000138901
+ },
+ "iterations": 18,
+ "insolver_rel_true": 6.692123582162503e-06,
+ "solver": "mgir",
+ "variant": "stencil",
+ "outcome": "complete",
+ "spill_watcher": {
+  "samples_checked": 13,
+  "max_shared_growth_bytes": 12582912,
+  "limit_bytes": 268435456
+ },
+ "end": "2026-11-23T14:51:28",
+ "process_wall_s": 23.431549072265625,
+ "pool": {
+  "pool_used_peak_bytes": 163632640,
+  "pool_reserved_peak_bytes": 178890752,
+  "hook_calls": 5627,
+  "largest_request_bytes": 25352192
+ },
+ "device_wide": {
+  "n_samples": 89,
+  "device_peak_bytes": 3309305856,
+  "baseline_bytes": 2686451712
+ },
+ "process_dedicated": {
+  "n_samples": 19,
+  "n_own": 19,
+  "dedicated_peak_bytes": 576897024,
+  "shared_start_bytes": 77594624,
+  "shared_max_bytes": 90177536,
+  "shared_growth_bytes": 12582912,
+  "spilled": false,
+  "others_dedicated_max_bytes": 6613495808,
+  "others_dedicated_first_bytes": 6613495808
+ },
+ "spillwatch": {
+  "max_shared_growth_bytes": 12582912,
+  "spilled": false
+ },
+ "spillwatch_samples": [
+  {
+   "tag": "start",
+   "t": 1795474274.7721815,
+   "dedicated": 354570240,
+   "shared": 77594624,
+   "others_dedicated": 6404218880
+  },
+  {
+   "tag": "end",
+   "t": 1795474288.8383615,
+   "dedicated": 576897024,
+   "shared": 90177536,
+   "others_dedicated": 6287142912
+  }
+ ],
+ "spilled": false,
+ "activity": {
+  "n_samples": 1,
+  "mean_foreign_pct": 0.14593708531855393,
+  "max_foreign_pct": 0.14593708531855393
+ },
+ "activity_timed": [],
+ "mean_foreign_timed_pct": 0.14593708531855393,
+ "timing_flag": "ok",
+ "valid": true,
+ "code_files": {
+  "src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "src/voxfem/core.py": "318596a50144b516",
+  "src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "src/voxfem/memory.py": "824be1910087b604",
+  "src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "src/voxfem/operators.py": "e89a0ec274e670ad",
+  "src/voxfem/sass.py": "184cd5714214ef1c",
+  "src/voxfem/simp.py": "b68537c154bd76bc",
+  "src/voxfem/sparse.py": "7830a4672baee938",
+  "src/experiments/_boot.py": "33c086109bcda1dd",
+  "src/experiments/E10_external_hou.py": "f264358c343f6fc8",
+  "src/experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "src/experiments/run_simp.py": "d913d5a57d599399",
+  "drivers/c_check.py": "df8bef0e838c9456",
+  "drivers/c_simp.py": "9f64b8aef36b911c",
+  "drivers/collect.py": "2d40ace4a2ef676d",
+  "drivers/hou_instr.py": "f05a9afcf453102b",
+  "drivers/hrun.py": "0c16839a91ff8519",
+  "drivers/hsys.py": "d7476b336bac9cec",
+  "drivers/predictions.py": "a432b268d2da8495",
+  "drivers/queue_t27.py": "16d5d2c0052c60de",
+  "drivers/t27boot.py": "7ff37f9b05b0d74c",
+  "drivers/t27lib.py": "373dfc98279b063d",
+  "drivers/v_verify.py": "9c79013b413f25c8",
+  "drivers/x2_queue.py": "fa77a041ac00177c",
+  "drivers/x_queue.py": "f5c337bdc2d90c31",
+  "drivers/xfix.py": "f2921a4ea73c4443",
+  "drivers/xmem_p6.py": "10a966138bc0e2f8"
+ }
+}

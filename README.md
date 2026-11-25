@@ -6,6 +6,10 @@ The study compares eight matrix-free finite-element operator implementations on 
 
 **This repository contains records only.** The implementation (operators, multigrid, solvers, optimizer and experiment drivers) will be released in this repository upon acceptance of the manuscript.
 
+## Release v2.0: records for the revised manuscript on rigid translations
+
+`revision_records/` holds the records, arrays and data-only readers behind the revised manuscript *Preserving rigid translations in single-precision matrix-free voxel finite element operators for large-scale topology optimization* by Shaoliang Yang and Jun Wang. Its `README.md` describes the contents and its `MANIFEST.json` lists the size and SHA-256 of every file. The records in `records/` below are unchanged from release v1.
+
 ## What is here
 
 `records/` holds one JSON record per measurement. Every number in the manuscript's tables and figures comes from these records. Each record contains:

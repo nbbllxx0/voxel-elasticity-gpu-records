@@ -1,0 +1,80 @@
+{
+ "files": {
+  "t30_common.py": {
+   "sha256": "2f3cb6c9e4cc351cd54f46b004bade1b577a9a78bf7c45534cceab0ba468075d",
+   "identical_to_T30": true
+  },
+  "t30_driver.py": {
+   "sha256": "becdbf49bde96d14dd2110ece54ba5f4a17e0fe5d3d7b6212603963f849f8d6f",
+   "identical_to_T30": true
+  },
+  "t30_cpu.py": {
+   "sha256": "780bb0553724bd2c74d1f3d40eedc2d0f91418a7ca42222e6eb667537b0e6f63",
+   "identical_to_T30": true
+  },
+  "t30_launch.py": {
+   "sha256": "8694365324697cc495b174cef04764055de0db103c29f69ee132658816abbbb7",
+   "identical_to_T30": true
+  },
+  "t30_launch_selftest.py": {
+   "sha256": "d23fe987d9e37845ea8eff80b34ba46a7cbfc2fac21ad21b9548d3d49e88c19b",
+   "identical_to_T30": true
+  },
+  "t31_launch.py": {
+   "sha256": "164d60852a1fe278f24cc748bf8322d5ef597d3951d1a4db58d05faf97645cf1"
+  },
+  "t31_job.py": {
+   "sha256": "142666ad4d417bfeb4a884adbffd50ceb9a2cb7b8126235f623f179a47f7d05d"
+  },
+  "t31_prep.py": {
+   "sha256": "4096a178eb2600e0b9c23b5e688f08f092c020364aa812a8576c3079fe3a1ee5"
+  }
+ },
+ "voxfem": {
+  "__init__.py": {
+   "sha256": "c0a1b1cd2147b2ba49cb4a5088cf56d29acdf504a118ebab884a49afa298a2e4",
+   "identical_to_T30": true
+  },
+  "core.py": {
+   "sha256": "318596a50144b51639725c4e56ce78a5b64734326bade8b37a8780d1fa7fb0de",
+   "identical_to_T30": true
+  },
+  "filters.py": {
+   "sha256": "a578eb1d7798ce0e761e13fe24371114bad3b73855cb1463b01070368690375f",
+   "identical_to_T30": true
+  },
+  "guard.py": {
+   "sha256": "d9ed2a1c40b14c2d24cb216edf33146a3d1f16af049c80a24664c0f4ffed3529",
+   "identical_to_T30": true
+  },
+  "krylov.py": {
+   "sha256": "9693ab48d4e030c5544df52de07cf7bd0bf544674ff6335120a80e1a1ef3b923",
+   "identical_to_T30": true
+  },
+  "memory.py": {
+   "sha256": "824be1910087b604c5ef4b198ec5d513cb9ed5a4fbe885ac2404a4d81d0b894d",
+   "identical_to_T30": true
+  },
+  "mg.py": {
+   "sha256": "78006d3b2b2e8ed59226801242828803cd283b541b69ca80688244cbb3c8c5d6",
+   "identical_to_T30": true
+  },
+  "operators.py": {
+   "sha256": "e89a0ec274e670ad505b49e7fa8cb6291bd41c71bd81e42f289e30f104c1da23",
+   "identical_to_T30": true
+  },
+  "sass.py": {
+   "sha256": "184cd5714214ef1cd597a91b74b6e548d2236baf97c59d6b1a1aea5ebcf9f360",
+   "identical_to_T30": true
+  },
+  "simp.py": {
+   "sha256": "b68537c154bd76bc1209f88b04b79c8df422e3f2a1dd2b6b0c3d3e2e0fc3baa8",
+   "identical_to_T30": true
+  },
+  "sparse.py": {
+   "sha256": "7830a4672baee93881886348e0b6867ac963f4fb27b0519481bbc64adea2ea26",
+   "identical_to_T30": true
+  }
+ },
+ "all_copies_identical": true
+}

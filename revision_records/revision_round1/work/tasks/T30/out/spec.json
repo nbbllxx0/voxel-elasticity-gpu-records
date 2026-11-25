@@ -1,0 +1,168 @@
+{
+ "geometry_in": {
+  "box": [
+   7.2,
+   4.8,
+   3.0
+  ],
+  "width": 4.5,
+  "base": {
+   "x1": 7.2,
+   "z_top": 0.75
+  },
+  "riser": {
+   "x0": 1.2,
+   "x1": 4.5,
+   "y0": 0.6,
+   "y1": 3.9,
+   "z_at_x0": 0.75,
+   "z_at_x1": 3.0
+  },
+  "tower": {
+   "x0": 4.5,
+   "x1": 7.2,
+   "y0": 0.6,
+   "y1": 3.9,
+   "z_top": 3.0
+  },
+  "pin": {
+   "x": 6.0,
+   "z": 2.1,
+   "y_mid": 2.25,
+   "r_bore": 0.375,
+   "r_eye": 0.675,
+   "r_lug": 0.9
+  },
+  "lugs": [
+   [
+    0.6,
+    1.65
+   ],
+   [
+    2.85,
+    3.9
+   ]
+  ],
+  "slot": {
+   "y0": 1.65,
+   "y1": 2.85,
+   "z_min": 1.35,
+   "x_min": 4.5
+  },
+  "bolts": {
+   "xy": [
+    [
+     0.6,
+     0.6
+    ],
+    [
+     0.6,
+     3.9
+    ],
+    [
+     3.9,
+     0.6
+    ],
+    [
+     3.9,
+     3.9
+    ]
+   ],
+   "r_hole": 0.1875,
+   "r_boss": 0.4875,
+   "z_boss": 0.75
+  }
+ },
+ "longest_edge_in": 7.2,
+ "units": {
+  "length": "in",
+  "force": "lbf",
+  "moment": "lbf*in"
+ },
+ "frame": {
+  "x": "horizontal, bracket length, +x outward (from the bolt end towards the clevis end)",
+  "y": "horizontal, parallel to the clevis pin axis",
+  "z": "vertical, normal to the mounting face z = 0, +z upward (away from the mounting face)",
+  "origin": "bottom corner of the allocated box"
+ },
+ "reference_point_C": [
+  6.0,
+  2.25,
+  2.1
+ ],
+ "reference_point_meaning": "pin centreline at the clevis midpoint (midplane between the two arms)",
+ "load_cases": {
+  "LC1_vertical": {
+   "F": [
+    0.0,
+    0.0,
+    8000.0
+   ],
+   "M": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "LC2_horizontal": {
+   "F": [
+    8500.0,
+    0.0,
+    0.0
+   ],
+   "M": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "LC3_42deg": {
+   "F": [
+    6356.740760409153,
+    0.0,
+    7059.875842035245
+   ],
+   "M": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "LC4_torsion": {
+   "F": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "M": [
+    5000.0,
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "load_case_text": {
+  "LC1_vertical": "8,000 lbf upward (+z)",
+  "LC2_horizontal": "8,500 lbf horizontally outward (+x), normal to the pin axis",
+  "LC3_42deg": "9,500 lbf at 42 deg from vertical in the x-z plane (normal to the pin axis), tilted outward: F = 9500 (sin 42, 0, cos 42)",
+  "LC4_torsion": "5,000 lbf*in moment about the horizontal x axis through C (normal to the pin axis), applied as a zero-net-force couple"
+ },
+ "traction_transfer": "equal-weight distributing coupling (RBE3 type) from C to all nodes of the two pin bores: f_i = F/N + omega x (x_i - xbar), J omega = M - (xbar - C) x F",
+ "supports": "four rigid bolted interfaces: every node of a bolt boss on z = 0 and every node of a bolt bore inside the boss clamped (all three components)",
+ "element_classes": {
+  "0": "exterior (outside the envelope, pin bores, bolt holes, bolt clearance columns, clevis slot): modulus 0, not part of the structure",
+  "1": "designable",
+  "2": "protected solid (bolt bosses, lug eyes): density 1"
+ },
+ "material": {
+  "element": "trilinear hexahedron, 2x2x2 Gauss (authors' ke_unit)",
+  "nu": 0.3,
+  "E": "normalized E0 = 1, Emin = 1e-9 for void designable elements; compliance in code units; physical compliance = 2 C_code / (E_phys h)"
+ },
+ "resultant_tolerance": {
+  "rtol": 1e-10,
+  "moment_arm_in": 1.0,
+  "rule": "|sum F - F_target|_max <= rtol max(|F|, |M|/arm) and |sum M - M_target|_max <= rtol max(|M|, |F| arm)"
+ },
+ "source_note": "parametric counterpart of a lifting (engine) bracket with four bolted interfaces and a two-arm clevis; dimensions chosen in this run, not taken from a third-party CAD file"
+}

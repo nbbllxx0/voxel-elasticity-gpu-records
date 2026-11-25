@@ -1,0 +1,24 @@
+\begin{tabular}{llcccrrrrrr}
+\toprule
+Code and solver & Native stop & Op. & Kryl. & Iter. & Steps & FP64 true residual & Factor per step & Solve (s) & Step (ms) & Memory (GB) \\
+\midrule
+\multicolumn{11}{l}{\emph{Hou et al.'s cantilever and element matrix, $33.6\times10^{6}$ elements, start from zero}} \\
+released CuPy CG & recursive, $10^{-3}$ of $\|r_0\|$ & 32/64 & 32 & 32 & 3{,}930 & 0.387 & 0.99976 & 1{,}089 & 276.8 & 16.66\textsuperscript{a} \\
+FP64 PCG, original V-cycle & true, $10^{-5}$ & 64 & 64 & 64 & 21 & $5.96\times10^{-6}$ & 0.564 & 1.95 & 89.3 & 7.05\textsuperscript{a} \\
+FP64 PCG, repaired V-cycle & true, $10^{-5}$ & 64 & 64 & 64 & 21 & $5.96\times10^{-6}$ & 0.564 & 1.95 & 89.7 & 7.05\textsuperscript{a} \\
+IR, repaired & outer, $10^{-5}$ & 32 & 32 & 64 & 5/28 & $2.44\times10^{-6}$ & 0.630 & 1.58 & 48.7 & 5.01\textsuperscript{a} \\
+IR, original stencil & outer, $10^{-5}$ & 32 & 32 & 64 & \multicolumn{6}{l}{numerical breakdown (also at $8.19\times10^{6}$; verified at $1.02\times10^{6}$)} \\
+\midrule
+\multicolumn{11}{l}{\emph{Tr\"aff et al.'s cantilever, $8.19\times10^{6}$ elements, state of the first design iteration, start from zero}} \\
+released OpenMP-offload PCG & recursive, $10^{-5}$ of $\|b\|$ & 32/64 & 32 & 64 & 16 & $8.33\times10^{-4}$ & 0.642 & 21.1 & 1{,}174\textsuperscript{b} & 3.55 \\
+FP64 PCG, original V-cycle & true, $10^{-5}$ & 64 & 64 & 64 & 9 & $9.11\times10^{-6}$ & 0.275 & 0.541 & 22.5 & 2.15 \\
+FP64 PCG, repaired V-cycle & true, $10^{-5}$ & 64 & 64 & 64 & 9 & $9.11\times10^{-6}$ & 0.275 & 0.421 & 22.6 & 2.15 \\
+IR, repaired & outer, $10^{-5}$ & 32 & 32 & 64 & 4/10 & $4.10\times10^{-6}$ & 0.289 & 0.504 & 12.7 & 1.58 \\
+\midrule
+\multicolumn{11}{l}{\emph{Tr\"aff et al.'s cantilever, $8.19\times10^{6}$ elements, state of the fifth solve, start from the released fourth solution}} \\
+released OpenMP-offload PCG & recursive, $10^{-5}$ of $\|b\|$ & 32/64 & 32 & 64 & 1{,}000\textsuperscript{c} & 6.52 & 1.00000 & 1{,}247 & 1{,}183\textsuperscript{b} & 3.55 \\
+FP64 PCG, original V-cycle & true, $10^{-5}$ & 64 & 64 & 64 & 32 & $6.14\times10^{-6}$ & 0.648 & 1.02 & 22.6 & 2.15 \\
+FP64 PCG, repaired V-cycle & true, $10^{-5}$ & 64 & 64 & 64 & 32 & $6.13\times10^{-6}$ & 0.648 & 1.02 & 22.7 & 2.15 \\
+IR, repaired & outer, $10^{-5}$ & 32 & 32 & 64 & 6/39 & $1.20\times10^{-6}$ & 0.672 & 0.864 & 12.8 & 1.58 \\
+\bottomrule
+\end{tabular}

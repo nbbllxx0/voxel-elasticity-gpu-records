@@ -1,0 +1,1226 @@
+{
+ "runs": [
+  "run1",
+  "run3_fix"
+ ],
+ "margin_bytes": 1610612736,
+ "context_bytes_measured": 354570240,
+ "driver_free_bytes_at_launch": 22604152832,
+ "available_bytes_for_estimates": 20993540096,
+ "inventories": {
+  "reference_pcg64_e29": {
+   "fp64_vectors": 4,
+   "fp32_vectors": 2,
+   "vcycle_build_peaks": 1,
+   "t20_operator_masked_copy_and_mask": false,
+   "basis": "implementation"
+  },
+  "reference_pcg64_t21": {
+   "fp64_vectors": 6,
+   "fp32_vectors": 2,
+   "vcycle_build_peaks": 1,
+   "t20_operator_masked_copy_and_mask": false,
+   "basis": "implementation + 2 planned vectors"
+  },
+  "pcg_energy_e29": {
+   "fp64_vectors": 8,
+   "fp32_vectors": 2,
+   "vcycle_build_peaks": 1,
+   "t20_operator_masked_copy_and_mask": false,
+   "basis": "implementation"
+  },
+  "pcg_energy_t20op": {
+   "fp64_vectors": 8,
+   "fp32_vectors": 2,
+   "vcycle_build_peaks": 1,
+   "t20_operator_masked_copy_and_mask": true,
+   "basis": "implementation + T20 operator"
+  },
+  "fp32_control_common": {
+   "fp64_vectors": 6,
+   "fp32_vectors": 5,
+   "vcycle_build_peaks": 1,
+   "t20_operator_masked_copy_and_mask": false,
+   "basis": "implementation"
+  },
+  "fp32_control_own": {
+   "fp64_vectors": 6,
+   "fp32_vectors": 5,
+   "vcycle_build_peaks": 2,
+   "t20_operator_masked_copy_and_mask": false,
+   "basis": "implementation"
+  },
+  "minres_library": {
+   "fp64_vectors": 15,
+   "fp32_vectors": 2,
+   "vcycle_build_peaks": 1,
+   "t20_operator_masked_copy_and_mask": true,
+   "basis": "library, measured coefficient"
+  },
+  "gmres_library(m)": {
+   "fp64_vectors": "m+12",
+   "fp32_vectors": 2,
+   "vcycle_build_peaks": 1,
+   "t20_operator_masked_copy_and_mask": true,
+   "basis": "library, measured coefficient"
+  },
+  "lobpcg_library(b)": {
+   "fp64_vectors": "15b",
+   "fp32_vectors": 2,
+   "vcycle_build_peaks": 1,
+   "t20_operator_masked_copy_and_mask": true,
+   "basis": "library, measured coefficient"
+  },
+  "eigensolver_inplace(b)": {
+   "fp64_vectors": "10b+5",
+   "fp32_vectors": 2,
+   "vcycle_build_peaks": 1,
+   "t20_operator_masked_copy_and_mask": "mask added; masked copy inside the vector count",
+   "basis": "PLANNED, not measured"
+  }
+ },
+ "lobpcg_maxiter_counted": 2000,
+ "pool_unit_bytes": 512,
+ "inventory_source": "(FP64 vectors of 8 B per DOF, FP32 vectors of 4 B per DOF; source lines in the authors' code):\n  reference_pcg64_e29      krylov.pcg64 + CastPrecond (krylov.py:60-118, 334-346), as E29 R2 runs it\n                           (E29_review.py:155-157): x, r, p, zq; FP32 r32, z32.  The updates are fused kernels\n                           (_axpy, _xpby) and load.residual works in place, so there is no full-size temporary.\n  reference_pcg64_t21      the same plus a stored previous solution for the tightening check and an independent\n                           residual vector (planned additions of T21/T33)\n  pcg_energy_e29           E29_review.py:122-142 beside the kept reference solution: reference x, xc, r, z, q, q64,\n                           p (z.copy()), and the temporary of 'x += a_ * p' (line 137; 'r -= a_ * q' reuses its block\n                           after it is freed); FP32 r32, z32 of CastPrecond\n  pcg_energy_t20op         the same on a T20 FreeOperator, which adds its masked input copy (FP64) and its free-DOF\n                           mask (1 B per DOF)\n  fp32_control_common      E29_review.py:175-196 with E8_precision_floor.py:115-170 (pcg32, mode mg32_x64): FP64 kept\n                           reference x, ws x64, ws r64, tmp and the two simultaneous FP64 casts of b32 in the norm at\n                           E8:123 (later the uploaded iterate u takes their place); FP32 b32 (E29:175), ws x32, r, p, zq\n  fp32_control_own         the same with the operator's own V-cycle built while the common one is live (E29:199-200):\n                           a second V-cycle build peak\n  minres_library(T20 op)   cupyx minres: 12 FP64 vectors measured above the fixed parts, plus the right-hand side,\n                           the kept reference solution and one residual check vector\n  gmres_library(m)         cupyx gmres(restart m): m + 9 measured, plus the same three; small arrays counted from\n                           the source (_iterative.py:150-160, 180-184; _make_compute_hu): the FP64 Hessenberg matrix H\n                           of (m + 1) x m, the projection h (at most m) and the least-squares solution y (m).  CuPy\n                           caps the restart at the system dimension n (restart = min(restart, n)), so the count holds\n                           for m <= n only.  Measured at m = 10 and 20.\n  lobpcg_library(b)        cupyx lobpcg on (A + A^T)/2 with b block vectors: 15 b measured (the forward and transposed\n                           outputs of the symmetric-part action are allocated inside the measured solver); small arrays\n                           bounded from the source (_lobpcg.py:11-62, 165-180, 330-560): the Gram blocks, the 3b x 3b\n                           matrices gramA and gramB, the Cholesky factor, two inverses, the transformed matrix, the\n                           eigenvectors and the dense eigensolver's workspace, at most 32 (3b)^2 FP64 entries live at\n                           once, plus two b-entry history arrays per iteration (lambdaHistory, residualNormsHistory,\n                           kept to the end; each rounded up to the 512 B pool unit) for at most LOBPCG_MAXITER\n                           iterations.  The count holds on the iterative path only: when 5 b > n CuPy switches to a\n                           dense eigensolver of the n x n matrix (_lobpcg.py:292-305), which this count does not\n                           describe.  Measured at b = 3 and 6.\n  eigensolver_inplace(b)   PLANNED, NOT MEASURED: an in-place block eigensolver of 10 b + 3 vectors (X, SX, W, SW, P,\n                           SP and four b-blocks for the Rayleigh-Ritz update; forward and transposed outputs and the\n                           operator's masked copy, which is therefore not added again) plus 2 vectors for elementwise\n                           temporaries, and the same small-array bound as lobpcg_library; it is not an upper bound\n                           until the implementation exists and is measured",
+ "notes": [
+  "The transposed actions of the T20 operators are matrix-free: they store no transposed matrix; their memory is one FP64 output vector, inside the counts of the solves that use it.",
+  "The k = 128 values of the V-cycle and of the operators are measured, not extrapolated.",
+  "Pool estimates add the V-cycle's build peak, which the pool keeps cached, to the solve's arrays.",
+  "Every inventory of an existing implementation is at or above the measured peak pool bytes of that implementation at k = 64 and 128 (inventory_checks).",
+  "The library coefficients are measured peak used bytes above the fixed parts at k = 32 and 64; the same coefficient at both sizes, with an excess of at most 27,536 B for small arrays. The small arrays are counted from the CuPy source beside a 1 MiB allowance: GMRES's (m + 1) x m Hessenberg matrix and two m-vectors; LOBPCG's dense Rayleigh-Ritz arrays, at most 32 (3b)^2 FP64 entries, and its two per-iteration history arrays for at most 2000 iterations.",
+  "Largest restart and block: each holds only on the solver path the count describes (GMRES m <= n; LOBPCG 5 b <= n, above which CuPy switches to a dense n x n eigensolver); limited_by_solver_path marks a value set by that limit, not by memory. The coefficients were measured at GMRES m = 10, 20 and LOBPCG b = 3, 6; a largest value outside them, above the largest or below the smallest measured parameter, is an extrapolation by the source count (relation_to_measured_range says which), and the job that uses it measures its workspace before admission. *_within_measured_range gives the largest fitting value between the smallest and the largest measured parameter, and null when the largest fitting value lies below the smallest measured parameter.",
+  "eigensolver_inplace is a planned count for an implementation not yet written: not a bound. Its 10 b + 3 vectors include the T20 operator's masked input copy, which is not added again.",
+  "The free memory at a later launch differs; each job is admitted again with its own estimate."
+ ],
+ "inventory_checks": [
+  {
+   "solve": "reference_pcg64_e29",
+   "k": 64,
+   "measured_peak_reserved_bytes": 478204928,
+   "counted_pool_bytes": 632666361,
+   "counted_over_measured": 1.3230025956570652,
+   "count_is_upper": true
+  },
+  {
+   "solve": "pcg_energy_e29",
+   "k": 64,
+   "measured_peak_reserved_bytes": 634260992,
+   "counted_pool_bytes": 840739161,
+   "counted_over_measured": 1.3255413333065262,
+   "count_is_upper": true
+  },
+  {
+   "solve": "fp32_control_common",
+   "k": 64,
+   "measured_peak_reserved_bytes": 660271104,
+   "counted_pool_bytes": 814730061,
+   "counted_over_measured": 1.233932631708808,
+   "count_is_upper": true
+  },
+  {
+   "solve": "fp32_control_own",
+   "k": 64,
+   "measured_peak_reserved_bytes": 846340096,
+   "counted_pool_bytes": 1176749389,
+   "counted_over_measured": 1.3903977781055052,
+   "count_is_upper": true
+  },
+  {
+   "solve": "reference_pcg64_e29",
+   "k": 128,
+   "measured_peak_reserved_bytes": 3365300224,
+   "counted_pool_bytes": 3663295865,
+   "counted_over_measured": 1.0885494966763476,
+   "count_is_upper": true
+  },
+  {
+   "solve": "pcg_energy_e29",
+   "k": 128,
+   "measured_peak_reserved_bytes": 4593407488,
+   "counted_pool_bytes": 5300770265,
+   "counted_over_measured": 1.153995215719037,
+   "count_is_upper": true
+  },
+  {
+   "solve": "fp32_control_common",
+   "k": 128,
+   "measured_peak_reserved_bytes": 4798092800,
+   "counted_pool_bytes": 5096085965,
+   "counted_over_measured": 1.0621065863919932,
+   "count_is_upper": true
+  },
+  {
+   "solve": "fp32_control_own",
+   "k": 128,
+   "measured_peak_reserved_bytes": 5581739520,
+   "counted_pool_bytes": 6628372941,
+   "counted_over_measured": 1.1875102586299118,
+   "count_is_upper": true
+  },
+  {
+   "solve": "minres(5)",
+   "k": 32,
+   "measured_fp64_vectors_above_fixed": 12.000871824005888,
+   "coefficient": 12,
+   "small_array_bytes_counted": 1048576,
+   "coefficient_plus_small_bytes": 81652000,
+   "excess_over_coefficient_bytes": 5856,
+   "count_is_upper": true
+  },
+  {
+   "solve": "gmres(10)",
+   "k": 32,
+   "measured_fp64_vectors_above_fixed": 19.001075487810542,
+   "coefficient": 19,
+   "small_array_bytes_counted": 1050624,
+   "coefficient_plus_small_bytes": 128672712,
+   "excess_over_coefficient_bytes": 7224,
+   "count_is_upper": true
+  },
+  {
+   "solve": "gmres(20)",
+   "k": 32,
+   "measured_fp64_vectors_above_fixed": 29.001420882566975,
+   "coefficient": 29,
+   "small_array_bytes_counted": 1053184,
+   "coefficient_plus_small_bytes": 195844792,
+   "excess_over_coefficient_bytes": 9544,
+   "count_is_upper": true
+  },
+  {
+   "solve": "lobpcg(3)",
+   "k": 32,
+   "measured_fp64_vectors_above_fixed": 45.003345565071776,
+   "coefficient": 45,
+   "small_array_bytes_counted": 3117312,
+   "coefficient_plus_small_bytes": 305380152,
+   "excess_over_coefficient_bytes": 22472,
+   "count_is_upper": true
+  },
+  {
+   "solve": "lobpcg(6)",
+   "k": 32,
+   "measured_fp64_vectors_above_fixed": 90.00409947845392,
+   "coefficient": 90,
+   "small_array_bytes_counted": 3179520,
+   "coefficient_plus_small_bytes": 607705200,
+   "excess_over_coefficient_bytes": 27536,
+   "count_is_upper": true
+  },
+  {
+   "solve": "minres(5)",
+   "k": 64,
+   "measured_fp64_vectors_above_fixed": 12.000112575983021,
+   "coefficient": 12,
+   "small_array_bytes_counted": 1048576,
+   "coefficient_plus_small_bytes": 625266976,
+   "excess_over_coefficient_bytes": 5856,
+   "count_is_upper": true
+  },
+  {
+   "solve": "gmres(10)",
+   "k": 64,
+   "measured_fp64_vectors_above_fixed": 19.00013887447086,
+   "coefficient": 19,
+   "small_array_bytes_counted": 1050624,
+   "coefficient_plus_small_bytes": 989396424,
+   "excess_over_coefficient_bytes": 7224,
+   "count_is_upper": true
+  },
+  {
+   "solve": "gmres(20)",
+   "k": 64,
+   "measured_fp64_vectors_above_fixed": 29.000183474245553,
+   "coefficient": 29,
+   "small_array_bytes_counted": 1053184,
+   "coefficient_plus_small_bytes": 1509580984,
+   "excess_over_coefficient_bytes": 9544,
+   "count_is_upper": true
+  },
+  {
+   "solve": "lobpcg(3)",
+   "k": 64,
+   "measured_fp64_vectors_above_fixed": 45.000432002645226,
+   "coefficient": 45,
+   "small_array_bytes_counted": 3117312,
+   "coefficient_plus_small_bytes": 2343936312,
+   "excess_over_coefficient_bytes": 22472,
+   "count_is_upper": true
+  },
+  {
+   "solve": "lobpcg(6)",
+   "k": 64,
+   "measured_fp64_vectors_above_fixed": 90.00052935318793,
+   "coefficient": 90,
+   "small_array_bytes_counted": 3179520,
+   "coefficient_plus_small_bytes": 4684817520,
+   "excess_over_coefficient_bytes": 27536,
+   "count_is_upper": true
+  }
+ ],
+ "library_measured": {
+  "minres(5)|k=32": {
+   "k": 32,
+   "ndof": 839619,
+   "solver": "minres",
+   "param": 5,
+   "fixed_parts_used_bytes": 85442560,
+   "solver_peak_used_above_fixed_bytes": 80609280,
+   "solver_peak_used_above_fixed_in_fp64_vectors": 12.000871824005888
+  },
+  "gmres(10)|k=32": {
+   "k": 32,
+   "ndof": 839619,
+   "solver": "gmres",
+   "param": 10,
+   "fixed_parts_used_bytes": 85442560,
+   "solver_peak_used_above_fixed_bytes": 127629312,
+   "solver_peak_used_above_fixed_in_fp64_vectors": 19.001075487810542
+  },
+  "gmres(20)|k=32": {
+   "k": 32,
+   "ndof": 839619,
+   "solver": "gmres",
+   "param": 20,
+   "fixed_parts_used_bytes": 85442560,
+   "solver_peak_used_above_fixed_bytes": 194801152,
+   "solver_peak_used_above_fixed_in_fp64_vectors": 29.001420882566975
+  },
+  "lobpcg(3)|k=32": {
+   "k": 32,
+   "ndof": 839619,
+   "solver": "lobpcg",
+   "param": 3,
+   "fixed_parts_used_bytes": 85442560,
+   "solver_peak_used_above_fixed_bytes": 302285312,
+   "solver_peak_used_above_fixed_in_fp64_vectors": 45.003345565071776
+  },
+  "lobpcg(6)|k=32": {
+   "k": 32,
+   "ndof": 839619,
+   "solver": "lobpcg",
+   "param": 6,
+   "fixed_parts_used_bytes": 85442560,
+   "solver_peak_used_above_fixed_bytes": 604553216,
+   "solver_peak_used_above_fixed_in_fp64_vectors": 90.00409947845392
+  },
+  "minres(5)|k=64": {
+   "k": 64,
+   "ndof": 6502275,
+   "solver": "minres",
+   "param": 5,
+   "fixed_parts_used_bytes": 316839936,
+   "solver_peak_used_above_fixed_bytes": 624224256,
+   "solver_peak_used_above_fixed_in_fp64_vectors": 12.000112575983021
+  },
+  "gmres(10)|k=64": {
+   "k": 64,
+   "ndof": 6502275,
+   "solver": "gmres",
+   "param": 10,
+   "fixed_parts_used_bytes": 316839936,
+   "solver_peak_used_above_fixed_bytes": 988353024,
+   "solver_peak_used_above_fixed_in_fp64_vectors": 19.00013887447086
+  },
+  "gmres(20)|k=64": {
+   "k": 64,
+   "ndof": 6502275,
+   "solver": "gmres",
+   "param": 20,
+   "fixed_parts_used_bytes": 316839936,
+   "solver_peak_used_above_fixed_bytes": 1508537344,
+   "solver_peak_used_above_fixed_in_fp64_vectors": 29.000183474245553
+  },
+  "lobpcg(3)|k=64": {
+   "k": 64,
+   "ndof": 6502275,
+   "solver": "lobpcg",
+   "param": 3,
+   "fixed_parts_used_bytes": 316839936,
+   "solver_peak_used_above_fixed_bytes": 2340841472,
+   "solver_peak_used_above_fixed_in_fp64_vectors": 45.000432002645226
+  },
+  "lobpcg(6)|k=64": {
+   "k": 64,
+   "ndof": 6502275,
+   "solver": "lobpcg",
+   "param": 6,
+   "fixed_parts_used_bytes": 316839936,
+   "solver_peak_used_above_fixed_bytes": 4681665536,
+   "solver_peak_used_above_fixed_in_fp64_vectors": 90.00052935318793
+  }
+ },
+ "rows": [
+  {
+   "k": 8,
+   "grid": [
+    64,
+    8,
+    8
+   ],
+   "n_elem": 4096,
+   "n_node": 5265,
+   "ndof": 15795,
+   "bytes_fp64_vector": 126360,
+   "bytes_fp32_vector": 63180,
+   "gmg_build_peak_reserved_bytes": 254085632,
+   "gmg_live_bytes": 51546112,
+   "gmg_levels": 2,
+   "gmg_storage_bytes": {
+    "vectors": 108870,
+    "matrices": 0,
+    "coarse_inverse": 49005000,
+    "KE_tables": 46464
+   },
+   "operator_step_peak_bytes": {
+    "ref": 395264,
+    "atomic": 395264,
+    "corner": 395264,
+    "mean": 395264,
+    "stencil": 395264,
+    "diff": 395264
+   },
+   "apply_seconds_forward": {
+    "ref": 6.764800101518631e-05,
+    "atomic": 6.0447998344898225e-05,
+    "corner": 4.774399846792221e-05,
+    "mean": 5.993599817156792e-05,
+    "stencil": 4.912000149488449e-05,
+    "diff": 6.95360004901886e-05
+   },
+   "apply_seconds_transpose": {
+    "ref": 4.495999962091446e-05,
+    "atomic": 5.104000121355057e-05,
+    "corner": 4.915200173854828e-05,
+    "mean": 4.6080000698566435e-05,
+    "stencil": 3.686400130391121e-05,
+    "diff": 5.3247999399900436e-05
+   },
+   "estimates_bytes": {
+    "reference_pcg64_e29": {
+     "bytes": 609309321,
+     "fits": true
+    },
+    "reference_pcg64_t21": {
+     "bytes": 609562041,
+     "fits": true
+    },
+    "pcg_energy_e29": {
+     "bytes": 609814761,
+     "fits": true
+    },
+    "pcg_energy_t20op": {
+     "bytes": 609956916,
+     "fits": true
+    },
+    "fp32_control_common": {
+     "bytes": 609751581,
+     "fits": true
+    },
+    "fp32_control_own": {
+     "bytes": 863837213,
+     "fits": true
+    },
+    "minres_library": {
+     "bytes": 611890012,
+     "fits": true
+    },
+    "gmres_library(m=10)": {
+     "bytes": 612776580,
+     "fits": true
+    },
+    "gmres_library(m=20)": {
+     "bytes": 614042740,
+     "fits": true
+    },
+    "gmres_library(m=30)": {
+     "bytes": 615310436,
+     "fits": true
+    },
+    "gmres_library(m=50)": {
+     "bytes": 617850436,
+     "fits": true
+    },
+    "gmres_library(m=100)": {
+     "bytes": 624229876,
+     "fits": true
+    },
+    "lobpcg_library(b=1)": {
+     "bytes": 613940316,
+     "fits": true
+    },
+    "lobpcg_library(b=2)": {
+     "bytes": 615842628,
+     "fits": true
+    },
+    "lobpcg_library(b=3)": {
+     "bytes": 617749548,
+     "fits": true
+    },
+    "lobpcg_library(b=4)": {
+     "bytes": 619661076,
+     "fits": true
+    },
+    "lobpcg_library(b=6)": {
+     "bytes": 623497956,
+     "fits": true
+    },
+    "lobpcg_library(b=8)": {
+     "bytes": 627353268,
+     "fits": true
+    },
+    "eigensolver_inplace(b=1)": {
+     "bytes": 613813956,
+     "fits": true
+    },
+    "eigensolver_inplace(b=2)": {
+     "bytes": 615084468,
+     "fits": true
+    },
+    "eigensolver_inplace(b=3)": {
+     "bytes": 616359588,
+     "fits": true
+    },
+    "eigensolver_inplace(b=4)": {
+     "bytes": 617639316,
+     "fits": true
+    },
+    "eigensolver_inplace(b=6)": {
+     "bytes": 620212596,
+     "fits": true
+    },
+    "eigensolver_inplace(b=8)": {
+     "bytes": 622804308,
+     "fits": true
+    }
+   },
+   "gmres_library_max_restart_fitting": {
+    "value": 15795,
+    "limited_by_solver_path": true,
+    "path_limit": "m <= n (CuPy caps the restart at n)",
+    "measured_parameters": [
+     10,
+     20
+    ],
+    "within_measured_range": false,
+    "relation_to_measured_range": "above the measured range: extrapolation",
+    "basis": "measured per-vector coefficient at the measured parameters; a value outside them, above or below, is an extrapolation by the source count, to be measured by the job before admission"
+   },
+   "gmres_library_max_restart_within_measured_range": 20,
+   "lobpcg_library_max_block_fitting": {
+    "value": 2585,
+    "limited_by_solver_path": false,
+    "path_limit": "5 b <= n (above it CuPy uses a dense n x n eigensolver)",
+    "measured_parameters": [
+     3,
+     6
+    ],
+    "within_measured_range": false,
+    "relation_to_measured_range": "above the measured range: extrapolation",
+    "basis": "measured per-vector coefficient at the measured parameters; a value outside them, above or below, is an extrapolation by the source count, to be measured by the job before admission"
+   },
+   "lobpcg_library_max_block_within_measured_range": 6,
+   "eigensolver_inplace_max_block_fitting": {
+    "value": 2706,
+    "basis": "planned count, not a bound"
+   }
+  },
+  {
+   "k": 16,
+   "grid": [
+    128,
+    16,
+    16
+   ],
+   "n_elem": 32768,
+   "n_node": 37281,
+   "ndof": 111843,
+   "bytes_fp64_vector": 894744,
+   "bytes_fp32_vector": 447372,
+   "gmg_build_peak_reserved_bytes": 255042560,
+   "gmg_live_bytes": 53017600,
+   "gmg_levels": 3,
+   "gmg_storage_bytes": {
+    "vectors": 783063,
+    "matrices": 614400,
+    "coarse_inverse": 49005000,
+    "KE_tables": 113664
+   },
+   "operator_step_peak_bytes": {
+    "ref": 2797056,
+    "atomic": 2797056,
+    "corner": 2797056,
+    "mean": 2797056,
+    "stencil": 2797056,
+    "diff": 2797056
+   },
+   "apply_seconds_forward": {
+    "ref": 8.361600339412689e-05,
+    "atomic": 7.753600180149078e-05,
+    "corner": 7.48480036854744e-05,
+    "mean": 8.204799890518189e-05,
+    "stencil": 7.51359984278679e-05,
+    "diff": 8.086399734020233e-05
+   },
+   "apply_seconds_transpose": {
+    "ref": 7.065600156784058e-05,
+    "atomic": 6.45119994878769e-05,
+    "corner": 6.758400052785873e-05,
+    "mean": 6.860800087451935e-05,
+    "stencil": 6.143999844789505e-05,
+    "diff": 0.0001011200025677681
+   },
+   "estimates_bytes": {
+    "reference_pcg64_e29": {
+     "bytes": 614254873,
+     "fits": true
+    },
+    "reference_pcg64_t21": {
+     "bytes": 616044361,
+     "fits": true
+    },
+    "pcg_energy_e29": {
+     "bytes": 617833849,
+     "fits": true
+    },
+    "pcg_energy_t20op": {
+     "bytes": 618840436,
+     "fits": true
+    },
+    "fp32_control_common": {
+     "bytes": 617386477,
+     "fits": true
+    },
+    "fp32_control_own": {
+     "bytes": 872429037,
+     "fits": true
+    },
+    "minres_library": {
+     "bytes": 626152220,
+     "fits": true
+    },
+    "gmres_library(m=10)": {
+     "bytes": 632417476,
+     "fits": true
+    },
+    "gmres_library(m=20)": {
+     "bytes": 641367476,
+     "fits": true
+    },
+    "gmres_library(m=30)": {
+     "bytes": 650319012,
+     "fits": true
+    },
+    "gmres_library(m=50)": {
+     "bytes": 668226692,
+     "fits": true
+    },
+    "gmres_library(m=100)": {
+     "bytes": 713025332,
+     "fits": true
+    },
+    "lobpcg_library(b=1)": {
+     "bytes": 628202524,
+     "fits": true
+    },
+    "lobpcg_library(b=2)": {
+     "bytes": 641630596,
+     "fits": true
+    },
+    "lobpcg_library(b=3)": {
+     "bytes": 655063276,
+     "fits": true
+    },
+    "lobpcg_library(b=4)": {
+     "bytes": 668500564,
+     "fits": true
+    },
+    "lobpcg_library(b=6)": {
+     "bytes": 695388964,
+     "fits": true
+    },
+    "lobpcg_library(b=8)": {
+     "bytes": 722295796,
+     "fits": true
+    },
+    "eigensolver_inplace(b=1)": {
+     "bytes": 627307780,
+     "fits": true
+    },
+    "eigensolver_inplace(b=2)": {
+     "bytes": 636262132,
+     "fits": true
+    },
+    "eigensolver_inplace(b=3)": {
+     "bytes": 645221092,
+     "fits": true
+    },
+    "eigensolver_inplace(b=4)": {
+     "bytes": 654184660,
+     "fits": true
+    },
+    "eigensolver_inplace(b=6)": {
+     "bytes": 672125620,
+     "fits": true
+    },
+    "eigensolver_inplace(b=8)": {
+     "bytes": 690085012,
+     "fits": true
+    }
+   },
+   "gmres_library_max_restart_fitting": {
+    "value": 19400,
+    "limited_by_solver_path": false,
+    "path_limit": "m <= n (CuPy caps the restart at n)",
+    "measured_parameters": [
+     10,
+     20
+    ],
+    "within_measured_range": false,
+    "relation_to_measured_range": "above the measured range: extrapolation",
+    "basis": "measured per-vector coefficient at the measured parameters; a value outside them, above or below, is an extrapolation by the source count, to be measured by the job before admission"
+   },
+   "gmres_library_max_restart_within_measured_range": 20,
+   "lobpcg_library_max_block_fitting": {
+    "value": 1248,
+    "limited_by_solver_path": false,
+    "path_limit": "5 b <= n (above it CuPy uses a dense n x n eigensolver)",
+    "measured_parameters": [
+     3,
+     6
+    ],
+    "within_measured_range": false,
+    "relation_to_measured_range": "above the measured range: extrapolation",
+    "basis": "measured per-vector coefficient at the measured parameters; a value outside them, above or below, is an extrapolation by the source count, to be measured by the job before admission"
+   },
+   "lobpcg_library_max_block_within_measured_range": 6,
+   "eigensolver_inplace_max_block_fitting": {
+    "value": 1606,
+    "basis": "planned count, not a bound"
+   }
+  },
+  {
+   "k": 32,
+   "grid": [
+    256,
+    32,
+    32
+   ],
+   "n_elem": 262144,
+   "n_node": 279873,
+   "ndof": 839619,
+   "bytes_fp64_vector": 6716952,
+   "bytes_fp32_vector": 3358476,
+   "gmg_build_peak_reserved_bytes": 267822592,
+   "gmg_live_bytes": 64445952,
+   "gmg_levels": 4,
+   "gmg_storage_bytes": {
+    "vectors": 5763528,
+    "matrices": 5529600,
+    "coarse_inverse": 49005000,
+    "KE_tables": 728064
+   },
+   "operator_step_peak_bytes": {
+    "ref": 20992000,
+    "atomic": 20992000,
+    "corner": 20992000,
+    "mean": 20992000,
+    "stencil": 20992000,
+    "diff": 20992000
+   },
+   "apply_seconds_forward": {
+    "ref": 0.0003121280074119568,
+    "atomic": 0.0003004159927368164,
+    "corner": 0.0003073599934577942,
+    "mean": 0.00031775999069213865,
+    "stencil": 0.00027248001098632813,
+    "diff": 0.00030831998586654664
+   },
+   "apply_seconds_transpose": {
+    "ref": 0.0003041279911994934,
+    "atomic": 0.00028841599822044373,
+    "corner": 0.0003409920036792755,
+    "mean": 0.00031334400177001953,
+    "stencil": 0.0002611199915409088,
+    "diff": 0.000477183997631073
+   },
+   "estimates_bytes": {
+    "reference_pcg64_e29": {
+     "bytes": 657306041,
+     "fits": true
+    },
+    "reference_pcg64_t21": {
+     "bytes": 670739945,
+     "fits": true
+    },
+    "pcg_energy_e29": {
+     "bytes": 684173849,
+     "fits": true
+    },
+    "pcg_energy_t20op": {
+     "bytes": 691730420,
+     "fits": true
+    },
+    "fp32_control_common": {
+     "bytes": 680815373,
+     "fits": true
+    },
+    "fp32_control_own": {
+     "bytes": 948637965,
+     "fits": true
+    },
+    "minres_library": {
+     "bytes": 739797660,
+     "fits": true
+    },
+    "gmres_library(m=10)": {
+     "bytes": 786818372,
+     "fits": true
+    },
+    "gmres_library(m=20)": {
+     "bytes": 853990452,
+     "fits": true
+    },
+    "gmres_library(m=30)": {
+     "bytes": 921164068,
+     "fits": true
+    },
+    "gmres_library(m=50)": {
+     "bytes": 1055515908,
+     "fits": true
+    },
+    "gmres_library(m=100)": {
+     "bytes": 1391424948,
+     "fits": true
+    },
+    "lobpcg_library(b=1)": {
+     "bytes": 741847964,
+     "fits": true
+    },
+    "lobpcg_library(b=2)": {
+     "bytes": 842609156,
+     "fits": true
+    },
+    "lobpcg_library(b=3)": {
+     "bytes": 943374956,
+     "fits": true
+    },
+    "lobpcg_library(b=4)": {
+     "bytes": 1044145364,
+     "fits": true
+    },
+    "lobpcg_library(b=6)": {
+     "bytes": 1245700004,
+     "fits": true
+    },
+    "lobpcg_library(b=8)": {
+     "bytes": 1447273076,
+     "fits": true
+    },
+    "eigensolver_inplace(b=1)": {
+     "bytes": 735131012,
+     "fits": true
+    },
+    "eigensolver_inplace(b=2)": {
+     "bytes": 802307444,
+     "fits": true
+    },
+    "eigensolver_inplace(b=3)": {
+     "bytes": 869488484,
+     "fits": true
+    },
+    "eigensolver_inplace(b=4)": {
+     "bytes": 936674132,
+     "fits": true
+    },
+    "eigensolver_inplace(b=6)": {
+     "bytes": 1071059252,
+     "fits": true
+    },
+    "eigensolver_inplace(b=8)": {
+     "bytes": 1205462804,
+     "fits": true
+    }
+   },
+   "gmres_library_max_restart_fitting": {
+    "value": 3007,
+    "limited_by_solver_path": false,
+    "path_limit": "m <= n (CuPy caps the restart at n)",
+    "measured_parameters": [
+     10,
+     20
+    ],
+    "within_measured_range": false,
+    "relation_to_measured_range": "above the measured range: extrapolation",
+    "basis": "measured per-vector coefficient at the measured parameters; a value outside them, above or below, is an extrapolation by the source count, to be measured by the job before admission"
+   },
+   "gmres_library_max_restart_within_measured_range": 20,
+   "lobpcg_library_max_block_fitting": {
+    "value": 201,
+    "limited_by_solver_path": false,
+    "path_limit": "5 b <= n (above it CuPy uses a dense n x n eigensolver)",
+    "measured_parameters": [
+     3,
+     6
+    ],
+    "within_measured_range": false,
+    "relation_to_measured_range": "above the measured range: extrapolation",
+    "basis": "measured per-vector coefficient at the measured parameters; a value outside them, above or below, is an extrapolation by the source count, to be measured by the job before admission"
+   },
+   "lobpcg_library_max_block_within_measured_range": 6,
+   "eigensolver_inplace_max_block_fitting": {
+    "value": 299,
+    "basis": "planned count, not a bound"
+   }
+  },
+  {
+   "k": 64,
+   "grid": [
+    512,
+    64,
+    64
+   ],
+   "n_elem": 2097152,
+   "n_node": 2167425,
+   "ndof": 6502275,
+   "bytes_fp64_vector": 52018200,
+   "bytes_fp32_vector": 26009100,
+   "gmg_build_peak_reserved_bytes": 362019328,
+   "gmg_live_bytes": 154276352,
+   "gmg_levels": 5,
+   "gmg_storage_bytes": {
+    "vectors": 44015481,
+    "matrices": 44851200,
+    "coarse_inverse": 49005000,
+    "KE_tables": 5643264
+   },
+   "operator_step_peak_bytes": {
+    "ref": 162558464,
+    "atomic": 162558464,
+    "corner": 162558464,
+    "mean": 162558464,
+    "stencil": 162558464,
+    "diff": 162558464
+   },
+   "apply_seconds_forward": {
+    "ref": 0.002124864101409912,
+    "atomic": 0.002111135959625244,
+    "corner": 0.0021867520809173585,
+    "mean": 0.0022696640491485596,
+    "stencil": 0.0018139519691467284,
+    "diff": 0.0020341761112213134
+   },
+   "apply_seconds_transpose": {
+    "ref": 0.0021678080558776855,
+    "atomic": 0.002119679927825928,
+    "corner": 0.002211872100830078,
+    "mean": 0.002299904108047485,
+    "stencil": 0.0018247679471969605,
+    "diff": 0.0033258240222930908
+   },
+   "estimates_bytes": {
+    "reference_pcg64_e29": {
+     "bytes": 987236601,
+     "fits": true
+    },
+    "reference_pcg64_t21": {
+     "bytes": 1091273001,
+     "fits": true
+    },
+    "pcg_energy_e29": {
+     "bytes": 1195309401,
+     "fits": true
+    },
+    "pcg_energy_t20op": {
+     "bytes": 1253829876,
+     "fits": true
+    },
+    "fp32_control_common": {
+     "bytes": 1169300301,
+     "fits": true
+    },
+    "fp32_control_own": {
+     "bytes": 1531319629,
+     "fits": true
+    },
+    "minres_library": {
+     "bytes": 1619005852,
+     "fits": true
+    },
+    "gmres_library(m=10)": {
+     "bytes": 1983135300,
+     "fits": true
+    },
+    "gmres_library(m=20)": {
+     "bytes": 2503319860,
+     "fits": true
+    },
+    "gmres_library(m=30)": {
+     "bytes": 3023505956,
+     "fits": true
+    },
+    "gmres_library(m=50)": {
+     "bytes": 4063882756,
+     "fits": true
+    },
+    "gmres_library(m=100)": {
+     "bytes": 6664854196,
+     "fits": true
+    },
+    "lobpcg_library(b=1)": {
+     "bytes": 1621056156,
+     "fits": true
+    },
+    "lobpcg_library(b=2)": {
+     "bytes": 2401336068,
+     "fits": true
+    },
+    "lobpcg_library(b=3)": {
+     "bytes": 3181620588,
+     "fits": true
+    },
+    "lobpcg_library(b=4)": {
+     "bytes": 3961909716,
+     "fits": true
+    },
+    "lobpcg_library(b=6)": {
+     "bytes": 5522501796,
+     "fits": true
+    },
+    "lobpcg_library(b=8)": {
+     "bytes": 7083112308,
+     "fits": true
+    },
+    "eigensolver_inplace(b=1)": {
+     "bytes": 1569037956,
+     "fits": true
+    },
+    "eigensolver_inplace(b=2)": {
+     "bytes": 2089226868,
+     "fits": true
+    },
+    "eigensolver_inplace(b=3)": {
+     "bytes": 2609420388,
+     "fits": true
+    },
+    "eigensolver_inplace(b=4)": {
+     "bytes": 3129618516,
+     "fits": true
+    },
+    "eigensolver_inplace(b=6)": {
+     "bytes": 4170028596,
+     "fits": true
+    },
+    "eigensolver_inplace(b=8)": {
+     "bytes": 5210457108,
+     "fits": true
+    }
+   },
+   "gmres_library_max_restart_fitting": {
+    "value": 375,
+    "limited_by_solver_path": false,
+    "path_limit": "m <= n (CuPy caps the restart at n)",
+    "measured_parameters": [
+     10,
+     20
+    ],
+    "within_measured_range": false,
+    "relation_to_measured_range": "above the measured range: extrapolation",
+    "basis": "measured per-vector coefficient at the measured parameters; a value outside them, above or below, is an extrapolation by the source count, to be measured by the job before admission"
+   },
+   "gmres_library_max_restart_within_measured_range": 20,
+   "lobpcg_library_max_block_fitting": {
+    "value": 25,
+    "limited_by_solver_path": false,
+    "path_limit": "5 b <= n (above it CuPy uses a dense n x n eigensolver)",
+    "measured_parameters": [
+     3,
+     6
+    ],
+    "within_measured_range": false,
+    "relation_to_measured_range": "above the measured range: extrapolation",
+    "basis": "measured per-vector coefficient at the measured parameters; a value outside them, above or below, is an extrapolation by the source count, to be measured by the job before admission"
+   },
+   "lobpcg_library_max_block_within_measured_range": 6,
+   "eigensolver_inplace_max_block_fitting": {
+    "value": 38,
+    "basis": "planned count, not a bound"
+   }
+  },
+  {
+   "k": 128,
+   "grid": [
+    1024,
+    128,
+    128
+   ],
+   "n_elem": 16777216,
+   "n_node": 17057025,
+   "ndof": 51171075,
+   "bytes_fp64_vector": 409368600,
+   "bytes_fp32_vector": 204684300,
+   "gmg_build_peak_reserved_bytes": 1532286976,
+   "gmg_live_bytes": 866661888,
+   "gmg_levels": 6,
+   "gmg_storage_bytes": {
+    "vectors": 343784106,
+    "matrices": 359424000,
+    "coarse_inverse": 49005000,
+    "KE_tables": 44964864
+   },
+   "operator_step_peak_bytes": {
+    "ref": 1279278592,
+    "atomic": 1279278592,
+    "corner": 1279278592,
+    "mean": 1279278592,
+    "stencil": 1279278592,
+    "diff": 1279278592
+   },
+   "apply_seconds_forward": {
+    "ref": 0.01708076858520508,
+    "atomic": 0.017183456420898437,
+    "corner": 0.01785158348083496,
+    "mean": 0.018432287216186522,
+    "stencil": 0.014636287689208985,
+    "diff": 0.016387456893920897
+   },
+   "apply_seconds_transpose": {
+    "ref": 0.017133472442626953,
+    "atomic": 0.01722470474243164,
+    "corner": 0.01801420783996582,
+    "mean": 0.018508800506591795,
+    "stencil": 0.01472000026702881,
+    "diff": 0.02653183937072754
+   },
+   "estimates_bytes": {
+    "reference_pcg64_e29": {
+     "bytes": 4017866105,
+     "fits": true
+    },
+    "reference_pcg64_t21": {
+     "bytes": 4836603305,
+     "fits": true
+    },
+    "pcg_energy_e29": {
+     "bytes": 5655340505,
+     "fits": true
+    },
+    "pcg_energy_t20op": {
+     "bytes": 6115880180,
+     "fits": true
+    },
+    "fp32_control_common": {
+     "bytes": 5450656205,
+     "fits": true
+    },
+    "fp32_control_own": {
+     "bytes": 6982943181,
+     "fits": true
+    },
+    "minres_library": {
+     "bytes": 8982508956,
+     "fits": true
+    },
+    "gmres_library(m=10)": {
+     "bytes": 11848091204,
+     "fits": true
+    },
+    "gmres_library(m=20)": {
+     "bytes": 15941779764,
+     "fits": true
+    },
+    "gmres_library(m=30)": {
+     "bytes": 20035469860,
+     "fits": true
+    },
+    "gmres_library(m=50)": {
+     "bytes": 28222854660,
+     "fits": false
+    },
+    "gmres_library(m=100)": {
+     "bytes": 48691346100,
+     "fits": false
+    },
+    "lobpcg_library(b=1)": {
+     "bytes": 8984559260,
+     "fits": true
+    },
+    "lobpcg_library(b=2)": {
+     "bytes": 15125095172,
+     "fits": true
+    },
+    "lobpcg_library(b=3)": {
+     "bytes": 21265635692,
+     "fits": false
+    },
+    "lobpcg_library(b=4)": {
+     "bytes": 27406180820,
+     "fits": false
+    },
+    "lobpcg_library(b=6)": {
+     "bytes": 39687284900,
+     "fits": false
+    },
+    "lobpcg_library(b=8)": {
+     "bytes": 51968407412,
+     "fits": false
+    },
+    "eigensolver_inplace(b=1)": {
+     "bytes": 8575190660,
+     "fits": true
+    },
+    "eigensolver_inplace(b=2)": {
+     "bytes": 12668883572,
+     "fits": true
+    },
+    "eigensolver_inplace(b=3)": {
+     "bytes": 16762581092,
+     "fits": true
+    },
+    "eigensolver_inplace(b=4)": {
+     "bytes": 20856283220,
+     "fits": true
+    },
+    "eigensolver_inplace(b=6)": {
+     "bytes": 29043701300,
+     "fits": false
+    },
+    "eigensolver_inplace(b=8)": {
+     "bytes": 37231137812,
+     "fits": false
+    }
+   },
+   "gmres_library_max_restart_fitting": {
+    "value": 32,
+    "limited_by_solver_path": false,
+    "path_limit": "m <= n (CuPy caps the restart at n)",
+    "measured_parameters": [
+     10,
+     20
+    ],
+    "within_measured_range": false,
+    "relation_to_measured_range": "above the measured range: extrapolation",
+    "basis": "measured per-vector coefficient at the measured parameters; a value outside them, above or below, is an extrapolation by the source count, to be measured by the job before admission"
+   },
+   "gmres_library_max_restart_within_measured_range": 20,
+   "lobpcg_library_max_block_fitting": {
+    "value": 2,
+    "limited_by_solver_path": false,
+    "path_limit": "5 b <= n (above it CuPy uses a dense n x n eigensolver)",
+    "measured_parameters": [
+     3,
+     6
+    ],
+    "within_measured_range": false,
+    "relation_to_measured_range": "below the measured range: downward extrapolation",
+    "basis": "measured per-vector coefficient at the measured parameters; a value outside them, above or below, is an extrapolation by the source count, to be measured by the job before admission"
+   },
+   "lobpcg_library_max_block_within_measured_range": null,
+   "eigensolver_inplace_max_block_fitting": {
+    "value": 4,
+    "basis": "planned count, not a bound"
+   }
+  }
+ ],
+ "all_inventories_upper": true
+}

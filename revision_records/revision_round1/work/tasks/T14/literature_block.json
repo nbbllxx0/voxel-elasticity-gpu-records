@@ -1,0 +1,653 @@
+{
+ "purpose": "Verified published figures for the R1.1 context block (input to T29). Every row lists, under 'support', the quote ids in quotes.json that back each part of the row; verify_quotes.py checks each quote verbatim and cross-checks the ids (quote_check.json). Figures stay with their own device, code and workload; none is a measurement of this paper.",
+ "rows": [
+  {
+   "work": "traff2023simple",
+   "code": "Futhark (OpenCL backend)",
+   "device": "NVIDIA A100 (80 GB), form factor not stated",
+   "workload": "linear cantilever, 640x320x320 = 65.5e6 elements, volume fraction 0.1, filter radius 2.5 elements, 100 design iterations",
+   "quantity": "wall time, complete run",
+   "value": 7380,
+   "unit": "s",
+   "kind": "measured; replicate count not stated for this run. Filter radius 2.5 elements, unlike the 1.5-element 20-iteration series behind the OpenMP estimates",
+   "quote_ids": [
+    "T2",
+    "T39",
+    "T9",
+    "T36",
+    "T4",
+    "T3"
+   ],
+   "support": {
+    "code Futhark, OpenCL backend": [
+     "T2",
+     "T39"
+    ],
+    "device A100": [
+     "T2"
+    ],
+    "A100 80 GB": [
+     "T9"
+    ],
+    "linear cantilever, 65.5e6 elements, V*=0.1, filter 2.5": [
+     "T36",
+     "T4"
+    ],
+    "640x320x320 mesh": [
+     "T3"
+    ],
+    "100 design iterations, 7380 s": [
+     "T2",
+     "T4"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "OpenMP-GPU",
+   "device": "NVIDIA A100 (80 GB)",
+   "workload": "cantilever, 65.5e6 elements; basis: first 20 design iterations of the Fig. 6 series (filter radius 1.5 elements, 4 multigrid levels)",
+   "quantity": "estimated wall time, complete optimisation",
+   "value": 2,
+   "unit": "h",
+   "kind": "published estimate (extrapolated by the source); Published estimate for the complete problem, extrapolated by the authors from the first 20 design iterations of the Fig. 6 series (filter radius 1.5 elements, 4 multigrid levels). It is not a run of the 100-iteration, filter-2.5 cantilever of Fig. 4 that the Futhark 7380 s refers to. The source states no extrapolation rule; 5 x the 20-iteration time gives 3.19 h, not the published value (code_checks.json).",
+   "quote_ids": [
+    "T5",
+    "T12",
+    "T9",
+    "T1",
+    "T38",
+    "T10",
+    "T32"
+   ],
+   "support": {
+    "estimate approx. 2 h (GPU), from first 20 iterations of Fig. 6": [
+     "T5",
+     "T12"
+    ],
+    "A100 80 GB": [
+     "T9"
+    ],
+    "65.5e6-element cantilever": [
+     "T1",
+     "T38"
+    ],
+    "filter 1.5 elements": [
+     "T10"
+    ],
+    "4 multigrid levels": [
+     "T32"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "OpenMP-CPU",
+   "device": "two Intel Xeon 8160 (48 cores)",
+   "workload": "cantilever, 65.5e6 elements; basis: first 20 design iterations of the Fig. 6 series (filter radius 1.5 elements, 4 multigrid levels)",
+   "quantity": "estimated wall time, complete optimisation",
+   "value": 3.15,
+   "unit": "h",
+   "kind": "published estimate (extrapolated by the source); Published estimate for the complete problem, extrapolated by the authors from the first 20 design iterations of the Fig. 6 series (filter radius 1.5 elements, 4 multigrid levels). It is not a run of the 100-iteration, filter-2.5 cantilever of Fig. 4 that the Futhark 7380 s refers to. The source states no extrapolation rule; 5 x the 20-iteration time gives 5.28 h, not the published value (code_checks.json).",
+   "quote_ids": [
+    "T5",
+    "T11",
+    "T8",
+    "T1",
+    "T37",
+    "T38",
+    "T10",
+    "T32"
+   ],
+   "support": {
+    "estimate approx. 3.15 h (CPU), from first 20 iterations of Fig. 6": [
+     "T5",
+     "T11"
+    ],
+    "two Intel Xeon 8160, 48 cores": [
+     "T8",
+     "T1"
+    ],
+    "65.5e6 elements": [
+     "T37"
+    ],
+    "cantilever, 20 design iterations": [
+     "T38"
+    ],
+    "filter 1.5 elements": [
+     "T10"
+    ],
+    "4 multigrid levels": [
+     "T32"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "OpenMP-CPU",
+   "device": "two Intel Xeon 8160",
+   "workload": "cantilever, 65.5e6 elements, filter radius 1.5 elements, 4 multigrid levels, first 20 design iterations",
+   "quantity": "wall time",
+   "value": 3800,
+   "unit": "s",
+   "kind": "measured (single sample)",
+   "quote_ids": [
+    "T11",
+    "T37",
+    "T8",
+    "T38",
+    "T10",
+    "T32",
+    "T15"
+   ],
+   "support": {
+    "3800 s for 20 design iterations": [
+     "T11"
+    ],
+    "OpenMP-CPU, 65.5e6 elements": [
+     "T37"
+    ],
+    "two Intel Xeon 8160": [
+     "T8"
+    ],
+    "cantilever, 20 design iterations": [
+     "T38"
+    ],
+    "filter 1.5 elements": [
+     "T10"
+    ],
+    "4 multigrid levels": [
+     "T32"
+    ],
+    "single sample (performance study)": [
+     "T15"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "OpenMP-GPU",
+   "device": "NVIDIA A100 (80 GB)",
+   "workload": "cantilever, 65.5e6 elements, filter radius 1.5 elements, 4 multigrid levels, first 20 design iterations",
+   "quantity": "wall time",
+   "value": 2300,
+   "unit": "s",
+   "kind": "measured (single sample)",
+   "quote_ids": [
+    "T12",
+    "T37",
+    "T9",
+    "T38",
+    "T10",
+    "T32",
+    "T15"
+   ],
+   "support": {
+    "2300 s, same 20 design iterations, A100": [
+     "T12"
+    ],
+    "65.5e6 elements (same problem)": [
+     "T37",
+     "T12"
+    ],
+    "A100 80 GB": [
+     "T9"
+    ],
+    "cantilever, 20 design iterations": [
+     "T38"
+    ],
+    "filter 1.5 elements": [
+     "T10"
+    ],
+    "4 multigrid levels": [
+     "T32"
+    ],
+    "single sample (performance study)": [
+     "T15"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "Futhark",
+   "device": "NVIDIA A100 (80 GB)",
+   "workload": "cantilever, 65.5e6 elements, filter radius 1.5 elements, 4 multigrid levels, first 20 design iterations",
+   "quantity": "wall time",
+   "value": 2096,
+   "unit": "s",
+   "kind": "measured (single sample)",
+   "quote_ids": [
+    "T13",
+    "T37",
+    "T12",
+    "T9",
+    "T38",
+    "T10",
+    "T32",
+    "T15"
+   ],
+   "support": {
+    "2096 s, the 20 design iterations": [
+     "T13"
+    ],
+    "65.5e6 elements (same problem)": [
+     "T37",
+     "T12"
+    ],
+    "A100 80 GB": [
+     "T9"
+    ],
+    "cantilever, 20 design iterations": [
+     "T38"
+    ],
+    "filter 1.5 elements": [
+     "T10"
+    ],
+    "4 multigrid levels": [
+     "T32"
+    ],
+    "single sample (performance study)": [
+     "T15"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "Futhark",
+   "device": "NVIDIA A100 (80 GB)",
+   "workload": "cantilever, largest problems of the Fig. 6 series (filter radius 1.5 elements), 5 multigrid levels, first 20 design iterations",
+   "quantity": "wall time",
+   "value": 1105,
+   "unit": "s",
+   "kind": "measured (performance study, reported as a single sample)",
+   "quote_ids": [
+    "T14",
+    "T33",
+    "T34",
+    "T38",
+    "T10",
+    "T9",
+    "T15"
+   ],
+   "note": "the source's own full-run estimates from these are 55 min (Futhark) and 63 min (OpenMP-GPU) [T14]; no extrapolation rule is stated",
+   "support": {
+    "1105 s with a fifth level": [
+     "T14"
+    ],
+    "largest problems, fifth multigrid level": [
+     "T33"
+    ],
+    "Fig. 6 series (20 iterations, cantilever, filter 1.5)": [
+     "T34",
+     "T38",
+     "T10"
+    ],
+    "A100 80 GB": [
+     "T9"
+    ],
+    "single sample (performance study)": [
+     "T15"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "OpenMP-GPU",
+   "device": "NVIDIA A100 (80 GB)",
+   "workload": "cantilever, largest problems of the Fig. 6 series (filter radius 1.5 elements), 5 multigrid levels, first 20 design iterations",
+   "quantity": "wall time",
+   "value": 1264,
+   "unit": "s",
+   "kind": "measured (performance study, reported as a single sample)",
+   "quote_ids": [
+    "T14",
+    "T33",
+    "T34",
+    "T38",
+    "T10",
+    "T9",
+    "T15"
+   ],
+   "note": "the source's own full-run estimates from these are 55 min (Futhark) and 63 min (OpenMP-GPU) [T14]; no extrapolation rule is stated",
+   "support": {
+    "1264 s with a fifth level": [
+     "T14"
+    ],
+    "largest problems, fifth multigrid level": [
+     "T33"
+    ],
+    "Fig. 6 series (20 iterations, cantilever, filter 1.5)": [
+     "T34",
+     "T38",
+     "T10"
+    ],
+    "A100 80 GB": [
+     "T9"
+    ],
+    "single sample (performance study)": [
+     "T15"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "Futhark",
+   "device": "NVIDIA A100 (80 GB)",
+   "workload": "MBB beam, 41e6 elements",
+   "quantity": "wall time, complete run",
+   "value": 4,
+   "unit": "h",
+   "kind": "measured",
+   "quote_ids": [
+    "T6",
+    "T9"
+   ],
+   "support": {
+    "MBB beam, 41e6 elements, 4 h, Futhark, A100": [
+     "T6"
+    ],
+    "A100 80 GB": [
+     "T9"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "Futhark (linear)",
+   "device": "NVIDIA A100",
+   "workload": "2e6 elements",
+   "quantity": "one matrix-vector product",
+   "value": 1.316,
+   "unit": "ms",
+   "kind": "measured",
+   "quote_ids": [
+    "T20",
+    "T21"
+   ],
+   "support": {
+    "1.316 ms per matrix-vector product, linear Futhark, 2e6 elements, A100": [
+     "T20",
+     "T21"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "Futhark",
+   "device": "NVIDIA A100 (80 GB)",
+   "workload": "linear cantilever (Fig. 4)",
+   "quantity": "largest demonstrated mesh",
+   "value": 65536000,
+   "unit": "elements (640 x 320 x 320; the source rounds to approximately 65.5 million)",
+   "kind": "demonstrated run",
+   "capacity_statement": "The source calls 65 million elements 'the limit' for the Futhark implementation on the A100 [T16]. This is a rounded statement: the demonstrated 65,536,000-element mesh already exceeds 65e6 taken literally, so no exact maximum is inferred. Cite it as 'about 65 million elements, the stated limit' and give 640x320x320 as the demonstrated mesh.",
+   "quote_ids": [
+    "T3",
+    "T36",
+    "T2",
+    "T9",
+    "T16"
+   ],
+   "support": {
+    "demonstrated 640x320x320 mesh, approx. 65.5e6 elements": [
+     "T3",
+     "T36"
+    ],
+    "run with Futhark on the A100": [
+     "T2"
+    ],
+    "A100 80 GB": [
+     "T9"
+    ],
+    "stated rounded limit (65 million elements)": [
+     "T16"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "Futhark",
+   "device": "NVIDIA GTX 1080Ti (8 GiB)",
+   "workload": "cantilever (Fig. 6 series)",
+   "quantity": "out of memory above",
+   "value": 8000000.0,
+   "unit": "elements",
+   "kind": "stated",
+   "quote_ids": [
+    "T18",
+    "T35",
+    "T38"
+   ],
+   "support": {
+    "out of memory above 8 million elements": [
+     "T18"
+    ],
+    "Futhark on 1080Ti with 8 GiB, Fig. 6 series": [
+     "T35"
+    ],
+    "cantilever (Fig. 6 series)": [
+     "T38"
+    ]
+   }
+  },
+  {
+   "work": "traff2023simple",
+   "code": "OpenMP-GPU and Futhark",
+   "device": "NVIDIA A100",
+   "workload": "cantilever, mesh refinement",
+   "quantity": "GPU memory",
+   "value": null,
+   "unit": "MiB",
+   "kind": "graphical only (Fig. 10); no value printed; DROPPED",
+   "quote_ids": [
+    "T19",
+    "T17"
+   ],
+   "support": {
+    "memory shown only graphically (Fig. 10)": [
+     "T19"
+    ],
+    "OpenMP-GPU uses less memory": [
+     "T17"
+    ]
+   }
+  },
+  {
+   "work": "wang2025matrixfree",
+   "code": "matrix-free MATLAB (TOP3D_XL)",
+   "device": "standard PC with 64 GB RAM",
+   "workload": "density-based TO and porous infill, 3D",
+   "quantity": "largest model",
+   "value": 128000000.0,
+   "unit": "hexahedral elements",
+   "kind": "stated in abstract",
+   "quote_ids": [
+    "W1",
+    "W3",
+    "W4",
+    "W2"
+   ],
+   "support": {
+    "128e6 hexahedral elements, standard PC with 64 GB RAM": [
+     "W1"
+    ],
+    "MATLAB, density-based TO and porous infill, 3D": [
+     "W3"
+    ],
+    "code TOP3D_XL": [
+     "W4"
+    ],
+    "element-based matrix-free stencil": [
+     "W2"
+    ]
+   }
+  },
+  {
+   "work": "liu2018narrowband",
+   "code": "narrow-band TO, mixed-precision MG-preconditioned solver",
+   "device": "single shared-memory multiprocessor platform",
+   "workload": "narrow band on sparsely populated grid",
+   "quantity": "computational domain",
+   "value": 1000000000.0,
+   "unit": "grid voxels (over)",
+   "kind": "stated in abstract",
+   "quote_ids": [
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+   ],
+   "support": {
+    "over one billion grid voxels, single shared-memory multiprocessor platform": [
+     "L1"
+    ],
+    "mixed-precision multigrid-preconditioned solver": [
+     "L2"
+    ],
+    "narrow-band region": [
+     "L3"
+    ],
+    "sparsely populated grid": [
+     "L4"
+    ]
+   }
+  },
+  {
+   "work": "hou2025cupy",
+   "code": "CuPy",
+   "device": "not stated for the largest example. The paper names two test machines, a laptop with a GTX 1650 (4 GB) and a workstation with a GPU given as 'GTX 3090' (24 GB) [H23]; the accessible text does not say which ran the 63e6-element example",
+   "workload": "topology optimization examples (heat transfer and structural design, 2D and 3D); physics, dimension and device of the largest example not stated in the abstract",
+   "quantity": "largest example (maximum over all published examples)",
+   "value": 63000000.0,
+   "unit": "elements (up to)",
+   "kind": "stated in abstract (ScienceDirect preview saved in the authors' earlier audit, abstract at lines 55-56)",
+   "quote_ids": [
+    "H10",
+    "H11",
+    "H12",
+    "H13",
+    "H23",
+    "H24"
+   ],
+   "support": {
+    "up to 63e6 elements, heat transfer and structural, 2D and 3D, GPU": [
+     "H10"
+    ],
+    "journal, volume, article number": [
+     "H11"
+    ],
+    "title": [
+     "H12"
+    ],
+    "DOI": [
+     "H13"
+    ],
+    "CuPy": [
+     "H12",
+     "H24"
+    ],
+    "two named test machines (no assignment of the largest example)": [
+     "H23"
+    ]
+   }
+  }
+ ],
+ "device_specs": [
+  {
+   "device": "NVIDIA A100 80GB PCIe / SXM",
+   "quantity": "FP64 (non-tensor)",
+   "value": 9.7,
+   "unit": "TFLOPS",
+   "quote_ids": [
+    "A1"
+   ]
+  },
+  {
+   "device": "NVIDIA A100 80GB PCIe / SXM",
+   "quantity": "FP64 Tensor Core",
+   "value": 19.5,
+   "unit": "TFLOPS",
+   "quote_ids": [
+    "A1",
+    "T29"
+   ]
+  },
+  {
+   "device": "NVIDIA A100 80GB PCIe",
+   "quantity": "memory bandwidth",
+   "value": 1935,
+   "unit": "GB/s",
+   "quote_ids": [
+    "A2",
+    "A3"
+   ]
+  },
+  {
+   "device": "NVIDIA A100 80GB SXM",
+   "quantity": "memory bandwidth",
+   "value": 2039,
+   "unit": "GB/s",
+   "quote_ids": [
+    "A2",
+    "A3"
+   ]
+  }
+ ],
+ "released_code": [
+  {
+   "code": "Traff et al. OpenMP-GPU (upstream b46ed453)",
+   "quantity": "CG stop",
+   "value": "recursively updated FP32 residual / ||b|| < 1e-5",
+   "quote_ids": [
+    "TC2",
+    "TC4",
+    "TC5",
+    "TC6"
+   ]
+  },
+  {
+   "code": "Traff et al. OpenMP-GPU (upstream b46ed453)",
+   "quantity": "CG iteration cap actually executed",
+   "value": 1000,
+   "note": "cgmax = 200 in top3d.c is passed to top3dmgcg but never to the solver; the solver loop uses its own maxIter = 1000",
+   "quote_ids": [
+    "TC9",
+    "TC10",
+    "TC11",
+    "TC12",
+    "TC13"
+   ]
+  },
+  {
+   "code": "Hou et al. CuPy-for-TO (d8dca7a)",
+   "quantity": "CG stop / cap",
+   "value": "recursive residual < 1e-3 x initial residual of the solve; cap 10000",
+   "quote_ids": [
+    "H3",
+    "H4",
+    "H5",
+    "H6"
+   ]
+  },
+  {
+   "code": "Hou et al. CuPy-for-TO (d8dca7a)",
+   "quantity": "operator precision",
+   "value": "released code: FP32 storage of input, output and vectors; within each of the 24 element-row kernels the products and sum are evaluated in FP64 (unsuffixed double literals) and rounded to FP32 on output; the 24 partial results are accumulated through FP32 storage",
+   "quote_ids": [
+    "H8",
+    "H14",
+    "H15",
+    "H16",
+    "H17",
+    "H18",
+    "H19",
+    "H20",
+    "H21",
+    "H22"
+   ],
+   "check": "code_checks.json: 576 coefficient literals, none f-suffixed; NVRTC PTX of each kernel body, compiled in a stand-in function with CuPy's declared argument types, has FP64 instructions in 24/24 kernels as released and in 0/24 with f-suffixed literals. This shows how the released expressions compile in that wrapper; it cannot establish which arithmetic ran in the published benchmarks.",
+   "published_account": "Hou et al. state: 'The sensitivities are processed in double precision, and all other data are processed in single precision.' [H22]. The released kernels differ from that account in their internal arithmetic."
+  }
+ ],
+ "extrapolation_check": "code_checks.json: traff_extrapolation (our arithmetic; the published estimates equal 2.98-3.13 x the 20-iteration time, not 5x)"
+}

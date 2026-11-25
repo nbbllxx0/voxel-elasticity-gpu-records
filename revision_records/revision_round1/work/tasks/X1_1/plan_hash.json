@@ -1,0 +1,6 @@
+{
+ "file": "ANALYSIS_PLAN.md",
+ "sha256": "bd5780916f5112ce232549ad2fecdfdb5204d1544da39ad54acd9dcd02f9c12e",
+ "recorded_at": "2026-11-25 07:39:30",
+ "note": "recorded before the first GPU job of X1_1; the plan is not changed after the run starts"
+}

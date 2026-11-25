@@ -1,0 +1,517 @@
+{
+ "task": "T37",
+ "note": "every number printed in fig_bracket.pdf, fig_bracket_n192.pdf and fig_bracket_history.pdf (axis tick labels excepted: they are the scale of the plotted record values, listed per figure in out/ticks_*.json) with its source; paths are relative to the run's work folder",
+ "inputs_checked": "out/input_checks.json (passed)",
+ "labels": [
+  {
+   "id": "LC1",
+   "figures": [
+    "fig_bracket"
+   ],
+   "text": "LC1  8,000 lbf, +z",
+   "plain": "LC1 8,000 lbf, +z",
+   "value": [
+    0.0,
+    0.0,
+    8000.0
+   ],
+   "source": "tasks/T31/out/figdata_n384.json#/loads/LC1_vertical/F"
+  },
+  {
+   "id": "LC2",
+   "figures": [
+    "fig_bracket"
+   ],
+   "text": "LC2  8,500 lbf, +x",
+   "plain": "LC2 8,500 lbf, +x",
+   "value": [
+    8500.0,
+    0.0,
+    0.0
+   ],
+   "source": "tasks/T31/out/figdata_n384.json#/loads/LC2_horizontal/F"
+  },
+  {
+   "id": "LC3",
+   "figures": [
+    "fig_bracket"
+   ],
+   "text": "LC3  9,500 lbf, 42° from +z towards +x",
+   "plain": "LC3 9,500 lbf, 42° from +z towards +x",
+   "value": {
+    "F": [
+     6356.740760409153,
+     0.0,
+     7059.875842035245
+    ],
+    "magnitude": 9500.0,
+    "angle_from_vertical_deg": 42.0
+   },
+   "source": "tasks/T31/out/figdata_n384.json#/loads/LC3_42deg/F",
+   "note": "magnitude |F| and angle atan2(F_x, F_z) derived from the recorded vector"
+  },
+  {
+   "id": "LC4",
+   "figures": [
+    "fig_bracket"
+   ],
+   "text": "LC4  couple 5,000 lbf·in about x",
+   "plain": "LC4 couple 5,000 lbf·in about x",
+   "value": {
+    "F": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "M": [
+     5000.0,
+     0.0,
+     0.0
+    ]
+   },
+   "source": "tasks/T31/out/figdata_n384.json#/loads/LC4_torsion"
+  },
+  {
+   "id": "C",
+   "figures": [
+    "fig_bracket"
+   ],
+   "text": "C = (6.0, 2.25, 2.1) in, pin axis at the clevis midplane",
+   "plain": "C = (6.0, 2.25, 2.1) in",
+   "value": [
+    6.0,
+    2.25,
+    2.1
+   ],
+   "source": "tasks/T31/out/figdata_n384.json#/reference_point_C_in"
+  },
+  {
+   "id": "box",
+   "figures": [
+    "fig_bracket"
+   ],
+   "text": "box 7.2 × 4.8 × 3.0 in",
+   "plain": "box 7.2 × 4.8 × 3.0 in",
+   "value": [
+    7.199999999999999,
+    4.8,
+    3.0
+   ],
+   "source": "tasks/T31/out/figdata_n384.json#/grid times tasks/T31/out/figdata_n384.json#/h_in",
+   "note": "allocated box = grid × element size"
+  },
+  {
+   "id": "n384_grid",
+   "figures": [
+    "fig_bracket"
+   ],
+   "text": "n = 384",
+   "plain": "n = 384",
+   "value": 384,
+   "source": "tasks/T31/out/figdata_n384.json#/n",
+   "note": "elements along the 7.2 in length"
+  },
+  {
+   "id": "n384_updates",
+   "figures": [
+    "fig_bracket"
+   ],
+   "text": "iterate after 300 updates (iteration guard; stopping rule not met)",
+   "plain": "iterate after 300 updates",
+   "value": {
+    "iterations": 300,
+    "termination": "guard"
+   },
+   "source": "tasks/T31/out/figdata_n384.json#/iterations; tasks/T31/out/figdata_n384.json#/termination"
+  },
+  {
+   "id": "n384_counts",
+   "figures": [
+    "fig_bracket"
+   ],
+   "text": "7,232,600 active, 6,629,528 designable, 15,728,640 allocated elements",
+   "plain": "7,232,600 active, 6,629,528 designable, 15,728,640 allocated elements",
+   "value": {
+    "active": 7232600,
+    "designable": 6629528,
+    "allocated": 15728640
+   },
+   "source": "tasks/T31/out/host_checks_384.json#/counts/active_elements; tasks/T31/out/host_checks_384.json#/counts/designable_elements; tasks/T31/out/host_checks_384.json#/counts/allocated_elements"
+  },
+  {
+   "id": "n384_Jtight",
+   "figures": [
+    "fig_bracket"
+   ],
+   "text": "$J$ = 1.2040870 (FP64, true residual $\\leq 10^{-8}$)",
+   "plain": "J = 1.2040870 (FP64, true residual ≤ 10−8)",
+   "value": {
+    "J_tight": 1.2040870253819667,
+    "tol": 1e-08
+   },
+   "source": "tasks/T31/out/runs/A_R_n384/gpu_meta.json#/endpoints/J_tight; tasks/T31/out/runs/A_R_n384/gpu_meta.json#/tight/tol",
+   "note": "J = sum 1/4 c_k / c0_k of the retained field, re-solved by the audit job for all four loads"
+  },
+  {
+   "id": "n384_level",
+   "figures": [
+    "fig_bracket"
+   ],
+   "text": "surface $\\rho_\\mathrm{phys}$ = 0.5",
+   "plain": "surface ρphys = 0.5",
+   "value": 0.5,
+   "source": "rendering level fixed by the task (T37 description: 'the retained n=384 field at the 0.5 threshold'); applied to the unsmoothed field, see out/render_meta.json"
+  },
+  {
+   "id": "n192_grid",
+   "figures": [
+    "fig_bracket_n192"
+   ],
+   "text": "n = 192",
+   "plain": "n = 192",
+   "value": 192,
+   "source": "tasks/T31/out/figdata_n192.json#/n",
+   "note": "elements along the 7.2 in length"
+  },
+  {
+   "id": "n192_updates",
+   "figures": [
+    "fig_bracket_n192"
+   ],
+   "text": "iterate after 300 updates (iteration guard; stopping rule not met)",
+   "plain": "iterate after 300 updates",
+   "value": {
+    "iterations": 300,
+    "termination": "guard"
+   },
+   "source": "tasks/T31/out/figdata_n192.json#/iterations; tasks/T31/out/figdata_n192.json#/termination"
+  },
+  {
+   "id": "n192_counts",
+   "figures": [
+    "fig_bracket_n192"
+   ],
+   "text": "903,548 active, 827,324 designable, 1,966,080 allocated elements",
+   "plain": "903,548 active, 827,324 designable, 1,966,080 allocated elements",
+   "value": {
+    "active": 903548,
+    "designable": 827324,
+    "allocated": 1966080
+   },
+   "source": "tasks/T31/out/host_checks_192.json#/counts/active_elements; tasks/T31/out/host_checks_192.json#/counts/designable_elements; tasks/T31/out/host_checks_192.json#/counts/allocated_elements"
+  },
+  {
+   "id": "n192_Jtight",
+   "figures": [
+    "fig_bracket_n192"
+   ],
+   "text": "$J$ = 1.2037514 (FP64, true residual $\\leq 10^{-8}$)",
+   "plain": "J = 1.2037514 (FP64, true residual ≤ 10−8)",
+   "value": {
+    "J_tight": 1.2037514323607468,
+    "tol": 1e-08
+   },
+   "source": "tasks/T31/out/runs/A_R_n192/gpu_meta.json#/endpoints/J_tight; tasks/T31/out/runs/A_R_n192/gpu_meta.json#/tight/tol",
+   "note": "J = sum 1/4 c_k / c0_k of the retained field, re-solved by the audit job for all four loads"
+  },
+  {
+   "id": "n192_level",
+   "figures": [
+    "fig_bracket_n192"
+   ],
+   "text": "surface $\\rho_\\mathrm{phys}$ = 0.5",
+   "plain": "surface ρphys = 0.5",
+   "value": 0.5,
+   "source": "rendering level fixed by the task (T37 description: 'the retained n=384 field at the 0.5 threshold'); applied to the unsmoothed field, see out/render_meta.json"
+  },
+  {
+   "id": "h192_bound",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 192: limit 1",
+   "plain": "n = 192: limit 1",
+   "value": 1,
+   "source": "tasks/T31/out/summary.json#/runs/R_n192/end_state_descriptive/bounded_oscillation_bound",
+   "note": "max(1, int(1e-6 × active elements)); conv_moving_ppm = 1.0 in tasks/T31/out/runs/R_n192/gpu_meta.json#/driver/config/conv_moving_ppm",
+   "context": {
+    "n": {
+     "value": 192,
+     "source": "tasks/T31/out/figdata_n192.json#/n"
+    }
+   }
+  },
+  {
+   "id": "h192_first_spread",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 192: met from iteration 78",
+   "plain": "n = 192: met from iteration 78",
+   "value": 78,
+   "source": "tasks/T31/out/summary.json#/runs/R_n192/end_state_descriptive/first_iteration_spread_le_1e-4",
+   "context": {
+    "n": {
+     "value": 192,
+     "source": "tasks/T31/out/figdata_n192.json#/n"
+    }
+   }
+  },
+  {
+   "id": "h192_spread300",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 192: $1.1\\times10^{-5}$ at 300",
+   "plain": "n = 192: 1.1×10−5 at 300",
+   "value": 1.1087805285933476e-05,
+   "source": "tasks/T31/out/summary.json#/runs/R_n192/end_state_descriptive/J_spread_rel_last10",
+   "context": {
+    "n": {
+     "value": 192,
+     "source": "tasks/T31/out/figdata_n192.json#/n"
+    },
+    "last_iteration": {
+     "value": 300,
+     "source": "tasks/T31/out/figdata_n192.json#/iterations"
+    }
+   }
+  },
+  {
+   "id": "h192_min_drho",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 192: min 0.351 after 75",
+   "plain": "n = 192: min 0.351 after 75",
+   "value": 0.350930392742157,
+   "source": "tasks/T31/out/summary.json#/runs/R_n192/end_state_descriptive/min_drho_phys_after_75",
+   "context": {
+    "n": {
+     "value": 192,
+     "source": "tasks/T31/out/figdata_n192.json#/n"
+    },
+    "after_iteration": {
+     "value": 75,
+     "source": "the summary's minimum is over iterations > 75 (t31_analyse.py:126-127): the last iteration before the stopping tests apply"
+    }
+   }
+  },
+  {
+   "id": "h192_min_moving",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 192: min 9,731 after 75",
+   "plain": "n = 192: min 9,731 after 75",
+   "value": 9731,
+   "source": "tasks/T31/out/summary.json#/runs/R_n192/end_state_descriptive/min_moving_after_75",
+   "context": {
+    "n": {
+     "value": 192,
+     "source": "tasks/T31/out/figdata_n192.json#/n"
+    },
+    "after_iteration": {
+     "value": 75,
+     "source": "the summary's minimum is over iterations > 75 (t31_analyse.py:126-127): the last iteration before the stopping tests apply"
+    }
+   }
+  },
+  {
+   "id": "h192_legend",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 192",
+   "plain": "n = 192",
+   "value": 192,
+   "source": "tasks/T31/out/figdata_n192.json#/n"
+  },
+  {
+   "id": "h384_bound",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 384: limit 7",
+   "plain": "n = 384: limit 7",
+   "value": 7,
+   "source": "tasks/T31/out/summary.json#/runs/R_n384/end_state_descriptive/bounded_oscillation_bound",
+   "note": "max(1, int(1e-6 × active elements)); conv_moving_ppm = 1.0 in tasks/T31/out/runs/R_n384/gpu_meta.json#/driver/config/conv_moving_ppm",
+   "context": {
+    "n": {
+     "value": 384,
+     "source": "tasks/T31/out/figdata_n384.json#/n"
+    }
+   }
+  },
+  {
+   "id": "h384_first_spread",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 384: met from iteration 76",
+   "plain": "n = 384: met from iteration 76",
+   "value": 76,
+   "source": "tasks/T31/out/summary.json#/runs/R_n384/end_state_descriptive/first_iteration_spread_le_1e-4",
+   "context": {
+    "n": {
+     "value": 384,
+     "source": "tasks/T31/out/figdata_n384.json#/n"
+    }
+   }
+  },
+  {
+   "id": "h384_spread300",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 384: $1.2\\times10^{-6}$ at 300",
+   "plain": "n = 384: 1.2×10−6 at 300",
+   "value": 1.1825745486651215e-06,
+   "source": "tasks/T31/out/summary.json#/runs/R_n384/end_state_descriptive/J_spread_rel_last10",
+   "context": {
+    "n": {
+     "value": 384,
+     "source": "tasks/T31/out/figdata_n384.json#/n"
+    },
+    "last_iteration": {
+     "value": 300,
+     "source": "tasks/T31/out/figdata_n384.json#/iterations"
+    }
+   }
+  },
+  {
+   "id": "h384_min_drho",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 384: min 0.449 after 75",
+   "plain": "n = 384: min 0.449 after 75",
+   "value": 0.44912996888160706,
+   "source": "tasks/T31/out/summary.json#/runs/R_n384/end_state_descriptive/min_drho_phys_after_75",
+   "context": {
+    "n": {
+     "value": 384,
+     "source": "tasks/T31/out/figdata_n384.json#/n"
+    },
+    "after_iteration": {
+     "value": 75,
+     "source": "the summary's minimum is over iterations > 75 (t31_analyse.py:126-127): the last iteration before the stopping tests apply"
+    }
+   }
+  },
+  {
+   "id": "h384_min_moving",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 384: min 52,705 after 75",
+   "plain": "n = 384: min 52,705 after 75",
+   "value": 52705,
+   "source": "tasks/T31/out/summary.json#/runs/R_n384/end_state_descriptive/min_moving_after_75",
+   "context": {
+    "n": {
+     "value": 384,
+     "source": "tasks/T31/out/figdata_n384.json#/n"
+    },
+    "after_iteration": {
+     "value": 75,
+     "source": "the summary's minimum is over iterations > 75 (t31_analyse.py:126-127): the last iteration before the stopping tests apply"
+    }
+   }
+  },
+  {
+   "id": "h384_legend",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "n = 384",
+   "plain": "n = 384",
+   "value": 384,
+   "source": "tasks/T31/out/figdata_n384.json#/n"
+  },
+  {
+   "id": "h_spread_limit",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "limit $10^{-4}$",
+   "plain": "limit 10−4",
+   "value": 0.0001,
+   "source": "tasks/T31/out/runs/R_n384/gpu_meta.json#/driver/config/conv_dc_rel",
+   "note": "same in R_n192"
+  },
+  {
+   "id": "h_drho_limit",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "limit 0.01",
+   "plain": "limit 0.01",
+   "value": 0.01,
+   "source": "tasks/T31/out/runs/R_n384/gpu_meta.json#/driver/config/conv_drho",
+   "note": "same in R_n192"
+  },
+  {
+   "id": "h_count_def",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "elements with $|\\Delta\\rho_\\mathrm{phys}|$ > 0.01",
+   "plain": "elements with |Δρphys| > 0.01",
+   "value": 0.01,
+   "source": "tasks/T31/out/runs/R_n384/gpu_meta.json#/driver/config/conv_drho"
+  },
+  {
+   "id": "h_window",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "spread of $J$ over the last 10 iterations",
+   "plain": "spread of J over the last 10 iterations",
+   "value": 10,
+   "source": "tasks/T31/out/runs/R_n384/gpu_meta.json#/driver/config/conv_window"
+  },
+  {
+   "id": "h_earliest",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "tests from 76",
+   "plain": "tests from 76",
+   "value": 76,
+   "source": "tasks/T31/out/runs/R_n384/gpu_meta.json#/driver/config/schedule/2/0 + tasks/T31/out/runs/R_n384/gpu_meta.json#/driver/config/conv_window + 1",
+   "note": "the stopping tests apply in the last continuation phase after iteration 65 + 10 (t30_driver.py:389)"
+  },
+  {
+   "id": "h_missing",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "no value at iteration 1 (no previous field)",
+   "plain": "no value at iteration 1",
+   "value": {
+    "drho_phys": "NaN",
+    "n_elem_drho_gt_tol": -1
+   },
+   "source": "tasks/T31/out/runs/R_n384/history.json#/history/0; same in R_n192",
+   "note": "recorded as NaN and -1; plotted as missing",
+   "context": {
+    "iteration": {
+     "value": 1,
+     "source": "tasks/T31/out/runs/R_n384/history.json#/history/0/it"
+    }
+   }
+  },
+  {
+   "id": "h_guard",
+   "figures": [
+    "fig_bracket_history"
+   ],
+   "text": "guard 300",
+   "plain": "guard 300",
+   "value": 300,
+   "source": "tasks/T31/out/runs/R_n384/gpu_meta.json#/driver/config/max_outer"
+  }
+ ]
+}

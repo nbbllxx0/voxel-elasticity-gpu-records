@@ -1,0 +1,21 @@
+{
+ "task": "T22",
+ "decision_needed": "May T22 run its k = 128 coefficient-skew job (J_skew: s_F = ||A - A^T||_F / ||A||_F of the six fixed rounded matrices from 27-colour probes) once more, with the node-index arrays of the probe colouring formed on the device instead of uploaded from the host, and with every guard unchanged? The authors' GPU rule (c) says a result is never kept or rerun at the same size after a spill. The first k = 128 J_skew job (out/runs/k128_skew_1) was stopped and is recorded as refused for memory, so T22 has not rerun it.",
+ "why_it_stopped": "The job's WDDM shared usage grew by 383,778,816 B (limit 268,435,456 B) before any probe was applied. About 115 MB of the growth arose during the common setup (the same 115,343,360 B appears in every completed k = 128 job), and the step above the limit (192,937,984 B to 461,373,440 B shared) coincided with the start of the skew computation, which copies three host node-index arrays of 17,057,025 int64 entries (136,456,200 B each) to the device in single transfers (t22_gpu.colours).",
+ "evidence": {
+  "samples": "out/runs/k128_skew_1/monitor.json: shared 77,594,624 B at go, 192,937,984 B from 10 s (setup), 461,373,440 B at 27.5 s, right after the job logged its setup checks",
+  "completed_k128_jobs": "the six k = 128 J_eig jobs and the setup they share stayed at 115,343,360 B shared growth (out/runs/k128_eig-*_1/monitor.json)",
+  "k32_k64": "J_skew completed at k = 32 and 64 with 10,485,760 B and 48,234,496 B shared growth"
+ },
+ "if_approved": {
+  "change": "already made in fix round 1 and tested on the CPU (out/fix_r1/code_tests.json): t22_gpu.colours forms ix, iy, iz on the device (t22_gpu.node_ijk, no host-to-device copy), the moduli are uploaded in pieces of CHUNK, and the job child allocates nothing before 'go' and writes its in-process budget answer at admission (DEVIATIONS.md D11, D12); every guard is unchanged. T20's one-piece upload of the free-DOF mask (51,171,075 B per form at k = 128) remains (D11 (c)).",
+  "commands": [
+   "python t22_launch_selftest.py",
+   "python t22_queue.py one 128 skew",
+   "python t22_analyse.py"
+  ],
+  "estimated_gpu_time": "about 3-5 min (2,268 forward applications per form at about 40 ms, six forms)"
+ },
+ "if_not_approved": "The k = 128 coefficient skew stays missing. The k = 128 classes rest on the eigensolves and witnesses (which do not use s_F); the k = 128 extension of H1 for mean and diff cannot meet its s_F <= 1e-12 support clause and is reported as inconclusive for that reason. The confirmatory verdicts (k = 32, 64) are unaffected.",
+ "status_fix_r1": "pending: no authors' decision found; nothing was run"
+}

@@ -1,0 +1,201 @@
+{
+ "fallback_vs_submitted": {
+  "n_images": [
+   7,
+   7
+  ],
+  "panels": [
+   {
+    "panel": 1,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": true,
+    "max_abs_8bit": 0,
+    "frac_pixels_diff_gt_0": 0.0,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   },
+   {
+    "panel": 2,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": true,
+    "max_abs_8bit": 0,
+    "frac_pixels_diff_gt_0": 0.0,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   },
+   {
+    "panel": 3,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": true,
+    "max_abs_8bit": 0,
+    "frac_pixels_diff_gt_0": 0.0,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   },
+   {
+    "panel": 4,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": true,
+    "max_abs_8bit": 0,
+    "frac_pixels_diff_gt_0": 0.0,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   },
+   {
+    "panel": 5,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": true,
+    "max_abs_8bit": 0,
+    "frac_pixels_diff_gt_0": 0.0,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   },
+   {
+    "panel": 6,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": true,
+    "max_abs_8bit": 0,
+    "frac_pixels_diff_gt_0": 0.0,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   },
+   {
+    "panel": 7,
+    "shape": [
+     746,
+     844,
+     4
+    ],
+    "identical": true,
+    "max_abs_8bit": 0,
+    "frac_pixels_diff_gt_0": 0.0,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   }
+  ]
+ },
+ "revised_vs_fallback": {
+  "n_images": [
+   7,
+   7
+  ],
+  "panels": [
+   {
+    "panel": 1,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": false,
+    "max_abs_8bit": 1,
+    "frac_pixels_diff_gt_0": 3.4422104498624836e-06,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   },
+   {
+    "panel": 2,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": true,
+    "max_abs_8bit": 0,
+    "frac_pixels_diff_gt_0": 0.0,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   },
+   {
+    "panel": 3,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": true,
+    "max_abs_8bit": 0,
+    "frac_pixels_diff_gt_0": 0.0,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   },
+   {
+    "panel": 4,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": true,
+    "max_abs_8bit": 0,
+    "frac_pixels_diff_gt_0": 0.0,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   },
+   {
+    "panel": 5,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": false,
+    "max_abs_8bit": 42,
+    "frac_pixels_diff_gt_0": 9.293968214628706e-05,
+    "frac_pixels_diff_gt_16": 6.884420899724967e-06,
+    "n_pixels_diff_gt_16": 2
+   },
+   {
+    "panel": 6,
+    "shape": [
+     507,
+     573,
+     4
+    ],
+    "identical": true,
+    "max_abs_8bit": 0,
+    "frac_pixels_diff_gt_0": 0.0,
+    "frac_pixels_diff_gt_16": 0.0,
+    "n_pixels_diff_gt_16": 0
+   },
+   {
+    "panel": 7,
+    "shape": [
+     746,
+     844,
+     4
+    ],
+    "identical": false,
+    "max_abs_8bit": 147,
+    "frac_pixels_diff_gt_0": 0.0008227132383771901,
+    "frac_pixels_diff_gt_16": 9.529496969619963e-06,
+    "n_pixels_diff_gt_16": 6
+   }
+  ]
+ },
+ "note": "8-bit RGBA per embedded image; panel numbers follow the embedding order, which is the drawing order 1-7 (k = 160 row, k = 320 row, panel c)"
+}

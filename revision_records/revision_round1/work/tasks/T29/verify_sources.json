@@ -1,0 +1,72 @@
+{
+ "cells_checked": 7654,
+ "cells_record": 5050,
+ "cells_record_missing": 627,
+ "cells_derived": 840,
+ "cells_basis": 610,
+ "cells_missing": 527,
+ "table_cells": 1763,
+ "table_value_cells": 1304,
+ "table_label_cells": 459,
+ "table_unsourced_cells": 0,
+ "rendered_cells_checked": 3526,
+ "problems": [],
+ "selftest": [
+  {
+   "fault": "altered record value",
+   "caught": true
+  },
+  {
+   "fault": "wrong pointer",
+   "caught": true
+  },
+  {
+   "fault": "wrong CSV column",
+   "caught": true
+  },
+  {
+   "fault": "planned solve count reported as observed",
+   "caught": true
+  },
+  {
+   "fault": "altered ratio",
+   "caught": true
+  },
+  {
+   "fault": "altered derived operand",
+   "caught": true
+  },
+  {
+   "fault": "run label in a table",
+   "caught": true
+  },
+  {
+   "fault": "altered rendered number",
+   "caught": true
+  },
+  {
+   "fault": "table value with its source removed",
+   "caught": true
+  },
+  {
+   "fault": "false status assert",
+   "caught": true
+  },
+  {
+   "fault": "altered number in the final TeX only",
+   "caught": true
+  },
+  {
+   "fault": "altered number in the Markdown mirror only",
+   "caught": true
+  },
+  {
+   "fault": "unescaped norm bars in the Markdown mirror (extra cells)",
+   "caught": true
+  },
+  {
+   "fault": "bound qualifier dropped from the final TeX",
+   "caught": true
+  }
+ ]
+}

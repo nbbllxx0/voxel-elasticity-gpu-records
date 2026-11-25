@@ -1,0 +1,491 @@
+{
+ "argv": [
+  "<project>\\revision_round1\\work\\tasks\\T31\\t31_job.py",
+  "<project>\\revision_round1\\work\\tasks\\T31\\out\\runs\\c0_n384",
+  "c0",
+  "384"
+ ],
+ "phase": "c0",
+ "n": 384,
+ "arg": null,
+ "admission_in_process": {
+  "cuda_free_bytes": 24152899584,
+  "cuda_total_bytes": 25756696576,
+  "pool_cap_bytes": 22542286848,
+  "predicted_peak_bytes": 6365188621,
+  "require_budget_ok": true,
+  "require_budget_info": {
+   "cuda_free": 24152899584,
+   "total": 25756696576,
+   "others_dedicated": 6377545728,
+   "wddm_free": 19024580608,
+   "need": 6365188621,
+   "margin": 1610612736,
+   "effective_free": 19024580608,
+   "ok": true
+  }
+ },
+ "host_checks": {
+  "n": 384,
+  "h_in": 0.01875,
+  "grid": [
+   384,
+   256,
+   160
+  ],
+  "counts": {
+   "allocated_elements": 15728640,
+   "active_elements": 7232600,
+   "designable_elements": 6629528,
+   "protected_elements": 603072,
+   "exterior_elements": 8496040,
+   "nodes_allocated": 15930145,
+   "nodes_exterior_only": 8504564,
+   "nodes_active": 7425581,
+   "nodes_supported": 20624,
+   "free_dofs": 22214871
+  },
+  "connectivity": {
+   "face_connected_components": 1,
+   "supports_in_component_1": true,
+   "passed": true
+  },
+  "load_nodes": {
+   "n": 18240,
+   "symmetric_about_midplane_y": true,
+   "symmetric_x": true,
+   "symmetric_z": true,
+   "centroid": [
+    5.999999999999655,
+    2.250000000000001,
+    2.099999999999859
+   ],
+   "ref_point": [
+    6.0,
+    2.25,
+    2.1
+   ],
+   "radius_min_in": 0.36405914698026726,
+   "radius_max_in": 0.3865411524016561,
+   "any_fixed": false,
+   "all_touch_protected_eye": true
+  },
+  "resultants": {
+   "LC1_vertical": {
+    "F_target": [
+     0.0,
+     0.0,
+     8000.0
+    ],
+    "M_target": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "F_sum": [
+     -2.7468189100159738e-21,
+     7.000796177562423e-25,
+     7999.999999997897
+    ],
+    "M_sum": [
+     -7.400968726756219e-12,
+     -2.7856014161997678e-09,
+     5.234643692477486e-27
+    ],
+    "F_max_abs_err": 2.10275175049901e-09,
+    "M_max_abs_err": 2.7856014161997678e-09,
+    "F_tol": 8.000000000000001e-07,
+    "M_tol": 8.000000000000001e-07,
+    "passed": true
+   },
+   "LC2_horizontal": {
+    "F_target": [
+     8500.0,
+     0.0,
+     0.0
+    ],
+    "M_target": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "F_sum": [
+     8499.999999999829,
+     1.839507631444477e-24,
+     -3.011347334441148e-21
+    ],
+    "M_sum": [
+     -6.563322731438818e-27,
+     1.1989632871337885e-09,
+     7.54300690948795e-12
+    ],
+    "F_max_abs_err": 1.709850039333105e-10,
+    "M_max_abs_err": 1.1989632871337885e-09,
+    "F_tol": 8.5e-07,
+    "M_tol": 8.5e-07,
+    "passed": true
+   },
+   "LC3_42deg": {
+    "F_target": [
+     6356.740760409153,
+     0.0,
+     7059.875842035245
+    ],
+    "M_target": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "F_sum": [
+     6356.740760409438,
+     1.9469252308606602e-24,
+     7059.875842034994
+    ],
+    "M_sum": [
+     -7.970513138388924e-12,
+     -1.4896592570590172e-09,
+     6.6063082456750475e-12
+    ],
+    "F_max_abs_err": 2.8467184165492654e-10,
+    "M_max_abs_err": 1.4896592570590172e-09,
+    "F_tol": 9.5e-07,
+    "M_tol": 9.5e-07,
+    "passed": true
+   },
+   "LC4_torsion": {
+    "F_target": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "M_target": [
+     5000.0,
+     0.0,
+     0.0
+    ],
+    "F_sum": [
+     -3.524951297789368e-26,
+     -4.926385653580834e-10,
+     -3.1299407510232413e-12
+    ],
+    "M_sum": [
+     5000.000000000852,
+     7.688294445529209e-15,
+     -6.086277315464628e-15
+    ],
+    "F_max_abs_err": 4.926385653580834e-10,
+    "M_max_abs_err": 8.521965355612338e-10,
+    "F_tol": 5e-07,
+    "M_tol": 5e-07,
+    "passed": true
+   }
+  },
+  "supports": {
+   "all_on_boss": true,
+   "n_nodes": 20624,
+   "per_bolt": [
+    5156,
+    5156,
+    5156,
+    5156
+   ]
+  },
+  "protected_touch_exterior_only": false,
+  "padding": {
+   "nominal_grid": [
+    384,
+    256,
+    160
+   ],
+   "allocated_grid": [
+    384,
+    256,
+    160
+   ],
+   "padded_elements": 0,
+   "padded_non_exterior_elements": 0,
+   "passed": true
+  },
+  "passed": true
+ },
+ "tight": {
+  "tol": 1e-08,
+  "penalty": 3.0,
+  "E32_sha256": "368b1f311a4f523f0928ed78d8fcf9c4844b6cd44bc4049d29b6fcd15d2d979a",
+  "fixed_set": {
+   "device_fixed_equals_supports_or_exterior_only": true,
+   "n_fixed_nodes_device": 8525188,
+   "n_fixed_nodes_host": 8525188
+  },
+  "mg_setup_s": 0.8072721000062302,
+  "mg_levels": 6,
+  "solve_and_setup_s": 18.23196000000462,
+  "total_s_incl_construct": 21.019891100004315,
+  "cases": [
+   {
+    "load": "LC1_vertical",
+    "solver": "mg64",
+    "stats": {
+     "iters": 108,
+     "matvecs": 112,
+     "precond": 108,
+     "true_checks": 4,
+     "rel_initial": 0.9999999999999999,
+     "warm_start_reset": false,
+     "rel_true": 6.547888819312979e-09,
+     "rel_recursive_at_stop": 6.547882385808398e-09,
+     "converged": true,
+     "time_s": 4.357715699996334,
+     "wall_s": 4.357723299995996
+    },
+    "c": 2942051.0993674565,
+    "equilibrium_rel_residual_node_hoist": 6.547888819312979e-09,
+    "equilibrium_passed": true,
+    "reactions": {
+     "applied_F": [
+      -2.7468189100159738e-21,
+      7.000796177562423e-25,
+      7999.999999997897
+     ],
+     "applied_M": [
+      -7.400968726756219e-12,
+      -2.7856014161997678e-09,
+      5.234643692477486e-27
+     ],
+     "reaction_F": [
+      1.8036237605656424e-06,
+      -8.595785532250488e-07,
+      -8000.000002192543
+     ],
+     "reaction_M": [
+      -3.056790443878299e-06,
+      -1.6484553786000333e-05,
+      1.6873652697313446e-08
+     ],
+     "net_F": [
+      -1.8036237605656452e-06,
+      8.595785532250488e-07,
+      16000.000002190442
+     ],
+     "net_M": [
+      3.056783042909572e-06,
+      1.6481768184584134e-05,
+      -1.6873652697313446e-08
+     ],
+     "note": "reaction_F/M are the sums of (K u) at the clamped DOFs, i.e. the force the supports must supply; net = applied - (K u)_supports"
+    }
+   },
+   {
+    "load": "LC2_horizontal",
+    "solver": "mg64",
+    "stats": {
+     "iters": 107,
+     "matvecs": 111,
+     "precond": 107,
+     "true_checks": 4,
+     "rel_initial": 0.9999999999999999,
+     "warm_start_reset": false,
+     "rel_true": 9.416747689939483e-09,
+     "rel_recursive_at_stop": 9.416745723460749e-09,
+     "converged": true,
+     "time_s": 4.2966826999909244,
+     "wall_s": 4.296690599992871
+    },
+    "c": 1939041.8571512343,
+    "equilibrium_rel_residual_node_hoist": 9.416747689939483e-09,
+    "equilibrium_passed": true,
+    "reactions": {
+     "applied_F": [
+      8499.999999999829,
+      1.839507631444477e-24,
+      -3.011347334441148e-21
+     ],
+     "applied_M": [
+      -6.563322731438818e-27,
+      1.1989632871337885e-09,
+      7.54300690948795e-12
+     ],
+     "reaction_F": [
+      -8500.000002703562,
+      2.744305003243852e-06,
+      3.7457404644669623e-06
+     ],
+     "reaction_M": [
+      1.4159989554229924e-06,
+      1.9976302077395758e-05,
+      -1.4897092494692288e-05
+     ],
+     "net_F": [
+      17000.00000270339,
+      -2.744305003243852e-06,
+      -3.7457404644669653e-06
+     ],
+     "net_M": [
+      -1.4159989554229924e-06,
+      -1.9975103114108626e-05,
+      1.4897100037699197e-05
+     ],
+     "note": "reaction_F/M are the sums of (K u) at the clamped DOFs, i.e. the force the supports must supply; net = applied - (K u)_supports"
+    }
+   },
+   {
+    "load": "LC3_42deg",
+    "solver": "mg64",
+    "stats": {
+     "iters": 98,
+     "matvecs": 101,
+     "precond": 98,
+     "true_checks": 3,
+     "rel_initial": 1.0,
+     "warm_start_reset": false,
+     "rel_true": 9.795461866167156e-09,
+     "rel_recursive_at_stop": 9.7954613045116e-09,
+     "converged": true,
+     "time_s": 3.9256476999726146,
+     "wall_s": 3.9256568999844603
+    },
+    "c": 959489.8649598116,
+    "equilibrium_rel_residual_node_hoist": 9.795461866167156e-09,
+    "equilibrium_passed": true,
+    "reactions": {
+     "applied_F": [
+      6356.740760409438,
+      1.9469252308606602e-24,
+      7059.875842034994
+     ],
+     "applied_M": [
+      -7.970513138388924e-12,
+      -1.4896592570590172e-09,
+      6.6063082456750475e-12
+     ],
+     "reaction_F": [
+      -6356.740757767121,
+      -4.1144085516364726e-06,
+      -7059.87582393203
+     ],
+     "reaction_M": [
+      -1.6650888833069644e-05,
+      5.417292222809067e-05,
+      6.287197374277298e-06
+     ],
+     "net_F": [
+      12713.481518176559,
+      4.1144085516364726e-06,
+      14119.751665967024
+     ],
+     "net_M": [
+      1.6650880862556505e-05,
+      -5.417441188734773e-05,
+      -6.287190767969052e-06
+     ],
+     "note": "reaction_F/M are the sums of (K u) at the clamped DOFs, i.e. the force the supports must supply; net = applied - (K u)_supports"
+    }
+   },
+   {
+    "load": "LC4_torsion",
+    "solver": "mg64",
+    "stats": {
+     "iters": 104,
+     "matvecs": 108,
+     "precond": 104,
+     "true_checks": 4,
+     "rel_initial": 1.0000000000000002,
+     "warm_start_reset": true,
+     "rel_true": 9.65138142559092e-09,
+     "rel_recursive_at_stop": 9.651380978020071e-09,
+     "converged": true,
+     "time_s": 4.195585999987088,
+     "wall_s": 4.195594299992081
+    },
+    "c": 237416.32949063057,
+    "equilibrium_rel_residual_node_hoist": 9.65138142559092e-09,
+    "equilibrium_passed": true,
+    "reactions": {
+     "applied_F": [
+      -3.524951297789368e-26,
+      -4.926385653580834e-10,
+      -3.1299407510232413e-12
+     ],
+     "applied_M": [
+      5000.000000000852,
+      7.688294445529209e-15,
+      -6.086277315464628e-15
+     ],
+     "reaction_F": [
+      4.8432794916841715e-06,
+      -8.86549702405759e-06,
+      6.792767597296745e-07
+     ],
+     "reaction_M": [
+      -5000.000020841098,
+      -6.509419556266494e-06,
+      5.326780221714955e-05
+     ],
+     "net_F": [
+      -4.8432794916841715e-06,
+      8.865004385492231e-06,
+      -6.792798896704255e-07
+     ],
+     "net_M": [
+      10000.000020841951,
+      6.509419563954788e-06,
+      -5.326780222323583e-05
+     ],
+     "note": "reaction_F/M are the sums of (K u) at the clamped DOFs, i.e. the force the supports must supply; net = applied - (K u)_supports"
+    }
+   }
+  ],
+  "c_tight": [
+   2942051.0993674565,
+   1939041.8571512343,
+   959489.8649598116,
+   237416.32949063057
+  ],
+  "all_equilibrium_passed": true,
+  "memory": {
+   "pool_peak_reserved_bytes": 5143906304,
+   "pool_peak_used_bytes": 5117417472
+  },
+  "driver_mem": {
+   "peak_pool_used_bytes": 3933155840,
+   "peak_pool_reserved_bytes": 3949086720,
+   "peak_device_used_bytes": 5579997184,
+   "baseline_device_used_bytes": 1620574208
+  }
+ },
+ "solid_field_sha256": "368b1f311a4f523f0928ed78d8fcf9c4844b6cd44bc4049d29b6fcd15d2d979a",
+ "c0_record": {
+  "n": 384,
+  "loads": [
+   "LC1_vertical",
+   "LC2_horizontal",
+   "LC3_42deg",
+   "LC4_torsion"
+  ],
+  "c0": [
+   2942051.0993674565,
+   1939041.8571512343,
+   959489.8649598116,
+   237416.32949063057
+  ],
+  "rel_residual_node_hoist": [
+   6.547888819312979e-09,
+   9.416747689939483e-09,
+   9.795461866167156e-09,
+   9.65138142559092e-09
+  ],
+  "solver": [
+   "mg64",
+   "mg64",
+   "mg64",
+   "mg64"
+  ],
+  "tol": 1e-08,
+  "passed": true,
+  "source": "out\\runs\\c0_n384\\gpu_meta.json"
+ },
+ "completed": true,
+ "device_used_at_start_bytes": 1603796992,
+ "device_used_at_end_bytes": 2505572352,
+ "wall_s": 23.015495538711548
+}

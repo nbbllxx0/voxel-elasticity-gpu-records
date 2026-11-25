@@ -1,0 +1,30 @@
+{
+ "argv": [
+  "<project>\\revision_round1\\work\\tasks\\T25\\t25_job.py",
+  "<project>\\revision_round1\\work\\tasks\\T25\\out\\runs\\k320_cantilever_repaired"
+ ],
+ "admission_in_process": {
+  "cuda_free_bytes": 24152899584,
+  "cuda_total_bytes": 25756696576,
+  "pool_cap_bytes": 22542286848,
+  "predicted_peak_bytes": 16656205312,
+  "require_budget_ok": true,
+  "require_budget_info": {
+   "cuda_free": 24152899584,
+   "total": 25756696576,
+   "others_dedicated": 6486069248,
+   "wddm_free": 18916057088,
+   "need": 16656205312,
+   "margin": 1610612736,
+   "effective_free": 18916057088,
+   "ok": true
+  }
+ },
+ "completed": true,
+ "memory_job": {
+  "pool_total_bytes_at_end": 16301635072,
+  "device_used_at_start_bytes": 1603796992,
+  "device_used_at_end_bytes": 17967874048
+ },
+ "wall_s": 209.37467280001147
+}

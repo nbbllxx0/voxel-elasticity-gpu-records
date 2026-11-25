@@ -1,0 +1,413 @@
+{
+ "task": "X1_1",
+ "passed": true,
+ "n_checks": 29,
+ "n_failed": 0,
+ "panels": {
+  "R_adaptive_n192_rep": {
+   "run": "R_adaptive_n192_rep",
+   "grid": [
+    192,
+    128,
+    80
+   ],
+   "h_in": 0.0375,
+   "termination": "bounded_oscillation",
+   "iterations": 144,
+   "stopping_test": {
+    "iteration": 144,
+    "max_abs_drho_phys": 0.010556071996688843,
+    "n_moving": 1,
+    "allowance": 1,
+    "J_spread_last10": 1.5132115549655743e-06,
+    "J_spread_limit": 0.0001
+   },
+   "retained_update": {
+    "max_abs_drho_phys": 0.019564032554626465,
+    "n_moving": 1,
+    "n_moving_designable": 1,
+    "allowance": 1,
+    "meets_count_allowance": true
+   },
+   "volume_designable": 0.49999999996642697,
+   "counts": {
+    "grid": [
+     192,
+     128,
+     80
+    ],
+    "allocated": 1966080,
+    "active": 903548,
+    "designable": 827324,
+    "protected": 76224
+   },
+   "active_at_or_above_0.5": 489698,
+   "J_tight": 1.2034938812900742,
+   "c_tight_over_c0": [
+    1.1699565400555412,
+    1.2376269391167278,
+    1.1396158687348545,
+    1.2667761772531736
+   ],
+   "tight_rel_residuals": [
+    8.202653167791762e-09,
+    8.526602495617857e-09,
+    9.589405519035293e-09,
+    9.852996939953308e-09
+   ],
+   "optimization_s": 222.85211789992172,
+   "process_dedicated_peak_bytes": 1187184640.0,
+   "sources": {
+    "fields": "tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz",
+    "snapshots": "tasks/X0_2/out/runs/R_adaptive_n192_rep/snapshots.npz",
+    "history": "tasks/X0_2/out/runs/R_adaptive_n192_rep/history.json",
+    "meta": "tasks/X0_2/out/runs/R_adaptive_n192_rep/gpu_meta.json",
+    "audit": "tasks/X0_2/out/runs/A_R_adaptive_n192_rep/gpu_meta.json",
+    "figdata": "tasks/X0_2/out/figdata_adaptive_n192.npz",
+    "summary": "tasks/X0_2/out/summary.json"
+   }
+  },
+  "R_adaptive_n384": {
+   "run": "R_adaptive_n384",
+   "grid": [
+    384,
+    256,
+    160
+   ],
+   "h_in": 0.01875,
+   "termination": "guard",
+   "iterations": 300,
+   "stopping_test": {
+    "iteration": 300,
+    "max_abs_drho_phys": 0.04193598031997681,
+    "n_moving": 128,
+    "allowance": 7,
+    "J_spread_last10": 1.889445981717329e-06,
+    "J_spread_limit": 0.0001
+   },
+   "retained_update": {
+    "max_abs_drho_phys": 0.05154922604560852,
+    "n_moving": 135,
+    "n_moving_designable": 135,
+    "allowance": 7,
+    "meets_count_allowance": false
+   },
+   "volume_designable": 0.4999999998033446,
+   "counts": {
+    "grid": [
+     384,
+     256,
+     160
+    ],
+    "allocated": 15728640,
+    "active": 7232600,
+    "designable": 6629528,
+    "protected": 603072
+   },
+   "active_at_or_above_0.5": 3915874,
+   "J_tight": 1.2038890559928548,
+   "c_tight_over_c0": [
+    1.1699122890633118,
+    1.2354019882781848,
+    1.140418480112327,
+    1.269823466517596
+   ],
+   "tight_rel_residuals": [
+    8.99073974812408e-09,
+    9.768676734272747e-09,
+    9.854546968468999e-09,
+    9.891849436070023e-09
+   ],
+   "optimization_s": 2359.2033608000493,
+   "process_dedicated_peak_bytes": 5029359616.0,
+   "sources": {
+    "fields": "tasks/X0_2/out/runs/R_adaptive_n384/fields.npz",
+    "snapshots": "tasks/X0_2/out/runs/R_adaptive_n384/snapshots.npz",
+    "history": "tasks/X0_2/out/runs/R_adaptive_n384/history.json",
+    "meta": "tasks/X0_2/out/runs/R_adaptive_n384/gpu_meta.json",
+    "audit": "tasks/X0_2/out/runs/A_R_adaptive_n384/gpu_meta.json",
+    "figdata": "tasks/X0_2/out/figdata_adaptive_n384.npz",
+    "summary": "tasks/X0_2/out/summary.json"
+   },
+   "tail": {
+    "it201_250": {
+     "n_moving_min": 52,
+     "n_moving_max": 167,
+     "n_moving_median": 104.0,
+     "J_rel_drop_per_iteration": 3.2627139609372335e-07
+    },
+    "it251_300": {
+     "n_moving_min": 43,
+     "n_moving_max": 211,
+     "n_moving_median": 123.5,
+     "J_rel_drop_per_iteration": 2.4977813658715304e-07
+    }
+   },
+   "median_iteration_s": 6.24022859998513
+  }
+ },
+ "checks": [
+  {
+   "check": "n192: figdata rho_phys equals fields.npz rho_phys",
+   "pass": true,
+   "value": null,
+   "source": "tasks/X0_2/out/figdata_adaptive_n192.npz vs tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz"
+  },
+  {
+   "check": "n192: figdata classes equal fields.npz classes",
+   "pass": true,
+   "value": null,
+   "source": "tasks/X0_2/out/figdata_adaptive_n192.npz vs tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz"
+  },
+  {
+   "check": "n192: figdata history J equals history.json",
+   "pass": true,
+   "value": 144,
+   "source": "tasks/X0_2/out/figdata_adaptive_n192.npz vs tasks/X0_2/out/runs/R_adaptive_n192_rep/history.json"
+  },
+  {
+   "check": "n192: protected elements fully solid in rho_phys",
+   "pass": true,
+   "value": 1.0,
+   "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz"
+  },
+  {
+   "check": "n192: exterior elements zero in rho_phys",
+   "pass": true,
+   "value": 0.0,
+   "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz"
+  },
+  {
+   "check": "n192: termination and iterations (gpu_meta = figdata json = history length)",
+   "pass": true,
+   "value": {
+    "termination": "bounded_oscillation",
+    "iterations": 144
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/gpu_meta.json#/result; tasks/X0_2/out/runs/R_adaptive_n192_rep/history.json"
+  },
+  {
+   "check": "n192: stopping rule on the last test recomputed from history agrees with the termination",
+   "pass": true,
+   "value": {
+    "iteration": 144,
+    "max_abs_drho_phys": 0.010556071996688843,
+    "n_moving": 1,
+    "allowance": 1,
+    "J_spread_last10": 1.5132115549655743e-06,
+    "J_spread_limit": 0.0001
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/history.json",
+   "note": "the J spread test applies from iteration 76; both runs are past it"
+  },
+  {
+   "check": "n192: retained update recomputed = X0_2 fix_r1",
+   "pass": true,
+   "value": {
+    "max_abs_drho_phys": 0.019564032554626465,
+    "n_moving": 1,
+    "n_moving_designable": 1,
+    "allowance": 1,
+    "meets_count_allowance": true
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz vs tasks/X0_2/out/runs/R_adaptive_n192_rep/snapshots.npz#rho_phys_it144"
+  },
+  {
+   "check": "n192: designable volume fraction (driver's definition) recomputed",
+   "pass": true,
+   "value": {
+    "recomputed": 0.49999999996642697,
+    "recorded": 0.49999999996642697
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz; tasks/X0_2/out/runs/R_adaptive_n192_rep/gpu_meta.json#/result/volume_phys"
+  },
+  {
+   "check": "n192: element counts = X0_2 summary D2",
+   "pass": true,
+   "value": {
+    "grid": [
+     192,
+     128,
+     80
+    ],
+    "allocated": 1966080,
+    "active": 903548,
+    "designable": 827324,
+    "protected": 76224
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz"
+  },
+  {
+   "check": "n192: solid fraction of active (rho_phys >= 0.5) = X0_2 summary D2",
+   "pass": true,
+   "value": {
+    "active_at_or_above_0.5": 489698,
+    "fraction": 0.5419723135904235
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz"
+  },
+  {
+   "check": "n192: four tight FP64 checks <= 1e-8 (audit valid, moduli hash and fixed set match)",
+   "pass": true,
+   "value": [
+    8.202653167791762e-09,
+    8.526602495617857e-09,
+    9.589405519035293e-09,
+    9.852996939953308e-09
+   ],
+   "source": "tasks/X0_2/out/runs/A_R_adaptive_n192_rep/gpu_meta.json",
+   "note": "values as gathered by X0_2's analysis from the audit job's gpu_meta (summary.json D3_tight)"
+  },
+  {
+   "check": "n192: every tight residual is present in the audit record",
+   "pass": true,
+   "value": null,
+   "source": "tasks/X0_2/out/runs/A_R_adaptive_n192_rep/gpu_meta.json"
+  },
+  {
+   "check": "n384: figdata rho_phys equals fields.npz rho_phys",
+   "pass": true,
+   "value": null,
+   "source": "tasks/X0_2/out/figdata_adaptive_n384.npz vs tasks/X0_2/out/runs/R_adaptive_n384/fields.npz"
+  },
+  {
+   "check": "n384: figdata classes equal fields.npz classes",
+   "pass": true,
+   "value": null,
+   "source": "tasks/X0_2/out/figdata_adaptive_n384.npz vs tasks/X0_2/out/runs/R_adaptive_n384/fields.npz"
+  },
+  {
+   "check": "n384: figdata history J equals history.json",
+   "pass": true,
+   "value": 300,
+   "source": "tasks/X0_2/out/figdata_adaptive_n384.npz vs tasks/X0_2/out/runs/R_adaptive_n384/history.json"
+  },
+  {
+   "check": "n384: protected elements fully solid in rho_phys",
+   "pass": true,
+   "value": 1.0,
+   "source": "tasks/X0_2/out/runs/R_adaptive_n384/fields.npz"
+  },
+  {
+   "check": "n384: exterior elements zero in rho_phys",
+   "pass": true,
+   "value": 0.0,
+   "source": "tasks/X0_2/out/runs/R_adaptive_n384/fields.npz"
+  },
+  {
+   "check": "n384: termination and iterations (gpu_meta = figdata json = history length)",
+   "pass": true,
+   "value": {
+    "termination": "guard",
+    "iterations": 300
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n384/gpu_meta.json#/result; tasks/X0_2/out/runs/R_adaptive_n384/history.json"
+  },
+  {
+   "check": "n384: stopping rule on the last test recomputed from history agrees with the termination",
+   "pass": true,
+   "value": {
+    "iteration": 300,
+    "max_abs_drho_phys": 0.04193598031997681,
+    "n_moving": 128,
+    "allowance": 7,
+    "J_spread_last10": 1.889445981717329e-06,
+    "J_spread_limit": 0.0001
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n384/history.json",
+   "note": "the J spread test applies from iteration 76; both runs are past it"
+  },
+  {
+   "check": "n384: retained update recomputed = X0_2 fix_r1",
+   "pass": true,
+   "value": {
+    "max_abs_drho_phys": 0.05154922604560852,
+    "n_moving": 135,
+    "n_moving_designable": 135,
+    "allowance": 7,
+    "meets_count_allowance": false
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n384/fields.npz vs tasks/X0_2/out/runs/R_adaptive_n384/snapshots.npz#rho_phys_it300"
+  },
+  {
+   "check": "n384: designable volume fraction (driver's definition) recomputed",
+   "pass": true,
+   "value": {
+    "recomputed": 0.4999999998033446,
+    "recorded": 0.4999999998033446
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n384/fields.npz; tasks/X0_2/out/runs/R_adaptive_n384/gpu_meta.json#/result/volume_phys"
+  },
+  {
+   "check": "n384: element counts = X0_2 summary D2",
+   "pass": true,
+   "value": {
+    "grid": [
+     384,
+     256,
+     160
+    ],
+    "allocated": 15728640,
+    "active": 7232600,
+    "designable": 6629528,
+    "protected": 603072
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n384/fields.npz"
+  },
+  {
+   "check": "n384: solid fraction of active (rho_phys >= 0.5) = X0_2 summary D2",
+   "pass": true,
+   "value": {
+    "active_at_or_above_0.5": 3915874,
+    "fraction": 0.5414199596272433
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n384/fields.npz"
+  },
+  {
+   "check": "n384: four tight FP64 checks <= 1e-8 (audit valid, moduli hash and fixed set match)",
+   "pass": true,
+   "value": [
+    8.99073974812408e-09,
+    9.768676734272747e-09,
+    9.854546968468999e-09,
+    9.891849436070023e-09
+   ],
+   "source": "tasks/X0_2/out/runs/A_R_adaptive_n384/gpu_meta.json",
+   "note": "values as gathered by X0_2's analysis from the audit job's gpu_meta (summary.json D3_tight)"
+  },
+  {
+   "check": "n384: every tight residual is present in the audit record",
+   "pass": true,
+   "value": null,
+   "source": "tasks/X0_2/out/runs/A_R_adaptive_n384/gpu_meta.json"
+  },
+  {
+   "check": "n192 replicate: stopped by the rule and its retained update meets the allowance",
+   "pass": true,
+   "value": {
+    "termination": "bounded_oscillation",
+    "retained_n_moving": 1
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/gpu_meta.json"
+  },
+  {
+   "check": "n384 damped: ended at the 300-iteration guard, stopping rule not met",
+   "pass": true,
+   "value": {
+    "termination": "guard",
+    "n_moving": 128,
+    "allowance": 7
+   },
+   "source": "tasks/X0_2/out/runs/R_adaptive_n384/gpu_meta.json"
+  },
+  {
+   "check": "n192: mean |drho_phys| vs T31 R_n192 = X0_2 summary D5",
+   "pass": true,
+   "value": {
+    "mean_abs_diff": 0.0004195879409019846,
+    "n_diff_gt_0.5": 67
+   },
+   "source": "tasks/X0_2/out/summary.json#/amendment_1/R_adaptive_n192_rep/D5_vs_T31_R_n192"
+  }
+ ]
+}

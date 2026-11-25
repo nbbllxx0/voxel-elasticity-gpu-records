@@ -1,0 +1,140 @@
+{
+ "note": "audit records of the dump run vs the first audit run of the k=160 bridge (FP64 PCG); audit_s excluded",
+ "iterations": [
+  79,
+  79
+ ],
+ "final_compliance": [
+  0.08798177029441806,
+  0.08798177029441806
+ ],
+ "per_audit": [
+  {
+   "it": 1,
+   "differing_fields": {}
+  },
+  {
+   "it": 2,
+   "differing_fields": {}
+  },
+  {
+   "it": 5,
+   "differing_fields": {}
+  },
+  {
+   "it": 10,
+   "differing_fields": {}
+  },
+  {
+   "it": 15,
+   "differing_fields": {}
+  },
+  {
+   "it": 16,
+   "differing_fields": {}
+  },
+  {
+   "it": 17,
+   "differing_fields": {}
+  },
+  {
+   "it": 20,
+   "differing_fields": {}
+  },
+  {
+   "it": 30,
+   "differing_fields": {}
+  },
+  {
+   "it": 40,
+   "differing_fields": {}
+  },
+  {
+   "it": 41,
+   "differing_fields": {}
+  },
+  {
+   "it": 42,
+   "differing_fields": {}
+  },
+  {
+   "it": 50,
+   "differing_fields": {}
+  },
+  {
+   "it": 60,
+   "differing_fields": {
+    "ref_rel_true": [
+     9.79727678878667e-11,
+     9.87856336606079e-11
+    ],
+    "ref_iters": [
+     2340,
+     1956
+    ],
+    "compliance_rel_err": [
+     6.8841451349129475e-09,
+     6.884144346360952e-09
+    ]
+   }
+  },
+  {
+   "it": 65,
+   "differing_fields": {
+    "ref_rel_true": [
+     9.457385044538749e-11,
+     8.790291832563304e-11
+    ],
+    "ref_iters": [
+     3201,
+     3189
+    ],
+    "compliance_rel_err": [
+     4.664442041074605e-09,
+     4.6643761180536035e-09
+    ],
+    "sens_rel_err_2": [
+     0.0003869568754453212,
+     0.0003869561478495598
+    ],
+    "sens_rel_err_max": [
+     0.0006062872125767171,
+     0.0006062850588932633
+    ],
+    "sens_rel_err_gray_2": [
+     0.00041955430060625076,
+     0.0004195534565951675
+    ]
+   }
+  },
+  {
+   "it": 66,
+   "differing_fields": {}
+  },
+  {
+   "it": 67,
+   "differing_fields": {
+    "ref_rel_true": [
+     9.144579890972207e-11,
+     9.219184124478455e-11
+    ],
+    "ref_iters": [
+     1388,
+     1380
+    ],
+    "compliance_rel_err": [
+     4.0988214389902775e-09,
+     4.098982306428623e-09
+    ]
+   }
+  },
+  {
+   "it": 70,
+   "differing_fields": {}
+  },
+  {
+   "it": 76,
+   "differing_fields": {}
+  }
+ ]
+}

@@ -1,0 +1,346 @@
+{
+ "task": "T27",
+ "name": "H2_apply_k80_hou_cg32",
+ "kind": "H2",
+ "args": {
+  "step": "H2",
+  "k": 80,
+  "path": "hou_cg32",
+  "tag": ""
+ },
+ "status": "ok",
+ "device_baseline_mib": 3437.0,
+ "others_at_launch": {
+  "10452": {
+   "dedicated": 17666048,
+   "shared": 212992
+  },
+  "11260": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "11320": {
+   "dedicated": 14184448,
+   "shared": 368640
+  },
+  "12224": {
+   "dedicated": 426323968,
+   "shared": 1830912
+  },
+  "12436": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "12680": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "14776": {
+   "dedicated": 108478464,
+   "shared": 4816896
+  },
+  "15716": {
+   "dedicated": 20516864,
+   "shared": 319488
+  },
+  "15740": {
+   "dedicated": 25104384,
+   "shared": 319488
+  },
+  "15920": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "17624": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "17952": {
+   "dedicated": 70443008,
+   "shared": 212992
+  },
+  "18196": {
+   "dedicated": 42086400,
+   "shared": 319488
+  },
+  "18972": {
+   "dedicated": 20123648,
+   "shared": 0
+  },
+  "1952": {
+   "dedicated": 110555136,
+   "shared": 49152
+  },
+  "19812": {
+   "dedicated": 16449536,
+   "shared": 212992
+  },
+  "20852": {
+   "dedicated": 157810688,
+   "shared": 212992
+  },
+  "21048": {
+   "dedicated": 38948864,
+   "shared": 262144
+  },
+  "21208": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "21444": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "22832": {
+   "dedicated": 20312064,
+   "shared": 212992
+  },
+  "23188": {
+   "dedicated": 155365376,
+   "shared": 319488
+  },
+  "24000": {
+   "dedicated": 10952704,
+   "shared": 319488
+  },
+  "2412": {
+   "dedicated": 4504580096,
+   "shared": 4505600
+  },
+  "26300": {
+   "dedicated": 488534016,
+   "shared": 14221312
+  },
+  "27604": {
+   "dedicated": 10952704,
+   "shared": 319488
+  },
+  "29616": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "33408": {
+   "dedicated": 19472384,
+   "shared": 212992
+  },
+  "3440": {
+   "dedicated": 23465984,
+   "shared": 24760320
+  },
+  "35872": {
+   "dedicated": 334008320,
+   "shared": 16760832
+  },
+  "36592": {
+   "dedicated": 369803264,
+   "shared": 368640
+  },
+  "37792": {
+   "dedicated": 18808832,
+   "shared": 262144
+  },
+  "38068": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "3824": {
+   "dedicated": 64327680,
+   "shared": 319488
+  },
+  "40444": {
+   "dedicated": 124051456,
+   "shared": 368640
+  },
+  "4056": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "41960": {
+   "dedicated": 190930944,
+   "shared": 9355264
+  },
+  "42776": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "43316": {
+   "dedicated": 18092032,
+   "shared": 0
+  },
+  "4": {
+   "dedicated": 4235264,
+   "shared": 270336
+  },
+  "5060": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "55132": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "57712": {
+   "dedicated": 15065088,
+   "shared": 2265088
+  },
+  "7476": {
+   "dedicated": 17235968,
+   "shared": 0
+  }
+ },
+ "others_dedicated_at_launch_bytes": 7546707968,
+ "environment": {
+  "time": "2026-11-23T07:24:24",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "dc189559fe22bad0",
+ "started": "2026-11-23T07:24:24",
+ "protective_pool_cap": {
+  "E_free_bytes": 17855418368,
+  "pool_cap_bytes": 16244805632,
+  "E_free_info": {
+   "cuda_free": 24152899584,
+   "total": 25756696576,
+   "others_dedicated": 7546707968,
+   "wddm_free": 17855418368
+  }
+ },
+ "k": 80,
+ "n_elem": 1024000,
+ "ndof": 3168963,
+ "path": "hou_cg32",
+ "hou_setup_parts": {
+  "autowrite_s": 2.0236944999778643,
+  "import_s": 0.03293849999317899,
+  "autowrite_import_s": 2.0579354999936186,
+  "workdir": "<project>\\revision_round1\\work\\tasks\\T27\\_work\\hou_k80"
+ },
+ "setup_a_s": 2.253079899994191,
+ "setup_b_s": 0.10988169995835051,
+ "G2_system": {
+  "fixed_sets_identical": true,
+  "n_fixed": 12,
+  "load_identical": true,
+  "n_load": 8,
+  "load_sum": 8.0,
+  "their_initial_iterate_zero": true,
+  "their_tol": 0.001,
+  "their_itermax": 10000
+ },
+ "outputs": {
+  "R": "scratch/h2_k80_hou_cg32_R.npy",
+  "S": "scratch/h2_k80_hou_cg32_S.npy"
+ },
+ "apply_s": 0.008076224327087402,
+ "apply_iqr": [
+  0.00803110408782959,
+  0.008243711948394777
+ ],
+ "apply_hook_on_s": 0.008037376403808593,
+ "apply_hook_on_iqr": [
+  0.007702912092208863,
+  0.008252416133880615
+ ],
+ "hook_overhead_rel": -0.004810159018059257,
+ "end": "2026-11-23T07:24:36",
+ "process_wall_s": 20.87174916267395,
+ "pool": {
+  "pool_used_peak_bytes": 84249088,
+  "pool_reserved_peak_bytes": 448273920,
+  "hook_calls": 1470,
+  "largest_request_bytes": 12676096
+ },
+ "device_wide": {
+  "n_samples": 76,
+  "device_peak_bytes": 4460642304,
+  "baseline_bytes": 3603955712
+ },
+ "process_dedicated": {
+  "n_samples": 17,
+  "n_own": 17,
+  "dedicated_peak_bytes": 849539072,
+  "shared_start_bytes": 77594624,
+  "shared_max_bytes": 96468992,
+  "shared_growth_bytes": 18874368,
+  "spilled": false,
+  "others_dedicated_max_bytes": 7554310144,
+  "others_dedicated_first_bytes": 7546245120
+ },
+ "spillwatch": {
+  "max_shared_growth_bytes": 18874368,
+  "spilled": false
+ },
+ "spillwatch_samples": [
+  {
+   "tag": "start",
+   "t": 1795447464.523556,
+   "dedicated": 354570240,
+   "shared": 77594624,
+   "others_dedicated": 7546249216
+  },
+  {
+   "tag": "end",
+   "t": 1795447476.2255995,
+   "dedicated": 849539072,
+   "shared": 96468992,
+   "others_dedicated": 7554310144
+  }
+ ],
+ "spilled": false,
+ "activity": {
+  "n_samples": 1,
+  "mean_foreign_pct": 0.1446358795853614,
+  "max_foreign_pct": 0.1446358795853614
+ },
+ "activity_timed": [
+  {
+   "label": "apply",
+   "duration_s": 0.27407360076904297,
+   "mean_foreign_pct": 0.1446358795853614,
+   "n_samples": 1
+  }
+ ],
+ "mean_foreign_timed_pct": 0.1446358795853614,
+ "timing_flag": "ok",
+ "valid": true,
+ "code_files": {
+  "src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "src/voxfem/core.py": "318596a50144b516",
+  "src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "src/voxfem/memory.py": "824be1910087b604",
+  "src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "src/voxfem/operators.py": "e89a0ec274e670ad",
+  "src/voxfem/sass.py": "184cd5714214ef1c",
+  "src/voxfem/simp.py": "b68537c154bd76bc",
+  "src/voxfem/sparse.py": "7830a4672baee938",
+  "src/experiments/_boot.py": "33c086109bcda1dd",
+  "src/experiments/E10_external_hou.py": "f264358c343f6fc8",
+  "src/experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "src/experiments/run_simp.py": "d913d5a57d599399",
+  "drivers/c_check.py": "df8bef0e838c9456",
+  "drivers/c_simp.py": "a823846781153560",
+  "drivers/collect.py": "365e489102f8b9d9",
+  "drivers/hou_instr.py": "f05a9afcf453102b",
+  "drivers/hrun.py": "345ed41a153ea9ab",
+  "drivers/hsys.py": "d7476b336bac9cec",
+  "drivers/predictions.py": "3e1564e093241d7f",
+  "drivers/queue_t27.py": "16d5d2c0052c60de",
+  "drivers/t27boot.py": "7ff37f9b05b0d74c",
+  "drivers/t27lib.py": "49d2266355db07d9",
+  "drivers/v_verify.py": "9c79013b413f25c8"
+ }
+}

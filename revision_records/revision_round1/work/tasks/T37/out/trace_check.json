@@ -1,0 +1,309 @@
+{
+ "labels": [
+  {
+   "id": "LC1",
+   "problems": []
+  },
+  {
+   "id": "LC2",
+   "problems": []
+  },
+  {
+   "id": "LC3",
+   "problems": []
+  },
+  {
+   "id": "LC4",
+   "problems": []
+  },
+  {
+   "id": "C",
+   "problems": []
+  },
+  {
+   "id": "box",
+   "problems": []
+  },
+  {
+   "id": "n384_grid",
+   "problems": []
+  },
+  {
+   "id": "n384_updates",
+   "problems": []
+  },
+  {
+   "id": "n384_counts",
+   "problems": []
+  },
+  {
+   "id": "n384_Jtight",
+   "problems": []
+  },
+  {
+   "id": "n384_level",
+   "problems": []
+  },
+  {
+   "id": "n192_grid",
+   "problems": []
+  },
+  {
+   "id": "n192_updates",
+   "problems": []
+  },
+  {
+   "id": "n192_counts",
+   "problems": []
+  },
+  {
+   "id": "n192_Jtight",
+   "problems": []
+  },
+  {
+   "id": "n192_level",
+   "problems": []
+  },
+  {
+   "id": "h192_bound",
+   "problems": []
+  },
+  {
+   "id": "h192_first_spread",
+   "problems": []
+  },
+  {
+   "id": "h192_spread300",
+   "problems": []
+  },
+  {
+   "id": "h192_min_drho",
+   "problems": []
+  },
+  {
+   "id": "h192_min_moving",
+   "problems": []
+  },
+  {
+   "id": "h192_legend",
+   "problems": []
+  },
+  {
+   "id": "h384_bound",
+   "problems": []
+  },
+  {
+   "id": "h384_first_spread",
+   "problems": []
+  },
+  {
+   "id": "h384_spread300",
+   "problems": []
+  },
+  {
+   "id": "h384_min_drho",
+   "problems": []
+  },
+  {
+   "id": "h384_min_moving",
+   "problems": []
+  },
+  {
+   "id": "h384_legend",
+   "problems": []
+  },
+  {
+   "id": "h_spread_limit",
+   "problems": []
+  },
+  {
+   "id": "h_drho_limit",
+   "problems": []
+  },
+  {
+   "id": "h_count_def",
+   "problems": []
+  },
+  {
+   "id": "h_window",
+   "problems": []
+  },
+  {
+   "id": "h_earliest",
+   "problems": []
+  },
+  {
+   "id": "h_missing",
+   "problems": []
+  },
+  {
+   "id": "h_guard",
+   "problems": []
+  }
+ ],
+ "figures": {
+  "fig_bracket": {
+   "pdf": "fig_bracket.pdf",
+   "bytes": 848966,
+   "sha256": "0af86e27376e61097ab3aa4b92653b20449c5e7fde77d1e2b092a6110eee5c95",
+   "page_mm": [
+    191.0,
+    79.6
+   ],
+   "manuscript_width_pt": 522.0,
+   "scale_at_manuscript_size": 0.9641,
+   "smallest_font_pt_at_manuscript_size": 4.25,
+   "smallest_base_font_pt_at_manuscript_size": 6.07,
+   "note_fonts": "the smaller spans are mathtext exponents and subscripts (70 % of their base size)",
+   "numbers_in_pdf": 20,
+   "unexplained_numbers": [],
+   "labels_missing_from_pdf": [],
+   "label_words_missing": [],
+   "metadata": {},
+   "images": 5,
+   "passed": true
+  },
+  "fig_bracket_n192": {
+   "pdf": "fig_bracket_n192.pdf",
+   "bytes": 514503,
+   "sha256": "eb83a3aa92b51314dc57a39f941f7ae89bab1993858bc59d6478164d069823c9",
+   "page_mm": [
+    85.2,
+    60.7
+   ],
+   "manuscript_width_pt": 252.0,
+   "scale_at_manuscript_size": 1.0,
+   "smallest_font_pt_at_manuscript_size": 4.41,
+   "smallest_base_font_pt_at_manuscript_size": 6.3,
+   "note_fonts": "the smaller spans are mathtext exponents and subscripts (70 % of their base size)",
+   "numbers_in_pdf": 9,
+   "unexplained_numbers": [],
+   "labels_missing_from_pdf": [],
+   "label_words_missing": [],
+   "metadata": {},
+   "images": 1,
+   "passed": true
+  },
+  "fig_bracket_history": {
+   "pdf": "fig_bracket_history.pdf",
+   "bytes": 61865,
+   "sha256": "39cfe773cd22625d267bf77837831c6e8003ba7341fcc7cc666ad8398461cf47",
+   "page_mm": [
+    188.6,
+    60.0
+   ],
+   "manuscript_width_pt": 522.0,
+   "scale_at_manuscript_size": 0.9763,
+   "smallest_font_pt_at_manuscript_size": 4.1,
+   "smallest_base_font_pt_at_manuscript_size": 5.86,
+   "note_fonts": "the smaller spans are mathtext exponents and subscripts (70 % of their base size)",
+   "numbers_in_pdf": 85,
+   "unexplained_numbers": [],
+   "labels_missing_from_pdf": [],
+   "label_words_missing": [],
+   "metadata": {},
+   "images": 0,
+   "passed": true
+  }
+ },
+ "history": {
+  "n192": {
+   "series_equal_records": true,
+   "iteration_1_missing": true,
+   "spread_test_met_from": 78,
+   "spread_le_1e-4_at_every_iteration_from_first": true,
+   "spread_at_300": 1.1087805285933476e-05,
+   "max_change_test_never_met_from_76": true,
+   "min_max_change_from_76": 0.350930392742157,
+   "moving_test_never_met_from_76": true,
+   "min_moving_from_76": 9731,
+   "moving_bound": 1,
+   "passed": true
+  },
+  "n384": {
+   "series_equal_records": true,
+   "iteration_1_missing": true,
+   "spread_test_met_from": 76,
+   "spread_le_1e-4_at_every_iteration_from_first": true,
+   "spread_at_300": 1.1825745486651215e-06,
+   "max_change_test_never_met_from_76": true,
+   "min_max_change_from_76": 0.44912996888160706,
+   "moving_test_never_met_from_76": true,
+   "min_moving_from_76": 52705,
+   "moving_bound": 7,
+   "passed": true
+  }
+ },
+ "passed": true,
+ "selftest": {
+  "cases": [
+   {
+    "case": "force printed 8,001 instead of 8,000",
+    "problems": [
+     "printed 8001.0 matches no value or context [0.0, 0.0, 8000.0]"
+    ],
+    "caught": true
+   },
+   {
+    "case": "active count changed",
+    "problems": [
+     "printed 7232000.0 matches no value or context [7232600.0, 6629528.0, 15728640.0]"
+    ],
+    "caught": true
+   },
+   {
+    "case": "n = 384 moving limit given as 1 (the n = 192 bound)",
+    "problems": [
+     "source values [7.0] != label values [1.0]"
+    ],
+    "caught": true
+   },
+   {
+    "case": "spread exponent wrong",
+    "problems": [
+     "printed 1.1e-06 matches no value or context [1.1087805285933476e-05, 192.0, 300.0]",
+     "text and plain print different numbers: ['192', '1.1', '10', '5', '300'] vs ['192', '1.1', '10', '6', '300']"
+    ],
+    "caught": true
+   },
+   {
+    "case": "tight J traced to the wrong audit",
+    "problems": [
+     "source values [1.2037514323607468, 1e-08] != label values [1.2040870253819667, 1e-08]"
+    ],
+    "caught": true
+   },
+   {
+    "case": "change limit value differs from its source",
+    "problems": [
+     "source values [0.01] != label values [0.001]",
+     "printed 0.01 matches no value or context [0.001]"
+    ],
+    "caught": true
+   },
+   {
+    "case": "matplotlib string differs from the plain reading",
+    "problems": [
+     "text and plain print different numbers: ['903,584', '827,324', '1,966,080'] vs ['903,548', '827,324', '1,966,080']"
+    ],
+    "caught": true
+   },
+   {
+    "case": "unlabelled number in a figure's text",
+    "caught": true
+   },
+   {
+    "case": "missing first update traced to iteration 2",
+    "problems": [
+     "iteration 1 not recorded as NaN / -1"
+    ],
+    "caught": true
+   }
+  ],
+  "all_caught": true
+ },
+ "t35_state_unchanged": true,
+ "input_checks_passed": true,
+ "n_labels": 35,
+ "label_problems": 0
+}

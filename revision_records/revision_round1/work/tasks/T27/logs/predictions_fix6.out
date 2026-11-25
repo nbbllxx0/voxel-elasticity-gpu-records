@@ -1,0 +1,13 @@
+P1 inconclusive (unresolved: > 1e-5 at k = 80, 256; no confirmatory independent residual at k = 160, which has a completed Hou solve)
+P2 support
+P3a support
+P3b inconclusive (no common-accuracy time for Hou)
+P4 inconclusive (unresolved: >= 100 at k = 80, 256; the G2 action gate at k = 160 is exploratory, so its ratio is exploratory)
+P5a inconclusive (unresolved: <= 1.15 at k = 80, 256; no confirmatory G2 action gate at k = 160, where the first checker run spilled and its replacement is exploratory)
+P5b contradiction
+P6 inconclusive (the recorded process peaks retain workspaces of two builds, D14)
+P7 inconclusive (unresolved: d_S(rep) < d_S(orig) at k = 80, 256; no confirmatory d_S at k = 160)
+P8 contradiction
+C-A contradiction
+C-B inconclusive
+C-C inconclusive (not run)

@@ -1,0 +1,88 @@
+{
+ "label": "confirmatory",
+ "gate_G": true,
+ "H1": {
+  "verdict": "inconclusive",
+  "deltaC": 6.582428129777854e-06,
+  "dC": 5.791336790544888e-07,
+  "sign": "positive",
+  "U": 1.6237773953167786e-13,
+  "10U": 1.6237773953167785e-12,
+  "resolved": true,
+  "attributed": true,
+  "floor_deltaC": -3.081723345355235e-10,
+  "qualifier": null
+ },
+ "H2": {
+  "verdict": "support",
+  "mean": 8.505883524776436e-07,
+  "max": 0.9999997019767761,
+  "crossings": 7,
+  "attributed_mean": true,
+  "attributed_crossings": true,
+  "floor_mean": 6.496338755823672e-09,
+  "floor_crossings": 0,
+  "qualifier": null
+ },
+ "H3": {
+  "class": "persistent",
+  "verdict": "persistent",
+  "L1_mean_D_66_70": 8.500972551701124e-07,
+  "L2_mean_D_Sm4_S": 8.021239344088826e-07,
+  "L2_over_L1": 0.9435672560175131,
+  "S": 79,
+  "L2_floor_AAp": 3.2333548006135973e-09,
+  "floor_zero": false,
+  "qualifier": null,
+  "shape": {
+   "phase_max_D": [
+    {
+     "its": [
+      1,
+      15
+     ],
+     "max_D": 1.3085756805751927e-07,
+     "it_of_max": 15
+    },
+    {
+     "its": [
+      16,
+      40
+     ],
+     "max_D": 7.475712347562811e-07,
+     "it_of_max": 40
+    },
+    {
+     "its": [
+      41,
+      65
+     ],
+     "max_D": 6.417094873763076e-07,
+     "it_of_max": 41
+    },
+    {
+     "its": [
+      66,
+      79
+     ],
+     "max_D": 1.5715146000729873e-06,
+     "it_of_max": 68
+    }
+   ],
+   "jump_ratios": {
+    "16": 1.2665567850806319,
+    "41": 0.8583924280948477,
+    "66": 0.26398933281047304,
+    "67": 9.196734558594368
+   },
+   "it_of_max_D": 68,
+   "max_D": 1.5715146000729873e-06
+  }
+ },
+ "floor": {
+  "Aprime_completed": true,
+  "bit_identical": false
+ },
+ "no_accumulation_wording_allowed": false,
+ "overall": "measured_values_with_class_no_accumulation_wording"
+}

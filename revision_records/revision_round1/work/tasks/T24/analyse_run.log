@@ -1,0 +1,13 @@
+{
+ "label": "confirmatory",
+ "gate_G": true,
+ "H1": "inconclusive",
+ "H2": "support",
+ "H3": "persistent",
+ "floor": {
+  "Aprime_completed": true,
+  "bit_identical": false
+ },
+ "no_accumulation_wording_allowed": false,
+ "overall": "measured_values_with_class_no_accumulation_wording"
+}

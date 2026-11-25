@@ -1,0 +1,656 @@
+{
+ "argv": [
+  "<project>\\revision_round1\\work\\tasks\\X1_1\\study\\x11_job.py",
+  "<project>\\revision_round1\\work\\tasks\\X1_1\\study\\out\\runs\\C_n384",
+  "continue",
+  "384",
+  "600"
+ ],
+ "phase": "continue",
+ "n": 384,
+ "arg": "600",
+ "task": "X1_1",
+ "admission_in_process": {
+  "cuda_free_bytes": 24152899584,
+  "cuda_total_bytes": 25756696576,
+  "pool_cap_bytes": 22542286848,
+  "predicted_peak_bytes": 5155791733,
+  "require_budget_ok": true,
+  "require_budget_info": {
+   "cuda_free": 24152899584,
+   "total": 25756696576,
+   "others_dedicated": 7717462016,
+   "wddm_free": 17684664320,
+   "need": 5155791733,
+   "margin": 1610612736,
+   "effective_free": 17684664320,
+   "ok": true
+  }
+ },
+ "variant": {
+  "name": "adaptive_capdecay",
+  "cap0": 0.05,
+  "gamma": 0.98,
+  "max_outer": 600,
+  "schedule": [
+   [
+    15,
+    1.5,
+    1.0,
+    0.2,
+    1.5
+   ],
+   [
+    40,
+    3.5,
+    4.0,
+    0.15,
+    1.35
+   ],
+   [
+    65,
+    4.5,
+    16.0,
+    0.08,
+    1.25
+   ],
+   [
+    120,
+    4.5,
+    32.0,
+    0.05,
+    1.2
+   ]
+  ],
+  "step": "adaptive",
+  "m_min": 0.0001,
+  "g_dec": 0.7,
+  "g_inc": 1.2,
+  "what": "per-element OC move limits in the last phase: x0.7 on a step reversal, x1.2 (up to the phase move 0.05) on a repeated direction, floor 1e-4"
+ },
+ "host_checks": {
+  "n": 384,
+  "h_in": 0.01875,
+  "grid": [
+   384,
+   256,
+   160
+  ],
+  "counts": {
+   "allocated_elements": 15728640,
+   "active_elements": 7232600,
+   "designable_elements": 6629528,
+   "protected_elements": 603072,
+   "exterior_elements": 8496040,
+   "nodes_allocated": 15930145,
+   "nodes_exterior_only": 8504564,
+   "nodes_active": 7425581,
+   "nodes_supported": 20624,
+   "free_dofs": 22214871
+  },
+  "connectivity": {
+   "face_connected_components": 1,
+   "supports_in_component_1": true,
+   "passed": true
+  },
+  "load_nodes": {
+   "n": 18240,
+   "symmetric_about_midplane_y": true,
+   "symmetric_x": true,
+   "symmetric_z": true,
+   "centroid": [
+    5.999999999999655,
+    2.250000000000001,
+    2.099999999999859
+   ],
+   "ref_point": [
+    6.0,
+    2.25,
+    2.1
+   ],
+   "radius_min_in": 0.36405914698026726,
+   "radius_max_in": 0.3865411524016561,
+   "any_fixed": false,
+   "all_touch_protected_eye": true
+  },
+  "resultants": {
+   "LC1_vertical": {
+    "F_target": [
+     0.0,
+     0.0,
+     8000.0
+    ],
+    "M_target": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "F_sum": [
+     -2.7468189100159738e-21,
+     7.000796177562423e-25,
+     7999.999999997897
+    ],
+    "M_sum": [
+     -7.400968726756219e-12,
+     -2.7856014161997678e-09,
+     5.234643692477486e-27
+    ],
+    "F_max_abs_err": 2.10275175049901e-09,
+    "M_max_abs_err": 2.7856014161997678e-09,
+    "F_tol": 8.000000000000001e-07,
+    "M_tol": 8.000000000000001e-07,
+    "passed": true
+   },
+   "LC2_horizontal": {
+    "F_target": [
+     8500.0,
+     0.0,
+     0.0
+    ],
+    "M_target": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "F_sum": [
+     8499.999999999829,
+     1.839507631444477e-24,
+     -3.011347334441148e-21
+    ],
+    "M_sum": [
+     -6.563322731438818e-27,
+     1.1989632871337885e-09,
+     7.54300690948795e-12
+    ],
+    "F_max_abs_err": 1.709850039333105e-10,
+    "M_max_abs_err": 1.1989632871337885e-09,
+    "F_tol": 8.5e-07,
+    "M_tol": 8.5e-07,
+    "passed": true
+   },
+   "LC3_42deg": {
+    "F_target": [
+     6356.740760409153,
+     0.0,
+     7059.875842035245
+    ],
+    "M_target": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "F_sum": [
+     6356.740760409438,
+     1.9469252308606602e-24,
+     7059.875842034994
+    ],
+    "M_sum": [
+     -7.970513138388924e-12,
+     -1.4896592570590172e-09,
+     6.6063082456750475e-12
+    ],
+    "F_max_abs_err": 2.8467184165492654e-10,
+    "M_max_abs_err": 1.4896592570590172e-09,
+    "F_tol": 9.5e-07,
+    "M_tol": 9.5e-07,
+    "passed": true
+   },
+   "LC4_torsion": {
+    "F_target": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "M_target": [
+     5000.0,
+     0.0,
+     0.0
+    ],
+    "F_sum": [
+     -3.524951297789368e-26,
+     -4.926385653580834e-10,
+     -3.1299407510232413e-12
+    ],
+    "M_sum": [
+     5000.000000000852,
+     7.688294445529209e-15,
+     -6.086277315464628e-15
+    ],
+    "F_max_abs_err": 4.926385653580834e-10,
+    "M_max_abs_err": 8.521965355612338e-10,
+    "F_tol": 5e-07,
+    "M_tol": 5e-07,
+    "passed": true
+   }
+  },
+  "supports": {
+   "all_on_boss": true,
+   "n_nodes": 20624,
+   "per_bolt": [
+    5156,
+    5156,
+    5156,
+    5156
+   ]
+  },
+  "protected_touch_exterior_only": false,
+  "padding": {
+   "nominal_grid": [
+    384,
+    256,
+    160
+   ],
+   "allocated_grid": [
+    384,
+    256,
+    160
+   ],
+   "padded_elements": 0,
+   "padded_non_exterior_elements": 0,
+   "passed": true
+  },
+  "passed": true
+ },
+ "c0_used": [
+  2942051.0993674565,
+  1939041.8571512343,
+  959489.8649598116,
+  237416.32949063057
+ ],
+ "source": {
+  "run": "X0_2 R_adaptive_n384",
+  "fields_npz_sha256": "bcd69daed9461b65d238ed780d16d315da11b2123c487c75fc3284ff22106c17",
+  "rho_sha256": "12edf3c06ec30e7c36af565b695c5a825e1cf79295a9e70090f9fb82ebae56cd",
+  "rho_phys_sha256": "b7d286dca269c2d1425058db7c40ff082c1555f66e36649ad349b019a351ad8f",
+  "rho_phys_sha256_saved_by_X0_2": "b7d286dca269c2d1425058db7c40ff082c1555f66e36649ad349b019a351ad8f",
+  "start_iteration": 300,
+  "termination_X0_2": "guard",
+  "cls_identical": true,
+  "first_rho_phys_equals_X0_2_retained": true,
+  "first_rho_phys_max_abs_diff": 0.0
+ },
+ "driver": {
+  "config": {
+   "volfrac": 0.5,
+   "solver": "mg_ir",
+   "op64": "node_hoist",
+   "op32": "stencil_diff",
+   "op32_inner": null,
+   "tol": 1e-05,
+   "inner_tol": 0.1,
+   "inner_maxit": 300,
+   "pcg_maxit": 20000,
+   "mg_nu": 2,
+   "mg_omega": null,
+   "mg_levels": null,
+   "max_coarse_dofs": 2500,
+   "Emin": 1e-09,
+   "E0": 1.0,
+   "rho_lb": 0.0,
+   "eta": 0.5,
+   "max_outer": 600,
+   "min_outer": 0,
+   "conv_drho": 0.01,
+   "conv_dc_rel": 0.0001,
+   "conv_window": 10,
+   "conv_moving_ppm": 1.0,
+   "schedule": [
+    [
+     15,
+     1.5,
+     1.0,
+     0.2,
+     1.5
+    ],
+    [
+     40,
+     3.5,
+     4.0,
+     0.15,
+     1.35
+    ],
+    [
+     65,
+     4.5,
+     16.0,
+     0.08,
+     1.25
+    ],
+    [
+     120,
+     4.5,
+     32.0,
+     0.05,
+     1.2
+    ]
+   ],
+   "spill_check_every": 10,
+   "log_every": 1
+  },
+  "weights": [
+   0.25,
+   0.25,
+   0.25,
+   0.25
+  ],
+  "c0": [
+   2942051.0993674565,
+   1939041.8571512343,
+   959489.8649598116,
+   237416.32949063057
+  ],
+  "scales_fp32": [
+   8.497472947510687e-08,
+   1.2892965628452657e-07,
+   2.6055511170852697e-07,
+   1.053002506523626e-06
+  ],
+  "mg_levels": 6,
+  "store_states": true,
+  "rmin_scale": 4.0,
+  "step": "adaptive",
+  "step_params": {
+   "m_min": 0.0001,
+   "g_dec": 0.7,
+   "g_inc": 1.2,
+   "cap0": 0.05,
+   "gamma": 0.98
+  },
+  "counts": {
+   "allocated": 15728640,
+   "active": 7232600,
+   "designable": 6629528,
+   "protected": 603072
+  }
+ },
+ "matching_state_hashes": {
+  "first_iteration_rho_phys": "b7d286dca269c2d1425058db7c40ff082c1555f66e36649ad349b019a351ad8f",
+  "first_iteration_E32": "ae01b8fbe6d137af6776fdd74268d950e6a411845857d072eba5263c0e3ae4d4"
+ },
+ "timing": {
+  "run_call_s": 370.72110009996686,
+  "on_iter_io_s": 0.4174634001683444,
+  "note": "run_call_s: entering run() to its return, including the on_iter persistence (on_iter_io_s) and the end check (result.end_check.s); result.wall_s: entering run() to the end of the final production re-solve, without the end check"
+ },
+ "memory_boundary": {
+  "pool_peak_reserved_bytes": 4788150272,
+  "pool_peak_used_bytes": 4325469184
+ },
+ "cap_schedule": {
+  "cap0": 0.05,
+  "gamma": 0.98,
+  "floor": 0.0001,
+  "updates_made": 79,
+  "last_cap": 0.010341985151171684
+ },
+ "driver_mem": {
+  "peak_pool_used_bytes": 3967642624,
+  "peak_pool_reserved_bytes": 4493238272,
+  "peak_device_used_bytes": 6175588352,
+  "baseline_device_used_bytes": 1620574208
+ },
+ "device_arrays": {
+  "cls": 15728640,
+  "rho": 62914560,
+  "rho_phys": 62914560,
+  "rho_prev": 31457280,
+  "E32": 62914560,
+  "dc": 62914560,
+  "dv": 62914560,
+  "w1": 62914560,
+  "w2": 62914560,
+  "filter_D": 62914560,
+  "states_u64": 1529293920,
+  "fixed": 15930145,
+  "ir_workspace": 764646960,
+  "loads": 3502080,
+  "residual_loads": 2042880,
+  "mg_vectors": 320502189,
+  "mg_matrices": 336960000,
+  "mg_coarse_inverse": 35481888,
+  "mg_KE_tables": 44964864
+ },
+ "outcome": "returned_design",
+ "result": {
+  "converged": true,
+  "termination": "bounded_oscillation",
+  "iterations": 379,
+  "J": 1.203874322701241,
+  "c": [
+   3441914.9818602195,
+   2395443.607303758,
+   1094187.1014748586,
+   301479.5908662707
+  ],
+  "final_solves": [
+   {
+    "outer": 2,
+    "inner_iters": 28,
+    "matvecs64": 3,
+    "matvecs32": 28,
+    "precond": 30,
+    "rel_initial": 0.0009672779234552253,
+    "warm_start_reset": false,
+    "rejected_steps": 0,
+    "rel_true": 3.7559976432485683e-06,
+    "converged": true,
+    "inner_tol_final": 0.1,
+    "time_s": 0.632330899941735,
+    "wall_s": 0.6323400000110269,
+    "setup_s": 0.03826860000845045
+   },
+   {
+    "outer": 2,
+    "inner_iters": 27,
+    "matvecs64": 3,
+    "matvecs32": 27,
+    "precond": 29,
+    "rel_initial": 0.0010133139770233622,
+    "warm_start_reset": false,
+    "rejected_steps": 0,
+    "rel_true": 8.157296435906158e-06,
+    "converged": true,
+    "inner_tol_final": 0.1,
+    "time_s": 0.6259509000228718,
+    "wall_s": 0.6259586999658495,
+    "setup_s": 0.0
+   },
+   {
+    "outer": 2,
+    "inner_iters": 30,
+    "matvecs64": 3,
+    "matvecs32": 30,
+    "precond": 32,
+    "rel_initial": 0.00045948538307859384,
+    "warm_start_reset": false,
+    "rejected_steps": 0,
+    "rel_true": 2.237839098691328e-06,
+    "converged": true,
+    "inner_tol_final": 0.1,
+    "time_s": 0.6877659999299794,
+    "wall_s": 0.6877738999901339,
+    "setup_s": 0.0
+   },
+   {
+    "outer": 2,
+    "inner_iters": 30,
+    "matvecs64": 3,
+    "matvecs32": 30,
+    "precond": 32,
+    "rel_initial": 0.000582677746272648,
+    "warm_start_reset": false,
+    "rejected_steps": 0,
+    "rel_true": 4.3874786672562975e-06,
+    "converged": true,
+    "inner_tol_final": 0.1,
+    "time_s": 0.6864190000342205,
+    "wall_s": 0.6864272000966594,
+    "setup_s": 0.0
+   }
+  ],
+  "volume_phys": 0.49999999988872107,
+  "wall_s": 366.5189012000337,
+  "final_resolve_s": 5.049417000031099,
+  "totals": {
+   "solve_s": 295.5820217987057,
+   "setup_s": 9.77402550028637,
+   "sens_s": 3.6333583996165544,
+   "oc_s": 20.14742680033669,
+   "filter_s": 0.7308060996001586,
+   "diag_s": 13.451014499529265
+  },
+  "memory": {
+   "peak_pool_used_bytes": 3967642624,
+   "peak_pool_reserved_bytes": 4493238272,
+   "peak_device_used_bytes": 6175588352,
+   "baseline_device_used_bytes": 1620574208
+  },
+  "spill": {
+   "pid": 62884,
+   "limit_bytes": 268435456,
+   "max_shared_growth_bytes": 79691776,
+   "spilled": false,
+   "samples": [
+    {
+     "tag": "start",
+     "t": 1795621197.4082463,
+     "dedicated": 3565379584,
+     "shared": 100663296,
+     "others_dedicated": 7717462016
+    },
+    {
+     "tag": "it310",
+     "t": 1795621275.4205565,
+     "dedicated": 4926599168,
+     "shared": 180355072,
+     "others_dedicated": 7703277568
+    },
+    {
+     "tag": "it320",
+     "t": 1795621313.8133292,
+     "dedicated": 4926599168,
+     "shared": 180355072,
+     "others_dedicated": 7723876352
+    },
+    {
+     "tag": "it330",
+     "t": 1795621362.5722365,
+     "dedicated": 4926599168,
+     "shared": 180355072,
+     "others_dedicated": 7723741184
+    },
+    {
+     "tag": "it340",
+     "t": 1795621401.2987566,
+     "dedicated": 4733661184,
+     "shared": 180355072,
+     "others_dedicated": 7699525632
+    },
+    {
+     "tag": "it350",
+     "t": 1795621446.7994885,
+     "dedicated": 4733661184,
+     "shared": 180355072,
+     "others_dedicated": 7666335744
+    },
+    {
+     "tag": "it360",
+     "t": 1795621492.571551,
+     "dedicated": 4733661184,
+     "shared": 180355072,
+     "others_dedicated": 7686946816
+    },
+    {
+     "tag": "it370",
+     "t": 1795621531.9036217,
+     "dedicated": 4733661184,
+     "shared": 180355072,
+     "others_dedicated": 7707410432
+    },
+    {
+     "tag": "end",
+     "t": 1795621564.7056148,
+     "dedicated": 4733661184,
+     "shared": 180355072,
+     "others_dedicated": 7723741184
+    }
+   ]
+  },
+  "grid": [
+   384,
+   256,
+   160
+  ],
+  "mg_levels": 6,
+  "mg_storage": {
+   "vectors": 320502189,
+   "matrices": 336960000,
+   "coarse_inverse": 35481888,
+   "KE_tables": 44964864
+  },
+  "weights": [
+   0.25,
+   0.25,
+   0.25,
+   0.25
+  ],
+  "c0": [
+   2942051.0993674565,
+   1939041.8571512343,
+   959489.8649598116,
+   237416.32949063057
+  ],
+  "store_states": true,
+  "end_check": {
+   "phase": {
+    "p": 4.5,
+    "beta": 32.0,
+    "move": 0.05
+   },
+   "undamped_phase_move": {
+    "lambda": 1.0685799920261132,
+    "max_abs_drho_phys": 0.03155803680419922,
+    "n_drho_phys_gt_0.01": 49,
+    "max_abs_design_step": 0.050000011920928955,
+    "n_design_step_gt_1e-3": 17480,
+    "trial_volume": 0.4999999998582963
+   },
+   "current_adaptive_limits": {
+    "lambda": 1.0683444434117595,
+    "max_abs_drho_phys": 0.01827394962310791,
+    "n_drho_phys_gt_0.01": 4,
+    "max_abs_design_step": 0.010342001914978027,
+    "n_design_step_gt_1e-3": 17448,
+    "trial_volume": 0.49999999985289734
+   },
+   "rho_phys_restored_identical": true,
+   "s": 4.202152399928309
+  }
+ },
+ "final": {
+  "E32_sha256": "a5771cfc8bfbe65d8f16abd8408d42ffbbcbd646b047a79ad802ba08f9ba8762",
+  "penalty": 4.5,
+  "mnd": 0.004657638107291401,
+  "volume_phys": 0.49999999988872107,
+  "volume_abs_err": 1.1127893051465776e-10,
+  "solid_fraction_active": 0.5414131847468407,
+  "rho_phys_sha256": "8814ae00961c08c79ededdbaa57fcdd59c883bfb99f11caf8bc5c428f8e71202",
+  "c_prod": [
+   3441914.9818602195,
+   2395443.607303758,
+   1094187.1014748586,
+   301479.5908662707
+  ],
+  "J_prod": 1.203874322701241,
+  "last_iteration": 379,
+  "last_drho_phys": 0.014421045780181885,
+  "last_n_elem_drho_gt_tol": 6,
+  "bounded_oscillation_limit": 7,
+  "max_production_rel_true": 9.995804241364247e-06,
+  "n_production_solves": 320
+ },
+ "completed": true,
+ "device_used_at_start_bytes": 1603796992,
+ "device_used_at_end_bytes": 5984747520,
+ "wall_s": 380.67245531082153
+}

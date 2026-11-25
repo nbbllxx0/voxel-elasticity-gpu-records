@@ -1,0 +1,5 @@
+[10:52:00] audit n=384 LC1_vertical: mg64 c=3.4424054940e+06 eq=9.922e-09
+[10:52:13] audit n=384 LC2_horizontal: mg64 c=2.3958956488e+06 eq=9.393e-09
+[10:52:26] audit n=384 LC3_42deg: mg64 c=1.0943286695e+06 eq=9.339e-09
+[10:52:39] audit n=384 LC4_torsion: mg64 c=3.0155159859e+05 eq=8.493e-09
+[10:52:40] audit n=384 audit valid True equilibrium True J_tight 1.20408703e+00

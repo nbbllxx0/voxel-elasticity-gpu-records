@@ -1,0 +1,390 @@
+{
+ "task": "T27",
+ "name": "H5_check_k80",
+ "kind": "H5",
+ "args": {
+  "step": "H5",
+  "k": 80,
+  "path": null,
+  "tag": ""
+ },
+ "status": "ok",
+ "device_baseline_mib": 3494.0,
+ "others_at_launch": {
+  "10452": {
+   "dedicated": 17666048,
+   "shared": 212992
+  },
+  "11260": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "11320": {
+   "dedicated": 14184448,
+   "shared": 368640
+  },
+  "12224": {
+   "dedicated": 426323968,
+   "shared": 1830912
+  },
+  "12436": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "12680": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "14776": {
+   "dedicated": 108490752,
+   "shared": 4816896
+  },
+  "15716": {
+   "dedicated": 20516864,
+   "shared": 319488
+  },
+  "15740": {
+   "dedicated": 25104384,
+   "shared": 319488
+  },
+  "15920": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "17624": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "17952": {
+   "dedicated": 70443008,
+   "shared": 212992
+  },
+  "18196": {
+   "dedicated": 42086400,
+   "shared": 319488
+  },
+  "18972": {
+   "dedicated": 20123648,
+   "shared": 0
+  },
+  "1952": {
+   "dedicated": 130285568,
+   "shared": 66404352
+  },
+  "19812": {
+   "dedicated": 16449536,
+   "shared": 212992
+  },
+  "20852": {
+   "dedicated": 157810688,
+   "shared": 212992
+  },
+  "21048": {
+   "dedicated": 38948864,
+   "shared": 262144
+  },
+  "21208": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "21444": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "22832": {
+   "dedicated": 20312064,
+   "shared": 212992
+  },
+  "23188": {
+   "dedicated": 155365376,
+   "shared": 319488
+  },
+  "24000": {
+   "dedicated": 10952704,
+   "shared": 319488
+  },
+  "2412": {
+   "dedicated": 4558176256,
+   "shared": 7094272
+  },
+  "26300": {
+   "dedicated": 488538112,
+   "shared": 14090240
+  },
+  "27604": {
+   "dedicated": 10952704,
+   "shared": 319488
+  },
+  "29616": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "33408": {
+   "dedicated": 19476480,
+   "shared": 1089536
+  },
+  "3440": {
+   "dedicated": 23465984,
+   "shared": 24760320
+  },
+  "35872": {
+   "dedicated": 402231296,
+   "shared": 19615744
+  },
+  "36592": {
+   "dedicated": 369803264,
+   "shared": 368640
+  },
+  "37792": {
+   "dedicated": 18808832,
+   "shared": 262144
+  },
+  "38068": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "3824": {
+   "dedicated": 64327680,
+   "shared": 319488
+  },
+  "40444": {
+   "dedicated": 124051456,
+   "shared": 368640
+  },
+  "4056": {
+   "dedicated": 14168064,
+   "shared": 368640
+  },
+  "41960": {
+   "dedicated": 190926848,
+   "shared": 9224192
+  },
+  "42776": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "43316": {
+   "dedicated": 18092032,
+   "shared": 0
+  },
+  "44000": {
+   "dedicated": 47681536,
+   "shared": 34136064
+  },
+  "4": {
+   "dedicated": 4235264,
+   "shared": 270336
+  },
+  "5060": {
+   "dedicated": 0,
+   "shared": 0
+  },
+  "55132": {
+   "dedicated": 11329536,
+   "shared": 1097728
+  },
+  "57712": {
+   "dedicated": 15065088,
+   "shared": 2265088
+  },
+  "7476": {
+   "dedicated": 17235968,
+   "shared": 0
+  }
+ },
+ "others_dedicated_at_launch_bytes": 7735955456,
+ "environment": {
+  "time": "2026-11-23T07:30:00",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "4516ab6f281f6cfa",
+ "started": "2026-11-23T07:30:00",
+ "protective_pool_cap": {
+  "E_free_bytes": 17725849600,
+  "pool_cap_bytes": 16115236864,
+  "E_free_info": {
+   "cuda_free": 24152899584,
+   "total": 25756696576,
+   "others_dedicated": 7676276736,
+   "wddm_free": 17725849600
+  }
+ },
+ "k": 80,
+ "n_elem": 1024000,
+ "ndof": 3168963,
+ "mapping": "node (FP64, FP32 moduli)",
+ "reference": {
+  "rel_true": 7.153605477488658e-11,
+  "compliance": 1850.8065505672525,
+  "energy_norm": 43.02100127333907,
+  "attained_1e-9": true,
+  "named_tolerance": 1e-09,
+  "resolution_limit": 7.153605477488658e-10
+ },
+ "paths": {
+  "hou_cg32": {
+   "rel_true": 0.05764869506384326,
+   "compliance": 1850.6667175292969,
+   "compliance_rel_err": 7.555248705641923e-05,
+   "energy_rel_err": 0.0027753198983828937,
+   "at_reference_resolution": {
+    "compliance": false,
+    "energy": false
+   }
+  },
+  "mg64_orig": {
+   "rel_true": 5.01038373699377e-06,
+   "compliance": 1850.8065488462055,
+   "compliance_rel_err": 9.298902986121507e-10,
+   "energy_rel_err": 6.996903622535297e-07,
+   "at_reference_resolution": {
+    "compliance": false,
+    "energy": false
+   }
+  },
+  "mg64_rep": {
+   "rel_true": 5.0102737282638005e-06,
+   "compliance": 1850.8065510030506,
+   "compliance_rel_err": 2.354638460953457e-10,
+   "energy_rel_err": 6.997350121386046e-07,
+   "at_reference_resolution": {
+    "compliance": true,
+    "energy": false
+   }
+  },
+  "mgir_orig": {
+   "rel_true": 6.692123578703961e-06,
+   "compliance": 1850.15765587928,
+   "compliance_rel_err": 0.000350601032708558,
+   "energy_rel_err": 0.00035902618716496547,
+   "at_reference_resolution": {
+    "compliance": false,
+    "energy": false
+   }
+  },
+  "mgir_rep": {
+   "rel_true": 8.617615917850322e-06,
+   "compliance": 1850.8065091911822,
+   "compliance_rel_err": 2.2355696964834972e-08,
+   "energy_rel_err": 1.3155190395337426e-06,
+   "at_reference_resolution": {
+    "compliance": false,
+    "energy": false
+   }
+  }
+ },
+ "h4_snapshots": [],
+ "G2_actions": {
+  "d_R_hou_cg32": 7.564119870437036e-08,
+  "d_R_stencil32_orig": 1.0049919089601277e-07,
+  "d_R_stencil32_rep": 9.294697925430216e-08,
+  "d_S_hou_cg32": 0.0006454733098677672,
+  "d_S_stencil32_orig": 0.003875719903790497,
+  "d_S_stencil32_rep": 7.57300536956289e-06
+ },
+ "G2_dR_pass": true,
+ "G2_system": {
+  "fixed_sets_identical": true,
+  "n_fixed": 12,
+  "load_identical": true,
+  "n_load": 8,
+  "load_sum": 8.0,
+  "their_initial_iterate_zero": true,
+  "their_tol": 0.001,
+  "their_itermax": 10000
+ },
+ "end": "2026-11-23T07:30:06",
+ "process_wall_s": 14.643007278442383,
+ "pool": {
+  "pool_used_peak_bytes": 0,
+  "pool_reserved_peak_bytes": 0,
+  "hook_calls": 0,
+  "largest_request_bytes": 0
+ },
+ "device_wide": {
+  "n_samples": 52,
+  "device_peak_bytes": 4179623936,
+  "baseline_bytes": 3663724544
+ },
+ "process_dedicated": {
+  "n_samples": 12,
+  "n_own": 12,
+  "dedicated_peak_bytes": 505671680,
+  "shared_start_bytes": 77594624,
+  "shared_max_bytes": 132120576,
+  "shared_growth_bytes": 54525952,
+  "spilled": false,
+  "others_dedicated_max_bytes": 7682068480,
+  "others_dedicated_first_bytes": 7682068480
+ },
+ "spillwatch": {
+  "max_shared_growth_bytes": 54525952,
+  "spilled": false
+ },
+ "spillwatch_samples": [
+  {
+   "tag": "start",
+   "t": 1795447800.662245,
+   "dedicated": 354570240,
+   "shared": 77594624,
+   "others_dedicated": 7681613824
+  },
+  {
+   "tag": "end",
+   "t": 1795447806.0849948,
+   "dedicated": 505671680,
+   "shared": 132120576,
+   "others_dedicated": 7651155968
+  }
+ ],
+ "spilled": false,
+ "activity": {
+  "n_samples": 1,
+  "mean_foreign_pct": 4.461851276596617,
+  "max_foreign_pct": 4.461851276596617
+ },
+ "activity_timed": [],
+ "mean_foreign_timed_pct": 4.461851276596617,
+ "timing_flag": "flagged",
+ "valid": true,
+ "code_files": {
+  "src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "src/voxfem/core.py": "318596a50144b516",
+  "src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "src/voxfem/memory.py": "824be1910087b604",
+  "src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "src/voxfem/operators.py": "e89a0ec274e670ad",
+  "src/voxfem/sass.py": "184cd5714214ef1c",
+  "src/voxfem/simp.py": "b68537c154bd76bc",
+  "src/voxfem/sparse.py": "7830a4672baee938",
+  "src/experiments/_boot.py": "33c086109bcda1dd",
+  "src/experiments/E10_external_hou.py": "f264358c343f6fc8",
+  "src/experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "src/experiments/run_simp.py": "d913d5a57d599399",
+  "drivers/c_check.py": "df8bef0e838c9456",
+  "drivers/c_simp.py": "a823846781153560",
+  "drivers/collect.py": "365e489102f8b9d9",
+  "drivers/hou_instr.py": "f05a9afcf453102b",
+  "drivers/hrun.py": "345ed41a153ea9ab",
+  "drivers/hsys.py": "d7476b336bac9cec",
+  "drivers/predictions.py": "3e1564e093241d7f",
+  "drivers/queue_t27.py": "16d5d2c0052c60de",
+  "drivers/t27boot.py": "7ff37f9b05b0d74c",
+  "drivers/t27lib.py": "49d2266355db07d9",
+  "drivers/v_verify.py": "9c79013b413f25c8"
+ }
+}

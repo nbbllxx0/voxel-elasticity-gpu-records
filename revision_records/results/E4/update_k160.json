@@ -1,0 +1,103 @@
+{
+ "experiment": "E4_update_cost",
+ "k": 160,
+ "shape": [
+  320,
+  160,
+  160
+ ],
+ "n_elem": 8192000,
+ "environment": {
+  "time": "2026-10-04T16:44:24",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "d7a42786fe82ca19",
+ "rows": {
+  "apply_stencil_fp32_s": 0.0003434999380260706,
+  "apply_spoke_fp32_s": 0.00034529995173215866,
+  "apply_node_hoist_fp32_s": 0.0006183998193591833,
+  "apply_elem_atomic_fp32_s": 0.0015985001809895039,
+  "csr_status": "skipped: exceeds VRAM budget",
+  "bsr_build_s": 0.2332960998173803,
+  "bsr_refresh_s": 0.01445879996754229,
+  "bsr_refresh_bytes_written": 8004165156,
+  "bsr_apply_fp32_s": 0.011026300024241209,
+  "bsr_storage_bytes": 8926799408,
+  "mg_update_s": 0.017230199882760644,
+  "mg_levels": 6,
+  "mg_storage": {
+   "vectors": 167629833,
+   "matrices": 175500000,
+   "coarse_inverse": 11290752,
+   "KE_tables": 44964864
+  },
+  "mg_vcycle_s": 0.011047299951314926,
+  "mg_coarse_dofs": 1188
+ },
+ "spill": {
+  "pid": 24860,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 157286400,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1791157467.3523734,
+    "dedicated": 24576,
+    "shared": 0,
+    "others_dedicated": 7043211264
+   },
+   {
+    "tag": "end",
+    "t": 1791157476.3031936,
+    "dedicated": 9139769344,
+    "shared": 157286400,
+    "others_dedicated": 7030013952
+   }
+  ]
+ },
+ "valid": true,
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "83bac7f2c560f824",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "39270dd666a97c62",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "37b82e35bedcfa90",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "06861ed8b005e976",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "8320cf811418fc3e",
+  "experiments/run_queue.py": "a4171f94cce8630d",
+  "experiments/run_simp.py": "ab7cba3cb779baad",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86"
+ }
+}

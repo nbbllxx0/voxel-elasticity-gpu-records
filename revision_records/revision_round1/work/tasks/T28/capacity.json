@@ -1,0 +1,311 @@
+{
+ "traeff/fixed_S1": {
+  "run_completed": {
+   "largest_k": 320,
+   "active_elements": 65536000,
+   "allocated_elements": 79588740,
+   "next_tested_k": 384,
+   "next_class": 2,
+   "next_class_label": "guard refusal"
+  },
+  "native_stop_met": {
+   "largest_k": 320,
+   "active_elements": 65536000,
+   "allocated_elements": 79588740,
+   "next_tested_k": 384,
+   "next_class": 2,
+   "next_class_label": "guard refusal"
+  },
+  "verified": {
+   "largest_k": null,
+   "active_elements": null,
+   "allocated_elements": null,
+   "next_tested_k": 64,
+   "next_class": 8,
+   "next_class_label": "native stop met, independent residual > 1e-5 or missing"
+  },
+  "classes_by_k": {
+   "64": 8,
+   "128": 8,
+   "160": 8,
+   "256": 8,
+   "320": 8,
+   "384": 2
+  }
+ },
+ "mg64_orig/fixed_S1": {
+  "run_completed": {
+   "largest_k": 320,
+   "active_elements": 65536000,
+   "allocated_elements": 65536000,
+   "next_tested_k": 384,
+   "next_class": 2,
+   "next_class_label": "guard refusal"
+  },
+  "native_stop_met": {
+   "largest_k": 320,
+   "active_elements": 65536000,
+   "allocated_elements": 65536000,
+   "next_tested_k": 384,
+   "next_class": 2,
+   "next_class_label": "guard refusal"
+  },
+  "verified": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 8,
+   "next_class_label": "native stop met, independent residual > 1e-5 or missing"
+  },
+  "classes_by_k": {
+   "64": 9,
+   "128": 9,
+   "160": 9,
+   "256": 8,
+   "320": 8,
+   "384": 2
+  }
+ },
+ "mg64_rep/fixed_S1": {
+  "run_completed": {
+   "largest_k": 320,
+   "active_elements": 65536000,
+   "allocated_elements": 65536000,
+   "next_tested_k": 384,
+   "next_class": 2,
+   "next_class_label": "guard refusal"
+  },
+  "native_stop_met": {
+   "largest_k": 320,
+   "active_elements": 65536000,
+   "allocated_elements": 65536000,
+   "next_tested_k": 384,
+   "next_class": 2,
+   "next_class_label": "guard refusal"
+  },
+  "verified": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 8,
+   "next_class_label": "native stop met, independent residual > 1e-5 or missing"
+  },
+  "classes_by_k": {
+   "64": 9,
+   "128": 9,
+   "160": 9,
+   "256": 8,
+   "320": 8,
+   "384": 2
+  }
+ },
+ "mgir_rep/fixed_S1": {
+  "run_completed": {
+   "largest_k": 320,
+   "active_elements": 65536000,
+   "allocated_elements": 65536000,
+   "next_tested_k": 384,
+   "next_class": 4,
+   "next_class_label": "spill"
+  },
+  "native_stop_met": {
+   "largest_k": 320,
+   "active_elements": 65536000,
+   "allocated_elements": 65536000,
+   "next_tested_k": 384,
+   "next_class": 4,
+   "next_class_label": "spill"
+  },
+  "verified": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 8,
+   "next_class_label": "native stop met, independent residual > 1e-5 or missing"
+  },
+  "classes_by_k": {
+   "64": 9,
+   "128": 9,
+   "160": 9,
+   "256": 8,
+   "320": 8,
+   "384": 4
+  },
+  "note": "bound k = 320; the timed run at k = 384 (T_S1_k384_mgir_rep) was stopped for a spill. The history run HO_S1_k384_mgir_rep should not have been launched after it (D24); it spilled as well and adds no capacity evidence"
+ },
+ "traeff/fixed_S5": {
+  "run_completed": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 13406148,
+   "next_tested_k": 256,
+   "next_class": 1,
+   "next_class_label": "not run"
+  },
+  "native_stop_met": {
+   "largest_k": null,
+   "active_elements": null,
+   "allocated_elements": null,
+   "next_tested_k": 64,
+   "next_class": 7,
+   "next_class_label": "iteration cap"
+  },
+  "verified": {
+   "largest_k": null,
+   "active_elements": null,
+   "allocated_elements": null,
+   "next_tested_k": 64,
+   "next_class": 7,
+   "next_class_label": "iteration cap"
+  },
+  "classes_by_k": {
+   "64": 7,
+   "128": 7,
+   "160": 7,
+   "256": 1,
+   "320": 1,
+   "384": 1
+  }
+ },
+ "mg64_orig/fixed_S5": {
+  "run_completed": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 1,
+   "next_class_label": "not run"
+  },
+  "native_stop_met": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 1,
+   "next_class_label": "not run"
+  },
+  "verified": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 1,
+   "next_class_label": "not run"
+  },
+  "classes_by_k": {
+   "64": 9,
+   "128": 9,
+   "160": 9,
+   "256": 1,
+   "320": 1,
+   "384": 1
+  }
+ },
+ "mg64_rep/fixed_S5": {
+  "run_completed": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 1,
+   "next_class_label": "not run"
+  },
+  "native_stop_met": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 1,
+   "next_class_label": "not run"
+  },
+  "verified": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 1,
+   "next_class_label": "not run"
+  },
+  "classes_by_k": {
+   "64": 9,
+   "128": 9,
+   "160": 9,
+   "256": 1,
+   "320": 1,
+   "384": 1
+  }
+ },
+ "mgir_rep/fixed_S5": {
+  "run_completed": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 1,
+   "next_class_label": "not run"
+  },
+  "native_stop_met": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 1,
+   "next_class_label": "not run"
+  },
+  "verified": {
+   "largest_k": 160,
+   "active_elements": 8192000,
+   "allocated_elements": 8192000,
+   "next_tested_k": 256,
+   "next_class": 1,
+   "next_class_label": "not run"
+  },
+  "classes_by_k": {
+   "64": 9,
+   "128": 9,
+   "160": 9,
+   "256": 1,
+   "320": 1,
+   "384": 1
+  }
+ },
+ "traeff/design_loop_R": {
+  "by_k": {
+   "64": "completed",
+   "128": "completed",
+   "160": "completed",
+   "256": 6
+  },
+  "largest_completed_k": 160,
+  "note": "R_k256 reached the 90-min wall cap (class 6) with the record driver's unchunked whole-vector transfers (D27): its in-loop dump and transfer time counts toward the process wall, so the cap, and the missing S5 at k >= 256 that follows from it, are results of the transfer method as run. Its iterations are diagnostics of an interrupted invalid run, not design-loop results (D32)"
+ },
+ "mg64_orig/design_loop_L": {
+  "by_k": {
+   "64": "completed",
+   "128": "completed",
+   "160": "completed"
+  },
+  "largest_completed_k": 160
+ },
+ "mg64_rep/design_loop_L": {
+  "by_k": {
+   "64": "completed",
+   "128": "completed",
+   "160": "completed"
+  },
+  "largest_completed_k": 160
+ },
+ "mgir_rep/design_loop_L": {
+  "by_k": {
+   "64": "completed",
+   "128": "completed",
+   "160": "completed"
+  },
+  "largest_completed_k": 160
+ },
+ "note": "lower bounds per path and workload (plan 4.9); refusals are admission predictions, not measured limits; the paper-wide maximum (113,246,208 elements, T27) is not changed by T28",
+ "note_k256_k320": "the k = 256 and 320 fixed-S1 completions are descriptive: G2 (system identity with the released action) and the independent residual are missing there (R_k256 class 6, K2_k256 class 4). At k = 256 our drivers read the load, supports and KE0 from the dumps of the invalid R_k256; they equal the plan's dump-free references entry by entry (fix_r2/check_k256_inputs.json). At k = 320 our drivers used the formula rebuild (record field system.source). The released fixed-state runs build their own system at every k (D32)"
+}

@@ -1,0 +1,1091 @@
+{
+ "guard_version": 4,
+ "guard_revision": "4.2",
+ "gpu_work": "none (fake streams, fake cupy, fake WSL probes and jobs)",
+ "all_passed": true,
+ "missing_cases": [],
+ "fix_cases": {
+  "1_coverage_fails_closed": [
+   "baseline_missing_refuses",
+   "baseline_empty_refuses",
+   "baseline_only_unrelated_pid_refuses",
+   "baseline_missing_counter_refuses",
+   "good_samples_covered_no_stop",
+   "sample_only_unrelated_pid_stops",
+   "sample_missing_shared_counter_stops",
+   "sample_missing_dedicated_counter_stops",
+   "sample_empty_stops",
+   "cupy_mode_unrelated_pid_after_context_stops_at_once",
+   "cupy_mode_missing_counter_after_context_stops_at_once",
+   "cupy_mode_coverage_from_first_appearance_only_samples_called_before_context_unchecked",
+   "cupy_guard_sample_after_context_without_process_stops_at_once",
+   "validate_credits_only_a_watched_carrier",
+   "cupy_mode_absent_after_first_appearance_stops",
+   "cupy_mode_never_appears_after_open_stops",
+   "cupy_mode_empty_sample_stops_before_open",
+   "sampler_marks_missing_counter"
+  ],
+  "2_no_gpu_work_outside_watch": [
+   "cupy_guard_arms_before_context_waits_for_process_before_admission_and_allocation",
+   "cupy_guard_refusal_after_arming_stops_sampler_and_releases_lock",
+   "cupy_guard_process_never_seen_refused_before_admission",
+   "t12mon_arms_before_admission_probe_and_computes_require_budget_without_cuda",
+   "t12mon_stop_during_probe_kills_probe_and_refuses_launch",
+   "t12mon_stop_between_checks_and_launch_refuses_launch",
+   "t12mon_stop_after_launch_kills_job",
+   "t12mon_stop_at_each_prelaunch_point_refuses_or_kills",
+   "t12mon_launch_race_never_leaves_a_job_running_after_the_stop",
+   "t12mon_launch_race_never_creates_a_job_with_the_stop_set",
+   "t12mon_stop_between_check_and_job_creation_waits_for_the_start_then_kills",
+   "negative_control_4_1_stop_decision_lets_the_job_be_created_with_the_stop_set",
+   "t12mon_stop_during_probe_startup_retries_until_the_linux_probe_ended",
+   "t12mon_stop_during_job_startup_retries_until_the_linux_job_ended"
+  ],
+  "3_lock": [
+   "lock_exclusive_and_released",
+   "stale_lock_refuses_with_owner_named_and_is_kept",
+   "lock_creation_atomic_under_race",
+   "lock_uses_o_excl_and_no_removal_in_acquire"
+  ],
+  "4_gate_statement": [
+   "gate_states_comparison_admitted_only_with_technical_acceptance",
+   "gate_flag_and_text_follow_tech_ok"
+  ]
+ },
+ "cases": {
+  "baseline_missing_refuses": {
+   "passed": true,
+   "detail": {
+    "refusal": "no WDDM sample within 5.0 s before arming (samples: 0, sampler ended: False)",
+    "covered": false
+   }
+  },
+  "baseline_empty_refuses": {
+   "passed": true,
+   "detail": {
+    "refusal": "the baseline sample is empty (no counter rows)",
+    "covered": false
+   }
+  },
+  "baseline_only_unrelated_pid_refuses": {
+   "passed": true,
+   "detail": {
+    "refusal": "watched PID(s) [7] not in the baseline sample with both counters",
+    "covered": false
+   }
+  },
+  "baseline_missing_counter_refuses": {
+   "passed": true,
+   "detail": {
+    "refusal": "watched PID(s) [7] not in the baseline sample with both counters",
+    "covered": false
+   }
+  },
+  "good_samples_covered_no_stop": {
+   "passed": true,
+   "detail": {
+    "covered": true,
+    "baseline_before_start": true,
+    "n_checked_in_or_after_job": 4,
+    "first_check_after_start_s": 0.5,
+    "last_check_minus_end_s": 0.0,
+    "max_gap_s": 1.0,
+    "max_gap_allowed_s": 5.0,
+    "coverage_lost": null
+   }
+  },
+  "sample_only_unrelated_pid_stops": {
+   "passed": true,
+   "detail": {
+    "fired": {
+     "t_sample": 1795471382.8744586,
+     "pid": 7,
+     "kind": "coverage_lost",
+     "is_test_trigger": false,
+     "reason": "watched PID 7 not in the sample"
+    },
+    "covered": false,
+    "samples_checked": 3
+   }
+  },
+  "sample_missing_shared_counter_stops": {
+   "passed": true,
+   "detail": {
+    "fired": {
+     "t_sample": 1795471383.075247,
+     "pid": 7,
+     "kind": "coverage_lost",
+     "is_test_trigger": false,
+     "reason": "PID 7 in the sample with a missing counter (seen: ['dedicated'])"
+    },
+    "covered": false,
+    "samples_checked": 3
+   }
+  },
+  "sample_missing_dedicated_counter_stops": {
+   "passed": true,
+   "detail": {
+    "fired": {
+     "t_sample": 1795471383.2874699,
+     "pid": 7,
+     "kind": "coverage_lost",
+     "is_test_trigger": false,
+     "reason": "PID 7 in the sample with a missing counter (seen: ['shared'])"
+    },
+    "covered": false,
+    "samples_checked": 3
+   }
+  },
+  "sample_empty_stops": {
+   "passed": true,
+   "detail": {
+    "fired": {
+     "t_sample": 1795471383.488507,
+     "pid": null,
+     "kind": "coverage_lost",
+     "is_test_trigger": false,
+     "reason": "empty WDDM sample (no counter rows)"
+    },
+    "covered": false,
+    "samples_checked": 3
+   }
+  },
+  "cupy_mode_unrelated_pid_after_context_stops_at_once": {
+   "passed": true,
+   "detail": {
+    "fired": {
+     "t_sample": 1795471382.189438,
+     "pid": 7,
+     "kind": "coverage_lost",
+     "is_test_trigger": false,
+     "reason": "watched PID 7 not in a sample whose counter call started 0.00 s after its CUDA context"
+    },
+    "checked": 0,
+    "coverage": {
+     "covered": false,
+     "why": "the watched process never appeared with both counters",
+     "coverage_lost": {
+      "t_sample": 1795471382.189438,
+      "pid": 7,
+      "kind": "coverage_lost",
+      "is_test_trigger": false,
+      "reason": "watched PID 7 not in a sample whose counter call started 0.00 s after its CUDA context"
+     }
+    }
+   }
+  },
+  "cupy_mode_missing_counter_after_context_stops_at_once": {
+   "passed": true,
+   "detail": {
+    "t_sample": 1795471382.3902464,
+    "pid": 7,
+    "kind": "coverage_lost",
+    "is_test_trigger": false,
+    "reason": "PID 7 in the sample with a missing counter (seen: ['dedicated'])"
+   }
+  },
+  "cupy_mode_coverage_from_first_appearance_only_samples_called_before_context_unchecked": {
+   "passed": true,
+   "detail": {
+    "checked": 4,
+    "not_checked": {
+     "call_started_before_context": 2
+    },
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 4,
+     "first_check_after_start_s": 0.0,
+     "last_check_minus_end_s": 0.0,
+     "max_gap_s": 0.050956010818481445,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "from_t": 1795471382.5906706
+    }
+   }
+  },
+  "cupy_mode_absent_after_first_appearance_stops": {
+   "passed": true,
+   "detail": {
+    "fired": {
+     "t_sample": 1795471382.792284,
+     "pid": 7,
+     "kind": "coverage_lost",
+     "is_test_trigger": false,
+     "reason": "watched PID 7 not in the sample"
+    },
+    "covered": false
+   }
+  },
+  "cupy_mode_never_appears_after_open_stops": {
+   "passed": true,
+   "detail": {
+    "t_sample": 1795471382.993067,
+    "pid": 7,
+    "kind": "coverage_lost",
+    "is_test_trigger": false,
+    "reason": "watched PID 7 not in a sample whose counter call started 0.00 s after its CUDA context"
+   }
+  },
+  "cupy_mode_empty_sample_stops_before_open": {
+   "passed": true,
+   "detail": {
+    "t_sample": 1795471383.29357,
+    "pid": null,
+    "kind": "coverage_lost",
+    "is_test_trigger": false,
+    "reason": "empty WDDM sample (no counter rows)"
+   }
+  },
+  "sampler_marks_missing_counter": {
+   "passed": true,
+   "detail": {
+    "seen": {
+     "7": [
+      "dedicated",
+      "shared"
+     ],
+     "8": [
+      "dedicated"
+     ]
+    },
+    "mem": {
+     "7": {
+      "dedicated": 1000,
+      "shared": 20
+     },
+     "8": {
+      "dedicated": 5,
+      "shared": 0
+     }
+    }
+   }
+  },
+  "cupy_guard_arms_before_context_waits_for_process_before_admission_and_allocation": {
+   "passed": true,
+   "detail": {
+    "events": [
+     "sampler_start",
+     "device_open_armed",
+     "memGetInfo_1",
+     "first_seen",
+     "memGetInfo_2",
+     "require_budget",
+     "set_limit"
+    ],
+    "absent_at_arm": [
+     31964
+    ],
+    "checked": 1,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 1,
+     "first_check_after_start_s": 0.0,
+     "last_check_minus_end_s": 0.0,
+     "max_gap_s": 0.0,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "from_t": 1795471386.6263154
+    }
+   }
+  },
+  "cupy_guard_refusal_after_arming_stops_sampler_and_releases_lock": {
+   "passed": true,
+   "detail": {
+    "events": [
+     "sampler_start",
+     "device_open_armed",
+     "memGetInfo_1",
+     "first_seen",
+     "memGetInfo_2",
+     "require_budget",
+     "sampler_stop"
+    ]
+   }
+  },
+  "cupy_guard_process_never_seen_refused_before_admission": {
+   "passed": true,
+   "detail": {
+    "events": [
+     "sampler_start",
+     "device_open_armed",
+     "memGetInfo_1",
+     "sampler_stop"
+    ],
+    "status": "stopped_coverage_lost",
+    "reason": null,
+    "die_codes": [
+     5
+    ]
+   }
+  },
+  "cupy_guard_sample_after_context_without_process_stops_at_once": {
+   "passed": true,
+   "detail": {
+    "events": [
+     "sampler_start",
+     "device_open_armed",
+     "memGetInfo_1",
+     "sample_without_process",
+     "sampler_stop",
+     "first_seen"
+    ],
+    "fired": {
+     "t_sample": 1795471388.1064115,
+     "pid": 31964,
+     "kind": "coverage_lost",
+     "is_test_trigger": false,
+     "reason": "watched PID 31964 not in a sample whose counter call started 0.30 s after its CUDA context"
+    },
+    "die_codes": [
+     5
+    ]
+   }
+  },
+  "t12mon_arms_before_admission_probe_and_computes_require_budget_without_cuda": {
+   "passed": true,
+   "detail": {
+    "exit": 4,
+    "status": "refused_admission",
+    "events": [
+     "sampler_start",
+     "admission_probe_armed",
+     "sampler_stop"
+    ],
+    "watched": [
+     3440
+    ],
+    "refused_reason": null,
+    "armed_before_probe": true,
+    "require_budget": {
+     "cuda_free": 21474836480,
+     "total": 25769803776,
+     "others_dedicated": 41943040,
+     "own_dedicated": 41943040,
+     "wddm_free": 25685917696,
+     "need": 32212254720,
+     "margin": 1610612736,
+     "effective_free": 21474836480,
+     "ok": false,
+     "computed": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows"
+    },
+    "job_started": false,
+    "job_killed": false,
+    "probe_killed": false,
+    "killtree": [],
+    "probe_windows_launcher_killed": false,
+    "kill": null,
+    "fired": false
+   }
+  },
+  "t12mon_stop_during_probe_kills_probe_and_refuses_launch": {
+   "passed": true,
+   "detail": {
+    "exit": "refused: the live stop fired before or during the admission probe: watched PID 3440 not in the sample",
+    "status": "refused_start",
+    "events": [
+     "sampler_start",
+     "admission_probe_armed",
+     "sampler_stop"
+    ],
+    "watched": [
+     3440
+    ],
+    "refused_reason": "the live stop fired before or during the admission probe: watched PID 3440 not in the sample",
+    "armed_before_probe": true,
+    "require_budget": null,
+    "job_started": false,
+    "job_killed": false,
+    "probe_killed": true,
+    "killtree": [
+     "bash <project>/revision_round1/work/tasks/T12/killtree.sh /tmp/t12probe_stop_during_probe.pid"
+    ],
+    "probe_windows_launcher_killed": false,
+    "kill": {
+     "attempts": [
+      {
+       "t": 1795471390.3841896,
+       "stdout": "fake killtree 0",
+       "returncode": 0
+      }
+     ],
+     "t_kill_start": 1795471390.3841896,
+     "killed": "admission probe",
+     "linux_process_ended_confirmed": true,
+     "launcher_exit_code": -9,
+     "confirmation": "its wsl.exe exited after killtree.sh returned 0",
+     "t_kill_done": 1795471390.3841896,
+     "killtree_stdout": "fake killtree 0",
+     "killtree_returncode": 0,
+     "killtree_attempts": 1
+    },
+    "fired": true
+   }
+  },
+  "t12mon_stop_between_checks_and_launch_refuses_launch": {
+   "passed": true,
+   "detail": {
+    "exit": "refused: the live stop fired before launch: watched PID 3440 not in the sample",
+    "status": "refused_start",
+    "events": [
+     "sampler_start",
+     "admission_probe_armed",
+     "sampler_stop"
+    ],
+    "watched": [
+     3440
+    ],
+    "refused_reason": "the live stop fired before launch: watched PID 3440 not in the sample",
+    "armed_before_probe": true,
+    "require_budget": {
+     "cuda_free": 21474836480,
+     "total": 25769803776,
+     "others_dedicated": 41943040,
+     "own_dedicated": 41943040,
+     "wddm_free": 25685917696,
+     "need": 67108864,
+     "margin": 1610612736,
+     "effective_free": 21474836480,
+     "ok": true,
+     "computed": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows"
+    },
+    "job_started": false,
+    "job_killed": false,
+    "probe_killed": false,
+    "killtree": [],
+    "probe_windows_launcher_killed": false,
+    "kill": {
+     "attempts": [],
+     "t_kill_start": 1795471391.8065565,
+     "t_kill_done": 1795471391.8065565,
+     "killed": null,
+     "killtree_returncode": null,
+     "killtree_stdout": "stop fired before launch: no job to kill; the launcher refuses"
+    },
+    "fired": true
+   }
+  },
+  "t12mon_stop_after_launch_kills_job": {
+   "passed": true,
+   "detail": {
+    "exit": null,
+    "status": "stopped_coverage_lost",
+    "events": [
+     "sampler_start",
+     "admission_probe_armed",
+     "job_started",
+     "sampler_stop"
+    ],
+    "watched": [
+     3440
+    ],
+    "refused_reason": null,
+    "armed_before_probe": true,
+    "require_budget": {
+     "cuda_free": 21474836480,
+     "total": 25769803776,
+     "others_dedicated": 41943040,
+     "own_dedicated": 41943040,
+     "wddm_free": 25685917696,
+     "need": 67108864,
+     "margin": 1610612736,
+     "effective_free": 21474836480,
+     "ok": true,
+     "computed": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows"
+    },
+    "job_started": true,
+    "job_killed": true,
+    "probe_killed": false,
+    "killtree": [
+     "bash <project>/revision_round1/work/tasks/T12/killtree.sh /tmp/t12job_stop_after_launch.pid"
+    ],
+    "probe_windows_launcher_killed": false,
+    "kill": {
+     "attempts": [
+      {
+       "t": 1795471393.8711643,
+       "stdout": "fake killtree 0",
+       "returncode": 0
+      }
+     ],
+     "t_kill_start": 1795471393.8711643,
+     "killed": "job",
+     "linux_process_ended_confirmed": true,
+     "launcher_exit_code": -9,
+     "confirmation": "its wsl.exe exited after killtree.sh returned 0",
+     "t_kill_done": 1795471393.8711643,
+     "killtree_stdout": "fake killtree 0",
+     "killtree_returncode": 0,
+     "killtree_attempts": 1,
+     "t_rel_launch_s": 0.63
+    },
+    "fired": true,
+    "fired_at_start_job_entry": false,
+    "fired_when_job_created": false
+   }
+  },
+  "t12mon_stop_at_each_prelaunch_point_refuses_or_kills": {
+   "passed": true,
+   "detail": {
+    "after_last_prelaunch_step": {
+     "exit": "refused: the live stop fired before launch: watched PID 3440 not in the sample",
+     "status": "refused_start",
+     "events": [
+      "sampler_start",
+      "admission_probe_armed",
+      "sampler_stop"
+     ],
+     "watched": [
+      3440
+     ],
+     "refused_reason": "the live stop fired before launch: watched PID 3440 not in the sample",
+     "armed_before_probe": true,
+     "require_budget": {
+      "cuda_free": 21474836480,
+      "total": 25769803776,
+      "others_dedicated": 41943040,
+      "own_dedicated": 41943040,
+      "wddm_free": 25685917696,
+      "need": 67108864,
+      "margin": 1610612736,
+      "effective_free": 21474836480,
+      "ok": true,
+      "computed": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows"
+     },
+     "job_started": false,
+     "job_killed": false,
+     "probe_killed": false,
+     "killtree": [],
+     "probe_windows_launcher_killed": false,
+     "kill": {
+      "attempts": [],
+      "t_kill_start": 1795471397.5082088,
+      "t_kill_done": 1795471397.5082088,
+      "killed": null,
+      "killtree_returncode": null,
+      "killtree_stdout": "stop fired before launch: no job to kill; the launcher refuses"
+     },
+     "fired": true
+    },
+    "inside_launch_section": {
+     "exit": null,
+     "status": "stopped_coverage_lost",
+     "events": [
+      "sampler_start",
+      "admission_probe_armed",
+      "job_started",
+      "sampler_stop"
+     ],
+     "watched": [
+      3440
+     ],
+     "refused_reason": null,
+     "armed_before_probe": true,
+     "require_budget": {
+      "cuda_free": 21474836480,
+      "total": 25769803776,
+      "others_dedicated": 41943040,
+      "own_dedicated": 41943040,
+      "wddm_free": 25685917696,
+      "need": 67108864,
+      "margin": 1610612736,
+      "effective_free": 21474836480,
+      "ok": true,
+      "computed": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows"
+     },
+     "job_started": true,
+     "job_killed": true,
+     "probe_killed": false,
+     "killtree": [
+      "bash <project>/revision_round1/work/tasks/T12/killtree.sh /tmp/t12job_stop_in_section.pid"
+     ],
+     "probe_windows_launcher_killed": false,
+     "kill": {
+      "attempts": [
+       {
+        "t": 1795471398.9497967,
+        "stdout": "fake killtree 0",
+        "returncode": 0
+       }
+      ],
+      "t_kill_start": 1795471398.9497967,
+      "killed": "job",
+      "linux_process_ended_confirmed": true,
+      "launcher_exit_code": -9,
+      "confirmation": "its wsl.exe exited after killtree.sh returned 0",
+      "t_kill_done": 1795471398.9497967,
+      "killtree_stdout": "fake killtree 0",
+      "killtree_returncode": 0,
+      "killtree_attempts": 1,
+      "t_rel_launch_s": 0.0
+     },
+     "fired": true,
+     "fired_at_start_job_entry": false,
+     "fired_when_job_created": false
+    }
+   }
+  },
+  "t12mon_launch_race_never_leaves_a_job_running_after_the_stop": {
+   "passed": true,
+   "detail": {
+    "n": 16,
+    "refused_before_launch": 14,
+    "launched_then_killed": 2,
+    "runs": [
+     {
+      "delay_s": 0.0,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.005,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.01,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.015,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.02,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.025,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.03,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.035,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.04,
+      "job_started": true,
+      "job_killed": true,
+      "status": "stopped_coverage_lost",
+      "fired_at_start_job_entry": false,
+      "fired_when_job_created": false
+     },
+     {
+      "delay_s": 0.045,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.05,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.055,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.06,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.065,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     },
+     {
+      "delay_s": 0.07,
+      "job_started": true,
+      "job_killed": true,
+      "status": "stopped_coverage_lost",
+      "fired_at_start_job_entry": false,
+      "fired_when_job_created": false
+     },
+     {
+      "delay_s": 0.075,
+      "job_started": false,
+      "job_killed": false,
+      "status": "refused_start",
+      "fired_at_start_job_entry": null,
+      "fired_when_job_created": null
+     }
+    ]
+   }
+  },
+  "t12mon_launch_race_never_creates_a_job_with_the_stop_set": {
+   "passed": true,
+   "detail": {
+    "launched": 2,
+    "job_created_with_stop_set": 0
+   }
+  },
+  "t12mon_stop_between_check_and_job_creation_waits_for_the_start_then_kills": {
+   "passed": true,
+   "detail": {
+    "exit": null,
+    "status": "stopped_coverage_lost",
+    "events": [
+     "sampler_start",
+     "admission_probe_armed",
+     "job_started",
+     "sampler_stop"
+    ],
+    "watched": [
+     3440
+    ],
+    "refused_reason": null,
+    "armed_before_probe": true,
+    "require_budget": {
+     "cuda_free": 21474836480,
+     "total": 25769803776,
+     "others_dedicated": 41943040,
+     "own_dedicated": 41943040,
+     "wddm_free": 25685917696,
+     "need": 67108864,
+     "margin": 1610612736,
+     "effective_free": 21474836480,
+     "ok": true,
+     "computed": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows"
+    },
+    "job_started": true,
+    "job_killed": true,
+    "probe_killed": false,
+    "killtree": [
+     "bash <project>/revision_round1/work/tasks/T12/killtree.sh /tmp/t12job_stop_between_check_and_start.pid"
+    ],
+    "probe_windows_launcher_killed": false,
+    "kill": {
+     "attempts": [
+      {
+       "t": 1795471431.1072145,
+       "stdout": "fake killtree 0",
+       "returncode": 0
+      }
+     ],
+     "t_kill_start": 1795471431.1072145,
+     "killed": "job",
+     "linux_process_ended_confirmed": true,
+     "launcher_exit_code": -9,
+     "confirmation": "its wsl.exe exited after killtree.sh returned 0",
+     "t_kill_done": 1795471431.1072145,
+     "killtree_stdout": "fake killtree 0",
+     "killtree_returncode": 0,
+     "killtree_attempts": 1,
+     "t_rel_launch_s": 0.51
+    },
+    "fired": true,
+    "fired_at_start_job_entry": false,
+    "fire_attempt_completed_before_job_created": false,
+    "fired_when_job_created": false
+   }
+  },
+  "negative_control_4_1_stop_decision_lets_the_job_be_created_with_the_stop_set": {
+   "passed": true,
+   "detail": {
+    "exit": null,
+    "status": "stopped_coverage_lost",
+    "events": [
+     "sampler_start",
+     "admission_probe_armed",
+     "job_started",
+     "sampler_stop"
+    ],
+    "watched": [
+     3440
+    ],
+    "refused_reason": null,
+    "armed_before_probe": true,
+    "require_budget": {
+     "cuda_free": 21474836480,
+     "total": 25769803776,
+     "others_dedicated": 41943040,
+     "own_dedicated": 41943040,
+     "wddm_free": 25685917696,
+     "need": 67108864,
+     "margin": 1610612736,
+     "effective_free": 21474836480,
+     "ok": true,
+     "computed": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows"
+    },
+    "job_started": true,
+    "job_killed": true,
+    "probe_killed": false,
+    "killtree": [
+     "bash <project>/revision_round1/work/tasks/T12/killtree.sh /tmp/t12job_neg_4_1.pid"
+    ],
+    "probe_windows_launcher_killed": false,
+    "kill": {
+     "attempts": [
+      {
+       "t": 1795471434.9561877,
+       "stdout": "fake killtree 0",
+       "returncode": 0
+      }
+     ],
+     "t_kill_start": 1795471434.9561877,
+     "killed": "job",
+     "linux_process_ended_confirmed": true,
+     "launcher_exit_code": -9,
+     "confirmation": "its wsl.exe exited after killtree.sh returned 0",
+     "t_kill_done": 1795471434.9561877,
+     "killtree_stdout": "fake killtree 0",
+     "killtree_returncode": 0,
+     "killtree_attempts": 1,
+     "t_rel_launch_s": 0.0
+    },
+    "fired": true,
+    "fired_at_start_job_entry": false,
+    "fire_attempt_completed_before_job_created": true,
+    "fired_when_job_created": true
+   }
+  },
+  "t12mon_stop_during_probe_startup_retries_until_the_linux_probe_ended": {
+   "passed": true,
+   "detail": {
+    "exit": "refused: the live stop fired before or during the admission probe: watched PID 3440 not in the sample",
+    "status": "refused_start",
+    "events": [
+     "sampler_start",
+     "admission_probe_armed",
+     "sampler_stop"
+    ],
+    "watched": [
+     3440
+    ],
+    "refused_reason": "the live stop fired before or during the admission probe: watched PID 3440 not in the sample",
+    "armed_before_probe": true,
+    "require_budget": null,
+    "job_started": false,
+    "job_killed": false,
+    "probe_killed": true,
+    "killtree": [
+     "bash <project>/revision_round1/work/tasks/T12/killtree.sh /tmp/t12probe_stop_probe_startup.pid",
+     "bash <project>/revision_round1/work/tasks/T12/killtree.sh /tmp/t12probe_stop_probe_startup.pid",
+     "bash <project>/revision_round1/work/tasks/T12/killtree.sh /tmp/t12probe_stop_probe_startup.pid"
+    ],
+    "probe_windows_launcher_killed": false,
+    "kill": {
+     "attempts": [
+      {
+       "t": 1795471437.5738988,
+       "stdout": "fake killtree 2",
+       "returncode": 2
+      },
+      {
+       "t": 1795471438.076611,
+       "stdout": "fake killtree 2",
+       "returncode": 2
+      },
+      {
+       "t": 1795471438.5782108,
+       "stdout": "fake killtree 0",
+       "returncode": 0
+      }
+     ],
+     "t_kill_start": 1795471437.5738988,
+     "killed": "admission probe",
+     "linux_process_ended_confirmed": true,
+     "launcher_exit_code": -9,
+     "confirmation": "its wsl.exe exited after killtree.sh returned 0",
+     "t_kill_done": 1795471438.5782108,
+     "killtree_stdout": "fake killtree 0",
+     "killtree_returncode": 0,
+     "killtree_attempts": 3
+    },
+    "fired": true
+   }
+  },
+  "t12mon_stop_during_job_startup_retries_until_the_linux_job_ended": {
+   "passed": true,
+   "detail": {
+    "exit": null,
+    "status": "stopped_coverage_lost",
+    "events": [
+     "sampler_start",
+     "admission_probe_armed",
+     "job_started",
+     "sampler_stop"
+    ],
+    "watched": [
+     3440
+    ],
+    "refused_reason": null,
+    "armed_before_probe": true,
+    "require_budget": {
+     "cuda_free": 21474836480,
+     "total": 25769803776,
+     "others_dedicated": 41943040,
+     "own_dedicated": 41943040,
+     "wddm_free": 25685917696,
+     "need": 67108864,
+     "margin": 1610612736,
+     "effective_free": 21474836480,
+     "ok": true,
+     "computed": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows"
+    },
+    "job_started": true,
+    "job_killed": true,
+    "probe_killed": false,
+    "killtree": [
+     "bash <project>/revision_round1/work/tasks/T12/killtree.sh /tmp/t12job_stop_job_startup.pid",
+     "bash <project>/revision_round1/work/tasks/T12/killtree.sh /tmp/t12job_stop_job_startup.pid",
+     "bash <project>/revision_round1/work/tasks/T12/killtree.sh /tmp/t12job_stop_job_startup.pid"
+    ],
+    "probe_windows_launcher_killed": false,
+    "kill": {
+     "attempts": [
+      {
+       "t": 1795471440.11938,
+       "stdout": "fake killtree 2",
+       "returncode": 2
+      },
+      {
+       "t": 1795471440.6358514,
+       "stdout": "fake killtree 2",
+       "returncode": 2
+      },
+      {
+       "t": 1795471441.1824777,
+       "stdout": "fake killtree 0",
+       "returncode": 0
+      }
+     ],
+     "t_kill_start": 1795471440.11938,
+     "killed": "job",
+     "linux_process_ended_confirmed": true,
+     "launcher_exit_code": -9,
+     "confirmation": "its wsl.exe exited after killtree.sh returned 0",
+     "t_kill_done": 1795471441.1824777,
+     "killtree_stdout": "fake killtree 0",
+     "killtree_returncode": 0,
+     "killtree_attempts": 3,
+     "t_rel_launch_s": 1.18
+    },
+    "fired": true,
+    "fired_at_start_job_entry": false,
+    "fired_when_job_created": false
+   }
+  },
+  "validate_credits_only_a_watched_carrier": {
+   "passed": true,
+   "detail": {
+    "original": {
+     "vm_carrier_pid": 3440,
+     "carrier_is_watched": true,
+     "clean": true
+    },
+    "original_covers_job": true,
+    "carrier_pid_changed_to_unwatched": {
+     "vm_carrier_pid": null,
+     "carrier_is_watched": false,
+     "clean": false,
+     "not_monitored_reasons": [
+      "no watched WSL VM carrier: growing VM process(es) [99999] not among the watched PIDs [3440]"
+     ]
+    },
+    "carrier_pid_changed_covers_job": false,
+    "unwatched_vm_grows_more": {
+     "vm_carrier_pid": 3440,
+     "carrier_is_watched": true,
+     "clean": true,
+     "other_growing_processes": [
+      "vmwp"
+     ]
+    }
+   }
+  },
+  "lock_exclusive_and_released": {
+   "passed": true,
+   "detail": {
+    "first": true,
+    "second_while_held": false,
+    "refusal": "GPU lock <temp>\\tmpcu0ykqlt\\gpu_job.lock exists, owner a (pid 31964); an existing lock is never removed automatically",
+    "second_after_release": true
+   }
+  },
+  "stale_lock_refuses_with_owner_named_and_is_kept": {
+   "passed": true,
+   "detail": {
+    "refused_held_by": {
+     "pid": 999999,
+     "owner": "dead-launcher"
+    },
+    "refused_reason": "GPU lock <temp>\\tmpcu0ykqlt\\gpu_job.lock exists, owner dead-launcher (pid 999999); an existing lock is never removed automatically"
+   }
+  },
+  "lock_creation_atomic_under_race": {
+   "passed": true,
+   "detail": {
+    "acquired": 1,
+    "tries": 16
+   }
+  },
+  "lock_uses_o_excl_and_no_removal_in_acquire": {
+   "passed": true,
+   "detail": null
+  },
+  "gate_states_comparison_admitted_only_with_technical_acceptance": {
+   "passed": true,
+   "detail": {
+    "true": "Admitted: the fixed-state comparison on the same card and the same free-DOF system is available. The released code's native 128x64x64 run does not give a design-workload timing: on this card and toolchain its state solves stop at the step cap from design iteration 5, which is reported as a result about that code, and matched design-workload performance is left to T28. Its native stop is an FP32 recursive residual that leaves FP64 true residuals of order 1e-4 even where it is met.",
+    "false": "Not admitted: technical acceptance does not hold (acceptance block), so the fixed-state comparison is not available for R1.1 and the response relies on T10/T11."
+   }
+  },
+  "gate_flag_and_text_follow_tech_ok": {
+   "passed": true,
+   "detail": null
+  }
+ }
+}

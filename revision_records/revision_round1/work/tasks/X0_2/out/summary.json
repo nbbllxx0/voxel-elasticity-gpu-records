@@ -1,0 +1,2747 @@
+{
+ "plan": {
+  "file": "tasks/X0_2/ANALYSIS_PLAN.md",
+  "hash_record": {
+   "frozen_at_local": "2026-11-25 03:28:57",
+   "note": "written before the first confirmatory job (R_adaptive_n384); no confirmatory run directory exists at this time",
+   "confirmatory_runs_present": [],
+   "sha256": {
+    "ANALYSIS_PLAN.md": "fcd2982d2eee5b2c0bd4b09a1f77adddea0d8c1887a65921ed9e21aeacea3cd9",
+    "x02_driver.py": "a6a31fd78554fe2dc750f6ce50df88705358f2fe83ff10004bcbafb9af85f01f",
+    "x02_variants.py": "b5e0ae337149a96d04cdeee139762e2af13b83af169523f394fdd8e4317d082c",
+    "x02_job.py": "02272485ee454346ce468d74b8c1ff53ffe4adaf3324dc2960a8d114130604f5",
+    "x02_launch.py": "63bee8d4dd0809842835f751872b558b316fd51312d5f1776f0d502fbb70e0fd",
+    "x02_queue.sh": "adde4389235465b50941317c26eaffc0a2545797263f6c8a27c825376591631a",
+    "x02_tight_fit.py": "4cd649981fe6c989119ca00b408b1e082b2287872bcdf2585622defdc8d24b0b",
+    "t30_common.py": "2f3cb6c9e4cc351cd54f46b004bade1b577a9a78bf7c45534cceab0ba468075d",
+    "t30_driver.py": "becdbf49bde96d14dd2110ece54ba5f4a17e0fe5d3d7b6212603963f849f8d6f",
+    "t30_cpu.py": "780bb0553724bd2c74d1f3d40eedc2d0f91418a7ca42222e6eb667537b0e6f63",
+    "t30_launch.py": "8694365324697cc495b174cef04764055de0db103c29f69ee132658816abbbb7",
+    "t30_launch_selftest.py": "d23fe987d9e37845ea8eff80b34ba46a7cbfc2fac21ad21b9548d3d49e88c19b",
+    "out/tight_memory_fit.json": "d942d7065286b2d8ccdcac7222fe92a020b20abd0e58ed0099c0e7ab9f2bea73",
+    "out/c0_n384.json": "dadc691d2e0bb25aa45245626c4401ae1a1a0da37c97662e4b8ed4a24660e138",
+    "src/voxfem/__init__.py": "c0a1b1cd2147b2ba49cb4a5088cf56d29acdf504a118ebab884a49afa298a2e4",
+    "src/voxfem/core.py": "318596a50144b51639725c4e56ce78a5b64734326bade8b37a8780d1fa7fb0de",
+    "src/voxfem/filters.py": "a578eb1d7798ce0e761e13fe24371114bad3b73855cb1463b01070368690375f",
+    "src/voxfem/guard.py": "d9ed2a1c40b14c2d24cb216edf33146a3d1f16af049c80a24664c0f4ffed3529",
+    "src/voxfem/krylov.py": "9693ab48d4e030c5544df52de07cf7bd0bf544674ff6335120a80e1a1ef3b923",
+    "src/voxfem/memory.py": "824be1910087b604c5ef4b198ec5d513cb9ed5a4fbe885ac2404a4d81d0b894d",
+    "src/voxfem/mg.py": "78006d3b2b2e8ed59226801242828803cd283b541b69ca80688244cbb3c8c5d6",
+    "src/voxfem/operators.py": "e89a0ec274e670ad505b49e7fa8cb6291bd41c71bd81e42f289e30f104c1da23",
+    "src/voxfem/sass.py": "184cd5714214ef1cd597a91b74b6e548d2236baf97c59d6b1a1aea5ebcf9f360",
+    "src/voxfem/simp.py": "b68537c154bd76bc1209f88b04b79c8df422e3f2a1dd2b6b0c3d3e2e0fc3baa8",
+    "src/voxfem/sparse.py": "7830a4672baee93881886348e0b6867ac963f4fb27b0519481bbc64adea2ea26"
+   }
+  }
+ },
+ "diagnosis": {
+  "restarts": {
+   "192": {
+    "iterations": [
+     301,
+     320
+    ],
+    "first_rho_phys_equals_T31_retained": true,
+    "movers_per_step_range": [
+     10101,
+     10125
+    ],
+    "max_abs_change_range": [
+     0.35089111328125,
+     0.4420166015625
+    ],
+    "share_reversing_range": [
+     0.9999010978142617,
+     1.0
+    ],
+    "n_period2_gt_0.01_range": [
+     0,
+     13
+    ],
+    "share_movers_within_1_cell_of_interface_min": 1.0,
+    "mover_distance_to_interface_max_cells": 0.0,
+    "share_movers_within_filter_radius_of_class0_or_2_range": [
+     0.11575308641975308,
+     0.11612711612711613
+    ],
+    "union_of_movers": 10131,
+    "union_share_of_designable": 0.012245504784099095,
+    "n_designable": 827324,
+    "design_steps_at_move_limit_range": [
+     68346,
+     68951
+    ],
+    "design_steps_gt_1e-3_range": [
+     72692,
+     72927
+    ],
+    "movers_with_filtered_density_within_0.1_of_threshold_last": 9942,
+    "movers_last": 10127,
+    "J_last4": [
+     1.203750805591887,
+     1.20373833920632,
+     1.2037506923228392,
+     1.2037382727919859
+    ],
+    "lambda_last4": [
+     0.7305552670982388,
+     0.723443201653961,
+     0.7293187017988163,
+     0.7232089105850253
+    ],
+    "end_check_undamped": {
+     "lambda": 0.7299716454486228,
+     "max_abs_drho_phys": 0.35093581676483154,
+     "n_drho_phys_gt_0.01": 10128,
+     "max_abs_design_step": 0.050000011920928955,
+     "n_design_step_gt_1e-3": 72756,
+     "trial_volume": 0.4999999999938041
+    },
+    "last_step_abs_change_quantiles_movers": {
+     "0.0": 0.010000228881835938,
+     "0.1": 0.01318359375,
+     "0.5": 0.03469085693359375,
+     "0.9": 0.10198669433593746,
+     "0.99": 0.20471313476562525,
+     "1.0": 0.35113525390625
+    },
+    "last_step_rho_before_quantiles_movers": {
+     "0.0": 0.0013341903686523438,
+     "0.1": 0.007330322265625,
+     "0.5": 0.07464599609375,
+     "0.9": 0.99658203125,
+     "0.99": 0.99853515625,
+     "1.0": 0.9990234375
+    },
+    "source": "tasks/X0_2/out/diag_restart_n192.json"
+   },
+   "384": {
+    "iterations": [
+     301,
+     312
+    ],
+    "first_rho_phys_equals_T31_retained": true,
+    "movers_per_step_range": [
+     80542,
+     80817
+    ],
+    "max_abs_change_range": [
+     0.5816650390625,
+     0.5821533203125
+    ],
+    "share_reversing_range": [
+     0.9993279904425307,
+     0.9999006852716258
+    ],
+    "n_period2_gt_0.01_range": [
+     366,
+     495
+    ],
+    "share_movers_within_1_cell_of_interface_min": 0.999950336470413,
+    "mover_distance_to_interface_max_cells": 2.0,
+    "share_movers_within_filter_radius_of_class0_or_2_range": [
+     0.1635918185530272,
+     0.1639661067340568
+    ],
+    "union_of_movers": 81287,
+    "union_share_of_designable": 0.012261355559551148,
+    "n_designable": 6629528,
+    "design_steps_at_move_limit_range": [
+     219192,
+     221199
+    ],
+    "design_steps_gt_1e-3_range": [
+     378404,
+     379893
+    ],
+    "movers_with_filtered_density_within_0.1_of_threshold_last": 80747,
+    "movers_last": 80834,
+    "J_last4": [
+     1.2040856995254188,
+     1.2040859328707607,
+     1.2040853694380698,
+     1.2040855075773644
+    ],
+    "lambda_last4": [
+     1.0745409183423413,
+     1.0679967661611875,
+     1.0746721563028174,
+     1.0682174092684091
+    ],
+    "end_check_undamped": {
+     "lambda": 1.0750167544223017,
+     "max_abs_drho_phys": 0.5819806456565857,
+     "n_drho_phys_gt_0.01": 80933,
+     "max_abs_design_step": 0.050000011920928955,
+     "n_design_step_gt_1e-3": 380279,
+     "trial_volume": 0.49999999976476067
+    },
+    "last_step_abs_change_quantiles_movers": {
+     "0.0": 0.01000213623046875,
+     "0.1": 0.014492034912109375,
+     "0.5": 0.0676727294921875,
+     "0.9": 0.208251953125,
+     "0.99": 0.3356738281249996,
+     "1.0": 0.58203125
+    },
+    "last_step_rho_before_quantiles_movers": {
+     "0.0": 0.0017557144165039062,
+     "0.1": 0.022552490234375,
+     "0.5": 0.479736328125,
+     "0.9": 0.98291015625,
+     "0.99": 0.99755859375,
+     "1.0": 0.9990234375
+    },
+    "source": "tasks/X0_2/out/diag_restart_n384.json"
+   }
+  },
+  "variants_n192": {
+   "base": {
+    "what": "T31's configuration R unchanged (reproduction, with diagnostics)",
+    "termination": "guard",
+    "iterations": 300,
+    "last_n_moving": 10105,
+    "last_drho_phys": 0.42018067836761475,
+    "J_spread_last10": 1.0423510090637643e-05,
+    "J_prod": 1.2037517705918233,
+    "mnd": 0.0015806524894868947,
+    "volume_abs_err": 2.9538593793176915e-12,
+    "max_production_rel_true": 9.696977621188831e-06,
+    "wall_s": 564.135013799998,
+    "end_check": {
+     "phase": {
+      "p": 4.5,
+      "beta": 32.0,
+      "move": 0.05
+     },
+     "undamped_phase_move": {
+      "lambda": 0.7339086317253481,
+      "max_abs_drho_phys": 0.3570685088634491,
+      "n_drho_phys_gt_0.01": 10115,
+      "max_abs_design_step": 0.050000011920928955,
+      "n_design_step_gt_1e-3": 72784,
+      "trial_volume": 0.49999999999812683
+     },
+     "rho_phys_restored_identical": true,
+     "s": 0.04725539998617023
+    },
+    "first_iteration_J_differs_from_T31_R_n192": 71,
+    "max_rel_J_diff_from_T31_iterations_1_65": 0.0,
+    "selected_iterations": {
+     "65": {
+      "J": 1.2066930022418731,
+      "drho_phys": 0.2579787075519562,
+      "n_moving": 6290,
+      "n_alt": 5976,
+      "n_ret2": 642,
+      "n_at_move_limit": 4832,
+      "n_step_gt_1e-3": 26042
+     },
+     "66": {
+      "J": 1.2042128992701344,
+      "drho_phys": 0.42478328943252563,
+      "n_moving": 23744,
+      "n_alt": 3142,
+      "n_ret2": 23773,
+      "n_at_move_limit": 21674,
+      "n_step_gt_1e-3": 36528
+     },
+     "75": {
+      "J": 1.2038104745113503,
+      "drho_phys": 0.3601888120174408,
+      "n_moving": 9613,
+      "n_alt": 9242,
+      "n_ret2": 1242,
+      "n_at_move_limit": 62016,
+      "n_step_gt_1e-3": 77257
+     },
+     "100": {
+      "J": 1.2037746894739136,
+      "drho_phys": 0.41519057750701904,
+      "n_moving": 10057,
+      "n_alt": 9995,
+      "n_ret2": 119,
+      "n_at_move_limit": 65826,
+      "n_step_gt_1e-3": 75444
+     },
+     "150": {
+      "J": 1.2037508022348467,
+      "drho_phys": 0.4095054864883423,
+      "n_moving": 10076,
+      "n_alt": 10071,
+      "n_ret2": 10,
+      "n_at_move_limit": 67482,
+      "n_step_gt_1e-3": 73685
+     },
+     "200": {
+      "J": 1.2037431658538529,
+      "drho_phys": 0.4159778952598572,
+      "n_moving": 10086,
+      "n_alt": 10094,
+      "n_ret2": 11,
+      "n_at_move_limit": 67998,
+      "n_step_gt_1e-3": 73080
+     },
+     "250": {
+      "J": 1.2037404139029277,
+      "drho_phys": 0.4022434949874878,
+      "n_moving": 10107,
+      "n_alt": 10120,
+      "n_ret2": 12,
+      "n_at_move_limit": 68506,
+      "n_step_gt_1e-3": 72908
+     },
+     "300": {
+      "J": 1.203738987569476,
+      "drho_phys": 0.42018067836761475,
+      "n_moving": 10105,
+      "n_alt": 10116,
+      "n_ret2": 1,
+      "n_at_move_limit": 68790,
+      "n_step_gt_1e-3": 72823
+     }
+    },
+    "source": "tasks/X0_2/out/runs/dev_base_n192/gpu_meta.json"
+   },
+   "move01": {
+    "what": "OC move limit 0.01 instead of 0.05 in the last phase",
+    "termination": "guard",
+    "iterations": 300,
+    "last_n_moving": 970,
+    "last_drho_phys": 0.06220436096191406,
+    "J_spread_last10": 8.572240799904335e-08,
+    "J_prod": 1.203482528387226,
+    "mnd": 0.001009495522102484,
+    "volume_abs_err": 1.4769296896588457e-12,
+    "max_production_rel_true": 9.947279723241321e-06,
+    "wall_s": 404.461602000054,
+    "end_check": {
+     "phase": {
+      "p": 4.5,
+      "beta": 32.0,
+      "move": 0.01
+     },
+     "undamped_phase_move": {
+      "lambda": 0.4734530749274061,
+      "max_abs_drho_phys": 0.06222665309906006,
+      "n_drho_phys_gt_0.01": 970,
+      "max_abs_design_step": 0.010000020265579224,
+      "n_design_step_gt_1e-3": 31504,
+      "trial_volume": 0.4999999999989193
+     },
+     "rho_phys_restored_identical": true,
+     "s": 0.05166310002095997
+    },
+    "first_iteration_J_differs_from_T31_R_n192": 20,
+    "max_rel_J_diff_from_T31_iterations_1_65": 2.694875087321331e-08,
+    "selected_iterations": {
+     "65": {
+      "J": 1.2066930039927044,
+      "drho_phys": 0.25796839594841003,
+      "n_moving": 6290,
+      "n_alt": 5976,
+      "n_ret2": 643,
+      "n_at_move_limit": 4832,
+      "n_step_gt_1e-3": 26044
+     },
+     "66": {
+      "J": 1.2042128941239645,
+      "drho_phys": 0.42476147413253784,
+      "n_moving": 23744,
+      "n_alt": 3142,
+      "n_ret2": 23772,
+      "n_at_move_limit": 73584,
+      "n_step_gt_1e-3": 75294
+     },
+     "75": {
+      "J": 1.2037306419238323,
+      "drho_phys": 0.0935283899307251,
+      "n_moving": 1529,
+      "n_alt": 148,
+      "n_ret2": 2516,
+      "n_at_move_limit": 37437,
+      "n_step_gt_1e-3": 66712
+     },
+     "100": {
+      "J": 1.2035193738692676,
+      "drho_phys": 0.07089856266975403,
+      "n_moving": 1062,
+      "n_alt": 1010,
+      "n_ret2": 18,
+      "n_at_move_limit": 29761,
+      "n_step_gt_1e-3": 43715
+     },
+     "150": {
+      "J": 1.203489506045461,
+      "drho_phys": 0.05879133939743042,
+      "n_moving": 1032,
+      "n_alt": 1014,
+      "n_ret2": 0,
+      "n_at_move_limit": 27606,
+      "n_step_gt_1e-3": 36972
+     },
+     "200": {
+      "J": 1.2034842064919757,
+      "drho_phys": 0.061729371547698975,
+      "n_moving": 988,
+      "n_alt": 984,
+      "n_ret2": 0,
+      "n_at_move_limit": 25294,
+      "n_step_gt_1e-3": 32948
+     },
+     "250": {
+      "J": 1.203483114294958,
+      "drho_phys": 0.06210404634475708,
+      "n_moving": 976,
+      "n_alt": 968,
+      "n_ret2": 0,
+      "n_at_move_limit": 25296,
+      "n_step_gt_1e-3": 32008
+     },
+     "300": {
+      "J": 1.2034826269666477,
+      "drho_phys": 0.06220436096191406,
+      "n_moving": 970,
+      "n_alt": 968,
+      "n_ret2": 0,
+      "n_at_move_limit": 25382,
+      "n_step_gt_1e-3": 31497
+     }
+    },
+    "source": "tasks/X0_2/out/runs/dev_move01_n192/gpu_meta.json"
+   },
+   "beta16": {
+    "what": "projection steepness capped: beta 16 instead of 32 in the last phase",
+    "termination": "guard",
+    "iterations": 300,
+    "last_n_moving": 2878,
+    "last_drho_phys": 0.1386820673942566,
+    "J_spread_last10": 8.528903869754443e-07,
+    "J_prod": 1.205938585176305,
+    "mnd": 0.00658603156736346,
+    "volume_abs_err": 1.3493595130142921e-11,
+    "max_production_rel_true": 9.963888740911957e-06,
+    "wall_s": 571.2548595999833,
+    "end_check": {
+     "phase": {
+      "p": 4.5,
+      "beta": 16.0,
+      "move": 0.05
+     },
+     "undamped_phase_move": {
+      "lambda": 1.0862408488601771,
+      "max_abs_drho_phys": 0.13872130215168,
+      "n_drho_phys_gt_0.01": 2874,
+      "max_abs_design_step": 0.050000011920928955,
+      "n_design_step_gt_1e-3": 10892,
+      "trial_volume": 0.499999999821917
+     },
+     "rho_phys_restored_identical": true,
+     "s": 0.049792799982242286
+    },
+    "first_iteration_J_differs_from_T31_R_n192": 20,
+    "max_rel_J_diff_from_T31_iterations_1_65": 3.678079171479797e-08,
+    "selected_iterations": {
+     "65": {
+      "J": 1.2066930016273163,
+      "drho_phys": 0.25797712802886963,
+      "n_moving": 6290,
+      "n_alt": 5976,
+      "n_ret2": 642,
+      "n_at_move_limit": 4832,
+      "n_step_gt_1e-3": 26044
+     },
+     "66": {
+      "J": 1.2063585771231606,
+      "drho_phys": 0.3084500730037689,
+      "n_moving": 12976,
+      "n_alt": 5120,
+      "n_ret2": 10952,
+      "n_at_move_limit": 7496,
+      "n_step_gt_1e-3": 26039
+     },
+     "75": {
+      "J": 1.2061108565690577,
+      "drho_phys": 0.1394340991973877,
+      "n_moving": 3697,
+      "n_alt": 3378,
+      "n_ret2": 326,
+      "n_at_move_limit": 3880,
+      "n_step_gt_1e-3": 21565
+     },
+     "100": {
+      "J": 1.2060158359595596,
+      "drho_phys": 0.12959393858909607,
+      "n_moving": 3102,
+      "n_alt": 3038,
+      "n_ret2": 58,
+      "n_at_move_limit": 3398,
+      "n_step_gt_1e-3": 16604
+     },
+     "150": {
+      "J": 1.2059639870221688,
+      "drho_phys": 0.14239653944969177,
+      "n_moving": 2956,
+      "n_alt": 2943,
+      "n_ret2": 10,
+      "n_at_move_limit": 3535,
+      "n_step_gt_1e-3": 13516
+     },
+     "200": {
+      "J": 1.2059483207972583,
+      "drho_phys": 0.1398787796497345,
+      "n_moving": 2936,
+      "n_alt": 2928,
+      "n_ret2": 8,
+      "n_at_move_limit": 3588,
+      "n_step_gt_1e-3": 12131
+     },
+     "250": {
+      "J": 1.2059416922125445,
+      "drho_phys": 0.1389540135860443,
+      "n_moving": 2884,
+      "n_alt": 2880,
+      "n_ret2": 2,
+      "n_at_move_limit": 3576,
+      "n_step_gt_1e-3": 11339
+     },
+     "300": {
+      "J": 1.2059380124101284,
+      "drho_phys": 0.1386820673942566,
+      "n_moving": 2878,
+      "n_alt": 2870,
+      "n_ret2": 0,
+      "n_at_move_limit": 3582,
+      "n_step_gt_1e-3": 11082
+     }
+    },
+    "source": "tasks/X0_2/out/runs/dev_beta16_n192/gpu_meta.json"
+   },
+   "betaramp": {
+    "what": "continuation: beta raised 16 -> 32 in steps of 4 every 10 iterations (32 from 96)",
+    "termination": "guard",
+    "iterations": 300,
+    "last_n_moving": 9962,
+    "last_drho_phys": 0.4156607389450073,
+    "J_spread_last10": 3.797643143085702e-06,
+    "J_prod": 1.2037297124604074,
+    "mnd": 0.00154229550757497,
+    "volume_abs_err": 5.763611810039038e-12,
+    "max_production_rel_true": 9.98175534614428e-06,
+    "wall_s": 554.2859707999742,
+    "end_check": {
+     "phase": {
+      "p": 4.5,
+      "beta": 32.0,
+      "move": 0.05
+     },
+     "undamped_phase_move": {
+      "lambda": 0.5905051283461519,
+      "max_abs_drho_phys": 0.3956413269042969,
+      "n_drho_phys_gt_0.01": 9962,
+      "max_abs_design_step": 0.050000011920928955,
+      "n_design_step_gt_1e-3": 72902,
+      "trial_volume": 0.4999999999931917
+     },
+     "rho_phys_restored_identical": true,
+     "s": 0.04647960001602769
+    },
+    "first_iteration_J_differs_from_T31_R_n192": 20,
+    "max_rel_J_diff_from_T31_iterations_1_65": 3.678079171479797e-08,
+    "selected_iterations": {
+     "65": {
+      "J": 1.206693003671319,
+      "drho_phys": 0.25797924399375916,
+      "n_moving": 6290,
+      "n_alt": 5976,
+      "n_ret2": 642,
+      "n_at_move_limit": 4832,
+      "n_step_gt_1e-3": 26044
+     },
+     "66": {
+      "J": 1.2052969499864559,
+      "drho_phys": 0.35515886545181274,
+      "n_moving": 20944,
+      "n_alt": 3788,
+      "n_ret2": 21418,
+      "n_at_move_limit": 10292,
+      "n_step_gt_1e-3": 28924
+     },
+     "75": {
+      "J": 1.2049549244694298,
+      "drho_phys": 0.21816018223762512,
+      "n_moving": 8328,
+      "n_alt": 7501,
+      "n_ret2": 841,
+      "n_at_move_limit": 16293,
+      "n_step_gt_1e-3": 36284
+     },
+     "100": {
+      "J": 1.2038018500180578,
+      "drho_phys": 0.3358728289604187,
+      "n_moving": 9810,
+      "n_alt": 9484,
+      "n_ret2": 784,
+      "n_at_move_limit": 66551,
+      "n_step_gt_1e-3": 78253
+     },
+     "150": {
+      "J": 1.2037460690304091,
+      "drho_phys": 0.4164949655532837,
+      "n_moving": 9910,
+      "n_alt": 9901,
+      "n_ret2": 24,
+      "n_at_move_limit": 67973,
+      "n_step_gt_1e-3": 73650
+     },
+     "200": {
+      "J": 1.2037367522105606,
+      "drho_phys": 0.3953291177749634,
+      "n_moving": 9921,
+      "n_alt": 9917,
+      "n_ret2": 4,
+      "n_at_move_limit": 68719,
+      "n_step_gt_1e-3": 72914
+     },
+     "250": {
+      "J": 1.2037353534022217,
+      "drho_phys": 0.4013029932975769,
+      "n_moving": 9953,
+      "n_alt": 9959,
+      "n_ret2": 3,
+      "n_at_move_limit": 69045,
+      "n_step_gt_1e-3": 72709
+     },
+     "300": {
+      "J": 1.2037343219952048,
+      "drho_phys": 0.4156607389450073,
+      "n_moving": 9962,
+      "n_alt": 9951,
+      "n_ret2": 9,
+      "n_at_move_limit": 69446,
+      "n_step_gt_1e-3": 72879
+     }
+    },
+    "source": "tasks/X0_2/out/runs/dev_betaramp_n192/gpu_meta.json"
+   },
+   "adaptive": {
+    "what": "per-element OC move limits in the last phase: x0.7 on a step reversal, x1.2 (up to the phase move 0.05) on a repeated direction, floor 1e-4",
+    "termination": "bounded_oscillation",
+    "iterations": 141,
+    "last_n_moving": 1,
+    "last_drho_phys": 0.01129254698753357,
+    "J_spread_last10": 1.6178210091831805e-06,
+    "J_prod": 1.2034943646882807,
+    "mnd": 0.001047537495893879,
+    "volume_abs_err": 3.14476777951711e-11,
+    "max_production_rel_true": 9.995414981219459e-06,
+    "wall_s": 219.69851079990622,
+    "end_check": {
+     "phase": {
+      "p": 4.5,
+      "beta": 32.0,
+      "move": 0.05
+     },
+     "undamped_phase_move": {
+      "lambda": 0.38638747674530083,
+      "max_abs_drho_phys": 0.032158076763153076,
+      "n_drho_phys_gt_0.01": 119,
+      "max_abs_design_step": 0.050000011920928955,
+      "n_design_step_gt_1e-3": 17177,
+      "trial_volume": 0.4999999999142303
+     },
+     "current_adaptive_limits": {
+      "lambda": 0.38600486114836324,
+      "max_abs_drho_phys": 0.0114632248878479,
+      "n_drho_phys_gt_0.01": 4,
+      "max_abs_design_step": 0.050000011920928955,
+      "n_design_step_gt_1e-3": 12534,
+      "trial_volume": 0.4999999999959295
+     },
+     "rho_phys_restored_identical": true,
+     "s": 0.07720020005945116
+    },
+    "first_iteration_J_differs_from_T31_R_n192": 34,
+    "max_rel_J_diff_from_T31_iterations_1_65": 3.021962538431543e-08,
+    "selected_iterations": {
+     "65": {
+      "J": 1.2066929938097581,
+      "drho_phys": 0.25800541043281555,
+      "n_moving": 6290,
+      "n_alt": 5976,
+      "n_ret2": 642,
+      "n_at_move_limit": 4832,
+      "n_step_gt_1e-3": 26042
+     },
+     "66": {
+      "J": 1.204212893056406,
+      "drho_phys": 0.42477571964263916,
+      "n_moving": 23744,
+      "n_alt": 3142,
+      "n_ret2": 23772,
+      "n_at_move_limit": 21674,
+      "n_step_gt_1e-3": 36528
+     },
+     "75": {
+      "J": 1.2036279466731596,
+      "drho_phys": 0.25393345952033997,
+      "n_moving": 3198,
+      "n_alt": 2716,
+      "n_ret2": 2486,
+      "n_at_move_limit": 30680,
+      "n_step_gt_1e-3": 59464
+     },
+     "100": {
+      "J": 1.2035127129095073,
+      "drho_phys": 0.056562840938568115,
+      "n_moving": 72,
+      "n_alt": 50,
+      "n_ret2": 13,
+      "n_at_move_limit": 7391,
+      "n_step_gt_1e-3": 23224
+     },
+     "141": {
+      "J": 1.203494556287326,
+      "drho_phys": 0.01129254698753357,
+      "n_moving": 1,
+      "n_alt": 0,
+      "n_ret2": 0,
+      "n_at_move_limit": 4314,
+      "n_step_gt_1e-3": 12749
+     }
+    },
+    "source": "tasks/X0_2/out/runs/dev_adaptive_n192/gpu_meta.json"
+   }
+  },
+  "base_vs_T31_R_n192_max_rel_J_diff_all": 1.9799740613725225e-06
+ },
+ "c0": {
+  "576": {
+   "completed": false,
+   "watch": {
+    "status": "refused_for_memory",
+    "valid": false,
+    "spilled": true,
+    "admission": {
+     "nvidia_smi_free_bytes": 22004367360,
+     "nvidia_smi_used_bytes": 3307208704,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 7557627904,
+     "predicted_peak_bytes": 19359077354,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "predicted_peak_t31_rule_bytes_information": 21443122805,
+     "admitted": true
+    },
+    "covered_from_go": true,
+    "go_sample_number": 3,
+    "go_s_after_launch": 12.929030179977417,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 354418688.0,
+    "child_dedicated_peak_bytes": 15974969344.0,
+    "n_samples": 9,
+    "max_sample_interval_s": 2.348573684692383,
+    "final_sample_checked": false,
+    "stop": "refused_for_memory: shared growth above 256 MiB",
+    "wall_s": 21.57804298400879,
+    "allocation_failure": false,
+    "job_completed": false,
+    "source": "tasks/X0_2/out/runs/c0_n576/monitor.json"
+   },
+   "note": "no gpu_meta.json: the launcher stopped the job",
+   "in_process_admission_record": "missing: the job held its require_budget answer and pool cap in memory until normal completion, and the guard stop ended it first (written at once since fix r1, out/fix_r1/admission_record_test.json)",
+   "what_the_record_establishes": "354,418,688 B of shared growth of the job's process during c0, above the 256 MiB limit. Other processes' dedicated usage was measured at admission only; later samples record the job's own counters, so the records establish neither when Windows moved other memory out nor the capacity of the optimization that was not launched"
+  },
+  "96": {
+   "completed": true,
+   "record": {
+    "n": 96,
+    "loads": [
+     "LC1_vertical",
+     "LC2_horizontal",
+     "LC3_42deg",
+     "LC4_torsion"
+    ],
+    "c0": [
+     11685016.072901936,
+     7741721.673010493,
+     3817800.2989389054,
+     939379.5061847483
+    ],
+    "rel_residual_node_hoist": [
+     5.982495006481974e-09,
+     5.705386245284857e-09,
+     6.669803240325761e-09,
+     9.902664925734203e-09
+    ],
+    "solver": [
+     "mg64",
+     "mg64",
+     "mg64",
+     "mg64"
+    ],
+    "tol": 1e-08,
+    "passed": true,
+    "source": "out\\runs\\c0_n96\\gpu_meta.json"
+   },
+   "four_solves_plus_setup_s": 6.484997999854386,
+   "pool_peak_reserved_bytes": 256376832,
+   "iterations": [
+    62,
+    61,
+    58,
+    58
+   ],
+   "cpu_check": {
+    "done": true,
+    "rel_residual_assembled": [
+     5.982499653864679e-09,
+     5.705385885625275e-09,
+     6.669802154818071e-09,
+     9.90266482641071e-09
+    ],
+    "assembly": {
+     "n_free": 372687,
+     "nnz": 28208889,
+     "assembly_s": 1.9925603999290615
+    },
+    "s": 2.157402276992798
+   },
+   "watch": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22299017216,
+     "nvidia_smi_used_bytes": 3012558848,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 7039090688,
+     "predicted_peak_bytes": 647745259,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    },
+    "covered_from_go": true,
+    "go_sample_number": 3,
+    "go_s_after_launch": 13.00379228591919,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 6291456.0,
+    "child_dedicated_peak_bytes": 597856256.0,
+    "n_samples": 12,
+    "max_sample_interval_s": 2.4027163982391357,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 28.149224042892456,
+    "allocation_failure": false,
+    "job_completed": true,
+    "source": "tasks/X0_2/out/runs/c0_n96/monitor.json"
+   },
+   "source": "tasks/X0_2/out/runs/c0_n96/gpu_meta.json"
+  }
+ },
+ "runs": {
+  "R_adaptive_n384": {
+   "present": true,
+   "outcome": "returned_design",
+   "completed": true,
+   "error": null,
+   "source": "tasks/X0_2/out/runs/R_adaptive_n384/gpu_meta.json",
+   "watch_opt": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22282240000,
+     "nvidia_smi_used_bytes": 3029336064,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 7055028224,
+     "predicted_peak_bytes": 5155791733,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "predicted_peak_t31_rule_bytes_information": 5155791733,
+     "admitted": true
+    },
+    "covered_from_go": true,
+    "go_sample_number": 3,
+    "go_s_after_launch": 13.060688495635986,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 102760448.0,
+    "child_dedicated_peak_bytes": 5029359616.0,
+    "n_samples": 1019,
+    "max_sample_interval_s": 2.657214403152466,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 2378.316878795624,
+    "allocation_failure": false,
+    "job_completed": true,
+    "source": "tasks/X0_2/out/runs/R_adaptive_n384/monitor.json"
+   },
+   "watch_audit": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22008561664,
+     "nvidia_smi_used_bytes": 3303014400,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 7582523392,
+     "predicted_peak_bytes": 5726503036,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "predicted_peak_t31_rule_bytes_information": 6365188621,
+     "admitted": true
+    },
+    "covered_from_go": true,
+    "go_sample_number": 3,
+    "go_s_after_launch": 13.096233129501343,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 102760448.0,
+    "child_dedicated_peak_bytes": 5576720384.0,
+    "n_samples": 29,
+    "max_sample_interval_s": 2.371732473373413,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 67.68424940109253,
+    "allocation_failure": false,
+    "job_completed": true,
+    "source": "tasks/X0_2/out/runs/A_R_adaptive_n384/monitor.json"
+   },
+   "E1": {
+    "a_stopped_by_rule": false,
+    "a_termination": "guard",
+    "a_iterations": 300,
+    "b_volume_abs_err": 1.9665541417523968e-10,
+    "b_ok": true,
+    "c_max_production_rel_true": 9.996125277153476e-06,
+    "c_n_production_solves": 1204,
+    "c_ok": true,
+    "d_audit_valid": true,
+    "d_equilibrium": [
+     8.99073974812408e-09,
+     9.768676734272747e-09,
+     9.854546968468999e-09,
+     9.891849436070023e-09
+    ],
+    "d_ok": true,
+    "e_ok": true,
+    "e_note": "monitored interval from the launcher's 'go' sample (plan section 5)",
+    "passed": false
+   },
+   "D1_density_change_at_stop": {
+    "max_abs_drho_phys": 0.04193598031997681,
+    "max_abs_drho_phys_limit": 0.01,
+    "n_elem_drho_gt_0.01": 128,
+    "n_elem_limit": 7,
+    "J_spread_last10": 1.889445981717329e-06,
+    "J_spread_limit": 0.0001,
+    "last_iteration": 300,
+    "fp32_measures_last": {
+     "n_move32": 128,
+     "max_move32": 0.04211229085922241,
+     "mean_abs_change_desig": 2.245465671645249e-06,
+     "n_move_band_0.02": 87,
+     "n_move_band_0.05": 128,
+     "n_move_band_0.1": 128,
+     "n_ret2": 274,
+     "max_ret2": 0.081809401512146,
+     "n_alt": 0,
+     "n_step_gt_1e-3": 24324,
+     "max_abs_step": 0.050000011920928955,
+     "n_at_move_limit": 38,
+     "n_limit_below_1e-3": 538,
+     "n_limit_at_floor": 9
+    },
+    "note": "max |drho_phys| and the count compare FP32 rho_phys with the FP16 copy of the previous field (the authors' measure); fp32_measures_last are the FP32 counterparts"
+   },
+   "D1_retained_update": {
+    "max_abs_drho_phys": 0.05154922604560852,
+    "n_elem_drho_gt_0.01": 135,
+    "n_designable_drho_gt_0.01": 135,
+    "what": "retained (audited) field against the FP16 snapshot of iteration t: the update committed after the last stopping test",
+    "limit_n_elem": 7,
+    "meets_count_allowance": false,
+    "meets_max_change_0.01": false,
+    "note": "the stopping test measures the change into iteration t; the driver then commits one more OC update and retains and audits that field (authors' order, t30_driver.py:356-396). These are the two measures for that retained update (x02_fix_r1.py)",
+    "source": "tasks/X0_2/out/fix_r1/checks.json"
+   },
+   "D2_counts_volume": {
+    "grid": [
+     384,
+     256,
+     160
+    ],
+    "allocated": 15728640,
+    "active": 7232600,
+    "designable": 6629528,
+    "protected": 603072,
+    "volume_phys": 0.4999999998033446,
+    "mnd": 0.004678265319373038,
+    "solid_fraction_active": 0.5414199596272433
+   },
+   "D3_tight": {
+    "c_tight": [
+     3441941.736202214,
+     2395496.1656792588,
+     1094219.9734806502,
+     301476.82652167627
+    ],
+    "J_tight": 1.2038890559928548,
+    "c_tight_over_c0": [
+     1.1699122890633118,
+     1.2354019882781848,
+     1.140418480112327,
+     1.269823466517596
+    ],
+    "equilibrium_rel_residual": [
+     8.99073974812408e-09,
+     9.768676734272747e-09,
+     9.854546968468999e-09,
+     9.891849436070023e-09
+    ],
+    "solver_per_case": [
+     "mg64",
+     "mg64",
+     "mg64",
+     "mg64"
+    ],
+    "iterations_per_case": [
+     304,
+     294,
+     281,
+     293
+    ],
+    "wall_s_per_case": [
+     12.329448399948888,
+     11.892228699987754,
+     11.371539600077085,
+     11.861160599975847
+    ],
+    "c_rel_diff_prod_vs_tight": [
+     4.415806123696811e-09,
+     9.009364637108977e-09,
+     8.809287477947706e-09,
+     1.310704434689178e-09
+    ],
+    "max_c_rel_diff_prod_vs_tight": 9.009364637108977e-09,
+    "moduli_hash_match": true,
+    "fixed_set_ok": true,
+    "audit_four_solves_plus_setup_s": 48.08072860003449,
+    "audit_mg_setup_s": 0.6263513000449166,
+    "audit_broader_interval_s": 48.74782599997707,
+    "audit_pool_peak_reserved_bytes": 5143906304,
+    "c0": [
+     2942051.0993674565,
+     1939041.8571512343,
+     959489.8649598116,
+     237416.32949063057
+    ],
+    "source": "tasks/X0_2/out/runs/A_R_adaptive_n384/gpu_meta.json",
+    "reactions_informational": [
+     {
+      "force_balance_rel": 7.436229265055121e-10,
+      "moment_balance_rel": 4.400346945921046e-09
+     },
+     {
+      "force_balance_rel": 1.2784410148669638e-09,
+      "moment_balance_rel": 3.847978737136289e-09
+     },
+     {
+      "force_balance_rel": 5.898299836898823e-10,
+      "moment_balance_rel": 2.922826095490306e-09
+     },
+     {
+      "force_balance_rel": 3.4637750657174413e-10,
+      "moment_balance_rel": 3.1767784869555526e-09
+     }
+    ]
+   },
+   "D4_end_check": {
+    "phase": {
+     "p": 4.5,
+     "beta": 32.0,
+     "move": 0.05
+    },
+    "undamped_phase_move": {
+     "lambda": 1.0660402544019112,
+     "max_abs_drho_phys": 0.05072575807571411,
+     "n_drho_phys_gt_0.01": 137,
+     "max_abs_design_step": 0.050000011920928955,
+     "n_design_step_gt_1e-3": 24250,
+     "trial_volume": 0.49999999997099126
+    },
+    "current_adaptive_limits": {
+     "lambda": 1.0660333836800455,
+     "max_abs_drho_phys": 0.05071437358856201,
+     "n_drho_phys_gt_0.01": 137,
+     "max_abs_design_step": 0.050000011920928955,
+     "n_design_step_gt_1e-3": 24217,
+     "trial_volume": 0.4999999999734772
+    },
+    "rho_phys_restored_identical": true,
+    "s": 0.6525513998931274
+   },
+   "D5_vs_T31_R_n384": {
+    "J_tight_T31": 1.2040870253819667,
+    "J_tight": 1.2038890559928548,
+    "J_tight_rel_diff": -0.00016441451899963213,
+    "c_tight_over_c0_T31": [
+     1.1700699198447015,
+     1.2356080091415587,
+     1.1405317652950155,
+     1.2701384072465904
+    ],
+    "c_tight_over_c0": [
+     1.1699122890633118,
+     1.2354019882781848,
+     1.140418480112327,
+     1.269823466517596
+    ],
+    "mean_abs_drho_phys_designable": 0.0009110471631169835,
+    "fraction_designable_abs_drho_phys_gt_0.5": 0.00018855037643705555,
+    "T31_mnd": 0.0050074035982559115,
+    "source_T31": "tasks/T31/out/runs/A_R_n384/gpu_meta.json (copied to inputs_T31)"
+   },
+   "D6_cost": {
+    "optimization_s": 2359.2033608000493,
+    "optimization_note": "entering run() to the end of the final production re-solve; includes on_iter persistence and the per-iteration diagnostics (diag_s), excludes the end check",
+    "iterations": 300,
+    "median_iteration_s": 6.24022859998513,
+    "totals_design_iterations": {
+     "solve_s": 2138.7886043011677,
+     "setup_s": 20.92185900057666,
+     "sens_s": 12.722544699674472,
+     "oc_s": 55.63136740028858,
+     "filter_s": 2.846730699762702,
+     "diag_s": 46.428504800773226
+    },
+    "final_resolve": {
+     "solve_s": 2.982275600079447,
+     "setup_s": 0.28144359996076673
+    },
+    "solve_s_incl_final": 2141.770879901247,
+    "setup_s_incl_final": 21.203302600537427,
+    "on_iter_io_s": 4.0952765009133145,
+    "end_check_s": 0.6525513998931274,
+    "summed_ir_outer_per_case": [
+     978,
+     983,
+     844,
+     941
+    ],
+    "summed_inner_per_case": [
+     25349,
+     24254,
+     20000,
+     26363
+    ],
+    "median_solve_s_per_case": [
+     1.4818866499699652,
+     1.3702097499626689,
+     1.4032970000407659,
+     1.671636299986858
+    ],
+    "pool_peak_reserved_bytes": 4788150272,
+    "pool_peak_used_bytes": 4325469184,
+    "T30_model_bytes": 4218875479.671233,
+    "pool_over_model": 1.1349351966114745,
+    "T30_model_plus_24B_per_element_bytes": 4596362839.671233,
+    "pool_over_model_plus_24B": 1.041725912208986,
+    "process_dedicated_peak_bytes": 5029359616.0,
+    "bytes_per_allocated_element": 304.4223958333333,
+    "bytes_per_active_element": 662.0233763791721
+   },
+   "trajectory": [
+    {
+     "it": 65,
+     "J": 1.2077285905710986,
+     "drho_phys": 0.21390122175216675,
+     "n_moving": 20976,
+     "n_at_move_limit": 138,
+     "n_limit_below_1e-3": null,
+     "n_limit_at_floor": null
+    },
+    {
+     "it": 66,
+     "J": 1.204665450114642,
+     "drho_phys": 0.3909793198108673,
+     "n_moving": 206811,
+     "n_at_move_limit": 57898,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 70,
+     "J": 1.2043007486500543,
+     "drho_phys": 0.472584992647171,
+     "n_moving": 46966,
+     "n_at_move_limit": 84543,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 75,
+     "J": 1.2042108962195655,
+     "drho_phys": 0.3085296154022217,
+     "n_moving": 23506,
+     "n_at_move_limit": 33476,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 76,
+     "J": 1.2041990524271247,
+     "drho_phys": 0.2719379663467407,
+     "n_moving": 19677,
+     "n_at_move_limit": 26294,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 80,
+     "J": 1.2041572014964044,
+     "drho_phys": 0.41942065954208374,
+     "n_moving": 11604,
+     "n_at_move_limit": 11927,
+     "n_limit_below_1e-3": 4288,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 90,
+     "J": 1.2040934135514578,
+     "drho_phys": 0.37169331312179565,
+     "n_moving": 5563,
+     "n_at_move_limit": 7915,
+     "n_limit_below_1e-3": 5297,
+     "n_limit_at_floor": 494
+    },
+    {
+     "it": 100,
+     "J": 1.2040480775542157,
+     "drho_phys": 0.2741023004055023,
+     "n_moving": 4268,
+     "n_at_move_limit": 5510,
+     "n_limit_below_1e-3": 5060,
+     "n_limit_at_floor": 423
+    },
+    {
+     "it": 120,
+     "J": 1.203997942551542,
+     "drho_phys": 0.08363819122314453,
+     "n_moving": 1179,
+     "n_at_move_limit": 1264,
+     "n_limit_below_1e-3": 2695,
+     "n_limit_at_floor": 294
+    },
+    {
+     "it": 150,
+     "J": 1.2039578104983635,
+     "drho_phys": 0.046691834926605225,
+     "n_moving": 350,
+     "n_at_move_limit": 291,
+     "n_limit_below_1e-3": 1480,
+     "n_limit_at_floor": 85
+    },
+    {
+     "it": 200,
+     "J": 1.2039241351146734,
+     "drho_phys": 0.03141212463378906,
+     "n_moving": 161,
+     "n_at_move_limit": 152,
+     "n_limit_below_1e-3": 613,
+     "n_limit_at_floor": 33
+    },
+    {
+     "it": 250,
+     "J": 1.2039043944235879,
+     "drho_phys": 0.09352973103523254,
+     "n_moving": 165,
+     "n_at_move_limit": 49,
+     "n_limit_below_1e-3": 524,
+     "n_limit_at_floor": 7
+    },
+    {
+     "it": 300,
+     "J": 1.2038892922265858,
+     "drho_phys": 0.04193598031997681,
+     "n_moving": 128,
+     "n_at_move_limit": 38,
+     "n_limit_below_1e-3": 538,
+     "n_limit_at_floor": 9
+    }
+   ]
+  },
+  "R_adaptive_n576": {
+   "present": false,
+   "watch": null
+  }
+ },
+ "amendment_1": {
+  "note": "AMENDMENT_1.md: added after R_adaptive_n384 reached the guard; n = 192 is the size at which the step control was chosen; these results do not enter H1, H2 or the plan's R1.4 status",
+  "hash_record": {
+   "written_at_local": "2026-11-25 04:10:19",
+   "sha256": {
+    "AMENDMENT_1.md": "b8518717b2358d3e7795a1f9f7bab1e8a645ddf352b4b0b9b647da5a9ea4d804",
+    "ANALYSIS_PLAN.md": "fcd2982d2eee5b2c0bd4b09a1f77adddea0d8c1887a65921ed9e21aeacea3cd9",
+    "x02_driver.py": "a6a31fd78554fe2dc750f6ce50df88705358f2fe83ff10004bcbafb9af85f01f",
+    "x02_variants.py": "b5e0ae337149a96d04cdeee139762e2af13b83af169523f394fdd8e4317d082c",
+    "x02_job.py": "02272485ee454346ce468d74b8c1ff53ffe4adaf3324dc2960a8d114130604f5",
+    "x02_launch.py": "63bee8d4dd0809842835f751872b558b316fd51312d5f1776f0d502fbb70e0fd"
+   },
+   "plan_hash_unchanged": true,
+   "amendment_runs_present": []
+  },
+  "dev_adaptive_n192_audited": {
+   "present": true,
+   "outcome": "returned_design",
+   "completed": true,
+   "error": null,
+   "source": "tasks/X0_2/out/runs/dev_adaptive_n192/gpu_meta.json",
+   "watch_opt": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22282240000,
+     "nvidia_smi_used_bytes": 3029336064,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 7055032320,
+     "predicted_peak_bytes": 1130982288,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "admitted": true
+    },
+    "covered_from_go": true,
+    "go_sample_number": 3,
+    "go_s_after_launch": 13.070814371109009,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 18874368.0,
+    "child_dedicated_peak_bytes": 1187184640.0,
+    "n_samples": 101,
+    "max_sample_interval_s": 2.393907308578491,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 235.75110697746277,
+    "allocation_failure": false,
+    "job_completed": true,
+    "source": "tasks/X0_2/out/runs/dev_adaptive_n192/monitor.json"
+   },
+   "watch_audit": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22016950272,
+     "nvidia_smi_used_bytes": 3294625792,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 7574122496,
+     "predicted_peak_bytes": 1138617449,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "predicted_peak_t31_rule_bytes_information": 1284716097,
+     "admitted": true
+    },
+    "covered_from_go": true,
+    "go_sample_number": 3,
+    "go_s_after_launch": 13.04300308227539,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 18874368.0,
+    "child_dedicated_peak_bytes": 1113784320.0,
+    "n_samples": 17,
+    "max_sample_interval_s": 2.351701021194458,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 39.81077432632446,
+    "allocation_failure": false,
+    "job_completed": true,
+    "source": "tasks/X0_2/out/runs/A_dev_adaptive_n192/monitor.json"
+   },
+   "E1": {
+    "a_stopped_by_rule": true,
+    "a_termination": "bounded_oscillation",
+    "a_iterations": 141,
+    "b_volume_abs_err": 3.14476777951711e-11,
+    "b_ok": true,
+    "c_max_production_rel_true": 9.995414981219459e-06,
+    "c_n_production_solves": 568,
+    "c_ok": true,
+    "d_audit_valid": true,
+    "d_equilibrium": [
+     8.495039242528249e-09,
+     8.871900149224532e-09,
+     8.243324365486351e-09,
+     8.243543284176527e-09
+    ],
+    "d_ok": true,
+    "e_ok": true,
+    "e_note": "monitored interval from the launcher's 'go' sample (plan section 5)",
+    "passed": true
+   },
+   "D1_density_change_at_stop": {
+    "max_abs_drho_phys": 0.01129254698753357,
+    "max_abs_drho_phys_limit": 0.01,
+    "n_elem_drho_gt_0.01": 1,
+    "n_elem_limit": 1,
+    "J_spread_last10": 1.6178210091831805e-06,
+    "J_spread_limit": 0.0001,
+    "last_iteration": 141,
+    "fp32_measures_last": {
+     "n_move32": 1,
+     "max_move32": 0.011286765336990356,
+     "mean_abs_change_desig": 4.931391932443052e-06,
+     "n_move_band_0.02": 0,
+     "n_move_band_0.05": 0,
+     "n_move_band_0.1": 1,
+     "n_ret2": 0,
+     "max_ret2": 0.008595019578933716,
+     "n_alt": 0,
+     "n_step_gt_1e-3": 12749,
+     "max_abs_step": 0.050000011920928955,
+     "n_at_move_limit": 4314,
+     "n_limit_below_1e-3": 7190,
+     "n_limit_at_floor": 1083
+    },
+    "note": "max |drho_phys| and the count compare FP32 rho_phys with the FP16 copy of the previous field (the authors' measure); fp32_measures_last are the FP32 counterparts"
+   },
+   "D1_retained_update": {
+    "max_abs_drho_phys": 0.011009901762008667,
+    "n_elem_drho_gt_0.01": 2,
+    "n_designable_drho_gt_0.01": 2,
+    "what": "retained (audited) field against the FP16 snapshot of iteration t: the update committed after the last stopping test",
+    "limit_n_elem": 1,
+    "meets_count_allowance": false,
+    "meets_max_change_0.01": false,
+    "note": "the stopping test measures the change into iteration t; the driver then commits one more OC update and retains and audits that field (authors' order, t30_driver.py:356-396). These are the two measures for that retained update (x02_fix_r1.py)",
+    "source": "tasks/X0_2/out/fix_r1/checks.json"
+   },
+   "D2_counts_volume": {
+    "grid": [
+     192,
+     128,
+     80
+    ],
+    "allocated": 1966080,
+    "active": 903548,
+    "designable": 827324,
+    "protected": 76224,
+    "volume_phys": 0.4999999999685523,
+    "mnd": 0.001047537495893879,
+    "solid_fraction_active": 0.5419723135904235
+   },
+   "D3_tight": {
+    "c_tight": [
+     6785911.193313876,
+     4776381.397926238,
+     2160334.7256498286,
+     597209.5926120242
+    ],
+    "J_tight": 1.2034943566235332,
+    "c_tight_over_c0": [
+     1.169956919879367,
+     1.2376275210260164,
+     1.1396161712685038,
+     1.2667768143202458
+    ],
+    "equilibrium_rel_residual": [
+     8.495039242528249e-09,
+     8.871900149224532e-09,
+     8.243324365486351e-09,
+     8.243543284176527e-09
+    ],
+    "solver_per_case": [
+     "mg64",
+     "mg64",
+     "mg64",
+     "mg64"
+    ],
+    "iterations_per_case": [
+     202,
+     198,
+     186,
+     190
+    ],
+    "wall_s_per_case": [
+     1.3862083000130951,
+     1.3312606000108644,
+     1.2534853999968618,
+     1.2808587999315932
+    ],
+    "c_rel_diff_prod_vs_tight": [
+     9.102515176697746e-09,
+     1.4607464624118877e-08,
+     3.528994942577412e-09,
+     1.1287456095340623e-08
+    ],
+    "max_c_rel_diff_prod_vs_tight": 1.4607464624118877e-08,
+    "moduli_hash_match": true,
+    "fixed_set_ok": true,
+    "audit_four_solves_plus_setup_s": 5.696085199946538,
+    "audit_mg_setup_s": 0.444272099994123,
+    "audit_broader_interval_s": 5.783443300053477,
+    "audit_pool_peak_reserved_bytes": 734402560,
+    "c0": [
+     5800137.661490616,
+     3859304.44885916,
+     1895668.7173411776,
+     471440.26150532893
+    ],
+    "source": "tasks/X0_2/out/runs/A_dev_adaptive_n192/gpu_meta.json",
+    "reactions_informational": [
+     {
+      "force_balance_rel": 5.377750357229277e-10,
+      "moment_balance_rel": 1.0698967987060228e-09
+     },
+     {
+      "force_balance_rel": 1.5317049561685395e-09,
+      "moment_balance_rel": 6.13783784590501e-09
+     },
+     {
+      "force_balance_rel": 6.019816315800549e-10,
+      "moment_balance_rel": 6.319671709049959e-09
+     },
+     {
+      "force_balance_rel": 1.3716483122408158e-09,
+      "moment_balance_rel": 7.031892630499385e-09
+     }
+    ]
+   },
+   "D4_end_check": {
+    "phase": {
+     "p": 4.5,
+     "beta": 32.0,
+     "move": 0.05
+    },
+    "undamped_phase_move": {
+     "lambda": 0.38638747674530083,
+     "max_abs_drho_phys": 0.032158076763153076,
+     "n_drho_phys_gt_0.01": 119,
+     "max_abs_design_step": 0.050000011920928955,
+     "n_design_step_gt_1e-3": 17177,
+     "trial_volume": 0.4999999999142303
+    },
+    "current_adaptive_limits": {
+     "lambda": 0.38600486114836324,
+     "max_abs_drho_phys": 0.0114632248878479,
+     "n_drho_phys_gt_0.01": 4,
+     "max_abs_design_step": 0.050000011920928955,
+     "n_design_step_gt_1e-3": 12534,
+     "trial_volume": 0.4999999999959295
+    },
+    "rho_phys_restored_identical": true,
+    "s": 0.07720020005945116
+   },
+   "D5_vs_T31_R_n192": {
+    "J_tight_T31": 1.2037514323607468,
+    "J_tight": 1.2034943566235332,
+    "J_tight_rel_diff": -0.0002135621443950412,
+    "c_tight_over_c0_T31": [
+     1.1701601178730903,
+     1.2379786910584583,
+     1.1397171984870533,
+     1.2671497220243846
+    ],
+    "c_tight_over_c0": [
+     1.169956919879367,
+     1.2376275210260164,
+     1.1396161712685038,
+     1.2667768143202458
+    ],
+    "mean_abs_drho_phys_designable": 0.0004196121203560541,
+    "fraction_designable_abs_drho_phys_gt_0.5": 8.098399176138974e-05,
+    "T31_mnd": 0.0015821933484410136,
+    "source_T31": "tasks/T31/out/runs/A_R_n192/gpu_meta.json (copied to inputs_T31)"
+   },
+   "D6_cost": {
+    "optimization_s": 219.69851079990622,
+    "optimization_note": "entering run() to the end of the final production re-solve; includes on_iter persistence and the per-iteration diagnostics (diag_s), excludes the end check",
+    "iterations": 141,
+    "median_iteration_s": 1.262596599990502,
+    "totals_design_iterations": {
+     "solve_s": 171.77254870219622,
+     "setup_s": 7.333578099962324,
+     "sens_s": 0.360525100491941,
+     "oc_s": 1.2739889993099496,
+     "filter_s": 0.09855059999972582,
+     "diag_s": 1.9321830006083474
+    },
+    "final_resolve": {
+     "solve_s": 0.3877118000527844,
+     "setup_s": 0.03295110003091395
+    },
+    "solve_s_incl_final": 172.160260502249,
+    "setup_s_incl_final": 7.366529199993238,
+    "on_iter_io_s": 0.8996172995539382,
+    "end_check_s": 0.07720020005945116,
+    "summed_ir_outer_per_case": [
+     472,
+     473,
+     433,
+     455
+    ],
+    "summed_inner_per_case": [
+     10356,
+     10253,
+     8496,
+     10282
+    ],
+    "median_solve_s_per_case": [
+     0.3137381999986246,
+     0.3092459999024868,
+     0.2797061000019312,
+     0.29379260004498065
+    ],
+    "pool_peak_reserved_bytes": 757580800,
+    "pool_peak_used_bytes": 713694208,
+    "T30_model_bytes": 716025066.9589052,
+    "pool_over_model": 1.0580367014490009,
+    "T30_model_plus_24B_per_element_bytes": 763210986.9589052,
+    "pool_over_model_plus_24B": 0.9926230268495749,
+    "process_dedicated_peak_bytes": 1187184640.0,
+    "bytes_per_allocated_element": 385.3255208333333,
+    "bytes_per_active_element": 838.4510839490541
+   },
+   "trajectory": [
+    {
+     "it": 65,
+     "J": 1.2066929938097581,
+     "drho_phys": 0.25800541043281555,
+     "n_moving": 6290,
+     "n_at_move_limit": 4832,
+     "n_limit_below_1e-3": null,
+     "n_limit_at_floor": null
+    },
+    {
+     "it": 66,
+     "J": 1.204212893056406,
+     "drho_phys": 0.42477571964263916,
+     "n_moving": 23744,
+     "n_at_move_limit": 21674,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 70,
+     "J": 1.2038160352751779,
+     "drho_phys": 0.27747172117233276,
+     "n_moving": 6727,
+     "n_at_move_limit": 50946,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 75,
+     "J": 1.2036279466731596,
+     "drho_phys": 0.25393345952033997,
+     "n_moving": 3198,
+     "n_at_move_limit": 30680,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 76,
+     "J": 1.2036117455838462,
+     "drho_phys": 0.23888438940048218,
+     "n_moving": 2402,
+     "n_at_move_limit": 25243,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 80,
+     "J": 1.2035693991938483,
+     "drho_phys": 0.20520839095115662,
+     "n_moving": 731,
+     "n_at_move_limit": 11630,
+     "n_limit_below_1e-3": 2473,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 90,
+     "J": 1.203528151917327,
+     "drho_phys": 0.07043153047561646,
+     "n_moving": 292,
+     "n_at_move_limit": 10888,
+     "n_limit_below_1e-3": 5019,
+     "n_limit_at_floor": 288
+    },
+    {
+     "it": 100,
+     "J": 1.2035127129095073,
+     "drho_phys": 0.056562840938568115,
+     "n_moving": 72,
+     "n_at_move_limit": 7391,
+     "n_limit_below_1e-3": 6985,
+     "n_limit_at_floor": 795
+    },
+    {
+     "it": 120,
+     "J": 1.2035000212537712,
+     "drho_phys": 0.02045270800590515,
+     "n_moving": 15,
+     "n_at_move_limit": 5312,
+     "n_limit_below_1e-3": 7326,
+     "n_limit_at_floor": 1076
+    },
+    {
+     "it": 141,
+     "J": 1.203494556287326,
+     "drho_phys": 0.01129254698753357,
+     "n_moving": 1,
+     "n_at_move_limit": 4314,
+     "n_limit_below_1e-3": 7190,
+     "n_limit_at_floor": 1083
+    }
+   ]
+  },
+  "R_adaptive_n192_rep": {
+   "present": true,
+   "outcome": "returned_design",
+   "completed": true,
+   "error": null,
+   "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/gpu_meta.json",
+   "watch_opt": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22008561664,
+     "nvidia_smi_used_bytes": 3303014400,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 7553429504,
+     "predicted_peak_bytes": 1130982288,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "predicted_peak_t31_rule_bytes_information": 1130982288,
+     "admitted": true
+    },
+    "covered_from_go": true,
+    "go_sample_number": 3,
+    "go_s_after_launch": 13.274853229522705,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 18874368.0,
+    "child_dedicated_peak_bytes": 1187184640.0,
+    "n_samples": 103,
+    "max_sample_interval_s": 2.392901659011841,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 240.250412940979,
+    "allocation_failure": false,
+    "job_completed": true,
+    "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/monitor.json"
+   },
+   "watch_audit": {
+    "status": "ok",
+    "valid": true,
+    "spilled": false,
+    "admission": {
+     "nvidia_smi_free_bytes": 22032678912,
+     "nvidia_smi_used_bytes": 3278897152,
+     "nvidia_smi_total_bytes": 25757220864,
+     "others_dedicated_bytes": 7557627904,
+     "predicted_peak_bytes": 1138617449,
+     "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+     "predicted_peak_t31_rule_bytes_information": 1284716097,
+     "admitted": true
+    },
+    "covered_from_go": true,
+    "go_sample_number": 3,
+    "go_s_after_launch": 13.12025761604309,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 16777216.0,
+    "child_dedicated_peak_bytes": 1113780224.0,
+    "n_samples": 16,
+    "max_sample_interval_s": 2.369044303894043,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 37.588151931762695,
+    "allocation_failure": false,
+    "job_completed": true,
+    "source": "tasks/X0_2/out/runs/A_R_adaptive_n192_rep/monitor.json"
+   },
+   "E1": {
+    "a_stopped_by_rule": true,
+    "a_termination": "bounded_oscillation",
+    "a_iterations": 144,
+    "b_volume_abs_err": 3.357303324236227e-11,
+    "b_ok": true,
+    "c_max_production_rel_true": 9.974786520871357e-06,
+    "c_n_production_solves": 580,
+    "c_ok": true,
+    "d_audit_valid": true,
+    "d_equilibrium": [
+     8.202653167791762e-09,
+     8.526602495617857e-09,
+     9.589405519035293e-09,
+     9.852996939953308e-09
+    ],
+    "d_ok": true,
+    "e_ok": true,
+    "e_note": "monitored interval from the launcher's 'go' sample (plan section 5)",
+    "passed": true
+   },
+   "D1_density_change_at_stop": {
+    "max_abs_drho_phys": 0.010556071996688843,
+    "max_abs_drho_phys_limit": 0.01,
+    "n_elem_drho_gt_0.01": 1,
+    "n_elem_limit": 1,
+    "J_spread_last10": 1.5132115549655743e-06,
+    "J_spread_limit": 0.0001,
+    "last_iteration": 144,
+    "fp32_measures_last": {
+     "n_move32": 1,
+     "max_move32": 0.010570108890533447,
+     "mean_abs_change_desig": 4.517782243162633e-06,
+     "n_move_band_0.02": 0,
+     "n_move_band_0.05": 1,
+     "n_move_band_0.1": 1,
+     "n_ret2": 0,
+     "max_ret2": 0.005332976579666138,
+     "n_alt": 0,
+     "n_step_gt_1e-3": 12468,
+     "max_abs_step": 0.050000011920928955,
+     "n_at_move_limit": 4034,
+     "n_limit_below_1e-3": 7083,
+     "n_limit_at_floor": 1015
+    },
+    "note": "max |drho_phys| and the count compare FP32 rho_phys with the FP16 copy of the previous field (the authors' measure); fp32_measures_last are the FP32 counterparts"
+   },
+   "D1_retained_update": {
+    "max_abs_drho_phys": 0.019564032554626465,
+    "n_elem_drho_gt_0.01": 1,
+    "n_designable_drho_gt_0.01": 1,
+    "what": "retained (audited) field against the FP16 snapshot of iteration t: the update committed after the last stopping test",
+    "limit_n_elem": 1,
+    "meets_count_allowance": true,
+    "meets_max_change_0.01": false,
+    "note": "the stopping test measures the change into iteration t; the driver then commits one more OC update and retains and audits that field (authors' order, t30_driver.py:356-396). These are the two measures for that retained update (x02_fix_r1.py)",
+    "source": "tasks/X0_2/out/fix_r1/checks.json"
+   },
+   "D2_counts_volume": {
+    "grid": [
+     192,
+     128,
+     80
+    ],
+    "allocated": 1966080,
+    "active": 903548,
+    "designable": 827324,
+    "protected": 76224,
+    "volume_phys": 0.49999999996642697,
+    "mnd": 0.0010465927643065044,
+    "solid_fraction_active": 0.5419723135904235
+   },
+   "D3_tight": {
+    "c_tight": [
+     6785908.9902834,
+     4776379.152161133,
+     2160334.1521462537,
+     597209.292272957
+    ],
+    "J_tight": 1.2034938812900742,
+    "c_tight_over_c0": [
+     1.1699565400555412,
+     1.2376269391167278,
+     1.1396158687348545,
+     1.2667761772531736
+    ],
+    "equilibrium_rel_residual": [
+     8.202653167791762e-09,
+     8.526602495617857e-09,
+     9.589405519035293e-09,
+     9.852996939953308e-09
+    ],
+    "solver_per_case": [
+     "mg64",
+     "mg64",
+     "mg64",
+     "mg64"
+    ],
+    "iterations_per_case": [
+     195,
+     195,
+     190,
+     194
+    ],
+    "wall_s_per_case": [
+     1.341850999975577,
+     1.3098209999734536,
+     1.272831799928099,
+     1.3025461999932304
+    ],
+    "c_rel_diff_prod_vs_tight": [
+     1.186843258173345e-09,
+     1.721008722393593e-09,
+     5.533016645354624e-09,
+     8.507957630292918e-09
+    ],
+    "max_c_rel_diff_prod_vs_tight": 8.507957630292918e-09,
+    "moduli_hash_match": true,
+    "fixed_set_ok": true,
+    "audit_four_solves_plus_setup_s": 5.710977399838157,
+    "audit_mg_setup_s": 0.4839273999677971,
+    "audit_broader_interval_s": 5.797961200005375,
+    "audit_pool_peak_reserved_bytes": 734402560,
+    "c0": [
+     5800137.661490616,
+     3859304.44885916,
+     1895668.7173411776,
+     471440.26150532893
+    ],
+    "source": "tasks/X0_2/out/runs/A_R_adaptive_n192_rep/gpu_meta.json",
+    "reactions_informational": [
+     {
+      "force_balance_rel": 1.2754390562577779e-09,
+      "moment_balance_rel": 4.9310284409243096e-09
+     },
+     {
+      "force_balance_rel": 1.3420938714850394e-09,
+      "moment_balance_rel": 3.3899843080002887e-09
+     },
+     {
+      "force_balance_rel": 1.493935214947291e-09,
+      "moment_balance_rel": 3.9778360812356386e-09
+     },
+     {
+      "force_balance_rel": 1.7775659368992047e-09,
+      "moment_balance_rel": 7.521089796730397e-09
+     }
+    ]
+   },
+   "D4_end_check": {
+    "phase": {
+     "p": 4.5,
+     "beta": 32.0,
+     "move": 0.05
+    },
+    "undamped_phase_move": {
+     "lambda": 0.3851498082513425,
+     "max_abs_drho_phys": 0.05141264200210571,
+     "n_drho_phys_gt_0.01": 85,
+     "max_abs_design_step": 0.050000011920928955,
+     "n_design_step_gt_1e-3": 16924,
+     "trial_volume": 0.49999999996379735
+    },
+    "current_adaptive_limits": {
+     "lambda": 0.38479544345578054,
+     "max_abs_drho_phys": 0.020064204931259155,
+     "n_drho_phys_gt_0.01": 1,
+     "max_abs_design_step": 0.050000011920928955,
+     "n_design_step_gt_1e-3": 12375,
+     "trial_volume": 0.4999999999932638
+    },
+    "rho_phys_restored_identical": true,
+    "s": 0.09109230001922697
+   },
+   "D5_vs_T31_R_n192": {
+    "J_tight_T31": 1.2037514323607468,
+    "J_tight": 1.2034938812900742,
+    "J_tight_rel_diff": -0.0002139570211497095,
+    "c_tight_over_c0_T31": [
+     1.1701601178730903,
+     1.2379786910584583,
+     1.1397171984870533,
+     1.2671497220243846
+    ],
+    "c_tight_over_c0": [
+     1.1699565400555412,
+     1.2376269391167278,
+     1.1396158687348545,
+     1.2667761772531736
+    ],
+    "mean_abs_drho_phys_designable": 0.0004195879409019846,
+    "fraction_designable_abs_drho_phys_gt_0.5": 8.098399176138974e-05,
+    "T31_mnd": 0.0015821933484410136,
+    "source_T31": "tasks/T31/out/runs/A_R_n192/gpu_meta.json (copied to inputs_T31)"
+   },
+   "D6_cost": {
+    "optimization_s": 222.85211789992172,
+    "optimization_note": "entering run() to the end of the final production re-solve; includes on_iter persistence and the per-iteration diagnostics (diag_s), excludes the end check",
+    "iterations": 144,
+    "median_iteration_s": 1.2569324999931268,
+    "totals_design_iterations": {
+     "solve_s": 174.56130920047872,
+     "setup_s": 7.425373401027173,
+     "sens_s": 0.3676230004057288,
+     "oc_s": 1.2776227003196254,
+     "filter_s": 0.10161530028562993,
+     "diag_s": 1.975582999177277
+    },
+    "final_resolve": {
+     "solve_s": 0.3679189000977203,
+     "setup_s": 0.03202310006599873
+    },
+    "solve_s_incl_final": 174.92922810057644,
+    "setup_s_incl_final": 7.4573965010931715,
+    "on_iter_io_s": 0.9484110000776127,
+    "end_check_s": 0.09109230001922697,
+    "summed_ir_outer_per_case": [
+     479,
+     479,
+     438,
+     461
+    ],
+    "summed_inner_per_case": [
+     10510,
+     10461,
+     8546,
+     10374
+    ],
+    "median_solve_s_per_case": [
+     0.31413130002329126,
+     0.3050921499961987,
+     0.27753424999536946,
+     0.2931098999688402
+    ],
+    "pool_peak_reserved_bytes": 757580800,
+    "pool_peak_used_bytes": 713694208,
+    "T30_model_bytes": 716025066.9589052,
+    "pool_over_model": 1.0580367014490009,
+    "T30_model_plus_24B_per_element_bytes": 763210986.9589052,
+    "pool_over_model_plus_24B": 0.9926230268495749,
+    "process_dedicated_peak_bytes": 1187184640.0,
+    "bytes_per_allocated_element": 385.3255208333333,
+    "bytes_per_active_element": 838.4510839490541
+   },
+   "trajectory": [
+    {
+     "it": 65,
+     "J": 1.206693006675533,
+     "drho_phys": 0.25798627734184265,
+     "n_moving": 6290,
+     "n_at_move_limit": 4832,
+     "n_limit_below_1e-3": null,
+     "n_limit_at_floor": null
+    },
+    {
+     "it": 66,
+     "J": 1.2042128920305295,
+     "drho_phys": 0.42478513717651367,
+     "n_moving": 23744,
+     "n_at_move_limit": 21674,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 70,
+     "J": 1.2038160427569646,
+     "drho_phys": 0.2775786221027374,
+     "n_moving": 6728,
+     "n_at_move_limit": 50942,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 75,
+     "J": 1.2036279333949684,
+     "drho_phys": 0.25391989946365356,
+     "n_moving": 3193,
+     "n_at_move_limit": 30691,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 76,
+     "J": 1.2036117263545991,
+     "drho_phys": 0.23882246017456055,
+     "n_moving": 2401,
+     "n_at_move_limit": 25247,
+     "n_limit_below_1e-3": 0,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 80,
+     "J": 1.2035693887355525,
+     "drho_phys": 0.2046440839767456,
+     "n_moving": 733,
+     "n_at_move_limit": 11651,
+     "n_limit_below_1e-3": 2481,
+     "n_limit_at_floor": 0
+    },
+    {
+     "it": 90,
+     "J": 1.2035281472824957,
+     "drho_phys": 0.0704735517501831,
+     "n_moving": 285,
+     "n_at_move_limit": 10921,
+     "n_limit_below_1e-3": 5086,
+     "n_limit_at_floor": 290
+    },
+    {
+     "it": 100,
+     "J": 1.2035126771230957,
+     "drho_phys": 0.07116886973381042,
+     "n_moving": 76,
+     "n_at_move_limit": 7475,
+     "n_limit_below_1e-3": 6931,
+     "n_limit_at_floor": 772
+    },
+    {
+     "it": 120,
+     "J": 1.2035000668023126,
+     "drho_phys": 0.019822269678115845,
+     "n_moving": 19,
+     "n_at_move_limit": 5525,
+     "n_limit_below_1e-3": 7496,
+     "n_limit_at_floor": 1095
+    },
+    {
+     "it": 144,
+     "J": 1.2034940348522423,
+     "drho_phys": 0.010556071996688843,
+     "n_moving": 1,
+     "n_at_move_limit": 4034,
+     "n_limit_below_1e-3": 7083,
+     "n_limit_at_floor": 1015
+    }
+   ]
+  },
+  "H1b_n192_replicate": "supported",
+  "replicate_vs_development": {
+   "J_tight_rel_diff": -3.9496110340850627e-07,
+   "mean_abs_drho_phys_designable": 6.902795039943081e-06,
+   "max_abs_drho_phys_designable": 0.01093989610671997,
+   "n_designable_abs_drho_phys_gt_0.5": 0,
+   "n_designable": 827324
+  },
+  "dev_adaptive_n192_E1_reading": "supported"
+ },
+ "hypotheses": {
+  "H1_n384": "inconclusive",
+  "H2_n576": "not run",
+  "H2_reason": "c0_n576 refused_for_memory (refused_for_memory: shared growth above 256 MiB); plan section 4: job 4 runs only if job 3 passes",
+  "R1_4_application_status": "inconclusive",
+  "passing_runs": []
+ },
+ "fix_r1": {
+  "restarts": {
+   "192": {
+    "first_update_from_T31_retained": {
+     "iteration_entry": 302,
+     "n_elem_gt_0.01_fp32": 10120,
+     "max_abs_change_fp32": 0.3544842600822449,
+     "n_elem_gt_0.01_fp16_reference": 10107,
+     "what": "rho_phys of the first restart update against T31's retained field (bit-identical start)"
+    },
+    "end_check_undamped": {
+     "after_updates": 20,
+     "from_iteration": 320,
+     "n_drho_phys_gt_0.01": 10128,
+     "max_abs_drho_phys": 0.35093581676483154,
+     "what": "trial undamped step from the field after the restart's last update, not from T31's retained field"
+    },
+    "period2": {
+     "n_differing_gt_0.01_from_two_back_range": [
+      0,
+      13
+     ],
+     "max_abs_change_from_two_back_range": [
+      0.0091552734375,
+      0.40869140625
+     ],
+     "share_prev_movers_back_within_0.01_range": [
+      0.9987149070778965,
+      1.0
+     ],
+     "share_movers_also_moved_before_range": [
+      0.9990110759493671,
+      1.0
+     ],
+     "movers_per_step_range": [
+      10101,
+      10125
+     ],
+     "union_of_movers": 10131,
+     "n_alt_fp32_range": [
+      10120,
+      10131
+     ],
+     "n_alt_what": "elements whose physical-density change exceeds 0.01 in two consecutive updates with opposite sign (x02_driver._cnt_alt); a statement about rho_phys, not about design steps"
+    },
+    "design_steps_at_move_limit_range": [
+     68346,
+     68951
+    ],
+    "design_steps_at_move_limit_what": "design-variable steps with |s| >= 0.999 x move limit (x02_driver._cnt_atbound); their signs from step to step were not recorded, so a reversal of every limit-sized step is not established",
+    "sources": [
+     "tasks/X0_2/out/diag_restart_n192.json",
+     "tasks/X0_2/out/runs/diag_restart_n192/history.json"
+    ]
+   },
+   "384": {
+    "first_update_from_T31_retained": {
+     "iteration_entry": 302,
+     "n_elem_gt_0.01_fp32": 80565,
+     "max_abs_change_fp32": 0.5817497968673706,
+     "n_elem_gt_0.01_fp16_reference": 80562,
+     "what": "rho_phys of the first restart update against T31's retained field (bit-identical start)"
+    },
+    "end_check_undamped": {
+     "after_updates": 12,
+     "from_iteration": 312,
+     "n_drho_phys_gt_0.01": 80933,
+     "max_abs_drho_phys": 0.5819806456565857,
+     "what": "trial undamped step from the field after the restart's last update, not from T31's retained field"
+    },
+    "period2": {
+     "n_differing_gt_0.01_from_two_back_range": [
+      366,
+      495
+     ],
+     "max_abs_change_from_two_back_range": [
+      0.087646484375,
+      0.3470458984375
+     ],
+     "share_prev_movers_back_within_0.01_range": [
+      0.9946875853337637,
+      0.9960575742924089
+     ],
+     "share_movers_also_moved_before_range": [
+      0.9971336749761139,
+      0.9976848412816323
+     ],
+     "movers_per_step_range": [
+      80542,
+      80817
+     ],
+     "union_of_movers": 81287,
+     "n_alt_fp32_range": [
+      80299,
+      80621
+     ],
+     "n_alt_what": "elements whose physical-density change exceeds 0.01 in two consecutive updates with opposite sign (x02_driver._cnt_alt); a statement about rho_phys, not about design steps"
+    },
+    "design_steps_at_move_limit_range": [
+     219192,
+     221199
+    ],
+    "design_steps_at_move_limit_what": "design-variable steps with |s| >= 0.999 x move limit (x02_driver._cnt_atbound); their signs from step to step were not recorded, so a reversal of every limit-sized step is not established",
+    "sources": [
+     "tasks/X0_2/out/diag_restart_n384.json",
+     "tasks/X0_2/out/runs/diag_restart_n384/history.json"
+    ]
+   }
+  },
+  "variant_fields_n192": [
+   {
+    "pair": "base vs betaramp",
+    "n_designable": 827324,
+    "n_gt_0.01": 6955,
+    "n_gt_0.5": 362,
+    "max_abs_diff": 0.985858827829361,
+    "mean_abs_diff": 0.0007824126668791147,
+    "sources": [
+     "tasks/X0_2/out/runs/dev_base_n192/fields.npz",
+     "tasks/X0_2/out/runs/dev_betaramp_n192/fields.npz"
+    ]
+   },
+   {
+    "pair": "base vs move01",
+    "n_designable": 827324,
+    "n_gt_0.01": 6655,
+    "n_gt_0.5": 138,
+    "max_abs_diff": 0.9740357398986816,
+    "mean_abs_diff": 0.0004939948771036692,
+    "sources": [
+     "tasks/X0_2/out/runs/dev_base_n192/fields.npz",
+     "tasks/X0_2/out/runs/dev_move01_n192/fields.npz"
+    ]
+   },
+   {
+    "pair": "base vs beta16",
+    "n_designable": 827324,
+    "n_gt_0.01": 22865,
+    "n_gt_0.5": 378,
+    "max_abs_diff": 0.9753463827073574,
+    "mean_abs_diff": 0.0019001591874077837,
+    "sources": [
+     "tasks/X0_2/out/runs/dev_base_n192/fields.npz",
+     "tasks/X0_2/out/runs/dev_beta16_n192/fields.npz"
+    ]
+   },
+   {
+    "pair": "base vs adaptive",
+    "n_designable": 827324,
+    "n_gt_0.01": 6716,
+    "n_gt_0.5": 68,
+    "max_abs_diff": 0.9756700098514557,
+    "mean_abs_diff": 0.0004212874015460311,
+    "sources": [
+     "tasks/X0_2/out/runs/dev_base_n192/fields.npz",
+     "tasks/X0_2/out/runs/dev_adaptive_n192/fields.npz"
+    ]
+   },
+   {
+    "pair": "base vs T31 R_n192 (same settings)",
+    "n_designable": 827324,
+    "n_gt_0.01": 190,
+    "n_gt_0.5": 8,
+    "max_abs_diff": 0.8879550397396088,
+    "mean_abs_diff": 1.8722102752847407e-05,
+    "sources": [
+     "tasks/X0_2/out/runs/dev_base_n192/fields.npz",
+     "tasks/X0_2/inputs_T31/R_n192/fields.npz"
+    ]
+   }
+  ],
+  "betaramp_retained_vs_base_snapshots": {
+   "by_base_iteration": {
+    "base_it297": {
+     "n_gt_0.01": 6944,
+     "n_gt_0.5": 362,
+     "max_abs_diff": 0.9860571622848511
+    },
+    "base_it298": {
+     "n_gt_0.01": 7519,
+     "n_gt_0.5": 361,
+     "max_abs_diff": 0.9889423847198486
+    },
+    "base_it299": {
+     "n_gt_0.01": 6950,
+     "n_gt_0.5": 362,
+     "max_abs_diff": 0.9860571622848511
+    },
+    "base_it300": {
+     "n_gt_0.01": 7523,
+     "n_gt_0.5": 361,
+     "max_abs_diff": 0.9889423847198486
+    }
+   },
+   "sources": [
+    "tasks/X0_2/out/runs/dev_base_n192/snapshots.npz",
+    "tasks/X0_2/out/runs/dev_betaramp_n192/fields.npz"
+   ]
+  },
+  "admission_record_test": {
+   "1_written_and_read_back": true,
+   "2_record_survives_kill": true,
+   "3_written_before_any_phase": true,
+   "lines": {
+    "record_formed": 82,
+    "write_admission": 85,
+    "first_phase_call": 89
+   },
+   "passed": true
+  },
+  "source": "tasks/X0_2/out/fix_r1/checks.json"
+ },
+ "jobs": {
+  "A_dev_adaptive_n192": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22016950272,
+    "nvidia_smi_used_bytes": 3294625792,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7574122496,
+    "predicted_peak_bytes": 1138617449,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "predicted_peak_t31_rule_bytes_information": 1284716097,
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 13.04300308227539,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 18874368.0,
+   "child_dedicated_peak_bytes": 1113784320.0,
+   "n_samples": 17,
+   "max_sample_interval_s": 2.351701021194458,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 39.81077432632446,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/A_dev_adaptive_n192/monitor.json"
+  },
+  "A_R_adaptive_n192_rep": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22032678912,
+    "nvidia_smi_used_bytes": 3278897152,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7557627904,
+    "predicted_peak_bytes": 1138617449,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "predicted_peak_t31_rule_bytes_information": 1284716097,
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 13.12025761604309,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 16777216.0,
+   "child_dedicated_peak_bytes": 1113780224.0,
+   "n_samples": 16,
+   "max_sample_interval_s": 2.369044303894043,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 37.588151931762695,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/A_R_adaptive_n192_rep/monitor.json"
+  },
+  "A_R_adaptive_n384": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22008561664,
+    "nvidia_smi_used_bytes": 3303014400,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7582523392,
+    "predicted_peak_bytes": 5726503036,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "predicted_peak_t31_rule_bytes_information": 6365188621,
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 13.096233129501343,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 102760448.0,
+   "child_dedicated_peak_bytes": 5576720384.0,
+   "n_samples": 29,
+   "max_sample_interval_s": 2.371732473373413,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 67.68424940109253,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/A_R_adaptive_n384/monitor.json"
+  },
+  "c0_n576": {
+   "status": "refused_for_memory",
+   "valid": false,
+   "spilled": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22004367360,
+    "nvidia_smi_used_bytes": 3307208704,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7557627904,
+    "predicted_peak_bytes": 19359077354,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "predicted_peak_t31_rule_bytes_information": 21443122805,
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 12.929030179977417,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 354418688.0,
+   "child_dedicated_peak_bytes": 15974969344.0,
+   "n_samples": 9,
+   "max_sample_interval_s": 2.348573684692383,
+   "final_sample_checked": false,
+   "stop": "refused_for_memory: shared growth above 256 MiB",
+   "wall_s": 21.57804298400879,
+   "allocation_failure": false,
+   "job_completed": false,
+   "source": "tasks/X0_2/out/runs/c0_n576/monitor.json"
+  },
+  "c0_n96": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22299017216,
+    "nvidia_smi_used_bytes": 3012558848,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7039090688,
+    "predicted_peak_bytes": 647745259,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 13.00379228591919,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 6291456.0,
+   "child_dedicated_peak_bytes": 597856256.0,
+   "n_samples": 12,
+   "max_sample_interval_s": 2.4027163982391357,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 28.149224042892456,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/c0_n96/monitor.json"
+  },
+  "dev_adaptive_n192": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22282240000,
+    "nvidia_smi_used_bytes": 3029336064,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7055032320,
+    "predicted_peak_bytes": 1130982288,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 13.070814371109009,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 18874368.0,
+   "child_dedicated_peak_bytes": 1187184640.0,
+   "n_samples": 101,
+   "max_sample_interval_s": 2.393907308578491,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 235.75110697746277,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/dev_adaptive_n192/monitor.json"
+  },
+  "dev_adaptive_n96": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22299017216,
+    "nvidia_smi_used_bytes": 3012558848,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7059550208,
+    "predicted_peak_bytes": 627881107,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 12.798971176147461,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 6291456.0,
+   "child_dedicated_peak_bytes": 704811008.0,
+   "n_samples": 39,
+   "max_sample_interval_s": 2.553385019302368,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 91.77587795257568,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/dev_adaptive_n96/monitor.json"
+  },
+  "dev_base_n192": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22278045696,
+    "nvidia_smi_used_bytes": 3033530368,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7068086272,
+    "predicted_peak_bytes": 1130982288,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 13.22702932357788,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 16777216.0,
+   "child_dedicated_peak_bytes": 1170403328.0,
+   "n_samples": 249,
+   "max_sample_interval_s": 2.4737660884857178,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 580.731600522995,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/dev_base_n192/monitor.json"
+  },
+  "dev_beta16_n192": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22296920064,
+    "nvidia_smi_used_bytes": 3014656000,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7040851968,
+    "predicted_peak_bytes": 1130982288,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 12.815350532531738,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 18874368.0,
+   "child_dedicated_peak_bytes": 1170407424.0,
+   "n_samples": 252,
+   "max_sample_interval_s": 2.4839563369750977,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 587.9691030979156,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/dev_beta16_n192/monitor.json"
+  },
+  "dev_betaramp_n192": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22253928448,
+    "nvidia_smi_used_bytes": 3057647616,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7055024128,
+    "predicted_peak_bytes": 1130982288,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 12.947227716445923,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 18874368.0,
+   "child_dedicated_peak_bytes": 1170407424.0,
+   "n_samples": 245,
+   "max_sample_interval_s": 2.4343643188476562,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 571.6580119132996,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/dev_betaramp_n192/monitor.json"
+  },
+  "dev_move01_n192": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22267559936,
+    "nvidia_smi_used_bytes": 3044016128,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7040860160,
+    "predicted_peak_bytes": 1130982288,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 13.155186653137207,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 16777216.0,
+   "child_dedicated_peak_bytes": 1170403328.0,
+   "n_samples": 180,
+   "max_sample_interval_s": 2.428361415863037,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 420.38207364082336,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/dev_move01_n192/monitor.json"
+  },
+  "diag_restart_n192": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22299017216,
+    "nvidia_smi_used_bytes": 3012558848,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7039086592,
+    "predicted_peak_bytes": 1130982288,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 12.813210248947144,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 18874368.0,
+   "child_dedicated_peak_bytes": 992149504.0,
+   "n_samples": 25,
+   "max_sample_interval_s": 2.3518340587615967,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 58.46261477470398,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/diag_restart_n192/monitor.json"
+  },
+  "diag_restart_n384": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22278045696,
+    "nvidia_smi_used_bytes": 3033530368,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7059554304,
+    "predicted_peak_bytes": 5155791733,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 13.025963068008423,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 102760448.0,
+   "child_dedicated_peak_bytes": 4800774144.0,
+   "n_samples": 91,
+   "max_sample_interval_s": 2.3875701427459717,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 212.362934589386,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/diag_restart_n384/monitor.json"
+  },
+  "R_adaptive_n192_rep": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22008561664,
+    "nvidia_smi_used_bytes": 3303014400,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7553429504,
+    "predicted_peak_bytes": 1130982288,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "predicted_peak_t31_rule_bytes_information": 1130982288,
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 13.274853229522705,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 18874368.0,
+   "child_dedicated_peak_bytes": 1187184640.0,
+   "n_samples": 103,
+   "max_sample_interval_s": 2.392901659011841,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 240.250412940979,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/R_adaptive_n192_rep/monitor.json"
+  },
+  "R_adaptive_n384": {
+   "status": "ok",
+   "valid": true,
+   "spilled": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22282240000,
+    "nvidia_smi_used_bytes": 3029336064,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 7055028224,
+    "predicted_peak_bytes": 5155791733,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "predicted_peak_t31_rule_bytes_information": 5155791733,
+    "admitted": true
+   },
+   "covered_from_go": true,
+   "go_sample_number": 3,
+   "go_s_after_launch": 13.060688495635986,
+   "shared_base_bytes": 77594624.0,
+   "shared_max_growth_bytes": 102760448.0,
+   "child_dedicated_peak_bytes": 5029359616.0,
+   "n_samples": 1019,
+   "max_sample_interval_s": 2.657214403152466,
+   "final_sample_checked": true,
+   "stop": null,
+   "wall_s": 2378.316878795624,
+   "allocation_failure": false,
+   "job_completed": true,
+   "source": "tasks/X0_2/out/runs/R_adaptive_n384/monitor.json"
+  }
+ }
+}

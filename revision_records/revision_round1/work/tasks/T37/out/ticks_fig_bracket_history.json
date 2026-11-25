@@ -1,0 +1,125 @@
+{
+ "fig_bracket_history": [
+  {
+   "panel": "a",
+   "text": "0"
+  },
+  {
+   "panel": "a",
+   "text": "100"
+  },
+  {
+   "panel": "a",
+   "text": "200"
+  },
+  {
+   "panel": "a",
+   "text": "300"
+  },
+  {
+   "panel": "a",
+   "text": "$\\mathdefault{10^{-6}}$"
+  },
+  {
+   "panel": "a",
+   "text": "$\\mathdefault{10^{-5}}$"
+  },
+  {
+   "panel": "a",
+   "text": "$\\mathdefault{10^{-4}}$"
+  },
+  {
+   "panel": "a",
+   "text": "$\\mathdefault{10^{-3}}$"
+  },
+  {
+   "panel": "a",
+   "text": "$\\mathdefault{10^{-2}}$"
+  },
+  {
+   "panel": "a",
+   "text": "$\\mathdefault{10^{-1}}$"
+  },
+  {
+   "panel": "a",
+   "text": "$\\mathdefault{10^{0}}$"
+  },
+  {
+   "panel": "b",
+   "text": "0"
+  },
+  {
+   "panel": "b",
+   "text": "100"
+  },
+  {
+   "panel": "b",
+   "text": "200"
+  },
+  {
+   "panel": "b",
+   "text": "300"
+  },
+  {
+   "panel": "b",
+   "text": "$\\mathdefault{10^{-2}}$"
+  },
+  {
+   "panel": "b",
+   "text": "$\\mathdefault{10^{-1}}$"
+  },
+  {
+   "panel": "b",
+   "text": "$\\mathdefault{10^{0}}$"
+  },
+  {
+   "panel": "c",
+   "text": "0"
+  },
+  {
+   "panel": "c",
+   "text": "100"
+  },
+  {
+   "panel": "c",
+   "text": "200"
+  },
+  {
+   "panel": "c",
+   "text": "300"
+  },
+  {
+   "panel": "c",
+   "text": "1"
+  },
+  {
+   "panel": "c",
+   "text": "10"
+  },
+  {
+   "panel": "c",
+   "text": "100"
+  },
+  {
+   "panel": "c",
+   "text": "1k"
+  },
+  {
+   "panel": "c",
+   "text": "10k"
+  },
+  {
+   "panel": "c",
+   "text": "100k"
+  },
+  {
+   "panel": "c",
+   "text": "1M"
+  },
+  {
+   "panel": "c",
+   "text": "10M"
+  }
+ ],
+ "note": "axis tick labels: the scale of the plotted record values"
+}

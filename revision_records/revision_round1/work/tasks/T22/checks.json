@@ -1,0 +1,5005 @@
+{
+ "grids": [
+  4,
+  8,
+  16,
+  32,
+  64,
+  128
+ ],
+ "k4": {
+  "setup_checks_passed": true,
+  "aid_checks": [
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 2436.1765370556286,
+      "xTTx": 13914.2560561817,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 2379.7825166455823,
+      "xTTx": 19099.418254388125,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 2333.090735108016,
+      "xTTx": 14431.938105724319,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 528.0,
+      "xTTx": 2405332.071174955,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 640.0,
+      "xTTx": 2124594.9565826864,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 345.5207824707031,
+      "xTTx": 15910468.61530725,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 2.2325851015518668e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 6.63053886604447e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 1.9504705602444184e-05
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 2436.1765370556286,
+      "xTTx": 13914.2560561817,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 2379.7825166455823,
+      "xTTx": 19099.418254388125,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 2333.090735108016,
+      "xTTx": 14431.938105724319,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 528.0,
+      "xTTx": 2405332.071174955,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 640.0,
+      "xTTx": 2124594.9565826864,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 345.5207824707031,
+      "xTTx": 15910468.61530725,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 2.2325851015518668e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 6.63053886604447e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 1.9504705602444184e-05
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 2436.1765370556286,
+      "xTTx": 13914.2560561817,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 2379.7825166455823,
+      "xTTx": 19099.418254388125,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 2333.090735108016,
+      "xTTx": 14431.938105724319,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 528.0,
+      "xTTx": 2405332.071174955,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 640.0,
+      "xTTx": 2124594.9565826864,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 345.5207824707031,
+      "xTTx": 15910468.61530725,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 2.2325851015518668e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 6.63053886604447e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 1.9504705602444184e-05
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 2436.1765370556286,
+      "xTTx": 13914.2560561817,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 2379.7825166455823,
+      "xTTx": 19099.418254388125,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 2333.090735108016,
+      "xTTx": 14431.938105724319,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 528.0,
+      "xTTx": 2405332.071174955,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 640.0,
+      "xTTx": 2124594.9565826864,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 345.5207824707031,
+      "xTTx": 15910468.61530725,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 2.2325851015518668e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 6.63053886604447e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 1.9504705602444184e-05
+     }
+    ],
+    "all_positive": true
+   }
+  ],
+  "G0": null,
+  "block_recovery_cross_checks": {
+   "ref": true,
+   "stencil": true,
+   "diff": true,
+   "mean": true,
+   "atomic": true,
+   "corner": true
+  },
+  "t21_integrity": {
+   "u_ref": {
+    "file": "tasks\\T21\\out\\data\\k4_uniform\\ref_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 1.6533644141920937e-10,
+    "t21_K0_residual": 1.6533644141920937e-10,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_coef": {
+    "file": "tasks\\T21\\out\\data\\k4_uniform\\coef_stencil_gmres_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 0.0007208622226222503,
+    "t21_K0_residual": 0.0007208622226222503,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_ctrl": {
+    "file": "tasks\\T21\\out\\data\\k4_uniform\\ctrl_stencil_r1_1e-05.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 0.0022802814473551645,
+    "t21_K0_residual": 0.0022802814473551645,
+    "residual_within_1pct": true,
+    "passed": true
+   }
+  },
+  "directions": {
+   "st": {
+    "status": "ok",
+    "iters": 14,
+    "min_energy_ratio": 0.9980159639221916,
+    "rel": 4.681795371921519e-09,
+    "time_s": 0.06969428062438965,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "K": {
+    "status": "ok",
+    "iters": 14,
+    "min_energy_ratio": 1.0,
+    "rel": 4.670260304190761e-09,
+    "time_s": 0.025550127029418945,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "p32": {
+    "first_monitored_pass": {
+     "it": 10,
+     "monitored": 3.1161751489275654e-06,
+     "true": 0.0022802814473551645
+    },
+    "floor_true": 0.0022798737131483927,
+    "floor_it": 9,
+    "iters_run": 17,
+    "time_s": 0.03549766540527344,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "history_len": 17
+   }
+  }
+ },
+ "k8": {
+  "setup_checks_passed": true,
+  "aid_checks": [
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 15569.4461064272,
+      "xTTx": 154571.84437550802,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 15450.199233078969,
+      "xTTx": 400479.8465597229,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 15631.368413626298,
+      "xTTx": 178777.54201796887,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 3616.0,
+      "xTTx": 87815797.31114413,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 4032.0,
+      "xTTx": 59906834.516062245,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 2155.4437294006348,
+      "xTTx": 345772602.6234283,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 6.161149047919244e-08
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 3.7962794441994485e-08
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 2.4226476838724365e-06
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 15569.4461064272,
+      "xTTx": 154571.84437550802,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 15450.199233078969,
+      "xTTx": 400479.8465597229,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 15631.368413626298,
+      "xTTx": 178777.54201796887,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 3616.0,
+      "xTTx": 87815797.31114413,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 4032.0,
+      "xTTx": 59906834.516062245,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 2155.4437294006348,
+      "xTTx": 345772602.6234283,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 6.161149047919244e-08
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 3.7962794441994485e-08
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 2.4226476838724365e-06
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 15569.4461064272,
+      "xTTx": 154571.84437550802,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 15450.199233078969,
+      "xTTx": 400479.8465597229,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 15631.368413626298,
+      "xTTx": 178777.54201796887,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 3616.0,
+      "xTTx": 87815797.31114413,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 4032.0,
+      "xTTx": 59906834.516062245,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 2155.4437294006348,
+      "xTTx": 345772602.6234283,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 6.161149047919244e-08
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 3.7962794441994485e-08
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 2.4226476838724365e-06
+     }
+    ],
+    "all_positive": true
+   }
+  ],
+  "G0": {
+   "theta1_ref": 5.998488757680501e-06,
+   "lambda_E29": 5.998488757830559e-06,
+   "rel": 2.501593682922908e-11,
+   "U_over_lambda": 8.57415460893575e-06,
+   "passed": true
+  },
+  "block_recovery_cross_checks": {
+   "ref": true,
+   "stencil": true,
+   "diff": true,
+   "mean": true,
+   "atomic": true,
+   "corner": true
+  },
+  "t21_integrity": {
+   "u_ref": {
+    "file": "tasks\\T21\\out\\data\\k8_uniform\\ref_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 4.0057492866047187e-10,
+    "t21_K0_residual": 4.0057492866047187e-10,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_coef": {
+    "file": "tasks\\T21\\out\\data\\k8_uniform\\coef_stencil_gmres_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 0.002127348538675274,
+    "t21_K0_residual": 0.002127348538675274,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_ctrl": {
+    "file": "tasks\\T21\\out\\data\\k8_uniform\\ctrl_stencil_r1_1e-05.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 0.007320027300036269,
+    "t21_K0_residual": 0.007320027300036269,
+    "residual_within_1pct": true,
+    "passed": true
+   }
+  },
+  "directions": {
+   "st": {
+    "status": "ok",
+    "iters": 13,
+    "min_energy_ratio": 0.9917343453730192,
+    "rel": 2.113946222612789e-09,
+    "time_s": 0.05806851387023926,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "K": {
+    "status": "ok",
+    "iters": 13,
+    "min_energy_ratio": 1.0,
+    "rel": 2.204400906363563e-09,
+    "time_s": 0.025239944458007812,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "p32": {
+    "first_monitored_pass": {
+     "it": 9,
+     "monitored": 2.543351816870868e-06,
+     "true": 0.007320027300036269
+    },
+    "floor_true": 0.007320027300036269,
+    "floor_it": 9,
+    "iters_run": 17,
+    "time_s": 0.09229826927185059,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "history_len": 17
+   }
+  }
+ },
+ "k16": {
+  "setup_checks_passed": true,
+  "aid_checks": [
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 110912.60389425814,
+      "xTTx": 881042.3027538839,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 111004.13774036063,
+      "xTTx": 1116939.2664154624,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 110951.96359684796,
+      "xTTx": 611333.2015447363,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 26688.00000000001,
+      "xTTx": 2785679579.161152,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 28288.000000000007,
+      "xTTx": 1745138751.2073681,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 15087.30519914627,
+      "xTTx": 8667844841.925087,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 2.7920221665845864e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 6.172679722841874e-08
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 2.967662497289646e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 110912.60389425814,
+      "xTTx": 881042.3027538839,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 111004.13774036063,
+      "xTTx": 1116939.2664154624,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 110951.96359684796,
+      "xTTx": 611333.2015447363,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 26688.00000000001,
+      "xTTx": 2785679579.161152,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 28288.000000000007,
+      "xTTx": 1745138751.2073681,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 15087.30519914627,
+      "xTTx": 8667844841.925087,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 2.7920221665845864e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 6.172679722841874e-08
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 2.967662497289646e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 110912.60389425814,
+      "xTTx": 881042.3027538839,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 111004.13774036063,
+      "xTTx": 1116939.2664154624,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 110951.96359684796,
+      "xTTx": 611333.2015447363,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 26688.00000000001,
+      "xTTx": 2785679579.161152,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 28288.000000000007,
+      "xTTx": 1745138751.2073681,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 15087.30519914627,
+      "xTTx": 8667844841.925087,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 2.7920221665845864e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 6.172679722841874e-08
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 2.967662497289646e-07
+     }
+    ],
+    "all_positive": true
+   }
+  ],
+  "G0": {
+   "theta1_ref": 1.695093582436712e-06,
+   "lambda_E29": 1.6950935828923338e-06,
+   "rel": 2.687885670640912e-10,
+   "U_over_lambda": 5.888449387836327e-06,
+   "passed": true
+  },
+  "block_recovery_cross_checks": {
+   "ref": true,
+   "stencil": true,
+   "diff": true,
+   "mean": true,
+   "atomic": true,
+   "corner": true
+  },
+  "t21_integrity": {
+   "u_ref": {
+    "file": "tasks\\T21\\out\\data\\k16_uniform\\ref_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 3.260279251828229e-10,
+    "t21_K0_residual": 3.2602792518282296e-10,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_coef": {
+    "file": "tasks\\T21\\out\\data\\k16_uniform\\coef_stencil_gmres_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 0.006252069009111382,
+    "t21_K0_residual": 0.006252069009111382,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_ctrl": {
+    "file": "tasks\\T21\\out\\data\\k16_uniform\\ctrl_stencil_r1_1e-05.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 0.02084087121688307,
+    "t21_K0_residual": 0.02084087121688307,
+    "residual_within_1pct": true,
+    "passed": true
+   }
+  },
+  "directions": {
+   "st": {
+    "status": "ok",
+    "iters": 14,
+    "min_energy_ratio": 0.9666332211689608,
+    "rel": 2.0143478981351994e-09,
+    "time_s": 0.05972552299499512,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "K": {
+    "status": "ok",
+    "iters": 14,
+    "min_energy_ratio": 1.0,
+    "rel": 1.9163168247743907e-09,
+    "time_s": 0.04543709754943848,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "p32": {
+    "first_monitored_pass": {
+     "it": 9,
+     "monitored": 7.917514613989963e-06,
+     "true": 0.02084087121688307
+    },
+    "floor_true": 0.020840749301005188,
+    "floor_it": 8,
+    "iters_run": 16,
+    "time_s": 0.05357694625854492,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "history_len": 16
+   }
+  }
+ },
+ "k32": {
+  "setup_checks_passed": true,
+  "aid_checks": [
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 836221.1179290882,
+      "xTTx": 1080038.8346640938,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 835270.7449541294,
+      "xTTx": 12542721.592826199,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 837216.4822695798,
+      "xTTx": 11367284.268170439,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 204928.0,
+      "xTTx": 83879836623.0284,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 211199.99999999994,
+      "xTTx": 50679255241.08788,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 112605.4359331727,
+      "xTTx": 232361309150.90222,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 9.33291053057895e-08
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 4.071260959622692e-08
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 5.680089807565464e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 836221.1179290882,
+      "xTTx": 1080038.8346640938,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 835270.7449541294,
+      "xTTx": 12542721.592826199,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 837216.4822695798,
+      "xTTx": 11367284.268170439,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 204928.0,
+      "xTTx": 83879836623.0284,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 211199.99999999994,
+      "xTTx": 50679255241.08788,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 112605.4359331727,
+      "xTTx": 232361309150.90222,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 9.33291053057895e-08
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 4.071260959622692e-08
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 5.680089807565464e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 836221.1179290882,
+      "xTTx": 1080038.8346640938,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 835270.7449541294,
+      "xTTx": 12542721.592826199,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 837216.4822695798,
+      "xTTx": 11367284.268170439,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 204928.0,
+      "xTTx": 83879836623.0284,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 211199.99999999994,
+      "xTTx": 50679255241.08788,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 112605.4359331727,
+      "xTTx": 232361309150.90222,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 9.33291053057895e-08
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 4.071260959622692e-08
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 5.680089807565464e-07
+     }
+    ],
+    "all_positive": true
+   }
+  ],
+  "G0": {
+   "theta1_ref": 4.5248834911486205e-07,
+   "lambda_E29": 4.524883493207867e-07,
+   "rel": 4.5509385661615663e-10,
+   "U_over_lambda": 4.319778227725291e-06,
+   "passed": true
+  },
+  "block_recovery_cross_checks": {
+   "ref": true,
+   "stencil": true,
+   "diff": true,
+   "mean": true,
+   "atomic": true,
+   "corner": true
+  },
+  "t21_integrity": {
+   "u_ref": {
+    "file": "tasks\\T21\\out\\data\\k32_uniform\\ref_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 2.2646324801258118e-10,
+    "t21_K0_residual": 2.2646324801258124e-10,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_coef": {
+    "file": "tasks\\T21\\out\\data\\k32_uniform\\coef_stencil_gmres_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 0.019895566085193685,
+    "t21_K0_residual": 0.019895566085193682,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_ctrl": {
+    "file": "tasks\\T21\\out\\data\\k32_uniform\\ctrl_stencil_r1_1e-05.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 0.06681576179447027,
+    "t21_K0_residual": 0.06681576179447025,
+    "residual_within_1pct": true,
+    "passed": true
+   }
+  },
+  "directions": {
+   "st": {
+    "status": "ok",
+    "iters": 14,
+    "min_energy_ratio": 0.8664969475760641,
+    "rel": 3.595397795673478e-09,
+    "time_s": 0.0912327766418457,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "K": {
+    "status": "ok",
+    "iters": 14,
+    "min_energy_ratio": 1.0,
+    "rel": 2.831667772808657e-09,
+    "time_s": 0.09036517143249512,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "p32": {
+    "first_monitored_pass": {
+     "it": 10,
+     "monitored": 2.9166461496488973e-06,
+     "true": 0.06681576179447025
+    },
+    "floor_true": 0.0668156839061154,
+    "floor_it": 9,
+    "iters_run": 17,
+    "time_s": 0.08867907524108887,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "history_len": 17
+   }
+  }
+ },
+ "k64": {
+  "setup_checks_passed": true,
+  "aid_checks": [
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 6488138.501811463,
+      "xTTx": 7379117.439628536,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 6489329.663389841,
+      "xTTx": 7459725.944682786,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 6490342.7165159285,
+      "xTTx": 15020440.763456097,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 1605888.0000000033,
+      "xTTx": 2734347973125.9844,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 1630720.0000000014,
+      "xTTx": 1579644120172.0435,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 869510.5012999848,
+      "xTTx": 7123026822686.254,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 1.9302087602586512e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 2.783054989816037e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 6.81534364520912e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 6488138.501811463,
+      "xTTx": 7379117.439628536,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 6489329.663389841,
+      "xTTx": 7459725.944682786,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 6490342.7165159285,
+      "xTTx": 15020440.763456097,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 1605888.0000000033,
+      "xTTx": 2734347973125.9844,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 1630720.0000000014,
+      "xTTx": 1579644120172.0435,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 869510.5012999848,
+      "xTTx": 7123026822686.254,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 1.9302087602586512e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 2.783054989816037e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 6.81534364520912e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 6488138.501811463,
+      "xTTx": 7379117.439628536,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 6489329.663389841,
+      "xTTx": 7459725.944682786,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 6490342.7165159285,
+      "xTTx": 15020440.763456097,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 1605888.0000000033,
+      "xTTx": 2734347973125.9844,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 1630720.0000000014,
+      "xTTx": 1579644120172.0435,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 869510.5012999848,
+      "xTTx": 7123026822686.254,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 1.9302087602586512e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 2.783054989816037e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 6.81534364520912e-07
+     }
+    ],
+    "all_positive": true
+   }
+  ],
+  "G0": {
+   "theta1_ref": 1.1702639065915447e-07,
+   "lambda_E29": 1.1702639102714503e-07,
+   "rel": 3.1445092193640885e-09,
+   "U_over_lambda": 6.006337344191041e-06,
+   "passed": true
+  },
+  "block_recovery_cross_checks": {
+   "ref": true,
+   "stencil": true,
+   "diff": true,
+   "mean": true,
+   "atomic": true,
+   "corner": true
+  },
+  "t21_integrity": {
+   "u_ref": {
+    "file": "tasks\\T21\\out\\data\\k64_uniform\\ref_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 3.706733708758548e+39,
+    "t21_K0_residual": 3.706733708758548e+39,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_coef": {
+    "file": "tasks\\T21\\out\\data\\k64_uniform\\coef_stencil_gmres_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 0.10871339661939171,
+    "t21_K0_residual": 0.10871339661939171,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_ctrl": {
+    "file": "tasks\\T21\\out\\data\\k64_uniform\\ctrl_stencil_r1_1e-05.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 0.34844207135396327,
+    "t21_K0_residual": 0.34844207135396327,
+    "residual_within_1pct": true,
+    "passed": true
+   }
+  },
+  "directions": {
+   "st": {
+    "status": "ok",
+    "iters": 15,
+    "min_energy_ratio": 0.46545642166888557,
+    "rel": 5.182425734912494e-09,
+    "time_s": 0.3110489845275879,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "K": {
+    "status": "ok",
+    "iters": 14,
+    "min_energy_ratio": 1.0,
+    "rel": 3.833081771504364e-09,
+    "time_s": 0.30710673332214355,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "p32": {
+    "first_monitored_pass": {
+     "it": 11,
+     "monitored": 3.111435645629538e-06,
+     "true": 0.34844207135396327
+    },
+    "floor_true": 0.3484376823534443,
+    "floor_it": 7,
+    "iters_run": 15,
+    "time_s": 0.2245182991027832,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "history_len": 15
+   }
+  }
+ },
+ "k128": {
+  "setup_checks_passed": true,
+  "aid_checks": [
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 51128520.041367576,
+      "xTTx": 111463307.00501059,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 51135806.272008404,
+      "xTTx": 30106377.377106525,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 51129042.81765863,
+      "xTTx": 45580710.64041985,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 12714495.999999993,
+      "xTTx": 87482712841269.28,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 12813312.000000058,
+      "xTTx": 49824482966004.58,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 6832805.433981912,
+      "xTTx": 221223734865941.88,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 5.171090959030775e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 1.483088373062919e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 1.2397866615624138e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 51128520.041367576,
+      "xTTx": 111463307.00501059,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 51135806.272008404,
+      "xTTx": 30106377.377106525,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 51129042.81765863,
+      "xTTx": 45580710.64041985,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 12714495.999999993,
+      "xTTx": 87482712841269.28,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 12813312.000000058,
+      "xTTx": 49824482966004.58,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 6832805.433981912,
+      "xTTx": 221223734865941.88,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 5.171090959030775e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 1.483088373062919e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 1.2397866615624138e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 51128520.041367576,
+      "xTTx": 111463307.00501059,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 51135806.272008404,
+      "xTTx": 30106377.377106525,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 51129042.81765863,
+      "xTTx": 45580710.64041985,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 12714495.999999993,
+      "xTTx": 87482712841269.28,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 12813312.000000058,
+      "xTTx": 49824482966004.58,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 6832805.433981912,
+      "xTTx": 221223734865941.88,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 5.171090959030775e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 1.483088373062919e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 1.2397866615624138e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 51128520.041367576,
+      "xTTx": 111463307.00501059,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 51135806.272008404,
+      "xTTx": 30106377.377106525,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 51129042.81765863,
+      "xTTx": 45580710.64041985,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 12714495.999999993,
+      "xTTx": 87482712841269.28,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 12813312.000000058,
+      "xTTx": 49824482966004.58,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 6832805.433981912,
+      "xTTx": 221223734865941.88,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 5.171090959030775e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 1.483088373062919e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 1.2397866615624138e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 51128520.041367576,
+      "xTTx": 111463307.00501059,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 51135806.272008404,
+      "xTTx": 30106377.377106525,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 51129042.81765863,
+      "xTTx": 45580710.64041985,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 12714495.999999993,
+      "xTTx": 87482712841269.28,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 12813312.000000058,
+      "xTTx": 49824482966004.58,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 6832805.433981912,
+      "xTTx": 221223734865941.88,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 5.171090959030775e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 1.483088373062919e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 1.2397866615624138e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 51128520.041367576,
+      "xTTx": 111463307.00501059,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 51135806.272008404,
+      "xTTx": 30106377.377106525,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 51129042.81765863,
+      "xTTx": 45580710.64041985,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 12714495.999999993,
+      "xTTx": 87482712841269.28,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 12813312.000000058,
+      "xTTx": 49824482966004.58,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 6832805.433981912,
+      "xTTx": 221223734865941.88,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 5.171090959030775e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 1.483088373062919e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 1.2397866615624138e-07
+     }
+    ],
+    "all_positive": true
+   },
+   {
+    "positivity": [
+     {
+      "vector": "random0",
+      "xTx": 51128520.041367576,
+      "xTTx": 111463307.00501059,
+      "positive": true
+     },
+     {
+      "vector": "random1",
+      "xTx": 51135806.272008404,
+      "xTTx": 30106377.377106525,
+      "positive": true
+     },
+     {
+      "vector": "random2",
+      "xTx": 51129042.81765863,
+      "xTTx": 45580710.64041985,
+      "positive": true
+     },
+     {
+      "vector": "sm1",
+      "xTx": 12714495.999999993,
+      "xTTx": 87482712841269.28,
+      "positive": true
+     },
+     {
+      "vector": "sm2",
+      "xTx": 12813312.000000058,
+      "xTTx": 49824482966004.58,
+      "positive": true
+     },
+     {
+      "vector": "sm3",
+      "xTx": 6832805.433981912,
+      "xTTx": 221223734865941.88,
+      "positive": true
+     }
+    ],
+    "symmetry": [
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "defect": 5.171090959030775e-07
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "defect": 1.483088373062919e-07
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "defect": 1.2397866615624138e-07
+     }
+    ],
+    "all_positive": true
+   }
+  ],
+  "G0": null,
+  "block_recovery_cross_checks": {
+   "ref": null,
+   "stencil": null,
+   "diff": null,
+   "mean": null,
+   "atomic": null,
+   "corner": null
+  },
+  "t21_integrity": {
+   "u_ref": {
+    "file": "tasks\\T21\\out\\data\\k128_uniform\\ref_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 5.11025806045859e+39,
+    "t21_K0_residual": 5.110258060458591e+39,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_coef": {
+    "file": "tasks\\T21\\out\\data\\k128_uniform\\coef_stencil_gmres_target.npy",
+    "present": true,
+    "length_ok": true,
+    "finite": true,
+    "zero_on_fixed": true,
+    "K0_residual": 0.11335672451377035,
+    "t21_K0_residual": 0.1133567245137705,
+    "residual_within_1pct": true,
+    "passed": true
+   },
+   "u_ctrl": {
+    "file": "<project>\\revision_round1\\work\\tasks\\T21\\out\\data\\k128_uniform\\ctrl_stencil_r1_1e-05.npy",
+    "present": false,
+    "passed": false
+   }
+  },
+  "directions": {
+   "st": {
+    "status": "negative energy direction",
+    "iters": 1,
+    "pAp_rel_to_fp64": -1.1385383514247778,
+    "min_energy_ratio": -1.1385383514247778,
+    "rel": 1.0,
+    "time_s": 0.3350043296813965,
+    "n_directions": 1,
+    "fixed_dofs_zero": [
+     true
+    ]
+   },
+   "K": {
+    "status": "ok",
+    "iters": 14,
+    "min_energy_ratio": 1.0,
+    "rel": 5.074473545516387e-09,
+    "time_s": 2.383570671081543,
+    "n_directions": 5,
+    "fixed_dofs_zero": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "p32": {
+    "first_monitored_pass": null,
+    "floor_true": Infinity,
+    "floor_it": 0,
+    "iters_run": 1,
+    "time_s": 0.2036895751953125,
+    "n_directions": 1,
+    "fixed_dofs_zero": [
+     true
+    ],
+    "history_len": 1
+   }
+  }
+ },
+ "runs": {
+  "k128_act_1": {
+   "k": 128,
+   "job": "act",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22658678784,
+    "nvidia_smi_used_bytes": 2652897280,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6478397440,
+    "predicted_peak_bytes": 13288145450,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "act": {
+       "points": {
+        "32": 254656000,
+        "64": 1681126912
+       },
+       "per_dof_bytes": 251.90845285321942,
+       "fixed_bytes": 43148876.72383276,
+       "pool_predicted_bytes": 12933575210
+      }
+     },
+     "pool_predicted_bytes": 12933575210,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 115343360.0,
+    "child_dedicated_peak_bytes": 11419455488.0,
+    "n_samples": 380,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 944.537478685379
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 13288145450,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "act": {
+       "points": {
+        "32": 254656000,
+        "64": 1681126912
+       },
+       "per_dof_bytes": 251.90845285321942,
+       "fixed_bytes": 43148876.72383276,
+       "pool_predicted_bytes": 12933575210
+      }
+     },
+     "pool_predicted_bytes": 12933575210,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6478397440,
+     "wddm_free": 18923728896,
+     "need": 13288145450,
+     "margin": 1610612736,
+     "effective_free": 18923728896,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 4286380544,
+    "act": 10989791744
+   },
+   "not_run_budget": null
+  },
+  "k128_eig-atomic_1": {
+   "k": 128,
+   "job": "eig:atomic",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22645047296,
+    "nvidia_smi_used_bytes": 2666528768,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6492499968,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 115343360.0,
+    "child_dedicated_peak_bytes": 18992328704.0,
+    "n_samples": 119,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 299.3187458515167
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": false,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6492499968,
+     "wddm_free": 18909626368,
+     "need": 20243962173,
+     "margin": 1610612736,
+     "effective_free": 18909626368,
+     "ok": false
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 4286380544,
+    "eig": 18563109888
+   },
+   "not_run_budget": null
+  },
+  "k128_eig-corner_1": {
+   "k": 128,
+   "job": "eig:corner",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22658678784,
+    "nvidia_smi_used_bytes": 2652897280,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6478397440,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 115343360.0,
+    "child_dedicated_peak_bytes": 18992328704.0,
+    "n_samples": 41,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 100.96937394142151
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": false,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6478397440,
+     "wddm_free": 18923728896,
+     "need": 20243962173,
+     "margin": 1610612736,
+     "effective_free": 18923728896,
+     "ok": false
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 4286380544,
+    "eig": 18563109888
+   },
+   "not_run_budget": null
+  },
+  "k128_eig-diff_1": {
+   "k": 128,
+   "job": "eig:diff",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22645047296,
+    "nvidia_smi_used_bytes": 2666528768,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6492495872,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 115343360.0,
+    "child_dedicated_peak_bytes": 18992328704.0,
+    "n_samples": 41,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 101.28756070137024
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": false,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6492495872,
+     "wddm_free": 18909630464,
+     "need": 20243962173,
+     "margin": 1610612736,
+     "effective_free": 18909630464,
+     "ok": false
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 4286380544,
+    "eig": 18563109888
+   },
+   "not_run_budget": null
+  },
+  "k128_eig-mean_1": {
+   "k": 128,
+   "job": "eig:mean",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22645047296,
+    "nvidia_smi_used_bytes": 2666528768,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6492499968,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 115343360.0,
+    "child_dedicated_peak_bytes": 18992328704.0,
+    "n_samples": 41,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 101.6503837108612
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": false,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6492499968,
+     "wddm_free": 18909626368,
+     "need": 20243962173,
+     "margin": 1610612736,
+     "effective_free": 18909626368,
+     "ok": false
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 4286380544,
+    "eig": 18563109888
+   },
+   "not_run_budget": null
+  },
+  "k128_eig-ref_1": {
+   "k": 128,
+   "job": "eig:ref",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22656581632,
+    "nvidia_smi_used_bytes": 2654994432,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6481244160,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 115343360.0,
+    "child_dedicated_peak_bytes": 18992328704.0,
+    "n_samples": 42,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 105.45071840286255
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": false,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6481244160,
+     "wddm_free": 18920882176,
+     "need": 20243962173,
+     "margin": 1610612736,
+     "effective_free": 18920882176,
+     "ok": false
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 4286380544,
+    "eig": 18563109888
+   },
+   "not_run_budget": null
+  },
+  "k128_eig-stencil_1": {
+   "k": 128,
+   "job": "eig:stencil",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22656581632,
+    "nvidia_smi_used_bytes": 2654994432,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6481166336,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 115343360.0,
+    "child_dedicated_peak_bytes": 18992328704.0,
+    "n_samples": 122,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 307.1881773471832
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 20243962173,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "eig": {
+       "points": {
+        "32": 703852544,
+        "64": 2862365696
+       },
+       "per_dof_bytes": 381.18387413962637,
+       "fixed_bytes": 383803320.778761,
+       "pool_predicted_bytes": 19889391933
+      }
+     },
+     "pool_predicted_bytes": 19889391933,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": false,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6481235968,
+     "wddm_free": 18920890368,
+     "need": 20243962173,
+     "margin": 1610612736,
+     "effective_free": 18920890368,
+     "ok": false
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 4286380544,
+    "eig": 18563109888
+   },
+   "not_run_budget": null
+  },
+  "k128_skew_1": {
+   "k": 128,
+   "job": "skew",
+   "status": "refused_for_memory",
+   "valid": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22656581632,
+    "nvidia_smi_used_bytes": 2654994432,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6481244160,
+    "predicted_peak_bytes": 6828454466,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "32": 267866112,
+        "64": 595246592
+       },
+       "per_dof_bytes": 57.81394455181456,
+       "fixed_bytes": 219324425.68935,
+       "pool_predicted_bytes": 3177726118
+      },
+      "skew": {
+       "points": {
+        "32": 155290112,
+        "64": 866178048
+       },
+       "per_dof_bytes": 125.53966477921314,
+       "fixed_bytes": 49884624.19774184,
+       "pool_predicted_bytes": 6473884226
+      }
+     },
+     "pool_predicted_bytes": 6473884226,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 383778816.0,
+    "child_dedicated_peak_bytes": 3894816768.0,
+    "n_samples": 12,
+    "final_sample_checked": false,
+    "stop": "refused_for_memory: shared growth above 256 MiB",
+    "wall_s": 30.857781410217285
+   },
+   "reason": null,
+   "admission_in_process": null,
+   "admission_in_process_note": "missing: the job version that ran wrote it only at normal completion (D12)",
+   "pool_peak_bytes_by_phase": null,
+   "not_run_budget": null
+  },
+  "k16_act_1": {
+   "k": 16,
+   "job": "act",
+   "status": "failed",
+   "valid": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486069248,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 0.0,
+    "child_dedicated_peak_bytes": 469929984.0,
+    "n_samples": 6,
+    "final_sample_checked": false,
+    "stop": null,
+    "wall_s": 15.224318742752075
+   },
+   "reason": null,
+   "admission_in_process": null,
+   "admission_in_process_note": "missing: the job version that ran wrote it only at normal completion (D12)",
+   "pool_peak_bytes_by_phase": null,
+   "not_run_budget": null
+  },
+  "k16_act_2": {
+   "k": 16,
+   "job": "act",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486069248,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 6291456.0,
+    "child_dedicated_peak_bytes": 482512896.0,
+    "n_samples": 6,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 14.503101348876953
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486069248,
+     "wddm_free": 18916057088,
+     "need": 4294967296,
+     "margin": 1610612736,
+     "effective_free": 18916057088,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 255072768,
+    "act": 78474240
+   },
+   "not_run_budget": null
+  },
+  "k16_eig_1": {
+   "k": 16,
+   "job": "eig",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486069248,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 6291456.0,
+    "child_dedicated_peak_bytes": 549621760.0,
+    "n_samples": 7,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 16.90198016166687
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486069248,
+     "wddm_free": 18916057088,
+     "need": 4294967296,
+     "margin": 1610612736,
+     "effective_free": 18916057088,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 255072768,
+    "eig": 138184704
+   },
+   "not_run_budget": null
+  },
+  "k16_skew_1": {
+   "k": 16,
+   "job": "skew",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486069248,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 6291456.0,
+    "child_dedicated_peak_bytes": 467832832.0,
+    "n_samples": 33,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 81.16466689109802
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486069248,
+     "wddm_free": 18916057088,
+     "need": 4294967296,
+     "margin": 1610612736,
+     "effective_free": 18916057088,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 255072768,
+    "skew": 65280000
+   },
+   "not_run_budget": null
+  },
+  "k32_act_1": {
+   "k": 32,
+   "job": "act",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486073344,
+    "predicted_peak_bytes": 616994721,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 262424481
+      },
+      "act": {
+       "points": {
+        "8": 55276032,
+        "16": 78474240
+       },
+       "per_dof_bytes": 241.5272363818091,
+       "fixed_bytes": 51461109.30134933,
+       "pool_predicted_bytes": 254251965
+      }
+     },
+     "pool_predicted_bytes": 262424481,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 6291456.0,
+    "child_dedicated_peak_bytes": 673353728.0,
+    "n_samples": 10,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 24.58074140548706
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 616994721,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 262424481
+      },
+      "act": {
+       "points": {
+        "8": 55276032,
+        "16": 78474240
+       },
+       "per_dof_bytes": 241.5272363818091,
+       "fixed_bytes": 51461109.30134933,
+       "pool_predicted_bytes": 254251965
+      }
+     },
+     "pool_predicted_bytes": 262424481,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486073344,
+     "wddm_free": 18916052992,
+     "need": 616994721,
+     "margin": 1610612736,
+     "effective_free": 18916052992,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 267866112,
+    "act": 254656000
+   },
+   "not_run_budget": null
+  },
+  "k32_eig_1": {
+   "k": 32,
+   "job": "eig",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486069248,
+    "predicted_peak_bytes": 1056815653,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 262424481
+      },
+      "eig": {
+       "points": {
+        "8": 63742976,
+        "16": 138184704
+       },
+       "per_dof_bytes": 775.047143095119,
+       "fixed_bytes": 51501106.374812596,
+       "pool_predicted_bytes": 702245413
+      }
+     },
+     "pool_predicted_bytes": 702245413,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 6291456.0,
+    "child_dedicated_peak_bytes": 1126342656.0,
+    "n_samples": 10,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 24.644793272018433
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 1056815653,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 262424481
+      },
+      "eig": {
+       "points": {
+        "8": 63742976,
+        "16": 138184704
+       },
+       "per_dof_bytes": 775.047143095119,
+       "fixed_bytes": 51501106.374812596,
+       "pool_predicted_bytes": 702245413
+      }
+     },
+     "pool_predicted_bytes": 702245413,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486069248,
+     "wddm_free": 18916057088,
+     "need": 1056815653,
+     "margin": 1610612736,
+     "effective_free": 18916057088,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 267866112,
+    "eig": 703852544
+   },
+   "not_run_budget": null
+  },
+  "k32_skew_1": {
+   "k": 32,
+   "job": "skew",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486069248,
+    "predicted_peak_bytes": 616994721,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 262424481
+      },
+      "skew": {
+       "points": {
+        "8": 53341696,
+        "16": 65280000
+       },
+       "per_dof_bytes": 124.2951857404631,
+       "fixed_bytes": 51378453.54122938,
+       "pool_predicted_bytes": 155739053
+      }
+     },
+     "pool_predicted_bytes": 262424481,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 10485760.0,
+    "child_dedicated_peak_bytes": 566407168.0,
+    "n_samples": 37,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 90.15730166435242
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 616994721,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 262424481
+      },
+      "skew": {
+       "points": {
+        "8": 53341696,
+        "16": 65280000
+       },
+       "per_dof_bytes": 124.2951857404631,
+       "fixed_bytes": 51378453.54122938,
+       "pool_predicted_bytes": 155739053
+      }
+     },
+     "pool_predicted_bytes": 262424481,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486069248,
+     "wddm_free": 18916057088,
+     "need": 616994721,
+     "margin": 1610612736,
+     "effective_free": 18916057088,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 267866112,
+    "skew": 155290112
+   },
+   "not_run_budget": null
+  },
+  "k4_act_1": {
+   "k": 4,
+   "job": "act",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486069248,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 2097152.0,
+    "child_dedicated_peak_bytes": 404905984.0,
+    "n_samples": 9,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 21.258283853530884
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486069248,
+     "wddm_free": 18916057088,
+     "need": 4294967296,
+     "margin": 1610612736,
+     "effective_free": 18916057088,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 9620480,
+    "act": 2682880
+   },
+   "not_run_budget": null
+  },
+  "k4_act_2": {
+   "k": 4,
+   "job": "act",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22656581632,
+    "nvidia_smi_used_bytes": 2654994432,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6481244160,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 2097152.0,
+    "child_dedicated_peak_bytes": 404905984.0,
+    "n_samples": 6,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 15.069592714309692
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6481244160,
+     "wddm_free": 18920882176,
+     "need": 4294967296,
+     "margin": 1610612736,
+     "effective_free": 18920882176,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 9620480,
+    "act": 2682880
+   },
+   "not_run_budget": null
+  },
+  "k4_eig_1": {
+   "k": 4,
+   "job": "eig",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486069248,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 2097152.0,
+    "child_dedicated_peak_bytes": 404905984.0,
+    "n_samples": 7,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 16.951387643814087
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486069248,
+     "wddm_free": 18916057088,
+     "need": 4294967296,
+     "margin": 1610612736,
+     "effective_free": 18916057088,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 9620480,
+    "eig": 4011520
+   },
+   "not_run_budget": null
+  },
+  "k4_skew_1": {
+   "k": 4,
+   "job": "skew",
+   "status": "failed",
+   "valid": false,
+   "admission": {
+    "nvidia_smi_free_bytes": 22664970240,
+    "nvidia_smi_used_bytes": 2646605824,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6471901184,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 2097152.0,
+    "child_dedicated_peak_bytes": 407003136.0,
+    "n_samples": 11,
+    "final_sample_checked": false,
+    "stop": null,
+    "wall_s": 26.57020854949951
+   },
+   "reason": null,
+   "admission_in_process": null,
+   "admission_in_process_note": "missing: the job version that ran wrote it only at normal completion (D12)",
+   "pool_peak_bytes_by_phase": null,
+   "not_run_budget": null
+  },
+  "k4_skew_2": {
+   "k": 4,
+   "job": "skew",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22664970240,
+    "nvidia_smi_used_bytes": 2646605824,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6471901184,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 2097152.0,
+    "child_dedicated_peak_bytes": 404905984.0,
+    "n_samples": 46,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 113.23635482788086
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6471901184,
+     "wddm_free": 18930225152,
+     "need": 4294967296,
+     "margin": 1610612736,
+     "effective_free": 18930225152,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 9620480,
+    "skew": 2421248
+   },
+   "not_run_budget": null
+  },
+  "k64_act_1": {
+   "k": 64,
+   "job": "act",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22656581632,
+    "nvidia_smi_used_bytes": 2654994432,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6481244160,
+    "predicted_peak_bytes": 1976507860,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 319626457
+      },
+      "act": {
+       "points": {
+        "8": 55276032,
+        "16": 78474240
+       },
+       "per_dof_bytes": 241.5272363818091,
+       "fixed_bytes": 51461109.30134933,
+       "pool_predicted_bytes": 1621937620
+      }
+     },
+     "pool_predicted_bytes": 1621937620,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 14680064.0,
+    "child_dedicated_peak_bytes": 2097344512.0,
+    "n_samples": 33,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 80.3781476020813
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 1976507860,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 319626457
+      },
+      "act": {
+       "points": {
+        "8": 55276032,
+        "16": 78474240
+       },
+       "per_dof_bytes": 241.5272363818091,
+       "fixed_bytes": 51461109.30134933,
+       "pool_predicted_bytes": 1621937620
+      }
+     },
+     "pool_predicted_bytes": 1621937620,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6481244160,
+     "wddm_free": 18920882176,
+     "need": 1976507860,
+     "margin": 1610612736,
+     "effective_free": 18920882176,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 595246592,
+    "act": 1681126912
+   },
+   "not_run_budget": null
+  },
+  "k64_eig_1": {
+   "k": 64,
+   "job": "eig",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22656581632,
+    "nvidia_smi_used_bytes": 2654994432,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6481248256,
+    "predicted_peak_bytes": 5445641008,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 319626457
+      },
+      "eig": {
+       "points": {
+        "8": 63742976,
+        "16": 138184704
+       },
+       "per_dof_bytes": 775.047143095119,
+       "fixed_bytes": 51501106.374812596,
+       "pool_predicted_bytes": 5091070768
+      }
+     },
+     "pool_predicted_bytes": 5091070768,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 14680064.0,
+    "child_dedicated_peak_bytes": 3278053376.0,
+    "n_samples": 29,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 74.24721908569336
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 5445641008,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 319626457
+      },
+      "eig": {
+       "points": {
+        "8": 63742976,
+        "16": 138184704
+       },
+       "per_dof_bytes": 775.047143095119,
+       "fixed_bytes": 51501106.374812596,
+       "pool_predicted_bytes": 5091070768
+      }
+     },
+     "pool_predicted_bytes": 5091070768,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6481244160,
+     "wddm_free": 18920882176,
+     "need": 5445641008,
+     "margin": 1610612736,
+     "effective_free": 18920882176,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 595246592,
+    "eig": 2862365696
+   },
+   "not_run_budget": null
+  },
+  "k64_skew_1": {
+   "k": 64,
+   "job": "skew",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486073344,
+    "predicted_peak_bytes": 1214150172,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 319626457
+      },
+      "skew": {
+       "points": {
+        "8": 53341696,
+        "16": 65280000
+       },
+       "per_dof_bytes": 124.2951857404631,
+       "fixed_bytes": 51378453.54122938,
+       "pool_predicted_bytes": 859579932
+      }
+     },
+     "pool_predicted_bytes": 859579932,
+     "context_bytes": 354570240
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 48234496.0,
+    "child_dedicated_peak_bytes": 1285808128.0,
+    "n_samples": 44,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 108.95799088478088
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 1214150172,
+    "prediction": {
+     "rule": "pool peak per phase fitted through k = (8, 16), largest phase",
+     "phases": {
+      "setup": {
+       "points": {
+        "8": 254102528,
+        "16": 255072768
+       },
+       "per_dof_bytes": 10.101615858737299,
+       "fixed_bytes": 253942972.97751126,
+       "pool_predicted_bytes": 319626457
+      },
+      "skew": {
+       "points": {
+        "8": 53341696,
+        "16": 65280000
+       },
+       "per_dof_bytes": 124.2951857404631,
+       "fixed_bytes": 51378453.54122938,
+       "pool_predicted_bytes": 859579932
+      }
+     },
+     "pool_predicted_bytes": 859579932,
+     "context_bytes": 354570240
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486073344,
+     "wddm_free": 18916052992,
+     "need": 1214150172,
+     "margin": 1610612736,
+     "effective_free": 18916052992,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 595246592,
+    "skew": 866178048
+   },
+   "not_run_budget": null
+  },
+  "k8_act_1": {
+   "k": 8,
+   "job": "act",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486069248,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 6291456.0,
+    "child_dedicated_peak_bytes": 461541376.0,
+    "n_samples": 6,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 15.067251920700073
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486069248,
+     "wddm_free": 18916057088,
+     "need": 4294967296,
+     "margin": 1610612736,
+     "effective_free": 18916057088,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 254102528,
+    "act": 55276032
+   },
+   "not_run_budget": null
+  },
+  "k8_eig_1": {
+   "k": 8,
+   "job": "eig",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486069248,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 6291456.0,
+    "child_dedicated_peak_bytes": 474124288.0,
+    "n_samples": 7,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 17.39891028404236
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486069248,
+     "wddm_free": 18916057088,
+     "need": 4294967296,
+     "margin": 1610612736,
+     "effective_free": 18916057088,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 254102528,
+    "eig": 63742976
+   },
+   "not_run_budget": null
+  },
+  "k8_skew_1": {
+   "k": 8,
+   "job": "skew",
+   "status": "ok",
+   "valid": true,
+   "admission": {
+    "nvidia_smi_free_bytes": 22651338752,
+    "nvidia_smi_used_bytes": 2660237312,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6486069248,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "admitted": true
+   },
+   "watch": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 6291456.0,
+    "child_dedicated_peak_bytes": 457347072.0,
+    "n_samples": 33,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 81.08845686912537
+   },
+   "reason": null,
+   "admission_in_process": {
+    "cuda_free_bytes": 24152899584,
+    "cuda_total_bytes": 25756696576,
+    "pool_cap_bytes": 22542286848,
+    "predicted_peak_bytes": 4294967296,
+    "prediction": {
+     "rule": "development allowance"
+    },
+    "require_budget_ok": true,
+    "require_budget_info": {
+     "cuda_free": 24152899584,
+     "total": 25756696576,
+     "others_dedicated": 6486069248,
+     "wddm_free": 18916057088,
+     "need": 4294967296,
+     "margin": 1610612736,
+     "effective_free": 18916057088,
+     "ok": true
+    }
+   },
+   "admission_in_process_note": null,
+   "pool_peak_bytes_by_phase": {
+    "setup": 254102528,
+    "skew": 53341696
+   },
+   "not_run_budget": null
+  }
+ },
+ "dev_check": {
+  "1_block_recovery": {
+   "ref": {
+    "bitwise_equal": false,
+    "max_abs_diff_rel_to_max_entry": 1.1808735807376663e-16,
+    "nnz_gpu": 125687,
+    "nnz_cpu": 123455,
+    "entries_pass": true,
+    "s_F": {
+     "gpu_probes": 2.8213967212779215e-17,
+     "dense": 5.29821158052739e-17,
+     "rel": 0.46748130413525757,
+     "pass": true
+    },
+    "fro": {
+     "gpu_probes": 147.53015845938475,
+     "dense": 147.5301584593826,
+     "rel": 1.4641412571283863e-14,
+     "pass": true
+    },
+    "norm_inf": {
+     "gpu_probes": 14.786324786324787,
+     "dense": 14.786324786324787,
+     "rel": 0.0,
+     "pass": true
+    },
+    "norm_1": {
+     "gpu_probes": 14.786324786324787,
+     "dense": 14.786324786324789,
+     "rel": 1.2013511572822502e-16,
+     "pass": true
+    },
+    "cross_check_agrees": true,
+    "pass": true
+   },
+   "stencil": {
+    "bitwise_equal": true,
+    "max_abs_diff_rel_to_max_entry": 0.0,
+    "nnz_gpu": 99218,
+    "nnz_cpu": 99218,
+    "entries_pass": true,
+    "s_F": {
+     "gpu_probes": 0.0,
+     "dense": 0.0,
+     "rel": null,
+     "pass": true
+    },
+    "fro": {
+     "gpu_probes": 147.5301596126505,
+     "dense": 147.53015961265845,
+     "rel": 5.394204589357944e-14,
+     "pass": true
+    },
+    "norm_inf": {
+     "gpu_probes": 14.786325044929981,
+     "dense": 14.786325044929981,
+     "rel": 0.0,
+     "pass": true
+    },
+    "norm_1": {
+     "gpu_probes": 14.786325044929981,
+     "dense": 14.786325044929981,
+     "rel": 0.0,
+     "pass": true
+    },
+    "cross_check_agrees": true,
+    "pass": true
+   },
+   "diff": {
+    "bitwise_equal": true,
+    "max_abs_diff_rel_to_max_entry": 0.0,
+    "nnz_gpu": 99218,
+    "nnz_cpu": 99218,
+    "entries_pass": true,
+    "s_F": {
+     "gpu_probes": 0.0,
+     "dense": 0.0,
+     "rel": null,
+     "pass": true
+    },
+    "fro": {
+     "gpu_probes": 147.53016157567623,
+     "dense": 147.53016157568396,
+     "rel": 5.2400843885092516e-14,
+     "pass": true
+    },
+    "norm_inf": {
+     "gpu_probes": 14.786325111985207,
+     "dense": 14.786325111985207,
+     "rel": 0.0,
+     "pass": true
+    },
+    "norm_1": {
+     "gpu_probes": 14.786325111985207,
+     "dense": 14.786325111985207,
+     "rel": 0.0,
+     "pass": true
+    },
+    "cross_check_agrees": true,
+    "pass": true
+   },
+   "mean": {
+    "bitwise_equal": true,
+    "max_abs_diff_rel_to_max_entry": 0.0,
+    "nnz_gpu": 99218,
+    "nnz_cpu": 99218,
+    "entries_pass": true,
+    "s_F": {
+     "gpu_probes": 0.0,
+     "dense": 0.0,
+     "rel": null,
+     "pass": true
+    },
+    "fro": {
+     "gpu_probes": 147.53015979328907,
+     "dense": 147.530159793299,
+     "rel": 6.723490712074414e-14,
+     "pass": true
+    },
+    "norm_inf": {
+     "gpu_probes": 14.786325028166175,
+     "dense": 14.786325028166175,
+     "rel": 0.0,
+     "pass": true
+    },
+    "norm_1": {
+     "gpu_probes": 14.786325028166175,
+     "dense": 14.786325028166175,
+     "rel": 0.0,
+     "pass": true
+    },
+    "cross_check_agrees": true,
+    "pass": true
+   },
+   "atomic": {
+    "bitwise_equal": true,
+    "max_abs_diff_rel_to_max_entry": 0.0,
+    "nnz_gpu": 99218,
+    "nnz_cpu": 99218,
+    "entries_pass": true,
+    "s_F": {
+     "gpu_probes": 0.0,
+     "dense": 0.0,
+     "rel": null,
+     "pass": true
+    },
+    "fro": {
+     "gpu_probes": 147.5301596126505,
+     "dense": 147.53015961265845,
+     "rel": 5.394204589357944e-14,
+     "pass": true
+    },
+    "norm_inf": {
+     "gpu_probes": 14.786325044929981,
+     "dense": 14.786325044929981,
+     "rel": 0.0,
+     "pass": true
+    },
+    "norm_1": {
+     "gpu_probes": 14.786325044929981,
+     "dense": 14.786325044929981,
+     "rel": 0.0,
+     "pass": true
+    },
+    "cross_check_agrees": true,
+    "pass": true
+   },
+   "corner": {
+    "bitwise_equal": true,
+    "max_abs_diff_rel_to_max_entry": 0.0,
+    "nnz_gpu": 99218,
+    "nnz_cpu": 99218,
+    "entries_pass": true,
+    "s_F": {
+     "gpu_probes": 8.20025410289257e-09,
+     "dense": 8.200254102892133e-09,
+     "rel": 5.326071094235501e-14,
+     "pass": true
+    },
+    "fro": {
+     "gpu_probes": 147.5301597914861,
+     "dense": 147.530159791494,
+     "rel": 5.336409533717475e-14,
+     "pass": true
+    },
+    "norm_inf": {
+     "gpu_probes": 14.786325028166175,
+     "dense": 14.786325028166175,
+     "rel": 0.0,
+     "pass": true
+    },
+    "norm_1": {
+     "gpu_probes": 14.786325028166175,
+     "dense": 14.786325028166175,
+     "rel": 0.0,
+     "pass": true
+    },
+    "cross_check_agrees": true,
+    "pass": true
+   },
+   "pass": true
+  },
+  "2_eigensolver": {
+   "k4|ref|A": {
+    "theta": [
+     1.936845616034173e-05,
+     1.936845616057795e-05,
+     0.0006610279892356098
+    ],
+    "reference": [
+     1.9368456153677403e-05,
+     1.936845615979878e-05,
+     0.0006610279892287364
+    ],
+    "rel": [
+     3.440814501223695e-10,
+     4.0228919084904994e-11,
+     1.03980590908242e-11
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k4|ref|B": {
+    "theta": [
+     1.9368456160458133e-05,
+     1.9368456160473484e-05,
+     0.0006610279892356278
+    ],
+    "reference": [
+     1.9368456153677403e-05,
+     1.936845615979878e-05,
+     0.0006610279892287364
+    ],
+    "rel": [
+     3.500913589566043e-10,
+     3.4835290052788445e-11,
+     1.0425286010646853e-11
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k4|stencil|A": {
+    "theta": [
+     1.9328120613049295e-05,
+     1.9328120613060906e-05,
+     0.000660987628833179
+    ],
+    "reference": [
+     1.932812060776485e-05,
+     1.932812062173611e-05,
+     0.0006609876288284827
+    ],
+    "rel": [
+     2.7340710158258433e-10,
+     4.4883841503996486e-10,
+     7.105019709161372e-12
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k4|stencil|B": {
+    "theta": [
+     1.9328120613034854e-05,
+     1.9328120613039005e-05,
+     0.0006609876288331645
+    ],
+    "reference": [
+     1.932812060776485e-05,
+     1.932812062173611e-05,
+     0.0006609876288284827
+    ],
+    "rel": [
+     2.726599923329147e-10,
+     4.499715248912961e-10,
+     7.083040010181143e-12
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k4|diff|A": {
+    "theta": [
+     1.9368436338191356e-05,
+     1.9368436338178007e-05,
+     0.0006610278734644537
+    ],
+    "reference": [
+     1.9368436336078263e-05,
+     1.936843634334898e-05,
+     0.000661027873461926
+    ],
+    "rel": [
+     1.090998290646298e-10,
+     2.669793999368109e-10,
+     3.823906746465354e-12
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k4|diff|B": {
+    "theta": [
+     1.9368436338188967e-05,
+     1.936843633818739e-05,
+     0.0006610278734644557
+    ],
+    "reference": [
+     1.9368436336078263e-05,
+     1.936843634334898e-05,
+     0.000661027873461926
+    ],
+    "rel": [
+     1.0897650300620102e-10,
+     2.6649501716282355e-10,
+     3.827023081207691e-12
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k4|mean|A": {
+    "theta": [
+     1.9368346200363246e-05,
+     1.9368346200363317e-05,
+     0.0006610273159594475
+    ],
+    "reference": [
+     1.936834619767356e-05,
+     1.9368346197891435e-05,
+     0.0006610273159543294
+    ],
+    "rel": [
+     1.3887016134053425e-10,
+     1.276248716431026e-10,
+     7.742622206233732e-12
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k4|mean|B": {
+    "theta": [
+     1.9368346200363307e-05,
+     1.9368346200363805e-05,
+     0.0006610273159594468
+    ],
+    "reference": [
+     1.936834619767356e-05,
+     1.9368346197891435e-05,
+     0.0006610273159543294
+    ],
+    "rel": [
+     1.388733101056162e-10,
+     1.276500617637579e-10,
+     7.741474081939285e-12
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k4|atomic|A": {
+    "theta": [
+     1.9328120613050646e-05,
+     1.9328120613050555e-05,
+     0.0006609876288331828
+    ],
+    "reference": [
+     1.932812060776485e-05,
+     1.932812062173611e-05,
+     0.0006609876288284827
+    ],
+    "rel": [
+     2.734770444710447e-10,
+     4.4937394266926825e-10,
+     7.1107606753129246e-12
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k4|atomic|B": {
+    "theta": [
+     1.9328120613053923e-05,
+     1.9328120613055932e-05,
+     0.0006609876288331779
+    ],
+    "reference": [
+     1.932812060776485e-05,
+     1.932812062173611e-05,
+     0.0006609876288284827
+    ],
+    "rel": [
+     2.736465551806718e-10,
+     4.49095748774766e-10,
+     7.103379433118071e-12
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k4|corner|A": {
+    "theta": [
+     1.9367090048244312e-05,
+     1.93670956708781e-05,
+     0.0006610262361700107
+    ],
+    "reference": [
+     1.9367090050442776e-05,
+     1.936709566437331e-05,
+     0.00066102623616986
+    ],
+    "rel": [
+     1.1351544524640178e-10,
+     3.358680945850476e-10,
+     2.2798505373810844e-13
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k4|corner|B": {
+    "theta": [
+     1.9367090048244224e-05,
+     1.936709567087822e-05,
+     0.0006610262361700117
+    ],
+    "reference": [
+     1.9367090050442776e-05,
+     1.936709566437331e-05,
+     0.00066102623616986
+    ],
+    "rel": [
+     1.1351999375762804e-10,
+     3.3587421757915417e-10,
+     2.2946121595655666e-13
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k8|ref|A": {
+    "theta": [
+     5.998488757680501e-06,
+     5.9984887579778005e-06,
+     0.00020527485895462447
+    ],
+    "reference": [
+     5.998488757722186e-06,
+     5.998488758275088e-06,
+     0.00020527485895436903
+    ],
+    "rel": [
+     6.949255740383349e-12,
+     4.956038106305718e-11,
+     1.244370758010686e-12
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k8|ref|B": {
+    "theta": [
+     5.9984887577280824e-06,
+     5.998488757937775e-06,
+     0.00020527485895435328
+    ],
+    "reference": [
+     5.998488757722186e-06,
+     5.998488758275088e-06,
+     0.00020527485895436903
+    ],
+    "rel": [
+     9.829469694757175e-13,
+     5.623301087074635e-11,
+     7.671683047582858e-14
+    ],
+    "stop": "stop_target",
+    "iterations": 10,
+    "pass": true
+   },
+   "k8|stencil|A": {
+    "theta": [
+     5.947160439404142e-06,
+     5.947160439400283e-06,
+     0.00020522366512777646
+    ],
+    "reference": [
+     5.947160439405066e-06,
+     5.947160439434409e-06,
+     0.00020522366512778912
+    ],
+    "rel": [
+     1.553872566361917e-13,
+     5.738219232433217e-12,
+     6.167934071290616e-14
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k8|stencil|B": {
+    "theta": [
+     5.947160439406789e-06,
+     5.947160439408744e-06,
+     0.00020522366512777687
+    ],
+    "reference": [
+     5.947160439405066e-06,
+     5.947160439434409e-06,
+     0.00020522366512778912
+    ],
+    "rel": [
+     2.896953987149532e-13,
+     4.315521426263408e-12,
+     5.969820557223465e-14
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k8|diff|A": {
+    "theta": [
+     5.9984824647126285e-06,
+     5.998482464717138e-06,
+     0.00020527482143734344
+    ],
+    "reference": [
+     5.998482464676775e-06,
+     5.998482464716587e-06,
+     0.0002052748214373191
+    ],
+    "rel": [
+     5.97704682851181e-12,
+     9.192632501737298e-14,
+     1.1857439992820516e-13
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k8|diff|B": {
+    "theta": [
+     5.9984824647231656e-06,
+     5.998482464721001e-06,
+     0.0002052748214373462
+    ],
+    "reference": [
+     5.998482464676775e-06,
+     5.998482464716587e-06,
+     0.0002052748214373191
+    ],
+    "rel": [
+     7.733672762803222e-12,
+     7.35975431629106e-13,
+     1.320427616127006e-13
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k8|mean|A": {
+    "theta": [
+     5.99845388054353e-06,
+     5.998453880543522e-06,
+     0.00020527464202890262
+    ],
+    "reference": [
+     5.9984538805240625e-06,
+     5.998453880553907e-06,
+     0.00020527464202888866
+    ],
+    "rel": [
+     3.2453959994512444e-12,
+     1.7312167668743982e-12,
+     6.800208166377599e-14
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k8|mean|B": {
+    "theta": [
+     5.998453880543506e-06,
+     5.998453880543542e-06,
+     0.00020527464202890262
+    ],
+    "reference": [
+     5.9984538805240625e-06,
+     5.998453880553907e-06,
+     0.00020527464202888866
+    ],
+    "rel": [
+     3.241442160179407e-12,
+     1.727968970329691e-12,
+     6.800208166377599e-14
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k8|atomic|A": {
+    "theta": [
+     5.947160439401589e-06,
+     5.947160439403923e-06,
+     0.00020522366512777532
+    ],
+    "reference": [
+     5.947160439405474e-06,
+     5.947160439434009e-06,
+     0.00020522366512778709
+    ],
+    "rel": [
+     6.533101248305797e-13,
+     5.0589874937586325e-12,
+     5.732084340342942e-14
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k8|atomic|B": {
+    "theta": [
+     5.947160439397285e-06,
+     5.947160439398828e-06,
+     0.00020522366512777695
+    ],
+    "reference": [
+     5.947160439405474e-06,
+     5.947160439434009e-06,
+     0.00020522366512778709
+    ],
+    "rel": [
+     1.3769789158190635e-12,
+     5.915682588774348e-12,
+     4.939630284074333e-14
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k8|corner|A": {
+    "theta": [
+     5.997656622213127e-06,
+     5.997658384486134e-06,
+     0.00020527392578061334
+    ],
+    "reference": [
+     5.997656622204326e-06,
+     5.997658384482611e-06,
+     0.00020527392578061386
+    ],
+    "rel": [
+     1.467351813605104e-12,
+     5.873642348062027e-13,
+     2.5088234171592533e-15
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "k8|corner|B": {
+    "theta": [
+     5.997656622213199e-06,
+     5.997658384486153e-06,
+     0.00020527392578061315
+    ],
+    "reference": [
+     5.997656622204326e-06,
+     5.997658384482611e-06,
+     0.00020527392578061386
+    ],
+    "rel": [
+     1.479356135468091e-12,
+     5.904712348460528e-13,
+     3.4331267813758204e-15
+    ],
+    "stop": "stop_target",
+    "iterations": 11,
+    "pass": true
+   },
+   "pass": true
+  },
+  "3_indefinite_and_witness": {
+   "sigma": 0.0003401578747181238,
+   "dense_shifted_lowest": [
+    -0.0003208297541103589,
+    -0.00032082975409638767,
+    0.0003208297541103589
+   ],
+   "starts": {
+    "A": {
+     "theta": [
+      -0.0003208297541050701,
+      -0.00032082975410506004
+     ],
+     "rel": [
+      1.6484731667604863e-11,
+      2.703106690279174e-11
+     ],
+     "n_candidates": 2,
+     "n_verified_negative": 2,
+     "pass": true
+    },
+    "B": {
+     "theta": [
+      -0.00032082975410507354,
+      -0.00032082975410506075
+     ],
+     "rel": [
+      1.647408665479176e-11,
+      2.7033263492737396e-11
+     ],
+     "n_candidates": 2,
+     "n_verified_negative": 2,
+     "pass": true
+    }
+   },
+   "planted": [
+    {
+     "case": "positive vector (stencil Ritz vector 1, unshifted)",
+     "q_f": 1.9328120613054007e-05,
+     "eps_f": 8.584345460985466e-12,
+     "verified_negative": false
+    },
+    {
+     "case": "stencil shifted by lambda1 (1 + 1e-14), its lowest Ritz vector",
+     "q_f": 5.2889100500084915e-15,
+     "eps_f": 8.58434648601972e-12,
+     "verified_negative": false
+    }
+   ],
+   "planted_pass": true,
+   "pass": true
+  },
+  "4_recording_copies": {
+   "record": {
+    "pcg_energy_st": {
+     "records_equal": true,
+     "iterate_bitwise_equal": true,
+     "unmodified_record": {
+      "status": "ok",
+      "iters": 14,
+      "min_energy_ratio": 0.9666332211689608,
+      "rel": 2.0143478981351994e-09
+     }
+    },
+    "pcg_energy_K": {
+     "records_equal": true,
+     "iterate_bitwise_equal": true,
+     "unmodified_record": {
+      "status": "ok",
+      "iters": 14,
+      "min_energy_ratio": 1.0,
+      "rel": 1.9163168247743907e-09
+     }
+    },
+    "pcg32": {
+     "history_bitwise_equal": true,
+     "x_pass_bitwise_equal": true,
+     "records_equal": true
+    }
+   },
+   "pass": true
+  },
+  "5_G0_development": {
+   "k8": {
+    "theta1_ref": 5.998488757680501e-06,
+    "lambda_E29": 5.998488757830559e-06,
+    "rel": 2.501593682922908e-11,
+    "U_over_lambda": 8.57415460893575e-06,
+    "pass": true
+   },
+   "k16": {
+    "theta1_ref": 1.695093582436712e-06,
+    "lambda_E29": 1.6950935828923338e-06,
+    "rel": 2.687885670640912e-10,
+    "U_over_lambda": 5.888449387836327e-06,
+    "pass": true
+   },
+   "pass": true
+  },
+  "items_1_4_pass": true,
+  "measured_pool_peaks": {
+   "k4|act": 9620480,
+   "k4|eig": 9620480,
+   "k4|skew": 9620480,
+   "k8|act": 254102528,
+   "k8|eig": 254102528,
+   "k8|skew": 254102528,
+   "k16|act": 255072768,
+   "k16|eig": 255072768,
+   "k16|skew": 255072768
+  }
+ },
+ "launch_selftest": {
+  "passed": true,
+  "cases": {
+   "1a_first_acquire": {
+    "ok": true,
+    "pass": true
+   },
+   "1b_existing_lock_refuses_names_owner": {
+    "ok": false,
+    "reason": "lock exists, owner: {\"task\": \"selftest-owner\", \"pid\": 12345}",
+    "pass": true
+   },
+   "1c_lock_in_other_task_refuses": {
+    "ok": false,
+    "reason": "lock held in another task folder: ['<temp>\\\\tmpnk_r96u0\\\\T99\\\\gpu_job.lock']",
+    "pass": true
+   },
+   "2a_empty_baseline_refuses": {
+    "pass": true
+   },
+   "2b_empty_first_sample_stops_coverage_false": {
+    "state": {
+     "go": false,
+     "base_sh": null,
+     "stop": "empty sample",
+     "covered": false
+    },
+    "pass": true
+   },
+   "3_unrelated_pid_only": {
+    "state": {
+     "go": true,
+     "base_sh": 100000000.0,
+     "stop": "child missing from sample or counter missing",
+     "covered": false
+    },
+    "pass": true
+   },
+   "4a_missing_shared_counter": {
+    "state": {
+     "go": true,
+     "base_sh": 100000000.0,
+     "stop": "child missing from sample or counter missing",
+     "covered": false
+    },
+    "pass": true
+   },
+   "4b_missing_dedicated_counter": {
+    "state": {
+     "go": true,
+     "base_sh": 100000000.0,
+     "stop": "child missing from sample or counter missing",
+     "covered": false
+    },
+    "pass": true
+   },
+   "5_empty_sample_after_go": {
+    "state": {
+     "go": true,
+     "base_sh": 100000000.0,
+     "stop": "empty sample",
+     "covered": false
+    },
+    "pass": true
+   },
+   "6_spill": {
+    "state": {
+     "go": true,
+     "base_sh": 100000000.0,
+     "stop": "refused_for_memory: shared growth above 256 MiB",
+     "covered": true
+    },
+    "pass": true
+   },
+   "7_complete_sample_ok": {
+    "state": {
+     "go": true,
+     "base_sh": 100000000.0,
+     "stop": null,
+     "covered": true
+    },
+    "pass": true
+   }
+  }
+ },
+ "k128_gate": {
+  "k": 128,
+  "block_size": 6,
+  "predicted_eig_peak_bytes": 20243962173,
+  "prediction": {
+   "rule": "pool peak per phase fitted through k = (32, 64), largest phase",
+   "phases": {
+    "setup": {
+     "points": {
+      "32": 267866112,
+      "64": 595246592
+     },
+     "per_dof_bytes": 57.81394455181456,
+     "fixed_bytes": 219324425.68935,
+     "pool_predicted_bytes": 3177726118
+    },
+    "eig": {
+     "points": {
+      "32": 703852544,
+      "64": 2862365696
+     },
+     "per_dof_bytes": 381.18387413962637,
+     "fixed_bytes": 383803320.778761,
+     "pool_predicted_bytes": 19889391933
+    }
+   },
+   "pool_predicted_bytes": 19889391933,
+   "context_bytes": 354570240
+  },
+  "margin_bytes": 1610612736,
+  "nvidia_smi_free_bytes": 22656581632,
+  "admitted": true,
+  "time": "2026-11-24 13:27:30"
+ },
+ "budget": {
+  "first_job_epoch": 1795554520.164517,
+  "first_job_local": "2026-11-24 13:08:40",
+  "budget_s": 21600,
+  "deadline_epoch": 1795576120.164517
+ },
+ "k128_first_direction": {
+  "E29": -1.1385383514247778,
+  "T22_pcg_energy_record": {
+   "status": "negative energy direction",
+   "iters": 1,
+   "pAp_rel_to_fp64": -1.1385383514247778,
+   "min_energy_ratio": -1.1385383514247778,
+   "rel": 1.0,
+   "time_s": 0.3350043296813965,
+   "n_directions": 1,
+   "fixed_dofs_zero": [
+    true
+   ]
+  },
+  "vectors": {
+   "fp64_pcg_direction": {
+    "energy_ratio": -1.1385383514247778,
+    "reproduces_E29_exactly": true,
+    "what": "E29's pcg_energy first search direction in FP64, as that code forms it"
+   },
+   "fp32_rounded_unit_max_witness": {
+    "energy_ratio": -1.1385382176691647,
+    "verified_negative": true,
+    "rel_diff_from_E29": 1.1748011197187935e-07,
+    "what": "the same direction scaled to unit maximum and rounded to FP32 (vector st1), verified by the exact-summation witness rule"
+   }
+  }
+ }
+}

@@ -1,0 +1,36 @@
+\begin{tabular}{lllrrrr}
+\toprule
+Field & Elements & Solver & Steps & FP64 true res. & Factor per step & Compliance error \\
+\midrule
+design & 1.02M & FP32 Jacobi-PCG & 1{,}225 & $3.03\times10^{-3}$ & 0.99528 & $1.78\times10^{-3}$ \\
+design & 1.02M & FP32 MG-PCG & 17 & $5.00\times10^{-4}$ & 0.639 & $1.80\times10^{-3}$ \\
+design & 1.02M & FP32 MG-PCG, FP64 iterate & 17 & $2.51\times10^{-4}$ & 0.614 & $1.80\times10^{-3}$ \\
+design & 1.02M & IR (certified) & 5/21 & $1.03\times10^{-6}$ & 0.519 & $5.24\times10^{-8}$ \\
+design & 8.19M & FP32 Jacobi-PCG & 2{,}482 & 0.0117 & 0.99821 & $7.10\times10^{-3}$ \\
+design & 8.19M & FP32 MG-PCG & 19 & $1.32\times10^{-3}$ & 0.706 & $7.06\times10^{-3}$ \\
+design & 8.19M & FP32 MG-PCG, FP64 iterate & 19 & $6.76\times10^{-4}$ & 0.681 & $7.06\times10^{-3}$ \\
+design & 8.19M & IR (certified) & 5/22 & $1.79\times10^{-6}$ & 0.548 & $3.89\times10^{-8}$ \\
+design & 65.5M & FP32 Jacobi-PCG & 5{,}035 & 0.0459 & 0.99939 & 0.0291 \\
+design & 65.5M & FP32 MG-PCG & 20 & $3.66\times10^{-3}$ & 0.755 & 0.0293 \\
+design & 65.5M & FP32 MG-PCG, FP64 iterate & 20 & $1.91\times10^{-3}$ & 0.731 & 0.0293 \\
+design & 65.5M & IR (certified) & 5/23 & $4.18\times10^{-6}$ & 0.584 & $5.76\times10^{-8}$ \\
+uniform & 0.13M & FP32 Jacobi-PCG & 426 & $6.67\times10^{-4}$ & 0.983 & $2.72\times10^{-3}$ \\
+uniform & 0.13M & FP32 MG-PCG & 8 & $1.72\times10^{-4}$ & 0.338 & $2.71\times10^{-3}$ \\
+uniform & 0.13M & FP32 MG-PCG, FP64 iterate & 8 & $1.28\times10^{-4}$ & 0.326 & $2.71\times10^{-3}$ \\
+uniform & 0.13M & IR (certified) & 4/8 & $7.39\times10^{-6}$ & 0.228 & $7.91\times10^{-7}$ \\
+uniform & 1.02M & FP32 Jacobi-PCG & 1{,}438 & $3.00\times10^{-3}$ & 0.99597 & 0.0108 \\
+uniform & 1.02M & FP32 MG-PCG & 8 & $4.40\times10^{-4}$ & 0.381 & 0.0109 \\
+uniform & 1.02M & FP32 MG-PCG, FP64 iterate & 8 & $3.33\times10^{-4}$ & 0.368 & 0.0109 \\
+uniform & 1.02M & IR (certified) & 4/8 & $9.09\times10^{-6}$ & 0.234 & $6.78\times10^{-7}$ \\
+uniform & 8.19M & FP32 Jacobi-PCG & 3{,}216 & 0.0126 & 0.99864 & 0.0447 \\
+uniform & 8.19M & FP32 MG-PCG & 8 & $1.23\times10^{-3}$ & 0.433 & 0.0448 \\
+uniform & 8.19M & FP32 MG-PCG, FP64 iterate & 8 & $9.31\times10^{-4}$ & 0.418 & 0.0448 \\
+uniform & 8.19M & IR (certified) & 5/10 & $1.67\times10^{-6}$ & 0.264 & $3.95\times10^{-7}$ \\
+uniform & 65.5M & FP32 Jacobi-PCG & 6{,}644 & 0.0619 & 0.99958 & 0.215 \\
+uniform & 65.5M & FP32 MG-PCG & 8 & $3.99\times10^{-3}$ & 0.501 & 0.215 \\
+uniform & 65.5M & FP32 MG-PCG, FP64 iterate & 8 & $3.04\times10^{-3}$ & 0.485 & 0.215 \\
+uniform & 65.5M & IR (certified) & 6/24 & $6.39\times10^{-6}$ & 0.608 & $3.59\times10^{-4}$ \\
+uniform & 65.5M & FP32 MG-PCG, FP64 iterate, element mean & 8 & $8.76\times10^{-4}$ & 0.415 & $2.36\times10^{-7}$ \\
+uniform & 65.5M & FP32 MG-PCG, FP64 iterate, corner reference & 8 & $8.76\times10^{-4}$ & 0.415 & $8.42\times10^{-5}$ \\
+\bottomrule
+\end{tabular}

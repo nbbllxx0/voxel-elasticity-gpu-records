@@ -1,0 +1,183 @@
+{
+ "n": 576,
+ "h_in": 0.0125,
+ "grid": [
+  576,
+  384,
+  256
+ ],
+ "counts": {
+  "allocated_elements": 56623104,
+  "active_elements": 24411796,
+  "designable_elements": 22367092,
+  "protected_elements": 2044704,
+  "exterior_elements": 32211308,
+  "nodes_allocated": 57091265,
+  "nodes_exterior_only": 32245852,
+  "nodes_active": 24845413,
+  "nodes_supported": 45968,
+  "free_dofs": 74398335
+ },
+ "connectivity": {
+  "face_connected_components": 1,
+  "supports_in_component_1": true,
+  "passed": true
+ },
+ "load_nodes": {
+  "n": 40800,
+  "symmetric_about_midplane_y": true,
+  "symmetric_x": true,
+  "symmetric_z": true,
+  "centroid": [
+   5.999999999999591,
+   2.249999999999999,
+   2.099999999999992
+  ],
+  "ref_point": [
+   6.0,
+   2.25,
+   2.1
+  ],
+  "radius_min_in": 0.36763602924631816,
+  "radius_max_in": 0.3826306966253499,
+  "any_fixed": false,
+  "all_touch_protected_eye": true
+ },
+ "resultants": {
+  "LC1_vertical": {
+   "F_target": [
+    0.0,
+    0.0,
+    8000.0
+   ],
+   "M_target": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "F_sum": [
+    -1.8609029330126829e-22,
+    -3.9798644343750383e-26,
+    7999.999999992653
+   ],
+   "M_sum": [
+    8.415490526658687e-12,
+    -3.2809162053837326e-09,
+    -4.941788325877918e-27
+   ],
+   "F_max_abs_err": 7.346898200921714e-09,
+   "M_max_abs_err": 3.2809162053837326e-09,
+   "F_tol": 8.000000000000001e-07,
+   "M_tol": 8.000000000000001e-07,
+   "passed": true
+  },
+  "LC2_horizontal": {
+   "F_target": [
+    8500.0,
+    0.0,
+    0.0
+   ],
+   "M_target": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "F_sum": [
+    8499.999999996127,
+    -2.183817905049379e-24,
+    -1.9290360763129345e-22
+   ],
+   "M_sum": [
+    1.1769804705897496e-27,
+    6.80974989981934e-11,
+    -9.762875385279963e-12
+   ],
+   "F_max_abs_err": 3.8726284401491284e-09,
+   "M_max_abs_err": 6.80974989981934e-11,
+   "F_tol": 8.5e-07,
+   "M_tol": 8.5e-07,
+   "passed": true
+  },
+  "LC3_42deg": {
+   "F_target": [
+    6356.740760409153,
+    0.0,
+    7059.875842035245
+   ],
+   "M_target": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "F_sum": [
+    6356.740760410061,
+    -1.617990503410977e-24,
+    7059.875842037206
+   ],
+   "M_sum": [
+    6.733613666654037e-12,
+    -3.1588935633930504e-09,
+    -6.3545996527557476e-12
+   ],
+   "F_max_abs_err": 1.9608705770224333e-09,
+   "M_max_abs_err": 3.1588935633930504e-09,
+   "F_tol": 9.5e-07,
+   "M_tol": 9.5e-07,
+   "passed": true
+  },
+  "LC4_torsion": {
+   "F_target": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "M_target": [
+    5000.0,
+    0.0,
+    0.0
+   ],
+   "F_sum": [
+    -5.565019111436882e-28,
+    -2.8028662724111086e-11,
+    4.523714736137663e-12
+   ],
+   "M_sum": [
+    4999.999999999479,
+    -8.867906409193438e-14,
+    4.08006961549745e-15
+   ],
+   "F_max_abs_err": 2.8028662724111086e-11,
+   "M_max_abs_err": 5.211404641158879e-10,
+   "F_tol": 5e-07,
+   "M_tol": 5e-07,
+   "passed": true
+  }
+ },
+ "supports": {
+  "all_on_boss": true,
+  "n_nodes": 45968,
+  "per_bolt": [
+   11492,
+   11492,
+   11492,
+   11492
+  ]
+ },
+ "protected_touch_exterior_only": false,
+ "padding": {
+  "nominal_grid": [
+   576,
+   384,
+   240
+  ],
+  "allocated_grid": [
+   576,
+   384,
+   256
+  ],
+  "padded_elements": 3538944,
+  "padded_non_exterior_elements": 0,
+  "passed": true
+ },
+ "passed": true
+}

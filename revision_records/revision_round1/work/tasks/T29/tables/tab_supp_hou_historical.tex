@@ -1,0 +1,15 @@
+\begin{tabular}{rrrrrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{one application (ms)} & \multicolumn{3}{c}{their FP32 CG to $10^{-3}$} & \multicolumn{3}{c}{FP64 PCG + FP32 V-cycle} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+Elements & theirs & ours\textsuperscript{a} & ratio & iter.\textsuperscript{b} & time (s) & true res. & iter. & solve (s) & true res. \\
+\midrule
+8.2k & 3.28 & 0.029 & 114 & 327 & 1.9 & $2.64\times10^{-3}$ & 11 & 0.02 & $9.19\times10^{-6}$ \\
+65.5k & 4.19 & 0.023 & 186 & 632 & 2.4 & $9.63\times10^{-3}$ & 13 & 0.04 & $4.16\times10^{-6}$ \\
+524.3k & 23.88 & 0.037 & 648 & 1{,}262 & 6.5 & 0.0377 & 14 & 0.07 & $8.06\times10^{-6}$ \\
+1.02M & 9.87 & 0.050 & 197 & 1{,}591 & 14.5 & 0.0576 & 17 & 0.10 & $5.01\times10^{-6}$ \\
+4.19M & 35.83 & 0.186 & 193 & 1{,}972 & 73.4 & 0.105 & 16 & 0.26 & $4.60\times10^{-6}$ \\
+8.19M & 70.88 & 0.317 & 223 & 2{,}458 & 190.7 & 0.160 & 19 & 0.56 & $6.07\times10^{-6}$ \\
+33.55M & 309.86 & 1.238 & 250 & \multicolumn{6}{c}{operator only} \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,201 @@
+{
+ "task": "T31",
+ "run": "c0_n192",
+ "phase": "c0",
+ "n": 192,
+ "arg": null,
+ "status": "ok",
+ "rules": {
+  "spill_limit_bytes": 268435456,
+  "margin_bytes": 1610612736,
+  "time_cap_s": 14400
+ },
+ "launched_at_unix": 1795540717.3672438,
+ "admission": {
+  "nvidia_smi_free_bytes": 22586327040,
+  "nvidia_smi_used_bytes": 2725249024,
+  "nvidia_smi_total_bytes": 25757220864,
+  "others_dedicated_bytes": 6391709696,
+  "predicted_peak_bytes": 1284716097,
+  "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+  "admitted": true
+ },
+ "child_pid": 53624,
+ "child_exit_code": 0,
+ "samples": [
+  {
+   "t": 1795540725.573874,
+   "tag": "first",
+   "n_pids": 50,
+   "child": null
+  },
+  {
+   "t": 1795540727.8875532,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": null,
+    "sh": 77594624.0
+   }
+  },
+  {
+   "t": 1795540730.2034028,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 354570240.0,
+    "sh": 77594624.0
+   },
+   "event": "go"
+  },
+  {
+   "t": 1795540732.5436351,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 354570240.0,
+    "sh": 77594624.0
+   }
+  },
+  {
+   "t": 1795540734.87304,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 631406592.0,
+    "sh": 81788928.0
+   }
+  },
+  {
+   "t": 1795540737.2006977,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 880967680.0,
+    "sh": 81788928.0
+   }
+  },
+  {
+   "t": 1795540739.5103495,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 889372672.0,
+    "sh": 96468992.0
+   }
+  },
+  {
+   "t": 1795540741.820185,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 1092812800.0,
+    "sh": 96468992.0
+   }
+  },
+  {
+   "t": 1795540744.1354375,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 1061355520.0,
+    "sh": 96468992.0
+   }
+  },
+  {
+   "t": 1795540746.4754076,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 1113784320.0,
+    "sh": 96468992.0
+   }
+  },
+  {
+   "t": 1795540748.7921896,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 518193152.0,
+    "sh": 96468992.0
+   }
+  },
+  {
+   "t": 1795540751.1030002,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 518193152.0,
+    "sh": 96468992.0
+   }
+  },
+  {
+   "t": 1795540753.419618,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 518193152.0,
+    "sh": 96468992.0
+   }
+  },
+  {
+   "t": 1795540755.7414029,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 518193152.0,
+    "sh": 96468992.0
+   }
+  },
+  {
+   "t": 1795540758.0651658,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 518193152.0,
+    "sh": 96468992.0
+   }
+  },
+  {
+   "t": 1795540760.3887568,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 518193152.0,
+    "sh": 96468992.0
+   }
+  },
+  {
+   "t": 1795540762.7172072,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 518193152.0,
+    "sh": 96468992.0
+   }
+  },
+  {
+   "t": 1795540765.0665514,
+   "tag": "final",
+   "n_pids": 51,
+   "child": {
+    "ded": 518193152.0,
+    "sh": 96468992.0
+   }
+  }
+ ],
+ "watch": {
+  "covered_from_go": true,
+  "go_seen": true,
+  "shared_base_bytes": 77594624.0,
+  "shared_max_growth_bytes": 18874368.0,
+  "child_dedicated_peak_bytes": 1113784320.0,
+  "n_samples": 18,
+  "final_sample_checked": true,
+  "max_sample_interval_s": 2.349344253540039,
+  "stop": null,
+  "wall_s": 42.046262979507446
+ },
+ "spilled": false,
+ "valid": true
+}

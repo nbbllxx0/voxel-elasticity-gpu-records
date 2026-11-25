@@ -1,0 +1,78 @@
+{
+ "hypotheses": {
+  "H1": "inconclusive (reached the 300-iteration guard; coverage from the launcher's first sample not established (no spill from the third))",
+  "H2": "inconclusive (reached the 300-iteration guard; coverage from the launcher's first sample not established (no spill from the third))"
+ },
+ "application": "inconclusive",
+ "C1": "not-converged",
+ "E1": {
+  "R_n192": {
+   "evaluated": true,
+   "a_stopping_rule": false,
+   "a_termination": "guard",
+   "b_volume": true,
+   "b_volume_abs_err": 1.4409029525097594e-12,
+   "c_production_residuals": true,
+   "c_max_production_rel_true": 9.997375248351712e-06,
+   "d_audit": true,
+   "e_no_spill_covered": false,
+   "e_no_spill_no_allocation_failure_over_covered_interval": true,
+   "e_coverage_from_launcher_first_sample": false,
+   "e_note": "not established as worded: in the OPT and AUDIT jobs coverage is complete from the launcher's third sample (the first with the job process and both counters), after the job's CUDA context and one-element probe allocation; no spill or allocation failure from there on",
+   "passed": false
+  },
+  "R_n384": {
+   "evaluated": true,
+   "a_stopping_rule": false,
+   "a_termination": "guard",
+   "b_volume": true,
+   "b_volume_abs_err": 3.0636093661939867e-10,
+   "c_production_residuals": true,
+   "c_max_production_rel_true": 9.975857971649395e-06,
+   "d_audit": true,
+   "e_no_spill_covered": false,
+   "e_no_spill_no_allocation_failure_over_covered_interval": true,
+   "e_coverage_from_launcher_first_sample": false,
+   "e_note": "not established as worded: in the OPT and AUDIT jobs coverage is complete from the launcher's third sample (the first with the job process and both counters), after the job's CUDA context and one-element probe allocation; no spill or allocation failure from there on",
+   "passed": false
+  }
+ },
+ "S1": {
+  "R_n192": {
+   "max_rel_diff_prod_vs_tight": 2.1476649520024345e-08,
+   "prediction": "<= 1e-4",
+   "holds": true,
+   "scope_note": "the plan's S1 rule is stated for R designs that pass E1; this design does not pass E1, so the value is reported against the prediction only"
+  },
+  "R_n384": {
+   "max_rel_diff_prod_vs_tight": 4.982083120062699e-08,
+   "prediction": "<= 1e-4",
+   "holds": true,
+   "scope_note": "the plan's S1 rule is stated for R designs that pass E1; this design does not pass E1, so the value is reported against the prediction only"
+  },
+  "O_n192": {
+   "max_rel_diff_prod_vs_tight": 1.9587413534328753e-08,
+   "holds": true
+  }
+ },
+ "S2": {
+  "R_n192": {
+   "pool_peak_reserved_bytes": 710394880,
+   "model_bytes": 716025066.9589052,
+   "ratio": 0.9921368856780145,
+   "holds": true,
+   "model": "254.5 B x N_alloc + 216 MB (T30 out/workspace.json)",
+   "pool_peak_used_bytes": 666508288,
+   "ratio_used": 0.93084490858789
+  },
+  "R_n384": {
+   "pool_peak_reserved_bytes": 4410662912,
+   "model_bytes": 4218875479.671233,
+   "ratio": 1.0454593725870553,
+   "holds": true,
+   "model": "254.5 B x N_alloc + 216 MB (T30 out/workspace.json)",
+   "pool_peak_used_bytes": 3947981824,
+   "ratio_used": 0.9357900803243562
+  }
+ }
+}

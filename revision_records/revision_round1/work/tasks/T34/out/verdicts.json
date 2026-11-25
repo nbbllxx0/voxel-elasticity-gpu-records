@@ -1,0 +1,192 @@
+{
+ "label": "confirmatory",
+ "tau_R": 1e-08,
+ "reference": "R",
+ "G_R": true,
+ "G_R_fail_reasons": [],
+ "wording_rule": {
+  "governing_leg": "A",
+  "A": {
+   "S": 79,
+   "N_other": 79,
+   "N_ref": 79,
+   "i": {
+    "rel_abs_endpoint_diff": 1.5560412847630357e-06,
+    "threshold": 0.001,
+    "holds": true,
+    "C_tight_other": 0.08798177019731981,
+    "C_tight_ref": 0.08798190710079958,
+    "deltaC_signed": -1.5560412847630357e-06,
+    "resolved": true,
+    "U": 2.1258812629970914e-13
+   },
+   "ii": {
+    "W": [
+     70,
+     79
+    ],
+    "Q": [
+     1,
+     69
+    ],
+    "max_D_W": 9.4424900089507e-07,
+    "it_of_max_D_W": 79,
+    "max_D_Q": 1.5811885059520137e-06,
+    "it_of_max_D_Q": 68,
+    "holds": true,
+    "info_mean_D_W": 8.104915523290401e-07,
+    "info_mean_D_W_le_max_D_Q": true,
+    "n_W_its_above_max_Q": 0
+   },
+   "class": "persistent",
+   "L1": 8.962421154137701e-07,
+   "L2": 8.227379941672553e-07,
+   "L2_over_L1": 0.9179863119771157,
+   "L2_attributed": true,
+   "dC_attributed": true,
+   "endpoint": {
+    "deltaC": -1.5560412847630357e-06,
+    "dC": -1.3690347976103023e-07,
+    "mean": 9.4424900089507e-07,
+    "max": 0.9999997317790985,
+    "X": 8,
+    "X_up": 4,
+    "X_down": 4
+   }
+  },
+  "info_B": {
+   "S": 79,
+   "N_other": 79,
+   "N_ref": 79,
+   "i": {
+    "rel_abs_endpoint_diff": 5.026376602484894e-06,
+    "threshold": 0.001,
+    "holds": true,
+    "C_tight_other": 0.08798234933099887,
+    "C_tight_ref": 0.08798190710079958,
+    "deltaC_signed": 5.026376602484894e-06,
+    "resolved": true,
+    "U": 1.259491336943713e-13
+   },
+   "ii": {
+    "W": [
+     70,
+     79
+    ],
+    "Q": [
+     1,
+     69
+    ],
+    "max_D_W": 4.296935039747041e-07,
+    "it_of_max_D_W": 70,
+    "max_D_Q": 8.53716363053536e-07,
+    "it_of_max_D_Q": 69,
+    "holds": true,
+    "info_mean_D_W": 2.841160054231296e-07,
+    "info_mean_D_W_le_max_D_Q": true,
+    "n_W_its_above_max_Q": 0
+   },
+   "class": "persistent",
+   "L1": 3.8700674995197915e-07,
+   "L2": 2.751449079369195e-07,
+   "L2_over_L1": 0.7109563540456599,
+   "L2_attributed": true,
+   "dC_attributed": true,
+   "endpoint": {
+    "deltaC": 5.026376602484894e-06,
+    "dC": 4.422301992934585e-07,
+    "mean": 3.5217605545767583e-07,
+    "max": 0.9999962449073792,
+    "X": 3,
+    "X_up": 1,
+    "X_down": 2
+   }
+  },
+  "info_Ap": {
+   "S": 79,
+   "N_other": 79,
+   "N_ref": 79,
+   "i": {
+    "rel_abs_endpoint_diff": 1.5563494566180425e-06,
+    "threshold": 0.001,
+    "holds": true,
+    "C_tight_other": 0.08798177017020627,
+    "C_tight_ref": 0.08798190710079958,
+    "deltaC_signed": -1.5563494566180425e-06,
+    "resolved": true,
+    "U": 1.2579743062499465e-13
+   },
+   "ii": {
+    "W": [
+     70,
+     79
+    ],
+    "Q": [
+     1,
+     69
+    ],
+    "max_D_W": 9.474442813370842e-07,
+    "it_of_max_D_W": 79,
+    "max_D_Q": 1.5811382691026665e-06,
+    "it_of_max_D_Q": 68,
+    "holds": true,
+    "info_mean_D_W": 8.100765022390987e-07,
+    "info_mean_D_W_le_max_D_Q": true,
+    "n_W_its_above_max_Q": 0
+   },
+   "class": "persistent",
+   "L1": 8.961145496868993e-07,
+   "L2": 8.219868439482525e-07,
+   "L2_over_L1": 0.9172787611086698,
+   "L2_attributed": true,
+   "dC_attributed": true,
+   "endpoint": {
+    "deltaC": -1.5563494566180425e-06,
+    "dC": -1.369305933085485e-07,
+    "mean": 9.474442813370842e-07,
+    "max": 0.9999997913837433,
+    "X": 8,
+    "X_up": 4,
+    "X_down": 4
+   }
+  },
+  "status": "descriptive only: binary wording rule dropped by the authors' plan-approval decision for R3.4 (DEVIATIONS D3)",
+  "frozen_rule_conditions_hold": true,
+  "frozen_rule_label_not_used": "no accumulation (support)",
+  "frozen_rule_reason": "G_R, (i) and (ii) hold"
+ },
+ "no_accumulation_wording_allowed": false,
+ "verdict_Q3": "measured course: persistent difference (no-accumulation wording not used)",
+ "verdict_reason": "course class of (A, R) is persistent (L2/L1 = 0.918); the window comparison (ii) compares the last ten iterations with the peak at iteration 68, which is itself after the late jump, so it is descriptive only",
+ "floor_qualifier": null,
+ "per_iteration_attribution_D": {
+  "A": {
+   "n_its": 79,
+   "n_its_D_attributed": 79,
+   "its_D_not_attributed": []
+  },
+  "B": {
+   "n_its": 79,
+   "n_its_D_attributed": 78,
+   "its_D_not_attributed": [
+    {
+     "it": 67,
+     "D": 9.819672050070949e-08,
+     "floor_D": 1.7970225599128754e-08,
+     "D_over_floor": 5.464412227828143
+    }
+   ]
+  },
+  "Ap": {
+   "n_its": 79,
+   "n_its_D_attributed": 79,
+   "its_D_not_attributed": []
+  }
+ },
+ "course_classes": {
+  "A,R": "persistent",
+  "B,R": "persistent",
+  "Ap,R": "persistent"
+ },
+ "T24_pair_verdict_unchanged": "T24 A vs B: persistent, wording not allowed for that pair"
+}

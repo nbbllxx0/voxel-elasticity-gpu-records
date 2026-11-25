@@ -1,0 +1,927 @@
+{
+ "tag": "stop_after_launch",
+ "status": "stopped_coverage_lost",
+ "returncode": -9,
+ "wall_s": 0.595,
+ "carriers": [],
+ "n_wddm_samples_during_job": 3,
+ "nvidia_smi": {
+  "used_mib_before": 0.0,
+  "used_mib_peak_during": null,
+  "device_growth_mib": null,
+  "n_samples_during": 0,
+  "n_samples_util_ge_50": 0
+ },
+ "nvidia_smi_in_wsl": {
+  "used_mib_before": null,
+  "used_mib_peak_during": null,
+  "n_samples_during": 0
+ },
+ "max_shared_growth_bytes": 0,
+ "validity": {
+  "vm_carrier": null,
+  "vm_carrier_pid": null,
+  "watched_pids": [
+   3440
+  ],
+  "carrier_is_watched": false,
+  "pid_lists": {
+   "launcher": [
+    3440
+   ],
+   "live_stop": [
+    3440
+   ],
+   "both_required": true,
+   "agree": true,
+   "watched": [
+    3440
+   ]
+  },
+  "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+  "vm_dedicated_growth_bytes": null,
+  "vm_shared_growth_bytes": null,
+  "carrier_over_device_growth": null,
+  "monitored": false,
+  "spilled": null,
+  "clean": false,
+  "not_monitored_reasons": [
+   "no WSL VM carrier found"
+  ],
+  "other_growing_processes": []
+ },
+ "live_stop": {
+  "samples_checked": 5,
+  "fired": {
+   "t_sample": 1795472839.2308788,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.59
+  },
+  "kill": {
+   "attempts": [
+    {
+     "t": 1795472839.2308788,
+     "stdout": "recorded: 4242 4243 \nalive:",
+     "returncode": 0,
+     "recorded": [
+      4242,
+      4243
+     ],
+     "alive": [],
+     "recorded_earlier_not_checked": []
+    }
+   ],
+   "t_kill_start": 1795472839.2308788,
+   "killed": "job",
+   "linux_process_ended_confirmed": true,
+   "launcher_exit_code": -9,
+   "confirmation": "its wsl.exe exited and killtree.sh (code 0) checked every recorded PID [4242, 4243] again and found none alive",
+   "t_kill_done": 1795472839.2308788,
+   "killtree_stdout": "recorded: 4242 4243 \nalive:",
+   "killtree_returncode": 0,
+   "killtree_attempts": 1,
+   "recorded_pids": [
+    4242,
+    4243
+   ],
+   "t_rel_launch_s": 0.59
+  },
+  "job_exit_rel_launch_s": 0.59,
+  "vm_survived": true
+ },
+ "coverage": {
+  "covered": false,
+  "baseline_before_start": true,
+  "n_checked_in_or_after_job": 5,
+  "first_check_after_start_s": 0.30118584632873535,
+  "last_check_minus_end_s": -0.12743234634399414,
+  "max_gap_s": 0.30118584632873535,
+  "max_gap_allowed_s": 5.0,
+  "coverage_lost": {
+   "t_sample": 1795472839.2308788,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.59
+  },
+  "samples_span_job": false,
+  "pid_lists_agree": true,
+  "carrier_in_both_lists": false,
+  "derived_from": "live_stop.checked_sample_t",
+  "from": "arming, before any GPU work of the launcher"
+ },
+ "admission": {
+  "predicted_peak_bytes": 67108864,
+  "driver_free_bytes": 21474836480,
+  "admitted": true
+ }
+}
+{
+ "tag": "stop_in_section",
+ "status": "stopped_coverage_lost",
+ "returncode": -9,
+ "wall_s": 0.003,
+ "carriers": [],
+ "n_wddm_samples_during_job": 1,
+ "nvidia_smi": {
+  "used_mib_before": 0.0,
+  "used_mib_peak_during": null,
+  "device_growth_mib": null,
+  "n_samples_during": 0,
+  "n_samples_util_ge_50": 0
+ },
+ "nvidia_smi_in_wsl": {
+  "used_mib_before": null,
+  "used_mib_peak_during": null,
+  "n_samples_during": 0
+ },
+ "max_shared_growth_bytes": 0,
+ "validity": {
+  "vm_carrier": null,
+  "vm_carrier_pid": null,
+  "watched_pids": [
+   3440
+  ],
+  "carrier_is_watched": false,
+  "pid_lists": {
+   "launcher": [
+    3440
+   ],
+   "live_stop": [
+    3440
+   ],
+   "both_required": true,
+   "agree": true,
+   "watched": [
+    3440
+   ]
+  },
+  "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+  "vm_dedicated_growth_bytes": null,
+  "vm_shared_growth_bytes": null,
+  "carrier_over_device_growth": null,
+  "monitored": false,
+  "spilled": null,
+  "clean": false,
+  "not_monitored_reasons": [
+   "no WSL VM carrier found",
+   "fewer than 3 WDDM samples inside the job"
+  ],
+  "other_growing_processes": []
+ },
+ "live_stop": {
+  "samples_checked": 4,
+  "fired": {
+   "t_sample": 1795472844.1540747,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.0
+  },
+  "kill": {
+   "attempts": [
+    {
+     "t": 1795472844.157077,
+     "stdout": "recorded: 4242 4243 \nalive:",
+     "returncode": 0,
+     "recorded": [
+      4242,
+      4243
+     ],
+     "alive": [],
+     "recorded_earlier_not_checked": []
+    }
+   ],
+   "t_kill_start": 1795472844.157077,
+   "killed": "job",
+   "linux_process_ended_confirmed": true,
+   "launcher_exit_code": -9,
+   "confirmation": "its wsl.exe exited and killtree.sh (code 0) checked every recorded PID [4242, 4243] again and found none alive",
+   "t_kill_done": 1795472844.157077,
+   "killtree_stdout": "recorded: 4242 4243 \nalive:",
+   "killtree_returncode": 0,
+   "killtree_attempts": 1,
+   "recorded_pids": [
+    4242,
+    4243
+   ],
+   "t_rel_launch_s": 0.0
+  },
+  "job_exit_rel_launch_s": 0.0,
+  "vm_survived": true
+ },
+ "coverage": {
+  "covered": false,
+  "baseline_before_start": true,
+  "n_checked_in_or_after_job": 4,
+  "first_check_after_start_s": 0.29823803901672363,
+  "last_check_minus_end_s": 0.15747785568237305,
+  "max_gap_s": 0.30074477195739746,
+  "max_gap_allowed_s": 5.0,
+  "coverage_lost": {
+   "t_sample": 1795472844.1540747,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.0
+  },
+  "samples_span_job": false,
+  "pid_lists_agree": true,
+  "carrier_in_both_lists": false,
+  "derived_from": "live_stop.checked_sample_t",
+  "from": "arming, before any GPU work of the launcher"
+ },
+ "admission": {
+  "predicted_peak_bytes": 67108864,
+  "driver_free_bytes": 21474836480,
+  "admitted": true
+ }
+}
+{
+ "tag": "race_10",
+ "status": "stopped_coverage_lost",
+ "returncode": -9,
+ "wall_s": 0.018,
+ "carriers": [],
+ "n_wddm_samples_during_job": 1,
+ "nvidia_smi": {
+  "used_mib_before": 0.0,
+  "used_mib_peak_during": null,
+  "device_growth_mib": null,
+  "n_samples_during": 0,
+  "n_samples_util_ge_50": 0
+ },
+ "nvidia_smi_in_wsl": {
+  "used_mib_before": null,
+  "used_mib_peak_during": null,
+  "n_samples_during": 0
+ },
+ "max_shared_growth_bytes": 0,
+ "validity": {
+  "vm_carrier": null,
+  "vm_carrier_pid": null,
+  "watched_pids": [
+   3440
+  ],
+  "carrier_is_watched": false,
+  "pid_lists": {
+   "launcher": [
+    3440
+   ],
+   "live_stop": [
+    3440
+   ],
+   "both_required": true,
+   "agree": true,
+   "watched": [
+    3440
+   ]
+  },
+  "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+  "vm_dedicated_growth_bytes": null,
+  "vm_shared_growth_bytes": null,
+  "carrier_over_device_growth": null,
+  "monitored": false,
+  "spilled": null,
+  "clean": false,
+  "not_monitored_reasons": [
+   "no WSL VM carrier found",
+   "fewer than 3 WDDM samples inside the job"
+  ],
+  "other_growing_processes": []
+ },
+ "live_stop": {
+  "samples_checked": 3,
+  "fired": {
+   "t_sample": 1795472862.474047,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.02
+  },
+  "kill": {
+   "attempts": [
+    {
+     "t": 1795472862.474047,
+     "stdout": "recorded: 4242 4243 \nalive:",
+     "returncode": 0,
+     "recorded": [
+      4242,
+      4243
+     ],
+     "alive": [],
+     "recorded_earlier_not_checked": []
+    }
+   ],
+   "t_kill_start": 1795472862.474047,
+   "killed": "job",
+   "linux_process_ended_confirmed": true,
+   "launcher_exit_code": -9,
+   "confirmation": "its wsl.exe exited and killtree.sh (code 0) checked every recorded PID [4242, 4243] again and found none alive",
+   "t_kill_done": 1795472862.474047,
+   "killtree_stdout": "recorded: 4242 4243 \nalive:",
+   "killtree_returncode": 0,
+   "killtree_attempts": 1,
+   "recorded_pids": [
+    4242,
+    4243
+   ],
+   "t_rel_launch_s": 0.02
+  },
+  "job_exit_rel_launch_s": 0.02,
+  "vm_survived": true
+ },
+ "coverage": {
+  "covered": false,
+  "baseline_before_start": true,
+  "n_checked_in_or_after_job": 3,
+  "first_check_after_start_s": 0.29990434646606445,
+  "last_check_minus_end_s": -0.16645383834838867,
+  "max_gap_s": 0.30049800872802734,
+  "max_gap_allowed_s": 5.0,
+  "coverage_lost": {
+   "t_sample": 1795472862.474047,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.02
+  },
+  "samples_span_job": false,
+  "pid_lists_agree": true,
+  "carrier_in_both_lists": false,
+  "derived_from": "live_stop.checked_sample_t",
+  "from": "arming, before any GPU work of the launcher"
+ },
+ "admission": {
+  "predicted_peak_bytes": 67108864,
+  "driver_free_bytes": 21474836480,
+  "admitted": true
+ }
+}
+{
+ "tag": "stop_between_check_and_start",
+ "status": "stopped_coverage_lost",
+ "returncode": -9,
+ "wall_s": 0.516,
+ "carriers": [],
+ "n_wddm_samples_during_job": 3,
+ "nvidia_smi": {
+  "used_mib_before": 0.0,
+  "used_mib_peak_during": null,
+  "device_growth_mib": null,
+  "n_samples_during": 0,
+  "n_samples_util_ge_50": 0
+ },
+ "nvidia_smi_in_wsl": {
+  "used_mib_before": null,
+  "used_mib_peak_during": null,
+  "n_samples_during": 0
+ },
+ "max_shared_growth_bytes": 0,
+ "validity": {
+  "vm_carrier": null,
+  "vm_carrier_pid": null,
+  "watched_pids": [
+   3440
+  ],
+  "carrier_is_watched": false,
+  "pid_lists": {
+   "launcher": [
+    3440
+   ],
+   "live_stop": [
+    3440
+   ],
+   "both_required": true,
+   "agree": true,
+   "watched": [
+    3440
+   ]
+  },
+  "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+  "vm_dedicated_growth_bytes": null,
+  "vm_shared_growth_bytes": null,
+  "carrier_over_device_growth": null,
+  "monitored": false,
+  "spilled": null,
+  "clean": false,
+  "not_monitored_reasons": [
+   "no WSL VM carrier found"
+  ],
+  "other_growing_processes": []
+ },
+ "live_stop": {
+  "samples_checked": 6,
+  "fired": {
+   "t_sample": 1795472873.5347157,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.0
+  },
+  "kill": {
+   "attempts": [
+    {
+     "t": 1795472874.050511,
+     "stdout": "recorded: 4242 4243 \nalive:",
+     "returncode": 0,
+     "recorded": [
+      4242,
+      4243
+     ],
+     "alive": [],
+     "recorded_earlier_not_checked": []
+    }
+   ],
+   "t_kill_start": 1795472874.050511,
+   "killed": "job",
+   "linux_process_ended_confirmed": true,
+   "launcher_exit_code": -9,
+   "confirmation": "its wsl.exe exited and killtree.sh (code 0) checked every recorded PID [4242, 4243] again and found none alive",
+   "t_kill_done": 1795472874.050511,
+   "killtree_stdout": "recorded: 4242 4243 \nalive:",
+   "killtree_returncode": 0,
+   "killtree_attempts": 1,
+   "recorded_pids": [
+    4242,
+    4243
+   ],
+   "t_rel_launch_s": 0.52
+  },
+  "job_exit_rel_launch_s": 0.52,
+  "vm_survived": true
+ },
+ "coverage": {
+  "covered": false,
+  "baseline_before_start": true,
+  "n_checked_in_or_after_job": 6,
+  "first_check_after_start_s": 0.20711445808410645,
+  "last_check_minus_end_s": 0.2259531021118164,
+  "max_gap_s": 0.32753777503967285,
+  "max_gap_allowed_s": 5.0,
+  "coverage_lost": {
+   "t_sample": 1795472873.5347157,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.0
+  },
+  "samples_span_job": false,
+  "pid_lists_agree": true,
+  "carrier_in_both_lists": false,
+  "derived_from": "live_stop.checked_sample_t",
+  "from": "arming, before any GPU work of the launcher"
+ },
+ "admission": {
+  "predicted_peak_bytes": 67108864,
+  "driver_free_bytes": 21474836480,
+  "admitted": true
+ }
+}
+{
+ "tag": "neg_4_1",
+ "status": "stopped_coverage_lost",
+ "returncode": -9,
+ "wall_s": 0.002,
+ "carriers": [],
+ "n_wddm_samples_during_job": 1,
+ "nvidia_smi": {
+  "used_mib_before": 0.0,
+  "used_mib_peak_during": null,
+  "device_growth_mib": null,
+  "n_samples_during": 0,
+  "n_samples_util_ge_50": 0
+ },
+ "nvidia_smi_in_wsl": {
+  "used_mib_before": null,
+  "used_mib_peak_during": null,
+  "n_samples_during": 0
+ },
+ "max_shared_growth_bytes": 0,
+ "validity": {
+  "vm_carrier": null,
+  "vm_carrier_pid": null,
+  "watched_pids": [
+   3440
+  ],
+  "carrier_is_watched": false,
+  "pid_lists": {
+   "launcher": [
+    3440
+   ],
+   "live_stop": [
+    3440
+   ],
+   "both_required": true,
+   "agree": true,
+   "watched": [
+    3440
+   ]
+  },
+  "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+  "vm_dedicated_growth_bytes": null,
+  "vm_shared_growth_bytes": null,
+  "carrier_over_device_growth": null,
+  "monitored": false,
+  "spilled": null,
+  "clean": false,
+  "not_monitored_reasons": [
+   "no WSL VM carrier found",
+   "fewer than 3 WDDM samples inside the job"
+  ],
+  "other_growing_processes": []
+ },
+ "live_stop": {
+  "samples_checked": 4,
+  "fired": {
+   "t_sample": 1795472877.800267,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.0
+  },
+  "kill": {
+   "attempts": [
+    {
+     "t": 1795472877.8012702,
+     "stdout": "recorded: 4242 4243 \nalive:",
+     "returncode": 0,
+     "recorded": [
+      4242,
+      4243
+     ],
+     "alive": [],
+     "recorded_earlier_not_checked": []
+    }
+   ],
+   "t_kill_start": 1795472877.8012702,
+   "killed": "job",
+   "linux_process_ended_confirmed": true,
+   "launcher_exit_code": -9,
+   "confirmation": "its wsl.exe exited and killtree.sh (code 0) checked every recorded PID [4242, 4243] again and found none alive",
+   "t_kill_done": 1795472877.8012702,
+   "killtree_stdout": "recorded: 4242 4243 \nalive:",
+   "killtree_returncode": 0,
+   "killtree_attempts": 1,
+   "recorded_pids": [
+    4242,
+    4243
+   ],
+   "t_rel_launch_s": 0.0
+  },
+  "job_exit_rel_launch_s": 0.0,
+  "vm_survived": true
+ },
+ "coverage": {
+  "covered": false,
+  "baseline_before_start": true,
+  "n_checked_in_or_after_job": 4,
+  "first_check_after_start_s": 0.25508809089660645,
+  "last_check_minus_end_s": 0.11604189872741699,
+  "max_gap_s": 0.3029670715332031,
+  "max_gap_allowed_s": 5.0,
+  "coverage_lost": {
+   "t_sample": 1795472877.800267,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.0
+  },
+  "samples_span_job": false,
+  "pid_lists_agree": true,
+  "carrier_in_both_lists": false,
+  "derived_from": "live_stop.checked_sample_t",
+  "from": "arming, before any GPU work of the launcher"
+ },
+ "admission": {
+  "predicted_peak_bytes": 67108864,
+  "driver_free_bytes": 21474836480,
+  "admitted": true
+ }
+}
+{
+ "tag": "stop_job_startup",
+ "status": "stopped_coverage_lost",
+ "returncode": -9,
+ "wall_s": 1.16,
+ "carriers": [],
+ "n_wddm_samples_during_job": 5,
+ "nvidia_smi": {
+  "used_mib_before": 0.0,
+  "used_mib_peak_during": null,
+  "device_growth_mib": null,
+  "n_samples_during": 0,
+  "n_samples_util_ge_50": 0
+ },
+ "nvidia_smi_in_wsl": {
+  "used_mib_before": null,
+  "used_mib_peak_during": null,
+  "n_samples_during": 0
+ },
+ "max_shared_growth_bytes": 0,
+ "validity": {
+  "vm_carrier": null,
+  "vm_carrier_pid": null,
+  "watched_pids": [
+   3440
+  ],
+  "carrier_is_watched": false,
+  "pid_lists": {
+   "launcher": [
+    3440
+   ],
+   "live_stop": [
+    3440
+   ],
+   "both_required": true,
+   "agree": true,
+   "watched": [
+    3440
+   ]
+  },
+  "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+  "vm_dedicated_growth_bytes": null,
+  "vm_shared_growth_bytes": null,
+  "carrier_over_device_growth": null,
+  "monitored": false,
+  "spilled": null,
+  "clean": false,
+  "not_monitored_reasons": [
+   "no WSL VM carrier found"
+  ],
+  "other_growing_processes": []
+ },
+ "live_stop": {
+  "samples_checked": 8,
+  "fired": {
+   "t_sample": 1795472883.0713995,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.11
+  },
+  "kill": {
+   "attempts": [
+    {
+     "t": 1795472883.0713995,
+     "stdout": "no pidfile or no PID in it\nrecorded: \nalive:",
+     "returncode": 2,
+     "recorded": [],
+     "alive": [],
+     "recorded_earlier_not_checked": []
+    },
+    {
+     "t": 1795472883.600401,
+     "stdout": "no pidfile or no PID in it\nrecorded: \nalive:",
+     "returncode": 2,
+     "recorded": [],
+     "alive": [],
+     "recorded_earlier_not_checked": []
+    },
+    {
+     "t": 1795472884.1161528,
+     "stdout": "recorded: 4242 4243 \nalive:",
+     "returncode": 0,
+     "recorded": [
+      4242,
+      4243
+     ],
+     "alive": [],
+     "recorded_earlier_not_checked": []
+    }
+   ],
+   "t_kill_start": 1795472883.0713995,
+   "killed": "job",
+   "linux_process_ended_confirmed": true,
+   "launcher_exit_code": -9,
+   "confirmation": "its wsl.exe exited and killtree.sh (code 0) checked every recorded PID [4242, 4243] again and found none alive",
+   "t_kill_done": 1795472884.1161528,
+   "killtree_stdout": "recorded: 4242 4243 \nalive:",
+   "killtree_returncode": 0,
+   "killtree_attempts": 3,
+   "recorded_pids": [
+    4242,
+    4243
+   ],
+   "t_rel_launch_s": 1.16
+  },
+  "job_exit_rel_launch_s": 1.16,
+  "vm_survived": true
+ },
+ "coverage": {
+  "covered": false,
+  "baseline_before_start": true,
+  "n_checked_in_or_after_job": 8,
+  "first_check_after_start_s": 0.29922056198120117,
+  "last_check_minus_end_s": 0.22648906707763672,
+  "max_gap_s": 0.3052024841308594,
+  "max_gap_allowed_s": 5.0,
+  "coverage_lost": {
+   "t_sample": 1795472883.0713995,
+   "pid": 3440,
+   "kind": "coverage_lost",
+   "is_test_trigger": false,
+   "reason": "watched PID 3440 not in the sample",
+   "t_rel_launch_s": 0.11
+  },
+  "samples_span_job": false,
+  "pid_lists_agree": true,
+  "carrier_in_both_lists": false,
+  "derived_from": "live_stop.checked_sample_t",
+  "from": "arming, before any GPU work of the launcher"
+ },
+ "admission": {
+  "predicted_peak_bytes": 67108864,
+  "driver_free_bytes": 21474836480,
+  "admitted": true
+ }
+}
+{
+ "tag": "spill_in_closing_sample",
+ "status": "refused_memory_spill",
+ "returncode": 0,
+ "wall_s": 1.029,
+ "carriers": [],
+ "n_wddm_samples_during_job": 4,
+ "nvidia_smi": {
+  "used_mib_before": 0.0,
+  "used_mib_peak_during": null,
+  "device_growth_mib": null,
+  "n_samples_during": 0,
+  "n_samples_util_ge_50": 0
+ },
+ "nvidia_smi_in_wsl": {
+  "used_mib_before": null,
+  "used_mib_peak_during": null,
+  "n_samples_during": 0
+ },
+ "max_shared_growth_bytes": 0,
+ "validity": {
+  "vm_carrier": null,
+  "vm_carrier_pid": null,
+  "watched_pids": [
+   3440
+  ],
+  "carrier_is_watched": false,
+  "pid_lists": {
+   "launcher": [
+    3440
+   ],
+   "live_stop": [
+    3440
+   ],
+   "both_required": true,
+   "agree": true,
+   "watched": [
+    3440
+   ]
+  },
+  "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+  "vm_dedicated_growth_bytes": null,
+  "vm_shared_growth_bytes": null,
+  "carrier_over_device_growth": null,
+  "monitored": false,
+  "spilled": null,
+  "clean": false,
+  "not_monitored_reasons": [
+   "no WSL VM carrier found"
+  ],
+  "other_growing_processes": []
+ },
+ "live_stop": {
+  "samples_checked": 8,
+  "fired": {
+   "t_sample": 1795472899.4321837,
+   "pid": 3440,
+   "kind": "shared_growth",
+   "is_test_trigger": false,
+   "reason": "shared growth 1073741824 B > 268435456 B",
+   "sample": {
+    "dedicated": 41943040,
+    "shared": 1073741824
+   },
+   "base": {
+    "dedicated": 41943040,
+    "shared": 0
+   },
+   "t_rel_launch_s": 1.58
+  },
+  "kill": {
+   "attempts": [
+    {
+     "t": 1795472899.9325795,
+     "stdout": "pid 4242 not running\nrecorded: 4242 4243 \nalive:",
+     "returncode": 4,
+     "recorded": [
+      4242,
+      4243
+     ],
+     "alive": [],
+     "recorded_earlier_not_checked": []
+    }
+   ],
+   "t_kill_start": 1795472899.9325795,
+   "killed": "job",
+   "linux_process_ended_confirmed": true,
+   "launcher_exit_code": 0,
+   "confirmation": "its wsl.exe exited and killtree.sh (code 4) checked every recorded PID [4242, 4243] again and found none alive",
+   "t_kill_done": 1795472899.9325795,
+   "killtree_stdout": "pid 4242 not running\nrecorded: 4242 4243 \nalive:",
+   "killtree_returncode": 4,
+   "killtree_attempts": 1,
+   "recorded_pids": [
+    4242,
+    4243
+   ],
+   "t_rel_launch_s": 2.08
+  },
+  "job_exit_rel_launch_s": 1.03,
+  "vm_survived": true
+ },
+ "coverage": {
+  "covered": false,
+  "baseline_before_start": true,
+  "n_checked_in_or_after_job": 8,
+  "first_check_after_start_s": 0.2001941204071045,
+  "last_check_minus_end_s": 0.5468685626983643,
+  "max_gap_s": 0.600344181060791,
+  "max_gap_allowed_s": 5.0,
+  "coverage_lost": null,
+  "samples_span_job": true,
+  "pid_lists_agree": true,
+  "carrier_in_both_lists": false,
+  "derived_from": "live_stop.checked_sample_t",
+  "from": "arming, before any GPU work of the launcher"
+ },
+ "admission": {
+  "predicted_peak_bytes": 67108864,
+  "driver_free_bytes": 21474836480,
+  "admitted": true
+ }
+}
+{
+ "baseline_missing_refuses": true,
+ "baseline_empty_refuses": true,
+ "baseline_only_unrelated_pid_refuses": true,
+ "baseline_missing_counter_refuses": true,
+ "good_samples_covered_no_stop": true,
+ "sample_only_unrelated_pid_stops": true,
+ "sample_missing_shared_counter_stops": true,
+ "sample_missing_dedicated_counter_stops": true,
+ "sample_empty_stops": true,
+ "cupy_mode_unrelated_pid_after_context_stops_at_once": true,
+ "cupy_mode_missing_counter_after_context_stops_at_once": true,
+ "cupy_mode_coverage_from_first_appearance_only_samples_called_before_context_unchecked": true,
+ "cupy_mode_absent_after_first_appearance_stops": true,
+ "cupy_mode_never_appears_after_open_stops": true,
+ "cupy_mode_empty_sample_stops_before_open": true,
+ "sampler_marks_missing_counter": true,
+ "cupy_guard_arms_before_context_waits_for_process_before_admission_and_allocation": true,
+ "cupy_guard_refusal_after_arming_stops_sampler_and_releases_lock": true,
+ "cupy_guard_process_never_seen_refused_before_admission": true,
+ "cupy_guard_sample_after_context_without_process_stops_at_once": true,
+ "t12mon_arms_before_admission_probe_and_computes_require_budget_without_cuda": true,
+ "t12mon_stop_during_probe_kills_probe_and_refuses_launch": true,
+ "t12mon_stop_between_checks_and_launch_refuses_launch": true,
+ "t12mon_stop_after_launch_kills_job": true,
+ "t12mon_stop_at_each_prelaunch_point_refuses_or_kills": true,
+ "t12mon_launch_race_never_leaves_a_job_running_after_the_stop": true,
+ "t12mon_launch_race_never_creates_a_job_with_the_stop_set": true,
+ "t12mon_stop_between_check_and_job_creation_waits_for_the_start_then_kills": true,
+ "negative_control_4_1_stop_decision_lets_the_job_be_created_with_the_stop_set": true,
+ "t12mon_stop_during_probe_startup_retries_until_the_linux_probe_ended": true,
+ "t12mon_stop_during_job_startup_retries_until_the_linux_job_ended": true,
+ "validate_credits_only_a_watched_carrier": true,
+ "lock_exclusive_and_released": true,
+ "stale_lock_refuses_with_owner_named_and_is_kept": true,
+ "lock_creation_atomic_under_race": true,
+ "lock_uses_o_excl_and_no_removal_in_acquire": true,
+ "gate_states_comparison_admitted_only_with_technical_acceptance": true,
+ "gate_flag_and_text_follow_the_decision": true,
+ "stop_unconfirmed_when_a_recorded_child_is_not_checked_again": true,
+ "stop_unconfirmed_while_a_recorded_child_survives": true,
+ "stop_confirmed_only_when_every_recorded_pid_is_checked_and_gone": true,
+ "negative_control_4_2_confirms_with_the_surviving_child_unchecked": true,
+ "carrier_in_both_lists_original_record_clean_and_covered": true,
+ "pid_list_disagreement_or_missing_list_fails_validity_and_coverage": true,
+ "negative_control_4_2_credits_the_carrier_from_the_launcher_list_alone": true,
+ "final_sample_checked_before_disarm_spill_in_it_fires_the_stop": true,
+ "negative_control_4_2_disarms_between_publication_and_check_and_skips_the_spill": true,
+ "sampler_checks_before_publishing_and_t12mon_closes_through_close_watch": true,
+ "t12mon_spill_in_the_closing_sample_fires_the_stop": true,
+ "gate_decision_needs_both_conditions": true,
+ "gate_with_a_failed_current_guard_test_does_not_pass_or_clear_t28": true
+} True

@@ -1,0 +1,41 @@
+{
+ "note": "designable elements only; 'other side of 0.5' counts voxels that lie inside the level-0.5 surface in one field and outside it in the other, which is what a level-0.5 rendering can show",
+ "comparisons": [
+  {
+   "what": "n=192: damped replicate (completed) vs T31 fixed-step R_n192 (300-update iterate)",
+   "a": "tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz",
+   "b": "tasks/X0_2/inputs_T31/R_n192/fields.npz",
+   "designable": 827324,
+   "mean_abs_diff": 0.0004195879409019846,
+   "max_abs_diff": 0.9757852852344513,
+   "n_diff_gt_0.01": 6695,
+   "n_diff_gt_0.5": 67,
+   "n_other_side_of_0.5": 67,
+   "share_other_side_of_0.5": 8.098399176138974e-05
+  },
+  {
+   "what": "n=384: damped retained iterate vs T31 fixed-step R_n384 (current Figure 6)",
+   "a": "tasks/X0_2/out/runs/R_adaptive_n384/fields.npz",
+   "b": "tasks/X0_2/inputs_T31/R_n384/fields.npz",
+   "designable": 6629528,
+   "mean_abs_diff": 0.0009110471631169835,
+   "max_abs_diff": 0.954681783914566,
+   "n_diff_gt_0.01": 72311,
+   "n_diff_gt_0.5": 1250,
+   "n_other_side_of_0.5": 4122,
+   "share_other_side_of_0.5": 0.0006217637213388344
+  },
+  {
+   "what": "n=192: damped replicate vs damped development run",
+   "a": "tasks/X0_2/out/runs/R_adaptive_n192_rep/fields.npz",
+   "b": "tasks/X0_2/out/runs/dev_adaptive_n192/fields.npz",
+   "designable": 827324,
+   "mean_abs_diff": 6.902795039943081e-06,
+   "max_abs_diff": 0.01093989610671997,
+   "n_diff_gt_0.01": 1,
+   "n_diff_gt_0.5": 0,
+   "n_other_side_of_0.5": 0,
+   "share_other_side_of_0.5": 0.0
+  }
+ ]
+}

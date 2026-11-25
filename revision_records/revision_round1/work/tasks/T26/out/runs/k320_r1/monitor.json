@@ -1,0 +1,94 @@
+{
+ "task": "T26",
+ "run": "k320_r1",
+ "job": "k320",
+ "solves": [
+  "B",
+  "C",
+  "E"
+ ],
+ "status": "refused_for_memory",
+ "rules": {
+  "spill_limit_bytes": 268435456,
+  "margin_bytes": 1610612736,
+  "time_cap_s": 7200
+ },
+ "admission": {
+  "nvidia_smi_free_bytes": 22664970240,
+  "nvidia_smi_used_bytes": 2646605824,
+  "nvidia_smi_total_bytes": 25757220864,
+  "others_dedicated_bytes": 6471901184,
+  "predicted_peak_bytes": 16656356864,
+  "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+  "admitted": true
+ },
+ "child_pid": 51264,
+ "child_exit_code": 1,
+ "samples": [
+  {
+   "t": 1795551035.5390592,
+   "tag": "first",
+   "n_pids": 50,
+   "child": null
+  },
+  {
+   "t": 1795551038.1370368,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": null,
+    "sh": 77594624.0
+   }
+  },
+  {
+   "t": 1795551040.7151725,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 354570240.0,
+    "sh": 77594624.0
+   },
+   "event": "go"
+  },
+  {
+   "t": 1795551043.1339424,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 354570240.0,
+    "sh": 77594624.0
+   }
+  },
+  {
+   "t": 1795551045.7101214,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 354570240.0,
+    "sh": 77594624.0
+   }
+  },
+  {
+   "t": 1795551048.1985962,
+   "tag": "watch",
+   "n_pids": 51,
+   "child": {
+    "ded": 9951346688.0,
+    "sh": 415236096.0
+   }
+  }
+ ],
+ "watch": {
+  "covered_from_go": true,
+  "go_seen": true,
+  "shared_base_bytes": 77594624.0,
+  "shared_max_growth_bytes": 337641472.0,
+  "child_dedicated_peak_bytes": 9951346688.0,
+  "n_samples": 6,
+  "final_sample_checked": false,
+  "stop": "refused_for_memory: shared growth above 256 MiB",
+  "wall_s": 16.196224689483643
+ },
+ "spilled": true,
+ "valid": false
+}

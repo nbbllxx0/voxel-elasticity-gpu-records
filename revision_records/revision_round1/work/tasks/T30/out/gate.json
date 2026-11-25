@@ -1,0 +1,719 @@
+{
+ "task": "T30",
+ "rules": {
+  "fixed_before": "written before the first GPU job of T30",
+  "resultants": "every load case at every checked resolution: |sum F - F_target|_max <= 1e-10 max(|F|, |M|/1 in) and |sum M_C - M_target|_max <= 1e-10 max(|M|, |F| 1 in); targets are the prescribed (F, M) (the equal-weight coupling reproduces them exactly in exact arithmetic)",
+  "protected_regions": "after the masked filter and projection, and after the OC update: design variable and physical density exactly 1 on every protected element and exactly 0 on every exterior element, moduli exactly E0 = 1 and 0 there; designable values in [0, 1]",
+  "filter": "masked filter against an FP64 CPU reference (forward max abs error <= 1e-6, transpose max relative error <= 1e-5, dot test <= 1e-5, partition of unity on active elements <= 1e-6, zero on exterior)",
+  "exterior_dofs": "the device's fixed set after the first multigrid update equals supports | exterior-only nodes",
+  "operator": "FP64 matrix-free operator against the CPU-assembled FP64 matrix on a seeded free-DOF vector: max abs difference <= 1e-12 of the largest entry",
+  "coarse_compliance": "n = 96, for each of the four load cases and each of the three states (fully solid reference, iteration-1 design, design after one update): |c_GPU - c_direct| / c_direct <= 1e-3, c_GPU from the production path (repaired FP32 operator, FP64 iterative refinement, FP64 true residual <= 1e-5), c_direct from an FP64 sparse direct solve of the independently assembled system",
+  "equilibrium": "every production solve of the coarse run reports FP64 true residual <= 1e-5, and the GPU state's residual recomputed in the CPU-assembled matrix is <= 1e-5",
+  "gradient": "centred directional check of J = sum_k c_k / (4 c0_k) at a seeded random design (p = 3, beta = 4, rmin = 2.5 cells), directions d1 ~ U[0, 1] and d2 ~ N(0, 1) on designable elements, h = 1e-3: |dJ_analytic - dJ_FD| / |dJ_FD| <= 0.01 for both; J for the differences from FP64 direct solves; h = 1e-2 and 1e-4 for information",
+  "regression": "authors' single-load driver vs T30 driver with one load, no mask, weight 1, c0 = 1 on the authors' cantilever (k = 16), 30 iterations: same iteration count and per-iteration compliance relative difference <= 1e-6 (bitwise identity reported)",
+  "one_update": "one production design iteration completes with all four solves at the equilibrium target, volume of the updated physical field within 1e-4 of the target, masks as above",
+  "spill": "the launcher's WDDM watch covers each job from 'go' to its final sample, no shared-usage growth above 256 MiB, no allocation failure",
+  "correctness_gate": "all of the above at n = 96",
+  "feasibility": "reported separately: measured peak memory of one production iteration at n = 96, 192, 384 and the extrapolated workspace for larger grids, against the driver's free memory minus 1.5 GiB"
+ },
+ "correctness": {
+  "resultants": {
+   "passed": true,
+   "per_resolution": {
+    "96": {
+     "LC1_vertical": {
+      "F_max_abs_err": 3.8198777474462986e-11,
+      "F_tol": 8.000000000000001e-07,
+      "M_max_abs_err": 1.4432188777391275e-10,
+      "M_tol": 8.000000000000001e-07
+     },
+     "LC2_horizontal": {
+      "F_max_abs_err": 1.0913936421275139e-11,
+      "F_tol": 8.5e-07,
+      "M_max_abs_err": 1.4954265207612185e-10,
+      "M_tol": 8.5e-07
+     },
+     "LC3_42deg": {
+      "F_max_abs_err": 7.275957614183426e-11,
+      "F_tol": 9.5e-07,
+      "M_max_abs_err": 2.457034575797934e-10,
+      "M_tol": 9.5e-07
+     },
+     "LC4_torsion": {
+      "F_max_abs_err": 6.101080751719223e-11,
+      "F_tol": 5e-07,
+      "M_max_abs_err": 1.546140993013978e-11,
+      "M_tol": 5e-07
+     }
+    },
+    "192": {
+     "LC1_vertical": {
+      "F_max_abs_err": 4.511093720793724e-10,
+      "F_tol": 8.000000000000001e-07,
+      "M_max_abs_err": 6.477082203915074e-10,
+      "M_tol": 8.000000000000001e-07
+     },
+     "LC2_horizontal": {
+      "F_max_abs_err": 6.002665031701326e-11,
+      "F_tol": 8.5e-07,
+      "M_max_abs_err": 3.4491851244036573e-10,
+      "M_tol": 8.5e-07
+     },
+     "LC3_42deg": {
+      "F_max_abs_err": 4.129105946049094e-10,
+      "F_tol": 9.5e-07,
+      "M_max_abs_err": 2.922133646166003e-10,
+      "M_tol": 9.5e-07
+     },
+     "LC4_torsion": {
+      "F_max_abs_err": 1.4135875803233944e-10,
+      "F_tol": 5e-07,
+      "M_max_abs_err": 1.609805622138083e-10,
+      "M_tol": 5e-07
+     }
+    },
+    "384": {
+     "LC1_vertical": {
+      "F_max_abs_err": 2.10275175049901e-09,
+      "F_tol": 8.000000000000001e-07,
+      "M_max_abs_err": 2.7856014161997678e-09,
+      "M_tol": 8.000000000000001e-07
+     },
+     "LC2_horizontal": {
+      "F_max_abs_err": 1.709850039333105e-10,
+      "F_tol": 8.5e-07,
+      "M_max_abs_err": 1.1989632871337885e-09,
+      "M_tol": 8.5e-07
+     },
+     "LC3_42deg": {
+      "F_max_abs_err": 2.8467184165492654e-10,
+      "F_tol": 9.5e-07,
+      "M_max_abs_err": 1.4896592570590172e-09,
+      "M_tol": 9.5e-07
+     },
+     "LC4_torsion": {
+      "F_max_abs_err": 4.926385653580834e-10,
+      "F_tol": 5e-07,
+      "M_max_abs_err": 8.521965355612338e-10,
+      "M_tol": 5e-07
+     }
+    }
+   }
+  },
+  "host_geometry": {
+   "passed": true,
+   "counts_96": {
+    "allocated_elements": 245760,
+    "active_elements": 113318,
+    "designable_elements": 104070,
+    "protected_elements": 9248,
+    "exterior_elements": 132442,
+    "nodes_allocated": 258505,
+    "nodes_exterior_only": 133076,
+    "nodes_active": 125429,
+    "nodes_supported": 1200,
+    "free_dofs": 372687
+   },
+   "load_nodes_96": 1200
+  },
+  "protected_regions_and_masks": {
+   "passed": true,
+   "states": [
+    {
+     "tag": "initial design, iteration-1 physical field",
+     "rho_exterior_max_abs": 0.0,
+     "rho_protected_min": 1.0,
+     "rho_protected_max": 1.0,
+     "rho_designable_min": 0.5,
+     "rho_designable_max": 0.5,
+     "rho_phys_exterior_max_abs": 0.0,
+     "rho_phys_protected_min": 1.0,
+     "rho_phys_protected_max": 1.0,
+     "rho_phys_designable_min": 0.5,
+     "rho_phys_designable_max": 0.6540009379386902,
+     "E_exterior_max_abs": 0.0,
+     "E_protected_min": 1.0,
+     "E_protected_max": 1.0,
+     "E_designable_min": 0.3535533845424652,
+     "passed": true
+    },
+    {
+     "tag": "iteration 1 physical field; design variable after OC",
+     "rho_exterior_max_abs": 0.0,
+     "rho_protected_min": 1.0,
+     "rho_protected_max": 1.0,
+     "rho_designable_min": 0.30000001192092896,
+     "rho_designable_max": 0.699999988079071,
+     "rho_phys_exterior_max_abs": 0.0,
+     "rho_phys_protected_min": 1.0,
+     "rho_phys_protected_max": 1.0,
+     "rho_phys_designable_min": 0.5,
+     "rho_phys_designable_max": 0.6540009379386902,
+     "E_exterior_max_abs": 0.0,
+     "E_protected_min": 1.0,
+     "E_protected_max": 1.0,
+     "E_designable_min": 0.3535533845424652,
+     "passed": true
+    },
+    {
+     "tag": "updated design (after one OC step), re-solved",
+     "rho_exterior_max_abs": 0.0,
+     "rho_protected_min": 1.0,
+     "rho_protected_max": 1.0,
+     "rho_designable_min": 0.30000001192092896,
+     "rho_designable_max": 0.699999988079071,
+     "rho_phys_exterior_max_abs": 0.0,
+     "rho_phys_protected_min": 1.0,
+     "rho_phys_protected_max": 1.0,
+     "rho_phys_designable_min": 0.2864444851875305,
+     "rho_phys_designable_max": 0.80125892162323,
+     "E_exterior_max_abs": 0.0,
+     "E_protected_min": 1.0,
+     "E_protected_max": 1.0,
+     "E_designable_min": 0.15330654382705688,
+     "passed": true
+    }
+   ]
+  },
+  "masked_filter": {
+   "passed": true,
+   "rmin_1.5": {
+    "R": 1,
+    "forward_max_abs_err_vs_cpu": 2.5684418558657995e-07,
+    "transpose_max_rel_err_vs_cpu": 2.2406697390725275e-07,
+    "forward_exterior_max_abs": 0.0,
+    "transpose_exterior_max_abs": 0.0,
+    "partition_of_unity_max_abs_dev_active": 0.0,
+    "dot_test_rel": 6.738945636687557e-08,
+    "passed": true
+   },
+   "rmin_2.5": {
+    "R": 2,
+    "forward_max_abs_err_vs_cpu": 4.989058296489546e-07,
+    "transpose_max_rel_err_vs_cpu": 4.591260297144976e-07,
+    "forward_exterior_max_abs": 0.0,
+    "transpose_exterior_max_abs": 0.0,
+    "partition_of_unity_max_abs_dev_active": 0.0,
+    "dot_test_rel": 1.8060368503989476e-08,
+    "passed": true
+   }
+  },
+  "exterior_dof_elimination": {
+   "passed": true,
+   "device_fixed_equals_supports_or_exterior_only": true,
+   "n_fixed_nodes_device": 134276,
+   "n_fixed_nodes_host": 134276,
+   "n_partial_masks_device": 0
+  },
+  "fp64_operator_vs_assembly": {
+   "passed": true,
+   "solid_rel": 7.571604713303563e-16,
+   "iteration1_rel": 6.44332263097673e-16
+  },
+  "coarse_compliance": {
+   "passed": true,
+   "tolerance": 0.001,
+   "states": {
+    "state_solid": {
+     "c_gpu": [
+      11685014.409249272,
+      7741720.620014598,
+      3817799.76186823,
+      939379.5028592185
+     ],
+     "c_direct": [
+      11685016.072881214,
+      7741721.672680337,
+      3817800.299061754,
+      939379.5061160083
+     ],
+     "rel_diff": [
+      1.4237309831213327e-07,
+      1.3597307986864954e-07,
+      1.407076016657878e-07,
+      3.4669584940550556e-09
+     ],
+     "max_rel_diff": 1.4237309831213327e-07
+    },
+    "state_iteration1": {
+     "c_gpu": [
+      27722407.650870457,
+      18761804.128513075,
+      8441053.073730549,
+      2222059.4981724177
+     ],
+     "c_direct": [
+      27722408.33758575,
+      18761803.40794179,
+      8441050.633068684,
+      2222059.1912547937
+     ],
+     "rel_diff": [
+      2.4771126855693112e-08,
+      3.840629129880568e-08,
+      2.891419528741674e-07,
+      1.3812306408863048e-07
+     ],
+     "max_rel_diff": 2.891419528741674e-07
+    },
+    "state_after_update": {
+     "c_gpu": [
+      19525049.4386781,
+      13574799.999215161,
+      6032079.2465927955,
+      1686333.6483827382
+     ],
+     "c_direct": [
+      19525048.122894395,
+      13574797.732638506,
+      6032078.130049143,
+      1686333.271450669
+     ],
+     "rel_diff": [
+      6.738952433205584e-08,
+      1.6696946060267481e-07,
+      1.8510099312667307e-07,
+      2.235216938282406e-07
+     ],
+     "max_rel_diff": 2.235216938282406e-07
+    }
+   },
+   "load_order": [
+    "LC1_vertical",
+    "LC2_horizontal",
+    "LC3_42deg",
+    "LC4_torsion"
+   ]
+  },
+  "equilibrium": {
+   "passed": true,
+   "max_reported_fp64_true_residual": 5.46446589334238e-06,
+   "max_independent_residual": 5.464465890782691e-06,
+   "per_state": {
+    "state_solid": {
+     "gpu_state_rel_residual_in_assembled_K": [
+      3.6860913369448086e-06,
+      3.1647381812759005e-06,
+      2.2939589755260696e-06,
+      2.8901554952240312e-06
+     ],
+     "gpu_state_rel_energy_error": [
+      3.9783783326157637e-07,
+      4.893745676517385e-07,
+      5.505682263501149e-07,
+      5.948251051852519e-07
+     ],
+     "direct_rel_residual": null
+    },
+    "state_iteration1": {
+     "gpu_state_rel_residual_in_assembled_K": [
+      4.853022878741976e-06,
+      3.383445444998245e-06,
+      3.7027920211040035e-06,
+      2.275433117947345e-06
+     ],
+     "gpu_state_rel_energy_error": [
+      6.737657729037892e-07,
+      3.577156386973958e-07,
+      7.835315650239707e-07,
+      4.819654932172766e-07
+     ],
+     "direct_rel_residual": null
+    },
+    "state_after_update": {
+     "gpu_state_rel_residual_in_assembled_K": [
+      2.0432164653921747e-06,
+      5.464465890782691e-06,
+      3.4199859082445727e-06,
+      3.6672866756446442e-06
+     ],
+     "gpu_state_rel_energy_error": [
+      2.773915525831893e-07,
+      8.176753023130552e-07,
+      8.788761542880858e-07,
+      7.692505863382955e-07
+     ],
+     "direct_rel_residual": null
+    }
+   }
+  },
+  "gradient": {
+   "passed": true,
+   "volume_passed": true,
+   "rule": "relative difference <= 0.01 at h = 1e-3 for d1 and d2",
+   "rows": [
+    {
+     "direction": "d1_uniform",
+     "h": 0.01,
+     "analytic_dJ": -0.31132873684581525,
+     "fd_dJ_cpu": -0.31170771788781426,
+     "rel_diff_cpu": 0.0012158218107881874,
+     "fd_dJ_gpu": -0.3117077178881762,
+     "rel_diff_gpu": 0.0012158218119479043,
+     "analytic_dV": 0.010070350627240106,
+     "fd_dV": 0.010069046505071177,
+     "rel_diff_V": 0.00012951794077736416
+    },
+    {
+     "direction": "d1_uniform",
+     "h": 0.001,
+     "analytic_dJ": -0.031132865642159703,
+     "fd_dJ_cpu": -0.031133268745827447,
+     "rel_diff_cpu": 1.2947682141409176e-05,
+     "fd_dJ_gpu": -0.031133268745414444,
+     "rel_diff_gpu": 1.294766887593355e-05,
+     "analytic_dV": 0.0010070350132713349,
+     "fd_dV": 0.001007033681633518,
+     "rel_diff_V": 1.3223369200341053e-06
+    },
+    {
+     "direction": "d1_uniform",
+     "h": 0.0001,
+     "analytic_dJ": -0.0031132883719909884,
+     "fd_dJ_cpu": -0.0031132981455748165,
+     "rel_diff_cpu": 3.1393022354755903e-06,
+     "fd_dJ_gpu": -0.003113298144964638,
+     "rel_diff_gpu": 3.1391062450402424e-06,
+     "analytic_dV": 0.0001007035192957287,
+     "fd_dV": 0.00010070366804798558,
+     "rel_diff_V": 1.4771284875770057e-06
+    },
+    {
+     "direction": "d2_normal",
+     "h": 0.01,
+     "analytic_dJ": 0.00048470475041660003,
+     "fd_dJ_cpu": 0.0004847184054197484,
+     "rel_diff_cpu": 2.817100195847244e-05,
+     "fd_dJ_gpu": 0.00048471840513064635,
+     "rel_diff_gpu": 2.817040554222693e-05,
+     "analytic_dV": -3.3560352044670505e-05,
+     "fd_dV": -3.3559154264839464e-05,
+     "rel_diff_V": 3.569159763649081e-05
+    },
+    {
+     "direction": "d2_normal",
+     "h": 0.001,
+     "analytic_dJ": 4.846646286475105e-05,
+     "fd_dJ_cpu": 4.8489560909636964e-05,
+     "rel_diff_cpu": 0.0004763508774385047,
+     "fd_dJ_gpu": 4.8489560627640316e-05,
+     "rel_diff_gpu": 0.00047634506459311583,
+     "analytic_dV": -3.35602168023317e-06,
+     "fd_dV": -3.3566923859362774e-06,
+     "rel_diff_V": 0.00019981148880889816
+    },
+    {
+     "direction": "d2_normal",
+     "h": 0.0001,
+     "analytic_dJ": 4.846330031019055e-06,
+     "fd_dJ_cpu": 4.815053448847806e-06,
+     "rel_diff_cpu": 0.006495583590818301,
+     "fd_dJ_gpu": 4.8150540385982765e-06,
+     "rel_diff_gpu": 0.006495460314684866,
+     "analytic_dV": -3.355074571854467e-07,
+     "fd_dV": -3.3493448980959073e-07,
+     "rel_diff_V": 0.001710684904924837
+    }
+   ],
+   "J_gpu_vs_direct_rel": 2.2033969070268485e-13
+  },
+  "single_load_regression": {
+   "passed": true,
+   "problem": "authors' cantilever k = 16 (32 x 16 x 16), volfrac 0.3, mg_ir, repaired operator (stencil_diff), tol 1e-5, 30 design iterations",
+   "iterations": [
+    30,
+    30
+   ],
+   "final_c": [
+    3.6279113293883305,
+    3.627911329388896
+   ],
+   "all_iterations_c_identical": false,
+   "max_c_rel_diff": 1.5412034099536142e-11,
+   "final_density_identical": true
+  },
+  "one_update": {
+   "passed": true,
+   "J_iteration1": 2.343092511902944,
+   "c_iteration1": [
+    27722407.650870457,
+    18761804.128513075,
+    8441053.073730549,
+    2222059.4981724177
+   ],
+   "J_after_update": 1.6998883843881627,
+   "c_after_update": [
+    19525049.4386781,
+    13574799.999215161,
+    6032079.2465927955,
+    1686333.6483827382
+   ],
+   "volume_after_update": {
+    "volume_phys": 0.49999999425173425,
+    "target": 0.5,
+    "abs_err": 5.7482657522811564e-09
+   },
+   "wall_s": 4.340257800009567,
+   "totals_s": {
+    "solve_s": 0.5934510999941267,
+    "setup_s": 0.33907310001086444,
+    "sens_s": 0.03359119995729998,
+    "oc_s": 0.060531600029207766,
+    "filter_s": 0.004195999994408339
+   }
+  },
+  "no_spill_coverage": {
+   "passed": true,
+   "verify": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 14680064.0,
+    "child_dedicated_peak_bytes": 700633088.0,
+    "n_samples": 187,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 505.1813154220581
+   },
+   "regress": {
+    "covered_from_go": true,
+    "go_seen": true,
+    "shared_base_bytes": 77594624.0,
+    "shared_max_growth_bytes": 2097152.0,
+    "child_dedicated_peak_bytes": 409100288.0,
+    "n_samples": 19,
+    "final_sample_checked": true,
+    "stop": null,
+    "wall_s": 44.78523349761963
+   },
+   "admission_verify": {
+    "nvidia_smi_free_bytes": 22601007104,
+    "nvidia_smi_used_bytes": 2710568960,
+    "nvidia_smi_total_bytes": 25757220864,
+    "others_dedicated_bytes": 6377537536,
+    "predicted_peak_bytes": 653784192,
+    "rule": "predicted peak + 1.5 GiB <= nvidia-smi free",
+    "admitted": true
+   },
+   "require_budget_verify": true,
+   "coverage_window": "from the 'go' sample, the first WDDM sample holding the job's PID with both counters after the job created its CUDA context and made a one-element probe allocation, to the final sample the launcher took and checked after the job reported done; CUDA initialization and the probe allocation precede the window"
+  },
+  "job_completed": {
+   "passed": true
+  }
+ },
+ "correctness_passed": true,
+ "gate_passed": true,
+ "gate_flags": [
+  "resultants",
+  "host_geometry",
+  "protected_regions_and_masks",
+  "masked_filter",
+  "exterior_dof_elimination",
+  "fp64_operator_vs_assembly",
+  "coarse_compliance",
+  "equilibrium",
+  "gradient",
+  "single_load_regression",
+  "one_update",
+  "no_spill_coverage",
+  "job_completed"
+ ],
+ "n_gate_flags": 13,
+ "informational_checks": {
+  "volume_gradient_passed": true,
+  "note": "the volume-gradient check is not an acceptance rule; it is recorded inside 'gradient' and does not enter the gate"
+ },
+ "fix_round_1": "out/fix_r1/checks.json (base bounded at x = 7.2 in; padded elements exterior; measured sizes' element classes unchanged)",
+ "feasibility": {
+  "measured": [
+   {
+    "n": 96,
+    "valid": true,
+    "grid": [
+     96,
+     64,
+     40
+    ],
+    "allocated_elements": 245760,
+    "active_elements": 113318,
+    "designable_elements": 104070,
+    "pool_peak_reserved_bytes": 283173376,
+    "process_dedicated_peak_bytes": 513970176.0,
+    "shared_growth_bytes": 6291456.0,
+    "bytes_per_allocated_element_pool_peak": 1152.2354166666667,
+    "equilibrium_target_met": true,
+    "timings_s": {
+     "init": 2.5090229511260986,
+     "solid_4_solves": 1.0365726947784424,
+     "one_update_and_resolve": 3.6653764247894287
+    }
+   },
+   {
+    "n": 192,
+    "valid": true,
+    "grid": [
+     192,
+     128,
+     80
+    ],
+    "allocated_elements": 1966080,
+    "active_elements": 903548,
+    "designable_elements": 827324,
+    "pool_peak_reserved_bytes": 710394880,
+    "process_dedicated_peak_bytes": 956493824.0,
+    "shared_growth_bytes": 16777216.0,
+    "bytes_per_allocated_element_pool_peak": 361.3255208333333,
+    "equilibrium_target_met": true,
+    "timings_s": {
+     "init": 2.5046019554138184,
+     "solid_4_solves": 1.6518869400024414,
+     "one_update_and_resolve": 5.243395090103149
+    }
+   },
+   {
+    "n": 384,
+    "valid": true,
+    "grid": [
+     384,
+     256,
+     160
+    ],
+    "allocated_elements": 15728640,
+    "active_elements": 7232600,
+    "designable_elements": 6629528,
+    "pool_peak_reserved_bytes": 4219501056,
+    "process_dedicated_peak_bytes": 4549111808.0,
+    "shared_growth_bytes": 102760448.0,
+    "bytes_per_allocated_element_pool_peak": 268.26865234375,
+    "equilibrium_target_met": true,
+    "timings_s": {
+     "init": 2.847187042236328,
+     "solid_4_solves": 8.620254278182983,
+     "one_update_and_resolve": 22.153003931045532
+    }
+   },
+   {
+    "n": 576,
+    "valid": true,
+    "grid": [
+     576,
+     384,
+     256
+    ],
+    "allocated_elements": 56623104,
+    "active_elements": 24411796,
+    "designable_elements": 22367092,
+    "pool_peak_reserved_bytes": 14581840384,
+    "process_dedicated_peak_bytes": 14504333312.0,
+    "shared_growth_bytes": 85983232.0,
+    "bytes_per_allocated_element_pool_peak": 257.5245677806713,
+    "equilibrium_target_met": true,
+    "timings_s": {
+     "init": 3.226548671722412,
+     "solid_4_solves": 35.510411739349365,
+     "one_update_and_resolve": 91.51593112945557
+    }
+   }
+  ],
+  "model": {
+   "form": "pool_peak = a N_alloc + b; process peak = pool_peak + context (largest measured)",
+   "a_bytes_per_allocated_element": 254.5202645955642,
+   "b_bytes": 215617865.14285827,
+   "context_and_other_bytes": 329610752,
+   "fit_residuals_rel": [
+    -0.01767330919604493,
+    0.007925432906984442,
+    -0.00014825836525800273
+   ],
+   "states_bytes_per_node_each": 24,
+   "no_stored_states_saving_bytes_per_allocated_element": 72.92241668701172
+  },
+  "predictions": [
+   {
+    "n": 384,
+    "grid": [
+     384,
+     256,
+     160
+    ],
+    "allocated_elements": 15728640,
+    "h_in": 0.01875,
+    "predicted_process_peak_bytes": 4548486231,
+    "admissible_with_margin": true,
+    "predicted_process_peak_no_stored_states_bytes": 3401515791,
+    "admissible_no_stored_states": true,
+    "multigrid_coarsens_to_dense_limit": true,
+    "measured": true
+   },
+   {
+    "n": 480,
+    "grid": [
+     512,
+     320,
+     256
+    ],
+    "allocated_elements": 41943040,
+    "h_in": 0.015000000000000001,
+    "predicted_process_peak_bytes": 11220582255,
+    "admissible_with_margin": true,
+    "predicted_process_peak_no_stored_states_bytes": 8161994415,
+    "admissible_no_stored_states": true,
+    "multigrid_coarsens_to_dense_limit": true,
+    "measured": false
+   },
+   {
+    "n": 576,
+    "grid": [
+     576,
+     384,
+     256
+    ],
+    "allocated_elements": 56623104,
+    "h_in": 0.0125,
+    "predicted_process_peak_bytes": 14956956029,
+    "admissible_with_margin": true,
+    "predicted_process_peak_no_stored_states_bytes": 10827862445,
+    "admissible_no_stored_states": true,
+    "multigrid_coarsens_to_dense_limit": true,
+    "measured": true
+   },
+   {
+    "n": 672,
+    "grid": [
+     704,
+     448,
+     320
+    ],
+    "allocated_elements": 100925440,
+    "h_in": 0.010714285714285714,
+    "predicted_process_peak_bytes": 26232798310,
+    "admissible_with_margin": false,
+    "predicted_process_peak_no_stored_states_bytes": 18873071320,
+    "admissible_no_stored_states": true,
+    "multigrid_coarsens_to_dense_limit": true,
+    "measured": false
+   },
+   {
+    "n": 768,
+    "grid": [
+     768,
+     512,
+     320
+    ],
+    "allocated_elements": 125829120,
+    "h_in": 0.009375,
+    "predicted_process_peak_bytes": 32571289533,
+    "admissible_with_margin": false,
+    "predicted_process_peak_no_stored_states_bytes": 23395526013,
+    "admissible_no_stored_states": false,
+    "multigrid_coarsens_to_dense_limit": true,
+    "measured": false
+   }
+  ],
+  "largest_allocated_elements_admissible": 80328243,
+  "free_memory_at_estimate_bytes": 22601007104,
+  "note": "Predictions above the largest measured size are extrapolations of a linear fit; the 1.5 GiB margin is applied to nvidia-smi free memory read when this file was written.  The bracket box is n x 2n/3 x 5n/12; only n = 96 * 2^k coarsens to the 12 x 8 x 5 coarsest grid without enlarging the box, so other n need a box enlarged to a multiple of 2^(L-1) (more exterior elements, counted in N_alloc)."
+ },
+ "geometry_spec": "out/spec.json"
+}

@@ -1,0 +1,177 @@
+{
+ "colours_on_device": {
+  "cases": [
+   {
+    "node_shape": [
+     33,
+     5,
+     5
+    ],
+    "equal": true
+   },
+   {
+    "node_shape": [
+     65,
+     9,
+     9
+    ],
+    "equal": true
+   },
+   {
+    "node_shape": [
+     7,
+     4,
+     3
+    ],
+    "equal": true
+   },
+   {
+    "node_shape": [
+     2,
+     2,
+     2
+    ],
+    "equal": true
+   },
+   {
+    "node_shape": [
+     10,
+     1,
+     6
+    ],
+    "equal": true
+   }
+  ],
+  "passed": true
+ },
+ "no_oneshot_uploads": {
+  "cp_asarray_calls": [
+   {
+    "file": "t22_gpu.py",
+    "line": 269,
+    "arg": "Cm.T)                                         # (out, in)"
+   },
+   {
+    "file": "t22_gpu.py",
+    "line": 308,
+    "arg": "_gram(Z, (0, b), Z, (b, b + ny)))          # (b, ny)"
+   },
+   {
+    "file": "t22_gpu.py",
+    "line": 377,
+    "arg": "CX.T), cp.asarray(CY.T)"
+   },
+   {
+    "file": "t22_gpu.py",
+    "line": 377,
+    "arg": "CY.T)"
+   }
+  ],
+  "not_allowed": [],
+  "passed": true
+ },
+ "child_start_order": {
+  "version": "current",
+  "events": [
+   "device_use",
+   "memGetInfo",
+   "set_limit",
+   "launcher_go",
+   "require_budget",
+   "setup_host"
+  ],
+  "reached_setup": true,
+  "context_from_driver_query_before_ctx": true,
+  "pool_cap_before_ctx": true,
+  "allocations_before_go": [],
+  "admission_file_before_setup": true,
+  "admission_file": {
+   "cuda_free_bytes": 21474836480,
+   "cuda_total_bytes": 25769803776,
+   "pool_cap_bytes": 19864223744,
+   "predicted_peak_bytes": 1048576,
+   "prediction": {
+    "stub": true
+   },
+   "require_budget_ok": true,
+   "require_budget_info": {
+    "effective_free": 1
+   },
+   "pool_bytes_at_admission": 0
+  },
+  "passed": true
+ },
+ "all_passed": true,
+ "planted_fault_controls": {
+  "no_oneshot_uploads_first_version": {
+   "cp_asarray_calls": [
+    {
+     "file": "t22_job.py",
+     "line": 112,
+     "arg": "E)                                   # fix r1: in pieces of CHUNK (plan 8.1)"
+    },
+    {
+     "file": "t22_gpu.py",
+     "line": 168,
+     "arg": "a.ravel()) for a in np.meshgrid(*(np.arange(n) for n in g.node_shape), indexing=\"ij\"))"
+    },
+    {
+     "file": "t22_gpu.py",
+     "line": 269,
+     "arg": "Cm.T)                                         # (out, in)"
+    },
+    {
+     "file": "t22_gpu.py",
+     "line": 308,
+     "arg": "_gram(Z, (0, b), Z, (b, b + ny)))          # (b, ny)"
+    },
+    {
+     "file": "t22_gpu.py",
+     "line": 377,
+     "arg": "CX.T), cp.asarray(CY.T)"
+    },
+    {
+     "file": "t22_gpu.py",
+     "line": 377,
+     "arg": "CY.T)"
+    }
+   ],
+   "not_allowed": [
+    {
+     "file": "t22_job.py",
+     "line": 112,
+     "arg": "E)                                   # fix r1: in pieces of CHUNK (plan 8.1)"
+    },
+    {
+     "file": "t22_gpu.py",
+     "line": 168,
+     "arg": "a.ravel()) for a in np.meshgrid(*(np.arange(n) for n in g.node_shape), indexing=\"ij\"))"
+    }
+   ],
+   "passed": false
+  },
+  "child_start_order_first_version": {
+   "version": "first version",
+   "events": [
+    "device_use",
+    "alloc:empty",
+    "sync",
+    "launcher_go",
+    "memGetInfo",
+    "set_limit",
+    "require_budget",
+    "setup_host"
+   ],
+   "reached_setup": true,
+   "context_from_driver_query_before_ctx": false,
+   "pool_cap_before_ctx": false,
+   "allocations_before_go": [
+    "alloc:empty"
+   ],
+   "admission_file_before_setup": false,
+   "admission_file": null,
+   "passed": false
+  }
+ },
+ "controls_fail_as_expected": true
+}

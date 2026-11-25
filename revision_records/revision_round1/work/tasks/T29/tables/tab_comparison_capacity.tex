@@ -1,0 +1,34 @@
+\begin{tabular}{lllll}
+\toprule
+Workload & Configuration & Largest completed & Status there & Next size: outcome \\
+\midrule
+\multicolumn{5}{l}{\emph{One operator application}} \\
+application & matrix-free stencil, FP32 and FP64 & $268.4\times10^{6}$ & no spill & largest grid tested \\
+application & assembled CSR, FP32, survey build rule\textsuperscript{a} & $2.00\times10^{6}$ & completed & $4.19\times10^{6}$: not built under this rule \\
+application & assembled CSR, FP32, update-study build rule\textsuperscript{a} & $4.19\times10^{6}$ & completed; SpMV 10.27~ms & $8.19\times10^{6}$: not built under this rule \\
+application & assembled BSR, FP32, survey build rule\textsuperscript{a} & $4.19\times10^{6}$ & completed & $8.19\times10^{6}$: not built under this rule \\
+application & assembled BSR, FP32, update-study build rule\textsuperscript{a} & $8.19\times10^{6}$ & completed; SpMV 11.03~ms & $14.2\times10^{6}$: not built under this rule \\
+application & Hou et al. operator & $33.6\times10^{6}$ & completed & no larger valid run \\
+\midrule
+\multicolumn{5}{l}{\emph{State solve on a fixed state}} \\
+Hou's cantilever & released CuPy CG & $33.6\times10^{6}$ & native stop; FP64 residual 0.387 & no larger size tested \\
+Hou's cantilever & FP64 PCG (both V-cycles) and IR, repaired & $33.6\times10^{6}$ & verified & no larger size tested \\
+Hou's cantilever & IR, original stencil & $1.02\times10^{6}$ & verified & $8.19\times10^{6}$: numerical breakdown \\
+Tr\"aff's cantilever, state S1 (from zero) & released OpenMP-offload PCG & $65.5\times10^{6}$ & native stop; not verified at any size\textsuperscript{b} & $113.2\times10^{6}$: not admitted (prediction)\textsuperscript{d} \\
+Tr\"aff's cantilever, state S1 (from zero) & FP64 PCG, repaired V-cycle & $65.5\times10^{6}$ & native stop; verified up to $8.19\times10^{6}$\textsuperscript{b} & $113.2\times10^{6}$: not admitted (prediction)\textsuperscript{d} \\
+Tr\"aff's cantilever, state S1 (from zero) & FP64 PCG, original V-cycle & $65.5\times10^{6}$ & native stop; verified up to $8.19\times10^{6}$\textsuperscript{b} & $113.2\times10^{6}$: not admitted (prediction)\textsuperscript{d} \\
+Tr\"aff's cantilever, state S1 (from zero) & IR, repaired & $65.5\times10^{6}$ & native stop; verified up to $8.19\times10^{6}$\textsuperscript{b} & $113.2\times10^{6}$: stopped on spill into shared memory \\
+Tr\"aff's cantilever, state S5 (warm start) & released OpenMP-offload PCG & $8.19\times10^{6}$ & iteration cap at every completed size; not verified & $33.6\times10^{6}$: no state S5 at this size\textsuperscript{e} \\
+Tr\"aff's cantilever, state S5 (warm start) & FP64 PCG (both V-cycles) and IR, repaired & $8.19\times10^{6}$ & verified & $33.6\times10^{6}$: no state S5 at this size\textsuperscript{e} \\
+\midrule
+\multicolumn{5}{l}{\emph{Design loop on Tr\"aff et al.'s cantilever (each code its own workload)}} \\
+released design loop & released OpenMP-offload code & $8.19\times10^{6}$ & completed & $33.6\times10^{6}$: interrupted at the run-time cap\textsuperscript{e} \\
+matched-rule design loop & FP64 PCG (both V-cycles) and IR, repaired & $8.19\times10^{6}$ & completed & next size not run (no completed released loop to start from) \\
+\midrule
+\multicolumn{5}{l}{\emph{Complete optimization}} \\
+authors' three problems & IR, repaired & $113.2\times10^{6}$ (historical completion)\textsuperscript{c} & all three completed; the prespecified repaired cantilever run at this size was not admitted (prediction) & $144.0\times10^{6}$: not run, predicted above the card's memory \\
+authors' three problems & IR, original stencil & $113.2\times10^{6}$ & cantilever, torsion completed & bridge: no design at $65.5\times10^{6}$ and $113.2\times10^{6}$ \\
+authors' three problems & FP64 PCG & $65.5\times10^{6}$ (historical completion)\textsuperscript{c} & all three completed; the prespecified repaired cantilever run at this size ran out of memory under its pool cap & $113.2\times10^{6}$: spill without a cap; out of memory with a 21.5~GiB cap \\
+authors' three problems & recursive-stop control & $65.5\times10^{6}$ (historical completion)\textsuperscript{c} & states above $10^{-5}$ accepted; bridge breakdown & $113.2\times10^{6}$: prespecified run not admitted (prediction); a run outside that rule completed the cantilever, 23 of 76 states above $10^{-5}$ \\
+\bottomrule
+\end{tabular}

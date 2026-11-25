@@ -1,0 +1,1514 @@
+{
+ "mean|uniform": {
+  "H1": {
+   "class": "inconclusive",
+   "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+   "inputs": {
+    "64": {
+     "D": null,
+     "U": null,
+     "B": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    },
+    "128": {
+     "D": null,
+     "U": null,
+     "B": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    }
+   }
+  },
+  "H2": {
+   "class": "inconclusive",
+   "clause": "gates not passed on both grids",
+   "g_lo": null,
+   "g_hi": null
+  },
+  "H2E": {
+   "class": "inconclusive",
+   "clause": "gates not passed on both grids",
+   "g_lo": null,
+   "g_hi": null
+  },
+  "H5": {
+   "class": "inconclusive",
+   "clause": "a control missing, a reference gate failed or a bound above 1e-4",
+   "g_lo_ctrl_64_128": null
+  },
+  "primary_verdict": "inconclusive"
+ },
+ "diff|uniform": {
+  "H1": {
+   "class": "inconclusive",
+   "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+   "inputs": {
+    "64": {
+     "D": null,
+     "U": null,
+     "B": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    },
+    "128": {
+     "D": null,
+     "U": null,
+     "B": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    }
+   }
+  },
+  "H2": {
+   "class": "inconclusive",
+   "clause": "gates not passed on both grids",
+   "g_lo": null,
+   "g_hi": null
+  },
+  "H2E": {
+   "class": "inconclusive",
+   "clause": "gates not passed on both grids",
+   "g_lo": null,
+   "g_hi": null
+  },
+  "H5": {
+   "class": "inconclusive",
+   "clause": "a control missing, a reference gate failed or a bound above 1e-4",
+   "g_lo_ctrl_64_128": null
+  },
+  "primary_verdict": "inconclusive"
+ },
+ "corner|uniform": {
+  "H3": {
+   "class": "inconclusive",
+   "clause": "not resolved at every grid or a ratio outside [1.5, 2.5]",
+   "ratios": [],
+   "inputs": {
+    "64": {
+     "D": null,
+     "U": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    },
+    "128": {
+     "D": null,
+     "U": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    }
+   }
+  }
+ },
+ "stencil|uniform": {
+  "H4": {
+   "class": "inconclusive",
+   "clause": "support clause met (non-positive curvature), but the layout's G-val failed",
+   "inputs": {
+    "D": null,
+    "U": null,
+    "B": null,
+    "res": null,
+    "gates": false,
+    "status": "checked",
+    "curvature": "non-positive curvature"
+   }
+  }
+ },
+ "mean|interface": {
+  "H1": {
+   "class": "inconclusive",
+   "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+   "inputs": {
+    "64": {
+     "D": 2.5250456910080364e-06,
+     "U": 8.152946023162829e-13,
+     "B": 2.525046506302639e-06,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "128": {
+     "D": null,
+     "U": null,
+     "B": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    }
+   }
+  },
+  "H2": {
+   "class": "inconclusive",
+   "clause": "gates not passed on both grids",
+   "g_lo": null,
+   "g_hi": null
+  },
+  "H2E": {
+   "class": "inconclusive",
+   "clause": "gates not passed on both grids",
+   "g_lo": null,
+   "g_hi": null
+  },
+  "H5": {
+   "class": "inconclusive",
+   "clause": "a control missing, a reference gate failed or a bound above 1e-4",
+   "g_lo_ctrl_64_128": null
+  },
+  "primary_verdict": "inconclusive"
+ },
+ "diff|interface": {
+  "H1": {
+   "class": "inconclusive",
+   "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+   "inputs": {
+    "64": {
+     "D": 3.8593015825246993e-07,
+     "U": 1.8476474632093674e-12,
+     "B": 3.8593200589993316e-07,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "128": {
+     "D": null,
+     "U": null,
+     "B": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    }
+   }
+  },
+  "H2": {
+   "class": "inconclusive",
+   "clause": "gates not passed on both grids",
+   "g_lo": null,
+   "g_hi": null
+  },
+  "H2E": {
+   "class": "inconclusive",
+   "clause": "gates not passed on both grids",
+   "g_lo": null,
+   "g_hi": null
+  },
+  "H5": {
+   "class": "inconclusive",
+   "clause": "a control missing, a reference gate failed or a bound above 1e-4",
+   "g_lo_ctrl_64_128": null
+  },
+  "primary_verdict": "inconclusive"
+ },
+ "corner|interface": {
+  "H3": {
+   "class": "inconclusive",
+   "clause": "not resolved at every grid or a ratio outside [1.5, 2.5]",
+   "ratios": [],
+   "inputs": {
+    "64": {
+     "D": 0.00031716425678978257,
+     "U": 7.578735366902038e-14,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "128": {
+     "D": null,
+     "U": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    }
+   }
+  }
+ },
+ "stencil|interface": {
+  "H4": {
+   "class": "inconclusive",
+   "clause": "no recorded non-positive curvature and no resolved D_coef >= 0.1",
+   "inputs": {
+    "D": null,
+    "U": null,
+    "B": null,
+    "res": null,
+    "gates": false,
+    "status": "checked",
+    "curvature": "none"
+   }
+  }
+ },
+ "mean|voids": {
+  "H1": {
+   "class": "inconclusive",
+   "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+   "inputs": {
+    "8": {
+     "D": 6.005225974794375e-06,
+     "U": 4.410413171705542e-12,
+     "B": 6.005230385207546e-06,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "16": {
+     "D": 6.053178875074925e-06,
+     "U": 4.856174674640848e-12,
+     "B": 6.0531837312496e-06,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "32": {
+     "D": null,
+     "U": null,
+     "B": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    },
+    "64": {
+     "D": 6.07080131249917e-06,
+     "U": 3.246679899687441e-11,
+     "B": 6.070833779298167e-06,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "128": {
+     "D": 6.0704062022711714e-06,
+     "U": 3.776819937766106e-13,
+     "B": 6.070406579953165e-06,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    }
+   }
+  },
+  "H2": {
+   "class": "inconclusive",
+   "clause": "support clause met, but the layout's G-val failed",
+   "g_lo": 0.9999295064360931,
+   "g_hi": 0.9999403262162971
+  },
+  "H2E": {
+   "class": "inconclusive",
+   "clause": "support clause met, but the layout's G-val failed",
+   "g_lo": 0.9999378574639152,
+   "g_hi": 0.9999565951915611
+  },
+  "H5": {
+   "class": "inconclusive",
+   "clause": "contradiction clause met (g_lo^ctrl(64->128) >= 1.5), but the layout's G-val failed: at best inconclusive",
+   "g_lo_ctrl_64_128": 4.395211280702134
+  },
+  "primary_verdict": "inconclusive"
+ },
+ "diff|voids": {
+  "H1": {
+   "class": "inconclusive",
+   "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+   "inputs": {
+    "8": {
+     "D": 1.1117048566676791e-06,
+     "U": 5.185333918513368e-12,
+     "B": 1.1117100420015976e-06,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "16": {
+     "D": 1.1012804945121622e-06,
+     "U": 4.624837928604511e-13,
+     "B": 1.101280956995955e-06,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "32": {
+     "D": null,
+     "U": null,
+     "B": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    },
+    "64": {
+     "D": 1.0986393776508364e-06,
+     "U": 4.455796700080041e-11,
+     "B": 1.098683935617837e-06,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "128": {
+     "D": 1.0970188522176127e-06,
+     "U": 9.252783867762361e-12,
+     "B": 1.0970281050014804e-06,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    }
+   }
+  },
+  "H2": {
+   "class": "inconclusive",
+   "clause": "support clause met, but the layout's G-val failed",
+   "g_lo": 0.998476052912205,
+   "g_hi": 0.9985738921627119
+  },
+  "H2E": {
+   "class": "inconclusive",
+   "clause": "support clause met, but the layout's G-val failed",
+   "g_lo": 0.9985170093290752,
+   "g_hi": 0.9986568387316986
+  },
+  "H5": {
+   "class": "inconclusive",
+   "clause": "a control missing, a reference gate failed or a bound above 1e-4",
+   "g_lo_ctrl_64_128": 0.6759892390732314
+  },
+  "primary_verdict": "inconclusive"
+ },
+ "corner|voids": {
+  "H3": {
+   "class": "inconclusive",
+   "clause": "not resolved at every grid or a ratio outside [1.5, 2.5]",
+   "ratios": [
+    [
+     8,
+     16,
+     1.9734234044790566,
+     false
+    ],
+    [
+     64,
+     128,
+     1.996926469390723,
+     false
+    ]
+   ],
+   "inputs": {
+    "8": {
+     "D": 0.00013952696449452814,
+     "U": 1.9182477700012976e-12,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "16": {
+     "D": 0.0002753457772894202,
+     "U": 1.1564619584636194e-11,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "32": {
+     "D": null,
+     "U": null,
+     "res": null,
+     "gates": false,
+     "status": "checked"
+    },
+    "64": {
+     "D": 0.0010875022855004464,
+     "U": 1.3369800732487822e-11,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    },
+    "128": {
+     "D": 0.0021716620994387485,
+     "U": 2.7530551218364514e-11,
+     "res": true,
+     "gates": true,
+     "status": "checked"
+    }
+   }
+  }
+ },
+ "stencil|voids": {
+  "H4": {
+   "class": "inconclusive",
+   "clause": "support clause met (non-positive curvature), but the layout's G-val failed",
+   "inputs": {
+    "D": -1.7932350711193386,
+    "U": 6.814892610459659e-11,
+    "B": 1.7932350711874874,
+    "res": true,
+    "gates": true,
+    "status": "checked",
+    "curvature": "non-positive curvature"
+   }
+  }
+ },
+ "overall_primary": "inconclusive",
+ "primary_by_part": {
+  "(b) voids": {
+   "mean": "inconclusive",
+   "diff": "inconclusive"
+  },
+  "(a) k=128": {
+   "mean|uniform": "inconclusive",
+   "mean|interface": "inconclusive",
+   "diff|uniform": "inconclusive",
+   "diff|interface": "inconclusive"
+  }
+ },
+ "attribution_k128_mean": {
+  "uniform": {
+   "label": "not separable",
+   "D_coef": null,
+   "U_D_coef": null,
+   "D_rest_median": -1.7981689407373904e-05,
+   "D_rest_repeats": [
+    -1.797491233314348e-05,
+    -1.7983482391170724e-05,
+    -1.7981689407373904e-05
+   ],
+   "U_D_rest": null,
+   "repeat_range": 8.570058027243784e-09,
+   "D_tot_median": -1.1724972352265035e-05,
+   "D_tot_U": null,
+   "coef_status": "checked",
+   "D_coef_bound": null
+  },
+  "interface": {
+   "label": "not separable",
+   "D_coef": null,
+   "U_D_coef": null,
+   "D_rest_median": -2.2175135890537082e-06,
+   "D_rest_repeats": [
+    -2.2191220623175576e-06,
+    -2.2175135890537082e-06,
+    -2.2089979931310116e-06
+   ],
+   "U_D_rest": null,
+   "repeat_range": 1.0124069186546173e-08,
+   "D_tot_median": 3.076485888045805e-07,
+   "D_tot_U": null,
+   "coef_status": "checked",
+   "D_coef_bound": null
+  },
+  "voids": {
+   "label": "FP32-part-dominated",
+   "D_coef": 6.0704062022711714e-06,
+   "U_D_coef": 3.776819937766106e-13,
+   "D_rest_median": -1.4946418653472599e-05,
+   "D_rest_repeats": [
+    -1.4947148627808668e-05,
+    -1.4946418653472599e-05,
+    -1.4940810622449153e-05
+   ],
+   "U_D_rest": 3.776819937766106e-13,
+   "repeat_range": 6.338005359515463e-09,
+   "D_tot_median": -8.876012451201428e-06,
+   "D_tot_U": 0.0,
+   "coef_status": "checked",
+   "change_64_128": {
+    "D_coef": -3.9511022799869057e-10,
+    "U_D_coef": 3.2844480990651025e-11,
+    "D_coef_resolved": true,
+    "D_rest": -6.859906231817315e-06,
+    "U_D_rest": 3.2746712423929785e-11,
+    "D_rest_resolved": true,
+    "growth_located_in": "FP32-control part"
+   }
+  }
+ },
+ "growth_list": [
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "D",
+   "grids": "8->16",
+   "g_lo": 1.955399158174139,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 1.9644232774319619,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "D",
+   "grids": "16->32",
+   "g_lo": 1.9734942431848161,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "e",
+   "grids": "16->32",
+   "g_lo": 1.9783229751311207,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "D",
+   "grids": "32->64",
+   "g_lo": 1.9857959651597323,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "e",
+   "grids": "32->64",
+   "g_lo": 1.98830742457866,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "D",
+   "grids": "8->16",
+   "g_lo": 1.9205667945678198,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 1.9390898856513417,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "D",
+   "grids": "16->32",
+   "g_lo": 1.9497911062995743,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "16->32",
+   "g_lo": 1.955087034498209,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "D",
+   "grids": "32->64",
+   "g_lo": 1.9990987739523705,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "32->64",
+   "g_lo": 2.000556074011259,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "diff",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 1.9696822791711475,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "interface",
+   "form": "diff",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "16->32",
+   "g_lo": 1.9833905406884782,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "diff",
+   "kind": "fp32_control",
+   "metric": "D",
+   "grids": "32->64",
+   "g_lo": 1.6106219333755791,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "diff",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "32->64",
+   "g_lo": 1.9925913485524014,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "mean",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 1.8919779581354494,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "interface",
+   "form": "mean",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "16->32",
+   "g_lo": 1.960292412932173,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "interface",
+   "form": "mean",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "32->64",
+   "g_lo": 1.9976728452550865,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "uniform",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "D",
+   "grids": "8->16",
+   "g_lo": 1.971602776861998,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "uniform",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 1.9749429726361325,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "uniform",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "D",
+   "grids": "16->32",
+   "g_lo": 1.982441464802519,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "uniform",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "e",
+   "grids": "16->32",
+   "g_lo": 1.9842150705972408,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "uniform",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "D",
+   "grids": "8->16",
+   "g_lo": 1.9751351429391193,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "uniform",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 1.979841426553046,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "uniform",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "D",
+   "grids": "16->32",
+   "g_lo": 1.9625053718582475,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "uniform",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "16->32",
+   "g_lo": 1.966404653210534,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "uniform",
+   "form": "diff",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 1.955277754300283,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "uniform",
+   "form": "diff",
+   "kind": "fp32_control",
+   "metric": "D",
+   "grids": "16->32",
+   "g_lo": 3.1649709931863423,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "uniform",
+   "form": "diff",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "16->32",
+   "g_lo": 2.023606718446447,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "uniform",
+   "form": "mean",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 1.7684968323737793,
+   "set": "involves extension (bridge), validation"
+  },
+  {
+   "layout": "uniform",
+   "form": "mean",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "16->32",
+   "g_lo": 1.9864589610630596,
+   "set": "involves extension (bridge)"
+  },
+  {
+   "layout": "voids",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "D",
+   "grids": "8->16",
+   "g_lo": 1.9734232944635162,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 1.9768035064776692,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "D",
+   "grids": "64->128",
+   "g_lo": 1.996926419525026,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "corner",
+   "kind": "coefficient",
+   "metric": "e",
+   "grids": "64->128",
+   "g_lo": 1.9974006311062145,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "D",
+   "grids": "8->16",
+   "g_lo": 1.9259112475519595,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 1.9311480701366546,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "D",
+   "grids": "64->128",
+   "g_lo": 1.9734921050827559,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "corner",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "64->128",
+   "g_lo": 1.9752878183482123,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "diff",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 2.014030821968153,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "diff",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "64->128",
+   "g_lo": 1.9979925920281167,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "mean",
+   "kind": "fp32_control",
+   "metric": "D",
+   "grids": "8->16",
+   "g_lo": 1.8662157320147934,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "mean",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "8->16",
+   "g_lo": 2.032666256170641,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "mean",
+   "kind": "fp32_control",
+   "metric": "D",
+   "grids": "64->128",
+   "g_lo": 4.395211280702134,
+   "set": "primary"
+  },
+  {
+   "layout": "voids",
+   "form": "mean",
+   "kind": "fp32_control",
+   "metric": "e",
+   "grids": "64->128",
+   "g_lo": 1.9977060167553524,
+   "set": "primary"
+  }
+ ],
+ "narrowed_claims": [
+  {
+   "form": "mean",
+   "coefficient_bias_bounded_and_no_growth_supported_on": [],
+   "contradicted_on": [],
+   "inconclusive_on": [
+    "uniform",
+    "interface",
+    "voids"
+   ],
+   "range": {}
+  },
+  {
+   "form": "diff",
+   "coefficient_bias_bounded_and_no_growth_supported_on": [],
+   "contradicted_on": [],
+   "inconclusive_on": [
+    "uniform",
+    "interface",
+    "voids"
+   ],
+   "range": {}
+  }
+ ],
+ "G_val_form": "frozen FP64 refinement (plan 10.2), governs",
+ "sensitivity_exact_gval": {
+  "mean|uniform": {
+   "H1": {
+    "class": "inconclusive",
+    "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+    "inputs": {
+     "64": {
+      "D": null,
+      "U": null,
+      "B": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     },
+     "128": {
+      "D": null,
+      "U": null,
+      "B": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     }
+    }
+   },
+   "H2": {
+    "class": "inconclusive",
+    "clause": "gates not passed on both grids",
+    "g_lo": null,
+    "g_hi": null
+   },
+   "H2E": {
+    "class": "inconclusive",
+    "clause": "gates not passed on both grids",
+    "g_lo": null,
+    "g_hi": null
+   },
+   "H5": {
+    "class": "inconclusive",
+    "clause": "a control missing, a reference gate failed or a bound above 1e-4",
+    "g_lo_ctrl_64_128": null
+   },
+   "primary_verdict": "inconclusive"
+  },
+  "diff|uniform": {
+   "H1": {
+    "class": "inconclusive",
+    "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+    "inputs": {
+     "64": {
+      "D": null,
+      "U": null,
+      "B": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     },
+     "128": {
+      "D": null,
+      "U": null,
+      "B": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     }
+    }
+   },
+   "H2": {
+    "class": "inconclusive",
+    "clause": "gates not passed on both grids",
+    "g_lo": null,
+    "g_hi": null
+   },
+   "H2E": {
+    "class": "inconclusive",
+    "clause": "gates not passed on both grids",
+    "g_lo": null,
+    "g_hi": null
+   },
+   "H5": {
+    "class": "inconclusive",
+    "clause": "a control missing, a reference gate failed or a bound above 1e-4",
+    "g_lo_ctrl_64_128": null
+   },
+   "primary_verdict": "inconclusive"
+  },
+  "corner|uniform": {
+   "H3": {
+    "class": "inconclusive",
+    "clause": "not resolved at every grid or a ratio outside [1.5, 2.5]",
+    "ratios": [],
+    "inputs": {
+     "64": {
+      "D": null,
+      "U": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     },
+     "128": {
+      "D": null,
+      "U": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     }
+    }
+   }
+  },
+  "stencil|uniform": {
+   "H4": {
+    "class": "support",
+    "clause": "the PCG diagnostic met non-positive curvature (plan 3.3 rule)",
+    "inputs": {
+     "D": null,
+     "U": null,
+     "B": null,
+     "res": null,
+     "gates": false,
+     "status": "checked",
+     "curvature": "non-positive curvature"
+    }
+   }
+  },
+  "mean|interface": {
+   "H1": {
+    "class": "inconclusive",
+    "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+    "inputs": {
+     "64": {
+      "D": 2.5250456910080364e-06,
+      "U": 8.152946023162829e-13,
+      "B": 2.525046506302639e-06,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "128": {
+      "D": null,
+      "U": null,
+      "B": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     }
+    }
+   },
+   "H2": {
+    "class": "inconclusive",
+    "clause": "gates not passed on both grids",
+    "g_lo": null,
+    "g_hi": null
+   },
+   "H2E": {
+    "class": "inconclusive",
+    "clause": "gates not passed on both grids",
+    "g_lo": null,
+    "g_hi": null
+   },
+   "H5": {
+    "class": "inconclusive",
+    "clause": "a control missing, a reference gate failed or a bound above 1e-4",
+    "g_lo_ctrl_64_128": null
+   },
+   "primary_verdict": "inconclusive"
+  },
+  "diff|interface": {
+   "H1": {
+    "class": "inconclusive",
+    "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+    "inputs": {
+     "64": {
+      "D": 3.8593015825246993e-07,
+      "U": 1.8476474632093674e-12,
+      "B": 3.8593200589993316e-07,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "128": {
+      "D": null,
+      "U": null,
+      "B": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     }
+    }
+   },
+   "H2": {
+    "class": "inconclusive",
+    "clause": "gates not passed on both grids",
+    "g_lo": null,
+    "g_hi": null
+   },
+   "H2E": {
+    "class": "inconclusive",
+    "clause": "gates not passed on both grids",
+    "g_lo": null,
+    "g_hi": null
+   },
+   "H5": {
+    "class": "inconclusive",
+    "clause": "a control missing, a reference gate failed or a bound above 1e-4",
+    "g_lo_ctrl_64_128": null
+   },
+   "primary_verdict": "inconclusive"
+  },
+  "corner|interface": {
+   "H3": {
+    "class": "inconclusive",
+    "clause": "not resolved at every grid or a ratio outside [1.5, 2.5]",
+    "ratios": [],
+    "inputs": {
+     "64": {
+      "D": 0.00031716425678978257,
+      "U": 7.578735366902038e-14,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "128": {
+      "D": null,
+      "U": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     }
+    }
+   }
+  },
+  "stencil|interface": {
+   "H4": {
+    "class": "inconclusive",
+    "clause": "no recorded non-positive curvature and no resolved D_coef >= 0.1",
+    "inputs": {
+     "D": null,
+     "U": null,
+     "B": null,
+     "res": null,
+     "gates": false,
+     "status": "checked",
+     "curvature": "none"
+    }
+   }
+  },
+  "mean|voids": {
+   "H1": {
+    "class": "inconclusive",
+    "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+    "inputs": {
+     "8": {
+      "D": 6.005225974794375e-06,
+      "U": 4.410413171705542e-12,
+      "B": 6.005230385207546e-06,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "16": {
+      "D": 6.053178875074925e-06,
+      "U": 4.856174674640848e-12,
+      "B": 6.0531837312496e-06,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "32": {
+      "D": null,
+      "U": null,
+      "B": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     },
+     "64": {
+      "D": 6.07080131249917e-06,
+      "U": 3.246679899687441e-11,
+      "B": 6.070833779298167e-06,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "128": {
+      "D": 6.0704062022711714e-06,
+      "U": 3.776819937766106e-13,
+      "B": 6.070406579953165e-06,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     }
+    }
+   },
+   "H2": {
+    "class": "support",
+    "clause": "g_hi(64->128) <= 1.5",
+    "g_lo": 0.9999295064360931,
+    "g_hi": 0.9999403262162971
+   },
+   "H2E": {
+    "class": "support",
+    "clause": "g_hi(64->128) <= 1.5",
+    "g_lo": 0.9999378574639152,
+    "g_hi": 0.9999565951915611
+   },
+   "H5": {
+    "class": "contradiction",
+    "clause": "g_lo^ctrl(64->128) >= 1.5",
+    "g_lo_ctrl_64_128": 4.395211280702134
+   },
+   "primary_verdict": "inconclusive"
+  },
+  "diff|voids": {
+   "H1": {
+    "class": "inconclusive",
+    "clause": "a gate failed or a bound exceeds 1e-5 at a primary grid",
+    "inputs": {
+     "8": {
+      "D": 1.1117048566676791e-06,
+      "U": 5.185333918513368e-12,
+      "B": 1.1117100420015976e-06,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "16": {
+      "D": 1.1012804945121622e-06,
+      "U": 4.624837928604511e-13,
+      "B": 1.101280956995955e-06,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "32": {
+      "D": null,
+      "U": null,
+      "B": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     },
+     "64": {
+      "D": 1.0986393776508364e-06,
+      "U": 4.455796700080041e-11,
+      "B": 1.098683935617837e-06,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "128": {
+      "D": 1.0970188522176127e-06,
+      "U": 9.252783867762361e-12,
+      "B": 1.0970281050014804e-06,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     }
+    }
+   },
+   "H2": {
+    "class": "support",
+    "clause": "g_hi(64->128) <= 1.5",
+    "g_lo": 0.998476052912205,
+    "g_hi": 0.9985738921627119
+   },
+   "H2E": {
+    "class": "support",
+    "clause": "g_hi(64->128) <= 1.5",
+    "g_lo": 0.9985170093290752,
+    "g_hi": 0.9986568387316986
+   },
+   "H5": {
+    "class": "inconclusive",
+    "clause": "a control missing, a reference gate failed or a bound above 1e-4",
+    "g_lo_ctrl_64_128": 0.6759892390732314
+   },
+   "primary_verdict": "inconclusive"
+  },
+  "corner|voids": {
+   "H3": {
+    "class": "inconclusive",
+    "clause": "not resolved at every grid or a ratio outside [1.5, 2.5]",
+    "ratios": [
+     [
+      8,
+      16,
+      1.9734234044790566,
+      false
+     ],
+     [
+      64,
+      128,
+      1.996926469390723,
+      false
+     ]
+    ],
+    "inputs": {
+     "8": {
+      "D": 0.00013952696449452814,
+      "U": 1.9182477700012976e-12,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "16": {
+      "D": 0.0002753457772894202,
+      "U": 1.1564619584636194e-11,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "32": {
+      "D": null,
+      "U": null,
+      "res": null,
+      "gates": false,
+      "status": "checked"
+     },
+     "64": {
+      "D": 0.0010875022855004464,
+      "U": 1.3369800732487822e-11,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     },
+     "128": {
+      "D": 0.0021716620994387485,
+      "U": 2.7530551218364514e-11,
+      "res": true,
+      "gates": true,
+      "status": "checked"
+     }
+    }
+   }
+  },
+  "stencil|voids": {
+   "H4": {
+    "class": "support",
+    "clause": "the PCG diagnostic met non-positive curvature (plan 3.3 rule)",
+    "inputs": {
+     "D": -1.7932350711193386,
+     "U": 6.814892610459659e-11,
+     "B": 1.7932350711874874,
+     "res": true,
+     "gates": true,
+     "status": "checked",
+     "curvature": "non-positive curvature"
+    }
+   }
+  },
+  "overall_primary": "inconclusive",
+  "primary_by_part": {
+   "(b) voids": {
+    "mean": "inconclusive",
+    "diff": "inconclusive"
+   },
+   "(a) k=128": {
+    "mean|uniform": "inconclusive",
+    "mean|interface": "inconclusive",
+    "diff|uniform": "inconclusive",
+    "diff|interface": "inconclusive"
+   }
+  },
+  "narrowed_claims": [
+   {
+    "form": "mean",
+    "coefficient_bias_bounded_and_no_growth_supported_on": [],
+    "contradicted_on": [],
+    "inconclusive_on": [
+     "uniform",
+     "interface",
+     "voids"
+    ],
+    "range": {}
+   },
+   {
+    "form": "diff",
+    "coefficient_bias_bounded_and_no_growth_supported_on": [],
+    "contradicted_on": [],
+    "inconclusive_on": [
+     "uniform",
+     "interface",
+     "voids"
+    ],
+    "range": {}
+   }
+  ],
+  "G_val_form": "exact-residual refinement (DEVIATIONS.md D2); post hoc sensitivity check, cannot establish the prespecified verdict"
+ },
+ "e29_reproduction": {
+  "diff_control": {
+   "E29_iters": 10,
+   "E29_C": 2055.466224670782,
+   "T33": [
+    {
+     "it": 10,
+     "C": 2055.466224670782,
+     "rel_C_diff": 0.0
+    },
+    {
+     "it": 10,
+     "C": 2055.466224670782,
+     "rel_C_diff": 0.0
+    },
+    {
+     "it": 10,
+     "C": 2055.466224670782,
+     "rel_C_diff": 0.0
+    }
+   ],
+   "reproduced": true
+  },
+  "corner_control": {
+   "E29_C": 2059.9326050080585,
+   "E29_iters": 10,
+   "T33_C_range": [
+    2059.9325918939044,
+    2059.93260406747
+   ],
+   "E29_within_T33_range": false
+  },
+  "mean_control": {
+   "E29_C": 2055.436783247818,
+   "E29_iters": 10,
+   "T33_C_range": [
+    2055.4367724417157,
+    2055.4367900571347
+   ],
+   "E29_within_T33_range": true
+  },
+  "diff_coefficient": {
+   "E29_rel_err": 1.1281388207572426e-06,
+   "T33_D_coef": null,
+   "T33_U": null,
+   "T33_status": "checked"
+  },
+  "original_stencil": {
+   "E29": "negative energy direction",
+   "T33_diagnostic": "negative energy direction",
+   "T33_curvature_class": "non-positive curvature"
+  },
+  "reference": {
+   "E29_C64": 2055.460876364477,
+   "E29_rel": 5.296048464023856e-09,
+   "T33_C_ref": 2055.46087634907,
+   "T33_rho_cmp": 3.735810823670335e-10,
+   "rel_C_diff": 7.49556482694222e-12
+  }
+ },
+ "reference_set": "first references (D1 run; governing, DEVIATIONS.md D16)"
+}

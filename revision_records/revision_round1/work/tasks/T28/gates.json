@@ -1,0 +1,1255 @@
+{
+ "G0": {
+  "pass": true,
+  "source": "g0/G0.json",
+  "rerun_before_resume": {
+   "pass": true,
+   "source": "g0/resume_k160/G0.json",
+   "note": "rerun before the first new GPU job of the third session (D20)"
+  }
+ },
+ "G1": {
+  "pass": true,
+  "behaviour_k32": {
+   "continuation_run": "V_Hg1_S1_k32 (runs/V_Hg1_S1_k32/monitor.json)",
+   "continuation_run_status": "completed",
+   "plain_steps": 6,
+   "timing_steps": 6,
+   "continuation_native_stop_steps": 6,
+   "timing_iterate_rel_diff_vs_plain": 3.661581991162124e-08,
+   "continuation_iterate_rel_diff_vs_plain": 3.7205132867905146e-08,
+   "timing_solve_s_plain_build": 0.4039180278778076,
+   "note": "the released first solve is not bitwise reproducible (T12), so the test is 1e-6 relative",
+   "pass": true
+  },
+  "source": "verification.json"
+ },
+ "V": {
+  "pass": true,
+  "source": "verification.json"
+ },
+ "G2": {
+  "64": {
+   "pass": true,
+   "actions": {
+    "S1_test_vector": 2.5594043686550298e-08,
+    "S5_test_vector": 2.5265348562359153e-08,
+    "S5_released_U4": 2.4219727751690356e-08
+   },
+   "source": "out/K1_k64.json"
+  },
+  "128": {
+   "pass": true,
+   "actions": {
+    "S1_test_vector": 2.5549070029585182e-08,
+    "S5_test_vector": 2.544791322966137e-08,
+    "S5_released_U4": 2.5481571996103247e-08
+   },
+   "source": "out/K1_k128.json"
+  },
+  "160": {
+   "pass": true,
+   "actions": {
+    "S1_test_vector": 2.555899875718778e-08,
+    "S5_test_vector": 2.5387194837225758e-08,
+    "S5_released_U4": 2.553657422881157e-08
+   },
+   "source": "out/K1_k160.json"
+  },
+  "256": {
+   "pass": null,
+   "actions": {},
+   "source": null,
+   "not_evaluated": "no valid record run R at this k (R's dumps feed K1): R_k256 class 6, wall_cap"
+  },
+  "320": {
+   "pass": null,
+   "actions": {},
+   "source": null,
+   "not_evaluated": "no valid record run R at this k (R's dumps feed K1): R not run (released R ladder stopped)"
+  },
+  "384": {
+   "pass": null,
+   "actions": {},
+   "source": null,
+   "not_evaluated": "no valid record run R at this k (R's dumps feed K1): R not run (released R ladder stopped)"
+  }
+ },
+ "G3": {
+  "pass": true,
+  "detail": {
+   "F_S1_k64": {
+    "checker": 0.0002329181345488942,
+    "cpu_fp64": 0.000232918134549619,
+    "rel_diff": 3.111892763362583e-12,
+    "pass_1pct": true
+   },
+   "T_S1_k64_mg64_rep": {
+    "checker": 3.1271369839480138e-06,
+    "cpu_fp64": 3.1271369828344784e-06,
+    "rel_diff": 3.560878058997183e-10,
+    "pass_1pct": true,
+    "insolver_rel_true": 3.1271369829442315e-06,
+    "rel_diff_insolver": 3.2099083885646356e-10,
+    "pass_insolver_1pct": true
+   },
+   "F_S5_k64": {
+    "checker": 0.5608920610492393,
+    "cpu_fp64": 0.560892061049227,
+    "rel_diff": 2.1971206991745354e-14,
+    "pass_1pct": true
+   },
+   "T_S5_k64_mg64_rep": {
+    "checker": 6.1060725330044055e-06,
+    "cpu_fp64": 6.10607253547858e-06,
+    "rel_diff": 4.051990463959365e-10,
+    "pass_1pct": true,
+    "insolver_rel_true": 6.106072535070257e-06,
+    "rel_diff_insolver": 3.3832738033864823e-10,
+    "pass_insolver_1pct": true
+   }
+  },
+  "covers": [
+   "mg64_rep/S1",
+   "mg64_rep/S5",
+   "traeff/S1",
+   "traeff/S5"
+  ],
+  "source": "out/K2_k64.json"
+ },
+ "G4": {
+  "evaluation": "g4_activity.json (drivers/g4check.py, revision 3, D31): each timed section is evaluated on the 5 s counter intervals that overlap it; our reported solve time is setup (b) + solve. Our sections are on the sampler's clock. Released sections are on the WSL clock, whose offset during a job is not known: their decisive value is the clock-free strict bound over the job window [t_launch, t_exit]; the plan's mean is given only under a constant offset, where the records allow one. Jobs: fixed-state T and F, native N, record R (k <= 160) and our loops L",
+  "rows_activity_basis": "ours: mean over the overlapping counter intervals; released: what the clock-free strict bound proves (ok < 1 %, flagged 1-5 %, unresolved > 5 %)",
+  "rows_unresolved": [],
+  "rows_timed": 32,
+  "rows_excluded": [],
+  "rows_flagged": [
+   "64/S1/traeff"
+  ],
+  "rows_missing_activity": [],
+  "rows_low_clock": [],
+  "max_mean_foreign_pct": 0.12194181565022078,
+  "rows_plan_mean_not_available": {
+   "160/S1/traeff": "released: the records refute a constant clock offset during the job (conditional tier not available)"
+  },
+  "strict_bound": {
+   "definition": "upper bound on the foreign mean inside the section itself: all foreign use of the covering intervals placed inside the section (released: the intervals covering the whole job window, clock-free)",
+   "max_pct": 2.0378544600779267,
+   "rows_bound_in_flag_band_1_to_5_pct": [
+    "64/S1/traeff",
+    "64/S1/mg64_orig",
+    "64/S1/mg64_rep",
+    "64/S1/mgir_rep",
+    "64/S5/mg64_rep"
+   ],
+   "rows_bound_above_5_pct": []
+  },
+  "setup_sections": {
+   "rows_low_clock": [],
+   "rows_low_clock_conditional": [
+    "256/S1/traeff",
+    "320/S1/traeff"
+   ],
+   "rows_clock_undecided": [
+    "64/S1/traeff",
+    "128/S5/traeff",
+    "160/S1/traeff",
+    "160/S1/mg64_orig",
+    "160/S5/traeff",
+    "256/S1/traeff",
+    "256/S1/mg64_orig",
+    "256/S1/mg64_rep",
+    "320/S1/traeff",
+    "320/S1/mg64_orig",
+    "320/S1/mg64_rep",
+    "320/S1/mgir_rep"
+   ],
+   "rows_activity_not_ok": {
+    "64/S1/traeff": "unresolved",
+    "64/S5/traeff": "unresolved",
+    "128/S1/traeff": "unresolved",
+    "128/S5/traeff": "unresolved",
+    "160/S5/traeff": "flagged"
+   },
+   "rows_per_solve_setup_unresolved": [
+    "64/S1/traeff",
+    "64/S5/traeff",
+    "128/S1/traeff",
+    "128/S5/traeff"
+   ],
+   "note": "setup times enter no prediction. A section shorter than the 5 s counter interval cannot be cleared of the 5 % rule by the strict bound; 'unresolved' means the rule is undecided, not that interference was seen. The low-clock rule is undecided where no clock series was saved (our setups) or where the released section cannot be located in the clock series (D31). No section was repeated: the runs were complete and the operator's note forbids repeating them"
+  },
+  "krylov_step_level": {
+   "rule": "D34: the solve-level bounds (released clock-free <= 1.73 %) cover whole fixed-state solves only. At Krylov-step duration the bound is the same integral divided by the median step; above 5 % the rule is undecided ('unresolved'), which is not interference",
+   "rows": {
+    "64/S1/traeff": {
+     "step_median_ms": 88.17195892333984,
+     "strict_bound_pct": 14.299816494614888,
+     "strict_activity": "unresolved"
+    },
+    "64/S1/mg64_orig": {
+     "step_median_ms": 10.610719680786133,
+     "strict_bound_pct": 15.156787608785224,
+     "strict_activity": "unresolved"
+    },
+    "64/S1/mg64_rep": {
+     "step_median_ms": 3.934079885482788,
+     "strict_bound_pct": 42.13020821621637,
+     "strict_activity": "unresolved"
+    },
+    "64/S1/mgir_rep": {
+     "step_median_ms": 5.751312017440796,
+     "strict_bound_pct": 28.941027690127264,
+     "strict_activity": "unresolved"
+    },
+    "64/S5/traeff": {
+     "step_median_ms": 87.30792999267578,
+     "strict_bound_pct": 101.38948272121773,
+     "strict_activity": "unresolved"
+    },
+    "64/S5/mg64_orig": {
+     "step_median_ms": 3.9168959856033325,
+     "strict_bound_pct": 41.71293161006465,
+     "strict_activity": "unresolved"
+    },
+    "64/S5/mg64_rep": {
+     "step_median_ms": 3.914687991142273,
+     "strict_bound_pct": 36.03242080571852,
+     "strict_activity": "unresolved"
+    },
+    "64/S5/mgir_rep": {
+     "step_median_ms": 3.8300158977508545,
+     "strict_bound_pct": 36.42015790770178,
+     "strict_activity": "unresolved"
+    },
+    "128/S1/traeff": {
+     "step_median_ms": 739.3300533294678,
+     "strict_bound_pct": 2.9409581144526533,
+     "strict_activity": "flagged"
+    },
+    "128/S1/mg64_orig": {
+     "step_median_ms": 12.922176361083984,
+     "strict_bound_pct": 12.387700200515214,
+     "strict_activity": "unresolved"
+    },
+    "128/S1/mg64_rep": {
+     "step_median_ms": 12.965536117553711,
+     "strict_bound_pct": 19.953372966737547,
+     "strict_activity": "unresolved"
+    },
+    "128/S1/mgir_rep": {
+     "step_median_ms": 8.13431978225708,
+     "strict_bound_pct": 17.228711182592534,
+     "strict_activity": "unresolved"
+    },
+    "128/S5/traeff": {
+     "step_median_ms": 742.2990798950195,
+     "strict_bound_pct": 131.4036124610866,
+     "strict_activity": "unresolved"
+    },
+    "128/S5/mg64_orig": {
+     "step_median_ms": 12.990816116333008,
+     "strict_bound_pct": 7.245501654447716,
+     "strict_activity": "unresolved"
+    },
+    "128/S5/mg64_rep": {
+     "step_median_ms": 13.026976108551025,
+     "strict_bound_pct": 34.83081224906848,
+     "strict_activity": "unresolved"
+    },
+    "128/S5/mgir_rep": {
+     "step_median_ms": 7.981343984603882,
+     "strict_bound_pct": 24.309425766335327,
+     "strict_activity": "unresolved"
+    },
+    "160/S1/traeff": {
+     "step_median_ms": 1174.203872680664,
+     "strict_bound_pct": 0.2406141107579102,
+     "strict_activity": "ok"
+    },
+    "160/S1/mg64_orig": {
+     "step_median_ms": 22.51900863647461,
+     "strict_bound_pct": 0.0,
+     "strict_activity": "ok"
+    },
+    "160/S1/mg64_rep": {
+     "step_median_ms": 22.574240684509277,
+     "strict_bound_pct": 0.7973693772194352,
+     "strict_activity": "ok"
+    },
+    "160/S1/mgir_rep": {
+     "step_median_ms": 12.689359664916992,
+     "strict_bound_pct": 1.8597069064810565,
+     "strict_activity": "flagged"
+    },
+    "160/S5/traeff": {
+     "step_median_ms": 1182.870864868164,
+     "strict_bound_pct": 2.9895648621409467,
+     "strict_activity": "flagged"
+    },
+    "160/S5/mg64_orig": {
+     "step_median_ms": 22.585344314575195,
+     "strict_bound_pct": 1.025000799448895,
+     "strict_activity": "flagged"
+    },
+    "160/S5/mg64_rep": {
+     "step_median_ms": 22.702207565307617,
+     "strict_bound_pct": 0.8306519942520942,
+     "strict_activity": "ok"
+    },
+    "160/S5/mgir_rep": {
+     "step_median_ms": 12.828831672668457,
+     "strict_bound_pct": 0.0,
+     "strict_activity": "ok"
+    },
+    "256/S1/traeff": {
+     "step_median_ms": 4248.515605926514,
+     "strict_bound_pct": 0.3549176450214259,
+     "strict_activity": "ok"
+    },
+    "256/S1/mg64_orig": {
+     "step_median_ms": 87.87843322753906,
+     "strict_bound_pct": 0.1101489515759313,
+     "strict_activity": "ok"
+    },
+    "256/S1/mg64_rep": {
+     "step_median_ms": 88.22249603271484,
+     "strict_bound_pct": 0.19428149082317292,
+     "strict_activity": "ok"
+    },
+    "256/S1/mgir_rep": {
+     "step_median_ms": 48.097984313964844,
+     "strict_bound_pct": 0.5187234338993068,
+     "strict_activity": "ok"
+    },
+    "320/S1/traeff": {
+     "step_median_ms": 6986.106991767883,
+     "strict_bound_pct": 0.22217247188637118,
+     "strict_activity": "ok"
+    },
+    "320/S1/mg64_orig": {
+     "step_median_ms": 172.28591918945312,
+     "strict_bound_pct": 0.29542413322914773,
+     "strict_activity": "ok"
+    },
+    "320/S1/mg64_rep": {
+     "step_median_ms": 172.83973693847656,
+     "strict_bound_pct": 0.29612596644821126,
+     "strict_activity": "ok"
+    },
+    "320/S1/mgir_rep": {
+     "step_median_ms": 94.29334259033203,
+     "strict_bound_pct": 0.24784177998556173,
+     "strict_activity": "ok"
+    }
+   },
+   "rows_unresolved": [
+    "64/S1/traeff",
+    "64/S1/mg64_orig",
+    "64/S1/mg64_rep",
+    "64/S1/mgir_rep",
+    "64/S5/traeff",
+    "64/S5/mg64_orig",
+    "64/S5/mg64_rep",
+    "64/S5/mgir_rep",
+    "128/S1/mg64_orig",
+    "128/S1/mg64_rep",
+    "128/S1/mgir_rep",
+    "128/S5/traeff",
+    "128/S5/mg64_orig",
+    "128/S5/mg64_rep",
+    "128/S5/mgir_rep"
+   ],
+   "rows_not_unresolved": [
+    "128/S1/traeff",
+    "160/S1/traeff",
+    "160/S1/mg64_orig",
+    "160/S1/mg64_rep",
+    "160/S1/mgir_rep",
+    "160/S5/traeff",
+    "160/S5/mg64_orig",
+    "160/S5/mg64_rep",
+    "160/S5/mgir_rep",
+    "256/S1/traeff",
+    "256/S1/mg64_orig",
+    "256/S1/mg64_rep",
+    "256/S1/mgir_rep",
+    "320/S1/traeff",
+    "320/S1/mg64_orig",
+    "320/S1/mg64_rep",
+    "320/S1/mgir_rep"
+   ],
+   "consequence": "the Krylov-step times and the P4 and P11 step-time ratios are reported as measured, with the interference rule unresolved at step duration, not as cleared"
+  },
+  "design_loop_solves": {
+   "rule": "D35: whole-solve resolution, clock-free for the released runs",
+   "native_N": {
+    "ok": 7,
+    "flagged": 6,
+    "unresolved": 0,
+    "None": 0
+   },
+   "ours_L": {
+    "ok": 24,
+    "flagged": 60,
+    "unresolved": 0
+   },
+   "record_R_instrumented": {
+    "ok": 6,
+    "flagged": 18,
+    "unresolved": 4,
+    "None": 0
+   },
+   "record_R_unresolved": [
+    "R_k64:solve1 (161.1 %)",
+    "R_k64:solve2 (121.2 %)",
+    "R_k64:solve3 (135.2 %)",
+    "R_k64:solve4 (51.6 %)"
+   ],
+   "statement": "the native runs N and our loops L clear the 5 % threshold at whole-solve resolution; the instrumented record-run solves of iterations 1-4 at k = 64 are unresolved"
+  },
+  "limitation": "the activity sampler is a single Get-Counter -Continuous call with a wildcard instance path ('\\\\GPU Engine(*engtype_3D)\\\\Utilization Percentage', drivers/t28lib.py:_PS_ACT), which resolves the matching process instances once, at its start. Every activity value and bound covers the process instances enumerated then. The records neither establish coverage of a process created later nor show that such a process interfered (D37)",
+  "design_loop_sections": {
+   "ours loops L": {
+    "jobs": 9,
+    "sections": 168,
+    "sections_covered": 168,
+    "activity": {
+     "ok": 168,
+     "flagged": 0,
+     "excluded": 0,
+     "None": 0
+    },
+    "max_mean_foreign_pct": 0.03887267876305075,
+    "strict": {
+     "ok": 44,
+     "flagged": 76,
+     "unresolved": 48,
+     "None": 0
+    },
+    "max_strict_bound_pct": 8.164784752736804,
+    "strict_unresolved_sections": [
+     "L_k64_mg64_orig:design2 (5.37 %)",
+     "L_k64_mg64_orig:design3 (6.51 %)",
+     "L_k64_mg64_orig:design5 (5.09 %)",
+     "L_k64_mg64_orig:design6 (5.52 %)",
+     "L_k64_mg64_orig:design7 (5.67 %)",
+     "L_k64_mg64_orig:design8 (6.12 %)",
+     "L_k64_mg64_orig:design11 (5.32 %)",
+     "L_k64_mg64_orig:design12 (8.02 %)",
+     "L_k64_mg64_orig:design13 (5.54 %)",
+     "L_k64_mg64_orig:design15 (5.72 %)",
+     "L_k64_mg64_orig:design17 (6.14 %)",
+     "L_k64_mg64_orig:design18 (5.46 %)",
+     "L_k64_mg64_orig:design19 (5.66 %)",
+     "L_k64_mg64_orig:design20 (5.42 %)",
+     "L_k64_mg64_rep:design3 (6.71 %)",
+     "L_k64_mg64_rep:design5 (5.76 %)",
+     "L_k64_mg64_rep:design6 (5.91 %)",
+     "L_k64_mg64_rep:design7 (7.07 %)",
+     "L_k64_mg64_rep:design8 (5.57 %)",
+     "L_k64_mg64_rep:design9 (5.61 %)",
+     "L_k64_mg64_rep:design10 (5.19 %)",
+     "L_k64_mg64_rep:design11 (6.38 %)",
+     "L_k64_mg64_rep:design12 (5.57 %)",
+     "L_k64_mg64_rep:design14 (6.63 %)",
+     "L_k64_mg64_rep:design15 (8.16 %)",
+     "L_k64_mg64_rep:design17 (6.95 %)",
+     "L_k64_mg64_rep:design18 (6.13 %)",
+     "L_k64_mg64_rep:design19 (5.29 %)",
+     "L_k64_mg64_rep:design20 (6.72 %)",
+     "L_k64_mgir_rep:design1 (5.02 %)",
+     "L_k64_mgir_rep:design3 (6.45 %)",
+     "L_k64_mgir_rep:design4 (6.82 %)",
+     "L_k64_mgir_rep:design5 (6.79 %)",
+     "L_k64_mgir_rep:design6 (6.37 %)",
+     "L_k64_mgir_rep:design7 (6.34 %)",
+     "L_k64_mgir_rep:design8 (6.69 %)",
+     "L_k64_mgir_rep:design9 (6.34 %)",
+     "L_k64_mgir_rep:design10 (6.41 %)",
+     "L_k64_mgir_rep:design11 (6.06 %)",
+     "L_k64_mgir_rep:design12 (6.29 %)",
+     "L_k64_mgir_rep:design13 (6.33 %)",
+     "L_k64_mgir_rep:design14 (6.48 %)",
+     "L_k64_mgir_rep:design15 (5.75 %)",
+     "L_k64_mgir_rep:design16 (5.65 %)",
+     "L_k64_mgir_rep:design17 (6.10 %)",
+     "L_k64_mgir_rep:design18 (5.68 %)",
+     "L_k64_mgir_rep:design19 (5.78 %)",
+     "L_k64_mgir_rep:design20 (6.22 %)"
+    ],
+    "low_clock_sections": [],
+    "clock_undecidable_sections_ge_1s": []
+   },
+   "released native N": {
+    "jobs": 3,
+    "sections": 29,
+    "clock_free": {
+     "setup_a": {
+      "n": 3,
+      "strict": {
+       "ok": 1,
+       "flagged": 2,
+       "unresolved": 0,
+       "None": 0
+      },
+      "max_strict_bound_pct": 4.745762008688504,
+      "unresolved": [],
+      "low_clock": [],
+      "clock_undecided_ge_1s": [
+       "N_k128:setup_a",
+       "N_k64:setup_a"
+      ]
+     },
+     "solve": {
+      "n": 13,
+      "strict": {
+       "ok": 7,
+       "flagged": 6,
+       "unresolved": 0,
+       "None": 0
+      },
+      "max_strict_bound_pct": 4.3043593241328715,
+      "unresolved": [],
+      "low_clock": [],
+      "clock_undecided_ge_1s": [
+       "N_k64:solve2",
+       "N_k64:solve3",
+       "N_k64:solve4"
+      ]
+     },
+     "design step": {
+      "n": 13,
+      "strict": {
+       "ok": 0,
+       "flagged": 0,
+       "unresolved": 13,
+       "None": 0
+      },
+      "max_strict_bound_pct": 346.59485345974707,
+      "unresolved": [
+       "N_k128:design1 (346.6 %)",
+       "N_k128:design2 (288.4 %)",
+       "N_k128:design3 (335.3 %)",
+       "N_k128:design4 (293.3 %)",
+       "N_k160:design1 (36.5 %)",
+       "N_k160:design2 (39.1 %)",
+       "N_k160:design3 (35.7 %)",
+       "N_k160:design4 (39.1 %)",
+       "N_k64:design1 (155.5 %)",
+       "N_k64:design2 (156.6 %)",
+       "N_k64:design3 (227.2 %)",
+       "N_k64:design4 (225.5 %)",
+       "N_k64:design5 (216.5 %)"
+      ],
+      "low_clock": [],
+      "clock_undecided_ge_1s": []
+     }
+    },
+    "conditional": {
+     "jobs_with_condition_refuted": [
+      "N_k160",
+      "N_k64"
+     ],
+     "sections": 9,
+     "covered": 9,
+     "activity": {
+      "ok": 9,
+      "flagged": 0,
+      "excluded": 0,
+      "None": 0
+     },
+     "max_mean_foreign_pct": 0.06272060441884704,
+     "strict": {
+      "ok": 5,
+      "flagged": 4,
+      "unresolved": 0,
+      "None": 0
+     },
+     "low_clock": []
+    },
+    "job_window_mean_foreign_pct": {
+     "N_k128": 0.03149986095352236,
+     "N_k160": 0.0028529660734590645,
+     "N_k64": 0.03508167211092423
+    },
+    "offset_intervals_s": {
+     "N_k128": [
+      -0.49118638038635254,
+      0.029398679733276367
+     ],
+     "N_k160": [
+      0.4323568344116211,
+      0.04693484306335449
+     ],
+     "N_k64": [
+      0.2871260643005371,
+      0.21343278884887695
+     ]
+    }
+   },
+   "released record R": {
+    "jobs": 3,
+    "sections": 59,
+    "clock_free": {
+     "setup_a": {
+      "n": 3,
+      "strict": {
+       "ok": 1,
+       "flagged": 1,
+       "unresolved": 1,
+       "None": 0
+      },
+      "max_strict_bound_pct": 133.282894634813,
+      "unresolved": [
+       "R_k64:setup_a (133.3 %)"
+      ],
+      "low_clock": [],
+      "clock_undecided_ge_1s": [
+       "R_k128:setup_a",
+       "R_k160:setup_a"
+      ]
+     },
+     "solve": {
+      "n": 28,
+      "strict": {
+       "ok": 6,
+       "flagged": 18,
+       "unresolved": 4,
+       "None": 0
+      },
+      "max_strict_bound_pct": 161.08001686854988,
+      "unresolved": [
+       "R_k64:solve1 (161.1 %)",
+       "R_k64:solve2 (121.2 %)",
+       "R_k64:solve3 (135.2 %)",
+       "R_k64:solve4 (51.6 %)"
+      ],
+      "low_clock": [],
+      "clock_undecided_ge_1s": [
+       "R_k128:solve1",
+       "R_k128:solve2",
+       "R_k160:solve1",
+       "R_k160:solve2",
+       "R_k64:solve2",
+       "R_k64:solve4"
+      ]
+     },
+     "design step": {
+      "n": 28,
+      "strict": {
+       "ok": 0,
+       "flagged": 0,
+       "unresolved": 28,
+       "None": 0
+      },
+      "max_strict_bound_pct": 7577.538894645777,
+      "unresolved": [
+       "R_k128:design1 (238.1 %)",
+       "R_k128:design2 (252.3 %)",
+       "R_k128:design3 (73.7 %)",
+       "R_k128:design4 (245.9 %)",
+       "R_k160:design1 (10.8 %)",
+       "R_k160:design2 (30.8 %)",
+       "R_k160:design3 (13.0 %)",
+       "R_k160:design4 (38.7 %)",
+       "R_k64:design1 (4248.0 %)",
+       "R_k64:design2 (6774.6 %)",
+       "R_k64:design3 (5163.7 %)",
+       "R_k64:design4 (5077.7 %)",
+       "R_k64:design5 (7577.5 %)",
+       "R_k64:design6 (5290.0 %)",
+       "R_k64:design7 (5503.7 %)",
+       "R_k64:design8 (7280.7 %)",
+       "R_k64:design9 (7034.9 %)",
+       "R_k64:design10 (6544.7 %)",
+       "R_k64:design11 (6055.2 %)",
+       "R_k64:design12 (6791.1 %)",
+       "R_k64:design13 (5249.3 %)",
+       "R_k64:design14 (7323.0 %)",
+       "R_k64:design15 (4561.6 %)",
+       "R_k64:design16 (5256.1 %)",
+       "R_k64:design17 (7106.6 %)",
+       "R_k64:design18 (6983.7 %)",
+       "R_k64:design19 (7184.7 %)",
+       "R_k64:design20 (7271.6 %)"
+      ],
+      "low_clock": [],
+      "clock_undecided_ge_1s": []
+     }
+    },
+    "conditional": {
+     "jobs_with_condition_refuted": [],
+     "sections": 31,
+     "covered": 31,
+     "activity": {
+      "ok": 31,
+      "flagged": 0,
+      "excluded": 0,
+      "None": 0
+     },
+     "max_mean_foreign_pct": 0.6509467116738369,
+     "strict": {
+      "ok": 31,
+      "flagged": 0,
+      "unresolved": 0,
+      "None": 0
+     },
+     "low_clock": []
+    },
+    "job_window_mean_foreign_pct": {
+     "R_k128": 0.03289674579392541,
+     "R_k160": 0.0029693999895827067,
+     "R_k64": 0.08574948010298138
+    },
+    "offset_intervals_s": {
+     "R_k128": [
+      -1.5728886127471924,
+      0.4969186782836914
+     ],
+     "R_k160": [
+      -3.1450462341308594,
+      1.1604762077331543
+     ],
+     "R_k64": [
+      -0.36295509338378906,
+      0.21627330780029297
+     ]
+    }
+   }
+  },
+  "sections_summary": {
+   "ours fixed-state T": {
+    "jobs": 24,
+    "sections": 120,
+    "sections_covered": 120,
+    "activity": {
+     "ok": 120,
+     "flagged": 0,
+     "excluded": 0,
+     "None": 0
+    },
+    "max_mean_foreign_pct": 0.06622042984289649,
+    "strict": {
+     "ok": 89,
+     "flagged": 31,
+     "unresolved": 0,
+     "None": 0
+    },
+    "max_strict_bound_pct": 4.083239833258138,
+    "strict_unresolved_sections": [],
+    "low_clock_sections": [],
+    "clock_undecidable_sections_ge_1s": [
+     "T_S1_k160_mg64_orig:setup_a (1.05 s)",
+     "T_S1_k256_mg64_orig:setup_a (2.03 s)",
+     "T_S1_k256_mg64_rep:setup_a (1.14 s)",
+     "T_S1_k320_mg64_orig:setup_a (1.40 s)",
+     "T_S1_k320_mg64_rep:setup_a (1.25 s)",
+     "T_S1_k320_mgir_rep:setup_a (1.13 s)"
+    ],
+    "reported_solve_times": 72,
+    "reported_covered": 72,
+    "reported_activity": {
+     "ok": 72,
+     "flagged": 0,
+     "excluded": 0,
+     "None": 0
+    },
+    "reported_strict": {
+     "ok": 63,
+     "flagged": 9,
+     "unresolved": 0,
+     "None": 0
+    },
+    "max_reported_strict_bound_pct": 2.0378544600779267
+   },
+   "ours loops L": {
+    "jobs": 9,
+    "sections": 168,
+    "sections_covered": 168,
+    "activity": {
+     "ok": 168,
+     "flagged": 0,
+     "excluded": 0,
+     "None": 0
+    },
+    "max_mean_foreign_pct": 0.03887267876305075,
+    "strict": {
+     "ok": 44,
+     "flagged": 76,
+     "unresolved": 48,
+     "None": 0
+    },
+    "max_strict_bound_pct": 8.164784752736804,
+    "strict_unresolved_sections": [
+     "L_k64_mg64_orig:design2 (5.37 %)",
+     "L_k64_mg64_orig:design3 (6.51 %)",
+     "L_k64_mg64_orig:design5 (5.09 %)",
+     "L_k64_mg64_orig:design6 (5.52 %)",
+     "L_k64_mg64_orig:design7 (5.67 %)",
+     "L_k64_mg64_orig:design8 (6.12 %)",
+     "L_k64_mg64_orig:design11 (5.32 %)",
+     "L_k64_mg64_orig:design12 (8.02 %)",
+     "L_k64_mg64_orig:design13 (5.54 %)",
+     "L_k64_mg64_orig:design15 (5.72 %)",
+     "L_k64_mg64_orig:design17 (6.14 %)",
+     "L_k64_mg64_orig:design18 (5.46 %)",
+     "L_k64_mg64_orig:design19 (5.66 %)",
+     "L_k64_mg64_orig:design20 (5.42 %)",
+     "L_k64_mg64_rep:design3 (6.71 %)",
+     "L_k64_mg64_rep:design5 (5.76 %)",
+     "L_k64_mg64_rep:design6 (5.91 %)",
+     "L_k64_mg64_rep:design7 (7.07 %)",
+     "L_k64_mg64_rep:design8 (5.57 %)",
+     "L_k64_mg64_rep:design9 (5.61 %)",
+     "L_k64_mg64_rep:design10 (5.19 %)",
+     "L_k64_mg64_rep:design11 (6.38 %)",
+     "L_k64_mg64_rep:design12 (5.57 %)",
+     "L_k64_mg64_rep:design14 (6.63 %)",
+     "L_k64_mg64_rep:design15 (8.16 %)",
+     "L_k64_mg64_rep:design17 (6.95 %)",
+     "L_k64_mg64_rep:design18 (6.13 %)",
+     "L_k64_mg64_rep:design19 (5.29 %)",
+     "L_k64_mg64_rep:design20 (6.72 %)",
+     "L_k64_mgir_rep:design1 (5.02 %)",
+     "L_k64_mgir_rep:design3 (6.45 %)",
+     "L_k64_mgir_rep:design4 (6.82 %)",
+     "L_k64_mgir_rep:design5 (6.79 %)",
+     "L_k64_mgir_rep:design6 (6.37 %)",
+     "L_k64_mgir_rep:design7 (6.34 %)",
+     "L_k64_mgir_rep:design8 (6.69 %)",
+     "L_k64_mgir_rep:design9 (6.34 %)",
+     "L_k64_mgir_rep:design10 (6.41 %)",
+     "L_k64_mgir_rep:design11 (6.06 %)",
+     "L_k64_mgir_rep:design12 (6.29 %)",
+     "L_k64_mgir_rep:design13 (6.33 %)",
+     "L_k64_mgir_rep:design14 (6.48 %)",
+     "L_k64_mgir_rep:design15 (5.75 %)",
+     "L_k64_mgir_rep:design16 (5.65 %)",
+     "L_k64_mgir_rep:design17 (6.10 %)",
+     "L_k64_mgir_rep:design18 (5.68 %)",
+     "L_k64_mgir_rep:design19 (5.78 %)",
+     "L_k64_mgir_rep:design20 (6.22 %)"
+    ],
+    "low_clock_sections": [],
+    "clock_undecidable_sections_ge_1s": []
+   },
+   "released fixed-state F": {
+    "jobs": 8,
+    "sections": 40,
+    "clock_free": {
+     "setup_a": {
+      "n": 8,
+      "strict": {
+       "ok": 6,
+       "flagged": 0,
+       "unresolved": 2,
+       "None": 0
+      },
+      "max_strict_bound_pct": 15.984073516319771,
+      "unresolved": [
+       "F_S5_k128:setup_a (16.0 %)",
+       "F_S5_k64:setup_a (9.4 %)"
+      ],
+      "low_clock": [],
+      "clock_undecided_ge_1s": [
+       "F_S1_k160:setup_a",
+       "F_S1_k256:setup_a",
+       "F_S1_k320:setup_a",
+       "F_S1_k64:setup_a",
+       "F_S5_k128:setup_a",
+       "F_S5_k160:setup_a"
+      ]
+     },
+     "per-solve setup b": {
+      "n": 16,
+      "strict": {
+       "ok": 5,
+       "flagged": 1,
+       "unresolved": 10,
+       "None": 0
+      },
+      "max_strict_bound_pct": 188.00724623047464,
+      "unresolved": [
+       "F_S1_k128:per-solve setup b0 (5.6 %)",
+       "F_S1_k128:per-solve setup b1 (5.7 %)",
+       "F_S1_k128:per-solve setup b2 (6.4 %)",
+       "F_S1_k64:per-solve setup b0 (13.2 %)",
+       "F_S1_k64:per-solve setup b1 (23.9 %)",
+       "F_S1_k64:per-solve setup b2 (31.4 %)",
+       "F_S5_k128:per-solve setup b0 (140.4 %)",
+       "F_S5_k64:per-solve setup b0 (99.8 %)",
+       "F_S5_k64:per-solve setup b1 (166.3 %)",
+       "F_S5_k64:per-solve setup b2 (188.0 %)"
+      ],
+      "low_clock": [],
+      "clock_undecided_ge_1s": [
+       "F_S1_k256:per-solve setup b0",
+       "F_S1_k320:per-solve setup b0"
+      ]
+     },
+     "solve": {
+      "n": 16,
+      "strict": {
+       "ok": 13,
+       "flagged": 3,
+       "unresolved": 0,
+       "None": 0
+      },
+      "max_strict_bound_pct": 1.7346722127934162,
+      "unresolved": [],
+      "low_clock": [],
+      "clock_undecided_ge_1s": []
+     }
+    },
+    "conditional": {
+     "jobs_with_condition_refuted": [
+      "F_S1_k160"
+     ],
+     "sections": 33,
+     "covered": 33,
+     "activity": {
+      "ok": 33,
+      "flagged": 0,
+      "excluded": 0,
+      "None": 0
+     },
+     "max_mean_foreign_pct": 0.12194181565022078,
+     "strict": {
+      "ok": 25,
+      "flagged": 5,
+      "unresolved": 3,
+      "None": 0
+     },
+     "low_clock": [
+      "F_S1_k256:setup_a",
+      "F_S1_k320:setup_a"
+     ]
+    },
+    "job_window_mean_foreign_pct": {
+     "F_S1_k128": 0.04335549923797938,
+     "F_S1_k160": 0.0035238370528853907,
+     "F_S1_k256": 0.0077153655833754236,
+     "F_S1_k320": 0.005247901192459355,
+     "F_S1_k64": 0.08385097076514565,
+     "F_S5_k128": 0.12156353301678675,
+     "F_S5_k160": 0.0027889063373780195,
+     "F_S5_k64": 0.03153259401411977
+    },
+    "offset_intervals_s": {
+     "F_S1_k128": [
+      -0.3622255325317383,
+      0.32059764862060547
+     ],
+     "F_S1_k160": [
+      0.4103095531463623,
+      -0.1834104061126709
+     ],
+     "F_S1_k256": [
+      -16.546170473098755,
+      -0.4300074577331543
+     ],
+     "F_S1_k320": [
+      -4.9170920848846436,
+      0.40201520919799805
+     ],
+     "F_S1_k64": [
+      -0.31520724296569824,
+      0.18466877937316895
+     ],
+     "F_S5_k128": [
+      -3.368591547012329,
+      0.31100916862487793
+     ],
+     "F_S5_k160": [
+      -0.6557626724243164,
+      0.728708028793335
+     ],
+     "F_S5_k64": [
+      -0.24261903762817383,
+      0.11829948425292969
+     ]
+    }
+   },
+   "released native N": {
+    "jobs": 3,
+    "sections": 29,
+    "clock_free": {
+     "setup_a": {
+      "n": 3,
+      "strict": {
+       "ok": 1,
+       "flagged": 2,
+       "unresolved": 0,
+       "None": 0
+      },
+      "max_strict_bound_pct": 4.745762008688504,
+      "unresolved": [],
+      "low_clock": [],
+      "clock_undecided_ge_1s": [
+       "N_k128:setup_a",
+       "N_k64:setup_a"
+      ]
+     },
+     "solve": {
+      "n": 13,
+      "strict": {
+       "ok": 7,
+       "flagged": 6,
+       "unresolved": 0,
+       "None": 0
+      },
+      "max_strict_bound_pct": 4.3043593241328715,
+      "unresolved": [],
+      "low_clock": [],
+      "clock_undecided_ge_1s": [
+       "N_k64:solve2",
+       "N_k64:solve3",
+       "N_k64:solve4"
+      ]
+     },
+     "design step": {
+      "n": 13,
+      "strict": {
+       "ok": 0,
+       "flagged": 0,
+       "unresolved": 13,
+       "None": 0
+      },
+      "max_strict_bound_pct": 346.59485345974707,
+      "unresolved": [
+       "N_k128:design1 (346.6 %)",
+       "N_k128:design2 (288.4 %)",
+       "N_k128:design3 (335.3 %)",
+       "N_k128:design4 (293.3 %)",
+       "N_k160:design1 (36.5 %)",
+       "N_k160:design2 (39.1 %)",
+       "N_k160:design3 (35.7 %)",
+       "N_k160:design4 (39.1 %)",
+       "N_k64:design1 (155.5 %)",
+       "N_k64:design2 (156.6 %)",
+       "N_k64:design3 (227.2 %)",
+       "N_k64:design4 (225.5 %)",
+       "N_k64:design5 (216.5 %)"
+      ],
+      "low_clock": [],
+      "clock_undecided_ge_1s": []
+     }
+    },
+    "conditional": {
+     "jobs_with_condition_refuted": [
+      "N_k160",
+      "N_k64"
+     ],
+     "sections": 9,
+     "covered": 9,
+     "activity": {
+      "ok": 9,
+      "flagged": 0,
+      "excluded": 0,
+      "None": 0
+     },
+     "max_mean_foreign_pct": 0.06272060441884704,
+     "strict": {
+      "ok": 5,
+      "flagged": 4,
+      "unresolved": 0,
+      "None": 0
+     },
+     "low_clock": []
+    },
+    "job_window_mean_foreign_pct": {
+     "N_k128": 0.03149986095352236,
+     "N_k160": 0.0028529660734590645,
+     "N_k64": 0.03508167211092423
+    },
+    "offset_intervals_s": {
+     "N_k128": [
+      -0.49118638038635254,
+      0.029398679733276367
+     ],
+     "N_k160": [
+      0.4323568344116211,
+      0.04693484306335449
+     ],
+     "N_k64": [
+      0.2871260643005371,
+      0.21343278884887695
+     ]
+    }
+   },
+   "released record R": {
+    "jobs": 3,
+    "sections": 59,
+    "clock_free": {
+     "setup_a": {
+      "n": 3,
+      "strict": {
+       "ok": 1,
+       "flagged": 1,
+       "unresolved": 1,
+       "None": 0
+      },
+      "max_strict_bound_pct": 133.282894634813,
+      "unresolved": [
+       "R_k64:setup_a (133.3 %)"
+      ],
+      "low_clock": [],
+      "clock_undecided_ge_1s": [
+       "R_k128:setup_a",
+       "R_k160:setup_a"
+      ]
+     },
+     "solve": {
+      "n": 28,
+      "strict": {
+       "ok": 6,
+       "flagged": 18,
+       "unresolved": 4,
+       "None": 0
+      },
+      "max_strict_bound_pct": 161.08001686854988,
+      "unresolved": [
+       "R_k64:solve1 (161.1 %)",
+       "R_k64:solve2 (121.2 %)",
+       "R_k64:solve3 (135.2 %)",
+       "R_k64:solve4 (51.6 %)"
+      ],
+      "low_clock": [],
+      "clock_undecided_ge_1s": [
+       "R_k128:solve1",
+       "R_k128:solve2",
+       "R_k160:solve1",
+       "R_k160:solve2",
+       "R_k64:solve2",
+       "R_k64:solve4"
+      ]
+     },
+     "design step": {
+      "n": 28,
+      "strict": {
+       "ok": 0,
+       "flagged": 0,
+       "unresolved": 28,
+       "None": 0
+      },
+      "max_strict_bound_pct": 7577.538894645777,
+      "unresolved": [
+       "R_k128:design1 (238.1 %)",
+       "R_k128:design2 (252.3 %)",
+       "R_k128:design3 (73.7 %)",
+       "R_k128:design4 (245.9 %)",
+       "R_k160:design1 (10.8 %)",
+       "R_k160:design2 (30.8 %)",
+       "R_k160:design3 (13.0 %)",
+       "R_k160:design4 (38.7 %)",
+       "R_k64:design1 (4248.0 %)",
+       "R_k64:design2 (6774.6 %)",
+       "R_k64:design3 (5163.7 %)",
+       "R_k64:design4 (5077.7 %)",
+       "R_k64:design5 (7577.5 %)",
+       "R_k64:design6 (5290.0 %)",
+       "R_k64:design7 (5503.7 %)",
+       "R_k64:design8 (7280.7 %)",
+       "R_k64:design9 (7034.9 %)",
+       "R_k64:design10 (6544.7 %)",
+       "R_k64:design11 (6055.2 %)",
+       "R_k64:design12 (6791.1 %)",
+       "R_k64:design13 (5249.3 %)",
+       "R_k64:design14 (7323.0 %)",
+       "R_k64:design15 (4561.6 %)",
+       "R_k64:design16 (5256.1 %)",
+       "R_k64:design17 (7106.6 %)",
+       "R_k64:design18 (6983.7 %)",
+       "R_k64:design19 (7184.7 %)",
+       "R_k64:design20 (7271.6 %)"
+      ],
+      "low_clock": [],
+      "clock_undecided_ge_1s": []
+     }
+    },
+    "conditional": {
+     "jobs_with_condition_refuted": [],
+     "sections": 31,
+     "covered": 31,
+     "activity": {
+      "ok": 31,
+      "flagged": 0,
+      "excluded": 0,
+      "None": 0
+     },
+     "max_mean_foreign_pct": 0.6509467116738369,
+     "strict": {
+      "ok": 31,
+      "flagged": 0,
+      "unresolved": 0,
+      "None": 0
+     },
+     "low_clock": []
+    },
+    "job_window_mean_foreign_pct": {
+     "R_k128": 0.03289674579392541,
+     "R_k160": 0.0029693999895827067,
+     "R_k64": 0.08574948010298138
+    },
+    "offset_intervals_s": {
+     "R_k128": [
+      -1.5728886127471924,
+      0.4969186782836914
+     ],
+     "R_k160": [
+      -3.1450462341308594,
+      1.1604762077331543
+     ],
+     "R_k64": [
+      -0.36295509338378906,
+      0.21627330780029297
+     ]
+    }
+   },
+   "first_evaluation": {
+    "window": "samples received within [t0 - 5 s, t1 + 5 s]; setup (b) not evaluated",
+    "our_timed_solves": 72,
+    "with_no_sample_received_inside_the_solve": 64
+   },
+   "conditional_dropped": {
+    "record run R design steps": "record run R: the driver's design timer starts after the untimed compliance transfer and dumps and, in iterations 1-4, sums pieces separated by dumps (released/t28_driver.c:338-379), so [t_ret, t_ret + design_s] is not the timed interval; no conditional reading (D36)",
+    "sections": 28
+   },
+   "not_evaluated": {
+    "R_k256": "invalid (class 6, wall cap); its times are not results (D21, D32)",
+    "R'": "its times are not presented (it gives S_N only)"
+   }
+  },
+  "first_evaluation_superseded": "samples received within [t0 - 5 s, t1 + 5 s], setup (b) not evaluated; fix_r2/gates_before_r2.json"
+ },
+ "G5": {
+  "timing_build_solve_s_median": 0.768449068069458,
+  "timing_build_solves": [
+   0.8072140216827393,
+   0.768449068069458,
+   0.7268478870391846
+  ],
+  "plain_build_solve_s": 0.858072042,
+  "rel_diff": -0.10444691068321976,
+  "pass": false,
+  "sources": [
+   "scratch/F_S1_k64/meta.txt",
+   "scratch/N_k64/meta.txt"
+  ]
+ },
+ "G6": {
+  "R_solve_median_s": 0.9555809500000001,
+  "N_solve_median_s": 1.1138715745,
+  "R_design_median_s": 0.0238471035,
+  "N_design_median_s": 0.0199780465,
+  "solve_rel": -0.14210850525659047,
+  "design_rel": 0.19366543170274442,
+  "pass": false,
+  "consequence": "R's intervals are labelled instrumented; the released native loop times come from the native runs N (k = 64, 128 and 160)",
+  "sources": [
+   "scratch/R_k64/meta.txt",
+   "scratch/N_k64/meta.txt"
+  ]
+ }
+}

@@ -1,0 +1,402 @@
+{
+ "checks": [
+  {
+   "check": "k80 bridge 1e-3 vs 1e-5 tight compliance difference +0.003624%",
+   "recomputed": "+0.003624",
+   "pass": true
+  },
+  {
+   "check": "k80 bridge 1e-3 tight compliance 0.16309835568",
+   "recomputed": "0.16309835568",
+   "pass": true
+  },
+  {
+   "check": "k80 bridge 1e-5 tight compliance 0.16309244473",
+   "recomputed": "0.16309244473",
+   "pass": true
+  },
+  {
+   "check": "k80 bridge tight residuals 7.62e-11 / 8.82e-11",
+   "recomputed": "7.62e-11 / 8.82e-11",
+   "pass": true
+  },
+  {
+   "check": "k80 bridge 1e-3 mean |drho| 8.98547e-5 (8.985e-5)",
+   "recomputed": "8.98547e-05",
+   "pass": true
+  },
+  {
+   "check": "k80 bridge 1e-3 strict >0.5 crossings 92",
+   "recomputed": 92,
+   "pass": true
+  },
+  {
+   "check": "k80 bridge Krylov 593 vs 1510, design its 77 vs 82",
+   "recomputed": "593 vs 1510, 77 vs 82",
+   "pass": true
+  },
+  {
+   "check": "k80 bridge solve+setup 5.4 vs 10.4 s",
+   "recomputed": "5.4 vs 10.4",
+   "pass": true
+  },
+  {
+   "check": "k80 cantilever 1e-6 vs 1e-5: 3914 changed entries, mean 6.11e-09, 0 crossings",
+   "recomputed": "3914, 6.11e-09, 0",
+   "pass": true
+  },
+  {
+   "check": "k80 bridge 1e-6 vs 1e-5: 2724 changed entries, mean 3.40e-09, 0 crossings",
+   "recomputed": "2724, 3.40e-09, 0",
+   "pass": true
+  },
+  {
+   "check": "k80 torsion 1e-6 vs 1e-5: 4449 changed entries, mean 1.25e-09, 0 crossings",
+   "recomputed": "4449, 1.25e-09, 0",
+   "pass": true
+  },
+  {
+   "check": "k80 bridge 1e-3 vs 1e-5: pre-storage mean |drho| lies in [8.98285e-5, 1.38696e-4] (rounded outward), departure at most 4.885e-5 and below the stored mean",
+   "recomputed": "[8.982858e-05, 1.386958e-04], 4.88411e-05",
+   "pass": true
+  },
+  {
+   "check": "k80 all 12 pre-storage ranges are attained by FP32 fields that round to the stored ones (gap <= 1.2e-7)",
+   "recomputed": 4.660108629821365e-13,
+   "pass": true
+  },
+  {
+   "check": "k80 the three 1e-5 baseline rows (run against itself): stored mean, pre-storage range and departure all exactly 0",
+   "recomputed": [
+    [
+     "cantilever",
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     "bridge",
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     "torsion",
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "pass": true
+  },
+  {
+   "check": "k80 all 12 crossing counts equal those of the FP32 fields before the FP16 cast (no stored entry equals 0.5)",
+   "recomputed": 12,
+   "pass": true
+  },
+  {
+   "check": "k160 it67 2-norm error 0.169616",
+   "recomputed": "0.169616",
+   "pass": true
+  },
+  {
+   "check": "k160 it67 top-ten share 95.24%",
+   "recomputed": "95.24",
+   "pass": true
+  },
+  {
+   "check": "k160 it67 intermediate (75 elements) share 88.07%",
+   "recomputed": "75, 88.07",
+   "pass": true
+  },
+  {
+   "check": "k160 it67 median rel. error top 100 by |error| 17.96%",
+   "recomputed": "17.96",
+   "pass": true
+  },
+  {
+   "check": "k160 it67 median rel. error 75 intermediate 0.32%",
+   "recomputed": "0.32",
+   "pass": true
+  },
+  {
+   "check": "k160 other six snapshots 8.60e-6 to 3.95e-3",
+   "recomputed": "8.60e-06 to 3.95e-03",
+   "pass": true
+  },
+  {
+   "check": "k160 it66 solid share exceeds intermediate share",
+   "recomputed": "43.3 vs 40.4",
+   "pass": true
+  },
+  {
+   "check": "k160 it67 OC update identical (audit record)",
+   "recomputed": 0.0,
+   "pass": true
+  },
+  {
+   "check": "k160 recomputed 2-norm errors equal the dump-run audit records (rel. 1e-6)",
+   "recomputed": {
+    "50": 1.0139100559136693e-07,
+    "60": -1.9681546059580057e-08,
+    "65": -4.458408886520715e-08,
+    "66": 1.5100507733123436e-08,
+    "67": 8.923031424856731e-08,
+    "70": 7.891395670256429e-08,
+    "76": 5.8809553449279406e-08
+   },
+   "pass": true
+  },
+  {
+   "check": "submitted Table S24: all 12 rows reproduced cell by cell",
+   "recomputed": [],
+   "pass": true
+  }
+ ],
+ "printed_table": [
+  {
+   "row": "cantilever 1e-03",
+   "printed": [
+    "76",
+    "198",
+    "3.3",
+    "+0.0008\\%",
+    "$2.3\\times10^{-5}$",
+    "23"
+   ],
+   "recomputed": [
+    "76",
+    "198",
+    "3.3",
+    "+0.0008\\%",
+    "$2.3\\times10^{-5}$",
+    "23"
+   ],
+   "match": true
+  },
+  {
+   "row": "cantilever 1e-04",
+   "printed": [
+    "79",
+    "361",
+    "4.3",
+    "-0.0001\\%",
+    "$9.8\\times10^{-6}$",
+    "10"
+   ],
+   "recomputed": [
+    "79",
+    "361",
+    "4.3",
+    "-0.0001\\%",
+    "$9.8\\times10^{-6}$",
+    "10"
+   ],
+   "match": true
+  },
+  {
+   "row": "cantilever 1e-05",
+   "printed": [
+    "76",
+    "543",
+    "5.3",
+    "--",
+    "--",
+    "--"
+   ],
+   "recomputed": [
+    "76",
+    "543",
+    "5.3",
+    "--",
+    "--",
+    "--"
+   ],
+   "match": true
+  },
+  {
+   "row": "cantilever 1e-06",
+   "printed": [
+    "76",
+    "780",
+    "6.4",
+    "+0.0000\\%",
+    "$6.1\\times10^{-9}$",
+    "0"
+   ],
+   "recomputed": [
+    "76",
+    "780",
+    "6.4",
+    "+0.0000\\%",
+    "$6.1\\times10^{-9}$",
+    "0"
+   ],
+   "match": true
+  },
+  {
+   "row": "bridge 1e-03",
+   "printed": [
+    "77",
+    "593",
+    "5.4",
+    "+0.0036\\%",
+    "$9.0\\times10^{-5}$",
+    "92"
+   ],
+   "recomputed": [
+    "77",
+    "593",
+    "5.4",
+    "+0.0036\\%",
+    "$9.0\\times10^{-5}$",
+    "92"
+   ],
+   "match": true
+  },
+  {
+   "row": "bridge 1e-04",
+   "printed": [
+    "77",
+    "973",
+    "7.5",
+    "-0.0008\\%",
+    "$7.8\\times10^{-6}$",
+    "8"
+   ],
+   "recomputed": [
+    "77",
+    "973",
+    "7.5",
+    "-0.0008\\%",
+    "$7.8\\times10^{-6}$",
+    "8"
+   ],
+   "match": true
+  },
+  {
+   "row": "bridge 1e-05",
+   "printed": [
+    "82",
+    "1510",
+    "10.4",
+    "--",
+    "--",
+    "--"
+   ],
+   "recomputed": [
+    "82",
+    "1510",
+    "10.4",
+    "--",
+    "--",
+    "--"
+   ],
+   "match": true
+  },
+  {
+   "row": "bridge 1e-06",
+   "printed": [
+    "82",
+    "2099",
+    "13.5",
+    "+0.0000\\%",
+    "$3.4\\times10^{-9}$",
+    "0"
+   ],
+   "recomputed": [
+    "82",
+    "2099",
+    "13.5",
+    "+0.0000\\%",
+    "$3.4\\times10^{-9}$",
+    "0"
+   ],
+   "match": true
+  },
+  {
+   "row": "torsion 1e-03",
+   "printed": [
+    "76",
+    "189",
+    "3.3",
+    "-0.0006\\%",
+    "$5.1\\times10^{-5}$",
+    "52"
+   ],
+   "recomputed": [
+    "76",
+    "189",
+    "3.3",
+    "-0.0006\\%",
+    "$5.1\\times10^{-5}$",
+    "52"
+   ],
+   "match": true
+  },
+  {
+   "row": "torsion 1e-04",
+   "printed": [
+    "76",
+    "355",
+    "4.2",
+    "+0.0004\\%",
+    "$7.8\\times10^{-6}$",
+    "8"
+   ],
+   "recomputed": [
+    "76",
+    "355",
+    "4.2",
+    "+0.0004\\%",
+    "$7.8\\times10^{-6}$",
+    "8"
+   ],
+   "match": true
+  },
+  {
+   "row": "torsion 1e-05",
+   "printed": [
+    "77",
+    "569",
+    "5.2",
+    "--",
+    "--",
+    "--"
+   ],
+   "recomputed": [
+    "77",
+    "569",
+    "5.2",
+    "--",
+    "--",
+    "--"
+   ],
+   "match": true
+  },
+  {
+   "row": "torsion 1e-06",
+   "printed": [
+    "77",
+    "831",
+    "6.9",
+    "-0.0000\\%",
+    "$1.3\\times10^{-9}$",
+    "0"
+   ],
+   "recomputed": [
+    "77",
+    "831",
+    "6.9",
+    "-0.0000\\%",
+    "$1.3\\times10^{-9}$",
+    "0"
+   ],
+   "match": true
+  }
+ ],
+ "all_pass": true
+}

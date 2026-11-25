@@ -1,0 +1,121 @@
+{
+ "p2_u32_rotation_physical_force_by_axis": {
+  "rot_x": {
+   "n_node_layout_cases": 108,
+   "n_nonzero": 0,
+   "max_abs": 0.0
+  },
+  "rot_y": {
+   "n_node_layout_cases": 108,
+   "n_nonzero": 108,
+   "max_abs": 2.2924863375150242e-08
+  },
+  "rot_z": {
+   "n_node_layout_cases": 108,
+   "n_nonzero": 108,
+   "max_abs": 2.2924863375150242e-08
+  }
+ },
+ "p2_u32_rotation_physical_force_total": {
+  "n_node_layout_cases": 324,
+  "n_nonzero": 216,
+  "max_abs": 2.2924863375150242e-08
+ },
+ "p2_rot_x_u32": {
+  "second_differences_all_exactly_zero": true,
+  "gradient_from_least_squares": [
+   [
+    0.0,
+    5.637851296924623e-18,
+    -1.3010426069826053e-17
+   ],
+   [
+    0.0,
+    3.903127820947816e-18,
+    0.005781248211860643
+   ],
+   [
+    0.0,
+    -0.0057812482118606515,
+    -1.4094628242311558e-17
+   ]
+  ],
+  "note": "u_x = 0; u_y depends on z only and u_z on y only; zero second differences mean the represented field is affine along each line"
+ },
+ "interface_centre_g_xx_P0_difference_form": {
+  "physical_force_x_exact": 2.355769230769231,
+  "rounded_action_x_coef64": 2.355769272893667,
+  "excess_x_exact": 4.212443645183857e-08,
+  "rounded_action_x_exact_as_physical_plus_excess": 2.355769272893667
+ },
+ "inversion_pair_weights_mean_reference_centre": {
+  "pairs_element_ids": {
+   "0": 7,
+   "1": 6,
+   "2": 5,
+   "3": 4,
+   "4": 3,
+   "5": 2,
+   "6": 1,
+   "7": 0
+  },
+  "weights": {
+   "0": "1",
+   "1": "1/8",
+   "2": "7/10",
+   "3": "3/1000",
+   "4": "3/1000",
+   "5": "7/10",
+   "6": "1/8",
+   "7": "1"
+  },
+  "assembled_mean_reference_force_Q_exact_rational_by_gradient": {
+   "g_xx": [
+    "0",
+    "0",
+    "0"
+   ],
+   "g_xy": [
+    "0",
+    "0",
+    "0"
+   ],
+   "g_xz": [
+    "0",
+    "0",
+    "0"
+   ],
+   "g_yx": [
+    "0",
+    "0",
+    "0"
+   ],
+   "g_yy": [
+    "0",
+    "0",
+    "0"
+   ],
+   "g_yz": [
+    "0",
+    "0",
+    "0"
+   ],
+   "g_zx": [
+    "0",
+    "0",
+    "0"
+   ],
+   "g_zy": [
+    "0",
+    "0",
+    "0"
+   ],
+   "g_zz": [
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  "all_exactly_zero": true
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "passed": true,
+ "cases": {
+  "1a_first_acquire": {
+   "ok": true,
+   "pass": true
+  },
+  "1b_existing_lock_refuses_names_owner": {
+   "ok": false,
+   "reason": "lock exists, owner: {\"task\": \"selftest-owner\", \"pid\": 12345}",
+   "pass": true
+  },
+  "1c_lock_in_other_task_refuses": {
+   "ok": false,
+   "reason": "lock held in another task folder: ['<temp>\\\\tmpd10_a9fc\\\\T99\\\\gpu_job.lock']",
+   "pass": true
+  },
+  "2_empty_baseline_refuses": {
+   "pass": true
+  },
+  "3_unrelated_pid_only": {
+   "state": {
+    "go": true,
+    "base_sh": 100000000.0,
+    "stop": "child missing from sample or counter missing",
+    "covered": false
+   },
+   "pass": true
+  },
+  "4a_missing_shared_counter": {
+   "state": {
+    "go": true,
+    "base_sh": 100000000.0,
+    "stop": "child missing from sample or counter missing",
+    "covered": false
+   },
+   "pass": true
+  },
+  "4b_missing_dedicated_counter": {
+   "state": {
+    "go": true,
+    "base_sh": 100000000.0,
+    "stop": "child missing from sample or counter missing",
+    "covered": false
+   },
+   "pass": true
+  },
+  "5_empty_sample_after_go": {
+   "state": {
+    "go": true,
+    "base_sh": 100000000.0,
+    "stop": "empty sample",
+    "covered": false
+   },
+   "pass": true
+  },
+  "6_spill": {
+   "state": {
+    "go": true,
+    "base_sh": 100000000.0,
+    "stop": "refused_for_memory: shared growth above 256 MiB",
+    "covered": true
+   },
+   "pass": true
+  },
+  "7_complete_sample_ok": {
+   "state": {
+    "go": true,
+    "base_sh": 100000000.0,
+    "stop": null,
+    "covered": true
+   },
+   "pass": true
+  },
+  "8_empty_first_sample": {
+   "state": {
+    "go": false,
+    "base_sh": null,
+    "stop": "empty sample",
+    "covered": false
+   },
+   "pass": true
+  }
+ }
+}

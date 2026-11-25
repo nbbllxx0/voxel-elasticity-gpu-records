@@ -1,0 +1,2078 @@
+{
+ "tolerance": 1e-12,
+ "definitions": {
+  "explicit_action_rel": "||y_gpu - A_cpu x|| / ||A_cpu x|| on the free DOFs, A_cpu the independent CPU assembly",
+  "dot_rel": "|<y, A x> - <A^T y, x>| / (||y|| ||A x||), A x and A^T y both from the GPU actions",
+  "matrix_max_rel": "max |G - A_cpu| / max |A_cpu| over the free-DOF matrix, G from the GPU action on every unit vector",
+  "ordinary_vectors": "three uniform random fields in [-1, 1] and one smooth field, zero on the clamped DOFs"
+ },
+ "coefficient_emulation": {
+  "orders_identified_on": "s22 (kernel coefficients read from the forward basis columns)",
+  "n_expressions_multigroup": 107,
+  "n_expressions_single_group": 33,
+  "unmatched_on_s22": [],
+  "unique_match_on_s22": 107,
+  "orders_from_asym_identical": true,
+  "order_counts": {
+   "k1": 48,
+   "k1-f": 6,
+   "n-f": 1,
+   "k1-f-f": 7,
+   "k2-f": 6,
+   "k2-f-f": 10,
+   "k2": 25,
+   "k2-n": 1,
+   "k2-f-f-f": 1,
+   "k1-n": 2
+  },
+  "identification_layout": {
+   "s22": {
+    "coefficients_compared": 258750,
+    "coefficients_differing": 0
+   }
+  },
+  "held_out": {
+   "beam4_uniform": {
+    "coefficients_compared": 142974,
+    "coefficients_differing": 0
+   },
+   "beam4_interface": {
+    "coefficients_compared": 142974,
+    "coefficients_differing": 0
+   },
+   "beam4_voids": {
+    "coefficients_compared": 142974,
+    "coefficients_differing": 0
+   },
+   "asym": {
+    "coefficients_compared": 29952,
+    "coefficients_differing": 0
+   },
+   "roller": {
+    "coefficients_compared": 21240,
+    "coefficients_differing": 0
+   }
+  },
+  "held_out_total": {
+   "coefficients_compared": 480114,
+   "coefficients_differing": 0,
+   "note": "the orders were identified on s22; asym also served the independent cross-identification of the orders (orders_from_asym_identical) and is counted here as held out from s22"
+  }
+ },
+ "layouts": {
+  "s22": {
+   "grid": [
+    16,
+    8,
+    8
+   ],
+   "n_free": 3888,
+   "forms": {
+    "ref": {
+     "matrix_fwd_max_rel": 2.3617471614753327e-16,
+     "matrix_T_max_rel": 2.3617471614753327e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 3.0423751933092047e-16,
+       "T_rel": 2.9936030132516493e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 3.1138873210792824e-16,
+       "T_rel": 3.0247859921989165e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 3.1087575047279985e-16,
+       "T_rel": 3.2366022842114714e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 1.0511256054498154e-15,
+       "T_rel": 1.0332972261623536e-15,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 3.0355105812189807e-18,
+      "random2^T A random0": 7.592924513959038e-19,
+      "smooth^T A random0": 1.822573820062102e-18,
+      "random0^T A random1": 1.0108716924139563e-17,
+      "random2^T A random1": 0.0,
+      "smooth^T A random1": 3.0212486218974444e-17,
+      "random0^T A random2": 1.1301089556468436e-18,
+      "random1^T A random2": 6.043650329493127e-18,
+      "smooth^T A random2": 1.9050746986535892e-17,
+      "random0^T A smooth": 0.0,
+      "random1^T A smooth": 1.698611878774025e-16,
+      "random2^T A smooth": 7.844032375469056e-17
+     },
+     "max_action_rel": 1.0511256054498154e-15,
+     "max_dot_rel": 1.698611878774025e-16,
+     "pass": true
+    },
+    "atomic": {
+     "matrix_fwd_max_rel": 1.180873576258586e-16,
+     "matrix_T_max_rel": 1.180873576258586e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 1.180873576258586e-16,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.9496892340575346e-16,
+       "T_rel": 2.9475663367136353e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.796467579064498e-16,
+       "T_rel": 2.813923534378525e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 3.002973146696754e-16,
+       "T_rel": 2.9455049934954906e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 7.293097964121667e-16,
+       "T_rel": 7.259434773351471e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.8213063346554874e-17,
+      "random2^T A random0": 1.3667264019499306e-17,
+      "smooth^T A random0": 7.745938675399723e-18,
+      "random0^T A random1": 2.7437945728623017e-17,
+      "random2^T A random1": 5.79529556690389e-18,
+      "smooth^T A random1": 8.259528543914243e-18,
+      "random0^T A random2": 1.4691416312340696e-17,
+      "random1^T A random2": 3.0218251419013262e-18,
+      "smooth^T A random2": 3.1751244737517902e-18,
+      "random0^T A smooth": 7.384110675026882e-17,
+      "random1^T A smooth": 1.3066245548726303e-17,
+      "random2^T A smooth": 1.743118349335337e-17
+     },
+     "max_action_rel": 7.293097964121667e-16,
+     "max_dot_rel": 7.384110675026882e-17,
+     "pass": true
+    },
+    "corner": {
+     "matrix_fwd_max_rel": 1.1808735736266264e-16,
+     "matrix_T_max_rel": 1.7713103604399397e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 1.1808735736266264e-16,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.9181907989519627e-16,
+       "T_rel": 3.005891895712821e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.934921559314967e-16,
+       "T_rel": 2.8424279020228657e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.745639525470998e-16,
+       "T_rel": 3.014615225147819e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 6.549648776789118e-16,
+       "T_rel": 7.444437728096215e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 3.794388191531771e-17,
+      "random2^T A random0": 6.833631999543187e-18,
+      "smooth^T A random0": 4.556434508135687e-19,
+      "random0^T A random1": 1.0108716836834587e-17,
+      "random2^T A random1": 2.0283534462988924e-17,
+      "smooth^T A random1": 1.8692617211449942e-17,
+      "random0^T A random2": 7.91076262028847e-18,
+      "random1^T A random2": 1.813095082978712e-17,
+      "smooth^T A random2": 8.164605779911313e-18,
+      "random0^T A smooth": 4.343594382435808e-18,
+      "random1^T A smooth": 2.9399051589274425e-17,
+      "random2^T A smooth": 2.178897870309974e-17
+     },
+     "max_action_rel": 7.444437728096215e-16,
+     "max_dot_rel": 3.794388191531771e-17,
+     "pass": true
+    },
+    "mean": {
+     "matrix_fwd_max_rel": 2.361747147253253e-16,
+     "matrix_T_max_rel": 2.361747147253253e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 2.361747147253253e-16,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.9359151021242937e-16,
+       "T_rel": 2.941102520765403e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.832433885016987e-16,
+       "T_rel": 2.9067075122258305e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.8473344647429294e-16,
+       "T_rel": 2.8137268764805996e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 6.599556828007829e-16,
+       "T_rel": 7.368945693939006e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.6695308043587936e-17,
+      "random2^T A random0": 1.9741603555238774e-17,
+      "smooth^T A random0": 1.8225738033468643e-18,
+      "random0^T A random1": 1.4441024051288898e-17,
+      "random2^T A random1": 1.448823890079865e-17,
+      "smooth^T A random1": 1.8692617209725862e-17,
+      "random0^T A random2": 1.3561307348441523e-17,
+      "random1^T A random2": 3.7772814226983933e-17,
+      "smooth^T A random2": 1.4514854719174003e-17,
+      "random0^T A smooth": 3.2576957680749977e-17,
+      "random1^T A smooth": 6.968664040307773e-17,
+      "random2^T A smooth": 1.7431182862142894e-17
+     },
+     "max_action_rel": 7.368945693939006e-16,
+     "max_dot_rel": 6.968664040307773e-17,
+     "pass": true
+    },
+    "stencil": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.7403167200046575e-16,
+       "T_rel": 2.8592732278051083e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.6013482323591573e-16,
+       "T_rel": 2.8577701149760784e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.8081356016348893e-16,
+       "T_rel": 2.976764076807458e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 6.523622235475617e-16,
+       "T_rel": 6.761093874129817e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.5177552802323504e-17,
+      "random2^T A random0": 1.1769032916169713e-17,
+      "smooth^T A random0": 5.012077970902387e-18,
+      "random0^T A random1": 2.8882048132742536e-17,
+      "random2^T A random1": 0.0,
+      "smooth^T A random1": 4.564476300165367e-18,
+      "random0^T A random2": 7.534059652677816e-18,
+      "random1^T A random2": 1.510912572018283e-18,
+      "smooth^T A random2": 7.257427373703661e-18,
+      "random0^T A smooth": 8.687189052945642e-18,
+      "random1^T A smooth": 1.5243953181421556e-17,
+      "random2^T A smooth": 8.715591770255776e-18
+     },
+     "max_action_rel": 6.761093874129817e-16,
+     "max_dot_rel": 2.8882048132742536e-17,
+     "pass": true,
+     "equals_e29_basis_columns_of_production_kernel": true
+    },
+    "diff": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.8760761227900495e-16,
+       "T_rel": 3.149532172771501e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 3.0986459584878927e-16,
+       "T_rel": 3.3634528103319927e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.8946949152702487e-16,
+       "T_rel": 3.247988094714389e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 6.153666274536781e-16,
+       "T_rel": 9.671762794895095e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.66953078426486e-17,
+      "random2^T A random0": 4.9354008294088e-18,
+      "smooth^T A random0": 6.834651680291078e-18,
+      "random0^T A random1": 1.4441023880316232e-17,
+      "random2^T A random1": 2.1732358093900488e-17,
+      "smooth^T A random1": 1.34760727125797e-17,
+      "random0^T A random2": 6.027247634711338e-18,
+      "random1^T A random2": 0.0,
+      "smooth^T A random2": 9.97896249408827e-18,
+      "random0^T A smooth": 1.3030782925543182e-17,
+      "random1^T A smooth": 1.0888537440350734e-18,
+      "random2^T A smooth": 3.050456966519793e-17
+     },
+     "max_action_rel": 9.671762794895095e-16,
+     "max_dot_rel": 3.050456966519793e-17,
+     "pass": true,
+     "equals_e29_basis_columns_of_production_kernel": true
+    }
+   }
+  },
+  "beam4_uniform": {
+   "grid": [
+    32,
+    4,
+    4
+   ],
+   "n_free": 2400,
+   "forms": {
+    "ref": {
+     "matrix_fwd_max_rel": 1.1808735807376663e-16,
+     "matrix_T_max_rel": 1.1808735807376663e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.737735637509076e-16,
+       "T_rel": 2.8381447557443165e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.8715330017275486e-16,
+       "T_rel": 2.906118494104194e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.9272720353802936e-16,
+       "T_rel": 2.9268470296012215e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 4.642337756960495e-16,
+       "T_rel": 4.653601753643341e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 2.9857857637556503e-18,
+      "random2^T A random0": 6.0459795928337746e-18,
+      "smooth^T A random0": 1.5273262320534364e-17,
+      "random0^T A random1": 0.0,
+      "random2^T A random1": 1.1349197942201712e-17,
+      "smooth^T A random1": 0.0,
+      "random0^T A random2": 8.82360921803045e-18,
+      "random1^T A random2": 2.1347647321382107e-17,
+      "smooth^T A random2": 3.651415273009143e-18,
+      "random0^T A smooth": 2.5134896344173048e-17,
+      "random1^T A smooth": 1.2078286797707831e-17,
+      "random2^T A smooth": 8.152524580718862e-18
+     },
+     "max_action_rel": 4.653601753643341e-16,
+     "max_dot_rel": 2.5134896344173048e-17,
+     "pass": true
+    },
+    "atomic": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.68584893528998e-16,
+       "T_rel": 2.666133638800838e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.8060824237072686e-16,
+       "T_rel": 2.8511707965068536e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.663267920447144e-16,
+       "T_rel": 2.667283424796024e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.0282526041914157e-16,
+       "T_rel": 3.0346838616878093e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 2.985785742061397e-18,
+      "random2^T A random0": 3.022989774452315e-18,
+      "smooth^T A random0": 5.553913530749535e-18,
+      "random0^T A random1": 0.0,
+      "random2^T A random1": 9.835971474434571e-18,
+      "smooth^T A random1": 1.8534252727293e-18,
+      "random0^T A random2": 8.82360914640465e-18,
+      "random1^T A random2": 1.3250263747091716e-17,
+      "smooth^T A random2": 1.2779953351790508e-17,
+      "random0^T A smooth": 1.608633370876073e-17,
+      "random1^T A smooth": 8.05219122274408e-18,
+      "random2^T A smooth": 3.6686360723820735e-17
+     },
+     "max_action_rel": 3.0346838616878093e-16,
+     "max_dot_rel": 3.6686360723820735e-17,
+     "pass": true
+    },
+    "corner": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.7477043620016583e-16,
+       "T_rel": 2.9232821972046875e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.7942484797124325e-16,
+       "T_rel": 2.894902409180827e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.6926013741394374e-16,
+       "T_rel": 2.7517113357688377e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 2.9432748599157967e-16,
+       "T_rel": 3.086592297359217e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 5.9715714770355995e-18,
+      "random2^T A random0": 1.511494885432282e-17,
+      "smooth^T A random0": 9.719348667276549e-18,
+      "random0^T A random1": 5.9717120002710884e-18,
+      "random2^T A random1": 1.513226378967339e-17,
+      "smooth^T A random1": 7.413701082515432e-18,
+      "random0^T A random2": 5.882406089689386e-18,
+      "random1^T A random2": 7.361257627369934e-18,
+      "smooth^T A random2": 9.128538096140993e-18,
+      "random0^T A smooth": 5.831295886596283e-17,
+      "random1^T A smooth": 2.818266887928917e-17,
+      "random2^T A smooth": 1.2228786734238877e-17
+     },
+     "max_action_rel": 3.086592297359217e-16,
+     "max_dot_rel": 5.831295886596283e-17,
+     "pass": true
+    },
+    "mean": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.6880822488744823e-16,
+       "T_rel": 2.740811156314755e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.820358110497214e-16,
+       "T_rel": 2.7859937063747613e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.694546471587021e-16,
+       "T_rel": 2.765717482727984e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 2.9938975002632835e-16,
+       "T_rel": 3.109180480840381e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.1943142953220624e-17,
+      "random2^T A random0": 6.045979541298539e-18,
+      "smooth^T A random0": 1.851304507920828e-18,
+      "random0^T A random1": 1.4929279999573584e-17,
+      "random2^T A random1": 8.322745083704834e-18,
+      "smooth^T A random1": 5.560275811475349e-18,
+      "random0^T A random2": 2.9412030449604608e-18,
+      "random1^T A random2": 1.1041886441489519e-17,
+      "smooth^T A random2": 1.82570761930006e-18,
+      "random0^T A smooth": 4.2226625377331493e-17,
+      "random1^T A smooth": 1.2078286660159611e-17,
+      "random2^T A smooth": 4.076262243938724e-18
+     },
+     "max_action_rel": 3.109180480840381e-16,
+     "max_dot_rel": 4.2226625377331493e-17,
+     "pass": true
+    },
+    "stencil": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.6216957849035443e-16,
+       "T_rel": 3.0965641676995725e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.618761936026263e-16,
+       "T_rel": 3.056568111568716e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.4706184302708163e-16,
+       "T_rel": 2.7290530813898866e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 2.425306352009997e-16,
+       "T_rel": 2.8222682751539376e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 2.0900500194429778e-17,
+      "random2^T A random0": 2.1160928421166204e-17,
+      "smooth^T A random0": 1.527326220956122e-17,
+      "random0^T A random1": 2.9858560035193423e-18,
+      "random2^T A random1": 1.2862424235799055e-17,
+      "smooth^T A random1": 5.5602758181879e-18,
+      "random0^T A random2": 1.4706015244007752e-17,
+      "random1^T A random2": 1.7667018329455623e-17,
+      "smooth^T A random2": 1.4605660973474868e-17,
+      "random0^T A smooth": 2.0107917135950914e-18,
+      "random1^T A smooth": 1.2078286834116121e-17,
+      "random2^T A smooth": 2.4457573815880492e-17
+     },
+     "max_action_rel": 3.0965641676995725e-16,
+     "max_dot_rel": 2.4457573815880492e-17,
+     "pass": true
+    },
+    "diff": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.8473526908564496e-16,
+       "T_rel": 3.1458848048459127e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.889840699121694e-16,
+       "T_rel": 3.3675471753865427e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.9311713646952627e-16,
+       "T_rel": 3.2340526116549133e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.1109658127003203e-16,
+       "T_rel": 4.4046113152655694e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.1943142805272067e-17,
+      "random2^T A random0": 3.022989733201257e-18,
+      "smooth^T A random0": 7.405217939949394e-18,
+      "random0^T A random1": 2.3886847702357865e-17,
+      "random2^T A random1": 1.2105810880344673e-17,
+      "smooth^T A random1": 1.2973976732150773e-17,
+      "random0^T A random2": 2.94120300987337e-18,
+      "random1^T A random2": 1.0305760555780944e-17,
+      "smooth^T A random2": 1.095424558512165e-17,
+      "random0^T A smooth": 1.0053958333040018e-18,
+      "random1^T A smooth": 1.2078286551877278e-17,
+      "random2^T A smooth": 4.076262207394867e-18
+     },
+     "max_action_rel": 4.4046113152655694e-16,
+     "max_dot_rel": 2.3886847702357865e-17,
+     "pass": true
+    }
+   }
+  },
+  "beam4_interface": {
+   "grid": [
+    32,
+    4,
+    4
+   ],
+   "n_free": 2400,
+   "forms": {
+    "ref": {
+     "matrix_fwd_max_rel": 1.1808735807376663e-16,
+     "matrix_T_max_rel": 1.1808735807376663e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.7374170505195293e-16,
+       "T_rel": 2.826998803290293e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.813089656810507e-16,
+       "T_rel": 2.771515056914404e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.834973050151764e-16,
+       "T_rel": 2.798976306604105e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 4.809009094466428e-16,
+       "T_rel": 4.755495197188719e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.632261229718614e-17,
+      "random2^T A random0": 2.4238130824906112e-17,
+      "smooth^T A random0": 3.7783801630337225e-17,
+      "random0^T A random1": 1.5336748405091958e-17,
+      "random2^T A random1": 2.442828501004026e-17,
+      "smooth^T A random1": 8.160048210721449e-18,
+      "random0^T A random2": 2.477861274072211e-17,
+      "random1^T A random2": 4.341122475277547e-17,
+      "smooth^T A random2": 2.563491955779501e-18,
+      "random0^T A smooth": 7.646143912954825e-17,
+      "random1^T A smooth": 1.1340330110784002e-17,
+      "random2^T A smooth": 1.7222452442357196e-17
+     },
+     "max_action_rel": 4.809009094466428e-16,
+     "max_dot_rel": 7.646143912954825e-17,
+     "pass": true
+    },
+    "atomic": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.7279202114055933e-16,
+       "T_rel": 2.6953231437708623e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.670539928858588e-16,
+       "T_rel": 2.697630466749076e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.6671157181706774e-16,
+       "T_rel": 2.669990810703566e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.1360506990581216e-16,
+       "T_rel": 3.146082273812117e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 2.7204353633517106e-17,
+      "random2^T A random0": 2.2034664228232043e-18,
+      "smooth^T A random0": 8.096528862713234e-18,
+      "random0^T A random1": 2.7387050522020052e-17,
+      "random2^T A random1": 3.331129749604857e-18,
+      "smooth^T A random1": 1.3600080251210228e-17,
+      "random0^T A random2": 8.259537511213337e-18,
+      "random1^T A random2": 5.168002903568475e-18,
+      "smooth^T A random2": 5.126983868711301e-18,
+      "random0^T A smooth": 1.6991430967971793e-17,
+      "random1^T A smooth": 2.2680660288702452e-17,
+      "random2^T A smooth": 5.740817497778475e-18
+     },
+     "max_action_rel": 3.146082273812117e-16,
+     "max_dot_rel": 2.7387050522020052e-17,
+     "pass": true
+    },
+    "corner": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.7925040361592907e-16,
+       "T_rel": 3.012620388352542e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.692529117134135e-16,
+       "T_rel": 2.652942888449155e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.742340884605389e-16,
+       "T_rel": 2.6555178559412203e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 2.8945895537327825e-16,
+       "T_rel": 3.160834014579485e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 4.352696575784042e-17,
+      "random2^T A random0": 1.7627731359992803e-17,
+      "smooth^T A random0": 1.3494214753893674e-17,
+      "random0^T A random1": 1.2050302212178092e-17,
+      "random2^T A random1": 2.109715505017372e-17,
+      "smooth^T A random1": 2.7200160462894917e-18,
+      "random0^T A random2": 8.25953749983254e-18,
+      "random1^T A random2": 1.6537609268631988e-17,
+      "smooth^T A random2": 1.0253967723293684e-17,
+      "random0^T A smooth": 9.345286903378424e-17,
+      "random1^T A smooth": 5.670164993902397e-18,
+      "random2^T A smooth": 3.444490451117966e-17
+     },
+     "max_action_rel": 3.160834014579485e-16,
+     "max_dot_rel": 9.345286903378424e-17,
+     "pass": true
+    },
+    "mean": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.7478940670424305e-16,
+       "T_rel": 2.7265275814048455e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.758531532050025e-16,
+       "T_rel": 2.815411918476796e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.7065573825547944e-16,
+       "T_rel": 2.698809588618527e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 2.9485499101773715e-16,
+       "T_rel": 3.100131678323661e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 8.705393150995333e-18,
+      "random2^T A random0": 1.101733209927064e-17,
+      "smooth^T A random0": 1.2144793277705267e-17,
+      "random0^T A random1": 7.668374135894734e-18,
+      "random2^T A random1": 1.1103765817144009e-18,
+      "smooth^T A random1": 8.160048139796718e-18,
+      "random0^T A random2": 1.238930624989805e-17,
+      "random1^T A random2": 8.2688046344156e-18,
+      "smooth^T A random2": 5.126983861708602e-18,
+      "random0^T A smooth": 2.5487146085984975e-17,
+      "random1^T A smooth": 1.7010494972271282e-17,
+      "random2^T A smooth": 5.740817415345451e-18
+     },
+     "max_action_rel": 3.100131678323661e-16,
+     "max_dot_rel": 2.5487146085984975e-17,
+     "pass": true
+    },
+    "stencil": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.7101886488671674e-16,
+       "T_rel": 3.146392374211847e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.508169812283188e-16,
+       "T_rel": 2.839655135102395e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.365980163423606e-16,
+       "T_rel": 2.740390473497864e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 2.4305134079052686e-16,
+       "T_rel": 2.8120767890964436e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 3.9174269244010367e-17,
+      "random2^T A random0": 8.813865693935504e-18,
+      "smooth^T A random0": 2.0241322162852102e-17,
+      "random0^T A random1": 2.4100604468381994e-17,
+      "random2^T A random1": 3.6642427259343593e-17,
+      "smooth^T A random1": 8.160048153774853e-18,
+      "random0^T A random2": 1.4454190648382235e-17,
+      "random1^T A random2": 2.0672011619649774e-17,
+      "smooth^T A random2": 1.0253967740089206e-17,
+      "random0^T A smooth": 2.2655241301471545e-17,
+      "random1^T A smooth": 1.701049522466783e-17,
+      "random2^T A smooth": 5.740817500525951e-18
+     },
+     "max_action_rel": 3.146392374211847e-16,
+     "max_dot_rel": 3.9174269244010367e-17,
+     "pass": true
+    },
+    "diff": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.772869192644443e-16,
+       "T_rel": 3.0176895567923824e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.8192121160010967e-16,
+       "T_rel": 3.2740218512271605e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 3.030054247827454e-16,
+       "T_rel": 3.363694676906297e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.19583043946754e-16,
+       "T_rel": 4.1185909368508327e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 2.1763482598973127e-17,
+      "random2^T A random0": 1.762773113324454e-17,
+      "smooth^T A random0": 2.1590743328504767e-17,
+      "random0^T A random1": 1.8623194097691214e-17,
+      "random2^T A random1": 2.998016733226288e-17,
+      "smooth^T A random1": 8.160048037993761e-18,
+      "random0^T A random2": 1.6519074809039946e-17,
+      "random1^T A random2": 2.1705611914603283e-17,
+      "smooth^T A random2": 1.2817459506207496e-17,
+      "random0^T A smooth": 4.531048151914191e-17,
+      "random1^T A smooth": 5.6701649392621255e-18,
+      "random2^T A smooth": 0.0
+     },
+     "max_action_rel": 4.1185909368508327e-16,
+     "max_dot_rel": 4.531048151914191e-17,
+     "pass": true
+    }
+   }
+  },
+  "beam4_voids": {
+   "grid": [
+    32,
+    4,
+    4
+   ],
+   "n_free": 2400,
+   "forms": {
+    "ref": {
+     "matrix_fwd_max_rel": 2.3617471614753327e-16,
+     "matrix_T_max_rel": 2.3617471614753327e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.7474725776063484e-16,
+       "T_rel": 2.8415563505809055e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.8475943730138e-16,
+       "T_rel": 2.8812141002168295e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.9565660394920387e-16,
+       "T_rel": 2.979103869008135e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 4.3884958423043187e-16,
+       "T_rel": 4.394917396383494e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 3.142356483594649e-18,
+      "random2^T A random0": 6.3630228946248496e-18,
+      "smooth^T A random0": 0.0,
+      "random0^T A random1": 6.292197223631573e-18,
+      "random2^T A random1": 2.3119337116469398e-17,
+      "smooth^T A random1": 1.95289346531281e-18,
+      "random0^T A random2": 3.1111453999986854e-18,
+      "random1^T A random2": 2.6474406680461656e-17,
+      "smooth^T A random2": 1.1587180704018938e-17,
+      "random0^T A smooth": 6.036671602804408e-18,
+      "random1^T A smooth": 2.4173778798691762e-17,
+      "random2^T A smooth": 1.2237496664423199e-17
+     },
+     "max_action_rel": 4.394917396383494e-16,
+     "max_dot_rel": 2.6474406680461656e-17,
+     "pass": true
+    },
+    "atomic": {
+     "matrix_fwd_max_rel": 1.180873576258586e-16,
+     "matrix_T_max_rel": 1.180873576258586e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 1.180873576258586e-16,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.7162794723227955e-16,
+       "T_rel": 2.7014941632441603e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.877943648506652e-16,
+       "T_rel": 2.8506619707697853e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.7057442144382423e-16,
+       "T_rel": 2.6959361959727733e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.0589714164456256e-16,
+       "T_rel": 3.067821988530389e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.885413876287197e-17,
+      "random2^T A random0": 6.363022847816809e-18,
+      "smooth^T A random0": 4.383865146057368e-18,
+      "random0^T A random1": 1.88765915244744e-17,
+      "random2^T A random1": 9.566622180885235e-18,
+      "smooth^T A random1": 1.9528934501647742e-18,
+      "random0^T A random2": 6.22229074903502e-18,
+      "random1^T A random2": 1.4015862245450462e-17,
+      "smooth^T A random2": 1.0621582225023544e-17,
+      "random0^T A smooth": 1.4085567083805505e-17,
+      "random1^T A smooth": 0.0,
+      "random2^T A smooth": 1.6316662231504386e-17
+     },
+     "max_action_rel": 3.067821988530389e-16,
+     "max_dot_rel": 1.88765915244744e-17,
+     "pass": true
+    },
+    "corner": {
+     "matrix_fwd_max_rel": 1.1808735736266264e-16,
+     "matrix_T_max_rel": 1.1808735736266264e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 1.1808735736266264e-16,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.830588298541485e-16,
+       "T_rel": 2.9095918034286754e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.8098858430828383e-16,
+       "T_rel": 2.8697019052513067e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.7708507775080307e-16,
+       "T_rel": 2.778632831505219e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 2.975956373475159e-16,
+       "T_rel": 3.0779515701680867e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 6.284712913412896e-18,
+      "random2^T A random0": 2.5452091360713496e-17,
+      "smooth^T A random0": 9.741922535099549e-19,
+      "random0^T A random1": 6.292197167790551e-18,
+      "random2^T A random1": 9.566622170190398e-18,
+      "smooth^T A random1": 5.858680343944715e-18,
+      "random0^T A random2": 3.1111453702945267e-18,
+      "random1^T A random2": 4.671954075475238e-18,
+      "smooth^T A random2": 3.862393531129491e-18,
+      "random0^T A smooth": 3.118946959868822e-17,
+      "random1^T A smooth": 1.2086889264045383e-17,
+      "random2^T A smooth": 2.039582754572801e-18
+     },
+     "max_action_rel": 3.0779515701680867e-16,
+     "max_dot_rel": 3.118946959868822e-17,
+     "pass": true
+    },
+    "mean": {
+     "matrix_fwd_max_rel": 1.1808735736266264e-16,
+     "matrix_T_max_rel": 1.1808735736266264e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 1.1808735736266264e-16,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.720813796977364e-16,
+       "T_rel": 2.710572595297558e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.8337455908995564e-16,
+       "T_rel": 2.8091687147677656e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.797552632257018e-16,
+       "T_rel": 2.748657434232248e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.0384442413942036e-16,
+       "T_rel": 3.1436697307162313e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 3.142356456480254e-18,
+      "random2^T A random0": 9.544534259580526e-18,
+      "smooth^T A random0": 4.870961267199151e-18,
+      "random0^T A random1": 2.2022690085464624e-17,
+      "random2^T A random1": 7.972185141172902e-18,
+      "smooth^T A random1": 3.9057868956435004e-18,
+      "random0^T A random2": 6.222290741228181e-18,
+      "random1^T A random2": 1.79091572911613e-17,
+      "smooth^T A random2": 1.544957412610488e-17,
+      "random0^T A smooth": 2.515279805846799e-17,
+      "random1^T A smooth": 0.0,
+      "random2^T A smooth": 2.0395827541681525e-18
+     },
+     "max_action_rel": 3.1436697307162313e-16,
+     "max_dot_rel": 2.515279805846799e-17,
+     "pass": true
+    },
+    "stencil": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.6644413175168866e-16,
+       "T_rel": 3.07858981556248e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.701854544633919e-16,
+       "T_rel": 3.0582276546956246e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.6182823271244683e-16,
+       "T_rel": 2.774342928076009e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 2.4751978016485794e-16,
+       "T_rel": 2.8915469293134655e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.8854138766715662e-17,
+      "random2^T A random0": 2.5452091396456016e-17,
+      "smooth^T A random0": 8.767730293902167e-18,
+      "random0^T A random1": 4.089928164349389e-17,
+      "random2^T A random1": 2.2322118425958446e-17,
+      "smooth^T A random1": 3.9057869010107036e-18,
+      "random0^T A random2": 9.333436122964885e-18,
+      "random1^T A random2": 1.5573180271742227e-18,
+      "smooth^T A random2": 1.158718060838705e-17,
+      "random0^T A smooth": 5.634226841268295e-17,
+      "random1^T A smooth": 2.0144815708425133e-17,
+      "random2^T A smooth": 1.4277079472194865e-17
+     },
+     "max_action_rel": 3.07858981556248e-16,
+     "max_dot_rel": 5.634226841268295e-17,
+     "pass": true
+    },
+    "diff": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.933838472953063e-16,
+       "T_rel": 3.249533584782621e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.9605799106759247e-16,
+       "T_rel": 3.3877619055461024e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.97626548180675e-16,
+       "T_rel": 3.1996904213937966e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.0059976221762407e-16,
+       "T_rel": 4.1854903108980695e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 6.284712834447619e-18,
+      "random2^T A random0": 1.59075569005729e-17,
+      "smooth^T A random0": 3.896768965078244e-18,
+      "random0^T A random1": 9.438295633434312e-18,
+      "random2^T A random1": 1.116105905871961e-17,
+      "smooth^T A random1": 1.9528934235139548e-17,
+      "random0^T A random2": 1.5555726666826185e-17,
+      "random1^T A random2": 1.3237203056720933e-17,
+      "smooth^T A random2": 2.1243164169055878e-17,
+      "random0^T A smooth": 3.6220028882975276e-17,
+      "random1^T A smooth": 8.057926102969577e-18,
+      "random2^T A smooth": 2.2435410096880444e-17
+     },
+     "max_action_rel": 4.1854903108980695e-16,
+     "max_dot_rel": 3.6220028882975276e-17,
+     "pass": true
+    }
+   }
+  },
+  "asym": {
+   "grid": [
+    6,
+    5,
+    4
+   ],
+   "n_free": 540,
+   "forms": {
+    "ref": {
+     "matrix_fwd_max_rel": 1.9999248778099104e-16,
+     "matrix_T_max_rel": 1.9999248778099104e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 3.171495633832572e-16,
+       "T_rel": 3.1271749290567403e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 3.1270044310856556e-16,
+       "T_rel": 3.1016541170641146e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.998317527910265e-16,
+       "T_rel": 3.0413198826129323e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.7387928166758333e-16,
+       "T_rel": 3.6678408559922705e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 3.793232967822553e-17,
+      "random2^T A random0": 2.5004489366837812e-17,
+      "smooth^T A random0": 2.933298024245117e-17,
+      "random0^T A random1": 1.8928020586256418e-17,
+      "random2^T A random1": 9.595755735168109e-18,
+      "smooth^T A random1": 2.3639412485071157e-17,
+      "random0^T A random2": 2.81846743941027e-17,
+      "random1^T A random2": 9.483236696135207e-18,
+      "smooth^T A random2": 5.866691489859155e-18,
+      "random0^T A smooth": 2.0187663274598984e-17,
+      "random1^T A smooth": 2.0377498760278976e-17,
+      "random2^T A smooth": 0.0
+     },
+     "max_action_rel": 3.7387928166758333e-16,
+     "max_dot_rel": 3.793232967822553e-17,
+     "pass": true
+    },
+    "atomic": {
+     "matrix_fwd_max_rel": 9.999624351120749e-17,
+     "matrix_T_max_rel": 9.999624351120749e-17,
+     "matrix_T_vs_fwd_transposed_max_rel": 9.999624351120749e-17,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.9018694973113115e-16,
+       "T_rel": 2.9586744298984365e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 3.3348330877154083e-16,
+       "T_rel": 3.27241299804057e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 3.062230109398837e-16,
+       "T_rel": 3.0765156510527363e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 4.2578880139637953e-16,
+       "T_rel": 4.2822234085574024e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 9.483082331743419e-18,
+      "random2^T A random0": 1.905103934117885e-17,
+      "smooth^T A random0": 1.759978798249737e-17,
+      "random0^T A random1": 9.46401020656023e-18,
+      "random2^T A random1": 0.0,
+      "smooth^T A random1": 2.9549265336049696e-17,
+      "random0^T A random2": 1.409233706211298e-17,
+      "random1^T A random2": 1.896647321066073e-17,
+      "smooth^T A random2": 0.0,
+      "random0^T A smooth": 3.5328410578429524e-17,
+      "random1^T A smooth": 5.094374668134152e-17,
+      "random2^T A smooth": 0.0
+     },
+     "max_action_rel": 4.2822234085574024e-16,
+     "max_dot_rel": 5.094374668134152e-17,
+     "pass": true
+    },
+    "corner": {
+     "matrix_fwd_max_rel": 1.9999248629532372e-16,
+     "matrix_T_max_rel": 1.9999248629532372e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 9.999624314766186e-17,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 3.199539562543026e-16,
+       "T_rel": 2.9502577577952435e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 3.1085808037548925e-16,
+       "T_rel": 3.4247491714381384e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.897237873628682e-16,
+       "T_rel": 3.5942122364761247e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.790800784330769e-16,
+       "T_rel": 4.0442240641891685e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.896616464101455e-17,
+      "random2^T A random0": 4.7627598296514996e-18,
+      "smooth^T A random0": 2.933297993607342e-17,
+      "random0^T A random1": 4.732005096782782e-18,
+      "random2^T A random1": 9.595755634219483e-18,
+      "smooth^T A random1": 1.1819706118190699e-17,
+      "random0^T A random2": 3.992828831882676e-17,
+      "random1^T A random2": 0.0,
+      "smooth^T A random2": 5.866691430182948e-18,
+      "random0^T A smooth": 2.5234578769420576e-17,
+      "random1^T A smooth": 5.0943746246950874e-18,
+      "random2^T A smooth": 4.093737795311395e-17
+     },
+     "max_action_rel": 4.0442240641891685e-16,
+     "max_dot_rel": 4.093737795311395e-17,
+     "pass": true
+    },
+    "mean": {
+     "matrix_fwd_max_rel": 1.9999248657666685e-16,
+     "matrix_T_max_rel": 1.9999248657666685e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 1.9999248657666685e-16,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 3.2350591239379936e-16,
+       "T_rel": 3.2507006360119294e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.960929983838887e-16,
+       "T_rel": 3.027218144683433e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 3.6795715319744133e-16,
+       "T_rel": 3.8927053620219066e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 4.13520769757924e-16,
+       "T_rel": 4.236657837199549e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 0.0,
+      "random2^T A random0": 1.5478969447862144e-17,
+      "smooth^T A random0": 5.8665959877812076e-18,
+      "random0^T A random1": 1.8928020387243682e-17,
+      "random2^T A random1": 9.595755634276545e-18,
+      "smooth^T A random1": 8.864779588695737e-18,
+      "random0^T A random2": 5.167190251336187e-17,
+      "random1^T A random2": 9.483236596572584e-18,
+      "smooth^T A random2": 3.520014856959554e-17,
+      "random0^T A smooth": 0.0,
+      "random1^T A smooth": 4.0754996958297163e-17,
+      "random2^T A smooth": 7.164041134893073e-17
+     },
+     "max_action_rel": 4.236657837199549e-16,
+     "max_dot_rel": 7.164041134893073e-17,
+     "pass": true
+    },
+    "stencil": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 3.083631664605135e-16,
+       "T_rel": 3.157403814139733e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 3.450048460187007e-16,
+       "T_rel": 3.4053199746523817e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 3.129010906836667e-16,
+       "T_rel": 2.718974053628918e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.4026246118622423e-16,
+       "T_rel": 3.866001703429869e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 2.3707705931471597e-17,
+      "random2^T A random0": 2.024172938718704e-17,
+      "smooth^T A random0": 5.8665960194342e-18,
+      "random0^T A random1": 1.4196015382866323e-17,
+      "random2^T A random1": 9.595755696756744e-18,
+      "smooth^T A random1": 2.3639412390443686e-17,
+      "random0^T A random2": 1.2917975658221287e-17,
+      "random1^T A random2": 9.483236618508442e-18,
+      "smooth^T A random2": 1.7600074325508846e-17,
+      "random0^T A smooth": 5.0469158379045534e-18,
+      "random1^T A smooth": 5.094374709505616e-18,
+      "random2^T A smooth": 3.070303397597582e-17
+     },
+     "max_action_rel": 3.866001703429869e-16,
+     "max_dot_rel": 3.070303397597582e-17,
+     "pass": true
+    },
+    "diff": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 3.272134051056166e-16,
+       "T_rel": 3.0974136060234266e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 3.266151665697347e-16,
+       "T_rel": 3.34708221646648e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.9546772264270697e-16,
+       "T_rel": 3.158058470567639e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.6131911915234513e-16,
+       "T_rel": 4.3032424147948283e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 2.370770556388485e-17,
+      "random2^T A random0": 8.33482961843415e-18,
+      "smooth^T A random0": 2.053308574965527e-17,
+      "random0^T A random1": 1.8928020179671862e-17,
+      "random2^T A random1": 0.0,
+      "smooth^T A random1": 2.9549264971604056e-17,
+      "random0^T A random2": 2.818467372485914e-17,
+      "random1^T A random2": 1.8966472941912536e-17,
+      "smooth^T A random2": 1.173338270110977e-17,
+      "random0^T A smooth": 2.0187662824137732e-17,
+      "random1^T A smooth": 1.528312372918635e-17,
+      "random2^T A smooth": 1.0234344391246922e-17
+     },
+     "max_action_rel": 4.3032424147948283e-16,
+     "max_dot_rel": 2.9549264971604056e-17,
+     "pass": true
+    }
+   }
+  },
+  "roller": {
+   "grid": [
+    6,
+    5,
+    4
+   ],
+   "n_free": 438,
+   "forms": {
+    "ref": {
+     "matrix_fwd_max_rel": 4.1894891458466363e-16,
+     "matrix_T_max_rel": 4.1894891458466363e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.902794271671295e-16,
+       "T_rel": 2.9184137774351966e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.7520898399382786e-16,
+       "T_rel": 2.744685529153399e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 3.1118466432020543e-16,
+       "T_rel": 3.162437417286583e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.103896937184711e-16,
+       "T_rel": 3.198613757200233e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 6.598228151610608e-17,
+      "random2^T A random0": 1.6759386424419392e-17,
+      "smooth^T A random0": 1.9874476831061872e-17,
+      "random0^T A random1": 9.917202288716616e-17,
+      "random2^T A random1": 1.6955865853373104e-17,
+      "smooth^T A random1": 1.0723987287504179e-17,
+      "random0^T A random2": 2.5767956157376515e-17,
+      "random1^T A random2": 1.7345226947824903e-17,
+      "smooth^T A random2": 1.6718539738031177e-17,
+      "random0^T A smooth": 1.706456318767076e-17,
+      "random1^T A smooth": 4.307511616092744e-18,
+      "random2^T A smooth": 2.1882011365172903e-18
+     },
+     "max_action_rel": 3.198613757200233e-16,
+     "max_dot_rel": 9.917202288716616e-17,
+     "pass": true
+    },
+    "atomic": {
+     "matrix_fwd_max_rel": 1.3964963766519364e-16,
+     "matrix_T_max_rel": 1.3964963766519364e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 1.3964963766519364e-16,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 3.0346666158659264e-16,
+       "T_rel": 3.1418955527916773e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 3.0813647390508967e-16,
+       "T_rel": 3.150843863107035e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.7379473561842035e-16,
+       "T_rel": 2.5746890468441296e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.8570575416701203e-16,
+       "T_rel": 3.8690235191807536e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 3.299114049014682e-17,
+      "random2^T A random0": 1.675938628832395e-17,
+      "smooth^T A random0": 9.274755779179418e-18,
+      "random0^T A random1": 1.652867031862841e-17,
+      "random2^T A random1": 3.391173137321104e-17,
+      "smooth^T A random1": 5.361993591014781e-18,
+      "random0^T A random2": 0.0,
+      "random1^T A random2": 1.734522678135161e-17,
+      "smooth^T A random2": 1.1145693051715069e-17,
+      "random0^T A smooth": 1.0665351948156165e-17,
+      "random1^T A smooth": 4.3075115982663085e-18,
+      "random2^T A smooth": 2.4070212402076746e-17
+     },
+     "max_action_rel": 3.8690235191807536e-16,
+     "max_dot_rel": 3.391173137321104e-17,
+     "pass": true
+    },
+    "corner": {
+     "matrix_fwd_max_rel": 2.792992743039471e-16,
+     "matrix_T_max_rel": 2.792992743039471e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 6.982481857598678e-17,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 3.2346653404187744e-16,
+       "T_rel": 3.1619112173908756e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 3.4658422229958716e-16,
+       "T_rel": 3.218352738386572e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.7023739426992245e-16,
+       "T_rel": 2.7794320841185724e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.890812834404405e-16,
+       "T_rel": 4.021175469208218e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.6495570227269156e-17,
+      "random2^T A random0": 0.0,
+      "smooth^T A random0": 1.059972087905011e-17,
+      "random0^T A random1": 1.6528670302163287e-17,
+      "random2^T A random1": 2.5433798504572265e-17,
+      "smooth^T A random1": 1.6085980757020208e-17,
+      "random0^T A random2": 2.5767955884490543e-17,
+      "random1^T A random2": 4.336306691034179e-17,
+      "smooth^T A random2": 0.0,
+      "random0^T A smooth": 2.1330703745588107e-17,
+      "random1^T A smooth": 1.2922534703487405e-17,
+      "random2^T A smooth": 7.439883780798445e-17
+     },
+     "max_action_rel": 4.021175469208218e-16,
+     "max_dot_rel": 7.439883780798445e-17,
+     "pass": true
+    },
+    "mean": {
+     "matrix_fwd_max_rel": 2.7929927470787825e-16,
+     "matrix_T_max_rel": 2.7929927470787825e-16,
+     "matrix_T_vs_fwd_transposed_max_rel": 1.3964963735393913e-16,
+     "matrix_fwd_bitwise_equal": false,
+     "matrix_T_bitwise_equal_fwd_transposed": false,
+     "actions": {
+      "random0": {
+       "fwd_rel": 3.126443846327118e-16,
+       "T_rel": 3.315915578852083e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 3.2015777753310964e-16,
+       "T_rel": 3.2512917719438337e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 3.1846392520344435e-16,
+       "T_rel": 3.066129481001975e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.1077763229269566e-16,
+       "T_rel": 2.9739768095028574e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 3.299114044313145e-17,
+      "random2^T A random0": 3.351877252888061e-17,
+      "smooth^T A random0": 1.32496510942315e-17,
+      "random0^T A random1": 1.6528670300858083e-17,
+      "random2^T A random1": 0.0,
+      "smooth^T A random1": 1.3404983963124967e-17,
+      "random0^T A random2": 2.57679558827873e-17,
+      "random1^T A random2": 2.6017840144485313e-17,
+      "smooth^T A random2": 1.1145693039916401e-17,
+      "random0^T A smooth": 6.399211117992597e-18,
+      "random1^T A smooth": 1.723004625601266e-17,
+      "random2^T A smooth": 2.188201110055963e-18
+     },
+     "max_action_rel": 3.315915578852083e-16,
+     "max_dot_rel": 3.351877252888061e-17,
+     "pass": true
+    },
+    "stencil": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.8603657564447785e-16,
+       "T_rel": 2.623157052771274e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.936775805239684e-16,
+       "T_rel": 2.6897094888093906e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 2.84684964534972e-16,
+       "T_rel": 2.9777768911561223e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.0511462041624216e-16,
+       "T_rel": 3.5337505412000366e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 0.0,
+      "random2^T A random0": 3.351877245154972e-17,
+      "smooth^T A random0": 6.62482553183167e-18,
+      "random0^T A random1": 3.30573405573519e-17,
+      "random2^T A random1": 5.086759693686138e-17,
+      "smooth^T A random1": 0.0,
+      "random0^T A random2": 1.7178637302385433e-17,
+      "random1^T A random2": 8.672613405320886e-18,
+      "smooth^T A random2": 6.96605816908521e-18,
+      "random0^T A smooth": 7.465746386745334e-17,
+      "random1^T A smooth": 4.3075116115574e-18,
+      "random2^T A smooth": 5.2516827221120425e-17
+     },
+     "max_action_rel": 3.5337505412000366e-16,
+     "max_dot_rel": 7.465746386745334e-17,
+     "pass": true
+    },
+    "diff": {
+     "matrix_fwd_max_rel": 0.0,
+     "matrix_T_max_rel": 0.0,
+     "matrix_T_vs_fwd_transposed_max_rel": 0.0,
+     "matrix_fwd_bitwise_equal": true,
+     "matrix_T_bitwise_equal_fwd_transposed": true,
+     "actions": {
+      "random0": {
+       "fwd_rel": 2.9391630489950807e-16,
+       "T_rel": 2.766579574381497e-16,
+       "zero_on_fixed": true
+      },
+      "random1": {
+       "fwd_rel": 2.978037767129663e-16,
+       "T_rel": 2.6677327929167814e-16,
+       "zero_on_fixed": true
+      },
+      "random2": {
+       "fwd_rel": 3.1106479660988223e-16,
+       "T_rel": 3.416697210017796e-16,
+       "zero_on_fixed": true
+      },
+      "smooth": {
+       "fwd_rel": 3.190896260159938e-16,
+       "T_rel": 3.648464623337504e-16,
+       "zero_on_fixed": true
+      }
+     },
+     "dot_tests": {
+      "random1^T A random0": 1.6495570046417928e-17,
+      "random2^T A random0": 3.3518772172982685e-17,
+      "smooth^T A random0": 1.1924685858193601e-17,
+      "random0^T A random1": 1.652867010482825e-17,
+      "random2^T A random1": 1.695586546727954e-17,
+      "smooth^T A random1": 2.1447974086627228e-17,
+      "random0^T A random2": 8.58931853857552e-18,
+      "random1^T A random2": 3.4690453166446346e-17,
+      "smooth^T A random2": 1.5325327771052377e-17,
+      "random0^T A smooth": 4.266140698861118e-18,
+      "random1^T A smooth": 8.61502303417054e-18,
+      "random2^T A smooth": 6.5646032586654984e-18
+     },
+     "max_action_rel": 3.648464623337504e-16,
+     "max_dot_rel": 3.4690453166446346e-17,
+     "pass": true
+    }
+   }
+  }
+ },
+ "beam_interface_dot_tests": {
+  "8": {
+   "ref": 6.801379711722711e-19,
+   "atomic": 1.9043863049666683e-18,
+   "corner": 1.360275930294734e-19,
+   "mean": 2.040413895488831e-18,
+   "stencil": 2.7205518646300426e-18,
+   "diff": 5.441103654081731e-18
+  },
+  "16": {
+   "ref": 2.2112400642409224e-18,
+   "atomic": 5.528100119794174e-19,
+   "corner": 4.422480089993482e-18,
+   "mean": 1.6584300337345348e-18,
+   "stencil": 5.528100120214547e-19,
+   "diff": 5.52810004426576e-19
+  },
+  "32": {
+   "ref": 4.2063249574153617e-19,
+   "atomic": 6.835278005715717e-19,
+   "corner": 4.3815884593719045e-19,
+   "mean": 1.4021083069989016e-19,
+   "stencil": 7.010541544576424e-19,
+   "diff": 4.206324868804379e-19
+  },
+  "64": {
+   "ref": 7.061546900048246e-20,
+   "atomic": 3.530773424275713e-20,
+   "corner": 3.5307734195556397e-20,
+   "mean": 2.1184640517251062e-19,
+   "stencil": 7.061546848681241e-20,
+   "diff": 1.4123093502912205e-19
+  },
+  "128": {
+   "ref": 2.6570723355835708e-20,
+   "atomic": 4.428453860411283e-20,
+   "corner": 1.7713815417901292e-20,
+   "mean": 1.062828925072874e-19,
+   "stencil": 7.971216948812857e-20,
+   "diff": 1.7713815197903253e-20
+  }
+ },
+ "beam_interface_dot_tests_max": 5.441103654081731e-18,
+ "s22_reproduction_summary": {
+  "node_hoist|float64": {
+   "sym_err": true,
+   "rel_err_matrix": true,
+   "lambda_min": true,
+   "n_negative": true,
+   "max_rel_eig_err": true
+  },
+  "stencil|float32": {
+   "sym_err": true,
+   "rel_err_matrix": false,
+   "lambda_min": true,
+   "n_negative": true,
+   "max_rel_eig_err": true
+  },
+  "stencil_diff|float32": {
+   "sym_err": true,
+   "rel_err_matrix": false,
+   "lambda_min": true,
+   "n_negative": true,
+   "max_rel_eig_err": true
+  },
+  "elem_atomic|float32": {
+   "sym_err": false,
+   "rel_err_matrix": false,
+   "lambda_min": false,
+   "n_negative": true,
+   "max_rel_eig_err": false
+  },
+  "elem_ref|float32": {
+   "sym_err": false,
+   "rel_err_matrix": false,
+   "lambda_min": false,
+   "n_negative": true,
+   "max_rel_eig_err": false
+  },
+  "elem_mean|float32": {
+   "sym_err": false,
+   "rel_err_matrix": false,
+   "lambda_min": false,
+   "n_negative": true,
+   "max_rel_eig_err": false
+  },
+  "stencil_selfcorr|float32": {
+   "sym_err": true,
+   "rel_err_matrix": false,
+   "lambda_min": true,
+   "n_negative": true,
+   "max_rel_eig_err": true
+  },
+  "stencil_c32|float64": {
+   "sym_err": true,
+   "rel_err_matrix": false,
+   "lambda_min": true,
+   "n_negative": true,
+   "max_rel_eig_err": true
+  },
+  "stencil_diff_c32|float64": {
+   "sym_err": true,
+   "rel_err_matrix": false,
+   "lambda_min": true,
+   "n_negative": true,
+   "max_rel_eig_err": true
+  }
+ },
+ "s22_identities": {
+  "stencil_fp32_equals_stencil_c32": true,
+  "stencil_selfcorr_equals_stencil_diff_fp32": true,
+  "stencil_diff_c32_equals_stencil_c32_off_the_nodal_self_blocks": true
+ },
+ "s22_gate": {
+  "t20_stencil_and_diff_equal_production_basis_columns": true,
+  "deterministic_kernels_sym_err_identical": true,
+  "deterministic_kernels_matrix_error_within_1e-14_relative": true,
+  "deterministic_kernels_negative_count_identical": true,
+  "deterministic_kernels_spectral_figures_within_1pct": true,
+  "identities_hold": true,
+  "atomic_kernels_negative_count_identical": true,
+  "passed": true,
+  "derived_differences": {
+   "node_hoist|float64": {
+    "lambda_min": {
+     "t20": 5.576761419127536e-11,
+     "e29": 5.576761419127536e-11,
+     "rel_diff": 0.0,
+     "tolerance": "relative difference <= 0.01",
+     "within": true
+    },
+    "max_rel_eig_err": {
+     "t20": 0.0,
+     "e29": 0.0,
+     "diff_in_units_of_lambda_K": 0.0,
+     "rel_diff_of_the_error_itself_information": null,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "lowest10_rel_err": {
+     "max_abs_diff_in_units_of_lambda_K": 0.0,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "n_negative": {
+     "t20": 0,
+     "e29": 0,
+     "tolerance": "identical count",
+     "within": true
+    }
+   },
+   "stencil|float32": {
+    "lambda_min": {
+     "t20": 5.576747531624911e-11,
+     "e29": 5.576747531624911e-11,
+     "rel_diff": 0.0,
+     "tolerance": "relative difference <= 0.01",
+     "within": true
+    },
+    "max_rel_eig_err": {
+     "t20": 3.946865900394947e-05,
+     "e29": 3.946865900394947e-05,
+     "diff_in_units_of_lambda_K": 0.0,
+     "rel_diff_of_the_error_itself_information": 0.0,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "lowest10_rel_err": {
+     "max_abs_diff_in_units_of_lambda_K": 0.0,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "n_negative": {
+     "t20": 0,
+     "e29": 0,
+     "tolerance": "identical count",
+     "within": true
+    }
+   },
+   "stencil_diff|float32": {
+    "lambda_min": {
+     "t20": 5.5767643358631045e-11,
+     "e29": 5.5767643358631045e-11,
+     "rel_diff": 0.0,
+     "tolerance": "relative difference <= 0.01",
+     "within": true
+    },
+    "max_rel_eig_err": {
+     "t20": 2.3972870517918743e-05,
+     "e29": 2.3972870517918743e-05,
+     "diff_in_units_of_lambda_K": 0.0,
+     "rel_diff_of_the_error_itself_information": 0.0,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "lowest10_rel_err": {
+     "max_abs_diff_in_units_of_lambda_K": 0.0,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "n_negative": {
+     "t20": 0,
+     "e29": 0,
+     "tolerance": "identical count",
+     "within": true
+    }
+   },
+   "stencil_selfcorr|float32": {
+    "lambda_min": {
+     "t20": 5.5767643358631045e-11,
+     "e29": 5.5767643358631045e-11,
+     "rel_diff": 0.0,
+     "tolerance": "relative difference <= 0.01",
+     "within": true
+    },
+    "max_rel_eig_err": {
+     "t20": 2.3972870517918743e-05,
+     "e29": 2.3972870517918743e-05,
+     "diff_in_units_of_lambda_K": 0.0,
+     "rel_diff_of_the_error_itself_information": 0.0,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "lowest10_rel_err": {
+     "max_abs_diff_in_units_of_lambda_K": 0.0,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "n_negative": {
+     "t20": 0,
+     "e29": 0,
+     "tolerance": "identical count",
+     "within": true
+    }
+   },
+   "stencil_c32|float64": {
+    "lambda_min": {
+     "t20": 5.576747531624911e-11,
+     "e29": 5.576747531624911e-11,
+     "rel_diff": 0.0,
+     "tolerance": "relative difference <= 0.01",
+     "within": true
+    },
+    "max_rel_eig_err": {
+     "t20": 3.946865900394947e-05,
+     "e29": 3.946865900394947e-05,
+     "diff_in_units_of_lambda_K": 0.0,
+     "rel_diff_of_the_error_itself_information": 0.0,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "lowest10_rel_err": {
+     "max_abs_diff_in_units_of_lambda_K": 0.0,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "n_negative": {
+     "t20": 0,
+     "e29": 0,
+     "tolerance": "identical count",
+     "within": true
+    }
+   },
+   "stencil_diff_c32|float64": {
+    "lambda_min": {
+     "t20": 5.576757201720269e-11,
+     "e29": 5.576757201720269e-11,
+     "rel_diff": 0.0,
+     "tolerance": "relative difference <= 0.01",
+     "within": true
+    },
+    "max_rel_eig_err": {
+     "t20": 1.2510857446690338e-06,
+     "e29": 1.2510857446690338e-06,
+     "diff_in_units_of_lambda_K": 0.0,
+     "rel_diff_of_the_error_itself_information": 0.0,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "lowest10_rel_err": {
+     "max_abs_diff_in_units_of_lambda_K": 0.0,
+     "tolerance": "difference in units of lambda_K <= 0.01",
+     "within": true
+    },
+    "n_negative": {
+     "t20": 0,
+     "e29": 0,
+     "tolerance": "identical count",
+     "within": true
+    }
+   }
+  },
+  "note": "the stencil columns are compared bit for bit and sym_err exactly; the derived eigensolver figures (lambda_min, the eigenvalue errors) under 1 % relative, the task's eigenvalue tolerance, since LAPACK's thread order changes them at about 1e-6 relative (operator's correction of 2026-11-24); the atomic FP32 element kernels are not bitwise reproducible run to run, so only their negative count (the Table S22 conclusion) enters the gate; their other metrics are reported with the run-to-run spread in s22_reproduction.json"
+ },
+ "ordinary_vector_and_eigenvalue_tests_passed": true,
+ "small_grid_gate_passed": true
+}

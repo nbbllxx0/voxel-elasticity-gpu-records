@@ -1,0 +1,79 @@
+[
+ {
+  "density": "results\\E6b\\simp_cantilever_k160_mg64_stencil.npz",
+  "solver": "mg64",
+  "n_elem": 8192000,
+  "compliance": 0.2945005458579707,
+  "iterations": 77,
+  "half_model": false,
+  "surface_px": 847616,
+  "factor": 1,
+  "render_s": 12.2
+ },
+ {
+  "density": "results\\E6b\\simp_bridge_k160_mg64_stencil.npz",
+  "solver": "mg64",
+  "n_elem": 8192000,
+  "compliance": 0.08798177036481217,
+  "iterations": 79,
+  "half_model": true,
+  "surface_px": 593333,
+  "factor": 1,
+  "render_s": 19.3
+ },
+ {
+  "density": "results\\E6b\\simp_torsion_k160_mg64_stencil.npz",
+  "solver": "mg64",
+  "n_elem": 8192000,
+  "compliance": 0.11614472394749017,
+  "iterations": 76,
+  "half_model": true,
+  "surface_px": 672847,
+  "factor": 1,
+  "render_s": 19.4
+ },
+ {
+  "density": "results\\E7\\simp_cantilever_k320_mg64_stencil.npz",
+  "solver": "mg64",
+  "n_elem": 65536000,
+  "compliance": 0.1480662466199984,
+  "iterations": 76,
+  "half_model": false,
+  "surface_px": 847379,
+  "factor": 2,
+  "render_s": 12.0
+ },
+ {
+  "density": "results\\E7\\simp_bridge_k320_mg64_stencil.npz",
+  "solver": "mg64",
+  "n_elem": 65536000,
+  "compliance": 0.04744067069387902,
+  "iterations": 76,
+  "half_model": true,
+  "surface_px": 594431,
+  "factor": 2,
+  "render_s": 19.0
+ },
+ {
+  "density": "results\\E7\\simp_torsion_k320_mg64_stencil.npz",
+  "solver": "mg64",
+  "n_elem": 65536000,
+  "compliance": 0.05833546982443289,
+  "iterations": 76,
+  "half_model": true,
+  "surface_px": 672336,
+  "factor": 2,
+  "render_s": 19.5
+ },
+ {
+  "density": "results\\E7\\simp_cantilever_k384_mg_ir_stencil.npz",
+  "solver": "mg_ir",
+  "n_elem": 113246208,
+  "compliance": 0.12366207942524259,
+  "iterations": 76,
+  "half_model": false,
+  "surface_px": 854547,
+  "factor": 2,
+  "render_s": 14.5
+ }
+]

@@ -1,0 +1,128 @@
+{
+ "rows": {
+  "changed": 17,
+  "only_old": 0,
+  "only_new": 15,
+  "new_paths": [
+   "hou_T27_k160_hou_cg32_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k160_mg64_orig_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k160_mg64_rep_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k160_mgir_orig_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k160_mgir_rep_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k256_hou_cg32_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k256_mg64_orig_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k256_mg64_rep_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k256_mgir_orig_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k256_mgir_rep_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k80_hou_cg32_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k80_mg64_orig_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k80_mg64_rep_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k80_mgir_orig_solve/times/solve/n_timed_solves_planned",
+   "hou_T27_k80_mgir_rep_solve/times/solve/n_timed_solves_planned"
+  ],
+  "removed_paths": [],
+  "changed_by_field": {
+   "times/solve/sample_rule": 15,
+   "times/solve/n_timed_solves": 2
+  },
+  "examples": {
+   "hou_T27_k160_hou_cg32_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k160_mg64_orig_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k160_mg64_rep_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k160_mgir_orig_solve/times/solve/n_timed_solves": [
+    3,
+    0
+   ],
+   "hou_T27_k160_mgir_orig_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k160_mgir_rep_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k256_hou_cg32_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k256_mg64_orig_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k256_mg64_rep_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k256_mgir_orig_solve/times/solve/n_timed_solves": [
+    3,
+    0
+   ],
+   "hou_T27_k256_mgir_orig_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k256_mgir_rep_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k80_hou_cg32_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k80_mg64_orig_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k80_mg64_rep_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k80_mgir_orig_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ],
+   "hou_T27_k80_mgir_rep_solve/times/solve/sample_rule": [
+    "T27 fixed the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256",
+    "T27 planned the number of timed solves by code and grid size: ours 3 at every k; Hou's CG 3 at k = 80 and 160, 1 at k = 256 (planned count; the observed count is n_timed_solves)"
+   ]
+  }
+ },
+ "pairs": {
+  "changed": 0,
+  "only_old": 0,
+  "only_new": 0,
+  "new_paths": [],
+  "removed_paths": [],
+  "changed_by_field": {},
+  "examples": {}
+ },
+ "largest_sizes": {
+  "changed": 0,
+  "only_old": 0,
+  "only_new": 0,
+  "new_paths": [],
+  "removed_paths": [],
+  "changed_by_field": {},
+  "examples": {}
+ },
+ "row_wording_changed": {
+  "hou_T27_k256_mgir_orig_solve/times/solve/statistic": [
+   "median of 3 cold solves",
+   "no timed solve completed (numerical breakdown); median not available"
+  ],
+  "hou_T27_k160_mgir_orig_solve/times/solve/statistic": [
+   "median of 3 cold solves",
+   "no timed solve completed (numerical breakdown); median not available"
+  ]
+ },
+ "row_wording_changed_count": 2
+}

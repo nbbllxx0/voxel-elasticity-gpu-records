@@ -1,0 +1,3012 @@
+{
+ "task": "T12",
+ "gate": "Traeff et al. TopOpt-in-OpenMP-GPU (OpenMP target offload) on the RTX 4090",
+ "build_status": "built",
+ "gate_passed": true,
+ "gate_basis": "set from the four technical conditions of the acceptance statement (acceptance block); admissibility is settled by the operator note of 2026-11-23 on T12",
+ "technical_acceptance_met": true,
+ "admissible_for_R1_1": true,
+ "admissibility_basis": "operator note of 2026-11-23 on T12: the Ubuntu-24.04 distribution, build-essential, libsuitesparse-dev and nvhpc-26-11 recorded in probe_provenance.log between 07:04 and 07:07 were installed by the run's operator with the authors' permission (authors' update of 2026-11-23, which replaces decision (4)); T12's results on this toolchain are admissible for R1.1.",
+ "t28": "may follow: the gate passed, the tests of guard version 3 passed (guards.guard_version_3_tests), and the four fixes of the operator note of 2026-11-23 13:00 hold in revision 4.2 (guards.guard_version_4_tests): coverage fails closed (a sample without the watched process is never checked; a CuPy process is checked strictly from its CUDA context on, and a sample called after it without the process stops at once), no GPU work of a launcher outside the watch (the stop is decided under the lock under which the WSL launcher checks it and starts the probe or the job, so no start follows a stop, and the stop retries killtree.sh until the Linux process has ended), an atomic lock that a stale lock refuses, and this conditional statement of the fixed-state comparison; the unit tests, the real-WSL kill test, a 4 GiB WSL job with its watched carrier followed, the same job stopped inside WSL with its end confirmed, and a CuPy process through cupy_guard 4.2 all pass. T28 must run every WSL job through t12mon.py revision 4.2 and every CuPy process through t12guard.cupy_guard revision 4.2 (both take gpu_job.lock), compute a CuPy process's coverage with stop.coverage(t_end), and accept a job only when its status is 'completed', its coverage is 'covered' and, for a WSL job, t12mon.validate gives clean=true with carrier_is_watched=true",
+ "t28_cleared": true,
+ "fixed_state_comparison_admitted": true,
+ "toolchain_provenance": {
+  "initial_probe": {
+   "file": "gate_initial_probe.json",
+   "build_status": "blocked",
+   "wsl_finding": "WSL2 is enabled but the only distribution is docker-desktop (Docker's utility VM); no user Linux distribution is installed. Source: wsl -l -v.",
+   "fallback_recorded": "Per the authors' decision (4): T28 is not run; the external comparison relies on T10/T11 and T27/T29 (matched Hou measurements, fixed-state evidence and attributed literature figures, including Traeff et al.'s published A100 result attributed separately)."
+  },
+  "later_probe": "probe_ubuntu.log, probe_build_env.log: Ubuntu-24.04 present with NVIDIA HPC SDK 26.11 and SuiteSparse 7.6.1",
+  "how_the_toolchain_got_there": {
+   "source": "probe_provenance.log (read-only: apt history, dpkg.log, file birth times inside Ubuntu-24.04)",
+   "distribution_filesystem_created": "2026-11-23 07:04:08.326010921",
+   "apt_transactions": [
+    {
+     "start": "2026-11-23  07:04:59",
+     "command": "apt-get install -y build-essential ca-certificates curl gnupg libsuitesparse-dev environment-modules",
+     "end": "2026-11-23  07:05:15"
+    },
+    {
+     "start": "2026-11-23  07:06:13",
+     "command": "apt-get install -y nvhpc-26-11",
+     "end": "2026-11-23  07:07:05"
+    }
+   ],
+   "dpkg_installs": [
+    {
+     "time": "2026-11-23 07:05:11",
+     "package": "libcholmod5:amd64",
+     "version": "1:7.6.1+dfsg-1build1"
+    },
+    {
+     "time": "2026-11-23 07:05:12",
+     "package": "libsuitesparse-dev:amd64",
+     "version": "1:7.6.1+dfsg-1build1"
+    },
+    {
+     "time": "2026-11-23 07:06:13",
+     "package": "nvhpc-26-11:amd64",
+     "version": "26.11-0"
+    }
+   ],
+   "who": "the run's operator, with the authors' permission (operator note of 2026-11-23 on T12; authors' update of 2026-11-23). The apt history itself has no Requested-By entry, and no script in the run folder contains an install command."
+  },
+  "reconciliation": "The initial probe was correct when taken: no user distribution existed, and the fallback of decision (4) was recorded. With the authors' permission (their update of 2026-11-23, which replaces decision (4)), the run's operator installed the Ubuntu-24.04 distribution, build-essential, libsuitesparse-dev and nvhpc-26-11 between 07:04 and 07:07, before this task's build.",
+  "decision_4": "superseded by the authors' update of 2026-11-23 (decision (4)'s precondition 'T12 runs only if the toolchain is already present' no longer applies)",
+  "status_of_results": "admissible for R1.1 (operator note of 2026-11-23 on T12); the gate is set from the technical conditions."
+ },
+ "toolchain": {
+  "compiler": "nvc 26.11-0 64-bit target on x86-64 Linux -tp alderlake (NVIDIA HPC SDK 26.11), -mp=gpu -gpu=cc89, other flags as the released Makefile",
+  "compiler_version_used": "nvc 26.11-0 64-bit target on x86-64 Linux -tp alderlake",
+  "compiler_version_released_code_was_tuned_with": "NVIDIA HPC SDK 22.5 (README)",
+  "cuda_toolkit_in_sdk": "13.4",
+  "cholmod": "Ubuntu SuiteSparse 7.6.1 (libcholmod.so.5)",
+  "gpu": "NVIDIA GeForce RTX 4090, 24564 MiB",
+  "released_reference_toolchain": "nvc 22.5, CUDA 11.1, SuiteSparse 5.1.2, A100 (cc80) per the README",
+  "source": "probe_runtime.log, probe_build_env.log"
+ },
+ "openmp_runtime": {
+  "problem": "Ubuntu's libcholmod.so.5 needs GNU libgomp (GOMP_parallel, omp_get_* ; probe_gomp.log); nvc links NVIDIA's libnvomp. With both loaded the binary warns 'Another OpenMP runtime library has been detected' and aborts with 'libgomp: TODO' (runs/native_v1/stderr.txt).",
+  "settled_by": "runtime library path, no rebuild of CHOLMOD and no further installation: env_run.sh, sourced by every T12 run, puts the SDK's compiler library directory first in LD_LIBRARY_PATH. The SDK ships libgomp.so.1 as a symlink to its own runtime (libgomp.so.1 -> libgomp.so -> libnvomp.so), so CHOLMOD's GOMP calls are served by libnvomp and GNU libgomp is not loaded.",
+  "gnu_libgomp_loaded_default_env": true,
+  "gnu_libgomp_loaded_in_t12_runs": false,
+  "second_runtime_warning_without_shim": true,
+  "abort_without_shim": true,
+  "stderr_bytes_with_shim_native_run": 0,
+  "source": "probe_runtime.log (ldd with and without env_run.sh), runs/native_v1/stderr.txt, runs/native_patched_v1/stderr.txt"
+ },
+ "build_adaptations": [
+  "Makefile (build/Makefile.t12): -gpu=cc80 (A100) -> -gpu=cc89 (RTX 4090); the cluster SuiteSparse 5.1.2 and OpenBLAS 0.2.20 paths -> /usr/include/suitesparse and the system libraries; -lopenblas -> -lblas (host BLAS, used only by CHOLMOD's coarse-level factorisation). All other flags as released: -Wall -g -mp=gpu -mp=noautopar -Msafeptr -march=native -O4 -mavx -mavx2, -DDTU_HPC.",
+  "Runtime: LD_LIBRARY_PATH puts the HPC SDK's libgomp.so.1 shim first, so CHOLMOD (built against GNU libgomp) shares NVIDIA's OpenMP runtime; without it the unmodified binary warns about a second OpenMP runtime and aborts with 'libgomp: TODO' (runs/native_v1). See openmp_runtime.",
+  "Source: the five `nowait` clauses are removed (patch_nowait.diff, src_patched/): two target enter data (gpu_definitions.c), the z = u copy, the invD update from and the u += alpha p update (stencil_solvers.c). With them the binary faults with CUDA_EXCEPTION_15 'Invalid Managed Memory Access' at the kernel launch after the first nowait kernel (probe_bt.log): the device reports 'Concurrent Managed Memory: No' under WSL2 (probe_mem.log), so host access to managed memory while a deferred kernel runs is not allowed. Each of the five is followed by a taskwait before its result is used (gpu_definitions.c after the enter data; stencil_solvers.c:323 for z and invD, :389 for u), and executing a target task undeferred is one of the schedules the OpenMP standard allows for a nowait region; the patched program therefore runs one of the executions the released program permits, without the overlap."
+ ],
+ "findings": {
+  "build": "the released code needs three adaptations on this card and toolchain (build_adaptations): the cc89 target with Ubuntu library paths, the libgomp shim on the runtime path, and removal of its five nowait clauses because WSL2 has no concurrent managed memory",
+  "stall_from_iteration_5": "a result about the released code under this toolchain, not a gate failure: in the native 128x64x64 cantilever every state solve from design iteration 5 on stops at the 1000-step cap (native_iterations.csv), also with one host thread and at -O2 (runs/diag_threads1_i6, runs/diag_O2_i6); the cause was not isolated. Matched design-workload performance is left to T28.",
+  "run_to_run_non_reproducibility": "three harness runs with the same binary, inputs and instrumentation (harness_i5_v2, harness_i5_v3, harness_i5_v4; dumps and the two extra operator actions at states 1-5): the iteration-1 densities are bitwise equal in all three pairs, but the returned iteration-1 displacements are not bitwise equal (relative differences 3.7e-08, 3.7e-08, 3.7e-08 on the free DOFs), so the first state solve is not bitwise reproducible; the densities differ from iteration 2 on (iteration 5: max differences 4.5e-05-5.3e-05). The FP32 recursive residual of the iteration-4 solve is 7.786e-06, 7.74e-06, 7.713e-06 and that of the capped iteration-5 solve (1000 steps) is 0.9215127, 1.548609, 0.9416427. The fourth run, harness_i5, dumped only at states 1 and 5; its comparison with harness_i5_v2 (iteration-5 density difference 5.7e-05, residuals [1.507418, 0.9215127]) is kept but labelled as differently instrumented. Which operation of the first solve is nondeterministic was not located."
+ },
+ "gpu_memory_rule_2026_11_23": {
+  "admitted_runs": {
+   "livestop_test_4g": {
+    "predicted_peak_bytes": 4399824896,
+    "prediction_basis": "spill_probe holds 4 GiB of 1 GiB cudaMalloc blocks; spill_control_22g measured vmwp dedicated growth 23677898752 B for 22 GiB, i.e. the request plus about 53 MiB; 100 MiB allowance",
+    "driver_free_bytes_cudaMemGetInfo_in_wsl": 24104665088,
+    "wsl_nvidia_smi_free_mib": 21794.0,
+    "admitted": true,
+    "guard_require_budget_ok": true,
+    "guard_require_budget_effective_free_bytes": 19214434304,
+    "other_processes_dedicated_total_bytes": 6149410816,
+    "observed_vmwp_dedicated_growth_bytes": 4697804800,
+    "observed_growth_within_prediction": false,
+    "observed_over_predicted": 1.068,
+    "live_stop_samples_checked": 3,
+    "live_stop_max_shared_growth_bytes": 77594624,
+    "live_stop_fired": "test trigger: dedicated growth 4697804800 B > 2147483648 B",
+    "status": "stopped_by_test_trigger",
+    "returncode": 9,
+    "monitor_version": 2
+   },
+   "harness_i5_v3": {
+    "predicted_peak_bytes": 1929379840,
+    "prediction_basis": "harness_i5 and harness_i5_v2 (same binary and grid) measured nvidia-smi device growth 1655 and 1673 MiB, vmwp dedicated growth 1634 and 1657 MiB; prediction 1673 MiB plus 10 percent",
+    "driver_free_bytes_cudaMemGetInfo_in_wsl": 24104665088,
+    "wsl_nvidia_smi_free_mib": 21795.0,
+    "admitted": true,
+    "guard_require_budget_ok": true,
+    "guard_require_budget_effective_free_bytes": 19215478784,
+    "other_processes_dedicated_total_bytes": 6148366336,
+    "observed_vmwp_dedicated_growth_bytes": 1713545216,
+    "observed_growth_within_prediction": true,
+    "observed_over_predicted": 0.888,
+    "live_stop_samples_checked": 78,
+    "live_stop_max_shared_growth_bytes": 81788928,
+    "live_stop_fired": null,
+    "status": "completed",
+    "returncode": 0,
+    "monitor_version": 2
+   },
+   "harness_i5_v4": {
+    "predicted_peak_bytes": 1976565760,
+    "prediction_basis": "harness_i5, harness_i5_v2 and harness_i5_v3 (same binary and grid) measured vmwp dedicated growth 1634, 1657 and 1714 MiB; prediction 1714 MiB plus 10 percent",
+    "driver_free_bytes_cudaMemGetInfo_in_wsl": 24104665088,
+    "wsl_nvidia_smi_free_mib": 21633.0,
+    "admitted": true,
+    "guard_require_budget_ok": true,
+    "guard_require_budget_effective_free_bytes": 19045597184,
+    "other_processes_dedicated_total_bytes": 6318247936,
+    "observed_vmwp_dedicated_growth_bytes": 1713545216,
+    "observed_growth_within_prediction": true,
+    "observed_over_predicted": 0.867,
+    "live_stop_samples_checked": 78,
+    "live_stop_max_shared_growth_bytes": 81788928,
+    "live_stop_fired": null,
+    "status": "completed",
+    "returncode": 0,
+    "monitor_version": 2
+   },
+   "livestop_v3_trigger": {
+    "predicted_peak_bytes": 4823449600,
+    "prediction_basis": "vmwp dedicated growth observed for spill_probe 4 in runs/livestop_test_4g (4697804800 B = 4480 MiB), rounded up to 4600 MiB",
+    "driver_free_bytes_cudaMemGetInfo_in_wsl": 24104665088,
+    "wsl_nvidia_smi_free_mib": 21792.0,
+    "admitted": true,
+    "guard_require_budget_ok": true,
+    "guard_require_budget_effective_free_bytes": 19212058624,
+    "other_processes_dedicated_total_bytes": 6151786496,
+    "observed_vmwp_dedicated_growth_bytes": 4697804800,
+    "observed_growth_within_prediction": true,
+    "observed_over_predicted": 0.974,
+    "live_stop_samples_checked": 3,
+    "live_stop_max_shared_growth_bytes": 77594624,
+    "live_stop_fired": "test trigger: dedicated growth 4697804800 B > 2147483648 B",
+    "status": "stopped_by_test_trigger",
+    "returncode": 9,
+    "monitor_version": 3
+   },
+   "livestop_v3_sampler_lost": {
+    "predicted_peak_bytes": 4823449600,
+    "prediction_basis": "vmwp dedicated growth observed for spill_probe 4 in runs/livestop_test_4g (4697804800 B = 4480 MiB), rounded up to 4600 MiB",
+    "driver_free_bytes_cudaMemGetInfo_in_wsl": 24104665088,
+    "wsl_nvidia_smi_free_mib": 21794.0,
+    "admitted": true,
+    "guard_require_budget_ok": true,
+    "guard_require_budget_effective_free_bytes": 19214151680,
+    "other_processes_dedicated_total_bytes": 6149693440,
+    "observed_vmwp_dedicated_growth_bytes": 4697804800,
+    "observed_growth_within_prediction": true,
+    "observed_over_predicted": 0.974,
+    "live_stop_samples_checked": 2,
+    "live_stop_max_shared_growth_bytes": 77594624,
+    "live_stop_fired": "WDDM sampler ended while armed",
+    "status": "stopped_sampling_lost",
+    "returncode": 9,
+    "monitor_version": 3
+   },
+   "contention_holder": {
+    "predicted_peak_bytes": 4823449600,
+    "prediction_basis": "vmwp dedicated growth observed for spill_probe 4 in runs/livestop_test_4g (4697804800 B = 4480 MiB), rounded up to 4600 MiB; the two holds run one after the other",
+    "driver_free_bytes_cudaMemGetInfo_in_wsl": 24104665088,
+    "wsl_nvidia_smi_free_mib": 21798.0,
+    "admitted": true,
+    "guard_require_budget_ok": true,
+    "guard_require_budget_effective_free_bytes": 19218419712,
+    "other_processes_dedicated_total_bytes": 6145425408,
+    "observed_vmwp_dedicated_growth_bytes": 4697804800,
+    "observed_growth_within_prediction": true,
+    "observed_over_predicted": 0.974,
+    "live_stop_samples_checked": 20,
+    "live_stop_max_shared_growth_bytes": 77594624,
+    "live_stop_fired": null,
+    "status": "completed",
+    "returncode": 0,
+    "monitor_version": 3
+   },
+   "v4_short_job": {
+    "predicted_peak_bytes": 67108864,
+    "prediction_basis": "test of monitor version 4: memfree (one CUDA context and cudaMemGetInfo inside WSL) followed by 8 s of sleep; no allocation of its own",
+    "driver_free_bytes_cudaMemGetInfo_in_wsl": 24104665088,
+    "wsl_nvidia_smi_free_mib": 21783.0,
+    "admitted": true,
+    "guard_require_budget_ok": true,
+    "guard_require_budget_effective_free_bytes": 19557224448,
+    "other_processes_dedicated_total_bytes": 6159093760,
+    "observed_vmwp_dedicated_growth_bytes": null,
+    "observed_growth_within_prediction": true,
+    "observed_over_predicted": 0.0,
+    "live_stop_samples_checked": 13,
+    "live_stop_max_shared_growth_bytes": 0,
+    "live_stop_fired": null,
+    "status": "completed",
+    "returncode": 0,
+    "monitor_version": 4
+   },
+   "v4_1_carrier_job": {
+    "predicted_peak_bytes": 4718592000,
+    "prediction_basis": "runs/livestop_test_4g measured vmwp dedicated growth 4480 MiB for the same command (spill_probe 4: four 1 GiB cudaMalloc blocks held 12 s)",
+    "driver_free_bytes_cudaMemGetInfo_in_wsl": 24104665088,
+    "wsl_nvidia_smi_free_mib": 21772.0,
+    "admitted": true,
+    "guard_require_budget_ok": true,
+    "guard_require_budget_effective_free_bytes": 19535142912,
+    "other_processes_dedicated_total_bytes": 6181175296,
+    "observed_vmwp_dedicated_growth_bytes": 4697804800,
+    "observed_growth_within_prediction": true,
+    "observed_over_predicted": 0.996,
+    "live_stop_samples_checked": 15,
+    "live_stop_max_shared_growth_bytes": 77594624,
+    "live_stop_fired": null,
+    "status": "completed",
+    "returncode": 0,
+    "monitor_version": 4
+   },
+   "v4_2_carrier_job": {
+    "predicted_peak_bytes": 4718592000,
+    "prediction_basis": "runs/livestop_test_4g measured vmwp dedicated growth 4480 MiB for the same command (spill_probe 4: four 1 GiB cudaMalloc blocks held 12 s)",
+    "driver_free_bytes_cudaMemGetInfo_in_wsl": 24104665088,
+    "wsl_nvidia_smi_free_mib": 21789.0,
+    "admitted": true,
+    "guard_require_budget_ok": true,
+    "guard_require_budget_effective_free_bytes": 19563462656,
+    "other_processes_dedicated_total_bytes": 6152855552,
+    "observed_vmwp_dedicated_growth_bytes": 4697804800,
+    "observed_growth_within_prediction": true,
+    "observed_over_predicted": 0.996,
+    "live_stop_samples_checked": 16,
+    "live_stop_max_shared_growth_bytes": 77594624,
+    "live_stop_fired": null,
+    "status": "completed",
+    "returncode": 0,
+    "monitor_version": 4
+   },
+   "v4_2_trigger_job": {
+    "predicted_peak_bytes": 4718592000,
+    "prediction_basis": "runs/livestop_test_4g measured vmwp dedicated growth 4480 MiB for the same command (spill_probe 4: four 1 GiB cudaMalloc blocks held 12 s)",
+    "driver_free_bytes_cudaMemGetInfo_in_wsl": 24104665088,
+    "wsl_nvidia_smi_free_mib": 21791.0,
+    "admitted": true,
+    "guard_require_budget_ok": true,
+    "guard_require_budget_effective_free_bytes": 19555590144,
+    "other_processes_dedicated_total_bytes": 6160728064,
+    "observed_vmwp_dedicated_growth_bytes": 4697804800,
+    "observed_growth_within_prediction": true,
+    "observed_over_predicted": 0.996,
+    "live_stop_samples_checked": 9,
+    "live_stop_max_shared_growth_bytes": 77594624,
+    "live_stop_fired": "test trigger: dedicated growth 4697804800 B > 2147483648 B",
+    "status": "stopped_by_test_trigger",
+    "returncode": 9,
+    "monitor_version": 4
+   }
+  },
+  "prediction_shortfalls": {
+   "livestop_test_4g": "observed vmwp dedicated growth 4697804800 B exceeds the prediction 4399824896 B by 6.8%; the prediction took the 22 GiB control's dedicated growth as request plus overhead, but part of that control went to shared memory, so its dedicated growth understated the overhead. Admission still held with 17796247552 B to spare (observed growth plus 1.5 GB against cudaMemGetInfo's free memory)."
+  },
+  "cupy_comparison_process": {
+   "script": "t12_compare.py (t12guard.cupy_guard)",
+   "predicted_peak_bytes": 1543503872,
+   "prediction_basis": "twice the device-wide growth T27 measured for the mg64 path at k=80 (512000 elements; tasks/T27/out/H3_solve_k80_mg64_rep.json), for the extra operators and dumped vectors of this script",
+   "cuda_free_at_start_bytes": 24152899584,
+   "admitted": true,
+   "pool_cap_bytes": 22542286848,
+   "guard_require_budget_ok": true,
+   "guard_require_budget_effective_free_bytes": 19259875328,
+   "other_processes_dedicated_total_bytes": 6142251008,
+   "live_stop": "WDDM sampler of the process, 63 samples about every 1.29 s: 2 before arming (the last of them is the baseline) and 61 checked after arming; max shared growth 33554432 B over the baseline; fired: False; checks span the work: True (largest gap 1.32 s)",
+   "invocation": "4ddc6807aecd41508762bf69b8aebf73",
+   "coverage": {
+    "covered": true,
+    "baseline_before_start": true,
+    "n_checked_in_or_after_job": 61,
+    "first_check_after_start_s": 1.2763268947601318,
+    "last_check_minus_end_s": 0.7269692420959473,
+    "max_gap_s": 1.3219244480133057,
+    "max_gap_allowed_s": 5.0
+   },
+   "spilled": false,
+   "dedicated_peak_bytes_wddm": 539189248,
+   "pool_used_peak_bytes": 117574656,
+   "pool_reserved_peak_bytes": 125215232,
+   "allocation_failure": false,
+   "result_written_only_if_clean": "compare.json is written only when neither the live stop nor the checkpoint SpillWatch saw growth above 256 MiB, the checks span the work and no pool allocation failed; otherwise compare_refused.json and no result. The gate accepts compare.json only when its invocation id is that of the last invocation and that invocation completed (compare_invocation.json)",
+   "superseded": "compare_v2.json (no pool cap, no admission, checkpoint-only spill checks; sampled checkpoints max 111149056 B) and compare_v3.json (guard version 2, no invocation id) are replaced by compare.json; reproduction_of_earlier_comparisons lists what was reproduced and what changed"
+  },
+  "earlier_runs_not_admitted": {
+   "runs": [
+    "diag_O2_i6",
+    "diag_threads1_i6",
+    "harness_i5",
+    "harness_i5_v2",
+    "native_patched_v1",
+    "native_v1",
+    "notify_i1",
+    "spill_control_22g"
+   ],
+   "what_this_is": "a retrospective estimate, not an admission: these jobs were launched by monitor version 1, which made no launch-time free-memory query inside WSL, formed no prediction and recorded no guard.require_budget answer. The estimate subtracts the Windows nvidia-smi usage before launch from the device total recorded earlier (probe_ubuntu.log) and uses the observed growth in place of a prediction. It cannot certify admission under rule (a); the measurements are kept under the operator note on T12, and the action check they fed is reproduced by the admitted runs harness_i5_v3 and harness_i5_v4.",
+   "per_run": {
+    "diag_O2_i6": {
+     "device_total_mib_from_probe_ubuntu_log": 24564.0,
+     "windows_nvidia_smi_used_before_launch_mib": 3419.0,
+     "estimated_free_mib_total_minus_used": 21145.0,
+     "observed_device_growth_mib_in_place_of_a_prediction": 2032.0,
+     "observed_growth_plus_1p5GB_below_estimate": true,
+     "vm_shared_growth_bytes": 81788928,
+     "shared_growth_within_256MiB": true
+    },
+    "diag_threads1_i6": {
+     "device_total_mib_from_probe_ubuntu_log": 24564.0,
+     "windows_nvidia_smi_used_before_launch_mib": 3176.0,
+     "estimated_free_mib_total_minus_used": 21388.0,
+     "observed_device_growth_mib_in_place_of_a_prediction": 2187.0,
+     "observed_growth_plus_1p5GB_below_estimate": true,
+     "vm_shared_growth_bytes": 106549248,
+     "shared_growth_within_256MiB": true
+    },
+    "harness_i5": {
+     "device_total_mib_from_probe_ubuntu_log": 24564.0,
+     "windows_nvidia_smi_used_before_launch_mib": 3431.0,
+     "estimated_free_mib_total_minus_used": 21133.0,
+     "observed_device_growth_mib_in_place_of_a_prediction": 1655.0,
+     "observed_growth_plus_1p5GB_below_estimate": true,
+     "vm_shared_growth_bytes": 81788928,
+     "shared_growth_within_256MiB": true
+    },
+    "harness_i5_v2": {
+     "device_total_mib_from_probe_ubuntu_log": 24564.0,
+     "windows_nvidia_smi_used_before_launch_mib": 1990.0,
+     "estimated_free_mib_total_minus_used": 22574.0,
+     "observed_device_growth_mib_in_place_of_a_prediction": 1673.0,
+     "observed_growth_plus_1p5GB_below_estimate": true,
+     "vm_shared_growth_bytes": 106549248,
+     "shared_growth_within_256MiB": true
+    },
+    "native_patched_v1": {
+     "device_total_mib_from_probe_ubuntu_log": 24564.0,
+     "windows_nvidia_smi_used_before_launch_mib": 3194.0,
+     "estimated_free_mib_total_minus_used": 21370.0,
+     "observed_device_growth_mib_in_place_of_a_prediction": 1611.0,
+     "observed_growth_plus_1p5GB_below_estimate": true,
+     "vm_shared_growth_bytes": 81788928,
+     "shared_growth_within_256MiB": true
+    },
+    "native_v1": {
+     "device_total_mib_from_probe_ubuntu_log": 24564.0,
+     "windows_nvidia_smi_used_before_launch_mib": 3168.0,
+     "estimated_free_mib_total_minus_used": 21396.0,
+     "observed_device_growth_mib_in_place_of_a_prediction": 35.0,
+     "observed_growth_plus_1p5GB_below_estimate": true,
+     "vm_shared_growth_bytes": null,
+     "shared_growth_within_256MiB": null
+    },
+    "notify_i1": {
+     "device_total_mib_from_probe_ubuntu_log": 24564.0,
+     "windows_nvidia_smi_used_before_launch_mib": 3380.0,
+     "estimated_free_mib_total_minus_used": 21184.0,
+     "observed_device_growth_mib_in_place_of_a_prediction": 1629.0,
+     "observed_growth_plus_1p5GB_below_estimate": true,
+     "vm_shared_growth_bytes": 106549248,
+     "shared_growth_within_256MiB": true
+    },
+    "spill_control_22g": {
+     "device_total_mib_from_probe_ubuntu_log": 24564.0,
+     "windows_nvidia_smi_used_before_launch_mib": 3254.0,
+     "estimated_free_mib_total_minus_used": 21310.0,
+     "observed_device_growth_mib_in_place_of_a_prediction": 20643.0,
+     "observed_growth_plus_1p5GB_below_estimate": false,
+     "vm_shared_growth_bytes": 406847488,
+     "shared_growth_within_256MiB": false
+    }
+   }
+  },
+  "positive_control": "spill_control_22g held 22 GiB from inside WSL on purpose under monitor version 1, to show that vmwp's shared counter sees a WSL spill (shared growth 406847488 B). It would not be admitted under the rule; it is a guard test, none of its output is a result, and no further spill control is run (the live stop is tested without shared memory: livestop_test_4g).",
+  "allocation_failures": {
+   "runs_with_nonzero_exit_or_oom_message": {
+    "livestop_test_4g": {
+     "returncode": 9,
+     "status": "stopped_by_test_trigger",
+     "oom_messages": []
+    },
+    "livestop_v3_sampler_lost": {
+     "returncode": 9,
+     "status": "stopped_sampling_lost",
+     "oom_messages": []
+    },
+    "livestop_v3_trigger": {
+     "returncode": 9,
+     "status": "stopped_by_test_trigger",
+     "oom_messages": []
+    },
+    "livestop_v3_trigger_attempt1": {
+     "returncode": 127,
+     "status": "failed_nonzero_exit",
+     "oom_messages": []
+    },
+    "native_v1": {
+     "returncode": 1,
+     "status": null,
+     "oom_messages": []
+    },
+    "status_v3_exit3": {
+     "returncode": 3,
+     "status": "failed_nonzero_exit",
+     "oom_messages": []
+    },
+    "status_v3_oom_message": {
+     "returncode": 0,
+     "status": "refused_allocation_failure",
+     "oom_messages": [
+      "cudaMalloc failed"
+     ]
+    },
+    "v4_2_trigger_job": {
+     "returncode": 9,
+     "status": "stopped_by_test_trigger",
+     "oom_messages": []
+    }
+   },
+   "allocation_failures_in_measured_or_test_jobs": [],
+   "note": "status_v3_oom_message prints a cudaMalloc failure message on purpose (synthetic labelling test, no GPU work); the other nonzero exits are native_v1 (abort at 'libgomp: TODO' before any allocation of note), the jobs ended by a live stop (exit 9 after the kill) and the synthetic or mislaunched status tests"
+  }
+ },
+ "native_run": {
+  "command": "./top3d -x 16 -y 8 -z 8 -l 4 -v 1 (128x64x64, 4 levels, volfrac 0.2, rmin 1.5, 20 design iterations), OMP_TARGET_OFFLOAD=MANDATORY, OMP_NUM_THREADS=12",
+  "returncode": 0,
+  "wall_s": 1441.75,
+  "iterations_file": "native_iterations.csv",
+  "iterations_meeting_released_stop": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "released_stop": "FP32 recursive residual <= 1e-5 (the released criterion; not an FP64 true residual)",
+  "first_iteration_at_pcg_cap": 5,
+  "pcg_cap": 1000,
+  "final_printed_objective": 13293.365234,
+  "final_printed_objective_source": "summary line of runs/native_patched_v1/stdout.txt (6 decimals)",
+  "final_relres_fp32_recursive": 1330.0,
+  "objective_definition": "the printed objective is sum_e E_e u_e^T KE u_e accumulated in an FP32 (DTYPE) OpenMP reduction (getComplianceAndSensetivity_halo); it is not the FP64 work F.U",
+  "note": "Iterations before 5 meet the released FP32 recursive stop; the FP64 true residual was checked at design iterations 1-5 of the harness run (fp64_residual_check), not at the iterations of this run. From design iteration 5 on every state solve stops at the cap and the printed objective grows; the run is not a converged design and not usable as a design-workload timing. Same behaviour with one host thread (runs/diag_threads1_i6) and with -O2 without -Msafeptr/-march=native (runs/diag_O2_i6); the cause was not isolated."
+ },
+ "gpu_execution": {
+  "confirmed": true,
+  "offload_mandatory": true,
+  "kernel_launches_one_design_iteration": 1378,
+  "kernel_launches_on_device_0": 1378,
+  "distinct_offloaded_kernels": 36,
+  "nvidia_smi_samples_util_ge_50_during_native_run": 6864,
+  "nvidia_smi_samples_during_native_run": 6963,
+  "source": "runs/notify_i1 (NVCOMPILER_ACC_NOTIFY=1), runs/native_patched_v1/monitor.json"
+ },
+ "guards": {
+  "covers_process": true,
+  "conditions": {
+   "carrier_followed_in_every_measured_run": true,
+   "shared_growth_of_a_wsl_job_visible_in_vmwp_counter": true,
+   "live_stop_ends_the_wsl_job_and_not_the_vm": true,
+   "repeat_harness_runs_admitted_clean_under_live_stop": true,
+   "cupy_comparison_admitted_capped_live_stopped_clean": true,
+   "guard_version_3_tests_passed": true
+  },
+  "rule": "covers_process requires all six conditions: (1) every measured run is clean under t12mon.validate (vmwp found as carrier, at least 3 WDDM samples inside the job, dedicated growth within a factor 2 of the nvidia-smi device growth, shared growth under 256 MiB; with no carrier the spill state is unknown); (2) the 22 GiB control is monitored and flagged as spilled, i.e. vmwp's shared counter sees a WSL spill; (3) the live stop of monitor version 2 ends a WSL job inside WSL, before its natural end, and leaves the VM running (livestop_test_4g); (4) the repeat harness runs were admitted before launch, exited 0 with status completed, and ran clean under the live stop with checks spanning the whole job (baseline sample before launch, no gap above 5 s, a check after the exit; t12mon.record_coverage); (5) the CuPy comparison process ran under cupy_guard version 3 (lock, WSL-aware exclusivity, admission, pool cap, live stop with checks spanning the work, no allocation failure) and compare.json carries the id of the last invocation, which completed; (6) the tests of guard version 3 passed (guard_version_3_tests). Post-run detection alone does not pass the condition.",
+  "monitor_versions": {
+   "1": "runs native_v1, native_patched_v1, notify_i1, spill_control_22g, harness_i5, harness_i5_v2, diag_O2_i6, diag_threads1_i6: WDDM snapshots about every 2.4 s; spill evaluated only after the job exited; no admission; no live stop. Kept under the operator note on T12.",
+   "2": "runs livestop_test_4g, harness_i5_v3, harness_i5_v4 (and the failed first test livestop_test_4g_attempt1): admission before launch (cudaMemGetInfo inside WSL), WDDM sample about every 1.3 s with every sample after arming checked by the live stop, kill of the job's process tree inside WSL (killtree.sh), nvidia-smi on Windows and inside WSL. Defects found by the checker and fixed in version 3: it launched even when the sampler had given no baseline sample (the first sample after allocation would then have become the baseline), it waited for the job when sampling stopped mid-job, its status ignored the exit code, and its exclusivity check was not shared with the CuPy launcher and reserved nothing. Its saved runs are checked for these from their records: baseline sample before launch, checks spanning the job, exit 0 (admission_and_live_stop_per_run)",
+   "3": "runs livestop_v3_trigger, livestop_v3_sampler_lost, status_v3_exit3, status_v3_oom_message, contention_holder, contention_second (and the mislaunched livestop_v3_trigger_attempt1): version 2 plus the GPU lock (gpu_job.lock) and the shared exclusivity check (t12guard.exclusive_check, repeated just before launch), no launch without a baseline sample at most 5 s old, a stop when the sampler ends or gives no sample for 5 s, every checked sample time recorded (coverage), and the status from t12guard.job_status (exit code and out-of-memory messages)",
+   "4": "runs v4_refused_admission, v4_short_job (operator note of 2026-11-23 13:00): version 3 with coverage that fails closed (an empty or missing baseline, or no vmwp with both counters in it, refuses the launch; a sample without the watched PID or with a missing counter stops the job and marks coverage false), the watch armed before the launcher's admission probe (WSL) or CUDA context (CuPy), guard.require_budget's answer computed with no CUDA context on Windows (WSL) or in the watched process (CuPy), and a lock that an existing lock, stale or not, refuses with its owner named",
+   "4.1": "runs v4_1_carrier_job, v4_1_cupy_job (checker's review of version 4.0): a sample without the watched process is never a checked sample (version 4.0 counted a CuPy process's samples as checked, with zero usage, until its first appearance; negative_control_v4_0.json); cupy_guard creates the CUDA context without allocating, waits until the process appears with both counters and only then admits, caps the pool and returns for allocation; coverage of a CuPy process runs from its first appearance (LiveStop.coverage). t12mon.py: the stop action and the start of the admission probe and of the job hold one lock, the probe and the job start only when the stop has not fired, and a stop during the probe kills the probe's process tree inside WSL (probe_free.sh, killtree.sh); version 4.0 could launch after a stop that fired during its exclusivity recheck. The launcher records its steps in program order (sequence)",
+   "4.2": "runs v4_2_carrier_job, v4_2_trigger_job, v4_2_cupy_job (checker's review of revision 4.1): the live stop decides under the launcher's lock (LiveStop fire_lock), so the stop cannot fire between the launcher's check and the start of the probe or the job (4.1 set the stop under its own lock); the stop ends the probe and the job by one routine (t12mon.end_wsl_tree) that retries killtree.sh until the wsl.exe of the Linux process has exited, and kills that wsl.exe only as a last resort, recorded as unconfirmed (4.1 killed the probe once and then its wsl.exe, and stopped retrying the job on code 3); both launchers get the 't12job' marker as an argument before they record their PID; killtree.sh tells a PID not yet recorded (2), not a T12 job (3), not running (4) and surviving processes (5) apart; t12mon.validate credits only a carrier PID the live stop watched (carrier_is_watched) and admitted_live counts the job as covered only then; cupy_guard calls opened() once the CUDA context exists, and every sample whose Get-Counter call started after it must contain the process with both counters (the sampler records each call's start), else the job stops at once (4.1 skipped such samples for up to 10 s)"
+  },
+  "guard_version_3_tests": {
+   "passed": true,
+   "parts": {
+    "logic_selftest_passed": true,
+    "test_trigger_stop_passed": true,
+    "sampling_lost_stop_passed": true,
+    "exit_status_labels_passed": true,
+    "contention_refusals_passed": true
+   },
+   "logic_selftest": {
+    "file": "guard_selftest_v3.json (test_t12guard_v3.py, no GPU)",
+    "cases": {
+     "arm_refuses_without_any_sample": true,
+     "arm_refuses_with_stale_sample": true,
+     "watchdog_stops_when_no_sample_arrives": true,
+     "sampler_end_while_armed_stops_job": true,
+     "shared_growth_limit_exact_and_above": true,
+     "baseline_is_pre_arm_sample": true,
+     "no_stop_after_disarm": true,
+     "status_labels": true,
+     "coverage_rules": true,
+     "lock_exclusive_released_and_stale_takeover": true,
+     "exclusivity_refuses_wsl_job_and_python_job": true
+    }
+   },
+   "test_trigger_stop": {
+    "passed": true,
+    "trigger": "test trigger: dedicated growth 4697804800 B > 2147483648 B",
+    "trigger_is_test_trigger": true,
+    "trigger_sample_after_launch_s": 1.99,
+    "job_tree_killed_after_launch_s": 2.89,
+    "killtree": "killed: 446 447",
+    "trigger_to_kill_s": 0.905,
+    "job_exit_after_launch_s": 2.892,
+    "job_natural_hold_s": 12.0,
+    "vm_pids_before_after": [
+     [
+      3440,
+      45572
+     ],
+     [
+      3440,
+      45572
+     ]
+    ],
+    "vm_survived": true,
+    "vmwp_dedicated_back_to_base_after_kill": true,
+    "vmwp_dedicated_growth_seen_bytes": 4697804800,
+    "vmwp_shared_growth_seen_bytes": 77594624,
+    "vmwp_shared_growth_below_256MiB_limit": true,
+    "status": "stopped_by_test_trigger",
+    "stop_kind": "test_trigger",
+    "wddm_sample_interval_s": 1.297,
+    "why_a_test_trigger": "the authors' rule forbids any job to use shared GPU memory, so the stop path is driven by a dedicated-growth test trigger (2 GiB) on a 4 GiB job that fits in dedicated memory; vmwp's shared counter still grew by 77594624 B during the job, below the 256 MiB limit (not zero). The shared-growth trigger is the same code path (t12guard.LiveStop.on_sample) and the 22 GiB control shows that vmwp's shared counter rises with a WSL spill from the first in-job sample"
+   },
+   "sampling_lost_stop": {
+    "passed": true,
+    "trigger": "WDDM sampler ended while armed",
+    "trigger_is_test_trigger": false,
+    "trigger_sample_after_launch_s": 3.02,
+    "job_tree_killed_after_launch_s": 3.42,
+    "killtree": "killed: 441 442",
+    "trigger_to_kill_s": 0.406,
+    "job_exit_after_launch_s": 3.424,
+    "job_natural_hold_s": 12.0,
+    "vm_pids_before_after": [
+     [
+      3440,
+      45572
+     ],
+     [
+      3440,
+      45572
+     ]
+    ],
+    "vm_survived": true,
+    "vmwp_dedicated_back_to_base_after_kill": true,
+    "vmwp_dedicated_growth_seen_bytes": 4697804800,
+    "vmwp_shared_growth_seen_bytes": 77594624,
+    "vmwp_shared_growth_below_256MiB_limit": true,
+    "status": "stopped_sampling_lost",
+    "stop_kind": "sampling_lost",
+    "wddm_sample_interval_s": 1.309,
+    "why_a_test_trigger": "the authors' rule forbids any job to use shared GPU memory, so the stop path is driven by a dedicated-growth test trigger (2 GiB) on a 4 GiB job that fits in dedicated memory; vmwp's shared counter still grew by 77594624 B during the job, below the 256 MiB limit (not zero). The shared-growth trigger is the same code path (t12guard.LiveStop.on_sample) and the 22 GiB control shows that vmwp's shared counter rises with a WSL spill from the first in-job sample",
+    "test": "the WDDM sampler was ended 3 s after launch (--test-kill-sampler 3) while the job held 4 GiB; the stop on lost sampling killed the job inside WSL; the checks then no longer span the job (coverage.covered false), which is why the job is stopped"
+   },
+   "exit_status_labels": {
+    "status_v3_exit3": {
+     "expected": "failed_nonzero_exit",
+     "recorded": "failed_nonzero_exit",
+     "returncode": 3,
+     "passed": true
+    },
+    "status_v3_oom_message": {
+     "expected": "refused_allocation_failure",
+     "recorded": "refused_allocation_failure",
+     "returncode": 0,
+     "passed": true
+    },
+    "livestop_v3_trigger_attempt1": {
+     "expected": "failed_nonzero_exit",
+     "recorded": "failed_nonzero_exit",
+     "returncode": 127,
+     "passed": true
+    }
+   },
+   "contention": {
+    "file": "contention/contention.json (contention_test.py)",
+    "cupy_launcher": {
+     "invocation_status": "refused_before_start",
+     "refused_reason": "GPU lock held",
+     "lock_holder": {
+      "refused_held_by": {
+       "pid": 51212,
+       "owner": "t12mon:contention_holder"
+      }
+     }
+    },
+    "second_wsl_launcher": {
+     "status": "refused_start",
+     "refused_reason": "GPU lock held"
+    },
+    "exclusivity_check_without_lock": {
+     "refused": true,
+     "reason": "the WSL VM holds GPU memory (a WSL GPU job runs): {3440: {'dedicated': 4738183168, 'shared': 102354944}}"
+    },
+    "holder": {
+     "status": "completed",
+     "returncode": 0,
+     "wall_s": 25.028,
+     "coverage": {
+      "covered": true,
+      "baseline_before_start": true,
+      "n_checked_in_or_after_job": 20,
+      "first_check_after_start_s": 0.987921953201294,
+      "last_check_minus_end_s": 0.7108554840087891,
+      "max_gap_s": 1.4240376949310303,
+      "max_gap_allowed_s": 5.0,
+      "derived_from": "live_stop.checked_sample_t"
+     },
+     "clean": true
+    },
+    "passed": true
+   },
+   "mislaunched_first_attempt": "runs/livestop_v3_trigger_attempt1: the Git Bash shell rewrote the job's path, the job exited 127 at once and version 3 recorded failed_nonzero_exit (version 2 would have recorded completed); rerun as livestop_v3_trigger"
+  },
+  "guard_version_4_tests": {
+   "passed": true,
+   "parts": {
+    "fix_1_coverage_fails_closed_unit_tests_passed": true,
+    "fix_2_no_gpu_work_outside_watch_unit_tests_passed": true,
+    "fix_3_lock_unit_tests_passed": true,
+    "fix_4_gate_statement_unit_tests_passed": true,
+    "unit_tests_are_revision_4_2": true,
+    "negative_control_reproduces_the_4_0_faults": true,
+    "real_counter_refusal_at_admission_after_arming": true,
+    "real_counter_cadence_and_launch_order": true,
+    "real_counter_wsl_carrier_followed_clean_covered": true,
+    "real_counter_wsl_stop_kills_the_job_inside_wsl_and_confirms_its_end": true,
+    "real_counter_wsl_kill_during_startup_ends_every_launch": true,
+    "real_counter_cupy_process_seen_before_allocation_and_covered": true
+   },
+   "real_wsl_kill_test": {
+    "file": "kill_selftest_v4_2.json (test_t12kill_v4_2.py, real WSL processes, no GPU work)",
+    "delays_s": [
+     0.0,
+     0.05,
+     0.1,
+     0.2,
+     0.3,
+     0.5,
+     0.8,
+     1.2,
+     2.0
+    ],
+    "summary": {
+     "4.2_job": {
+      "launches": 9,
+      "survived": 0,
+      "confirmed_ended": 9,
+      "delays_survived": []
+     },
+     "4.2_probe": {
+      "launches": 9,
+      "survived": 0,
+      "confirmed_ended": 9,
+      "delays_survived": []
+     },
+     "4.1_job": {
+      "launches": 9,
+      "survived": 0,
+      "confirmed_ended": 0,
+      "delays_survived": []
+     },
+     "4.1_probe": {
+      "launches": 9,
+      "survived": 0,
+      "confirmed_ended": 0,
+      "delays_survived": []
+     }
+    },
+    "passed_v4_2": true,
+    "control_note": "revision 4.1's kill logic also ended every real launch on this schedule: killtree.sh's own wsl.exe call took longer than the launchers' startup window, so it always found a marked PID. The 4.1 faults are shown by the unit tests' startup model (t12mon_stop_during_*_startup_*), not reproduced with real processes; 4.2 confirms each end instead of assuming it"
+   },
+   "unit_tests": {
+    "file": "guard_selftest_v4.json (test_t12guard_v4.py, revision 4.2, no GPU work)",
+    "fix_cases": {
+     "1_coverage_fails_closed": [
+      "baseline_missing_refuses",
+      "baseline_empty_refuses",
+      "baseline_only_unrelated_pid_refuses",
+      "baseline_missing_counter_refuses",
+      "good_samples_covered_no_stop",
+      "sample_only_unrelated_pid_stops",
+      "sample_missing_shared_counter_stops",
+      "sample_missing_dedicated_counter_stops",
+      "sample_empty_stops",
+      "cupy_mode_unrelated_pid_after_context_stops_at_once",
+      "cupy_mode_missing_counter_after_context_stops_at_once",
+      "cupy_mode_coverage_from_first_appearance_only_samples_called_before_context_unchecked",
+      "cupy_guard_sample_after_context_without_process_stops_at_once",
+      "validate_credits_only_a_watched_carrier",
+      "cupy_mode_absent_after_first_appearance_stops",
+      "cupy_mode_never_appears_after_open_stops",
+      "cupy_mode_empty_sample_stops_before_open",
+      "sampler_marks_missing_counter"
+     ],
+     "2_no_gpu_work_outside_watch": [
+      "cupy_guard_arms_before_context_waits_for_process_before_admission_and_allocation",
+      "cupy_guard_refusal_after_arming_stops_sampler_and_releases_lock",
+      "cupy_guard_process_never_seen_refused_before_admission",
+      "t12mon_arms_before_admission_probe_and_computes_require_budget_without_cuda",
+      "t12mon_stop_during_probe_kills_probe_and_refuses_launch",
+      "t12mon_stop_between_checks_and_launch_refuses_launch",
+      "t12mon_stop_after_launch_kills_job",
+      "t12mon_stop_at_each_prelaunch_point_refuses_or_kills",
+      "t12mon_launch_race_never_leaves_a_job_running_after_the_stop",
+      "t12mon_launch_race_never_creates_a_job_with_the_stop_set",
+      "t12mon_stop_between_check_and_job_creation_waits_for_the_start_then_kills",
+      "negative_control_4_1_stop_decision_lets_the_job_be_created_with_the_stop_set",
+      "t12mon_stop_during_probe_startup_retries_until_the_linux_probe_ended",
+      "t12mon_stop_during_job_startup_retries_until_the_linux_job_ended"
+     ],
+     "3_lock": [
+      "lock_exclusive_and_released",
+      "stale_lock_refuses_with_owner_named_and_is_kept",
+      "lock_creation_atomic_under_race",
+      "lock_uses_o_excl_and_no_removal_in_acquire"
+     ],
+     "4_gate_statement": [
+      "gate_states_comparison_admitted_only_with_technical_acceptance",
+      "gate_flag_and_text_follow_tech_ok"
+     ]
+    },
+    "cases": {
+     "baseline_missing_refuses": true,
+     "baseline_empty_refuses": true,
+     "baseline_only_unrelated_pid_refuses": true,
+     "baseline_missing_counter_refuses": true,
+     "good_samples_covered_no_stop": true,
+     "sample_only_unrelated_pid_stops": true,
+     "sample_missing_shared_counter_stops": true,
+     "sample_missing_dedicated_counter_stops": true,
+     "sample_empty_stops": true,
+     "cupy_mode_unrelated_pid_after_context_stops_at_once": true,
+     "cupy_mode_missing_counter_after_context_stops_at_once": true,
+     "cupy_mode_coverage_from_first_appearance_only_samples_called_before_context_unchecked": true,
+     "cupy_mode_absent_after_first_appearance_stops": true,
+     "cupy_mode_never_appears_after_open_stops": true,
+     "cupy_mode_empty_sample_stops_before_open": true,
+     "sampler_marks_missing_counter": true,
+     "cupy_guard_arms_before_context_waits_for_process_before_admission_and_allocation": true,
+     "cupy_guard_refusal_after_arming_stops_sampler_and_releases_lock": true,
+     "cupy_guard_process_never_seen_refused_before_admission": true,
+     "cupy_guard_sample_after_context_without_process_stops_at_once": true,
+     "t12mon_arms_before_admission_probe_and_computes_require_budget_without_cuda": true,
+     "t12mon_stop_during_probe_kills_probe_and_refuses_launch": true,
+     "t12mon_stop_between_checks_and_launch_refuses_launch": true,
+     "t12mon_stop_after_launch_kills_job": true,
+     "t12mon_stop_at_each_prelaunch_point_refuses_or_kills": true,
+     "t12mon_launch_race_never_leaves_a_job_running_after_the_stop": true,
+     "t12mon_launch_race_never_creates_a_job_with_the_stop_set": true,
+     "t12mon_stop_between_check_and_job_creation_waits_for_the_start_then_kills": true,
+     "negative_control_4_1_stop_decision_lets_the_job_be_created_with_the_stop_set": true,
+     "t12mon_stop_during_probe_startup_retries_until_the_linux_probe_ended": true,
+     "t12mon_stop_during_job_startup_retries_until_the_linux_job_ended": true,
+     "validate_credits_only_a_watched_carrier": true,
+     "lock_exclusive_and_released": true,
+     "stale_lock_refuses_with_owner_named_and_is_kept": true,
+     "lock_creation_atomic_under_race": true,
+     "lock_uses_o_excl_and_no_removal_in_acquire": true,
+     "gate_states_comparison_admitted_only_with_technical_acceptance": true,
+     "gate_flag_and_text_follow_tech_ok": true
+    },
+    "launch_race": {
+     "n": 16,
+     "refused_before_launch": 14,
+     "launched_then_killed": 2
+    }
+   },
+   "negative_control": {
+    "file": "negative_control_v4_0.json (negative_control_v4_0.py, no GPU work)",
+    "a_cupy_unrelated_pid_after_open_v4_0": {
+     "samples_checked": 1,
+     "fired": null,
+     "covered_from_arming": true
+    },
+    "a_cupy_unrelated_pid_after_open_v4_1": {
+     "samples_checked": 0,
+     "fired": null,
+     "covered_from_arming": false
+    },
+    "b_wsl_stop_in_launch_window_v4_0": {
+     "job_launched": true,
+     "status": "stopped_coverage_lost",
+     "exit": null,
+     "kill": "stop fired before launch: no job to kill",
+     "fired": true
+    },
+    "fault_reproduced": {
+     "a": true,
+     "a_fixed_in_v4_1": true,
+     "b": true
+    }
+   },
+   "real_counter_runs": {
+    "v4_refused_admission": {
+     "present": true,
+     "monitor_revision": "4.0",
+     "status": "refused_admission",
+     "watched_carrier_pids": [
+      3440
+     ],
+     "launcher_sequence": null,
+     "armed_before_admission_probe": true,
+     "baseline_has_vmwp_with_both_counters": true,
+     "coverage_lost": null,
+     "live_stop_fired": null,
+     "guard_require_budget_without_cuda_context": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows"
+    },
+    "v4_short_job": {
+     "present": true,
+     "monitor_revision": "4.0",
+     "status": "completed",
+     "watched_carrier_pids": [
+      3440
+     ],
+     "launcher_sequence": null,
+     "armed_before_admission_probe": true,
+     "baseline_has_vmwp_with_both_counters": true,
+     "coverage_lost": null,
+     "live_stop_fired": null,
+     "guard_require_budget_without_cuda_context": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows",
+     "coverage": {
+      "covered": true,
+      "baseline_before_start": true,
+      "n_checked_in_or_after_job": 13,
+      "first_check_after_start_s": 1.4053549766540527,
+      "last_check_minus_end_s": 0.8784482479095459,
+      "max_gap_s": 1.4445393085479736,
+      "max_gap_allowed_s": 5.0,
+      "coverage_lost": null,
+      "derived_from": "live_stop.checked_sample_t",
+      "from": "arming, before any GPU work of the launcher"
+     },
+     "validity": {
+      "vm_carrier": null,
+      "monitored": false,
+      "spilled": null,
+      "clean": false,
+      "carrier_over_device_growth": null,
+      "vm_dedicated_growth_bytes": null,
+      "vm_shared_growth_bytes": null,
+      "vm_carrier_pid": null,
+      "carrier_is_watched": false
+     },
+     "n_wddm_samples_during_job": 7,
+     "wall_s": 8.196,
+     "predicted_peak_bytes": 67108864,
+     "driver_free_bytes": 24104665088,
+     "guard_require_budget_ok": true,
+     "other_processes_dedicated_total_bytes": 6159093760,
+     "credited_for": "sampling cadence and launch order only; not carrier following (its record has no carrier, so spill state unknown and clean=false)"
+    },
+    "v4_1_carrier_job": {
+     "present": true,
+     "monitor_revision": "4.1",
+     "status": "completed",
+     "watched_carrier_pids": [
+      3440
+     ],
+     "launcher_sequence": [
+      "armed",
+      "admission_probe_start",
+      "job_start"
+     ],
+     "armed_before_admission_probe": true,
+     "baseline_has_vmwp_with_both_counters": true,
+     "coverage_lost": null,
+     "live_stop_fired": null,
+     "guard_require_budget_without_cuda_context": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows",
+     "coverage": {
+      "covered": true,
+      "baseline_before_start": true,
+      "n_checked_in_or_after_job": 15,
+      "first_check_after_start_s": 1.3162362575531006,
+      "last_check_minus_end_s": 0.5415689945220947,
+      "max_gap_s": 1.406078577041626,
+      "max_gap_allowed_s": 5.0,
+      "coverage_lost": null,
+      "derived_from": "live_stop.checked_sample_t",
+      "from": "arming, before any GPU work of the launcher"
+     },
+     "validity": {
+      "vm_carrier": "vmwp",
+      "monitored": true,
+      "spilled": false,
+      "clean": true,
+      "carrier_over_device_growth": 0.9991471412243532,
+      "vm_dedicated_growth_bytes": 4697804800,
+      "vm_shared_growth_bytes": 77594624,
+      "vm_carrier_pid": 3440,
+      "carrier_is_watched": true
+     },
+     "n_wddm_samples_during_job": 9,
+     "wall_s": 12.295,
+     "predicted_peak_bytes": 4718592000,
+     "driver_free_bytes": 24104665088,
+     "guard_require_budget_ok": true,
+     "other_processes_dedicated_total_bytes": 6181175296,
+     "credited_for": "carrier following under revision 4.1 (kept; revision 4.2 is v4_2_carrier_job)"
+    },
+    "v4_2_carrier_job": {
+     "present": true,
+     "monitor_revision": "4.2",
+     "status": "completed",
+     "watched_carrier_pids": [
+      3440
+     ],
+     "launcher_sequence": [
+      "armed",
+      "admission_probe_start",
+      "job_start"
+     ],
+     "armed_before_admission_probe": true,
+     "baseline_has_vmwp_with_both_counters": true,
+     "coverage_lost": null,
+     "live_stop_fired": null,
+     "guard_require_budget_without_cuda_context": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows",
+     "coverage": {
+      "covered": true,
+      "baseline_before_start": true,
+      "n_checked_in_or_after_job": 16,
+      "first_check_after_start_s": 1.3795499801635742,
+      "last_check_minus_end_s": 0.8856351375579834,
+      "max_gap_s": 1.456913948059082,
+      "max_gap_allowed_s": 5.0,
+      "coverage_lost": null,
+      "derived_from": "live_stop.checked_sample_t",
+      "from": "arming, before any GPU work of the launcher"
+     },
+     "validity": {
+      "vm_carrier": "vmwp",
+      "monitored": true,
+      "spilled": false,
+      "clean": true,
+      "carrier_over_device_growth": 0.9989243659420289,
+      "vm_dedicated_growth_bytes": 4697804800,
+      "vm_shared_growth_bytes": 77594624,
+      "vm_carrier_pid": 3440,
+      "carrier_is_watched": true
+     },
+     "n_wddm_samples_during_job": 10,
+     "wall_s": 12.364,
+     "predicted_peak_bytes": 4718592000,
+     "driver_free_bytes": 24104665088,
+     "guard_require_budget_ok": true,
+     "other_processes_dedicated_total_bytes": 6152855552
+    },
+    "v4_2_trigger_job": {
+     "present": true,
+     "monitor_revision": "4.2",
+     "status": "stopped_by_test_trigger",
+     "watched_carrier_pids": [
+      3440
+     ],
+     "launcher_sequence": [
+      "armed",
+      "admission_probe_start",
+      "job_start"
+     ],
+     "armed_before_admission_probe": true,
+     "baseline_has_vmwp_with_both_counters": true,
+     "coverage_lost": null,
+     "live_stop_fired": {
+      "t_sample": 1795471767.1970484,
+      "pid": 3440,
+      "kind": "test_trigger",
+      "is_test_trigger": true,
+      "reason": "test trigger: dedicated growth 4697804800 B > 2147483648 B",
+      "sample": {
+       "dedicated": 4738183168,
+       "shared": 102354944
+      },
+      "base": {
+       "dedicated": 40378368,
+       "shared": 24760320
+      },
+      "t_rel_launch_s": 1.7
+     },
+     "guard_require_budget_without_cuda_context": "in the launcher from the WSL probe and the WDDM counters, no CUDA context on Windows",
+     "coverage": {
+      "covered": true,
+      "baseline_before_start": true,
+      "n_checked_in_or_after_job": 9,
+      "first_check_after_start_s": 1.323380708694458,
+      "last_check_minus_end_s": 1.1237022876739502,
+      "max_gap_s": 1.354921579360962,
+      "max_gap_allowed_s": 5.0,
+      "coverage_lost": null,
+      "derived_from": "live_stop.checked_sample_t",
+      "from": "arming, before any GPU work of the launcher"
+     },
+     "validity": {
+      "vm_carrier": "vmwp",
+      "monitored": false,
+      "spilled": false,
+      "clean": false,
+      "carrier_over_device_growth": 0.9978119780066815,
+      "vm_dedicated_growth_bytes": 4697804800,
+      "vm_shared_growth_bytes": 77594624,
+      "vm_carrier_pid": 3440,
+      "carrier_is_watched": true
+     },
+     "n_wddm_samples_during_job": 2,
+     "wall_s": 1.912,
+     "predicted_peak_bytes": 4718592000,
+     "driver_free_bytes": 24104665088,
+     "guard_require_budget_ok": true,
+     "other_processes_dedicated_total_bytes": 6160728064,
+     "stop": {
+      "kind": "test_trigger",
+      "fired_rel_launch_s": 1.7,
+      "killed": "job",
+      "linux_process_ended_confirmed": true,
+      "confirmation": "its wsl.exe exited after killtree.sh returned 0",
+      "killtree_attempts": 1,
+      "killtree_stdout": "killed: 437 438",
+      "kill_done_rel_launch_s": 1.91,
+      "vm_survived": true
+     }
+    },
+    "v4_1_cupy_job": {
+     "present": true,
+     "guard_revision": "4.1",
+     "status": "completed",
+     "admitted": true,
+     "predicted_peak_bytes": 1610612736,
+     "prediction_basis": "the 1 GiB array plus 512 MiB for the CUDA context and the pool's rounding (the comparison process of compare.json, whose context alone is part of its WDDM dedicated usage, is the reference)",
+     "cuda_free_at_start_bytes": 24154996736,
+     "pool_cap_bytes": 22544384000,
+     "guard_require_budget_ok": true,
+     "other_processes_dedicated_total_bytes": 6168195072,
+     "armed_before_context": true,
+     "context_to_first_seen_s": 1.174,
+     "first_seen_before_first_allocation": true,
+     "checked_samples": 8,
+     "checked_samples_with_process_both_counters": 8,
+     "samples_not_checked_process_not_yet_seen": {
+      "before_open": 0,
+      "after_open": 0
+     },
+     "dedicated_peak_bytes_wddm": 1428320256,
+     "max_shared_growth_bytes": 77594624,
+     "max_shared_growth_note": "growth over zero: the process is absent at arming, so its baseline is zero and its context's own shared usage counts against the 256 MiB limit",
+     "live_stop_fired": null,
+     "coverage": {
+      "covered": true,
+      "baseline_before_start": true,
+      "n_checked_in_or_after_job": 8,
+      "first_check_after_start_s": 0.0,
+      "last_check_minus_end_s": 0.1048581600189209,
+      "max_gap_s": 1.2970871925354004,
+      "max_gap_allowed_s": 5.0,
+      "coverage_lost": null,
+      "from_t": 1795469017.6248386
+     },
+     "credited_for": "revision 4.1 (kept)"
+    },
+    "v4_2_cupy_job": {
+     "present": true,
+     "guard_revision": "4.2",
+     "status": "completed",
+     "admitted": true,
+     "predicted_peak_bytes": 1610612736,
+     "prediction_basis": "the 1 GiB array plus 512 MiB for the CUDA context and the pool's rounding (the comparison process of compare.json, whose context alone is part of its WDDM dedicated usage, is the reference)",
+     "cuda_free_at_start_bytes": 24154996736,
+     "pool_cap_bytes": 22544384000,
+     "guard_require_budget_ok": true,
+     "other_processes_dedicated_total_bytes": 6147743744,
+     "armed_before_context": true,
+     "context_to_first_seen_s": 1.155,
+     "first_seen_before_first_allocation": true,
+     "checked_samples": 9,
+     "checked_samples_with_process_both_counters": 9,
+     "samples_not_checked_process_not_yet_seen": {
+      "call_started_before_context": 0
+     },
+     "dedicated_peak_bytes_wddm": 1428320256,
+     "max_shared_growth_bytes": 77594624,
+     "max_shared_growth_note": "growth over zero: the process is absent at arming, so its baseline is zero and its context's own shared usage counts against the 256 MiB limit",
+     "live_stop_fired": null,
+     "coverage": {
+      "covered": true,
+      "baseline_before_start": true,
+      "n_checked_in_or_after_job": 9,
+      "first_check_after_start_s": 0.0,
+      "last_check_minus_end_s": 0.8097686767578125,
+      "max_gap_s": 1.287909984588623,
+      "max_gap_allowed_s": 5.0,
+      "coverage_lost": null,
+      "from_t": 1795471793.7730901
+     },
+     "samples_called_after_context": 9,
+     "samples_called_after_context_all_checked_with_process": true,
+     "rule": "strict from the CUDA context: every sample whose Get-Counter call started after the context must contain the process with both counters, else the job stops at once"
+    }
+   }
+  },
+  "coverage_of_earlier_records": {
+   "comparison": {
+    "checked_samples": 61,
+    "checked_samples_dedicated_and_shared_both_positive": 61,
+    "min_dedicated_bytes_in_checked_samples": 354570240,
+    "min_shared_bytes_in_checked_samples": 77594624,
+    "evidence": "both stored values strictly positive: each counter row was in the sample (the writer put in zero for a missing row, so key presence alone is not evidence)",
+    "coverage_from": "arming, which in guard version 3 followed the CUDA context, cudaMemGetInfo and guard.require_budget (the work began after arming)"
+   },
+   "harness_i5_v3": {
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "pid_with_counters": [
+     "3440"
+    ],
+    "job_wall_s": 97.934,
+    "in_job_samples": 76,
+    "in_job_samples_vmwp_dedicated_positive": 76,
+    "in_job_samples_vmwp_shared_positive": 76,
+    "samples_after_exit": 2,
+    "evidence": "a strictly positive value proves the counter row; version 3 filled missing rows with zero",
+    "coverage_from": "arming, after the admission probes (memfree inside WSL; guard.require_budget in a short Windows CuPy process)"
+   },
+   "harness_i5_v4": {
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "pid_with_counters": [
+     "3440"
+    ],
+    "job_wall_s": 97.311,
+    "in_job_samples": 75,
+    "in_job_samples_vmwp_dedicated_positive": 75,
+    "in_job_samples_vmwp_shared_positive": 75,
+    "samples_after_exit": 3,
+    "evidence": "a strictly positive value proves the counter row; version 3 filled missing rows with zero",
+    "coverage_from": "arming, after the admission probes (memfree inside WSL; guard.require_budget in a short Windows CuPy process)"
+   },
+   "statement": "the comparison (compare.json) and the repeat harness runs keep their results with the coverage they have, which runs from arming: in guard version 3 the launchers' own GPU work before arming (the comparison's CUDA context, cudaMemGetInfo and guard.require_budget; for WSL jobs memfree inside WSL and a short Windows CuPy process for guard.require_budget) was not watched. Version 4 arms the watch before that work."
+  },
+  "positive_control_timeline": {
+   "first_in_job_sample_over_limit_s": 0.41,
+   "shared_growth_at_that_sample_bytes": 406847488,
+   "job_wall_s": 14.235,
+   "returncode": 0,
+   "stopped_by_monitor": false,
+   "note": "the post-run monitor (version 1) waited for the job to exit and only then evaluated shared growth: the control was over the limit from its first in-job sample and ran on to its normal exit"
+  },
+  "live_stop_test": {
+   "passed": true,
+   "trigger": "test trigger: dedicated growth 4697804800 B > 2147483648 B",
+   "trigger_is_test_trigger": true,
+   "trigger_sample_after_launch_s": 1.21,
+   "job_tree_killed_after_launch_s": 1.58,
+   "killtree": "killed: 438 439",
+   "trigger_to_kill_s": 0.373,
+   "job_exit_after_launch_s": 1.584,
+   "job_natural_hold_s": 12.0,
+   "vm_pids_before_after": [
+    [
+     3440,
+     45572
+    ],
+    [
+     3440,
+     45572
+    ]
+   ],
+   "vm_survived": true,
+   "vmwp_dedicated_back_to_base_after_kill": true,
+   "vmwp_dedicated_growth_seen_bytes": 4697804800,
+   "vmwp_shared_growth_seen_bytes": 77594624,
+   "vmwp_shared_growth_below_256MiB_limit": true,
+   "status": "stopped_by_test_trigger",
+   "stop_kind": null,
+   "wddm_sample_interval_s": 1.303,
+   "why_a_test_trigger": "the authors' rule forbids any job to use shared GPU memory, so the stop path is driven by a dedicated-growth test trigger (2 GiB) on a 4 GiB job that fits in dedicated memory; vmwp's shared counter still grew by 77594624 B during the job, below the 256 MiB limit (not zero). The shared-growth trigger is the same code path (t12guard.LiveStop.on_sample) and the 22 GiB control shows that vmwp's shared counter rises with a WSL spill from the first in-job sample"
+  },
+  "monitor_defect_found_and_fixed": "the first live-stop test (runs/livestop_test_4g_attempt1) saw no carrier: 'Get-Counter -Continuous' resolves the counter instances once at start, and the GPU instance of a WSL job appears under vmwp only when the job opens the device. The sampler now issues a fresh Get-Counter for every sample in one persistent PowerShell process (t12guard._PS_MEM). Version 1 used one Get-Counter call per sample and is not affected; a continuous sampler is valid only for a process whose instance exists before the sampler starts (a CuPy process after its CUDA context).",
+  "admission_and_live_stop_per_run": {
+   "contention_holder": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": true,
+    "carrier_is_watched": true,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 20,
+     "first_check_after_start_s": 0.987921953201294,
+     "last_check_minus_end_s": 0.7108554840087891,
+     "max_gap_s": 1.4240376949310303,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "derived_from": "live_stop.checked_sample_t",
+     "from": "arming, after the admission probes (memfree inside WSL, guard.require_budget in a Windows CuPy process)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": true,
+    "status": "completed"
+   },
+   "diag_O2_i6": {
+    "admission_formed_before_launch": false,
+    "admitted": false,
+    "live_stop_active": false,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": null,
+    "coverage": {
+     "covered": false,
+     "why": "no live stop (record written before monitor version 2)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": false,
+    "status": "completed (record written before admission and live stop existed)"
+   },
+   "diag_threads1_i6": {
+    "admission_formed_before_launch": false,
+    "admitted": false,
+    "live_stop_active": false,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": null,
+    "coverage": {
+     "covered": false,
+     "why": "no live stop (record written before monitor version 2)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": false,
+    "status": "completed (record written before admission and live stop existed)"
+   },
+   "harness_i5": {
+    "admission_formed_before_launch": false,
+    "admitted": false,
+    "live_stop_active": false,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": null,
+    "coverage": {
+     "covered": false,
+     "why": "no live stop (record written before monitor version 2)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": false,
+    "status": "completed (record written before admission and live stop existed)"
+   },
+   "harness_i5_v2": {
+    "admission_formed_before_launch": false,
+    "admitted": false,
+    "live_stop_active": false,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": null,
+    "coverage": {
+     "covered": false,
+     "why": "no live stop (record written before monitor version 2)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": false,
+    "status": "completed (record written before admission and live stop existed)"
+   },
+   "harness_i5_v3": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": true,
+    "carrier_is_watched": true,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 78,
+     "first_check_after_start_s": 1.24,
+     "last_check_minus_end_s": 2.2860000000000014,
+     "max_gap_s": 1.3599999999999999,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "checked_count_matches_series": true,
+     "derived_from": "carrier_series (version 2 record; times relative to launch)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": true,
+    "status": "completed"
+   },
+   "harness_i5_v4": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": true,
+    "carrier_is_watched": true,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 78,
+     "first_check_after_start_s": 1.12,
+     "last_check_minus_end_s": 2.8689999999999998,
+     "max_gap_s": 1.3500000000000085,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "checked_count_matches_series": true,
+     "derived_from": "carrier_series (version 2 record; times relative to launch)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": true,
+    "status": "completed"
+   },
+   "livestop_test_4g": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": true,
+    "carrier_is_watched": true,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 3,
+     "first_check_after_start_s": 1.21,
+     "last_check_minus_end_s": 2.2359999999999998,
+     "max_gap_s": 1.33,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "checked_count_matches_series": true,
+     "derived_from": "carrier_series (version 2 record; times relative to launch)"
+    },
+    "live_stop_fired": true,
+    "returncode": 9,
+    "completed": false,
+    "status": "stopped_by_test_trigger"
+   },
+   "livestop_test_4g_attempt1": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": false,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 15,
+     "first_check_after_start_s": 0.9,
+     "last_check_minus_end_s": 2.8130000000000006,
+     "max_gap_s": 1.0300000000000011,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "checked_count_matches_series": true,
+     "derived_from": "carrier_series (version 2 record; times relative to launch)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": true,
+    "status": "completed"
+   },
+   "livestop_v3_sampler_lost": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": true,
+    "coverage": {
+     "covered": false,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 2,
+     "first_check_after_start_s": 0.8738384246826172,
+     "last_check_minus_end_s": -1.2075345516204834,
+     "max_gap_s": 1.342430830001831,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "derived_from": "live_stop.checked_sample_t",
+     "from": "arming, after the admission probes (memfree inside WSL, guard.require_budget in a Windows CuPy process)"
+    },
+    "live_stop_fired": true,
+    "returncode": 9,
+    "completed": false,
+    "status": "stopped_sampling_lost"
+   },
+   "livestop_v3_trigger": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": true,
+    "carrier_is_watched": true,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 3,
+     "first_check_after_start_s": 0.6449224948883057,
+     "last_check_minus_end_s": 0.39800500869750977,
+     "max_gap_s": 1.3414833545684814,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "derived_from": "live_stop.checked_sample_t",
+     "from": "arming, after the admission probes (memfree inside WSL, guard.require_budget in a Windows CuPy process)"
+    },
+    "live_stop_fired": true,
+    "returncode": 9,
+    "completed": false,
+    "status": "stopped_by_test_trigger"
+   },
+   "livestop_v3_trigger_attempt1": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": false,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 1,
+     "first_check_after_start_s": 0.6529343128204346,
+     "last_check_minus_end_s": 0.5668160915374756,
+     "max_gap_s": 1.2842130661010742,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "derived_from": "live_stop.checked_sample_t",
+     "from": "arming, after the admission probes (memfree inside WSL, guard.require_budget in a Windows CuPy process)"
+    },
+    "live_stop_fired": false,
+    "returncode": 127,
+    "completed": false,
+    "status": "failed_nonzero_exit"
+   },
+   "native_patched_v1": {
+    "admission_formed_before_launch": false,
+    "admitted": false,
+    "live_stop_active": false,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": null,
+    "coverage": {
+     "covered": false,
+     "why": "no live stop (record written before monitor version 2)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": false,
+    "status": "completed (record written before admission and live stop existed)"
+   },
+   "native_v1": {
+    "admission_formed_before_launch": false,
+    "admitted": false,
+    "live_stop_active": false,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": null,
+    "coverage": {
+     "covered": false,
+     "why": "no live stop (record written before monitor version 2)"
+    },
+    "live_stop_fired": false,
+    "returncode": 1,
+    "completed": false,
+    "status": "completed (record written before admission and live stop existed)"
+   },
+   "notify_i1": {
+    "admission_formed_before_launch": false,
+    "admitted": false,
+    "live_stop_active": false,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": null,
+    "coverage": {
+     "covered": false,
+     "why": "no live stop (record written before monitor version 2)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": false,
+    "status": "completed (record written before admission and live stop existed)"
+   },
+   "spill_control_22g": {
+    "admission_formed_before_launch": false,
+    "admitted": false,
+    "live_stop_active": false,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": null,
+    "coverage": {
+     "covered": false,
+     "why": "no live stop (record written before monitor version 2)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": false,
+    "status": "completed (record written before admission and live stop existed)"
+   },
+   "status_v3_exit3": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": false,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 1,
+     "first_check_after_start_s": 0.6923739910125732,
+     "last_check_minus_end_s": 0.6201236248016357,
+     "max_gap_s": 1.2841417789459229,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "derived_from": "live_stop.checked_sample_t",
+     "from": "arming, after the admission probes (memfree inside WSL, guard.require_budget in a Windows CuPy process)"
+    },
+    "live_stop_fired": false,
+    "returncode": 3,
+    "completed": false,
+    "status": "failed_nonzero_exit"
+   },
+   "status_v3_oom_message": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": false,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 1,
+     "first_check_after_start_s": 0.6230776309967041,
+     "last_check_minus_end_s": 0.55133056640625,
+     "max_gap_s": 1.2785184383392334,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "derived_from": "live_stop.checked_sample_t",
+     "from": "arming, after the admission probes (memfree inside WSL, guard.require_budget in a Windows CuPy process)"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": false,
+    "status": "refused_allocation_failure"
+   },
+   "v4_1_carrier_job": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": true,
+    "carrier_is_watched": true,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 15,
+     "first_check_after_start_s": 1.3162362575531006,
+     "last_check_minus_end_s": 0.5415689945220947,
+     "max_gap_s": 1.406078577041626,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "derived_from": "live_stop.checked_sample_t",
+     "from": "arming, before any GPU work of the launcher"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": true,
+    "status": "completed"
+   },
+   "v4_2_carrier_job": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": true,
+    "carrier_is_watched": true,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 16,
+     "first_check_after_start_s": 1.3795499801635742,
+     "last_check_minus_end_s": 0.8856351375579834,
+     "max_gap_s": 1.456913948059082,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "derived_from": "live_stop.checked_sample_t",
+     "from": "arming, before any GPU work of the launcher"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": true,
+    "status": "completed"
+   },
+   "v4_2_trigger_job": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": true,
+    "carrier_is_watched": true,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 9,
+     "first_check_after_start_s": 1.323380708694458,
+     "last_check_minus_end_s": 1.1237022876739502,
+     "max_gap_s": 1.354921579360962,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "derived_from": "live_stop.checked_sample_t",
+     "from": "arming, before any GPU work of the launcher"
+    },
+    "live_stop_fired": true,
+    "returncode": 9,
+    "completed": false,
+    "status": "stopped_by_test_trigger"
+   },
+   "v4_short_job": {
+    "admission_formed_before_launch": true,
+    "admitted": true,
+    "live_stop_active": true,
+    "live_stop_covers_job": false,
+    "carrier_is_watched": false,
+    "coverage": {
+     "covered": true,
+     "baseline_before_start": true,
+     "n_checked_in_or_after_job": 13,
+     "first_check_after_start_s": 1.4053549766540527,
+     "last_check_minus_end_s": 0.8784482479095459,
+     "max_gap_s": 1.4445393085479736,
+     "max_gap_allowed_s": 5.0,
+     "coverage_lost": null,
+     "derived_from": "live_stop.checked_sample_t",
+     "from": "arming, before any GPU work of the launcher"
+    },
+    "live_stop_fired": false,
+    "returncode": 0,
+    "completed": true,
+    "status": "completed"
+   }
+  },
+  "carrier": "WDDM 'GPU Process Memory' counters charge a WSL2 job to vmwp, not to a Linux PID. The counter covers all GPU work of the WSL VM (shared by every WSL distribution, including docker-desktop).",
+  "launch_refusal": "version 2 refuses to start when the WDDM counters return nothing, when another python process holds more than 200 MiB, when no WSL VM worker exists or the VM already holds more than 200 MiB (one GPU job at a time), and does not launch a job whose prediction plus 1.5 GB exceeds the free memory cudaMemGetInfo reports inside WSL. Other applications' dedicated memory is recorded, not counted (authors' decision of 2026-11-23). Version 3 takes gpu_job.lock first (the CuPy launcher too), refuses while it is held by a live process (version 4: while it exists at all, owner named), and repeats the exclusivity check immediately before launch; the CuPy launcher refuses while the WSL VM holds GPU memory. Launchers outside this folder do not take the lock; against them the check before launch is the protection, and a start between that check and the launch is not excluded.",
+  "refused_before_launch": {
+   "contention_second": {
+    "status": "refused_start",
+    "refused_reason": "GPU lock held"
+   },
+   "v4_refused_admission": {
+    "status": "refused_admission",
+    "refused_reason": null
+   }
+  },
+  "validity_per_run": {
+   "contention_holder": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "carrier_is_watched": true,
+    "carrier_identity": "carrier PID among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": 4697804800,
+    "vm_shared_growth_bytes": 77594624,
+    "carrier_over_device_growth": 0.9989243659420289,
+    "monitored": true,
+    "spilled": false,
+    "clean": true,
+    "not_monitored_reasons": [],
+    "other_growing_processes": []
+   },
+   "diag_O2_i6": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": null,
+    "carrier_is_watched": null,
+    "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+    "vm_dedicated_growth_bytes": 1659019264,
+    "vm_shared_growth_bytes": 81788928,
+    "carrier_over_device_growth": 0.7786240465059056,
+    "monitored": true,
+    "spilled": false,
+    "clean": true,
+    "not_monitored_reasons": [],
+    "other_growing_processes": [
+     "other-process-5",
+     "other-process-2"
+    ]
+   },
+   "diag_threads1_i6": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": null,
+    "carrier_is_watched": null,
+    "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+    "vm_dedicated_growth_bytes": 1692971008,
+    "vm_shared_growth_bytes": 106549248,
+    "carrier_over_device_growth": 0.7382455275491541,
+    "monitored": true,
+    "spilled": false,
+    "clean": true,
+    "not_monitored_reasons": [],
+    "other_growing_processes": [
+     "other-process-5",
+     "other-process-2"
+    ]
+   },
+   "harness_i5": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": null,
+    "carrier_is_watched": null,
+    "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+    "vm_dedicated_growth_bytes": 1713545216,
+    "vm_shared_growth_bytes": 81788928,
+    "carrier_over_device_growth": 0.9874103096676737,
+    "monitored": true,
+    "spilled": false,
+    "clean": true,
+    "not_monitored_reasons": [],
+    "other_growing_processes": []
+   },
+   "harness_i5_v2": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": null,
+    "carrier_is_watched": null,
+    "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+    "vm_dedicated_growth_bytes": 1737011200,
+    "vm_shared_growth_bytes": 106549248,
+    "carrier_over_device_growth": 0.9901631612372983,
+    "monitored": true,
+    "spilled": false,
+    "clean": true,
+    "not_monitored_reasons": [],
+    "other_growing_processes": []
+   },
+   "harness_i5_v3": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "carrier_is_watched": true,
+    "carrier_identity": "carrier PID among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": 1713545216,
+    "vm_shared_growth_bytes": 81788928,
+    "carrier_over_device_growth": 0.9063583264004437,
+    "monitored": true,
+    "spilled": false,
+    "clean": true,
+    "not_monitored_reasons": [],
+    "other_growing_processes": [
+     "other-process-5"
+    ]
+   },
+   "harness_i5_v4": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "carrier_is_watched": true,
+    "carrier_identity": "carrier PID among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": 1713545216,
+    "vm_shared_growth_bytes": 81788928,
+    "carrier_over_device_growth": 0.9976581578144078,
+    "monitored": true,
+    "spilled": false,
+    "clean": true,
+    "not_monitored_reasons": [],
+    "other_growing_processes": []
+   },
+   "livestop_test_4g": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "carrier_is_watched": true,
+    "carrier_identity": "carrier PID among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": 4697804800,
+    "vm_shared_growth_bytes": 77594624,
+    "carrier_over_device_growth": 0.9980342573513031,
+    "monitored": false,
+    "spilled": false,
+    "clean": false,
+    "not_monitored_reasons": [
+     "fewer than 3 WDDM samples inside the job"
+    ],
+    "other_growing_processes": []
+   },
+   "livestop_test_4g_attempt1": {
+    "vm_carrier": null,
+    "vm_carrier_pid": null,
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "carrier_is_watched": false,
+    "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": null,
+    "vm_shared_growth_bytes": null,
+    "carrier_over_device_growth": null,
+    "monitored": false,
+    "spilled": null,
+    "clean": false,
+    "not_monitored_reasons": [
+     "no WSL VM carrier found"
+    ],
+    "other_growing_processes": []
+   },
+   "livestop_v3_sampler_lost": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "carrier_is_watched": true,
+    "carrier_identity": "carrier PID among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": 4697804800,
+    "vm_shared_growth_bytes": 77594624,
+    "carrier_over_device_growth": 0.9978119780066815,
+    "monitored": false,
+    "spilled": false,
+    "clean": false,
+    "not_monitored_reasons": [
+     "fewer than 3 WDDM samples inside the job"
+    ],
+    "other_growing_processes": []
+   },
+   "livestop_v3_trigger": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "carrier_is_watched": true,
+    "carrier_identity": "carrier PID among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": 4697804800,
+    "vm_shared_growth_bytes": 77594624,
+    "carrier_over_device_growth": 0.9978119780066815,
+    "monitored": false,
+    "spilled": false,
+    "clean": false,
+    "not_monitored_reasons": [
+     "fewer than 3 WDDM samples inside the job"
+    ],
+    "other_growing_processes": []
+   },
+   "livestop_v3_trigger_attempt1": {
+    "vm_carrier": null,
+    "vm_carrier_pid": null,
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "carrier_is_watched": false,
+    "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": null,
+    "vm_shared_growth_bytes": null,
+    "carrier_over_device_growth": null,
+    "monitored": false,
+    "spilled": null,
+    "clean": false,
+    "not_monitored_reasons": [
+     "no WSL VM carrier found",
+     "fewer than 3 WDDM samples inside the job"
+    ],
+    "other_growing_processes": []
+   },
+   "native_patched_v1": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": null,
+    "carrier_is_watched": null,
+    "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+    "vm_dedicated_growth_bytes": 1669505024,
+    "vm_shared_growth_bytes": 81788928,
+    "carrier_over_device_growth": 0.9883079220980757,
+    "monitored": true,
+    "spilled": false,
+    "clean": true,
+    "not_monitored_reasons": [],
+    "other_growing_processes": []
+   },
+   "native_v1": {
+    "vm_carrier": null,
+    "vm_carrier_pid": null,
+    "watched_pids": null,
+    "carrier_is_watched": null,
+    "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+    "vm_dedicated_growth_bytes": null,
+    "vm_shared_growth_bytes": null,
+    "carrier_over_device_growth": null,
+    "monitored": false,
+    "spilled": null,
+    "clean": false,
+    "not_monitored_reasons": [
+     "no WSL VM carrier found",
+     "fewer than 3 WDDM samples inside the job"
+    ],
+    "other_growing_processes": []
+   },
+   "notify_i1": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": null,
+    "carrier_is_watched": null,
+    "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+    "vm_dedicated_growth_bytes": 1686679552,
+    "vm_shared_growth_bytes": 106549248,
+    "carrier_over_device_growth": 0.987441969766728,
+    "monitored": true,
+    "spilled": false,
+    "clean": true,
+    "not_monitored_reasons": [],
+    "other_growing_processes": []
+   },
+   "spill_control_22g": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": null,
+    "carrier_is_watched": null,
+    "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+    "vm_dedicated_growth_bytes": 23677898752,
+    "vm_shared_growth_bytes": 406847488,
+    "carrier_over_device_growth": 1.0938818924696023,
+    "monitored": true,
+    "spilled": true,
+    "clean": false,
+    "not_monitored_reasons": [],
+    "other_growing_processes": []
+   },
+   "status_v3_exit3": {
+    "vm_carrier": null,
+    "vm_carrier_pid": null,
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "carrier_is_watched": false,
+    "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": null,
+    "vm_shared_growth_bytes": null,
+    "carrier_over_device_growth": null,
+    "monitored": false,
+    "spilled": null,
+    "clean": false,
+    "not_monitored_reasons": [
+     "no WSL VM carrier found",
+     "fewer than 3 WDDM samples inside the job"
+    ],
+    "other_growing_processes": []
+   },
+   "status_v3_oom_message": {
+    "vm_carrier": null,
+    "vm_carrier_pid": null,
+    "watched_pids": [
+     3440,
+     45572
+    ],
+    "carrier_is_watched": false,
+    "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": null,
+    "vm_shared_growth_bytes": null,
+    "carrier_over_device_growth": null,
+    "monitored": false,
+    "spilled": null,
+    "clean": false,
+    "not_monitored_reasons": [
+     "no WSL VM carrier found",
+     "fewer than 3 WDDM samples inside the job"
+    ],
+    "other_growing_processes": []
+   },
+   "v4_1_carrier_job": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": [
+     3440
+    ],
+    "carrier_is_watched": true,
+    "carrier_identity": "carrier PID among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": 4697804800,
+    "vm_shared_growth_bytes": 77594624,
+    "carrier_over_device_growth": 0.9991471412243532,
+    "monitored": true,
+    "spilled": false,
+    "clean": true,
+    "not_monitored_reasons": [],
+    "other_growing_processes": []
+   },
+   "v4_2_carrier_job": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": [
+     3440
+    ],
+    "carrier_is_watched": true,
+    "carrier_identity": "carrier PID among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": 4697804800,
+    "vm_shared_growth_bytes": 77594624,
+    "carrier_over_device_growth": 0.9989243659420289,
+    "monitored": true,
+    "spilled": false,
+    "clean": true,
+    "not_monitored_reasons": [],
+    "other_growing_processes": []
+   },
+   "v4_2_trigger_job": {
+    "vm_carrier": "vmwp",
+    "vm_carrier_pid": 3440,
+    "watched_pids": [
+     3440
+    ],
+    "carrier_is_watched": true,
+    "carrier_identity": "carrier PID among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": 4697804800,
+    "vm_shared_growth_bytes": 77594624,
+    "carrier_over_device_growth": 0.9978119780066815,
+    "monitored": false,
+    "spilled": false,
+    "clean": false,
+    "not_monitored_reasons": [
+     "fewer than 3 WDDM samples inside the job"
+    ],
+    "other_growing_processes": []
+   },
+   "v4_short_job": {
+    "vm_carrier": null,
+    "vm_carrier_pid": null,
+    "watched_pids": [
+     3440
+    ],
+    "carrier_is_watched": false,
+    "carrier_identity": "no growing VM process among the live stop's watched PIDs",
+    "vm_dedicated_growth_bytes": null,
+    "vm_shared_growth_bytes": null,
+    "carrier_over_device_growth": null,
+    "monitored": false,
+    "spilled": null,
+    "clean": false,
+    "not_monitored_reasons": [
+     "no WSL VM carrier found"
+    ],
+    "other_growing_processes": []
+   }
+  },
+  "native_run": {
+   "vm_carrier": "vmwp",
+   "vm_carrier_pid": 3440,
+   "watched_pids": null,
+   "carrier_is_watched": null,
+   "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+   "vm_dedicated_growth_bytes": 1669505024,
+   "vm_shared_growth_bytes": 81788928,
+   "carrier_over_device_growth": 0.9883079220980757,
+   "monitored": true,
+   "spilled": false,
+   "clean": true,
+   "not_monitored_reasons": [],
+   "other_growing_processes": [],
+   "nvidia_smi_device_growth_mib": 1611.0
+  },
+  "harness_run": {
+   "vm_carrier": "vmwp",
+   "vm_carrier_pid": 3440,
+   "watched_pids": null,
+   "carrier_is_watched": null,
+   "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+   "vm_dedicated_growth_bytes": 1737011200,
+   "vm_shared_growth_bytes": 106549248,
+   "carrier_over_device_growth": 0.9901631612372983,
+   "monitored": true,
+   "spilled": false,
+   "clean": true,
+   "not_monitored_reasons": [],
+   "other_growing_processes": [],
+   "nvidia_smi_device_growth_mib": 1673.0
+  },
+  "notify_run": {
+   "vm_carrier": "vmwp",
+   "vm_carrier_pid": 3440,
+   "watched_pids": null,
+   "carrier_is_watched": null,
+   "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+   "vm_dedicated_growth_bytes": 1686679552,
+   "vm_shared_growth_bytes": 106549248,
+   "carrier_over_device_growth": 0.987441969766728,
+   "monitored": true,
+   "spilled": false,
+   "clean": true,
+   "not_monitored_reasons": [],
+   "other_growing_processes": []
+  },
+  "positive_control_22GiB": {
+   "vm_carrier": "vmwp",
+   "vm_carrier_pid": 3440,
+   "watched_pids": null,
+   "carrier_is_watched": null,
+   "carrier_identity": "not checkable: the record has no live stop (post-run monitor)",
+   "vm_dedicated_growth_bytes": 23677898752,
+   "vm_shared_growth_bytes": 406847488,
+   "carrier_over_device_growth": 1.0938818924696023,
+   "monitored": true,
+   "spilled": true,
+   "clean": false,
+   "not_monitored_reasons": [],
+   "other_growing_processes": [],
+   "note": "spill_probe holds 22 GiB from inside WSL; WSL cudaMemGetInfo does not see VRAM held by Windows processes"
+  },
+  "spill_limit_bytes": 268435456,
+  "unmonitored_gpu_work": [
+   "the admission probes of monitor versions 2 and 3: memfree/memfree inside WSL and a short Windows CuPy process for guard.require_budget, each opening a CUDA context and exiting before the job is launched (version 4 runs memfree under the armed watch and needs no Windows CUDA context)",
+   "the comparison process under cupy_guard version 3: its CUDA context, cudaMemGetInfo and guard.require_budget before the watch was armed (version 4 arms first)",
+   "tiny-grid build probes run directly in WSL, outside t12mon.py: probe_gomp2, probe_crash, probe_bt, probe_sync, and the 16x8x8 smoke test of the earlier build_patched.sh (removed from the script); none of their output is used as a measurement",
+   "runs/native_v1 aborted at start-up (libgomp) before GPU work; its record has no carrier and counts as not monitored"
+  ]
+ },
+ "intervals_observable": {
+  "setup_s": 1.25251,
+  "per_iteration": [
+   {
+    "iter": 1,
+    "pcg_steps": 8,
+    "solve_s": 0.770467,
+    "design_step_s": 0.027216,
+    "solve_s_per_pcg_step": 0.096308375
+   },
+   {
+    "iter": 2,
+    "pcg_steps": 11,
+    "solve_s": 1.093751,
+    "design_step_s": 0.022832,
+    "solve_s_per_pcg_step": 0.09943190909090908
+   },
+   {
+    "iter": 3,
+    "pcg_steps": 10,
+    "solve_s": 0.982007,
+    "design_step_s": 0.026839,
+    "solve_s_per_pcg_step": 0.0982007
+   },
+   {
+    "iter": 4,
+    "pcg_steps": 27,
+    "solve_s": 2.516179,
+    "design_step_s": 0.026035,
+    "solve_s_per_pcg_step": 0.09319181481481482
+   },
+   {
+    "iter": 5,
+    "pcg_steps": 1000,
+    "solve_s": 92.283949,
+    "design_step_s": 0.019958,
+    "solve_s_per_pcg_step": 0.092283949
+   }
+  ],
+  "boundaries": "setup: setupGC through enter_data; solve: solveStateMG_halo call (returns after its final blocking norm reduction); design: compliance and sensitivities, filters, OC update, change, density upload",
+  "source": "dumps_v2/meta.txt (harness_i5_v2: released library objects, top3dmgcg loop reproduced; dumps outside the timed intervals)"
+ },
+ "system_match": {
+  "same_free_dof_system": true,
+  "free_dofs": 1628445,
+  "rhs": "the released FP32 load vector, widened to FP64, for every residual, compliance and solve of both codes",
+  "load_rebuilt_rounded_to_fp32_identical": true,
+  "load_rel_diff_rebuilt_fp64_vs_released_fp32": 4.671522639182325e-08,
+  "load_total_force_released": -1.0000000458676368,
+  "supports_identical_to_rebuilt": true,
+  "load": "z-force, total -1, spread equally over the 4 nodes of every z=0 element face whose (i,j) index lies within radius (nely+1)/5 of (nelx, (nely-1)/2)",
+  "supports": "all DOFs of the x=0 nodes with y index 0..16 and 48..64 (two strips), all z",
+  "modulus": "E = 1e-6 + x^3 (1 - 1e-6), x^3 formed in FP32 as in the released elementScale; nu = 0.3",
+  "initial_density": "0.2 in every element",
+  "initial_iterate": "zero at design iteration 1; afterwards the released loop keeps the previous U, and our matched solves start from the released U of the previous iteration",
+  "element_matrix": {
+   "released_symmetry_rel": 6.299951329658917e-17,
+   "released_translation_residual_rel": 7.26784344787712e-16,
+   "rel_frob_diff_vs_ours_gauss": 0.8474678682386754,
+   "rel_frob_diff_vs_ours_gauss_y_reflected": 0.005164541570298371,
+   "max_abs_diff_vs_ours_gauss_y_reflected_over_max_abs": 0.004993750000001367,
+   "note": "released KE: 10x10x10 midpoint rule on an edge-1 cube; nodes placed by getEdof_halo",
+   "independent_check": {
+    "own_gauss_vs_voxfem_ke_unit": 1.6650303829587752e-16,
+    "released_vs_midpoint10_y_reflected": 2.910526369583537e-16,
+    "released_vs_midpoint10_unreflected": 0.8490546655917667,
+    "released_vs_gauss_y_reflected": 0.005164541570298381,
+    "midpoint10_vs_gauss": 0.005164541570298418
+   },
+   "independent_check_source": "ke_check.json (t12_ke_check.py)"
+  },
+  "our_fp64_gpu_operator_vs_cpu_reference_max": 6.067270538975896e-13,
+  "how": "our driver is given the released 24x24 element matrix (re-indexed to our node order by the node placement of getEdof_halo), the released load, supports and modulus law. Our own 2x2x2-Gauss element is not the released one: the released element is the y-mirrored element (a global sign change of the y displacements, which leaves the compliance of this z-loaded, fully clamped problem unchanged) integrated with a 10x10x10 midpoint rule, and differs from ours by 0.52% (Frobenius) after the reflection."
+ },
+ "action_check": {
+  "passed": true,
+  "declared_precision": "released operator: FP32 input and output vectors, FP64 element matrix and FP64 accumulation; difference expected at FP32 output rounding",
+  "reference": "independent CPU FP64 element loop with the released element matrix",
+  "rel_diff_free_released_vs_reference": {
+   "iteration_1/action_test_vector": 2.5594043686317026e-08,
+   "iteration_1/action_released_solution": 3.2951752624236485e-08,
+   "iteration_2/action_test_vector": 2.548781529811517e-08,
+   "iteration_2/action_released_solution": 3.3386882889255014e-08,
+   "iteration_3/action_test_vector": 2.5224787984180404e-08,
+   "iteration_3/action_released_solution": 3.326531429359397e-08,
+   "iteration_4/action_test_vector": 2.539735177201168e-08,
+   "iteration_4/action_released_solution": 3.467113742984381e-08,
+   "iteration_5/action_test_vector": 2.533793568688207e-08,
+   "iteration_5/action_released_solution": 2.989382089257743e-08
+  },
+  "n_actions": 10,
+  "max_rel_diff": 3.467113742984381e-08,
+  "target": 1e-05,
+  "repeat_runs_admitted_under_live_stop": {
+   "rel_diff_free_released_vs_reference": {
+    "harness_i5_v3": {
+     "iteration_1/action_test_vector": 2.5594043686317026e-08,
+     "iteration_1/action_released_solution": 3.6673721335328844e-08,
+     "iteration_2/action_test_vector": 2.5497465355665332e-08,
+     "iteration_2/action_released_solution": 3.304764736600808e-08,
+     "iteration_3/action_test_vector": 2.5184487559316752e-08,
+     "iteration_3/action_released_solution": 3.1035563580774464e-08,
+     "iteration_4/action_test_vector": 2.5444389475156057e-08,
+     "iteration_4/action_released_solution": 3.3186345134834295e-08,
+     "iteration_5/action_test_vector": 2.5301614612873587e-08,
+     "iteration_5/action_released_solution": 2.7608372267505764e-08
+    },
+    "harness_i5_v4": {
+     "iteration_1/action_test_vector": 2.5594043686317026e-08,
+     "iteration_1/action_released_solution": 3.477354168448823e-08,
+     "iteration_2/action_test_vector": 2.5458577090473985e-08,
+     "iteration_2/action_released_solution": 3.4003359787652016e-08,
+     "iteration_3/action_test_vector": 2.5218988664148226e-08,
+     "iteration_3/action_released_solution": 3.173353931626452e-08,
+     "iteration_4/action_test_vector": 2.543187672031776e-08,
+     "iteration_4/action_released_solution": 3.32968104459966e-08,
+     "iteration_5/action_test_vector": 2.5588166628769862e-08,
+     "iteration_5/action_released_solution": 3.031491996536494e-08
+    }
+   },
+   "n_actions": 20,
+   "max_rel_diff": 3.6673721335328844e-08,
+   "fixed_rows_equal_input": true
+  },
+  "passed_requires": "every one of the 10 actions of harness_i5_v2 and the 20 of harness_i5_v3/_v4 at or below the target, fixed rows equal to the input",
+  "states": "design iterations 1-5 of harness_i5_v2; modulus contrast max/min: 1: 1, 2: 6.4e+04, 3: 2.16e+05, 4: 5.12e+05, 5: 1e+06",
+  "iteration5_state": {
+   "min": 2.4058187234550644e-27,
+   "max": 1.0,
+   "mean": 0.19994065165519714,
+   "elements_at_or_below_1e-3": 43919,
+   "modulus_contrast_max_over_min": 1000000.0
+  }
+ },
+ "fp64_residual_check": {
+  "definition": "relative FP64 true residual of the free system ||f_f - K_ff u_f|| / ||f_f||, fixed DOFs of u set to zero, f = released FP32 load",
+  "ours": "FP64 PCG, FP32 Galerkin V-cycle (5 levels), stop on FP64 true residual 1e-5",
+  "per_iteration": {
+   "iteration_1": {
+    "released_start": "zero",
+    "released_pcg_steps": 8,
+    "released_stop_fp32_recursive_relres": 7.934732e-06,
+    "released_fp64_true_relres_free": 0.0002333383176764904,
+    "released_fp64_true_relres_free_unprojected": 0.00023333831742062536,
+    "released_max_abs_U_on_fixed": 2.535907484002564e-09,
+    "released_printed_objective": 86.5560379,
+    "released_compliance_F_dot_U": 86.57064919204048,
+    "released_energy_U_K_U": 86.57064917409934,
+    "ours_start": "zero (matched)",
+    "ours_initial_relres": 1.0,
+    "ours_pcg_steps": 10,
+    "ours_fp64_true_relres_free": 3.127118903056628e-06,
+    "ours_compliance_F_dot_U": 86.57064921865285,
+    "compliance_rel_diff_released_vs_ours": -3.0740637199097926e-10,
+    "printed_objective_rel_diff_vs_ours": -0.00016877912762252207,
+    "displacement_rel_diff_released_vs_ours": 4.235757655305957e-08
+   },
+   "iteration_2": {
+    "released_start": "released U of iteration 1",
+    "released_pcg_steps": 11,
+    "released_stop_fp32_recursive_relres": 4.62765e-06,
+    "released_fp64_true_relres_free": 0.0005422703453531468,
+    "released_fp64_true_relres_free_unprojected": 0.0005422703723635105,
+    "released_max_abs_U_on_fixed": 4.3380179448604395e-09,
+    "released_printed_objective": 42.88747787,
+    "released_compliance_F_dot_U": 42.886582460737216,
+    "released_energy_U_K_U": 42.88658845993848,
+    "ours_start": "released U of iteration 1 (matched)",
+    "ours_initial_relres": 7.567363426588946,
+    "ours_pcg_steps": 13,
+    "ours_fp64_true_relres_free": 7.2297137226300214e-06,
+    "ours_compliance_F_dot_U": 42.886575841239896,
+    "compliance_rel_diff_released_vs_ours": 1.543489353070285e-07,
+    "printed_objective_rel_diff_vs_ours": 2.10328929835993e-05,
+    "displacement_rel_diff_released_vs_ours": 1.8469232496167172e-07,
+    "ours_zero_start_pcg_steps": 12,
+    "ours_zero_start_fp64_true_relres_free": 5.695723770212543e-06
+   },
+   "iteration_3": {
+    "released_start": "released U of iteration 2",
+    "released_pcg_steps": 10,
+    "released_stop_fp32_recursive_relres": 6.581451e-06,
+    "released_fp64_true_relres_free": 0.00032751338129298864,
+    "released_fp64_true_relres_free_unprojected": 0.00032751335541331454,
+    "released_max_abs_U_on_fixed": 3.0083073809805683e-09,
+    "released_printed_objective": 26.13276672,
+    "released_compliance_F_dot_U": 26.131948958809975,
+    "released_energy_U_K_U": 26.131948287639098,
+    "ours_start": "released U of iteration 2 (matched)",
+    "ours_initial_relres": 2.8229500032639363,
+    "ours_pcg_steps": 13,
+    "ours_fp64_true_relres_free": 5.7544565994247315e-06,
+    "ours_compliance_F_dot_U": 26.131949964130186,
+    "compliance_rel_diff_released_vs_ours": -3.847092208802585e-08,
+    "printed_objective_rel_diff_vs_ours": 3.125506787417121e-05,
+    "displacement_rel_diff_released_vs_ours": 8.850024432993331e-08,
+    "ours_zero_start_pcg_steps": 13,
+    "ours_zero_start_fp64_true_relres_free": 5.693055902203449e-06
+   },
+   "iteration_4": {
+    "released_start": "released U of iteration 3",
+    "released_pcg_steps": 27,
+    "released_stop_fp32_recursive_relres": 7.786059e-06,
+    "released_fp64_true_relres_free": 0.000391372138993719,
+    "released_fp64_true_relres_free_unprojected": 0.00039137138133450066,
+    "released_max_abs_U_on_fixed": 1.2117454151194806e-08,
+    "released_printed_objective": 18.19511604,
+    "released_compliance_F_dot_U": 18.194642105719325,
+    "released_energy_U_K_U": 18.194641972609507,
+    "ours_start": "released U of iteration 3 (matched)",
+    "ours_initial_relres": 2.075558273268052,
+    "ours_pcg_steps": 17,
+    "ours_fp64_true_relres_free": 7.264143817229299e-06,
+    "ours_compliance_F_dot_U": 18.19464232503242,
+    "compliance_rel_diff_released_vs_ours": -1.2053718341356152e-08,
+    "printed_objective_rel_diff_vs_ours": 2.6035959328972876e-05,
+    "displacement_rel_diff_released_vs_ours": 6.683980610643884e-08,
+    "ours_zero_start_pcg_steps": 17,
+    "ours_zero_start_fp64_true_relres_free": 7.512662776752304e-06
+   },
+   "iteration_5": {
+    "released_start": "released U of iteration 4",
+    "released_pcg_steps": 1000,
+    "released_stop_fp32_recursive_relres": 0.9215127,
+    "released_fp64_true_relres_free": 0.9215334504943946,
+    "released_fp64_true_relres_free_unprojected": 0.9215116950417849,
+    "released_max_abs_U_on_fixed": 3.4869451686379144e-05,
+    "released_printed_objective": 13.06260967,
+    "released_compliance_F_dot_U": 12.928181074678093,
+    "released_energy_U_K_U": 13.06474940265747,
+    "ours_start": "released U of iteration 4 (matched)",
+    "ours_initial_relres": 1.8271085549712007,
+    "ours_pcg_steps": 23,
+    "ours_fp64_true_relres_free": 6.106132845488806e-06,
+    "ours_compliance_F_dot_U": 12.841679934853921,
+    "compliance_rel_diff_released_vs_ours": 0.00673596758858606,
+    "printed_objective_rel_diff_vs_ours": 0.01720411474720283,
+    "displacement_rel_diff_released_vs_ours": 0.006421541791003604,
+    "ours_zero_start_pcg_steps": 23,
+    "ours_zero_start_fp64_true_relres_free": 8.917050456353227e-06
+   }
+  },
+  "note": "the released solver stops on its FP32 recursive residual. Where it meets that stop (design iterations 1-4) the FP64 true residual is 2.3e-04 to 5.4e-04. At iteration 5 the released solve ends at the step cap with true residual 0.92; our path, started from the same previous displacement, solves that system in 23 steps."
+ },
+ "released_run_to_run": {
+  "identical_instrumentation": {
+   "runs": [
+    "harness_i5_v2",
+    "harness_i5_v3",
+    "harness_i5_v4"
+   ],
+   "dump_states": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "pairs": {
+    "harness_i5_v2 vs harness_i5_v3": {
+     "iteration_1": {
+      "density_bitwise_equal": true,
+      "density_max_abs_diff": 0.0,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 3.677598684913823e-08,
+      "recursive_relres": [
+       7.934732e-06,
+       7.934414e-06
+      ],
+      "pcg_steps": [
+       8,
+       8
+      ],
+      "printed_objective": [
+       86.5560379,
+       86.55979919
+      ]
+     },
+     "iteration_2": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 8.940696716308594e-06,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 2.6997424061343423e-07,
+      "recursive_relres": [
+       4.62765e-06,
+       4.626744e-06
+      ],
+      "pcg_steps": [
+       11,
+       11
+      ],
+      "printed_objective": [
+       42.88747787,
+       42.88895798
+      ]
+     },
+     "iteration_3": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 5.352497100830078e-05,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 1.2076650992737236e-07,
+      "recursive_relres": [
+       6.581451e-06,
+       6.581544e-06
+      ],
+      "pcg_steps": [
+       10,
+       10
+      ],
+      "printed_objective": [
+       26.13276672,
+       26.13402367
+      ]
+     },
+     "iteration_4": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 4.649162292480469e-05,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 1.3429285308161845e-07,
+      "recursive_relres": [
+       7.786059e-06,
+       7.740401e-06
+      ],
+      "pcg_steps": [
+       27,
+       27
+      ],
+      "printed_objective": [
+       18.19511604,
+       18.1948719
+      ]
+     },
+     "iteration_5": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 5.2928924560546875e-05,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 0.010873780291862386,
+      "recursive_relres": [
+       0.9215127,
+       1.548609
+      ],
+      "pcg_steps": [
+       1000,
+       1000
+      ],
+      "printed_objective": [
+       13.06260967,
+       12.84309006
+      ]
+     }
+    },
+    "harness_i5_v2 vs harness_i5_v4": {
+     "iteration_1": {
+      "density_bitwise_equal": true,
+      "density_max_abs_diff": 0.0,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 3.696775927494565e-08,
+      "recursive_relres": [
+       7.934732e-06,
+       7.934561e-06
+      ],
+      "pcg_steps": [
+       8,
+       8
+      ],
+      "printed_objective": [
+       86.5560379,
+       86.55545044
+      ]
+     },
+     "iteration_2": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 7.331371307373047e-06,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 2.595726681954124e-07,
+      "recursive_relres": [
+       4.62765e-06,
+       4.627324e-06
+      ],
+      "pcg_steps": [
+       11,
+       11
+      ],
+      "printed_objective": [
+       42.88747787,
+       42.88700104
+      ]
+     },
+     "iteration_3": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 3.612041473388672e-05,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 8.317411186699274e-08,
+      "recursive_relres": [
+       6.581451e-06,
+       6.58167e-06
+      ],
+      "pcg_steps": [
+       10,
+       10
+      ],
+      "printed_objective": [
+       26.13276672,
+       26.13386536
+      ]
+     },
+     "iteration_4": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 4.4226646423339844e-05,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 1.0890086617417468e-07,
+      "recursive_relres": [
+       7.786059e-06,
+       7.713414e-06
+      ],
+      "pcg_steps": [
+       27,
+       27
+      ],
+      "printed_objective": [
+       18.19511604,
+       18.19486046
+      ]
+     },
+     "iteration_5": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 4.819035530090332e-05,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 0.011311934485540574,
+      "recursive_relres": [
+       0.9215127,
+       0.9416427
+      ],
+      "pcg_steps": [
+       1000,
+       1000
+      ],
+      "printed_objective": [
+       13.06260967,
+       12.81398201
+      ]
+     }
+    },
+    "harness_i5_v3 vs harness_i5_v4": {
+     "iteration_1": {
+      "density_bitwise_equal": true,
+      "density_max_abs_diff": 0.0,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 3.693661973240378e-08,
+      "recursive_relres": [
+       7.934414e-06,
+       7.934561e-06
+      ],
+      "pcg_steps": [
+       8,
+       8
+      ],
+      "printed_objective": [
+       86.55979919,
+       86.55545044
+      ]
+     },
+     "iteration_2": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 7.957220077514648e-06,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 2.867526938139983e-07,
+      "recursive_relres": [
+       4.626744e-06,
+       4.627324e-06
+      ],
+      "pcg_steps": [
+       11,
+       11
+      ],
+      "printed_objective": [
+       42.88895798,
+       42.88700104
+      ]
+     },
+     "iteration_3": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 4.547834396362305e-05,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 1.1164925528185516e-07,
+      "recursive_relres": [
+       6.581544e-06,
+       6.58167e-06
+      ],
+      "pcg_steps": [
+       10,
+       10
+      ],
+      "printed_objective": [
+       26.13402367,
+       26.13386536
+      ]
+     },
+     "iteration_4": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 4.184246063232422e-05,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 1.1828806994246495e-07,
+      "recursive_relres": [
+       7.740401e-06,
+       7.713414e-06
+      ],
+      "pcg_steps": [
+       27,
+       27
+      ],
+      "printed_objective": [
+       18.1948719,
+       18.19486046
+      ]
+     },
+     "iteration_5": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 4.488229751586914e-05,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 0.0025307193082944007,
+      "recursive_relres": [
+       1.548609,
+       0.9416427
+      ],
+      "pcg_steps": [
+       1000,
+       1000
+      ],
+      "printed_objective": [
+       12.84309006,
+       12.81398201
+      ]
+     }
+    }
+   }
+  },
+  "different_instrumentation": {
+   "runs": [
+    "harness_i5 (dump states 1, 5)",
+    "harness_i5_v2 (dump states 1-5)"
+   ],
+   "pairs": {
+    "harness_i5 vs harness_i5_v2": {
+     "iteration_1": {
+      "density_bitwise_equal": true,
+      "density_max_abs_diff": 0.0,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 3.746113455014746e-08,
+      "recursive_relres": [
+       7.934253e-06,
+       7.934732e-06
+      ],
+      "pcg_steps": [
+       8,
+       8
+      ],
+      "printed_objective": [
+       86.55847931,
+       86.5560379
+      ]
+     },
+     "iteration_5": {
+      "density_bitwise_equal": false,
+      "density_max_abs_diff": 5.698204040527344e-05,
+      "U_bitwise_equal": false,
+      "U_rel_diff_free": 0.007838021600991693,
+      "recursive_relres": [
+       1.507418,
+       0.9215127
+      ],
+      "pcg_steps": [
+       1000,
+       1000
+      ],
+      "printed_objective": [
+       12.99325466,
+       13.06260967
+      ]
+     }
+    }
+   }
+  },
+  "per_run_iterations": {
+   "harness_i5_v2": [
+    {
+     "iter": 1,
+     "relres": 7.934732e-06,
+     "pcg_steps": 8,
+     "obj": 86.5560379
+    },
+    {
+     "iter": 2,
+     "relres": 4.62765e-06,
+     "pcg_steps": 11,
+     "obj": 42.88747787
+    },
+    {
+     "iter": 3,
+     "relres": 6.581451e-06,
+     "pcg_steps": 10,
+     "obj": 26.13276672
+    },
+    {
+     "iter": 4,
+     "relres": 7.786059e-06,
+     "pcg_steps": 27,
+     "obj": 18.19511604
+    },
+    {
+     "iter": 5,
+     "relres": 0.9215127,
+     "pcg_steps": 1000,
+     "obj": 13.06260967
+    }
+   ],
+   "harness_i5_v3": [
+    {
+     "iter": 1,
+     "relres": 7.934414e-06,
+     "pcg_steps": 8,
+     "obj": 86.55979919
+    },
+    {
+     "iter": 2,
+     "relres": 4.626744e-06,
+     "pcg_steps": 11,
+     "obj": 42.88895798
+    },
+    {
+     "iter": 3,
+     "relres": 6.581544e-06,
+     "pcg_steps": 10,
+     "obj": 26.13402367
+    },
+    {
+     "iter": 4,
+     "relres": 7.740401e-06,
+     "pcg_steps": 27,
+     "obj": 18.1948719
+    },
+    {
+     "iter": 5,
+     "relres": 1.548609,
+     "pcg_steps": 1000,
+     "obj": 12.84309006
+    }
+   ],
+   "harness_i5_v4": [
+    {
+     "iter": 1,
+     "relres": 7.934561e-06,
+     "pcg_steps": 8,
+     "obj": 86.55545044
+    },
+    {
+     "iter": 2,
+     "relres": 4.627324e-06,
+     "pcg_steps": 11,
+     "obj": 42.88700104
+    },
+    {
+     "iter": 3,
+     "relres": 6.58167e-06,
+     "pcg_steps": 10,
+     "obj": 26.13386536
+    },
+    {
+     "iter": 4,
+     "relres": 7.713414e-06,
+     "pcg_steps": 27,
+     "obj": 18.19486046
+    },
+    {
+     "iter": 5,
+     "relres": 0.9416427,
+     "pcg_steps": 1000,
+     "obj": 12.81398201
+    }
+   ],
+   "harness_i5": [
+    {
+     "iter": 1,
+     "relres": 7.934253e-06,
+     "pcg_steps": 8,
+     "obj": 86.55847931
+    },
+    {
+     "iter": 2,
+     "relres": 4.627728e-06,
+     "pcg_steps": 11,
+     "obj": 42.88832474
+    },
+    {
+     "iter": 3,
+     "relres": 6.581445e-06,
+     "pcg_steps": 10,
+     "obj": 26.13311005
+    },
+    {
+     "iter": 4,
+     "relres": 7.750083e-06,
+     "pcg_steps": 27,
+     "obj": 18.19511795
+    },
+    {
+     "iter": 5,
+     "relres": 1.507418,
+     "pcg_steps": 1000,
+     "obj": 12.99325466
+    }
+   ]
+  },
+  "note": "three harness runs with the same binary, inputs and instrumentation (harness_i5_v2, harness_i5_v3, harness_i5_v4; dumps and the two extra operator actions at states 1-5): the iteration-1 densities are bitwise equal in all three pairs, but the returned iteration-1 displacements are not bitwise equal (relative differences 3.7e-08, 3.7e-08, 3.7e-08 on the free DOFs), so the first state solve is not bitwise reproducible; the densities differ from iteration 2 on (iteration 5: max differences 4.5e-05-5.3e-05). The FP32 recursive residual of the iteration-4 solve is 7.786e-06, 7.74e-06, 7.713e-06 and that of the capped iteration-5 solve (1000 steps) is 0.9215127, 1.548609, 0.9416427. The fourth run, harness_i5, dumped only at states 1 and 5; its comparison with harness_i5_v2 (iteration-5 density difference 5.7e-05, residuals [1.507418, 0.9215127]) is kept but labelled as differently instrumented. Which operation of the first solve is nondeterministic was not located."
+ },
+ "comparison_reproduction": {
+  "compare_invocation": {
+   "id": "4ddc6807aecd41508762bf69b8aebf73",
+   "script": "t12_compare.py",
+   "status": "completed",
+   "record": "compare.json"
+  },
+  "compare_json_invocation": "4ddc6807aecd41508762bf69b8aebf73",
+  "accepted": true,
+  "vs_compare_v3": {
+   "earlier": "compare_v3.json",
+   "leaves_compared": 663,
+   "leaves_equal": 654,
+   "leaves_differing": 9,
+   "differing_timing_leaves": {
+    "states/iteration_1/our_mg64_solve_matched_start/wall_s_setup_excluded": [
+     0.35663679998833686,
+     0.08139060001121834
+    ],
+    "states/iteration_2/our_mg64_solve_matched_start/wall_s_setup_excluded": [
+     0.2346166999777779,
+     0.13684880000073463
+    ],
+    "states/iteration_2/our_mg64_solve_zero_start/wall_s_setup_excluded": [
+     0.05273749999469146,
+     0.08529750001616776
+    ],
+    "states/iteration_3/our_mg64_solve_matched_start/wall_s_setup_excluded": [
+     0.21690940001280978,
+     0.19624669995391741
+    ],
+    "states/iteration_3/our_mg64_solve_zero_start/wall_s_setup_excluded": [
+     0.06836570001905784,
+     0.06894389999797568
+    ],
+    "states/iteration_4/our_mg64_solve_matched_start/wall_s_setup_excluded": [
+     0.16006699996069074,
+     0.1272698999964632
+    ],
+    "states/iteration_4/our_mg64_solve_zero_start/wall_s_setup_excluded": [
+     0.10024309996515512,
+     0.08635800000047311
+    ],
+    "states/iteration_5/our_mg64_solve_matched_start/wall_s_setup_excluded": [
+     0.2186824000091292,
+     0.2693077999865636
+    ],
+    "states/iteration_5/our_mg64_solve_zero_start/wall_s_setup_excluded": [
+     0.0907415000256151,
+     0.12076810002326965
+    ]
+   },
+   "differing_other_leaves": {},
+   "leaves_only_in_new": 0,
+   "leaves_only_in_earlier": 0,
+   "statement": "every leaf outside the timings is identical (654 of 663 common leaves equal); the 9 differing leaves are wall times of our matched and zero-start solves (wall_s_setup_excluded), which change from run to run: iteration 1, matched start, 0.3566 s in compare_v3.json and 0.0814 s now"
+  },
+  "vs_compare_v2": {
+   "earlier": "compare_v2.json",
+   "leaves_compared": 363,
+   "leaves_equal": 354,
+   "leaves_differing": 9,
+   "differing_timing_leaves": {
+    "states/iteration_1/our_mg64_solve_matched_start/wall_s_setup_excluded": [
+     0.06101820000912994,
+     0.08139060001121834
+    ],
+    "states/iteration_2/our_mg64_solve_matched_start/wall_s_setup_excluded": [
+     0.1156421999912709,
+     0.13684880000073463
+    ],
+    "states/iteration_2/our_mg64_solve_zero_start/wall_s_setup_excluded": [
+     0.05139000003691763,
+     0.08529750001616776
+    ],
+    "states/iteration_3/our_mg64_solve_matched_start/wall_s_setup_excluded": [
+     0.10814299999037758,
+     0.19624669995391741
+    ],
+    "states/iteration_3/our_mg64_solve_zero_start/wall_s_setup_excluded": [
+     0.05660609999904409,
+     0.06894389999797568
+    ],
+    "states/iteration_4/our_mg64_solve_matched_start/wall_s_setup_excluded": [
+     0.20009850000496954,
+     0.1272698999964632
+    ],
+    "states/iteration_4/our_mg64_solve_zero_start/wall_s_setup_excluded": [
+     0.07069550000596792,
+     0.08635800000047311
+    ],
+    "states/iteration_5/our_mg64_solve_matched_start/wall_s_setup_excluded": [
+     0.22324589994968846,
+     0.2693077999865636
+    ],
+    "states/iteration_5/our_mg64_solve_zero_start/wall_s_setup_excluded": [
+     0.09054249996552244,
+     0.12076810002326965
+    ]
+   },
+   "differing_other_leaves": {},
+   "leaves_only_in_new": 300,
+   "leaves_only_in_earlier": 20,
+   "statement": "every leaf outside the timings is identical (354 of 363 common leaves equal); the 9 differing leaves are wall times of our matched and zero-start solves (wall_s_setup_excluded), which change from run to run: iteration 1, matched start, 0.0610 s in compare_v2.json and 0.0814 s now"
+  }
+ },
+ "acceptance": {
+  "gpu_execution_confirmed": true,
+  "guards_cover_process": true,
+  "same_free_dof_system": true,
+  "relative_action_difference": 3.467113742984381e-08,
+  "relative_action_difference_repeat_runs": 3.6673721335328844e-08,
+  "target": 1e-05,
+  "technical_acceptance_met": true,
+  "gate_passed": true,
+  "fixed_state_comparison_admitted": true,
+  "toolchain_admissible_for_R1_1": true
+ },
+ "consequence_for_R1_1": "Admitted: the fixed-state comparison on the same card and the same free-DOF system is available. The released code's native 128x64x64 run does not give a design-workload timing: on this card and toolchain its state solves stop at the step cap from design iteration 5, which is reported as a result about that code, and matched design-workload performance is left to T28. Its native stop is an FP32 recursive residual that leaves FP64 true residuals of order 1e-4 even where it is met.",
+ "llm_calls": 0,
+ "gpu_jobs": {
+  "monitored_runs": [
+   "contention_holder",
+   "contention_second",
+   "diag_O2_i6",
+   "diag_threads1_i6",
+   "harness_i5",
+   "harness_i5_v2",
+   "harness_i5_v3",
+   "harness_i5_v4",
+   "livestop_test_4g",
+   "livestop_test_4g_attempt1",
+   "livestop_v3_sampler_lost",
+   "livestop_v3_trigger",
+   "livestop_v3_trigger_attempt1",
+   "native_patched_v1",
+   "native_v1",
+   "notify_i1",
+   "spill_control_22g",
+   "status_v3_exit3",
+   "status_v3_oom_message",
+   "v4_1_carrier_job",
+   "v4_1_cupy_job",
+   "v4_2_carrier_job",
+   "v4_2_cupy_job",
+   "v4_2_trigger_job",
+   "v4_refused_admission",
+   "v4_short_job"
+  ],
+  "other": [
+   "t12_compare.py (CuPy, t12guard.cupy_guard version 3: lock, exclusivity, admission, pool cap, live spill stop; rerun this round on dumps_v2 plus the repeat-run dumps)",
+   "v4_1_cupy_job.py (CuPy, t12guard.cupy_guard revision 4.1: one 1 GiB array for about 6 s; runs/v4_1_cupy_job/record.json)",
+   "v4_2_cupy_job.py (CuPy, t12guard.cupy_guard revision 4.2, the same work; runs/v4_2_cupy_job/record.json)",
+   "contention_test.py: one t12_compare.py start refused at the lock before any CUDA context, one probe_exclusive.py (no CUDA context)"
+  ],
+  "concurrency": "one GPU job at a time"
+ }
+}

@@ -1,0 +1,945 @@
+{
+ "task": "T37",
+ "purpose": "entry checks: the prerequisite for rendering the bracket figures",
+ "scope": "CPU only; reads T31's saved records; no optimization, no solve, no GPU",
+ "grids": [
+  {
+   "grid": 192,
+   "run": "R_n192",
+   "audit_run": "A_R_n192",
+   "inputs": {
+    "figdata_json": "tasks/T31/out/figdata_n192.json",
+    "figdata_npz": "tasks/T31/out/figdata_n192.npz",
+    "fields": "tasks/T31/out/runs/R_n192/fields.npz",
+    "history": "tasks/T31/out/runs/R_n192/history.json",
+    "opt_record": "tasks/T31/out/runs/R_n192/gpu_meta.json",
+    "audit_record": "tasks/T31/out/runs/A_R_n192/gpu_meta.json",
+    "host_checks": "tasks/T31/out/host_checks_192.json",
+    "c0": "tasks/T31/out/c0_n192.json",
+    "summary": "tasks/T31/out/summary.json"
+   },
+   "checks": [
+    {
+     "group": "identity",
+     "check": "figdata run name",
+     "passed": true,
+     "value": "R_n192"
+    },
+    {
+     "group": "identity",
+     "check": "figdata source names the run's records",
+     "passed": true,
+     "value": "out/runs/R_n192/fields.npz, history.json, gpu_meta.json"
+    },
+    {
+     "group": "identity",
+     "check": "opt job: phase opt, configuration R, repaired operator",
+     "passed": true,
+     "value": {
+      "phase": "opt",
+      "configuration": "R",
+      "op32": "stencil_diff",
+      "solver": "mg_ir",
+      "outcome": "returned_design"
+     }
+    },
+    {
+     "group": "identity",
+     "check": "history.json belongs to the run",
+     "passed": true,
+     "value": "R_n192"
+    },
+    {
+     "group": "identity",
+     "check": "audit job audits this run",
+     "passed": true,
+     "value": {
+      "arg": "R_n192",
+      "audit_valid": true
+     }
+    },
+    {
+     "group": "identity",
+     "check": "retained field digest: figure data = saved field = opt record = audit record",
+     "passed": true,
+     "value": "36d256f624b719cb615364c992101ce5135b3e60c8787a2e7ec3085191eb68c9"
+    },
+    {
+     "group": "identity",
+     "check": "summary.json run entry",
+     "passed": true,
+     "value": "guard"
+    },
+    {
+     "group": "shapes",
+     "check": "grid: figure data = sidecar = job = rebuilt geometry",
+     "passed": true,
+     "value": [
+      192,
+      128,
+      80
+     ]
+    },
+    {
+     "group": "shapes",
+     "check": "element size h = 7.2 in / n",
+     "passed": true,
+     "value": 0.0375
+    },
+    {
+     "group": "shapes",
+     "check": "array shapes and dtypes",
+     "passed": true,
+     "value": {
+      "cls": [
+       [
+        192,
+        128,
+        80
+       ],
+       "uint8"
+      ],
+      "rho_phys": [
+       [
+        192,
+        128,
+        80
+       ],
+       "float32"
+      ]
+     }
+    },
+    {
+     "group": "masks",
+     "check": "classes: figure data = saved by the job",
+     "passed": true
+    },
+    {
+     "group": "masks",
+     "check": "classes: figure data = rebuilt geometry",
+     "passed": true
+    },
+    {
+     "group": "masks",
+     "check": "density finite",
+     "passed": true
+    },
+    {
+     "group": "masks",
+     "check": "exterior density exactly 0",
+     "passed": true,
+     "value": 0.0
+    },
+    {
+     "group": "masks",
+     "check": "protected density exactly 1",
+     "passed": true,
+     "value": [
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "group": "masks",
+     "check": "designable density in [0, 1]",
+     "passed": true,
+     "value": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "group": "counts",
+     "check": "element counts: figure data = host checks = job = summary",
+     "passed": true,
+     "value": {
+      "allocated": 1966080,
+      "active": 903548,
+      "designable": 827324,
+      "protected": 76224
+     }
+    },
+    {
+     "group": "counts",
+     "check": "element counts = the plan entry's key text",
+     "passed": true,
+     "value": {
+      "active": 903548,
+      "designable": 827324,
+      "allocated": 1966080
+     }
+    },
+    {
+     "group": "counts",
+     "check": "clamped nodes: count = host checks = sidecar; coordinates = rebuilt supports",
+     "passed": true,
+     "value": {
+      "n": 5328,
+      "per_bolt": [
+       1332,
+       1332,
+       1332,
+       1332
+      ]
+     }
+    },
+    {
+     "group": "counts",
+     "check": "pin-bore nodes: count = host checks = sidecar; coordinates = rebuilt load nodes",
+     "passed": true,
+     "value": 4640
+    },
+    {
+     "group": "counts",
+     "check": "clamped nodes lie on the boss mounting faces (z = 0) or inside the boss height",
+     "passed": true,
+     "value": 0.75
+    },
+    {
+     "group": "loads",
+     "check": "F, M, C: figure data = sidecar = specification",
+     "passed": true,
+     "value": {
+      "C": [
+       6.0,
+       2.25,
+       2.1
+      ]
+     }
+    },
+    {
+     "group": "loads",
+     "check": "LC1 8,000 lbf along +z",
+     "passed": true
+    },
+    {
+     "group": "loads",
+     "check": "LC2 8,500 lbf along +x (outward)",
+     "passed": true
+    },
+    {
+     "group": "loads",
+     "check": "LC3 9,500 lbf in the x-z plane, 42 deg from +z towards +x",
+     "passed": true,
+     "value": {
+      "magnitude_lbf": 9500.0,
+      "angle_from_vertical_deg": 42.0
+     }
+    },
+    {
+     "group": "loads",
+     "check": "LC4 couple 5,000 lbf*in about +x, zero net force",
+     "passed": true
+    },
+    {
+     "group": "loads",
+     "check": "units and frame recorded",
+     "passed": true,
+     "value": {
+      "x": "horizontal, bracket length, +x outward (from the bolt end towards the clevis end)",
+      "y": "horizontal, parallel to the clevis pin axis",
+      "z": "vertical, normal to the mounting face z = 0, +z upward (away from the mounting face)",
+      "origin": "bottom corner of the allocated box"
+     }
+    },
+    {
+     "group": "loads",
+     "check": "distribution over the saved pin-bore nodes reproduces F and M about C (T30 tolerance)",
+     "passed": true,
+     "value": [
+      {
+       "load": "LC1_vertical",
+       "F_max_abs_err": 4.511093720793724e-10,
+       "M_max_abs_err": 6.511948758003427e-10,
+       "passed": true
+      },
+      {
+       "load": "LC2_horizontal",
+       "F_max_abs_err": 6.002665031701326e-11,
+       "M_max_abs_err": 3.449114605036385e-10,
+       "passed": true
+      },
+      {
+       "load": "LC3_42deg",
+       "F_max_abs_err": 4.129105946049094e-10,
+       "M_max_abs_err": 2.9117913635801074e-10,
+       "passed": true
+      },
+      {
+       "load": "LC4_torsion",
+       "F_max_abs_err": 1.4135875803233944e-10,
+       "M_max_abs_err": 1.546140993013978e-11,
+       "passed": true
+      }
+     ]
+    },
+    {
+     "group": "updates",
+     "check": "history indices are 1..300, one entry per design iteration",
+     "passed": true,
+     "value": {
+      "first": 1,
+      "last": 300,
+      "n": 300
+     }
+    },
+    {
+     "group": "updates",
+     "check": "termination guard, not converged",
+     "passed": true
+    },
+    {
+     "group": "updates",
+     "check": "iteration 1 has no previous field: max change NaN and moving count -1 (missing)",
+     "passed": true,
+     "value": {
+      "drho_phys_1": "NaN",
+      "n_moving_1": -1
+     }
+    },
+    {
+     "group": "updates",
+     "check": "iterations 2..300: finite max change, non-negative count",
+     "passed": true
+    },
+    {
+     "group": "updates",
+     "check": "stopping configuration: window 10, spread limit 1e-4, change limit 0.01, 1 ppm, earliest 76",
+     "passed": true,
+     "value": {
+      "window": 10,
+      "spread_limit": 0.0001,
+      "change_limit": 0.01,
+      "moving_ppm": 1.0,
+      "earliest_test_iteration": 76
+     }
+    },
+    {
+     "group": "updates",
+     "check": "grid-specific moving-element bound max(1, int(1e-6 * active)) = summary",
+     "passed": true,
+     "value": 1
+    },
+    {
+     "group": "history",
+     "check": "figure-data histories = history.json (exact)",
+     "passed": true
+    },
+    {
+     "group": "history",
+     "check": "normalising c0: c0 file = job record",
+     "passed": true,
+     "value": [
+      5800137.661490616,
+      3859304.44885916,
+      1895668.7173411776,
+      471440.26150532893
+     ]
+    },
+    {
+     "group": "history",
+     "check": "FP32 load scales float32(1/4 / c0_k) = job record",
+     "passed": true,
+     "value": [
+      4.310242474048209e-08,
+      6.47785114438193e-08,
+      1.3187958813887235e-07,
+      5.302898671288858e-07
+     ]
+    },
+    {
+     "group": "history",
+     "check": "J = sum s_k c_k at every iteration (relative, <= 1e-14)",
+     "passed": true,
+     "value": 0.0
+    },
+    {
+     "group": "history",
+     "check": "informational: J with exact weights 1/4 / c0_k differs from the recorded J (relative)",
+     "passed": true,
+     "value": 3.501504736961941e-09
+    },
+    {
+     "group": "history",
+     "check": "rolling 10-iteration spread at 300 = summary",
+     "passed": true,
+     "value": 1.1087805285933476e-05
+    },
+    {
+     "group": "history",
+     "check": "first iteration with spread <= 1e-4 (from the earliest test) = summary",
+     "passed": true,
+     "value": 78
+    },
+    {
+     "group": "history",
+     "check": "minimum max change after iteration 75 = summary",
+     "passed": true,
+     "value": 0.350930392742157
+    },
+    {
+     "group": "history",
+     "check": "minimum moving count after iteration 75 = summary",
+     "passed": true,
+     "value": 9731
+    },
+    {
+     "group": "history",
+     "check": "last-10 max changes and moving counts = summary",
+     "passed": true
+    },
+    {
+     "group": "history",
+     "check": "no tested iteration meets the max-change or bounded-oscillation stop (guard re-derived)",
+     "passed": true,
+     "value": {
+      "spread_test_met_iterations": 223,
+      "tested_iterations": 225,
+      "max_change_met": 0,
+      "moving_bound_met": 0
+     }
+    },
+    {
+     "group": "terminal",
+     "check": "production J and c of the retained design: opt record = audit record = summary",
+     "passed": true,
+     "value": 1.2037514237485263
+    },
+    {
+     "group": "terminal",
+     "check": "retained J differs from the last history J (one more update after iteration 300's solve)",
+     "passed": true,
+     "value": {
+      "J_history_300": 1.2037389107004213,
+      "J_retained": 1.2037514237485263
+     }
+    },
+    {
+     "group": "terminal",
+     "check": "volume fraction recomputed from the field = job record (abs <= 1e-9)",
+     "passed": true,
+     "value": {
+      "recomputed": 0.4999999999985591,
+      "recorded": 0.4999999999985591
+     }
+    },
+    {
+     "group": "terminal",
+     "check": "MND recomputed = job record (relative <= 1e-9)",
+     "passed": true,
+     "value": {
+      "recomputed": 0.0015821933484410132,
+      "recorded": 0.0015821933484410136
+     }
+    },
+    {
+     "group": "terminal",
+     "check": "solid fraction of active elements (rho > 0.5) recomputed = job record",
+     "passed": true,
+     "value": 0.5420066227804168
+    },
+    {
+     "group": "terminal",
+     "check": "tight J recomputed from the audit's four compliances = audit J (relative <= 1e-15)",
+     "passed": true,
+     "value": 1.2037514323607468
+    },
+    {
+     "group": "terminal",
+     "check": "tight c_k / c0_k recomputed = audit record",
+     "passed": true,
+     "value": [
+      1.1701601178730903,
+      1.2379786910584583,
+      1.1397171984870533,
+      1.2671497220243846
+     ]
+    },
+    {
+     "group": "terminal",
+     "check": "S1: max |c_prod - c_tight| / c_tight recomputed = summary",
+     "passed": true,
+     "value": 2.1476649520024345e-08
+    },
+    {
+     "group": "terminal",
+     "check": "audit: four tight FP64 equilibrium checks passed at tol 1e-8",
+     "passed": true
+    }
+   ],
+   "n_checks": 54,
+   "n_failed": 0,
+   "passed": true
+  },
+  {
+   "grid": 384,
+   "run": "R_n384",
+   "audit_run": "A_R_n384",
+   "inputs": {
+    "figdata_json": "tasks/T31/out/figdata_n384.json",
+    "figdata_npz": "tasks/T31/out/figdata_n384.npz",
+    "fields": "tasks/T31/out/runs/R_n384/fields.npz",
+    "history": "tasks/T31/out/runs/R_n384/history.json",
+    "opt_record": "tasks/T31/out/runs/R_n384/gpu_meta.json",
+    "audit_record": "tasks/T31/out/runs/A_R_n384/gpu_meta.json",
+    "host_checks": "tasks/T31/out/host_checks_384.json",
+    "c0": "tasks/T31/out/c0_n384.json",
+    "summary": "tasks/T31/out/summary.json"
+   },
+   "checks": [
+    {
+     "group": "identity",
+     "check": "figdata run name",
+     "passed": true,
+     "value": "R_n384"
+    },
+    {
+     "group": "identity",
+     "check": "figdata source names the run's records",
+     "passed": true,
+     "value": "out/runs/R_n384/fields.npz, history.json, gpu_meta.json"
+    },
+    {
+     "group": "identity",
+     "check": "opt job: phase opt, configuration R, repaired operator",
+     "passed": true,
+     "value": {
+      "phase": "opt",
+      "configuration": "R",
+      "op32": "stencil_diff",
+      "solver": "mg_ir",
+      "outcome": "returned_design"
+     }
+    },
+    {
+     "group": "identity",
+     "check": "history.json belongs to the run",
+     "passed": true,
+     "value": "R_n384"
+    },
+    {
+     "group": "identity",
+     "check": "audit job audits this run",
+     "passed": true,
+     "value": {
+      "arg": "R_n384",
+      "audit_valid": true
+     }
+    },
+    {
+     "group": "identity",
+     "check": "retained field digest: figure data = saved field = opt record = audit record",
+     "passed": true,
+     "value": "cc2b3070e57b57a638d5cedc30fb66c0b2ba1fffa4b63cf855ecdd47b1057960"
+    },
+    {
+     "group": "identity",
+     "check": "summary.json run entry",
+     "passed": true,
+     "value": "guard"
+    },
+    {
+     "group": "shapes",
+     "check": "grid: figure data = sidecar = job = rebuilt geometry",
+     "passed": true,
+     "value": [
+      384,
+      256,
+      160
+     ]
+    },
+    {
+     "group": "shapes",
+     "check": "element size h = 7.2 in / n",
+     "passed": true,
+     "value": 0.01875
+    },
+    {
+     "group": "shapes",
+     "check": "array shapes and dtypes",
+     "passed": true,
+     "value": {
+      "cls": [
+       [
+        384,
+        256,
+        160
+       ],
+       "uint8"
+      ],
+      "rho_phys": [
+       [
+        384,
+        256,
+        160
+       ],
+       "float32"
+      ]
+     }
+    },
+    {
+     "group": "masks",
+     "check": "classes: figure data = saved by the job",
+     "passed": true
+    },
+    {
+     "group": "masks",
+     "check": "classes: figure data = rebuilt geometry",
+     "passed": true
+    },
+    {
+     "group": "masks",
+     "check": "density finite",
+     "passed": true
+    },
+    {
+     "group": "masks",
+     "check": "exterior density exactly 0",
+     "passed": true,
+     "value": 0.0
+    },
+    {
+     "group": "masks",
+     "check": "protected density exactly 1",
+     "passed": true,
+     "value": [
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "group": "masks",
+     "check": "designable density in [0, 1]",
+     "passed": true,
+     "value": [
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "group": "counts",
+     "check": "element counts: figure data = host checks = job = summary",
+     "passed": true,
+     "value": {
+      "allocated": 15728640,
+      "active": 7232600,
+      "designable": 6629528,
+      "protected": 603072
+     }
+    },
+    {
+     "group": "counts",
+     "check": "element counts = the plan entry's key text",
+     "passed": true,
+     "value": {
+      "active": 7232600,
+      "designable": 6629528,
+      "allocated": 15728640
+     }
+    },
+    {
+     "group": "counts",
+     "check": "clamped nodes: count = host checks = sidecar; coordinates = rebuilt supports",
+     "passed": true,
+     "value": {
+      "n": 20624,
+      "per_bolt": [
+       5156,
+       5156,
+       5156,
+       5156
+      ]
+     }
+    },
+    {
+     "group": "counts",
+     "check": "pin-bore nodes: count = host checks = sidecar; coordinates = rebuilt load nodes",
+     "passed": true,
+     "value": 18240
+    },
+    {
+     "group": "counts",
+     "check": "clamped nodes lie on the boss mounting faces (z = 0) or inside the boss height",
+     "passed": true,
+     "value": 0.75
+    },
+    {
+     "group": "loads",
+     "check": "F, M, C: figure data = sidecar = specification",
+     "passed": true,
+     "value": {
+      "C": [
+       6.0,
+       2.25,
+       2.1
+      ]
+     }
+    },
+    {
+     "group": "loads",
+     "check": "LC1 8,000 lbf along +z",
+     "passed": true
+    },
+    {
+     "group": "loads",
+     "check": "LC2 8,500 lbf along +x (outward)",
+     "passed": true
+    },
+    {
+     "group": "loads",
+     "check": "LC3 9,500 lbf in the x-z plane, 42 deg from +z towards +x",
+     "passed": true,
+     "value": {
+      "magnitude_lbf": 9500.0,
+      "angle_from_vertical_deg": 42.0
+     }
+    },
+    {
+     "group": "loads",
+     "check": "LC4 couple 5,000 lbf*in about +x, zero net force",
+     "passed": true
+    },
+    {
+     "group": "loads",
+     "check": "units and frame recorded",
+     "passed": true,
+     "value": {
+      "x": "horizontal, bracket length, +x outward (from the bolt end towards the clevis end)",
+      "y": "horizontal, parallel to the clevis pin axis",
+      "z": "vertical, normal to the mounting face z = 0, +z upward (away from the mounting face)",
+      "origin": "bottom corner of the allocated box"
+     }
+    },
+    {
+     "group": "loads",
+     "check": "distribution over the saved pin-bore nodes reproduces F and M about C (T30 tolerance)",
+     "passed": true,
+     "value": [
+      {
+       "load": "LC1_vertical",
+       "F_max_abs_err": 2.10275175049901e-09,
+       "M_max_abs_err": 2.8528039375252945e-09,
+       "passed": true
+      },
+      {
+       "load": "LC2_horizontal",
+       "F_max_abs_err": 1.709850039333105e-10,
+       "M_max_abs_err": 1.1989359366415542e-09,
+       "passed": true
+      },
+      {
+       "load": "LC3_42deg",
+       "F_max_abs_err": 2.8467184165492654e-10,
+       "M_max_abs_err": 1.4835719042149975e-09,
+       "passed": true
+      },
+      {
+       "load": "LC4_torsion",
+       "F_max_abs_err": 4.926385653580834e-10,
+       "M_max_abs_err": 8.731149137020111e-11,
+       "passed": true
+      }
+     ]
+    },
+    {
+     "group": "updates",
+     "check": "history indices are 1..300, one entry per design iteration",
+     "passed": true,
+     "value": {
+      "first": 1,
+      "last": 300,
+      "n": 300
+     }
+    },
+    {
+     "group": "updates",
+     "check": "termination guard, not converged",
+     "passed": true
+    },
+    {
+     "group": "updates",
+     "check": "iteration 1 has no previous field: max change NaN and moving count -1 (missing)",
+     "passed": true,
+     "value": {
+      "drho_phys_1": "NaN",
+      "n_moving_1": -1
+     }
+    },
+    {
+     "group": "updates",
+     "check": "iterations 2..300: finite max change, non-negative count",
+     "passed": true
+    },
+    {
+     "group": "updates",
+     "check": "stopping configuration: window 10, spread limit 1e-4, change limit 0.01, 1 ppm, earliest 76",
+     "passed": true,
+     "value": {
+      "window": 10,
+      "spread_limit": 0.0001,
+      "change_limit": 0.01,
+      "moving_ppm": 1.0,
+      "earliest_test_iteration": 76
+     }
+    },
+    {
+     "group": "updates",
+     "check": "grid-specific moving-element bound max(1, int(1e-6 * active)) = summary",
+     "passed": true,
+     "value": 7
+    },
+    {
+     "group": "history",
+     "check": "figure-data histories = history.json (exact)",
+     "passed": true
+    },
+    {
+     "group": "history",
+     "check": "normalising c0: c0 file = job record",
+     "passed": true,
+     "value": [
+      2942051.0993674565,
+      1939041.8571512343,
+      959489.8649598116,
+      237416.32949063057
+     ]
+    },
+    {
+     "group": "history",
+     "check": "FP32 load scales float32(1/4 / c0_k) = job record",
+     "passed": true,
+     "value": [
+      8.497472947510687e-08,
+      1.2892965628452657e-07,
+      2.6055511170852697e-07,
+      1.053002506523626e-06
+     ]
+    },
+    {
+     "group": "history",
+     "check": "J = sum s_k c_k at every iteration (relative, <= 1e-14)",
+     "passed": true,
+     "value": 0.0
+    },
+    {
+     "group": "history",
+     "check": "informational: J with exact weights 1/4 / c0_k differs from the recorded J (relative)",
+     "passed": true,
+     "value": 2.4638142303154208e-08
+    },
+    {
+     "group": "history",
+     "check": "rolling 10-iteration spread at 300 = summary",
+     "passed": true,
+     "value": 1.1825745486651215e-06
+    },
+    {
+     "group": "history",
+     "check": "first iteration with spread <= 1e-4 (from the earliest test) = summary",
+     "passed": true,
+     "value": 76
+    },
+    {
+     "group": "history",
+     "check": "minimum max change after iteration 75 = summary",
+     "passed": true,
+     "value": 0.44912996888160706
+    },
+    {
+     "group": "history",
+     "check": "minimum moving count after iteration 75 = summary",
+     "passed": true,
+     "value": 52705
+    },
+    {
+     "group": "history",
+     "check": "last-10 max changes and moving counts = summary",
+     "passed": true
+    },
+    {
+     "group": "history",
+     "check": "no tested iteration meets the max-change or bounded-oscillation stop (guard re-derived)",
+     "passed": true,
+     "value": {
+      "spread_test_met_iterations": 225,
+      "tested_iterations": 225,
+      "max_change_met": 0,
+      "moving_bound_met": 0
+     }
+    },
+    {
+     "group": "terminal",
+     "check": "production J and c of the retained design: opt record = audit record = summary",
+     "passed": true,
+     "value": 1.2040870092406877
+    },
+    {
+     "group": "terminal",
+     "check": "retained J differs from the last history J (one more update after iteration 300's solve)",
+     "passed": true,
+     "value": {
+      "J_history_300": 1.2040876382281138,
+      "J_retained": 1.2040870092406877
+     }
+    },
+    {
+     "group": "terminal",
+     "check": "volume fraction recomputed from the field = job record (abs <= 1e-9)",
+     "passed": true,
+     "value": {
+      "recomputed": 0.49999999969363906,
+      "recorded": 0.49999999969363906
+     }
+    },
+    {
+     "group": "terminal",
+     "check": "MND recomputed = job record (relative <= 1e-9)",
+     "passed": true,
+     "value": {
+      "recomputed": 0.00500740359825591,
+      "recorded": 0.0050074035982559115
+     }
+    },
+    {
+     "group": "terminal",
+     "check": "solid fraction of active elements (rho > 0.5) recomputed = job record",
+     "passed": true,
+     "value": 0.5415557337610265
+    },
+    {
+     "group": "terminal",
+     "check": "tight J recomputed from the audit's four compliances = audit J (relative <= 1e-15)",
+     "passed": true,
+     "value": 1.2040870253819667
+    },
+    {
+     "group": "terminal",
+     "check": "tight c_k / c0_k recomputed = audit record",
+     "passed": true,
+     "value": [
+      1.1700699198447015,
+      1.2356080091415587,
+      1.1405317652950155,
+      1.2701384072465904
+     ]
+    },
+    {
+     "group": "terminal",
+     "check": "S1: max |c_prod - c_tight| / c_tight recomputed = summary",
+     "passed": true,
+     "value": 4.982083120062699e-08
+    },
+    {
+     "group": "terminal",
+     "check": "audit: four tight FP64 equilibrium checks passed at tol 1e-8",
+     "passed": true
+    }
+   ],
+   "n_checks": 54,
+   "n_failed": 0,
+   "passed": true
+  }
+ ],
+ "passed": true,
+ "t35_state_sha256_at_check": "4f7d14c3680d16e38c667d26b2665d71feea3ac83a9c7156b91d69e61ee752bf"
+}

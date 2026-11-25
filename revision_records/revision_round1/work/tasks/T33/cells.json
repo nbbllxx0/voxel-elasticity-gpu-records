@@ -1,0 +1,1119 @@
+[
+ {
+  "k": 8,
+  "layout": "interface",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "interface",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "interface",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "interface",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "interface",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "interface",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "interface",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "interface",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "interface",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "interface",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "interface",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "interface",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "interface",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "interface",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "interface",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "interface",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "interface",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "interface",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "interface",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "interface",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "interface",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "interface",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "interface",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "interface",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "interface",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "interface",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "interface",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "interface",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "interface",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "interface",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "interface",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "interface",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "interface",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "interface",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "interface",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "interface",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 128,
+  "layout": "interface",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref: G-ref failed: uncertainty not established"
+ },
+ {
+  "k": 128,
+  "layout": "interface",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 128,
+  "layout": "interface",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 128,
+  "layout": "interface",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 128,
+  "layout": "interface",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 128,
+  "layout": "interface",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 128,
+  "layout": "interface",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 128,
+  "layout": "interface",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 128,
+  "layout": "interface",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 8,
+  "layout": "uniform",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "uniform",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "uniform",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "uniform",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "uniform",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "uniform",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "uniform",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "uniform",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "uniform",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "validation",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "uniform",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "uniform",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "uniform",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "uniform",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "uniform",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "uniform",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "uniform",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "uniform",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "uniform",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "uniform",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "uniform",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "uniform",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "uniform",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "uniform",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "uniform",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "uniform",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "uniform",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "uniform",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "extension (bridge)",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "uniform",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref: G-ref failed: uncertainty not established"
+ },
+ {
+  "k": 64,
+  "layout": "uniform",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 64,
+  "layout": "uniform",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 64,
+  "layout": "uniform",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 64,
+  "layout": "uniform",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 64,
+  "layout": "uniform",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 64,
+  "layout": "uniform",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 64,
+  "layout": "uniform",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 64,
+  "layout": "uniform",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 128,
+  "layout": "uniform",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref: G-ref failed: uncertainty not established"
+ },
+ {
+  "k": 128,
+  "layout": "uniform",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 128,
+  "layout": "uniform",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "breakdown of a repeat"
+ },
+ {
+  "k": 128,
+  "layout": "uniform",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 128,
+  "layout": "uniform",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 128,
+  "layout": "uniform",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 128,
+  "layout": "uniform",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 128,
+  "layout": "uniform",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 128,
+  "layout": "uniform",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 8,
+  "layout": "voids",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "voids",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "voids",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "voids",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "voids",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "voids",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "voids",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "voids",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 8,
+  "layout": "voids",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "voids",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "voids",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "voids",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "voids",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "voids",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "voids",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "voids",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "voids",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 16,
+  "layout": "voids",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 32,
+  "layout": "voids",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref: G-ref failed: uncertainty not established"
+ },
+ {
+  "k": 32,
+  "layout": "voids",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 32,
+  "layout": "voids",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 32,
+  "layout": "voids",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 32,
+  "layout": "voids",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 32,
+  "layout": "voids",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 32,
+  "layout": "voids",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 32,
+  "layout": "voids",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed"
+ },
+ {
+  "k": 32,
+  "layout": "voids",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "G-ref failed (no reference for the control's error)"
+ },
+ {
+  "k": 64,
+  "layout": "voids",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "voids",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "voids",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "voids",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "voids",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "voids",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "voids",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "voids",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 64,
+  "layout": "voids",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 128,
+  "layout": "voids",
+  "form": "fp64_reference",
+  "kind": "reference",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 128,
+  "layout": "voids",
+  "form": "stencil",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 128,
+  "layout": "voids",
+  "form": "stencil",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "numerical failure",
+  "which": "breakdown of a repeat"
+ },
+ {
+  "k": 128,
+  "layout": "voids",
+  "form": "corner",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 128,
+  "layout": "voids",
+  "form": "corner",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 128,
+  "layout": "voids",
+  "form": "mean",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 128,
+  "layout": "voids",
+  "form": "mean",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 128,
+  "layout": "voids",
+  "form": "diff",
+  "kind": "coefficient",
+  "set": "primary",
+  "status": "checked"
+ },
+ {
+  "k": 128,
+  "layout": "voids",
+  "form": "diff",
+  "kind": "fp32_control",
+  "set": "primary",
+  "status": "checked"
+ }
+]

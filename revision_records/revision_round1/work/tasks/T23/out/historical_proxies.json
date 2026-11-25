@@ -1,0 +1,111 @@
+{
+ "not_for_the_revision": "Distances are omitted from the revised paper. These are the submitted script's proxies, reproduced only to identify them.",
+ "definition": {
+  "script": "E30_dump_analysis.py lines 27-31 (copied to inputs/authors_code)",
+  "element_position": "integer element indices (ex, ey) of the 320x160x160 grid, not element centres (ex+0.5, ey+0.5)",
+  "support_proxy": "min(hypot(ex, ey), hypot(nx-1-ex, ey)) / ny: index distance to the element-index points (0,0) and (nx-1,0), standing in for the support lines x=0,y=0 and x=2,y=0 (node indices 0 and nx), z ignored",
+  "load_proxy": "hypot(ex - nx/2, ny-1-ey) / ny: index distance to (nx/2, ny-1), standing in for the top-centre load strip at x=1,y=1 (node indices nx/2 and ny, strip width 0.1 ignored), z ignored",
+  "unit": "divided by ny=160, i.e. a fraction of the domain depth only up to the half-element index offset; the submitted text called them 'depth units'",
+  "population_in_record": "the 100 largest |error| elements (order[:100]), not the 75 intermediate-density elements"
+ },
+ "values": {
+  "it50": {
+   "top100": {
+    "support_proxy_median": 0.5464533722679259,
+    "load_proxy_median": 0.9074879384795098,
+    "historical_record": [
+     0.5464533722679259,
+     0.9074879384795098
+    ]
+   },
+   "intermediate": {
+    "support_proxy_median": 0.5562851112514158,
+    "load_proxy_median": 0.8736596877503275
+   }
+  },
+  "it60": {
+   "top100": {
+    "support_proxy_median": 0.5450415695155737,
+    "load_proxy_median": 0.9092188876375842,
+    "historical_record": [
+     0.5450415695155737,
+     0.9092188876375842
+    ]
+   },
+   "intermediate": {
+    "support_proxy_median": 0.5478651750202782,
+    "load_proxy_median": 0.8761599454437528
+   }
+  },
+  "it65": {
+   "top100": {
+    "support_proxy_median": 0.5618398904492276,
+    "load_proxy_median": 0.8910141693598368,
+    "historical_record": [
+     0.5618398904492276,
+     0.8910141693598368
+    ]
+   },
+   "intermediate": {
+    "support_proxy_median": 0.5518608884843424,
+    "load_proxy_median": 0.8690077036220448
+   }
+  },
+  "it66": {
+   "top100": {
+    "support_proxy_median": 0.5520363581097455,
+    "load_proxy_median": 0.9031287286335106,
+    "historical_record": [
+     0.5520363581097455,
+     0.9031287286335106
+    ]
+   },
+   "intermediate": {
+    "support_proxy_median": 0.553433882681572,
+    "load_proxy_median": 0.885473037421242
+   }
+  },
+  "it67": {
+   "top100": {
+    "support_proxy_median": 0.5704472988705622,
+    "load_proxy_median": 0.8814822692752524,
+    "historical_record": [
+     0.5704472988705622,
+     0.8814822692752524
+    ]
+   },
+   "intermediate": {
+    "support_proxy_median": 0.5579678530166411,
+    "load_proxy_median": 0.8927223112480162
+   }
+  },
+  "it70": {
+   "top100": {
+    "support_proxy_median": 0.5283191208051528,
+    "load_proxy_median": 0.9104428867315072,
+    "historical_record": [
+     0.5283191208051528,
+     0.9104428867315072
+    ]
+   },
+   "intermediate": {
+    "support_proxy_median": 0.546811481206592,
+    "load_proxy_median": 0.8935092365211534
+   }
+  },
+  "it76": {
+   "top100": {
+    "support_proxy_median": 0.5199534233948268,
+    "load_proxy_median": 0.9325913159042389,
+    "historical_record": [
+     0.5199534233948268,
+     0.9325913159042389
+    ]
+   },
+   "intermediate": {
+    "support_proxy_median": 0.48367893534864637,
+    "load_proxy_median": 0.9692539012044264
+   }
+  }
+ }
+}

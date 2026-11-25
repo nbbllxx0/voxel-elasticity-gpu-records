@@ -1,0 +1,118 @@
+{
+ "experiment": "E12b",
+ "name": "simp_cantilever_k384_mg64_stencil_poollimit",
+ "problem": "cantilever",
+ "problem_meta": {
+  "domain": [
+   2.0,
+   1.0,
+   1.0
+  ],
+  "patch": 0.1,
+  "total_load": -1.0,
+  "loaded_nodes": 1521,
+  "supports": "x=0 face clamped"
+ },
+ "k": 384,
+ "n_elem": 113246208,
+ "ndof": 341955075,
+ "environment": {
+  "time": "2026-10-04T23:22:57",
+  "host": "<redacted>",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "numpy": "1.24.3",
+  "scipy": "1.11.1",
+  "cupy": "13.4.1",
+  "cuda_runtime": 12080,
+  "cuda_driver": 13030,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "sm_count": 128,
+  "l2_bytes": 75497472,
+  "vram_bytes": 25756696576,
+  "cc": "8.9"
+ },
+ "code_hash": "4d03d1afbfa98caf",
+ "device_state_start": {
+  "name": "NVIDIA GeForce RTX 4090",
+  "clocks.sm": "210",
+  "clocks.mem": "405",
+  "temperature.gpu": "41",
+  "power.draw": "16.36",
+  "memory.used": "918",
+  "utilization.gpu": "1",
+  "pstate": "P8"
+ },
+ "started": "2026-10-04T23:22:57",
+ "setup_s": 2.62238200000138,
+ "status": "failed: OutOfMemoryError('Out of memory allocating 1,367,820,800 bytes (allocated so far: 22,318,077,440 bytes, limit set to: 23,085,449,216 bytes).')",
+ "traceback": "Traceback (most recent call last):\n  File \"<project>\\experiments\\run_simp.py\", line 59, in main\n    r = s.run()\n        ^^^^^^^\n  File \"<project>\\code\\src\\voxfem\\simp.py\", line 363, in run\n    st = self.solve()\n         ^^^^^^^^^^^^\n  File \"<project>\\code\\src\\voxfem\\simp.py\", line 248, in solve\n    self.mg.update(self.E32)\n  File \"<project>\\code\\src\\voxfem\\mg.py\", line 548, in update\n    self._smoother_weights()\n  File \"<project>\\code\\src\\voxfem\\mg.py\", line 578, in _smoother_weights\n    v *= self.dtype.type(1.0 / float(cp.linalg.norm(v)))\n                                     ^^^^^^^^^^^^^^^^^\n  File \"<user-home>\\anaconda3\\Lib\\site-packages\\cupy\\linalg\\_norms.py\", line 62, in norm\n    ret = cupy.sqrt((x * x).sum())\n                     ~~^~~\n  File \"cupy\\\\_core\\\\core.pyx\", line 1334, in cupy._core.core._ndarray_base.__mul__\n  File \"cupy\\\\_core\\\\_kernel.pyx\", line 1349, in cupy._core._kernel.ufunc.__call__\n  File \"cupy\\\\_core\\\\_kernel.pyx\", line 645, in cupy._core._kernel._get_out_args_from_optionals\n  File \"cupy\\\\_core\\\\core.pyx\", line 2884, in cupy._core.core._ndarray_init\n  File \"cupy\\\\_core\\\\core.pyx\", line 257, in cupy._core.core._ndarray_base._init_fast\n  File \"cupy\\\\cuda\\\\memory.pyx\", line 738, in cupy.cuda.memory.alloc\n  File \"cupy\\\\cuda\\\\memory.pyx\", line 1424, in cupy.cuda.memory.MemoryPool.malloc\n  File \"cupy\\\\cuda\\\\memory.pyx\", line 1445, in cupy.cuda.memory.MemoryPool.malloc\n  File \"cupy\\\\cuda\\\\memory.pyx\", line 1116, in cupy.cuda.memory.SingleDeviceMemoryPool.malloc\n  File \"cupy\\\\cuda\\\\memory.pyx\", line 1137, in cupy.cuda.memory.SingleDeviceMemoryPool._malloc\n  File \"cupy\\\\cuda\\\\memory.pyx\", line 1344, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc\n  File \"cupy\\\\cuda\\\\memory.pyx\", line 1356, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc\ncupy.cuda.memory.OutOfMemoryError: Out of memory allocating 1,367,820,800 bytes (allocated so far: 22,318,077,440 bytes, limit set to: 23,085,449,216 bytes).\n",
+ "valid": false,
+ "history": [],
+ "memory": {
+  "peak_pool_used_bytes": 19362319872,
+  "peak_pool_reserved_bytes": 19476305408,
+  "peak_device_used_bytes": 21288628224,
+  "baseline_device_used_bytes": 1719140352
+ },
+ "spill": {
+  "pid": 36616,
+  "limit_bytes": 268435456,
+  "max_shared_growth_bytes": 0,
+  "spilled": false,
+  "samples": [
+   {
+    "tag": "start",
+    "t": 1791181380.488192,
+    "dedicated": 19862691840,
+    "shared": 213909504,
+    "others_dedicated": 1739358208
+   }
+  ]
+ },
+ "total_wall_s": 3.239815200000521,
+ "device_state_end": {
+  "name": "NVIDIA GeForce RTX 4090",
+  "clocks.sm": "2520",
+  "clocks.mem": "10251",
+  "temperature.gpu": "43",
+  "power.draw": "78.90",
+  "memory.used": "22614",
+  "utilization.gpu": "6",
+  "pstate": "P2"
+ },
+ "log": [],
+ "code_files": {
+  "code/src/voxfem/__init__.py": "c0a1b1cd2147b2ba",
+  "code/src/voxfem/core.py": "318596a50144b516",
+  "code/src/voxfem/filters.py": "a578eb1d7798ce0e",
+  "code/src/voxfem/guard.py": "d9ed2a1c40b14c2d",
+  "code/src/voxfem/krylov.py": "9693ab48d4e030c5",
+  "code/src/voxfem/memory.py": "824be1910087b604",
+  "code/src/voxfem/mg.py": "78006d3b2b2e8ed5",
+  "code/src/voxfem/operators.py": "39270dd666a97c62",
+  "code/src/voxfem/sass.py": "184cd5714214ef1c",
+  "code/src/voxfem/simp.py": "e5373b63be23280e",
+  "code/src/voxfem/sparse.py": "7830a4672baee938",
+  "experiments/_boot.py": "33c086109bcda1dd",
+  "experiments/_superseded/assembled_csr.py": "51d2efe3d87c0f56",
+  "experiments/_superseded/main_operators.py": "3a9bc1478f21cd44",
+  "experiments/_superseded/ownership_variants.py": "01d5dc83bbd74386",
+  "experiments/_superseded/pilot_operators.py": "fa21651352372627",
+  "experiments/_superseded/profile_operator.py": "a04407ed495d6bba",
+  "experiments/_superseded/specialized_stencil.py": "a8037ebc66ea9596",
+  "experiments/E0_platform.py": "0bacfb9e1c490aa7",
+  "experiments/E10_external_hou.py": "e3eb6e9e60149ef5",
+  "experiments/E11_counters.py": "59fde57387f07b22",
+  "experiments/E2_operators.py": "3b0d8d7b52aa374d",
+  "experiments/E3_mechanism.py": "7ffeb1e3680f0d6c",
+  "experiments/E4_update_cost.py": "8ab17debeb1f4c43",
+  "experiments/E5_solver_states.py": "65f198e49cfe0a49",
+  "experiments/E7_memory_probe.py": "510ad062b7f223b5",
+  "experiments/E8_precision_floor.py": "424035702bd86e9f",
+  "experiments/run_queue.py": "3ac2df983a7e8ace",
+  "experiments/run_simp.py": "ab7cba3cb779baad",
+  "experiments/T1_verify_operators.py": "b42b00bdf80559a1",
+  "experiments/T2_verify_mg.py": "5b867ffd67a6cd86"
+ }
+}

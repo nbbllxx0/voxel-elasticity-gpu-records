@@ -1,0 +1,14 @@
+{
+ "cantilever_k320_over_k160_minus_1": {
+  "submitted": 0.005541406985415831,
+  "revised": 0.0055414079904427815
+ },
+ "bridge_k320_over_k160_minus_1": {
+  "submitted": 0.0784204613562236,
+  "revised": 0.07842201760796619
+ },
+ "torsion_k320_over_k160_minus_1": {
+  "submitted": 0.004530689673114319,
+  "revised": 0.004531109732115679
+ }
+}

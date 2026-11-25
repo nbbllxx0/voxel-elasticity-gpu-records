@@ -1,0 +1,16 @@
+{
+ "gpu_execution_confirmed": true,
+ "guards_cover_process": true,
+ "guards_cover_process_uses_revision": "4.3",
+ "numerical_result_admitted": true,
+ "guard_current_passed": true,
+ "same_free_dof_system": true,
+ "relative_action_difference": 3.467113742984381e-08,
+ "relative_action_difference_repeat_runs": 3.6673721335328844e-08,
+ "target": 1e-05,
+ "technical_acceptance_met": true,
+ "gate_passed": true,
+ "fixed_state_comparison_admitted": true,
+ "toolchain_admissible_for_R1_1": true
+} 5 {'iter': 20, 'printed_objective': 13293.365234, 'pcg_counter_total': 16036, 'elapsed_s': 1441.125}
+{"contention_holder": [true, false, true], "diag_O2_i6": [true, false, true], "diag_threads1_i6": [true, false, true], "harness_i5": [true, false, true], "harness_i5_v2": [true, false, true], "harness_i5_v3": [true, false, true], "harness_i5_v4": [true, false, true], "livestop_test_4g": [false, false, false], "livestop_test_4g_attempt1": [false, null, false], "livestop_v3_sampler_lost": [false, false, false], "livestop_v3_trigger": [false, false, false], "livestop_v3_trigger_attempt1": [false, null, false], "native_patched_v1": [true, false, true], "native_v1": [false, null, false], "notify_i1": [true, false, true], "spill_control_22g": [true, true, false], "status_v3_exit3": [false, null, false], "status_v3_oom_message": [false, null, false], "v4_1_carrier_job": [true, false, true], "v4_2_carrier_job": [true, false, true], "v4_2_trigger_job": [false, false, false], "v4_short_job": [false, null, false]}

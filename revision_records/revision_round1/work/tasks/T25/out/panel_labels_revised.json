@@ -1,0 +1,93 @@
+[
+ {
+  "panel": 1,
+  "position": "b, row 1, column 1",
+  "record": "results/E32/simp_cantilever_k160_mg64_stencil_diff.json",
+  "problem": "cantilever",
+  "k": 160,
+  "n_elem": 8192000,
+  "solver": "mg64",
+  "op32": "stencil_diff",
+  "compliance_c": 0.29450054555368527,
+  "physical_compliance_2kc": 94.24017457717929,
+  "label": "8.2M elements · 2kc = 94.24"
+ },
+ {
+  "panel": 2,
+  "position": "b, row 1, column 2",
+  "record": "results/E32/simp_bridge_k160_mg64_stencil_diff.json",
+  "problem": "bridge",
+  "k": 160,
+  "n_elem": 8192000,
+  "solver": "mg64",
+  "op32": "stencil_diff",
+  "compliance_c": 0.08798177029441485,
+  "physical_compliance_2kc": 28.154166494212753,
+  "label": "8.2M elements · 2kc = 28.15"
+ },
+ {
+  "panel": 3,
+  "position": "b, row 1, column 3",
+  "record": "results/E32/simp_torsion_k160_mg64_stencil_diff.json",
+  "problem": "torsion",
+  "k": 160,
+  "n_elem": 8192000,
+  "solver": "mg64",
+  "op32": "stencil_diff",
+  "compliance_c": 0.11614467536974438,
+  "physical_compliance_2kc": 37.1662961183182,
+  "label": "8.2M elements · 2kc = 37.17"
+ },
+ {
+  "panel": 4,
+  "position": "b, row 2, column 1",
+  "record": "revision_round1/work/tasks/T25/out/runs/k320_cantilever_repaired/simp_cantilever_k320_mg64_stencil_diff.json",
+  "problem": "cantilever",
+  "k": 320,
+  "n_elem": 65536000,
+  "solver": "mg64",
+  "op32": "stencil_diff",
+  "compliance_c": 0.14806624661500312,
+  "physical_compliance_2kc": 94.762397833602,
+  "label": "65.5M elements · 2kc = 94.76"
+ },
+ {
+  "panel": 5,
+  "position": "b, row 2, column 2",
+  "record": "results/E32/simp_bridge_k320_mg64_stencil_diff.json",
+  "problem": "bridge",
+  "k": 320,
+  "n_elem": 65536000,
+  "solver": "mg64",
+  "op32": "stencil_diff",
+  "compliance_c": 0.04744073911681174,
+  "physical_compliance_2kc": 30.362073034759515,
+  "label": "65.5M elements · 2kc = 30.36"
+ },
+ {
+  "panel": 6,
+  "position": "b, row 2, column 3",
+  "record": "results/E32/simp_torsion_k320_mg64_stencil_diff.json",
+  "problem": "torsion",
+  "k": 320,
+  "n_elem": 65536000,
+  "solver": "mg64",
+  "op32": "stencil_diff",
+  "compliance_c": 0.05833546981932283,
+  "physical_compliance_2kc": 37.33470068436661,
+  "label": "65.5M elements · 2kc = 37.33"
+ },
+ {
+  "panel": 7,
+  "position": "c",
+  "record": "results/E32/simp_cantilever_k384_mg_ir_stencil_diff.json",
+  "problem": "cantilever",
+  "k": 384,
+  "n_elem": 113246208,
+  "solver": "mg_ir",
+  "op32": "stencil_diff",
+  "compliance_c": 0.12366203791734627,
+  "physical_compliance_2kc": 94.97244512052194,
+  "label": "cantilever, 113.2M elements\n(iterative refinement) · 2kc = 94.97"
+ }
+]
